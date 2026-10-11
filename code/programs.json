@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "authority": "standalone source files; HTML code blocks are synchronized reading copies",
+  "programs": [
+    {
+      "id": "linear",
+      "title": "P／Q 线性方程与多步转移",
+      "chapter": 1,
+      "page": "notes/chapter01_markov_chains.html",
+      "anchor": "pair-linear",
+      "files": {
+        "c": "code/chapter01_markov_chains/linear.c",
+        "python": "code/chapter01_markov_chains/linear.py"
+      }
+    },
+    {
+      "id": "poisson",
+      "title": "指数间隔与泊松计数",
+      "chapter": 2,
+      "page": "notes/chapter02_poisson_processes.html",
+      "anchor": "pair-poisson",
+      "files": {
+        "c": "code/chapter02_poisson_processes/poisson.c",
+        "python": "code/chapter02_poisson_processes/poisson.py"
+      }
+    },
+    {
+      "id": "renewal",
+      "title": "更新周期的长度偏置",
+      "chapter": 3,
+      "page": "notes/chapter03_renewal_processes.html",
+      "anchor": "pair-renewal",
+      "files": {
+        "c": "code/chapter03_renewal_processes/renewal.c",
+        "python": "code/chapter03_renewal_processes/renewal.py"
+      }
+    },
+    {
+      "id": "ctmc",
+      "title": "跳转频率与真实时间占比",
+      "chapter": 4,
+      "page": "notes/chapter04_continuous_time_markov_chains.html",
+      "anchor": "pair-ctmc",
+      "files": {
+        "c": "code/chapter04_continuous_time_markov_chains/ctmc.c",
+        "python": "code/chapter04_continuous_time_markov_chains/ctmc.py"
+      }
+    },
+    {
+      "id": "stopping",
+      "title": "停止随机游走",
+      "chapter": 5,
+      "page": "notes/chapter05_martingales.html",
+      "anchor": "pair-stopping",
+      "files": {
+        "c": "code/chapter05_martingales/stopping.c",
+        "python": "code/chapter05_martingales/stopping.py"
+      }
+    },
+    {
+      "id": "finance",
+      "title": "完整二叉期权树",
+      "chapter": 6,
+      "page": "notes/chapter06_mathematical_finance.html",
+      "anchor": "pair-finance",
+      "files": {
+        "c": "code/chapter06_mathematical_finance/finance.c",
+        "python": "code/chapter06_mathematical_finance/finance.py"
+      }
+    },
+    {
+      "id": "bs",
+      "title": "Black–Scholes 与 CRR 收敛",
+      "chapter": 6,
+      "page": "notes/chapter06_mathematical_finance.html",
+      "anchor": "pair-bs",
+      "files": {
+        "c": "code/chapter06_mathematical_finance/bs.c",
+        "python": "code/chapter06_mathematical_finance/bs.py"
+      }
+    }
+  ],
+  "additional_code_blocks": {
+    "notes/book_overview.html": {
+      "validation-commands": "shell"
+    }
+  }
+}

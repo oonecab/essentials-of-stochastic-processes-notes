@@ -1,0 +1,6431 @@
+{
+  "status": "pass",
+  "generated_at_utc": "2026-10-11T13:28:00.496635+00:00",
+  "source": {
+    "title": "Richard Durrett, Essentials of Stochastic Processes, Third Edition, 2016",
+    "pdf_filename": "Essentials of Stochastic Processes (Richard Durrett) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "pdf_pages": 282,
+    "sha256": "2232660e1909b42c6df8b5aca8eba12cdb383bf3741ecb53add49f6c26c6a0e7"
+  },
+  "statistics": {
+    "html_pages": 9,
+    "exercise_solution_headings": 236,
+    "exercise_steps_retained": 1028,
+    "leading_zero_replacements": 524,
+    "leading_zero_breakdown": {
+      "solution_titles": 236,
+      "text_decimals": 70,
+      "formula_decimals": 448,
+      "code_decimals": 6
+    },
+    "new_body_derivation_groups": 59,
+    "retained_distinct_proof_groups": 18,
+    "current_body_derivation_and_proof_groups": 77,
+    "numbered_source_examples_covered": 162,
+    "exact_and_symbolic_checks": 24,
+    "added_numerical_fixtures": 22,
+    "total_numerical_fixtures": 150,
+    "section_annotation_groups": 66,
+    "annotation_cards": 132,
+    "formal_statements": 150,
+    "numbered_theorems_and_lemmas": 115,
+    "numbered_definitions": 2,
+    "original_excerpt_blocks": 146,
+    "preface_original_paragraphs": 4,
+    "audit_additional_leading_zeros": 30
+  },
+  "review_scope": {
+    "body": "六章及附录A的正常编号示例均关联到实际推导；按各小节展开模型、主要公式、定理条件与证明。",
+    "exercises": "保留已逐题复核的236道题干与1028个解答步骤，统一标题与小数写法。",
+    "notation": "可读文字、MathML及代码数值字面量补足前导零；代码字符串、正则及格式符按语义保持。",
+    "mathematics": "一般概率证明按原书与条件、有限性、极限交换逐步核对；有限模型另用有理数及解析基准验证。",
+    "annotations": "作者的中文伴读说明：模型理解、公式含义、定理假设、简短补充推导、读法和验算。每条注解绑定原有小节；正文中的完整证明与习题详细步骤保留原位置。",
+    "preface_and_formal_statements": "新增序言英文全文及逐段中文译文；六章及附录按实际原书标题覆盖115条编号定理/引理与两条编号定义，补写基础定义、三条概率公理和未编号公式。各条集中给出条件、结论、推导要点、源页及详细正文推导入口。"
+  },
+  "number_normalization_by_page": {
+    "appendix_a_probability_review.html": {
+      "solution_titles": 0,
+      "text_decimals": 0,
+      "formula_decimals": 0,
+      "code_decimals": 0
+    },
+    "book_overview.html": {
+      "solution_titles": 0,
+      "text_decimals": 0,
+      "formula_decimals": 0,
+      "code_decimals": 0
+    },
+    "chapter01_markov_chains.html": {
+      "solution_titles": 77,
+      "text_decimals": 7,
+      "formula_decimals": 348,
+      "code_decimals": 0
+    },
+    "chapter02_poisson_processes.html": {
+      "solution_titles": 61,
+      "text_decimals": 12,
+      "formula_decimals": 49,
+      "code_decimals": 0
+    },
+    "chapter03_renewal_processes.html": {
+      "solution_titles": 24,
+      "text_decimals": 12,
+      "formula_decimals": 35,
+      "code_decimals": 1
+    },
+    "chapter04_continuous_time_markov_chains.html": {
+      "solution_titles": 39,
+      "text_decimals": 15,
+      "formula_decimals": 9,
+      "code_decimals": 0
+    },
+    "chapter05_martingales.html": {
+      "solution_titles": 10,
+      "text_decimals": 0,
+      "formula_decimals": 0,
+      "code_decimals": 1
+    },
+    "chapter06_mathematical_finance.html": {
+      "solution_titles": 25,
+      "text_decimals": 24,
+      "formula_decimals": 7,
+      "code_decimals": 4
+    }
+  },
+  "derivation_blocks": [
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "section": "s61",
+      "id": "derive-c6-no-arbitrage-proof",
+      "title": "无套利与正概率鞅测度的线性代数证明",
+      "examples": [],
+      "theorems": [
+        "6.1",
+        "6.2"
+      ],
+      "pdf_pages": [
+        232,
+        233
+      ],
+      "mathml": 24,
+      "body_characters": 599,
+      "example_source_pages": {},
+      "html_sha256": "89bd2231f15880b89afde2a02075fec821d69ec35a4b6c589e3c235a27d22e55",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "section": "s62",
+      "id": "derive-c6-one-period-example",
+      "title": "例 6.1：一周期复制的金额与对冲验算",
+      "examples": [
+        "6.1"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        237,
+        237
+      ],
+      "mathml": 13,
+      "body_characters": 596,
+      "example_source_pages": {
+        "6.1": [
+          237
+        ]
+      },
+      "html_sha256": "924172d31cfd6e70704ab26dc83c2cff85b3c4a528cff5ab661e4c0a3ab5fd97",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "section": "s62",
+      "id": "derive-c6-self-financing-proof",
+      "title": "定理 6.3–6.5：后向复制与折现财富鞅",
+      "examples": [],
+      "theorems": [
+        "6.3",
+        "6.4",
+        "6.5"
+      ],
+      "pdf_pages": [
+        238,
+        240
+      ],
+      "mathml": 12,
+      "body_characters": 464,
+      "example_source_pages": {},
+      "html_sha256": "1361c652607cd2b1b38444dc48b1bf5f596f8c84f542684a8cbf003ce6fc7feb",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "section": "s63",
+      "id": "derive-c6-callback-put",
+      "title": "例 6.2–6.3：完整终点路径与内部节点",
+      "examples": [
+        "6.2",
+        "6.3"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        241,
+        242
+      ],
+      "mathml": 32,
+      "body_characters": 1002,
+      "example_source_pages": {
+        "6.2": [
+          241
+        ],
+        "6.3": [
+          242
+        ]
+      },
+      "html_sha256": "e0125d700691bcabb26051b2c8348ff63816ca86738cfa06f46ffa703e3a4c7c",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "section": "s63",
+      "id": "derive-c6-parity-knockout",
+      "title": "例 6.4–6.5：平价恒等式与障碍路径",
+      "examples": [
+        "6.4",
+        "6.5"
+      ],
+      "theorems": [
+        "6.6"
+      ],
+      "pdf_pages": [
+        243,
+        245
+      ],
+      "mathml": 19,
+      "body_characters": 906,
+      "example_source_pages": {
+        "6.4": [
+          243,
+          244
+        ],
+        "6.5": [
+          244,
+          245
+        ]
+      },
+      "html_sha256": "a22b12d1b7aae364ac78bb651b6683f70f2aebfc6db9a71fcb56ba486d86d95d",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "section": "s64",
+      "id": "derive-c6-snell-examples",
+      "title": "例 6.6–6.7：美式节点比较与最优停止的证明",
+      "examples": [
+        "6.6",
+        "6.7"
+      ],
+      "theorems": [
+        "Snell envelope and finite optimal stopping",
+        "6.7"
+      ],
+      "pdf_pages": [
+        246,
+        249
+      ],
+      "mathml": 26,
+      "body_characters": 876,
+      "example_source_pages": {
+        "6.6": [
+          246,
+          247
+        ],
+        "6.7": [
+          247,
+          248,
+          249
+        ]
+      },
+      "html_sha256": "03e432416b7571e72fb785e93afb15b01186eaf195dc82ac9ef1a173f4670af8",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "section": "s65",
+      "id": "derive-c6-normal-limit-price",
+      "title": "正态极限、风险中性漂移与 Black–Scholes 积分",
+      "examples": [],
+      "theorems": [
+        "6.8",
+        "6.9",
+        "6.10",
+        "Black–Scholes delta"
+      ],
+      "pdf_pages": [
+        249,
+        254
+      ],
+      "mathml": 35,
+      "body_characters": 897,
+      "example_source_pages": {},
+      "html_sha256": "13df26d76c446564a70fb7b37b061ccf576061203cf162beec4b8993668a0b02",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "section": "s66",
+      "id": "derive-c6-historical-input",
+      "title": "例 6.8–6.9：把参数、正态概率与平价逐项代入",
+      "examples": [
+        "6.8",
+        "6.9"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        255,
+        255
+      ],
+      "mathml": 12,
+      "body_characters": 608,
+      "example_source_pages": {
+        "6.8": [
+          255
+        ],
+        "6.9": [
+          255
+        ]
+      },
+      "html_sha256": "cf2ee101a28337389f2e9c5a2f04911cd998f4d0ba99629d8ed480998320c7f7",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "appendix_a_probability_review.html",
+      "section": "a1",
+      "id": "derive-a-counting-bayes",
+      "title": "例 A.1–A.5：计数、条件与全概率的计算",
+      "examples": [
+        "A.1",
+        "A.2",
+        "A.3",
+        "A.4",
+        "A.5"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        259,
+        262
+      ],
+      "mathml": 24,
+      "body_characters": 671,
+      "example_source_pages": {
+        "A.1": [
+          259
+        ],
+        "A.2": [
+          259,
+          260
+        ],
+        "A.3": [
+          260,
+          261
+        ],
+        "A.4": [
+          261
+        ],
+        "A.5": [
+          261,
+          262
+        ]
+      },
+      "html_sha256": "28d89e84e3aae7fb3e16ea460f4efb35fffd8b829e9211eb3acb0da059299a02",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "appendix_a_probability_review.html",
+      "section": "a1",
+      "id": "derive-a-independence-events",
+      "title": "例 A.6–A.7：独立性必须用实际交集核对",
+      "examples": [
+        "A.6",
+        "A.7"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        262,
+        263
+      ],
+      "mathml": 22,
+      "body_characters": 473,
+      "example_source_pages": {
+        "A.6": [
+          262,
+          263
+        ],
+        "A.7": [
+          263
+        ]
+      },
+      "html_sha256": "4af1ffa9d3b5bcdc9a21384294735f80eca905e6d3d0517f2d4ae395e1ac4272",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "appendix_a_probability_review.html",
+      "section": "a2",
+      "id": "derive-a-distribution-construction",
+      "title": "例 A.8–A.15：常见分布的质量、密度与 CDF",
+      "examples": [
+        "A.8",
+        "A.9",
+        "A.10",
+        "A.11",
+        "A.12",
+        "A.13",
+        "A.14",
+        "A.15"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        264,
+        268
+      ],
+      "mathml": 25,
+      "body_characters": 667,
+      "example_source_pages": {
+        "A.8": [
+          264
+        ],
+        "A.9": [
+          264
+        ],
+        "A.10": [
+          264
+        ],
+        "A.11": [
+          265
+        ],
+        "A.12": [
+          265
+        ],
+        "A.13": [
+          265,
+          266
+        ],
+        "A.14": [
+          266
+        ],
+        "A.15": [
+          266,
+          267,
+          268
+        ]
+      },
+      "html_sha256": "c638f2b5d1267c9dda8edb1b8e744516f423deacd963bab81e324363972e157e",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "appendix_a_probability_review.html",
+      "section": "a2",
+      "id": "derive-a-independent-convolution",
+      "title": "定理 A.1–A.2与例 A.16–A.17：独立函数与卷积",
+      "examples": [
+        "A.16",
+        "A.17"
+      ],
+      "theorems": [
+        "A.1",
+        "A.2"
+      ],
+      "pdf_pages": [
+        268,
+        269
+      ],
+      "mathml": 25,
+      "body_characters": 660,
+      "example_source_pages": {
+        "A.16": [
+          268,
+          269
+        ],
+        "A.17": [
+          269
+        ]
+      },
+      "html_sha256": "30d65b1283c3fff0f37f888152b05be40f1511e90b00041228daf8cb5558a678",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "appendix_a_probability_review.html",
+      "section": "a3",
+      "id": "derive-a-moment-examples",
+      "title": "例 A.18–A.22：均值、方差与生成函数求导",
+      "examples": [
+        "A.18",
+        "A.19",
+        "A.20",
+        "A.21",
+        "A.22"
+      ],
+      "theorems": [
+        "A.3",
+        "A.4",
+        "A.5",
+        "A.6"
+      ],
+      "pdf_pages": [
+        270,
+        275
+      ],
+      "mathml": 30,
+      "body_characters": 903,
+      "example_source_pages": {
+        "A.18": [
+          270
+        ],
+        "A.19": [
+          270
+        ],
+        "A.20": [
+          271,
+          272
+        ],
+        "A.21": [
+          272
+        ],
+        "A.22": [
+          272,
+          273,
+          274,
+          275
+        ]
+      },
+      "html_sha256": "5f1ad901f845f386a531999b8fbe5fff4dcf3c6b99686a21402fab4d848ce23f",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "appendix_a_probability_review.html",
+      "section": "a3",
+      "id": "derive-a-total-variance",
+      "title": "全方差与正态矩母函数的计算依据",
+      "examples": [],
+      "theorems": [
+        "law of total variance",
+        "normal moment generating function"
+      ],
+      "pdf_pages": [
+        271,
+        275
+      ],
+      "mathml": 8,
+      "body_characters": 349,
+      "example_source_pages": {},
+      "html_sha256": "e68d77cf76c3f55ba2497667471afe527922e2215e626d8f5a1f8bfc11f97dfa",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "appendix_a_probability_review.html",
+      "section": "a4",
+      "id": "derive-a-convergence-proof",
+      "title": "例 A.23与换极限定理的证明要点",
+      "examples": [
+        "A.23"
+      ],
+      "theorems": [
+        "A.10",
+        "A.11",
+        "A.12",
+        "Fatou lemma"
+      ],
+      "pdf_pages": [
+        275,
+        275
+      ],
+      "mathml": 37,
+      "body_characters": 708,
+      "example_source_pages": {
+        "A.23": [
+          275
+        ]
+      },
+      "html_sha256": "d372c60e458c824b9fc59dc758114b04f5c2bc9b2cc53b67870d3ec2dbe931dc",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter03_renewal_processes.html",
+      "section": "s31",
+      "id": "derive-c3-cycles-replacement",
+      "title": "例 3.1–3.5：周期、奖励与换车最优年龄",
+      "examples": [
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.4",
+        "3.5"
+      ],
+      "theorems": [
+        "3.1",
+        "3.2 (used with integrable iid cycles)",
+        "3.3",
+        "3.4"
+      ],
+      "pdf_pages": [
+        135,
+        139
+      ],
+      "mathml": 36,
+      "body_characters": 943,
+      "example_source_pages": {
+        "3.1": [
+          135
+        ],
+        "3.2": [
+          135,
+          136
+        ],
+        "3.3": [
+          136,
+          137,
+          138
+        ],
+        "3.4": [
+          138
+        ],
+        "3.5": [
+          138,
+          139
+        ]
+      },
+      "html_sha256": "ed2da036adb7d27ff545547c0d708e7f9d6e31de2c6869909fe2b2c9526816be",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter03_renewal_processes.html",
+      "section": "s32",
+      "id": "derive-c3-queue-identities",
+      "title": "例 3.6–3.7：Little、忙期与等待公式的计算",
+      "examples": [
+        "3.6",
+        "3.7"
+      ],
+      "theorems": [
+        "3.5 (stability)",
+        "3.6 (Little)",
+        "3.7",
+        "3.8 (PASTA)",
+        "3.9"
+      ],
+      "pdf_pages": [
+        141,
+        145
+      ],
+      "mathml": 27,
+      "body_characters": 861,
+      "example_source_pages": {
+        "3.6": [
+          141,
+          142
+        ],
+        "3.7": [
+          145
+        ]
+      },
+      "html_sha256": "1a425ee445540daa950f46363cae97c062e96d0dbe7babc319bc0e14be98dce9",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter03_renewal_processes.html",
+      "section": "s33",
+      "id": "derive-c3-equilibrium-discrete",
+      "title": "例 3.8：倒计时平稳分布的递推与归一",
+      "examples": [
+        "3.8"
+      ],
+      "theorems": [
+        "3.10"
+      ],
+      "pdf_pages": [
+        147,
+        148
+      ],
+      "mathml": 12,
+      "body_characters": 353,
+      "example_source_pages": {
+        "3.8": [
+          147,
+          148
+        ]
+      },
+      "html_sha256": "740554ba8e7028620d5b660e509acc928f29e3a272ca039efe6101b4f676aea2",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter03_renewal_processes.html",
+      "section": "s33",
+      "id": "derive-c3-equilibrium-continuous",
+      "title": "例 3.9–3.10：从周期面积得到年龄与剩余寿命",
+      "examples": [
+        "3.9",
+        "3.10"
+      ],
+      "theorems": [
+        "3.11"
+      ],
+      "pdf_pages": [
+        149,
+        150
+      ],
+      "mathml": 24,
+      "body_characters": 675,
+      "example_source_pages": {
+        "3.9": [
+          149
+        ],
+        "3.10": [
+          149,
+          150
+        ]
+      },
+      "html_sha256": "5891b147a50e1f564951024d6dddd289258b8921dd6e2257a4af75b1ebb31b81",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "section": "s51",
+      "id": "derive-c5-conditional-rules",
+      "title": "例 5.1：条件期望的运算规则怎样验证",
+      "examples": [
+        "5.1"
+      ],
+      "theorems": [
+        "conditional expectation rules",
+        "conditional Jensen"
+      ],
+      "pdf_pages": [
+        210,
+        212
+      ],
+      "mathml": 19,
+      "body_characters": 479,
+      "example_source_pages": {
+        "5.1": [
+          210,
+          211,
+          212
+        ]
+      },
+      "html_sha256": "0887b67277bfc7d7698d98755aa4d9c88bc9d57ab4632b7a8651bf36558e622f",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "section": "s52",
+      "id": "derive-c5-martingale-constructions",
+      "title": "例 5.2–5.8：逐个计算下一步条件均值",
+      "examples": [
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "5.7",
+        "5.8"
+      ],
+      "theorems": [
+        "5.1"
+      ],
+      "pdf_pages": [
+        212,
+        215
+      ],
+      "mathml": 29,
+      "body_characters": 672,
+      "example_source_pages": {
+        "5.2": [
+          212,
+          213
+        ],
+        "5.3": [
+          213
+        ],
+        "5.4": [
+          213,
+          214
+        ],
+        "5.5": [
+          214
+        ],
+        "5.6": [
+          214
+        ],
+        "5.7": [
+          215
+        ],
+        "5.8": [
+          215
+        ]
+      },
+      "html_sha256": "f5dd4f2ceb23e932627b364b8e56f9f74693f35b712b6cca83fce47d75c65b8e",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "section": "s53",
+      "id": "derive-c5-stopping-proof",
+      "title": "例 5.9–5.11：停止族的公平与极限条件",
+      "examples": [
+        "5.9",
+        "5.10",
+        "5.11"
+      ],
+      "theorems": [
+        "5.6",
+        "5.7",
+        "5.8",
+        "5.9",
+        "5.10",
+        "5.11"
+      ],
+      "pdf_pages": [
+        216,
+        220
+      ],
+      "mathml": 27,
+      "body_characters": 751,
+      "example_source_pages": {
+        "5.9": [
+          216,
+          217,
+          218
+        ],
+        "5.10": [
+          218,
+          219
+        ],
+        "5.11": [
+          219,
+          220
+        ]
+      },
+      "html_sha256": "ae621abe84c6fdbee928862298f20e4a76092b6db73163254c7da49af4a563e4",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "section": "s54",
+      "id": "derive-c5-exit-scale",
+      "title": "例 5.12–5.14：停住调和鞅得到退出概率",
+      "examples": [
+        "5.12",
+        "5.13",
+        "5.14"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        220,
+        221
+      ],
+      "mathml": 25,
+      "body_characters": 658,
+      "example_source_pages": {
+        "5.12": [
+          220
+        ],
+        "5.13": [
+          221
+        ],
+        "5.14": [
+          221
+        ]
+      },
+      "html_sha256": "e08c08e98366627e736acf50874724afe77522f5557eb84bf580c5c957b5a66d",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "section": "s54",
+      "id": "derive-c5-exit-wald",
+      "title": "例 5.15–5.16：先证明可积，再使用 Wald",
+      "examples": [
+        "5.15",
+        "5.16"
+      ],
+      "theorems": [
+        "5.12"
+      ],
+      "pdf_pages": [
+        222,
+        224
+      ],
+      "mathml": 21,
+      "body_characters": 578,
+      "example_source_pages": {
+        "5.15": [
+          222,
+          223
+        ],
+        "5.16": [
+          224
+        ]
+      },
+      "html_sha256": "790f6d5b8f84bf77abe1aa60b1a34d6393fadcbf301c7a86381a4c059c44fa58",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "section": "s54",
+      "id": "derive-c5-ruin-root",
+      "title": "例 5.17–5.19：指数鞅怎样给出精确概率和上界",
+      "examples": [
+        "5.17",
+        "5.18",
+        "5.19"
+      ],
+      "theorems": [
+        "5.13"
+      ],
+      "pdf_pages": [
+        224,
+        226
+      ],
+      "mathml": 34,
+      "body_characters": 701,
+      "example_source_pages": {
+        "5.17": [
+          224,
+          225
+        ],
+        "5.18": [
+          225
+        ],
+        "5.19": [
+          225,
+          226
+        ]
+      },
+      "html_sha256": "b8c1b53127b61ecc6df57f51967a81682939c78827a310f4d6cb494e5e1ada8a",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s11",
+      "id": "derive-c1-basic-models",
+      "title": "例 1.1–1.5：一步概率怎样从规则得到",
+      "examples": [
+        "1.1",
+        "1.2",
+        "1.3",
+        "1.4",
+        "1.5"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        10,
+        13
+      ],
+      "mathml": 11,
+      "body_characters": 495,
+      "example_source_pages": {
+        "1.1": [
+          10,
+          11
+        ],
+        "1.2": [
+          12
+        ],
+        "1.3": [
+          12,
+          13
+        ],
+        "1.4": [
+          13
+        ],
+        "1.5": [
+          13
+        ]
+      },
+      "html_sha256": "406668e20e8bce358c9221b98b57fc0fd05a38138e2c151a8617ba6a27ef5164",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s11",
+      "id": "derive-c1-inventory-repair",
+      "title": "例 1.6–1.7：把库存与维修规则逐行翻译",
+      "examples": [
+        "1.6",
+        "1.7"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        13,
+        15
+      ],
+      "mathml": 17,
+      "body_characters": 745,
+      "example_source_pages": {
+        "1.6": [
+          13,
+          14
+        ],
+        "1.7": [
+          14,
+          15
+        ]
+      },
+      "html_sha256": "9d49c31f159764b9dea797e5c9fb03cc43716e4f5e87cb70267e3edf82b6d1e0",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s11",
+      "id": "derive-c1-expanded-state",
+      "title": "例 1.8–1.10：分枝、抽样与扩大状态",
+      "examples": [
+        "1.8",
+        "1.9",
+        "1.10"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        15,
+        17
+      ],
+      "mathml": 18,
+      "body_characters": 548,
+      "example_source_pages": {
+        "1.8": [
+          15
+        ],
+        "1.9": [
+          15,
+          16
+        ],
+        "1.10": [
+          16,
+          17
+        ]
+      },
+      "html_sha256": "6dbbb949205d5a90f77d50e6aaf8769a0b763b043cd612680c6e7452030ac67d",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s12",
+      "id": "derive-c1-matrix-paths",
+      "title": "例 1.11：两步转移要汇总所有中间状态",
+      "examples": [
+        "1.11"
+      ],
+      "theorems": [
+        "Chapman–Kolmogorov equation"
+      ],
+      "pdf_pages": [
+        21,
+        22
+      ],
+      "mathml": 14,
+      "body_characters": 415,
+      "example_source_pages": {
+        "1.11": [
+          21,
+          22
+        ]
+      },
+      "html_sha256": "00a281d48517be393d44cf26fa09e3669f6413607b6abe7fa2b59f5d5851bedd",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s13",
+      "id": "derive-c1-return-classification",
+      "title": "例 1.12–1.14与强马尔可夫性：为什么能从返回时刻重来",
+      "examples": [
+        "1.12",
+        "1.13",
+        "1.14"
+      ],
+      "theorems": [
+        "strong Markov property",
+        "recurrence via visit counts"
+      ],
+      "pdf_pages": [
+        24,
+        29
+      ],
+      "mathml": 22,
+      "body_characters": 746,
+      "example_source_pages": {
+        "1.12": [
+          24
+        ],
+        "1.13": [
+          25,
+          26
+        ],
+        "1.14": [
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      "html_sha256": "606487266a0ec413c220b65b190bb05797ca39ad227fa684daba9d33ca31da93",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s14",
+      "id": "derive-c1-stationary-computations",
+      "title": "例 1.15–1.20：从初始分布到平稳方程",
+      "examples": [
+        "1.15",
+        "1.16",
+        "1.17",
+        "1.18",
+        "1.19",
+        "1.20"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        30,
+        35
+      ],
+      "mathml": 32,
+      "body_characters": 829,
+      "example_source_pages": {
+        "1.15": [
+          30
+        ],
+        "1.16": [
+          30,
+          31
+        ],
+        "1.17": [
+          31,
+          32
+        ],
+        "1.18": [
+          32,
+          33,
+          34
+        ],
+        "1.19": [
+          34,
+          35
+        ],
+        "1.20": [
+          35
+        ]
+      },
+      "html_sha256": "6164084ba54458142413fb301454d9d21502e7318a86bf94c5b327f088aec48d",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s14",
+      "id": "derive-c1-uniform-board",
+      "title": "例 1.21–1.25：均匀分布何时能够成立",
+      "examples": [
+        "1.21",
+        "1.22",
+        "1.23",
+        "1.24",
+        "1.25"
+      ],
+      "theorems": [
+        "uniform stationary distribution for doubly stochastic P"
+      ],
+      "pdf_pages": [
+        36,
+        38
+      ],
+      "mathml": 21,
+      "body_characters": 796,
+      "example_source_pages": {
+        "1.21": [
+          36
+        ],
+        "1.22": [
+          36
+        ],
+        "1.23": [
+          36,
+          37
+        ],
+        "1.24": [
+          37
+        ],
+        "1.25": [
+          38
+        ]
+      },
+      "html_sha256": "9bb2d4fb9cda3102ca8c2883a5ae276c773ecd4cac530fd5eaa2ffe27357cf3a",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s15",
+      "id": "derive-c1-balance-weights",
+      "title": "例 1.26–1.30：细致平衡把联立方程变成比例",
+      "examples": [
+        "1.26",
+        "1.27",
+        "1.28",
+        "1.29",
+        "1.30"
+      ],
+      "theorems": [
+        "detailed balance implies stationarity"
+      ],
+      "pdf_pages": [
+        39,
+        43
+      ],
+      "mathml": 26,
+      "body_characters": 716,
+      "example_source_pages": {
+        "1.26": [
+          39
+        ],
+        "1.27": [
+          39,
+          40
+        ],
+        "1.28": [
+          40,
+          41
+        ],
+        "1.29": [
+          41,
+          42
+        ],
+        "1.30": [
+          42,
+          43
+        ]
+      },
+      "html_sha256": "376b10bc3b2d7613c7ed2a105e2a37a541bdafbc756fdeb92cc4bebef530c74c",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s15",
+      "id": "derive-c1-metropolis-cycle",
+      "title": "例 1.31–1.35：接受率与循环条件的来源",
+      "examples": [
+        "1.31",
+        "1.32",
+        "1.33",
+        "1.34",
+        "1.35"
+      ],
+      "theorems": [
+        "Metropolis–Hastings reversibility",
+        "Kolmogorov cycle condition"
+      ],
+      "pdf_pages": [
+        45,
+        49
+      ],
+      "mathml": 35,
+      "body_characters": 935,
+      "example_source_pages": {
+        "1.31": [
+          45
+        ],
+        "1.32": [
+          45
+        ],
+        "1.33": [
+          46,
+          47
+        ],
+        "1.34": [
+          47
+        ],
+        "1.35": [
+          47,
+          48,
+          49
+        ]
+      },
+      "html_sha256": "0434789df277f3f7ddb3326f829ee0027af0b10defb42f7a6dfff6828041ce52",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s16",
+      "id": "derive-c1-period-cost",
+      "title": "例 1.36–1.39：周期与长期业务量怎样计算",
+      "examples": [
+        "1.36",
+        "1.37",
+        "1.38",
+        "1.39"
+      ],
+      "theorems": [
+        "period via gcd",
+        "ergodic reward calculation"
+      ],
+      "pdf_pages": [
+        50,
+        55
+      ],
+      "mathml": 21,
+      "body_characters": 1004,
+      "example_source_pages": {
+        "1.36": [
+          50
+        ],
+        "1.37": [
+          50
+        ],
+        "1.38": [
+          53,
+          54
+        ],
+        "1.39": [
+          54,
+          55
+        ]
+      },
+      "html_sha256": "85ca0fd6e71e3ac10b02ec8063a1a0b810f29346589f6ec74d0c9e567f1a81c7",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s17",
+      "id": "derive-c1-return-proof",
+      "title": "返回周期公式中，未完成的周期为什么可以忽略",
+      "examples": [],
+      "theorems": [
+        "stationary distribution via return cycles",
+        "mean return time"
+      ],
+      "pdf_pages": [
+        55,
+        59
+      ],
+      "mathml": 17,
+      "body_characters": 391,
+      "example_source_pages": {},
+      "html_sha256": "11fcdcbfc24ee0b7da7742982a1fc73afef55f769c718258037d65c175b207af",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s18",
+      "id": "derive-c1-stationary-recurrence",
+      "title": "平稳概率为什么排除了不可约链的暂态情形",
+      "examples": [],
+      "theorems": [
+        "irreducible stationary chain is positive recurrent"
+      ],
+      "pdf_pages": [
+        55,
+        60
+      ],
+      "mathml": 16,
+      "body_characters": 431,
+      "example_source_pages": {},
+      "html_sha256": "e548a07190ae7b647f7b6f73d05dd199f54c684e94a4bcb2872c39e12ef38114",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s19",
+      "id": "derive-c1-gambler-harmonic",
+      "title": "例 1.40–1.45：退出概率的方程与通解",
+      "examples": [
+        "1.40",
+        "1.41",
+        "1.42",
+        "1.43",
+        "1.44",
+        "1.45"
+      ],
+      "theorems": [
+        "exit probability harmonic equation"
+      ],
+      "pdf_pages": [
+        62,
+        68
+      ],
+      "mathml": 30,
+      "body_characters": 711,
+      "example_source_pages": {
+        "1.40": [
+          62,
+          63
+        ],
+        "1.41": [
+          63,
+          64,
+          65
+        ],
+        "1.42": [
+          65,
+          66
+        ],
+        "1.43": [
+          66
+        ],
+        "1.44": [
+          66,
+          67,
+          68
+        ],
+        "1.45": [
+          68
+        ]
+      },
+      "html_sha256": "ab92fa6da1fadf61afb1d2edc806ea7ce711422664d4bc88212aa1e67d2c76bf",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s19",
+      "id": "derive-c1-two-closed-classes",
+      "title": "例 1.46：多个封闭类的极限是吸收概率的混合",
+      "examples": [
+        "1.46"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        69,
+        69
+      ],
+      "mathml": 31,
+      "body_characters": 512,
+      "example_source_pages": {
+        "1.46": [
+          69
+        ]
+      },
+      "html_sha256": "edfa889d8b7c83670f3d76fa05ed18c99c143f0c5d84dacdc1aeaad36d3e4cdd",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s110",
+      "id": "derive-c1-college-tennis-time",
+      "title": "例 1.47–1.48：退出时间为什么多出常数一",
+      "examples": [
+        "1.47",
+        "1.48"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        70,
+        72
+      ],
+      "mathml": 14,
+      "body_characters": 375,
+      "example_source_pages": {
+        "1.47": [
+          70
+        ],
+        "1.48": [
+          70,
+          71,
+          72
+        ]
+      },
+      "html_sha256": "96a7b4ef32c78bd189f5752f4272bb97190d98b764b6c63f95a284690fde7b38",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s110",
+      "id": "derive-c1-pattern-times",
+      "title": "例 1.49–1.51：等待模式必须保留已经匹配的后缀",
+      "examples": [
+        "1.49",
+        "1.50",
+        "1.51"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        72,
+        75
+      ],
+      "mathml": 22,
+      "body_characters": 670,
+      "example_source_pages": {
+        "1.49": [
+          72
+        ],
+        "1.50": [
+          72,
+          73,
+          74
+        ],
+        "1.51": [
+          74,
+          75
+        ]
+      },
+      "html_sha256": "7eae3a2c2a2e2ad8ea5859ac66d3b770421ee1c78e1b0a65fdc729ba5ac3b62d",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s110",
+      "id": "derive-c1-walk-time-differences",
+      "title": "例 1.52–1.53：公平与偏置退出时间的推导",
+      "examples": [
+        "1.52",
+        "1.53"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        75,
+        77
+      ],
+      "mathml": 17,
+      "body_characters": 411,
+      "example_source_pages": {
+        "1.52": [
+          75,
+          76
+        ],
+        "1.53": [
+          76,
+          77
+        ]
+      },
+      "html_sha256": "e3031511e7c53a5576a95dfa2c6dd1d9ad0174acb67f39f7b5f0807e0ca54838",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s111",
+      "id": "derive-c1-infinite-branching",
+      "title": "例 1.54–1.56：归一化、灭绝根与临界边界",
+      "examples": [
+        "1.54",
+        "1.55",
+        "1.56"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        77,
+        83
+      ],
+      "mathml": 36,
+      "body_characters": 749,
+      "example_source_pages": {
+        "1.54": [
+          77,
+          78,
+          79
+        ],
+        "1.55": [
+          79,
+          80,
+          81
+        ],
+        "1.56": [
+          81,
+          82,
+          83
+        ]
+      },
+      "html_sha256": "1b36c5314742975a136955e1ba7284ed3c59fce9732235b3b5a4dd37f55032fb",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "section": "s21",
+      "id": "derive-c2-exponential-examples",
+      "title": "指数公式与例 2.1–2.2 的逐次竞争",
+      "examples": [
+        "2.1",
+        "2.2"
+      ],
+      "theorems": [
+        "exponential memorylessness",
+        "2.1",
+        "2.2"
+      ],
+      "pdf_pages": [
+        106,
+        108
+      ],
+      "mathml": 21,
+      "body_characters": 709,
+      "example_source_pages": {
+        "2.1": [
+          106,
+          107
+        ],
+        "2.2": [
+          107,
+          108
+        ]
+      },
+      "html_sha256": "448cb990c3a5663feeb916087b9d67b0912adc22e4b26d43ae98fe341b894f58",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "section": "s22",
+      "id": "derive-c2-counting-proof",
+      "title": "泊松质量、独立增量与近似误差怎样推出",
+      "examples": [],
+      "theorems": [
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "2.8",
+        "2.9"
+      ],
+      "pdf_pages": [
+        108,
+        115
+      ],
+      "mathml": 31,
+      "body_characters": 780,
+      "example_source_pages": {},
+      "html_sha256": "9327bf85b3687344be0e7fef085f168cde209ccbf0be5d6620b1ca19d008a4ec",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "section": "s23",
+      "id": "derive-c2-compound-moments",
+      "title": "例 2.3–2.5：复合泊松均值与方差的两层计算",
+      "examples": [
+        "2.3",
+        "2.4",
+        "2.5"
+      ],
+      "theorems": [
+        "2.10"
+      ],
+      "pdf_pages": [
+        115,
+        117
+      ],
+      "mathml": 17,
+      "body_characters": 470,
+      "example_source_pages": {
+        "2.3": [
+          115
+        ],
+        "2.4": [
+          115,
+          116,
+          117
+        ],
+        "2.5": [
+          117
+        ]
+      },
+      "html_sha256": "49c46a353a8b6000bfd39e797dd79c0aa78039e09c31a106c04e9c7cf963131d",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "section": "s24",
+      "id": "derive-c2-thinning-examples",
+      "title": "例 2.6–2.8：类别计数的独立性从哪里来",
+      "examples": [
+        "2.6",
+        "2.7",
+        "2.8"
+      ],
+      "theorems": [
+        "2.11"
+      ],
+      "pdf_pages": [
+        118,
+        119
+      ],
+      "mathml": 17,
+      "body_characters": 701,
+      "example_source_pages": {
+        "2.6": [
+          118
+        ],
+        "2.7": [
+          119
+        ],
+        "2.8": [
+          119
+        ]
+      },
+      "html_sha256": "c8388cfba454aa21d52b194b9b4e0b9ed32fd5ae884e2754555a5b847629a1af",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "section": "s24",
+      "id": "derive-c2-infinite-server",
+      "title": "例 2.9–2.11：仍在系统里的人数与年龄分类",
+      "examples": [
+        "2.9",
+        "2.10",
+        "2.11"
+      ],
+      "theorems": [
+        "2.12",
+        "2.13"
+      ],
+      "pdf_pages": [
+        115,
+        121
+      ],
+      "mathml": 21,
+      "body_characters": 611,
+      "example_source_pages": {
+        "2.9": [
+          115,
+          119,
+          120
+        ],
+        "2.10": [
+          120
+        ],
+        "2.11": [
+          120,
+          121
+        ]
+      },
+      "html_sha256": "451a708a952fb9b5008ecce6b4cb1c60c69bba65bc743cc0621ac120b5ec916d",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "section": "s24",
+      "id": "derive-c2-race-conditional",
+      "title": "例 2.12–2.14：到达竞赛与给定总数后的计算",
+      "examples": [
+        "2.12",
+        "2.13",
+        "2.14"
+      ],
+      "theorems": [
+        "2.14",
+        "2.15",
+        "2.16"
+      ],
+      "pdf_pages": [
+        121,
+        124
+      ],
+      "mathml": 23,
+      "body_characters": 864,
+      "example_source_pages": {
+        "2.12": [
+          121
+        ],
+        "2.13": [
+          123
+        ],
+        "2.14": [
+          123,
+          124
+        ]
+      },
+      "html_sha256": "7c0ef055cd66bb3640ef34ba79ce016466c612d3ab044149e9fe7586539db206",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "s41",
+      "id": "derive-c4-clock-models",
+      "title": "例 4.1–4.6：从事件时钟构造生成矩阵",
+      "examples": [
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5",
+        "4.6"
+      ],
+      "theorems": [
+        "4.1"
+      ],
+      "pdf_pages": [
+        155,
+        160
+      ],
+      "mathml": 31,
+      "body_characters": 717,
+      "example_source_pages": {
+        "4.1": [
+          155,
+          156,
+          157
+        ],
+        "4.2": [
+          157
+        ],
+        "4.3": [
+          157
+        ],
+        "4.4": [
+          158,
+          159
+        ],
+        "4.5": [
+          159
+        ],
+        "4.6": [
+          159,
+          160
+        ]
+      },
+      "html_sha256": "db47f833aacc72205b34497c68fd1247d48474b8de8abfb7d2f4f21eb440aaa5",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "s42",
+      "id": "derive-c4-transition-ode",
+      "title": "例 4.7–4.10：由前向方程解转移概率",
+      "examples": [
+        "4.7",
+        "4.8",
+        "4.9",
+        "4.10"
+      ],
+      "theorems": [
+        "Kolmogorov forward and backward equations"
+      ],
+      "pdf_pages": [
+        162,
+        165
+      ],
+      "mathml": 39,
+      "body_characters": 826,
+      "example_source_pages": {
+        "4.7": [
+          162,
+          163
+        ],
+        "4.8": [
+          163
+        ],
+        "4.9": [
+          163,
+          164
+        ],
+        "4.10": [
+          164,
+          165
+        ]
+      },
+      "html_sha256": "fd8b74d6845e5466184e67838aa40dfdbf30a8865348b07dc72f814325f52179",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "s42",
+      "id": "derive-c4-yule-riccati",
+      "title": "例 4.11–4.12：分枝生成函数与缩放极限",
+      "examples": [
+        "4.11",
+        "4.12"
+      ],
+      "theorems": [
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5"
+      ],
+      "pdf_pages": [
+        165,
+        170
+      ],
+      "mathml": 34,
+      "body_characters": 824,
+      "example_source_pages": {
+        "4.11": [
+          165,
+          166,
+          167
+        ],
+        "4.12": [
+          167,
+          168,
+          169,
+          170
+        ]
+      },
+      "html_sha256": "6e233fe97c8305a03f890900b466155239f24a1b233c500bece7ec0186daf5e4",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "s43",
+      "id": "derive-c4-weather-basketball",
+      "title": "例 4.13–4.14：真实时间平稳比例与得分率",
+      "examples": [
+        "4.13",
+        "4.14"
+      ],
+      "theorems": [
+        "4.6",
+        "4.7",
+        "4.8"
+      ],
+      "pdf_pages": [
+        172,
+        184
+      ],
+      "mathml": 25,
+      "body_characters": 732,
+      "example_source_pages": {
+        "4.13": [
+          172,
+          173
+        ],
+        "4.14": [
+          173,
+          174,
+          175,
+          183,
+          184
+        ]
+      },
+      "html_sha256": "3d4419a077774a44772b7ce15be3a7f253494f4c28aa47efc2fe23a9eb38ad02",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "s43",
+      "id": "derive-c4-birthdeath-stationarity",
+      "title": "例 4.15–4.19：由速率比求平稳分布",
+      "examples": [
+        "4.15",
+        "4.16",
+        "4.17",
+        "4.18",
+        "4.19"
+      ],
+      "theorems": [
+        "4.9"
+      ],
+      "pdf_pages": [
+        175,
+        182
+      ],
+      "mathml": 25,
+      "body_characters": 657,
+      "example_source_pages": {
+        "4.15": [
+          175,
+          176
+        ],
+        "4.16": [
+          176
+        ],
+        "4.17": [
+          176
+        ],
+        "4.18": [
+          177,
+          179,
+          180,
+          182
+        ],
+        "4.19": [
+          177,
+          178
+        ]
+      },
+      "html_sha256": "fd0512c3c0fdf5fd80555d3fdc1c38f27fff5f5fca9fac44cea7dd944d94d9c0",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "s44",
+      "id": "derive-c4-exit-first-step",
+      "title": "退出方程、例 4.18 的到达概率与清空时间",
+      "examples": [
+        "4.18"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        179,
+        183
+      ],
+      "mathml": 29,
+      "body_characters": 735,
+      "example_source_pages": {
+        "4.18": [
+          177,
+          179,
+          180,
+          182
+        ]
+      },
+      "html_sha256": "7378f1c05970f481e9215aca88c5870d88388c9187c49c38251b252901e1ab65",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "unnumbered_results": [
+        "连续时间链的第一跳退出分布及平均退出时间方程"
+      ],
+      "source_numbering_note": "该小节方程在原书未编号；引理4.10位于下一节，讨论限制链。正文推导内容保持一致，编号关联在本轮核正。",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "s44",
+      "id": "derive-c4-branch-office-basketball",
+      "title": "例 4.20–4.22：跳链、最后离开与得分返回周期",
+      "examples": [
+        "4.20",
+        "4.21",
+        "4.22"
+      ],
+      "theorems": [],
+      "pdf_pages": [
+        178,
+        183
+      ],
+      "mathml": 36,
+      "body_characters": 1068,
+      "example_source_pages": {
+        "4.20": [
+          178,
+          179
+        ],
+        "4.21": [
+          180,
+          181,
+          183
+        ],
+        "4.22": [
+          183
+        ]
+      },
+      "html_sha256": "3b52ea08f5703ddec2c7ddc7de37025c766aabfcd1169c02966c19dba6e700e2",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "s45",
+      "id": "derive-c4-queue-means",
+      "title": "例 4.23–4.27：人数、拒绝率与等待时间的求和",
+      "examples": [
+        "4.23",
+        "4.24",
+        "4.25",
+        "4.26",
+        "4.27"
+      ],
+      "theorems": [
+        "4.11",
+        "4.12"
+      ],
+      "pdf_pages": [
+        185,
+        190
+      ],
+      "mathml": 39,
+      "body_characters": 837,
+      "example_source_pages": {
+        "4.23": [
+          185
+        ],
+        "4.24": [
+          185,
+          186
+        ],
+        "4.25": [
+          186,
+          187
+        ],
+        "4.26": [
+          188
+        ],
+        "4.27": [
+          188,
+          189,
+          190
+        ]
+      },
+      "html_sha256": "6a65e72f669ca93c87aaca822ae91eb71be93317e61442edeb5bcc39edf556f3",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "s45",
+      "id": "derive-c4-reversed-departures",
+      "title": "离开过程定理为什么需要平稳与时间反演",
+      "examples": [],
+      "theorems": [
+        "4.13",
+        "4.14",
+        "4.15",
+        "4.16"
+      ],
+      "pdf_pages": [
+        189,
+        193
+      ],
+      "mathml": 10,
+      "body_characters": 413,
+      "example_source_pages": {},
+      "html_sha256": "054e3f74b37c47ffdb53ff273ac081cc997e79dbc73d5053f653a7e8283b06c8",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "s46",
+      "id": "derive-c4-jackson-balance",
+      "title": "例 4.28–4.31：交通方程与乘积解的验证",
+      "examples": [
+        "4.28",
+        "4.29",
+        "4.30",
+        "4.31"
+      ],
+      "theorems": [
+        "4.17",
+        "4.18"
+      ],
+      "pdf_pages": [
+        191,
+        198
+      ],
+      "mathml": 49,
+      "body_characters": 1187,
+      "example_source_pages": {
+        "4.28": [
+          191,
+          192,
+          193
+        ],
+        "4.29": [
+          193,
+          194,
+          195,
+          196
+        ],
+        "4.30": [
+          196,
+          197
+        ],
+        "4.31": [
+          197,
+          198
+        ]
+      },
+      "html_sha256": "65a4b6fbc84757b08cae37e11e1cc83afee9721de5b504ba4bbaed38a3d7b160",
+      "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+      "hash_method": "html_support.canonical JSON SHA-256"
+    }
+  ],
+  "retained_proofs": [
+    {
+      "page": "appendix_a_probability_review.html",
+      "id": "body-review-a3",
+      "section": "a3",
+      "title": "尾矩公式与 Jensen 的支撑线证明",
+      "mathml": 6,
+      "body_characters": 512,
+      "html_sha256": "63a3409a3a5c6f6f9ebf40a5f76d14211edbd42517b20c3e6bb56ed923bb19ba",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=269",
+        "../assets/essentials-of-stochastic-processes.pdf#page=271",
+        "../assets/essentials-of-stochastic-processes.pdf#page=272",
+        "../assets/essentials-of-stochastic-processes.pdf#page=272",
+        "../assets/essentials-of-stochastic-processes.pdf#page=272",
+        "../assets/essentials-of-stochastic-processes.pdf#page=273",
+        "../assets/essentials-of-stochastic-processes.pdf#page=274",
+        "../assets/essentials-of-stochastic-processes.pdf#page=275",
+        "../assets/essentials-of-stochastic-processes.pdf#page=116",
+        "../assets/essentials-of-stochastic-processes.pdf#page=273",
+        "../assets/essentials-of-stochastic-processes.pdf#page=270",
+        "../assets/essentials-of-stochastic-processes.pdf#page=271"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "id": "body-review-s13",
+      "section": "s13",
+      "title": "分类判据中的返回计数与有限性",
+      "mathml": 3,
+      "body_characters": 385,
+      "html_sha256": "29e5fdad27eb74dc99b24db4ce4767d5d858ba4a3288ed5883f03d46fd929200",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=22",
+        "../assets/essentials-of-stochastic-processes.pdf#page=25",
+        "../assets/essentials-of-stochastic-processes.pdf#page=22",
+        "../assets/essentials-of-stochastic-processes.pdf#page=25",
+        "../assets/essentials-of-stochastic-processes.pdf#page=25",
+        "../assets/essentials-of-stochastic-processes.pdf#page=25",
+        "../assets/essentials-of-stochastic-processes.pdf#page=26",
+        "../assets/essentials-of-stochastic-processes.pdf#page=27",
+        "../assets/essentials-of-stochastic-processes.pdf#page=27",
+        "../assets/essentials-of-stochastic-processes.pdf#page=27",
+        "../assets/essentials-of-stochastic-processes.pdf#page=27",
+        "../assets/essentials-of-stochastic-processes.pdf#page=28",
+        "../assets/essentials-of-stochastic-processes.pdf#page=28",
+        "../assets/essentials-of-stochastic-processes.pdf#page=29",
+        "../assets/essentials-of-stochastic-processes.pdf#page=28",
+        "../assets/essentials-of-stochastic-processes.pdf#page=24"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "id": "body-review-s17",
+      "section": "s17",
+      "title": "平稳测度、零常返与周期奖励的完整关系",
+      "mathml": 10,
+      "body_characters": 605,
+      "html_sha256": "55abd0ae6c626ba8719602384df7877af3765c08a2de9b60c03d40bcc75e1008",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=57",
+        "../assets/essentials-of-stochastic-processes.pdf#page=57",
+        "../assets/essentials-of-stochastic-processes.pdf#page=55"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "id": "body-review-s18",
+      "section": "s18",
+      "title": "可数状态空间的相遇证明",
+      "mathml": 4,
+      "body_characters": 468,
+      "html_sha256": "b0899d3c789ae9ed89db0062b3532c7c482f4e94525bd32f1960b55102f77c1f",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=59",
+        "../assets/essentials-of-stochastic-processes.pdf#page=60",
+        "../assets/essentials-of-stochastic-processes.pdf#page=60",
+        "../assets/essentials-of-stochastic-processes.pdf#page=59",
+        "../assets/essentials-of-stochastic-processes.pdf#page=55"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "id": "body-review-s19",
+      "section": "s19",
+      "title": "退出问题的唯一性如何证明",
+      "mathml": 3,
+      "body_characters": 361,
+      "html_sha256": "1ba7fdf28a3acfacb2508734380fcaed5fe4d5c715fa5a3e036ff657484aed1a",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=64",
+        "../assets/essentials-of-stochastic-processes.pdf#page=72",
+        "../assets/essentials-of-stochastic-processes.pdf#page=62",
+        "../assets/essentials-of-stochastic-processes.pdf#page=69"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "id": "body-review-s21",
+      "section": "s21",
+      "title": "指数竞争的联合密度与 Gamma 卷积",
+      "mathml": 8,
+      "body_characters": 444,
+      "html_sha256": "3b28f9b303ccce162e422e96dd900b09a87622b92e10d82026c62c31b6a50dfb",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=104",
+        "../assets/essentials-of-stochastic-processes.pdf#page=106",
+        "../assets/essentials-of-stochastic-processes.pdf#page=108",
+        "../assets/essentials-of-stochastic-processes.pdf#page=106",
+        "../assets/essentials-of-stochastic-processes.pdf#page=106"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "id": "body-review-s22",
+      "section": "s22",
+      "title": "非齐次到达的累计速率与间隔",
+      "mathml": 7,
+      "body_characters": 447,
+      "html_sha256": "e156033904636af530467f65fa4d02878a2b0af69cf148918db547bd33574190",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=109",
+        "../assets/essentials-of-stochastic-processes.pdf#page=109",
+        "../assets/essentials-of-stochastic-processes.pdf#page=109",
+        "../assets/essentials-of-stochastic-processes.pdf#page=110",
+        "../assets/essentials-of-stochastic-processes.pdf#page=112",
+        "../assets/essentials-of-stochastic-processes.pdf#page=113",
+        "../assets/essentials-of-stochastic-processes.pdf#page=113",
+        "../assets/essentials-of-stochastic-processes.pdf#page=113",
+        "../assets/essentials-of-stochastic-processes.pdf#page=119",
+        "../assets/essentials-of-stochastic-processes.pdf#page=108"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    },
+    {
+      "page": "chapter03_renewal_processes.html",
+      "id": "body-review-s31",
+      "section": "s31",
+      "title": "零间隔与无限均值的计数率",
+      "mathml": 6,
+      "body_characters": 252,
+      "html_sha256": "6f92271cde0430de690a20c0ba27388f143627b87d3af9b4ed3b49fd96a77dcb",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=134",
+        "../assets/essentials-of-stochastic-processes.pdf#page=135",
+        "../assets/essentials-of-stochastic-processes.pdf#page=135",
+        "../assets/essentials-of-stochastic-processes.pdf#page=136",
+        "../assets/essentials-of-stochastic-processes.pdf#page=137",
+        "../assets/essentials-of-stochastic-processes.pdf#page=138",
+        "../assets/essentials-of-stochastic-processes.pdf#page=135",
+        "../assets/essentials-of-stochastic-processes.pdf#page=135"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    },
+    {
+      "page": "chapter03_renewal_processes.html",
+      "id": "body-review-s32",
+      "section": "s32",
+      "title": "服务开始链与时间空闲比例",
+      "mathml": 18,
+      "body_characters": 540,
+      "html_sha256": "dc59695995999fa7c51dd07233441dc22e2ea7f7632e1ad0ea980bd77e2445a1",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=139",
+        "../assets/essentials-of-stochastic-processes.pdf#page=140",
+        "../assets/essentials-of-stochastic-processes.pdf#page=141",
+        "../assets/essentials-of-stochastic-processes.pdf#page=143",
+        "../assets/essentials-of-stochastic-processes.pdf#page=144",
+        "../assets/essentials-of-stochastic-processes.pdf#page=144",
+        "../assets/essentials-of-stochastic-processes.pdf#page=143",
+        "../assets/essentials-of-stochastic-processes.pdf#page=141"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "id": "body-review-s42",
+      "section": "s42",
+      "title": "Kimura 与 HKY 的速率校注",
+      "mathml": 7,
+      "body_characters": 387,
+      "html_sha256": "c6fa432ffa4e601a2ae71480482e95d08d67f0204f69502dcf12e3c4f0c69f53",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=160",
+        "../assets/essentials-of-stochastic-processes.pdf#page=165",
+        "../assets/essentials-of-stochastic-processes.pdf#page=167",
+        "../assets/essentials-of-stochastic-processes.pdf#page=169",
+        "../assets/essentials-of-stochastic-processes.pdf#page=169",
+        "../assets/essentials-of-stochastic-processes.pdf#page=165",
+        "../assets/essentials-of-stochastic-processes.pdf#page=162",
+        "../assets/essentials-of-stochastic-processes.pdf#page=165"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "id": "body-review-s43",
+      "section": "s43",
+      "title": "跳链的平稳分布如何换回时间分布",
+      "mathml": 4,
+      "body_characters": 416,
+      "html_sha256": "b140a7cb024dc7ad9e694297ed9f8a38098997eb155a589279e9123ff9c9fca2",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=170",
+        "../assets/essentials-of-stochastic-processes.pdf#page=171",
+        "../assets/essentials-of-stochastic-processes.pdf#page=171",
+        "../assets/essentials-of-stochastic-processes.pdf#page=175",
+        "../assets/essentials-of-stochastic-processes.pdf#page=171",
+        "../assets/essentials-of-stochastic-processes.pdf#page=172",
+        "../assets/essentials-of-stochastic-processes.pdf#page=175"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "id": "body-review-s45",
+      "section": "s45",
+      "title": "多服务器队列在临界速率下的分类",
+      "mathml": 8,
+      "body_characters": 298,
+      "html_sha256": "651d6f2877ee00de53a64a875b29d3df7fb08db775654dfbcef1c7f2768d3719",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=186",
+        "../assets/essentials-of-stochastic-processes.pdf#page=188",
+        "../assets/essentials-of-stochastic-processes.pdf#page=189",
+        "../assets/essentials-of-stochastic-processes.pdf#page=190",
+        "../assets/essentials-of-stochastic-processes.pdf#page=190",
+        "../assets/essentials-of-stochastic-processes.pdf#page=191",
+        "../assets/essentials-of-stochastic-processes.pdf#page=191",
+        "../assets/essentials-of-stochastic-processes.pdf#page=188",
+        "../assets/essentials-of-stochastic-processes.pdf#page=185",
+        "../assets/essentials-of-stochastic-processes.pdf#page=189"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "id": "body-review-s52",
+      "section": "s52",
+      "title": "时间空间调和与漂移补偿",
+      "mathml": 3,
+      "body_characters": 346,
+      "html_sha256": "9deab5f9b9a5b68578c55c43f4b01e466a4776e35dedc7b160b95803c819bb5b",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=212",
+        "../assets/essentials-of-stochastic-processes.pdf#page=214",
+        "../assets/essentials-of-stochastic-processes.pdf#page=213",
+        "../assets/essentials-of-stochastic-processes.pdf#page=212"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "id": "body-review-s53",
+      "section": "s53",
+      "title": "有限期望与有界增量的停止条件",
+      "mathml": 5,
+      "body_characters": 257,
+      "html_sha256": "90a399e7ca016038eb19065f0a1d847a2195ea74928669c7ca67baa5c9790282",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=215",
+        "../assets/essentials-of-stochastic-processes.pdf#page=216",
+        "../assets/essentials-of-stochastic-processes.pdf#page=216",
+        "../assets/essentials-of-stochastic-processes.pdf#page=217",
+        "../assets/essentials-of-stochastic-processes.pdf#page=217",
+        "../assets/essentials-of-stochastic-processes.pdf#page=219",
+        "../assets/essentials-of-stochastic-processes.pdf#page=220",
+        "../assets/essentials-of-stochastic-processes.pdf#page=216"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "id": "body-review-s54",
+      "section": "s54",
+      "title": "GI/G/1 的负漂移与正再生证明",
+      "mathml": 3,
+      "body_characters": 620,
+      "html_sha256": "19b3eb1c6ce546afa166f350ed9a6f7bb23689a35eee4a8e2e81dc745b5ffc47",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=220",
+        "../assets/essentials-of-stochastic-processes.pdf#page=223",
+        "../assets/essentials-of-stochastic-processes.pdf#page=224",
+        "../assets/essentials-of-stochastic-processes.pdf#page=227",
+        "../assets/essentials-of-stochastic-processes.pdf#page=227",
+        "../assets/essentials-of-stochastic-processes.pdf#page=227",
+        "../assets/essentials-of-stochastic-processes.pdf#page=228",
+        "../assets/essentials-of-stochastic-processes.pdf#page=227",
+        "../assets/essentials-of-stochastic-processes.pdf#page=220",
+        "../assets/essentials-of-stochastic-processes.pdf#page=222",
+        "../assets/essentials-of-stochastic-processes.pdf#page=224"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "id": "body-review-s61",
+      "section": "s61",
+      "title": "两个入门例子的现金流与两周期复制",
+      "mathml": 1,
+      "body_characters": 439,
+      "html_sha256": "b494de4a392f003a09d75657f5df1b2b212ea51865b8fc26b30b519b6c799d79",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=231",
+        "../assets/essentials-of-stochastic-processes.pdf#page=232",
+        "../assets/essentials-of-stochastic-processes.pdf#page=232",
+        "../assets/essentials-of-stochastic-processes.pdf#page=231",
+        "../assets/essentials-of-stochastic-processes.pdf#page=232"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "id": "body-review-s64",
+      "section": "s64",
+      "title": "一般凸支付的继续价值",
+      "mathml": 3,
+      "body_characters": 392,
+      "html_sha256": "93d9e3f78eb13a30ded977d481b3371206aab2c3af2811dc4b165d70ce8c8817",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=245",
+        "../assets/essentials-of-stochastic-processes.pdf#page=245",
+        "../assets/essentials-of-stochastic-processes.pdf#page=248",
+        "../assets/essentials-of-stochastic-processes.pdf#page=248",
+        "../assets/essentials-of-stochastic-processes.pdf#page=246"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "id": "body-review-s65",
+      "section": "s65",
+      "title": "把二项极限与定价 PDE 的省略步骤展开",
+      "mathml": 6,
+      "body_characters": 775,
+      "html_sha256": "2875cc76214ccbfc978adfd76c6f7d8d068037fab0bcd89e11229956112a6c4c",
+      "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=249",
+        "../assets/essentials-of-stochastic-processes.pdf#page=250",
+        "../assets/essentials-of-stochastic-processes.pdf#page=251",
+        "../assets/essentials-of-stochastic-processes.pdf#page=252",
+        "../assets/essentials-of-stochastic-processes.pdf#page=250",
+        "../assets/essentials-of-stochastic-processes.pdf#page=249",
+        "../assets/essentials-of-stochastic-processes.pdf#page=249"
+      ],
+      "hash_scope": "entire containing section, program bodies omitted"
+    }
+  ],
+  "source_examples": [
+    {
+      "number": "1.1",
+      "source_pdf_pages": [
+        10,
+        11
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-basic-models"
+        }
+      ]
+    },
+    {
+      "number": "1.2",
+      "source_pdf_pages": [
+        12
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-basic-models"
+        }
+      ]
+    },
+    {
+      "number": "1.3",
+      "source_pdf_pages": [
+        12,
+        13
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-basic-models"
+        }
+      ]
+    },
+    {
+      "number": "1.4",
+      "source_pdf_pages": [
+        13
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-basic-models"
+        }
+      ]
+    },
+    {
+      "number": "1.5",
+      "source_pdf_pages": [
+        13
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-basic-models"
+        }
+      ]
+    },
+    {
+      "number": "1.6",
+      "source_pdf_pages": [
+        13,
+        14
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-inventory-repair"
+        }
+      ]
+    },
+    {
+      "number": "1.7",
+      "source_pdf_pages": [
+        14,
+        15
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-inventory-repair"
+        }
+      ]
+    },
+    {
+      "number": "1.8",
+      "source_pdf_pages": [
+        15
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-expanded-state"
+        }
+      ]
+    },
+    {
+      "number": "1.9",
+      "source_pdf_pages": [
+        15,
+        16
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-expanded-state"
+        }
+      ]
+    },
+    {
+      "number": "1.10",
+      "source_pdf_pages": [
+        16,
+        17
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-expanded-state"
+        }
+      ]
+    },
+    {
+      "number": "1.11",
+      "source_pdf_pages": [
+        21,
+        22
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-matrix-paths"
+        }
+      ]
+    },
+    {
+      "number": "1.12",
+      "source_pdf_pages": [
+        24
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-return-classification"
+        }
+      ]
+    },
+    {
+      "number": "1.13",
+      "source_pdf_pages": [
+        25,
+        26
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-return-classification"
+        }
+      ]
+    },
+    {
+      "number": "1.14",
+      "source_pdf_pages": [
+        26,
+        27,
+        28,
+        29
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-return-classification"
+        }
+      ]
+    },
+    {
+      "number": "1.15",
+      "source_pdf_pages": [
+        30
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-stationary-computations"
+        }
+      ]
+    },
+    {
+      "number": "1.16",
+      "source_pdf_pages": [
+        30,
+        31
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-stationary-computations"
+        }
+      ]
+    },
+    {
+      "number": "1.17",
+      "source_pdf_pages": [
+        31,
+        32
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-stationary-computations"
+        }
+      ]
+    },
+    {
+      "number": "1.18",
+      "source_pdf_pages": [
+        32,
+        33,
+        34
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-stationary-computations"
+        }
+      ]
+    },
+    {
+      "number": "1.19",
+      "source_pdf_pages": [
+        34,
+        35
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-stationary-computations"
+        }
+      ]
+    },
+    {
+      "number": "1.20",
+      "source_pdf_pages": [
+        35
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-stationary-computations"
+        }
+      ]
+    },
+    {
+      "number": "1.21",
+      "source_pdf_pages": [
+        36
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-uniform-board"
+        }
+      ]
+    },
+    {
+      "number": "1.22",
+      "source_pdf_pages": [
+        36
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-uniform-board"
+        }
+      ]
+    },
+    {
+      "number": "1.23",
+      "source_pdf_pages": [
+        36,
+        37
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-uniform-board"
+        }
+      ]
+    },
+    {
+      "number": "1.24",
+      "source_pdf_pages": [
+        37
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-uniform-board"
+        }
+      ]
+    },
+    {
+      "number": "1.25",
+      "source_pdf_pages": [
+        38
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-uniform-board"
+        }
+      ]
+    },
+    {
+      "number": "1.26",
+      "source_pdf_pages": [
+        39
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-balance-weights"
+        }
+      ]
+    },
+    {
+      "number": "1.27",
+      "source_pdf_pages": [
+        39,
+        40
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-balance-weights"
+        }
+      ]
+    },
+    {
+      "number": "1.28",
+      "source_pdf_pages": [
+        40,
+        41
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-balance-weights"
+        }
+      ]
+    },
+    {
+      "number": "1.29",
+      "source_pdf_pages": [
+        41,
+        42
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-balance-weights"
+        }
+      ]
+    },
+    {
+      "number": "1.30",
+      "source_pdf_pages": [
+        42,
+        43
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-balance-weights"
+        }
+      ]
+    },
+    {
+      "number": "1.31",
+      "source_pdf_pages": [
+        45
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-metropolis-cycle"
+        }
+      ]
+    },
+    {
+      "number": "1.32",
+      "source_pdf_pages": [
+        45
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-metropolis-cycle"
+        }
+      ]
+    },
+    {
+      "number": "1.33",
+      "source_pdf_pages": [
+        46,
+        47
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-metropolis-cycle"
+        }
+      ]
+    },
+    {
+      "number": "1.34",
+      "source_pdf_pages": [
+        47
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-metropolis-cycle"
+        }
+      ]
+    },
+    {
+      "number": "1.35",
+      "source_pdf_pages": [
+        47,
+        48,
+        49
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-metropolis-cycle"
+        }
+      ]
+    },
+    {
+      "number": "1.36",
+      "source_pdf_pages": [
+        50
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-period-cost"
+        }
+      ]
+    },
+    {
+      "number": "1.37",
+      "source_pdf_pages": [
+        50
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-period-cost"
+        }
+      ]
+    },
+    {
+      "number": "1.38",
+      "source_pdf_pages": [
+        53,
+        54
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-period-cost"
+        }
+      ]
+    },
+    {
+      "number": "1.39",
+      "source_pdf_pages": [
+        54,
+        55
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-period-cost"
+        }
+      ]
+    },
+    {
+      "number": "1.40",
+      "source_pdf_pages": [
+        62,
+        63
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-gambler-harmonic"
+        }
+      ]
+    },
+    {
+      "number": "1.41",
+      "source_pdf_pages": [
+        63,
+        64,
+        65
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-gambler-harmonic"
+        }
+      ]
+    },
+    {
+      "number": "1.42",
+      "source_pdf_pages": [
+        65,
+        66
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-gambler-harmonic"
+        }
+      ]
+    },
+    {
+      "number": "1.43",
+      "source_pdf_pages": [
+        66
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-gambler-harmonic"
+        }
+      ]
+    },
+    {
+      "number": "1.44",
+      "source_pdf_pages": [
+        66,
+        67,
+        68
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-gambler-harmonic"
+        }
+      ]
+    },
+    {
+      "number": "1.45",
+      "source_pdf_pages": [
+        68
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-gambler-harmonic"
+        }
+      ]
+    },
+    {
+      "number": "1.46",
+      "source_pdf_pages": [
+        69
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-two-closed-classes"
+        }
+      ]
+    },
+    {
+      "number": "1.47",
+      "source_pdf_pages": [
+        70
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-college-tennis-time"
+        }
+      ]
+    },
+    {
+      "number": "1.48",
+      "source_pdf_pages": [
+        70,
+        71,
+        72
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-college-tennis-time"
+        }
+      ]
+    },
+    {
+      "number": "1.49",
+      "source_pdf_pages": [
+        72
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-pattern-times"
+        }
+      ]
+    },
+    {
+      "number": "1.50",
+      "source_pdf_pages": [
+        72,
+        73,
+        74
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-pattern-times"
+        }
+      ]
+    },
+    {
+      "number": "1.51",
+      "source_pdf_pages": [
+        74,
+        75
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-pattern-times"
+        }
+      ]
+    },
+    {
+      "number": "1.52",
+      "source_pdf_pages": [
+        75,
+        76
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-walk-time-differences"
+        }
+      ]
+    },
+    {
+      "number": "1.53",
+      "source_pdf_pages": [
+        76,
+        77
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-walk-time-differences"
+        }
+      ]
+    },
+    {
+      "number": "1.54",
+      "source_pdf_pages": [
+        77,
+        78,
+        79
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-infinite-branching"
+        }
+      ]
+    },
+    {
+      "number": "1.55",
+      "source_pdf_pages": [
+        79,
+        80,
+        81
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-infinite-branching"
+        }
+      ]
+    },
+    {
+      "number": "1.56",
+      "source_pdf_pages": [
+        81,
+        82,
+        83
+      ],
+      "derivations": [
+        {
+          "page": "chapter01_markov_chains.html",
+          "anchor": "derive-c1-infinite-branching"
+        }
+      ]
+    },
+    {
+      "number": "2.1",
+      "source_pdf_pages": [
+        106,
+        107
+      ],
+      "derivations": [
+        {
+          "page": "chapter02_poisson_processes.html",
+          "anchor": "derive-c2-exponential-examples"
+        }
+      ]
+    },
+    {
+      "number": "2.2",
+      "source_pdf_pages": [
+        107,
+        108
+      ],
+      "derivations": [
+        {
+          "page": "chapter02_poisson_processes.html",
+          "anchor": "derive-c2-exponential-examples"
+        }
+      ]
+    },
+    {
+      "number": "2.9",
+      "source_pdf_pages": [
+        115,
+        119,
+        120
+      ],
+      "derivations": [
+        {
+          "page": "chapter02_poisson_processes.html",
+          "anchor": "derive-c2-infinite-server"
+        }
+      ]
+    },
+    {
+      "number": "2.3",
+      "source_pdf_pages": [
+        115
+      ],
+      "derivations": [
+        {
+          "page": "chapter02_poisson_processes.html",
+          "anchor": "derive-c2-compound-moments"
+        }
+      ]
+    },
+    {
+      "number": "2.4",
+      "source_pdf_pages": [
+        115,
+        116,
+        117
+      ],
+      "derivations": [
+        {
+          "page": "chapter02_poisson_processes.html",
+          "anchor": "derive-c2-compound-moments"
+        }
+      ]
+    },
+    {
+      "number": "2.5",
+      "source_pdf_pages": [
+        117
+      ],
+      "derivations": [
+        {
+          "page": "chapter02_poisson_processes.html",
+          "anchor": "derive-c2-compound-moments"
+        }
+      ]
+    },
+    {
+      "number": "2.6",
+      "source_pdf_pages": [
+        118
+      ],
+      "derivations": [
+        {
+          "page": "chapter02_poisson_processes.html",
+          "anchor": "derive-c2-thinning-examples"
+        }
+      ]
+    },
+    {
+      "number": "2.7",
+      "source_pdf_pages": [
+        119
+      ],
+      "derivations": [
+        {
+          "page": "chapter02_poisson_processes.html",
+          "anchor": "derive-c2-thinning-examples"
+        }
+      ]
+    },
+    {
+      "number": "2.8",
+      "source_pdf_pages": [
+        119
+      ],
+      "derivations": [
+        {
+          "page": "chapter02_poisson_processes.html",
+          "anchor": "derive-c2-thinning-examples"
+        }
+      ]
+    },
+    {
+      "number": "2.10",
+      "source_pdf_pages": [
+        120
+      ],
+      "derivations": [
+        {
+          "page": "chapter02_poisson_processes.html",
+          "anchor": "derive-c2-infinite-server"
+        }
+      ]
+    },
+    {
+      "number": "2.11",
+      "source_pdf_pages": [
+        120,
+        121
+      ],
+      "derivations": [
+        {
+          "page": "chapter02_poisson_processes.html",
+          "anchor": "derive-c2-infinite-server"
+        }
+      ]
+    },
+    {
+      "number": "2.12",
+      "source_pdf_pages": [
+        121
+      ],
+      "derivations": [
+        {
+          "page": "chapter02_poisson_processes.html",
+          "anchor": "derive-c2-race-conditional"
+        }
+      ]
+    },
+    {
+      "number": "2.13",
+      "source_pdf_pages": [
+        123
+      ],
+      "derivations": [
+        {
+          "page": "chapter02_poisson_processes.html",
+          "anchor": "derive-c2-race-conditional"
+        }
+      ]
+    },
+    {
+      "number": "2.14",
+      "source_pdf_pages": [
+        123,
+        124
+      ],
+      "derivations": [
+        {
+          "page": "chapter02_poisson_processes.html",
+          "anchor": "derive-c2-race-conditional"
+        }
+      ]
+    },
+    {
+      "number": "3.1",
+      "source_pdf_pages": [
+        135
+      ],
+      "derivations": [
+        {
+          "page": "chapter03_renewal_processes.html",
+          "anchor": "derive-c3-cycles-replacement"
+        }
+      ]
+    },
+    {
+      "number": "3.2",
+      "source_pdf_pages": [
+        135,
+        136
+      ],
+      "derivations": [
+        {
+          "page": "chapter03_renewal_processes.html",
+          "anchor": "derive-c3-cycles-replacement"
+        }
+      ]
+    },
+    {
+      "number": "3.3",
+      "source_pdf_pages": [
+        136,
+        137,
+        138
+      ],
+      "derivations": [
+        {
+          "page": "chapter03_renewal_processes.html",
+          "anchor": "derive-c3-cycles-replacement"
+        }
+      ]
+    },
+    {
+      "number": "3.4",
+      "source_pdf_pages": [
+        138
+      ],
+      "derivations": [
+        {
+          "page": "chapter03_renewal_processes.html",
+          "anchor": "derive-c3-cycles-replacement"
+        }
+      ]
+    },
+    {
+      "number": "3.5",
+      "source_pdf_pages": [
+        138,
+        139
+      ],
+      "derivations": [
+        {
+          "page": "chapter03_renewal_processes.html",
+          "anchor": "derive-c3-cycles-replacement"
+        }
+      ]
+    },
+    {
+      "number": "3.6",
+      "source_pdf_pages": [
+        141,
+        142
+      ],
+      "derivations": [
+        {
+          "page": "chapter03_renewal_processes.html",
+          "anchor": "derive-c3-queue-identities"
+        }
+      ]
+    },
+    {
+      "number": "3.7",
+      "source_pdf_pages": [
+        145
+      ],
+      "derivations": [
+        {
+          "page": "chapter03_renewal_processes.html",
+          "anchor": "derive-c3-queue-identities"
+        }
+      ]
+    },
+    {
+      "number": "3.8",
+      "source_pdf_pages": [
+        147,
+        148
+      ],
+      "derivations": [
+        {
+          "page": "chapter03_renewal_processes.html",
+          "anchor": "derive-c3-equilibrium-discrete"
+        }
+      ]
+    },
+    {
+      "number": "3.9",
+      "source_pdf_pages": [
+        149
+      ],
+      "derivations": [
+        {
+          "page": "chapter03_renewal_processes.html",
+          "anchor": "derive-c3-equilibrium-continuous"
+        }
+      ]
+    },
+    {
+      "number": "3.10",
+      "source_pdf_pages": [
+        149,
+        150
+      ],
+      "derivations": [
+        {
+          "page": "chapter03_renewal_processes.html",
+          "anchor": "derive-c3-equilibrium-continuous"
+        }
+      ]
+    },
+    {
+      "number": "4.1",
+      "source_pdf_pages": [
+        155,
+        156,
+        157
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-clock-models"
+        }
+      ]
+    },
+    {
+      "number": "4.2",
+      "source_pdf_pages": [
+        157
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-clock-models"
+        }
+      ]
+    },
+    {
+      "number": "4.3",
+      "source_pdf_pages": [
+        157
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-clock-models"
+        }
+      ]
+    },
+    {
+      "number": "4.4",
+      "source_pdf_pages": [
+        158,
+        159
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-clock-models"
+        }
+      ]
+    },
+    {
+      "number": "4.5",
+      "source_pdf_pages": [
+        159
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-clock-models"
+        }
+      ]
+    },
+    {
+      "number": "4.6",
+      "source_pdf_pages": [
+        159,
+        160
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-clock-models"
+        }
+      ]
+    },
+    {
+      "number": "4.7",
+      "source_pdf_pages": [
+        162,
+        163
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-transition-ode"
+        }
+      ]
+    },
+    {
+      "number": "4.8",
+      "source_pdf_pages": [
+        163
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-transition-ode"
+        }
+      ]
+    },
+    {
+      "number": "4.9",
+      "source_pdf_pages": [
+        163,
+        164
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-transition-ode"
+        }
+      ]
+    },
+    {
+      "number": "4.10",
+      "source_pdf_pages": [
+        164,
+        165
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-transition-ode"
+        }
+      ]
+    },
+    {
+      "number": "4.11",
+      "source_pdf_pages": [
+        165,
+        166,
+        167
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-yule-riccati"
+        }
+      ]
+    },
+    {
+      "number": "4.12",
+      "source_pdf_pages": [
+        167,
+        168,
+        169,
+        170
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-yule-riccati"
+        }
+      ]
+    },
+    {
+      "number": "4.13",
+      "source_pdf_pages": [
+        172,
+        173
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-weather-basketball"
+        }
+      ]
+    },
+    {
+      "number": "4.14",
+      "source_pdf_pages": [
+        173,
+        174,
+        175,
+        183,
+        184
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-weather-basketball"
+        }
+      ]
+    },
+    {
+      "number": "4.15",
+      "source_pdf_pages": [
+        175,
+        176
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-birthdeath-stationarity"
+        }
+      ]
+    },
+    {
+      "number": "4.16",
+      "source_pdf_pages": [
+        176
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-birthdeath-stationarity"
+        }
+      ]
+    },
+    {
+      "number": "4.17",
+      "source_pdf_pages": [
+        176
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-birthdeath-stationarity"
+        }
+      ]
+    },
+    {
+      "number": "4.18",
+      "source_pdf_pages": [
+        177,
+        179,
+        180,
+        182
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-birthdeath-stationarity"
+        },
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-exit-first-step"
+        }
+      ]
+    },
+    {
+      "number": "4.19",
+      "source_pdf_pages": [
+        177,
+        178
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-birthdeath-stationarity"
+        }
+      ]
+    },
+    {
+      "number": "4.20",
+      "source_pdf_pages": [
+        178,
+        179
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-branch-office-basketball"
+        }
+      ]
+    },
+    {
+      "number": "4.21",
+      "source_pdf_pages": [
+        180,
+        181,
+        183
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-branch-office-basketball"
+        }
+      ]
+    },
+    {
+      "number": "4.22",
+      "source_pdf_pages": [
+        183
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-branch-office-basketball"
+        }
+      ]
+    },
+    {
+      "number": "4.23",
+      "source_pdf_pages": [
+        185
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-queue-means"
+        }
+      ]
+    },
+    {
+      "number": "4.24",
+      "source_pdf_pages": [
+        185,
+        186
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-queue-means"
+        }
+      ]
+    },
+    {
+      "number": "4.25",
+      "source_pdf_pages": [
+        186,
+        187
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-queue-means"
+        }
+      ]
+    },
+    {
+      "number": "4.26",
+      "source_pdf_pages": [
+        188
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-queue-means"
+        }
+      ]
+    },
+    {
+      "number": "4.27",
+      "source_pdf_pages": [
+        188,
+        189,
+        190
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-queue-means"
+        }
+      ]
+    },
+    {
+      "number": "4.28",
+      "source_pdf_pages": [
+        191,
+        192,
+        193
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-jackson-balance"
+        }
+      ]
+    },
+    {
+      "number": "4.29",
+      "source_pdf_pages": [
+        193,
+        194,
+        195,
+        196
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-jackson-balance"
+        }
+      ]
+    },
+    {
+      "number": "4.30",
+      "source_pdf_pages": [
+        196,
+        197
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-jackson-balance"
+        }
+      ]
+    },
+    {
+      "number": "4.31",
+      "source_pdf_pages": [
+        197,
+        198
+      ],
+      "derivations": [
+        {
+          "page": "chapter04_continuous_time_markov_chains.html",
+          "anchor": "derive-c4-jackson-balance"
+        }
+      ]
+    },
+    {
+      "number": "5.1",
+      "source_pdf_pages": [
+        210,
+        211,
+        212
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-conditional-rules"
+        }
+      ]
+    },
+    {
+      "number": "5.2",
+      "source_pdf_pages": [
+        212,
+        213
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-martingale-constructions"
+        }
+      ]
+    },
+    {
+      "number": "5.3",
+      "source_pdf_pages": [
+        213
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-martingale-constructions"
+        }
+      ]
+    },
+    {
+      "number": "5.4",
+      "source_pdf_pages": [
+        213,
+        214
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-martingale-constructions"
+        }
+      ]
+    },
+    {
+      "number": "5.5",
+      "source_pdf_pages": [
+        214
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-martingale-constructions"
+        }
+      ]
+    },
+    {
+      "number": "5.6",
+      "source_pdf_pages": [
+        214
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-martingale-constructions"
+        }
+      ]
+    },
+    {
+      "number": "5.7",
+      "source_pdf_pages": [
+        215
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-martingale-constructions"
+        }
+      ]
+    },
+    {
+      "number": "5.8",
+      "source_pdf_pages": [
+        215
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-martingale-constructions"
+        }
+      ]
+    },
+    {
+      "number": "5.9",
+      "source_pdf_pages": [
+        216,
+        217,
+        218
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-stopping-proof"
+        }
+      ]
+    },
+    {
+      "number": "5.10",
+      "source_pdf_pages": [
+        218,
+        219
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-stopping-proof"
+        }
+      ]
+    },
+    {
+      "number": "5.11",
+      "source_pdf_pages": [
+        219,
+        220
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-stopping-proof"
+        }
+      ]
+    },
+    {
+      "number": "5.12",
+      "source_pdf_pages": [
+        220
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-exit-scale"
+        }
+      ]
+    },
+    {
+      "number": "5.13",
+      "source_pdf_pages": [
+        221
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-exit-scale"
+        }
+      ]
+    },
+    {
+      "number": "5.14",
+      "source_pdf_pages": [
+        221
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-exit-scale"
+        }
+      ]
+    },
+    {
+      "number": "5.15",
+      "source_pdf_pages": [
+        222,
+        223
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-exit-wald"
+        }
+      ]
+    },
+    {
+      "number": "5.16",
+      "source_pdf_pages": [
+        224
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-exit-wald"
+        }
+      ]
+    },
+    {
+      "number": "5.17",
+      "source_pdf_pages": [
+        224,
+        225
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-ruin-root"
+        }
+      ]
+    },
+    {
+      "number": "5.18",
+      "source_pdf_pages": [
+        225
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-ruin-root"
+        }
+      ]
+    },
+    {
+      "number": "5.19",
+      "source_pdf_pages": [
+        225,
+        226
+      ],
+      "derivations": [
+        {
+          "page": "chapter05_martingales.html",
+          "anchor": "derive-c5-ruin-root"
+        }
+      ]
+    },
+    {
+      "number": "6.1",
+      "source_pdf_pages": [
+        237
+      ],
+      "derivations": [
+        {
+          "page": "chapter06_mathematical_finance.html",
+          "anchor": "derive-c6-one-period-example"
+        }
+      ]
+    },
+    {
+      "number": "6.2",
+      "source_pdf_pages": [
+        241
+      ],
+      "derivations": [
+        {
+          "page": "chapter06_mathematical_finance.html",
+          "anchor": "derive-c6-callback-put"
+        }
+      ]
+    },
+    {
+      "number": "6.3",
+      "source_pdf_pages": [
+        242
+      ],
+      "derivations": [
+        {
+          "page": "chapter06_mathematical_finance.html",
+          "anchor": "derive-c6-callback-put"
+        }
+      ]
+    },
+    {
+      "number": "6.4",
+      "source_pdf_pages": [
+        243,
+        244
+      ],
+      "derivations": [
+        {
+          "page": "chapter06_mathematical_finance.html",
+          "anchor": "derive-c6-parity-knockout"
+        }
+      ]
+    },
+    {
+      "number": "6.5",
+      "source_pdf_pages": [
+        244,
+        245
+      ],
+      "derivations": [
+        {
+          "page": "chapter06_mathematical_finance.html",
+          "anchor": "derive-c6-parity-knockout"
+        }
+      ]
+    },
+    {
+      "number": "6.6",
+      "source_pdf_pages": [
+        246,
+        247
+      ],
+      "derivations": [
+        {
+          "page": "chapter06_mathematical_finance.html",
+          "anchor": "derive-c6-snell-examples"
+        }
+      ]
+    },
+    {
+      "number": "6.7",
+      "source_pdf_pages": [
+        247,
+        248,
+        249
+      ],
+      "derivations": [
+        {
+          "page": "chapter06_mathematical_finance.html",
+          "anchor": "derive-c6-snell-examples"
+        }
+      ]
+    },
+    {
+      "number": "6.8",
+      "source_pdf_pages": [
+        255
+      ],
+      "derivations": [
+        {
+          "page": "chapter06_mathematical_finance.html",
+          "anchor": "derive-c6-historical-input"
+        }
+      ]
+    },
+    {
+      "number": "6.9",
+      "source_pdf_pages": [
+        255
+      ],
+      "derivations": [
+        {
+          "page": "chapter06_mathematical_finance.html",
+          "anchor": "derive-c6-historical-input"
+        }
+      ]
+    },
+    {
+      "number": "A.1",
+      "source_pdf_pages": [
+        259
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-counting-bayes"
+        }
+      ]
+    },
+    {
+      "number": "A.2",
+      "source_pdf_pages": [
+        259,
+        260
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-counting-bayes"
+        }
+      ]
+    },
+    {
+      "number": "A.3",
+      "source_pdf_pages": [
+        260,
+        261
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-counting-bayes"
+        }
+      ]
+    },
+    {
+      "number": "A.4",
+      "source_pdf_pages": [
+        261
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-counting-bayes"
+        }
+      ]
+    },
+    {
+      "number": "A.5",
+      "source_pdf_pages": [
+        261,
+        262
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-counting-bayes"
+        }
+      ]
+    },
+    {
+      "number": "A.6",
+      "source_pdf_pages": [
+        262,
+        263
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-independence-events"
+        }
+      ]
+    },
+    {
+      "number": "A.7",
+      "source_pdf_pages": [
+        263
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-independence-events"
+        }
+      ]
+    },
+    {
+      "number": "A.8",
+      "source_pdf_pages": [
+        264
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-distribution-construction"
+        }
+      ]
+    },
+    {
+      "number": "A.9",
+      "source_pdf_pages": [
+        264
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-distribution-construction"
+        }
+      ]
+    },
+    {
+      "number": "A.10",
+      "source_pdf_pages": [
+        264
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-distribution-construction"
+        }
+      ]
+    },
+    {
+      "number": "A.11",
+      "source_pdf_pages": [
+        265
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-distribution-construction"
+        }
+      ]
+    },
+    {
+      "number": "A.12",
+      "source_pdf_pages": [
+        265
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-distribution-construction"
+        }
+      ]
+    },
+    {
+      "number": "A.13",
+      "source_pdf_pages": [
+        265,
+        266
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-distribution-construction"
+        }
+      ]
+    },
+    {
+      "number": "A.14",
+      "source_pdf_pages": [
+        266
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-distribution-construction"
+        }
+      ]
+    },
+    {
+      "number": "A.15",
+      "source_pdf_pages": [
+        266,
+        267,
+        268
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-distribution-construction"
+        }
+      ]
+    },
+    {
+      "number": "A.16",
+      "source_pdf_pages": [
+        268,
+        269
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-independent-convolution"
+        }
+      ]
+    },
+    {
+      "number": "A.17",
+      "source_pdf_pages": [
+        269
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-independent-convolution"
+        }
+      ]
+    },
+    {
+      "number": "A.18",
+      "source_pdf_pages": [
+        270
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-moment-examples"
+        }
+      ]
+    },
+    {
+      "number": "A.19",
+      "source_pdf_pages": [
+        270
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-moment-examples"
+        }
+      ]
+    },
+    {
+      "number": "A.20",
+      "source_pdf_pages": [
+        271,
+        272
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-moment-examples"
+        }
+      ]
+    },
+    {
+      "number": "A.21",
+      "source_pdf_pages": [
+        272
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-moment-examples"
+        }
+      ]
+    },
+    {
+      "number": "A.22",
+      "source_pdf_pages": [
+        272,
+        273,
+        274,
+        275
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-moment-examples"
+        }
+      ]
+    },
+    {
+      "number": "A.23",
+      "source_pdf_pages": [
+        275
+      ],
+      "derivations": [
+        {
+          "page": "appendix_a_probability_review.html",
+          "anchor": "derive-a-convergence-proof"
+        }
+      ]
+    }
+  ],
+  "numbering_note": "原书第1章周期性小节还有标为Example 4.4的三角形/正方形例，已在该小节说明，不并入正常编号162例的计数。",
+  "consolidation": [
+    {
+      "page": "chapter01_markov_chains.html",
+      "id": "body-review-s11",
+      "action": "merged into new derivations",
+      "pdf_pages": []
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "id": "body-review-s24",
+      "action": "merged into new derivations",
+      "pdf_pages": []
+    },
+    {
+      "page": "chapter03_renewal_processes.html",
+      "id": "body-review-s33",
+      "action": "merged into new derivations",
+      "pdf_pages": []
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "id": "body-review-s41",
+      "action": "merged into new derivations",
+      "pdf_pages": []
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "id": "body-review-s46",
+      "action": "merged into new derivations",
+      "pdf_pages": []
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "id": "body-review-s51",
+      "action": "merged into new derivations",
+      "pdf_pages": []
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "id": "body-review-s66",
+      "action": "merged into new derivations",
+      "pdf_pages": []
+    },
+    {
+      "page": "appendix_a_probability_review.html",
+      "id": "body-review-a1",
+      "action": "merged into new derivations",
+      "pdf_pages": []
+    },
+    {
+      "page": "appendix_a_probability_review.html",
+      "id": "body-review-a2",
+      "action": "merged into new derivations",
+      "pdf_pages": []
+    },
+    {
+      "page": "appendix_a_probability_review.html",
+      "id": "body-review-a4",
+      "action": "merged into new derivations",
+      "pdf_pages": []
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "id": "body-review-s21",
+      "action": "retained distinct proof",
+      "pdf_pages": [
+        106,
+        108
+      ]
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "id": "body-review-s22",
+      "action": "retained distinct proof",
+      "pdf_pages": [
+        119,
+        120
+      ]
+    },
+    {
+      "page": "chapter03_renewal_processes.html",
+      "id": "body-review-s31",
+      "action": "retained distinct proof",
+      "pdf_pages": [
+        135,
+        136
+      ]
+    },
+    {
+      "page": "chapter03_renewal_processes.html",
+      "id": "body-review-s32",
+      "action": "retained distinct proof",
+      "pdf_pages": [
+        143,
+        144
+      ]
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "id": "body-review-s42",
+      "action": "retained distinct proof",
+      "pdf_pages": [
+        165,
+        166
+      ]
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "id": "body-review-s45",
+      "action": "retained distinct proof",
+      "pdf_pages": [
+        188,
+        190
+      ]
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "id": "body-review-s53",
+      "action": "retained distinct proof",
+      "pdf_pages": [
+        220,
+        224
+      ]
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "id": "body-review-s54",
+      "action": "retained distinct proof",
+      "pdf_pages": [
+        227,
+        228
+      ]
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "id": "body-review-s61",
+      "action": "retained distinct proof",
+      "pdf_pages": [
+        231,
+        235
+      ]
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "id": "body-review-s18",
+      "action": "retained distinct proof",
+      "pdf_pages": [
+        59,
+        63
+      ]
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "id": "body-review-s64",
+      "action": "retained distinct proof",
+      "pdf_pages": [
+        248,
+        248
+      ]
+    }
+  ],
+  "notable_corrections": [
+    {
+      "location": "正文例 1.6",
+      "kind": "note clarification",
+      "pdf_pages": [
+        13,
+        14
+      ],
+      "correction": "库存补货阈值包含等号；日末库存不超过 s 就在次日销售前补至 S，按状态0至5逐行列出矩阵。"
+    },
+    {
+      "location": "正文例 1.22",
+      "kind": "source erratum",
+      "pdf_pages": [
+        36
+      ],
+      "correction": "第一行 P(0,1) 应为1/2；原书1/3使该行概率总和仅为5/6。"
+    },
+    {
+      "location": "正文例 1.33",
+      "kind": "source erratum",
+      "pdf_pages": [
+        46,
+        47
+      ],
+      "correction": "无向边每条计一次时，Ising 翻转能量差为2(2k-4)，接受率为min(1,exp[-2 beta(2k-4)])；补足 beta 并核正符号。"
+    },
+    {
+      "location": "正文例 1.46",
+      "kind": "source erratum",
+      "pdf_pages": [
+        69
+      ],
+      "correction": "到达封闭类{5,6}的向量中 h2=11/40 保持正确，h3 应为2/5；原书将后一分量印为3/5。"
+    },
+    {
+      "location": "正文例 2.12",
+      "kind": "source erratum",
+      "pdf_pages": [
+        121
+      ],
+      "correction": "同率时组合数和84+36+9+1=130，概率130/512=65/256，核正原书140/512。"
+    },
+    {
+      "location": "正文例 2.14",
+      "kind": "source and previous note correction",
+      "pdf_pages": [
+        123,
+        124
+      ],
+      "correction": "轿车乘客 EY=2.1、EY^2=5.5，轿车人数方差55加卡车方差5后总方差为60，标准差sqrt(60)正确。原书方差行的55及上一版笔记对该行的校注均已修正。"
+    },
+    {
+      "location": "正文例 3.3",
+      "kind": "source erratum",
+      "pdf_pages": [
+        136,
+        137,
+        138
+      ],
+      "correction": "成本率求导分母应为(T-0.05T^2)^2；分子0.015T^2+T-10，最优更换年龄约8.8304年，并比较端点。"
+    },
+    {
+      "location": "正文例 4.21：最后离开概率",
+      "kind": "source erratum",
+      "pdf_pages": [
+        180,
+        181
+      ],
+      "correction": "学生1、2、3最后离开的概率分别为(35,16,9)/60，不能把三项均写成35/60。"
+    },
+    {
+      "location": "正文例 4.21：全部离开时间",
+      "kind": "source erratum",
+      "pdf_pages": [
+        183
+      ],
+      "correction": "对访问集合的占用时间逐项求和得73/60小时，即1小时13分钟；原书63/60为加法错误。"
+    },
+    {
+      "location": "正文例 5.14",
+      "kind": "source erratum",
+      "pdf_pages": [
+        221
+      ],
+      "correction": "尺度函数 s 下从左端退出的概率为[s(b)-s(x)]/[s(b)-s(a)]；从右端退出才用[s(x)-s(a)]/[s(b)-s(a)]。"
+    },
+    {
+      "location": "正文例 6.1",
+      "kind": "source rounding clarification",
+      "pdf_pages": [
+        237
+      ],
+      "correction": "两路径的精确对冲收益均为17500/9，约1944.44；原书1945来自较早截断中间数值。"
+    },
+    {
+      "location": "正文例 6.2",
+      "kind": "source erratum",
+      "pdf_pages": [
+        241
+      ],
+      "correction": "完整列8条终点路径、每层价值与Delta；HH持股为-1/3，核正原书-0.25；终点支付之和为43/2，风险中性根价1.376。"
+    },
+    {
+      "location": "正文例 6.4",
+      "kind": "source ambiguity and erratum",
+      "pdf_pages": [
+        243,
+        244
+      ],
+      "correction": "文字初价32、树图初价36分别回溯。初价36时C=P=10368/1225；初价32时C=7452/1225、P=12352/1225，C-P=-4。树图根值的分子应为414.72。"
+    },
+    {
+      "location": "正文例 6.6",
+      "kind": "source erratum",
+      "pdf_pages": [
+        246,
+        247
+      ],
+      "correction": "按每个节点的立即行权与继续价值比较，根值应为2.784，核正单处2.874。"
+    },
+    {
+      "location": "正文例 6.7",
+      "kind": "source erratum",
+      "pdf_pages": [
+        247,
+        248,
+        249
+      ],
+      "correction": "末期子节点支付54与6，核正54+60中的60误植。"
+    },
+    {
+      "location": "正文例 6.8",
+      "kind": "source erratum and rounding clarification",
+      "pdf_pages": [
+        255
+      ],
+      "correction": "原书期限0.27393与100/365约0.2739726分别验算；连续年化率0.01的折现因子约0.99726445，计算单位沿用原书历史报价。"
+    },
+    {
+      "location": "content-1.11",
+      "kind": "audit repair",
+      "pdf_pages": [
+        89
+      ],
+      "correction": "三对细致平衡均成立，链关于(1/7,4/7,2/7)可逆；保留消元并逐对验算"
+    },
+    {
+      "location": "content-4.29",
+      "kind": "audit repair",
+      "pdf_pages": [
+        194
+      ],
+      "correction": "交通方程消元得(12/7,20/7)，利用率(3/7,40/49)，L=(3/4,40/9)，W=187/108；说明原书算术笔误"
+    },
+    {
+      "location": "content-6.4",
+      "kind": "audit repair",
+      "pdf_pages": [
+        243
+      ],
+      "correction": "原书两棵树根值均为414.72/49；区分文字S0=32与图S0=36，不再误称144.72"
+    },
+    {
+      "location": "content-6.20",
+      "kind": "audit repair",
+      "pdf_pages": [
+        258
+      ],
+      "correction": "字面普通看涨支付的64/25=2.56，保留原题矛盾和另一解释"
+    },
+    {
+      "location": "content-conditions-and-citations",
+      "kind": "audit repair",
+      "pdf_pages": [
+        142,
+        143,
+        156
+      ],
+      "correction": "补回生成元极限存在前提、3.7源页、PASTA无编号例归属；五处邻近摘录标明相关原文"
+    },
+    {
+      "location": "content-derivations",
+      "kind": "audit repair",
+      "pdf_pages": [],
+      "correction": "11道生灭题逐条速率代入和首末边验算；所有236题共1028步保留"
+    },
+    {
+      "location": "content-structure",
+      "kind": "audit repair",
+      "pdf_pages": [],
+      "correction": "补原书小节英文标题和六章Exercises节号；6.6按实际原书Calls and Puts；补附录来回链接"
+    }
+  ],
+  "algebra_checks": {
+    "checks": 24,
+    "result": "pass",
+    "scope": "确切算术、符号恒等式和关键修订位置；一般概率定理的证明仍按条件与原书论证核对。",
+    "items": [
+      {
+        "label": "例 4.12 生成函数初值",
+        "result": "pass"
+      },
+      {
+        "label": "例 4.12 Riccati 方程",
+        "result": "pass"
+      },
+      {
+        "label": "例 4.12 生成函数归一",
+        "result": "pass"
+      },
+      {
+        "label": "例 4.12 分枝均值",
+        "result": "pass"
+      },
+      {
+        "label": "例 4.12 临界生成函数方程",
+        "result": "pass"
+      },
+      {
+        "label": "例 3.3 换车成本导数",
+        "result": "pass"
+      },
+      {
+        "label": "例 3.3 最优点",
+        "result": "pass"
+      },
+      {
+        "label": "例 2.14 顾客均值",
+        "result": "pass"
+      },
+      {
+        "label": "例 2.14 顾客方差",
+        "result": "pass"
+      },
+      {
+        "label": "例 2.12 竞争概率",
+        "result": "pass"
+      },
+      {
+        "label": "例 2.14 中间时段条件概率",
+        "result": "pass"
+      },
+      {
+        "label": "例 2.14 车辆竞争概率",
+        "result": "pass"
+      },
+      {
+        "label": "例 4.21 最后离开三概率",
+        "result": "pass"
+      },
+      {
+        "label": "例 4.21 全部离开期望",
+        "result": "pass"
+      },
+      {
+        "label": "例 4.31 交通方程",
+        "result": "pass"
+      },
+      {
+        "label": "例 4.31 Little 公式",
+        "result": "pass"
+      },
+      {
+        "label": "例 6.1 复制与两路径收益",
+        "result": "pass"
+      },
+      {
+        "label": "例 6.5 障碍期权",
+        "result": "pass"
+      },
+      {
+        "label": "例 6.6 最优停止期望",
+        "result": "pass"
+      },
+      {
+        "label": "Black–Scholes 密度消项",
+        "result": "pass"
+      },
+      {
+        "label": "derive-c2-race-conditional 修订出现在最终页面",
+        "result": "pass"
+      },
+      {
+        "label": "derive-c1-two-closed-classes 修订出现在最终页面",
+        "result": "pass"
+      },
+      {
+        "label": "derive-c6-callback-put 修订出现在最终页面",
+        "result": "pass"
+      },
+      {
+        "label": "derive-c6-parity-knockout 修订出现在最终页面",
+        "result": "pass"
+      }
+    ]
+  },
+  "added_program_fixtures": {
+    "added": 22,
+    "total": 150,
+    "labels": [
+      "正文 例 1.6 库存",
+      "正文 例 1.7 维修",
+      "正文 例 1.10 热手",
+      "正文 例 1.51 连续六种点数",
+      "正文 例 4.14 篮球平稳",
+      "正文 例 4.22 篮球得分等待",
+      "正文 例 4.18 双理发师平稳",
+      "正文 例 4.18 先空后满",
+      "正文 例 4.18 清空时间",
+      "正文 例 4.19 机器维修",
+      "正文 例 1.46 两封闭类吸收概率",
+      "正文 例 6.1 单期复制",
+      "正文 例 6.2 回望完整树",
+      "正文 例 6.3 欧式看跌完整树",
+      "正文 例 6.4 初价 36 看涨",
+      "正文 例 6.4 初价 36 看跌",
+      "正文 例 6.4 初价 32 看涨",
+      "正文 例 6.4 初价 32 看跌",
+      "正文 例 6.6 美式看跌完整树",
+      "正文 例 6.7 美式看涨完整树",
+      "正文 例 6.8 期限 0.27393",
+      "正文 例 6.8 期限 0.273972602739726"
+    ]
+  },
+  "code_spelling_review": [
+    {
+      "id": "linear-c",
+      "page": "chapter01_markov_chains.html",
+      "language": "c",
+      "literal_spelling_changed": false,
+      "semantics": "only omitted leading zero numeric tokens normalized",
+      "sha256": "b476c42cd9d52b2596b9db6af10d864a7b0f0487bf4aa0eadd0db394cb03c647"
+    },
+    {
+      "id": "linear-python",
+      "page": "chapter01_markov_chains.html",
+      "language": "python",
+      "literal_spelling_changed": false,
+      "semantics": "Python AST identical",
+      "sha256": "0c61e1f3c02df6cafc5d988e6371ceac6d67320d0db4fa3e186dabfe0b38d0dc"
+    },
+    {
+      "id": "poisson-c",
+      "page": "chapter02_poisson_processes.html",
+      "language": "c",
+      "literal_spelling_changed": false,
+      "semantics": "only omitted leading zero numeric tokens normalized",
+      "sha256": "f116fa396a67c21a20ba62558c126435831f6443bd1a2a4120c441b142677bc5"
+    },
+    {
+      "id": "poisson-python",
+      "page": "chapter02_poisson_processes.html",
+      "language": "python",
+      "literal_spelling_changed": false,
+      "semantics": "Python AST identical",
+      "sha256": "9369dc8500c26361d4e8b9504a0a38ecfd52c73216507eb4f064d7aa90a32726"
+    },
+    {
+      "id": "renewal-c",
+      "page": "chapter03_renewal_processes.html",
+      "language": "c",
+      "literal_spelling_changed": false,
+      "semantics": "only omitted leading zero numeric tokens normalized",
+      "sha256": "37eb22a629013c3a1e2a59d5b7fe0c46117a911e0b3ca88bab54b70970d48c65"
+    },
+    {
+      "id": "renewal-python",
+      "page": "chapter03_renewal_processes.html",
+      "language": "python",
+      "literal_spelling_changed": true,
+      "semantics": "Python AST identical",
+      "sha256": "f3ec4e1621378623a166c97ba22df5c78e7b12f0786843e1878739f9a383a42c"
+    },
+    {
+      "id": "ctmc-c",
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "language": "c",
+      "literal_spelling_changed": false,
+      "semantics": "only omitted leading zero numeric tokens normalized",
+      "sha256": "b3784bd9edcc3bd97bf520e6f150b46f41836bd6b927bd909cc2395d4ea7a705"
+    },
+    {
+      "id": "ctmc-python",
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "language": "python",
+      "literal_spelling_changed": false,
+      "semantics": "Python AST identical",
+      "sha256": "93eb7b861f5ab47ac2953669df431d0aba26531b188df151f7bf065a571bbc64"
+    },
+    {
+      "id": "stopping-c",
+      "page": "chapter05_martingales.html",
+      "language": "c",
+      "literal_spelling_changed": false,
+      "semantics": "only omitted leading zero numeric tokens normalized",
+      "sha256": "0cdf239bee7c2c2922f5ebe42db7b52a498cf981cd4183d84e810f77b703bcda"
+    },
+    {
+      "id": "stopping-python",
+      "page": "chapter05_martingales.html",
+      "language": "python",
+      "literal_spelling_changed": true,
+      "semantics": "Python AST identical",
+      "sha256": "6ce4c95d7cdef55cfdb91d8d6ea5f119e129e93c5bd389721ed6fb0a93440183"
+    },
+    {
+      "id": "finance-c",
+      "page": "chapter06_mathematical_finance.html",
+      "language": "c",
+      "literal_spelling_changed": false,
+      "semantics": "only omitted leading zero numeric tokens normalized",
+      "sha256": "5c5f963c4f36c3449f95d26f20ad554c8bda945fb2a77e5122b23ee8a240102a"
+    },
+    {
+      "id": "finance-python",
+      "page": "chapter06_mathematical_finance.html",
+      "language": "python",
+      "literal_spelling_changed": false,
+      "semantics": "Python AST identical",
+      "sha256": "ab305289963b2047e5bbb9010bb27ff3665a7a0d66fa4a2b0e760cbebb43ef31"
+    },
+    {
+      "id": "bs-c",
+      "page": "chapter06_mathematical_finance.html",
+      "language": "c",
+      "literal_spelling_changed": true,
+      "semantics": "only omitted leading zero numeric tokens normalized",
+      "sha256": "ff5f7f9505e6715d6e102f7d45552980d2c27d7ee90b9a0a52b83320e3fcaa92"
+    },
+    {
+      "id": "bs-python",
+      "page": "chapter06_mathematical_finance.html",
+      "language": "python",
+      "literal_spelling_changed": true,
+      "semantics": "Python AST identical",
+      "sha256": "0e15ee5457bec9316a872d06fda550632d2b4da8d8362ca66d2e4e060991ed3a"
+    }
+  ],
+  "source_visual_review": {
+    "selected_pdf_pages": [
+      36,
+      47,
+      69,
+      124,
+      137,
+      181,
+      221,
+      237,
+      241,
+      242,
+      243,
+      244,
+      246,
+      248
+    ],
+    "scope": "本轮目视核对选定印刷公式、矩阵和算术错误，全文核对结合完整PDF文本；不把选页目视检查记录成282页渲染检查。"
+  },
+  "browser_review": {
+    "status": "pass",
+    "widths": [
+      1800,
+      1440,
+      1024,
+      390
+    ],
+    "layouts": [
+      {
+        "file": "appendix_a_probability_review.html",
+        "started_at_utc": "2026-10-11T13:06:46.714Z",
+        "finished_at_utc": "2026-10-11T13:06:47.824Z",
+        "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 19,
+        "inlineVisible": false,
+        "renderedMath": 380,
+        "badMath": 0,
+        "contexts": 4,
+        "deepLinks": 19
+      },
+      {
+        "file": "book_overview.html",
+        "started_at_utc": "2026-10-11T13:06:47.825Z",
+        "finished_at_utc": "2026-10-11T13:06:48.158Z",
+        "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": false,
+        "renderedMath": 11,
+        "badMath": 0,
+        "contexts": 6,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter01_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:07:49.083Z",
+        "finished_at_utc": "2026-10-11T13:10:50.954Z",
+        "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 77,
+        "statements": 38,
+        "inlineVisible": false,
+        "renderedMath": 2344,
+        "badMath": 0,
+        "contexts": 14,
+        "deepLinks": 115
+      },
+      {
+        "file": "chapter02_poisson_processes.html",
+        "started_at_utc": "2026-10-11T13:10:50.957Z",
+        "finished_at_utc": "2026-10-11T13:11:52.693Z",
+        "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 61,
+        "statements": 19,
+        "inlineVisible": false,
+        "renderedMath": 978,
+        "badMath": 0,
+        "contexts": 7,
+        "deepLinks": 80
+      },
+      {
+        "file": "chapter03_renewal_processes.html",
+        "started_at_utc": "2026-10-11T13:11:52.696Z",
+        "finished_at_utc": "2026-10-11T13:12:06.375Z",
+        "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 24,
+        "statements": 14,
+        "inlineVisible": false,
+        "renderedMath": 485,
+        "badMath": 0,
+        "contexts": 6,
+        "deepLinks": 38
+      },
+      {
+        "file": "chapter04_continuous_time_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:12:06.377Z",
+        "finished_at_utc": "2026-10-11T13:13:18.615Z",
+        "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 39,
+        "statements": 23,
+        "inlineVisible": false,
+        "renderedMath": 1238,
+        "badMath": 0,
+        "contexts": 9,
+        "deepLinks": 62
+      },
+      {
+        "file": "chapter05_martingales.html",
+        "started_at_utc": "2026-10-11T13:13:18.618Z",
+        "finished_at_utc": "2026-10-11T13:13:34.109Z",
+        "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 10,
+        "statements": 20,
+        "inlineVisible": false,
+        "renderedMath": 747,
+        "badMath": 0,
+        "contexts": 6,
+        "deepLinks": 30
+      },
+      {
+        "file": "chapter06_mathematical_finance.html",
+        "started_at_utc": "2026-10-11T13:13:34.111Z",
+        "finished_at_utc": "2026-10-11T13:14:11.392Z",
+        "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 25,
+        "statements": 17,
+        "inlineVisible": false,
+        "renderedMath": 1606,
+        "badMath": 0,
+        "contexts": 9,
+        "deepLinks": 42
+      },
+      {
+        "file": "preface.html",
+        "started_at_utc": "2026-10-11T13:14:11.394Z",
+        "finished_at_utc": "2026-10-11T13:14:12.678Z",
+        "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": false,
+        "renderedMath": 0,
+        "badMath": 0,
+        "contexts": 5,
+        "deepLinks": 0
+      },
+      {
+        "file": "appendix_a_probability_review.html",
+        "started_at_utc": "2026-10-11T13:14:12.685Z",
+        "finished_at_utc": "2026-10-11T13:14:12.894Z",
+        "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 19,
+        "inlineVisible": false,
+        "renderedMath": 380,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "book_overview.html",
+        "started_at_utc": "2026-10-11T13:14:12.895Z",
+        "finished_at_utc": "2026-10-11T13:14:13.026Z",
+        "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": false,
+        "renderedMath": 11,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter01_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:13.029Z",
+        "finished_at_utc": "2026-10-11T13:14:13.823Z",
+        "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 77,
+        "statements": 38,
+        "inlineVisible": false,
+        "renderedMath": 2344,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter02_poisson_processes.html",
+        "started_at_utc": "2026-10-11T13:14:13.824Z",
+        "finished_at_utc": "2026-10-11T13:14:14.096Z",
+        "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 61,
+        "statements": 19,
+        "inlineVisible": false,
+        "renderedMath": 978,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter03_renewal_processes.html",
+        "started_at_utc": "2026-10-11T13:14:14.097Z",
+        "finished_at_utc": "2026-10-11T13:14:14.226Z",
+        "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 24,
+        "statements": 14,
+        "inlineVisible": false,
+        "renderedMath": 485,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter04_continuous_time_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:14.227Z",
+        "finished_at_utc": "2026-10-11T13:14:14.478Z",
+        "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 39,
+        "statements": 23,
+        "inlineVisible": false,
+        "renderedMath": 1238,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter05_martingales.html",
+        "started_at_utc": "2026-10-11T13:14:14.480Z",
+        "finished_at_utc": "2026-10-11T13:14:14.712Z",
+        "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 10,
+        "statements": 20,
+        "inlineVisible": false,
+        "renderedMath": 747,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter06_mathematical_finance.html",
+        "started_at_utc": "2026-10-11T13:14:14.714Z",
+        "finished_at_utc": "2026-10-11T13:14:14.994Z",
+        "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 25,
+        "statements": 17,
+        "inlineVisible": false,
+        "renderedMath": 1606,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "preface.html",
+        "started_at_utc": "2026-10-11T13:14:14.995Z",
+        "finished_at_utc": "2026-10-11T13:14:15.259Z",
+        "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": false,
+        "renderedMath": 0,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "appendix_a_probability_review.html",
+        "started_at_utc": "2026-10-11T13:14:15.264Z",
+        "finished_at_utc": "2026-10-11T13:14:15.578Z",
+        "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 19,
+        "inlineVisible": true,
+        "renderedMath": 405,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "book_overview.html",
+        "started_at_utc": "2026-10-11T13:14:15.579Z",
+        "finished_at_utc": "2026-10-11T13:14:15.728Z",
+        "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": true,
+        "renderedMath": 28,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter01_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:15.729Z",
+        "finished_at_utc": "2026-10-11T13:14:16.481Z",
+        "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 77,
+        "statements": 38,
+        "inlineVisible": true,
+        "renderedMath": 2383,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter02_poisson_processes.html",
+        "started_at_utc": "2026-10-11T13:14:16.482Z",
+        "finished_at_utc": "2026-10-11T13:14:16.732Z",
+        "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 61,
+        "statements": 19,
+        "inlineVisible": true,
+        "renderedMath": 1016,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter03_renewal_processes.html",
+        "started_at_utc": "2026-10-11T13:14:16.733Z",
+        "finished_at_utc": "2026-10-11T13:14:16.962Z",
+        "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 24,
+        "statements": 14,
+        "inlineVisible": true,
+        "renderedMath": 500,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter04_continuous_time_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:16.964Z",
+        "finished_at_utc": "2026-10-11T13:14:17.270Z",
+        "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 39,
+        "statements": 23,
+        "inlineVisible": true,
+        "renderedMath": 1271,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter05_martingales.html",
+        "started_at_utc": "2026-10-11T13:14:17.271Z",
+        "finished_at_utc": "2026-10-11T13:14:17.461Z",
+        "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 10,
+        "statements": 20,
+        "inlineVisible": true,
+        "renderedMath": 767,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter06_mathematical_finance.html",
+        "started_at_utc": "2026-10-11T13:14:17.461Z",
+        "finished_at_utc": "2026-10-11T13:14:17.832Z",
+        "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 25,
+        "statements": 17,
+        "inlineVisible": true,
+        "renderedMath": 1628,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "preface.html",
+        "started_at_utc": "2026-10-11T13:14:17.834Z",
+        "finished_at_utc": "2026-10-11T13:14:17.993Z",
+        "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": true,
+        "renderedMath": 6,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "appendix_a_probability_review.html",
+        "started_at_utc": "2026-10-11T13:14:18.002Z",
+        "finished_at_utc": "2026-10-11T13:14:18.327Z",
+        "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 19,
+        "inlineVisible": true,
+        "renderedMath": 405,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "book_overview.html",
+        "started_at_utc": "2026-10-11T13:14:18.327Z",
+        "finished_at_utc": "2026-10-11T13:14:18.460Z",
+        "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": true,
+        "renderedMath": 28,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter01_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:18.462Z",
+        "finished_at_utc": "2026-10-11T13:14:19.245Z",
+        "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 77,
+        "statements": 38,
+        "inlineVisible": true,
+        "renderedMath": 2383,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter02_poisson_processes.html",
+        "started_at_utc": "2026-10-11T13:14:19.245Z",
+        "finished_at_utc": "2026-10-11T13:14:19.609Z",
+        "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 61,
+        "statements": 19,
+        "inlineVisible": true,
+        "renderedMath": 1016,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter03_renewal_processes.html",
+        "started_at_utc": "2026-10-11T13:14:19.610Z",
+        "finished_at_utc": "2026-10-11T13:14:19.794Z",
+        "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 24,
+        "statements": 14,
+        "inlineVisible": true,
+        "renderedMath": 500,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter04_continuous_time_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:19.795Z",
+        "finished_at_utc": "2026-10-11T13:14:20.093Z",
+        "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 39,
+        "statements": 23,
+        "inlineVisible": true,
+        "renderedMath": 1271,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter05_martingales.html",
+        "started_at_utc": "2026-10-11T13:14:20.093Z",
+        "finished_at_utc": "2026-10-11T13:14:20.327Z",
+        "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 10,
+        "statements": 20,
+        "inlineVisible": true,
+        "renderedMath": 767,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter06_mathematical_finance.html",
+        "started_at_utc": "2026-10-11T13:14:20.327Z",
+        "finished_at_utc": "2026-10-11T13:14:20.685Z",
+        "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 25,
+        "statements": 17,
+        "inlineVisible": true,
+        "renderedMath": 1628,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "preface.html",
+        "started_at_utc": "2026-10-11T13:14:20.685Z",
+        "finished_at_utc": "2026-10-11T13:14:20.844Z",
+        "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": true,
+        "renderedMath": 6,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      }
+    ],
+    "interactions": {
+      "started_at_utc": "2026-10-11T13:19:23.992Z",
+      "tocContext": "s24",
+      "contextReturn": {
+        "hash": "#s24",
+        "top": 23.84375
+      },
+      "breakpoints": [
+        {
+          "width": 1439,
+          "root": 1439,
+          "rail": false,
+          "inline": true
+        },
+        {
+          "width": 1440,
+          "root": 1440,
+          "rail": true,
+          "inline": false
+        },
+        {
+          "width": 390,
+          "root": 390,
+          "rail": false,
+          "inline": true
+        },
+        {
+          "width": 1800,
+          "root": 1800,
+          "rail": true,
+          "inline": false
+        }
+      ],
+      "mobileToc": {
+        "hash": "#s21",
+        "closed": true
+      },
+      "code": {
+        "pythonOpen": true,
+        "scroll": 1243.5,
+        "root": 390
+      },
+      "appendixLink": {
+        "hash": "#lemma-5-2",
+        "open": true
+      },
+      "noJs": [
+        {
+          "file": "appendix_a_probability_review.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 4,
+          "openGroups": 4,
+          "visibleGroups": 4,
+          "badMath": 0
+        },
+        {
+          "file": "book_overview.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter01_markov_chains.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 14,
+          "openGroups": 14,
+          "visibleGroups": 14,
+          "badMath": 0
+        },
+        {
+          "file": "chapter02_poisson_processes.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 7,
+          "openGroups": 7,
+          "visibleGroups": 7,
+          "badMath": 0
+        },
+        {
+          "file": "chapter03_renewal_processes.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter04_continuous_time_markov_chains.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 9,
+          "openGroups": 9,
+          "visibleGroups": 9,
+          "badMath": 0
+        },
+        {
+          "file": "chapter05_martingales.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter06_mathematical_finance.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 9,
+          "openGroups": 9,
+          "visibleGroups": 9,
+          "badMath": 0
+        },
+        {
+          "file": "preface.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 5,
+          "openGroups": 5,
+          "visibleGroups": 5,
+          "badMath": 0
+        },
+        {
+          "file": "appendix_a_probability_review.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 4,
+          "openGroups": 4,
+          "visibleGroups": 4,
+          "badMath": 0
+        },
+        {
+          "file": "book_overview.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter01_markov_chains.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 14,
+          "openGroups": 14,
+          "visibleGroups": 14,
+          "badMath": 0
+        },
+        {
+          "file": "chapter02_poisson_processes.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 7,
+          "openGroups": 7,
+          "visibleGroups": 7,
+          "badMath": 0
+        },
+        {
+          "file": "chapter03_renewal_processes.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter04_continuous_time_markov_chains.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 9,
+          "openGroups": 9,
+          "visibleGroups": 9,
+          "badMath": 0
+        },
+        {
+          "file": "chapter05_martingales.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter06_mathematical_finance.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 9,
+          "openGroups": 9,
+          "visibleGroups": 9,
+          "badMath": 0
+        },
+        {
+          "file": "preface.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 5,
+          "openGroups": 5,
+          "visibleGroups": 5,
+          "badMath": 0
+        }
+      ],
+      "nativeCollapse": true,
+      "nativeExpand": true,
+      "print": {
+        "events": {
+          "before": [
+            90
+          ],
+          "after": [
+            0
+          ]
+        },
+        "total": 90,
+        "restored": true
+      },
+      "finished_at_utc": "2026-10-11T13:19:43.062Z",
+      "status": "pass",
+      "visual_review": {
+        "status": "pass",
+        "inspected_screenshots": [
+          "detailed-balance",
+          "traffic",
+          "literal-payoff",
+          "birth-death",
+          "poisson",
+          "code",
+          "pairwise-proof",
+          "correct-decimal",
+          "weight-calculations",
+          "nojs"
+        ],
+        "print": {
+          "pages": 68,
+          "answer_headings": 64,
+          "example_page": 22,
+          "last_exercise_page": 67
+        },
+        "checked_at_utc": "2026-10-11T13:21:20.481321+00:00"
+      }
+    },
+    "executed_at_utc": {
+      "start": "2026-10-11T13:06:46.714Z",
+      "finish": "2026-10-11T13:14:20.844Z"
+    },
+    "evidence_paths": {
+      "layouts": "../tmp/audit-fix-http/browser-layouts.json",
+      "interactions": "../tmp/audit-fix-http/browser-interactions.json"
+    },
+    "visual_scope": "Nine repair screenshots and no-JS screenshot individually inspected; actual browser PDF print inspected on first, example and final exercise pages; all-page rendered formula and bounded interaction checks."
+  },
+  "files": {
+    "notes/appendix_a_probability_review.html": {
+      "bytes": 192942,
+      "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a"
+    },
+    "notes/book_overview.html": {
+      "bytes": 50653,
+      "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0"
+    },
+    "notes/chapter01_markov_chains.html": {
+      "bytes": 1141735,
+      "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f"
+    },
+    "notes/chapter02_poisson_processes.html": {
+      "bytes": 493525,
+      "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b"
+    },
+    "notes/chapter03_renewal_processes.html": {
+      "bytes": 256873,
+      "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa"
+    },
+    "notes/chapter04_continuous_time_markov_chains.html": {
+      "bytes": 644426,
+      "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3"
+    },
+    "notes/chapter05_martingales.html": {
+      "bytes": 322830,
+      "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c"
+    },
+    "notes/chapter06_mathematical_finance.html": {
+      "bytes": 571627,
+      "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17"
+    },
+    "notes/code_deployment_review.json": {
+      "bytes": 213947,
+      "sha256": "bdd9033479957f0338e9f864efce15239eec5fd4f045aa7d76877c3da2f2c63c"
+    },
+    "notes/preface.html": {
+      "bytes": 40431,
+      "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba"
+    },
+    "notes/audit_fix_review.json": {
+      "bytes": 47702,
+      "sha256": "b465c4e76ffd73048f97fed779663f7f73b126d91f2d343704e797fff2a74134"
+    }
+  },
+  "review_history": [
+    {
+      "generated_at_utc": "2026-10-10T15:33:20.557898+00:00",
+      "record": "../tmp/annotations-before/readability_review.json",
+      "scope": "小数写法、59组新增推导、18组保留证明、162个示例及此前浏览器检查。",
+      "browser_review": {
+        "record": "validation.json",
+        "new_derivation_blocks_checked": 59,
+        "screenshots_visually_reviewed": 21,
+        "desktop_width": 1280,
+        "mobile_width": 390,
+        "additional_screenshot_widths": [
+          375,
+          390
+        ],
+        "task_space_id": 7,
+        "task_space_finished": true
+      }
+    },
+    {
+      "generated_at_utc": "2026-10-10T16:14:56.187968+00:00",
+      "record": "../tmp/statements-before/notes/readability_review.json",
+      "scope": "原有小数写法、59组新增推导、18组保留证明、162个编号示例及122条注解的复核记录。正文内容保持一致。",
+      "browser_review": {
+        "record": "annotations_review.json",
+        "scope": "右侧注解与响应式阅读；此前正文数学复核和浏览器证据保留在review_history。",
+        "layout_variants": 40,
+        "wide_section_context_transitions": 122,
+        "screenshots_visually_reviewed": 19,
+        "no_javascript_variants": 16,
+        "task_space_id": 8,
+        "task_space_finished": true
+      }
+    },
+    {
+      "generated_at_utc": "2026-10-10T17:25:15.102262+00:00",
+      "record": "../tmp/code-deploy-before/notes/readability_review.json",
+      "scope": "源码抽离前的完整复核检查点；数学内容保持一致，代码与PDF的当前检查见code_deployment_review.json。",
+      "browser_review": {
+        "record": "statements_review.json",
+        "scope": "九页在1800px和390px的18个阅读位置逐一目视检查，另查看关闭JavaScript后的序言注解与概率公理手机截图。全页公式、展开后的习题及代码版本、页面溢出与注解布局检查覆盖36种布局；1800px逐个验证66个小节上下文和150个正式陈述锚点。索引、详细推导入口、序言章间导航、同编号定理/引理、原生折叠及18种无JS布局另有记录。",
+        "layout_variants": 36,
+        "wide_section_context_transitions": 66,
+        "statement_deep_links": 150,
+        "screenshots_visually_reviewed": 20,
+        "no_javascript_variants": 18,
+        "task_space_id": 9,
+        "task_space_finished": true
+      }
+    },
+    {
+      "phase": "before_audit_repairs",
+      "generated_at_utc": "2026-10-11T09:59:24.093017+00:00",
+      "browser_review": {
+        "record": "code_deployment_review.json",
+        "scope": "九页在Nginx HTTP下分别检查1800px/390px布局、全部展开公式和习题、源码下载路径、PDF链接、脚本错误与CSP。第一章/第六章四个截图、PDF第5页/282页原生阅读器截图和关闭JS的离线手机代码截图逐一目视检查。",
+        "layout_variants": 18,
+        "task_space_id": 10,
+        "task_space_finished": true,
+        "pdf_page_parameter_verified": true
+      },
+      "runtime_evidence": null,
+      "preservation": null,
+      "structural_checks": null,
+      "files": {
+        "notes/appendix_a_probability_review.html": {
+          "bytes": 191027,
+          "sha256": "c1bfd7234433869871c429e8bddc9b0ca25d1d4ad5510e2d61c060b86f3b7bd1"
+        },
+        "notes/book_overview.html": {
+          "bytes": 49896,
+          "sha256": "7b31f9e8640023abb540bf6d9abd4c5107e7af987de018dca230e9dc05c0d917"
+        },
+        "notes/chapter01_markov_chains.html": {
+          "bytes": 1135008,
+          "sha256": "c02e0f49e9126cf89b102579ec9acc4a5c7047d72dbc2e6eadb59af71de82445"
+        },
+        "notes/chapter02_poisson_processes.html": {
+          "bytes": 491858,
+          "sha256": "3e818260a6ac6b22bb1593c3acdd0dc1842471439a22ef22e5fcb7d0e64887df"
+        },
+        "notes/chapter03_renewal_processes.html": {
+          "bytes": 255508,
+          "sha256": "c0b8d4467bf44ae2ef68efa982f0e36f5cb1356765af9760324c596632cb1377"
+        },
+        "notes/chapter04_continuous_time_markov_chains.html": {
+          "bytes": 611402,
+          "sha256": "d2b0391006cf8bd9a7db20eab448c38f67d99909add058e8c1478a05d7acdfee"
+        },
+        "notes/chapter05_martingales.html": {
+          "bytes": 321148,
+          "sha256": "0af0255167040feb8c560b2db5d20b29aa53bbfc82fffa91e56c25c306023805"
+        },
+        "notes/chapter06_mathematical_finance.html": {
+          "bytes": 567251,
+          "sha256": "785a2f679a3bcfa91201dab9355c1de551c6783a495075aa3ef5b9a91fa9357e"
+        },
+        "notes/code_deployment_review.json": {
+          "bytes": 161011,
+          "sha256": "a0b41e1b075f743b791d7bfb1133b0113731f69a11006536907872cf410e28d7"
+        },
+        "notes/preface.html": {
+          "bytes": 39721,
+          "sha256": "55c629ffbc4373b06490ea0f82f85c0431743abd7b3d0549a21a8b9501c366d0"
+        }
+      },
+      "record_sha256": "6d0e1931688a417ecf0e31e4a70a99a50fe71f5af5ab75183b96a792b5e43663"
+    }
+  ],
+  "annotations_review_file": "annotations_review.json",
+  "statements_review_file": "statements_review.json",
+  "code_deployment_review_file": "code_deployment_review.json",
+  "audit_fix_review_file": "audit_fix_review.json",
+  "current_checkpoint": "audit_repairs_final",
+  "audit_expanded_birth_death_exercises": 11
+}

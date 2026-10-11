@@ -1,0 +1,48 @@
+HTML coverage and 7 strict C/sanitizer builds passed.
+150 independent numerical fixtures passed in C, Python and sanitizers.
+{
+  "html_pages": 9,
+  "exercises": 236,
+  "detailed_answers": 236,
+  "solution_steps": 1028,
+  "balanced_html": "pass",
+  "formula_conversion": "pass",
+  "leading_decimal_zeros": "pass",
+  "solution_headings": "pass",
+  "annotation_groups": 66,
+  "annotation_cards": 132,
+  "annotation_bindings": "pass",
+  "formal_statements": 150,
+  "numbered_theorems_and_lemmas": 115,
+  "numbered_definitions": 2,
+  "numbered_source_coverage": "pass",
+  "original_excerpts": 146,
+  "preface_original_paragraphs": 4,
+  "probability_axioms": 3,
+  "code_pairs": 7,
+  "standalone_source_files": 14,
+  "source_html_consistency": "pass",
+  "web_pdf_sha256": "2232660e1909b42c6df8b5aca8eba12cdb383bf3741ecb53add49f6c26c6a0e7",
+  "pdf_links": "pass",
+  "mathml": 7926,
+  "figures": 7,
+  "source_sha256": "2232660e1909b42c6df8b5aca8eba12cdb383bf3741ecb53add49f6c26c6a0e7",
+  "numerical_fixtures": 150,
+  "simulation_runs": 4,
+  "crr_periods": [
+    16,
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "c11_strict": "pass",
+  "asan_ubsan": "pass",
+  "python": "pass",
+  "cross_language": "pass",
+  "invalid_inputs": 42,
+  "browser_acceptance": "recorded separately"
+}
+OVERALL PASS
+EXIT=0

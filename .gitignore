@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+!.env.example
+.venv/
+.idea/
+.vscode/
+code/build/
+tmp/
+deploy/releases/
+deploy/reports/

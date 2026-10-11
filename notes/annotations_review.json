@@ -1,0 +1,4355 @@
+{
+  "status": "pass",
+  "generated_at_utc": "2026-10-11T13:28:00.496635+00:00",
+  "source": {
+    "title": "Richard Durrett, Essentials of Stochastic Processes, Third Edition, 2016",
+    "pdf_filename": "Essentials of Stochastic Processes (Richard Durrett) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "pdf_pages": 282,
+    "sha256": "2232660e1909b42c6df8b5aca8eba12cdb383bf3741ecb53add49f6c26c6a0e7"
+  },
+  "statistics": {
+    "html_pages": 9,
+    "section_annotation_groups": 66,
+    "annotation_cards": 132,
+    "annotation_mathml": 215,
+    "preface_annotation_cards_added": 10
+  },
+  "content_scope": "作者的中文伴读说明：模型理解、公式含义、定理假设、简短补充推导、读法和验算。每条注解绑定原有小节；正文中的完整证明与习题详细步骤保留原位置。",
+  "layout": {
+    "wide_breakpoint_px": 1440,
+    "left_toc_width_px": 240,
+    "main_max_width_px": 860,
+    "right_annotation_width_px": 280,
+    "wide": "右栏随当前小节切换，标题链接可返回对应小节；左目录与右栏在滚动时保留入口。",
+    "narrow": "同一组注解位于对应小节末尾，原生details默认展开并可折叠。",
+    "no_javascript": "保持小节中的原生注解，阅读及展开折叠不依赖JavaScript。"
+  },
+  "groups": [
+    {
+      "page": "appendix_a_probability_review.html",
+      "section": "a1",
+      "section_title": "A.1 概率、条件与独立",
+      "anchor": "notes-a1",
+      "canonical_group_sha256": "ea5404c5d181350973367fa5d8de4efe4d6a93a03aac3f90e93cffa5a0d6dcd0",
+      "cards": [
+        {
+          "note_id": "appendix_a_probability_review-a1-1",
+          "kind": "理解",
+          "title": "条件化是在改变观察范围",
+          "formulas": [
+            "B",
+            "B"
+          ],
+          "canonical_html_sha256": "7b1182dc187bfeefe5be14f46d34ea54bc2afc5248850ea8ae44fc1b6264085b"
+        },
+        {
+          "note_id": "appendix_a_probability_review-a1-2",
+          "kind": "例子",
+          "title": "两两独立还可能保留整体约束",
+          "formulas": [
+            "X,Y",
+            "Z",
+            "X,Y",
+            "Z"
+          ],
+          "canonical_html_sha256": "fca16b68298959a80775c701f5e8c1ae2db149a5d8c4b0802ef8a33fcefc319c"
+        }
+      ]
+    },
+    {
+      "page": "appendix_a_probability_review.html",
+      "section": "a2",
+      "section_title": "A.2 分布与联合密度",
+      "anchor": "notes-a2",
+      "canonical_group_sha256": "fb30d993ce61960d6683b29341503b0d2e9afc93d171c19f321cf794a50a765f",
+      "cards": [
+        {
+          "note_id": "appendix_a_probability_review-a2-1",
+          "kind": "理解",
+          "title": "联合分布记录了依赖结构",
+          "formulas": [
+            "Y=X",
+            "X",
+            "Y"
+          ],
+          "canonical_html_sha256": "6a245f587a91ecbea990eed8efe9309fab88803410e06e19ab3cccaa82ed63bd"
+        },
+        {
+          "note_id": "appendix_a_probability_review-a2-2",
+          "kind": "计算",
+          "title": "先画支持区域再做二重积分",
+          "formulas": [
+            "0<x<y<1",
+            "y",
+            "x",
+            "(0,y)",
+            "x",
+            "y",
+            "(x,1)"
+          ],
+          "canonical_html_sha256": "c38c13b916d4777b4b11614fedb1c46ea793ed8550927d4aad06a1e780b91c62"
+        }
+      ]
+    },
+    {
+      "page": "appendix_a_probability_review.html",
+      "section": "a3",
+      "section_title": "A.3 期望、矩与生成函数",
+      "anchor": "notes-a3",
+      "canonical_group_sha256": "fc9e998e4eb17c4e3baee23bae95ba3146349cb196173b4bc921f057e08344a8",
+      "cards": [
+        {
+          "note_id": "appendix_a_probability_review-a3-1",
+          "kind": "推导",
+          "title": "尾积分把长度写成指标面积",
+          "formulas": [
+            "X",
+            "X=\\int_0^\\infty\\mathbf1_{\\{X>t\\}}dt",
+            "EX=\\int_0^\\infty P(X>t)dt"
+          ],
+          "canonical_html_sha256": "7f9ed7864db6fb1023b248f5f18aa39de672fc7003319d1e39d55b00a5676af7"
+        },
+        {
+          "note_id": "appendix_a_probability_review-a3-2",
+          "kind": "理解",
+          "title": "生成函数在1处编码阶乘矩",
+          "formulas": [
+            "G^{(m)}(1)",
+            "E[X(X-1)\\cdots(X-m+1)]",
+            "E[X^m]"
+          ],
+          "canonical_html_sha256": "ad3afa90941068ef37cd68c2625dd0603efd6c8900a7cd5d41120e5b44f50f17"
+        }
+      ]
+    },
+    {
+      "page": "appendix_a_probability_review.html",
+      "section": "a4",
+      "section_title": "A.4 极限与积分：为什么停止不能随便取极限",
+      "anchor": "notes-a4",
+      "canonical_group_sha256": "8a142c0ebb3aa7592b226097f2c6a4ce1b2c02ce7f1dbf67068740811490e3fa",
+      "cards": [
+        {
+          "note_id": "appendix_a_probability_review-a4-1",
+          "kind": "理解",
+          "title": "逐样本趋于0不保证平均趋于0",
+          "formulas": [
+            "P(X_n=n)=1/n",
+            "X_n",
+            "EX_n=1"
+          ],
+          "canonical_html_sha256": "74a7fe4db20bdc465882c77088199bc284d53e13309e4831ef1316a2cbca9c4c"
+        },
+        {
+          "note_id": "appendix_a_probability_review-a4-2",
+          "kind": "方法",
+          "title": "根据手里实际的控制量选定理",
+          "formulas": [],
+          "canonical_html_sha256": "1d6ca5b3c8b553cfbf05f22cd68974d91ada751242ced2f1f0ad33745f983180"
+        }
+      ]
+    },
+    {
+      "page": "book_overview.html",
+      "section": "book",
+      "section_title": "这本书研究什么",
+      "anchor": "notes-book",
+      "canonical_group_sha256": "4f4a2c34cfeb691a34054d20d8a6a8d89cc3b69424453ddfc0bd83c36e3ae9e2",
+      "cards": [
+        {
+          "note_id": "book_overview-book-1",
+          "kind": "理解",
+          "title": "全书反复问的是同一个问题",
+          "formulas": [],
+          "canonical_html_sha256": "ea0f9775508c31005611ab023923729721577c84bc352677a3cfbff2e6f6287f"
+        },
+        {
+          "note_id": "book_overview-book-2",
+          "kind": "读法",
+          "title": "读到公式时先确定它回答什么",
+          "formulas": [
+            "\\pi",
+            "ET",
+            "T"
+          ],
+          "canonical_html_sha256": "c93dbd519bcad91e9f6518e36935e96eecd2e2e351b0f1d784ae38c49a427cb5"
+        }
+      ]
+    },
+    {
+      "page": "book_overview.html",
+      "section": "map",
+      "section_title": "全书地图与各章入口",
+      "anchor": "notes-map",
+      "canonical_group_sha256": "f3fae5ff330f9bf044011526f37fe22d2d1bdaeb12798ccff70491681281eb97",
+      "cards": [
+        {
+          "note_id": "book_overview-map-1",
+          "kind": "联系",
+          "title": "离散步数与真实时间之间差一个时钟",
+          "formulas": [
+            "P",
+            "Q"
+          ],
+          "canonical_html_sha256": "9ff6696c4eb110cb70880dc05b8f4168b5efc2abe4469fcc5c7a8a8f43846464"
+        },
+        {
+          "note_id": "book_overview-map-2",
+          "kind": "联系",
+          "title": "退出问题贯穿前三种过程",
+          "formulas": [],
+          "canonical_html_sha256": "af90d792d2644e93260c7746b0e8304d8591b1508df72192c37520dc88619ff9"
+        }
+      ]
+    },
+    {
+      "page": "book_overview.html",
+      "section": "reading",
+      "section_title": "怎样伴着原书读",
+      "anchor": "notes-reading",
+      "canonical_group_sha256": "2f2a21dd60025757f97b451c9b3de72392570185d4b4b48dbe5cb9b89385ef55",
+      "cards": [
+        {
+          "note_id": "book_overview-reading-1",
+          "kind": "读法",
+          "title": "先预测，再展开",
+          "formulas": [],
+          "canonical_html_sha256": "e8a5e748cb54d9b6612d8decbd25f1a314ae6fd01eaa9f36f79b5143c52e8134"
+        },
+        {
+          "note_id": "book_overview-reading-2",
+          "kind": "练习",
+          "title": "给一个假设做替换",
+          "formulas": [],
+          "canonical_html_sha256": "8e7945ecbc739452ab84cee63c8fe5698d40f1799e5676f58124bf4ee387c561"
+        }
+      ]
+    },
+    {
+      "page": "book_overview.html",
+      "section": "notation",
+      "section_title": "全书的符号约定",
+      "anchor": "notes-notation",
+      "canonical_group_sha256": "0b4cdb9d482d48850604dcb4a01187529d76c7184932632bbc9d4f925eb936b9",
+      "cards": [
+        {
+          "note_id": "book_overview-notation-1",
+          "kind": "量纲",
+          "title": "让单位帮助检查方程",
+          "formulas": [
+            "Q",
+            "g",
+            "Qg",
+            "-1",
+            "P",
+            "1"
+          ],
+          "canonical_html_sha256": "285e711d6d1037fbb2f48610310e23cffd5413040d89ae6f7df4e48c5863092c"
+        },
+        {
+          "note_id": "book_overview-notation-2",
+          "kind": "记号",
+          "title": "期望的括号决定求的是什么",
+          "formulas": [
+            "E[X^2]",
+            "(EX)^2",
+            "E[Y^2]"
+          ],
+          "canonical_html_sha256": "d47e3ff17846ab591471cacc51ee50ac78539e4fe6a49ada60e7b1601ce40251"
+        }
+      ]
+    },
+    {
+      "page": "book_overview.html",
+      "section": "program-guide",
+      "section_title": "程序与实验怎么使用",
+      "anchor": "notes-program-guide",
+      "canonical_group_sha256": "84b97f0505d6e83dc64b87729b543de762f454442e953d028b43dc1fb25c781a",
+      "cards": [
+        {
+          "note_id": "book_overview-program-guide-1",
+          "kind": "验证",
+          "title": "两份程序相同还需要独立依据",
+          "formulas": [],
+          "canonical_html_sha256": "6d1f93ad0e62b08de403b381937e28ff22ab58ecc3e616348c662831ffc47219"
+        },
+        {
+          "note_id": "book_overview-program-guide-2",
+          "kind": "实验",
+          "title": "采样误差怎样随次数缩小",
+          "formulas": [
+            "p",
+            "n",
+            "\\sqrt{p(1-p)/n}"
+          ],
+          "canonical_html_sha256": "8e661939ad2009f46253b2cb4f555b55c40922620ee54b77c6e8079408a29517"
+        }
+      ]
+    },
+    {
+      "page": "book_overview.html",
+      "section": "source-notes",
+      "section_title": "版本、页码与题干校注",
+      "anchor": "notes-source-notes",
+      "canonical_group_sha256": "c15850999cf7ce8996d4ca220cce3ee662d599d0779660b7f2b532fb212d25b7",
+      "cards": [
+        {
+          "note_id": "book_overview-source-notes-1",
+          "kind": "核对",
+          "title": "用模型判断印刷数值",
+          "formulas": [],
+          "canonical_html_sha256": "be067f7b41f35eb730c06d28a79a24d3c6be4003b3256b531aee5088b08a8800"
+        },
+        {
+          "note_id": "book_overview-source-notes-2",
+          "kind": "边界",
+          "title": "假设改变时答案可能不止一个",
+          "formulas": [],
+          "canonical_html_sha256": "f35ddd1c95f20d3250077ba53c63710f5abac402a714162d11843ba5efc9ac55"
+        }
+      ]
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s11",
+      "section_title": "1.1 定义与例子：状态为什么足够",
+      "anchor": "notes-s11",
+      "canonical_group_sha256": "d86ea96aa106021075365f564d4addf7eaeaf1f68eae9dfd55e89f3574c4bef1",
+      "cards": [
+        {
+          "note_id": "chapter01_markov_chains-s11-1",
+          "kind": "建模",
+          "title": "状态够不够，看下一步是否还要问过去",
+          "formulas": [],
+          "canonical_html_sha256": "bc3f1c1623829fd98aae4a7dd1cc371d8b7f41368ea4fbcb6ed905e662427d7e"
+        },
+        {
+          "note_id": "chapter01_markov_chains-s11-2",
+          "kind": "边界",
+          "title": "吸收状态是问题的一部分",
+          "formulas": [],
+          "canonical_html_sha256": "6511877bf4c3c3c4cc52c6a1a741fa13da3df4830e1398831f81c6009e919ddc"
+        }
+      ]
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s12",
+      "section_title": "1.2 多步转移：矩阵乘法汇总路径",
+      "anchor": "notes-s12",
+      "canonical_group_sha256": "643c30415ff0d44e804babd0d738e44d68dd9222a06491196170d3595f21eb42",
+      "cards": [
+        {
+          "note_id": "chapter01_markov_chains-s12-1",
+          "kind": "推导",
+          "title": "矩阵乘法正在枚举中间状态",
+          "formulas": [
+            "P^2(i,j)=\\sum_kP(i,k)P(k,j)",
+            "k",
+            "k"
+          ],
+          "canonical_html_sha256": "472979786bf5a4a848dbffef2ede3a8eb0a1e7ddc9a62154ab68964b0643c0f4"
+        },
+        {
+          "note_id": "chapter01_markov_chains-s12-2",
+          "kind": "验算",
+          "title": "先核对方向，再核对总概率",
+          "formulas": [
+            "\\mu P"
+          ],
+          "canonical_html_sha256": "5ccea52160b799d1061eaeed75b606f6fefe8b16dac5d62b67af62029ba9459d"
+        }
+      ]
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s13",
+      "section_title": "1.3 状态分类：会不会回来",
+      "anchor": "notes-s13",
+      "canonical_group_sha256": "74039082d5fa0b8d37c60f2c92b8e329d9fdd796c7e9cc8e1e19ff9a93ee9d7d",
+      "cards": [
+        {
+          "note_id": "chapter01_markov_chains-s13-1",
+          "kind": "理解",
+          "title": "回来一次与不断回来是两层问题",
+          "formulas": [],
+          "canonical_html_sha256": "0fc825a1a82a7d5709fda0e4384176d976cdebcf2e1b486e2758f225f5592a0a"
+        },
+        {
+          "note_id": "chapter01_markov_chains-s13-2",
+          "kind": "周期",
+          "title": "周期看的是允许返回的步数",
+          "formulas": [],
+          "canonical_html_sha256": "a000cebaf1ace0e304e6ec36b1214d6a1cd4652df1c2846ffa153251cb6c7e14"
+        }
+      ]
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s14",
+      "section_title": "1.4 平稳分布：流量守恒",
+      "anchor": "notes-s14",
+      "canonical_group_sha256": "435afa2f6a401ac5f7203126509a2f2056eea96be31a18ab3525b3012dc133d2",
+      "cards": [
+        {
+          "note_id": "chapter01_markov_chains-s14-1",
+          "kind": "守恒",
+          "title": "每个分量都是流入等于存量",
+          "formulas": [
+            "\\pi_j=\\sum_i\\pi_iP(i,j)",
+            "j",
+            "j",
+            "\\sum_j\\pi_j=1"
+          ],
+          "canonical_html_sha256": "c4b62229c54c6603405f071bdcd178c5132f3499ab1f0de140905f34ad700361"
+        },
+        {
+          "note_id": "chapter01_markov_chains-s14-2",
+          "kind": "例子",
+          "title": "两状态链可直接看双向流量",
+          "formulas": [
+            "P(0,1)=a",
+            "P(1,0)=b",
+            "a+b>0",
+            "\\pi_0a=\\pi_1b",
+            "\\pi=(b,a)/(a+b)"
+          ],
+          "canonical_html_sha256": "3ebc6061a00d5dba30c9d3676922fca18f6337ac3eb84f9f0571bade4191f6f7"
+        }
+      ]
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s15",
+      "section_title": "1.5 细致平衡、反向链与 Metropolis–Hastings",
+      "anchor": "notes-s15",
+      "canonical_group_sha256": "0a6e6a3759ecc3f00358b7299a8f4ed03240cf89ce8302c87bd9b89b7fb4453d",
+      "cards": [
+        {
+          "note_id": "chapter01_markov_chains-s15-1",
+          "kind": "理解",
+          "title": "可逆性要求每一对流量匹配",
+          "formulas": [
+            "\\pi_iP(i,j)=\\pi_jP(j,i)"
+          ],
+          "canonical_html_sha256": "6f3595543812bb067360d786af5be1cebb49d02f0217acfe83e4734d25dfd7e4"
+        },
+        {
+          "note_id": "chapter01_markov_chains-s15-2",
+          "kind": "补充",
+          "title": "拒绝移动也有数学作用",
+          "formulas": [],
+          "canonical_html_sha256": "911110891cd0d79c0500f932de2b1449e6fc68290d992d62757f194e6da267a2"
+        }
+      ]
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s16",
+      "section_title": "1.6 极限行为：时刻分布与时间平均",
+      "anchor": "notes-s16",
+      "canonical_group_sha256": "86e0ba8ffd79e0cf46847ce116f91b06ccf00f8726ed503e5c9509c6c7de96d7",
+      "cards": [
+        {
+          "note_id": "chapter01_markov_chains-s16-1",
+          "kind": "区分",
+          "title": "时间平均可以收敛，时刻分布仍振荡",
+          "formulas": [
+            "n",
+            "n"
+          ],
+          "canonical_html_sha256": "166a8f2d6436fc8e4e74ba37cbb30f541fc0be07a8275529434abbf7cfff3b9c"
+        },
+        {
+          "note_id": "chapter01_markov_chains-s16-2",
+          "kind": "补充",
+          "title": "取平均能消去这种周期振荡",
+          "formulas": [
+            "\\frac1n\\sum_{k=0}^{n-1}P^k(i,j)\\to\\pi_j"
+          ],
+          "canonical_html_sha256": "b6b7b663097cb61e7a4aabe66700d19852831278ee2c96ba81283963a29dc907"
+        }
+      ]
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s17",
+      "section_title": "1.7 返回固定状态：周期产生平稳分布",
+      "anchor": "notes-s17",
+      "canonical_group_sha256": "645b23619835a38c94bc04be0d426f95424cabac176ebf95f01d388254b740ff",
+      "cards": [
+        {
+          "note_id": "chapter01_markov_chains-s17-1",
+          "kind": "推导",
+          "title": "平稳比例是周期奖励除以周期长度",
+          "formulas": [
+            "a",
+            "a",
+            "j",
+            "\\pi_j",
+            "a",
+            "\\pi_a=1/E_aT_a"
+          ],
+          "canonical_html_sha256": "ee61a12d49b94015c16d48ca26dff15b2c725029ba9320ec00ca90f6dd415ed0"
+        },
+        {
+          "note_id": "chapter01_markov_chains-s17-2",
+          "kind": "条件",
+          "title": "返回必然发生还不保证均值有限",
+          "formulas": [],
+          "canonical_html_sha256": "abff89160acf2d32bf10ee1815beee5073d59dd4072150cc0d2937b889dcdb62"
+        }
+      ]
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s18",
+      "section_title": "1.8 收敛定理的证明：让两条链相遇",
+      "anchor": "notes-s18",
+      "canonical_group_sha256": "b4418f8dc54f8f75275345174ad55ddf22dfbcc504ec1013fa8b506a9c9ea0ac",
+      "cards": [
+        {
+          "note_id": "chapter01_markov_chains-s18-1",
+          "kind": "理解",
+          "title": "耦合把分布差异变成未相遇概率",
+          "formulas": [
+            "n",
+            "P(\\tau>n)"
+          ],
+          "canonical_html_sha256": "84843e00296bbfd900115fed1c578aec90eb03cfe881209d68b0a23037e8f68a"
+        },
+        {
+          "note_id": "chapter01_markov_chains-s18-2",
+          "kind": "条件",
+          "title": "证明相遇还要控制尾部",
+          "formulas": [],
+          "canonical_html_sha256": "1e8594beaecbaae1f6013f064728ef6176ae007b7aeb76a839b8a45c467eae74"
+        }
+      ]
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s19",
+      "section_title": "1.9 退出分布：边界调和方程",
+      "anchor": "notes-s19",
+      "canonical_group_sha256": "4e9c038b849d4c4e2fff3962e2e2ae657f47ac9ec33eb246e98500b4d12200b1",
+      "cards": [
+        {
+          "note_id": "chapter01_markov_chains-s19-1",
+          "kind": "理解",
+          "title": "调和性来自先走一步再重新提问",
+          "formulas": [
+            "h_i",
+            "j",
+            "h_j",
+            "h_i=\\sum_jP(i,j)h_j"
+          ],
+          "canonical_html_sha256": "a28a07578dc5accb1369fa181240f30208b1782fffc98a6cb9b2d73b7b3019a4"
+        },
+        {
+          "note_id": "chapter01_markov_chains-s19-2",
+          "kind": "验算",
+          "title": "一维解能显示偏向的作用",
+          "formulas": [
+            "0,N",
+            "h_i=i/N"
+          ],
+          "canonical_html_sha256": "36c130b218e7785d2472af05e75e9aa209b9d229da7801cb7babf4c98523c495"
+        }
+      ]
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s110",
+      "section_title": "1.10 退出时间：多出一个单位成本",
+      "anchor": "notes-s110",
+      "canonical_group_sha256": "bc6877ac4c5d8a322a8167cd133b951371dba3a490604ac9261764cda21a15b9",
+      "cards": [
+        {
+          "note_id": "chapter01_markov_chains-s110-1",
+          "kind": "推导",
+          "title": "常数1是尚未停止时必付的一步",
+          "formulas": [
+            "g_i=1+\\sum_jP(i,j)g_j"
+          ],
+          "canonical_html_sha256": "60c192b71b6710e12548bb6e591e189ba5b8c6e2b38d7d1aa96e84468f54a41f"
+        },
+        {
+          "note_id": "chapter01_markov_chains-s110-2",
+          "kind": "验算",
+          "title": "公平退出时间为何是二次式",
+          "formulas": [
+            "g_i=i(N-i)",
+            "g_i-\\frac12g_{i-1}-\\frac12g_{i+1}=1"
+          ],
+          "canonical_html_sha256": "3f0da2506d87f85838d82dfc0243299e772ac320fa0ece0c79083472b353e1fd"
+        }
+      ]
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s111",
+      "section_title": "1.11 无限空间：常返还不够",
+      "anchor": "notes-s111",
+      "canonical_group_sha256": "08bed14d73c8f829dad9f590c25a49db6dec5c41bb86e1d67514051cd4a916a6",
+      "cards": [
+        {
+          "note_id": "chapter01_markov_chains-s111-1",
+          "kind": "理解",
+          "title": "无限状态中质量可能一直向远处扩散",
+          "formulas": [],
+          "canonical_html_sha256": "c689890d91109c332065a901425622d203025a4b7f323e88e583569444aca5ae"
+        },
+        {
+          "note_id": "chapter01_markov_chains-s111-2",
+          "kind": "边界",
+          "title": "先解方程，再检查能否归一化",
+          "formulas": [
+            "\\pi P=\\pi"
+          ],
+          "canonical_html_sha256": "9ec269845a7b9eec00a4d31cbb72560fed62685ef327c05e683a91862e354f02"
+        }
+      ]
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "s112",
+      "section_title": "1.12 本章总结（Chapter Summary）：解题路线",
+      "anchor": "notes-s112",
+      "canonical_group_sha256": "4dbd254b99cb9dc698535fa3e91921cf5804a85c1870e36267cab51062ac3c7e",
+      "cards": [
+        {
+          "note_id": "chapter01_markov_chains-s112-1",
+          "kind": "方法",
+          "title": "由未知量选方程",
+          "formulas": [
+            "\\mu P",
+            "\\pi P=\\pi"
+          ],
+          "canonical_html_sha256": "9556d69eb71bcf5b4bab296b3fc4c073b0b3bf27d88fa5cb95ac28534e39f0ef"
+        },
+        {
+          "note_id": "chapter01_markov_chains-s112-2",
+          "kind": "检查",
+          "title": "给结果做三个方向的检查",
+          "formulas": [],
+          "canonical_html_sha256": "af3fa5f9a338daaa512089653771dbc017c7248c539d74bb3ab4b015c4bb3ec6"
+        }
+      ]
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "experiment",
+      "section_title": "计算实验：转移、平稳与边界方程",
+      "anchor": "notes-experiment",
+      "canonical_group_sha256": "83f77228184971cde4c06520f0747a7c80317cc78b09b1c7225971311fd9af2c",
+      "cards": [
+        {
+          "note_id": "chapter01_markov_chains-experiment-1",
+          "kind": "数值",
+          "title": "残差衡量解是否满足原方程",
+          "formulas": [
+            "\\pi P-\\pi"
+          ],
+          "canonical_html_sha256": "5cde8a10e1714009068a7297d0e27fa2c5318ac846a11d081bdfa0b77172c072"
+        },
+        {
+          "note_id": "chapter01_markov_chains-experiment-2",
+          "kind": "实验",
+          "title": "从不同初态看同一个长期目标",
+          "formulas": [
+            "P"
+          ],
+          "canonical_html_sha256": "7909d96c23d41604b84f44161790727b885f7f1f546a77c23bd339cdc585d59b"
+        }
+      ]
+    },
+    {
+      "page": "chapter01_markov_chains.html",
+      "section": "exercises",
+      "section_title": "1.13 习题（Exercises）· 77 题",
+      "anchor": "notes-exercises",
+      "canonical_group_sha256": "ce4f976d5e99a1c15888a5e44fec40cd4aff5e327038ba018b6fe99a88ac513a",
+      "cards": [
+        {
+          "note_id": "chapter01_markov_chains-exercises-1",
+          "kind": "解题",
+          "title": "先把停止边界写在草稿顶端",
+          "formulas": [],
+          "canonical_html_sha256": "9953e2dce3cab6e8cf6543351b788847853c3cc3e46e936891ea4f8a13a59eea"
+        },
+        {
+          "note_id": "chapter01_markov_chains-exercises-2",
+          "kind": "验算",
+          "title": "原方程比小数结果更能发现错误",
+          "formulas": [],
+          "canonical_html_sha256": "800963082a031a68840a8f63644afa7765a29760687e40ee4edd8d76c43bf58b"
+        }
+      ]
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "section": "s21",
+      "section_title": "2.1 指数分布：等过多久不改变剩余等待",
+      "anchor": "notes-s21",
+      "canonical_group_sha256": "2009a305ecbd96cbd99a065bf3b109256a4809abfc40c0ae20a63c50dafab197",
+      "cards": [
+        {
+          "note_id": "chapter02_poisson_processes-s21-1",
+          "kind": "理解",
+          "title": "无记忆意味着当前的短期风险不随年龄变",
+          "formulas": [
+            "s",
+            "h",
+            "1-e^{-\\lambda h}",
+            "\\lambda h",
+            "s"
+          ],
+          "canonical_html_sha256": "35edf136851c2766e3c2701fe4878981ef9f1cca99b15b5ab4d5a03e5faa6848"
+        },
+        {
+          "note_id": "chapter02_poisson_processes-s21-2",
+          "kind": "补充推导",
+          "title": "先结束与全部结束是两种等待",
+          "formulas": [
+            "\\lambda+\\mu",
+            "\\max(T_1,T_2)+\\min(T_1,T_2)=T_1+T_2",
+            "1/\\lambda+1/\\mu-1/(\\lambda+\\mu)"
+          ],
+          "canonical_html_sha256": "9c947d9ccacb3d13e3fffa7bb046e4c99911977810cb516bfc412fa94018aa5e"
+        }
+      ]
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "section": "s22",
+      "section_title": "2.2 泊松过程：计数与到达时间互为表里",
+      "anchor": "notes-s22",
+      "canonical_group_sha256": "bb54379be8b393b1a8328d710707aa9bdb3b50511e53345d732cb1f70a13ea5d",
+      "cards": [
+        {
+          "note_id": "chapter02_poisson_processes-s22-1",
+          "kind": "联系",
+          "title": "到达时间与计数是同一条路径的两种问法",
+          "formulas": [
+            "\\{N(t)\\ge n\\}=\\{T_n\\le t\\}",
+            "t",
+            "n",
+            "n",
+            "t"
+          ],
+          "canonical_html_sha256": "133762abb5211c9e5928ac0a6aa5ca0c87942483d6b3563453c82e97b86b25b2"
+        },
+        {
+          "note_id": "chapter02_poisson_processes-s22-2",
+          "kind": "条件",
+          "title": "独立增量说的是不重叠的时间区间",
+          "formulas": [
+            "N(s)",
+            "N(t)",
+            "s<t",
+            "N(s)",
+            "N(t)-N(s)"
+          ],
+          "canonical_html_sha256": "a49822043d5c9b8c8769260c98f95cf025f975a1aac85c72fd3e0d60e660a457"
+        }
+      ]
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "section": "s23",
+      "section_title": "2.3 复合泊松：计数随机，单次金额也随机",
+      "anchor": "notes-s23",
+      "canonical_group_sha256": "3c33644f91202802258d4fc374cf9daf6035581b836e732f94f5f60dac4bf013",
+      "cards": [
+        {
+          "note_id": "chapter02_poisson_processes-s23-1",
+          "kind": "补充推导",
+          "title": "次数波动也会带来金额波动",
+          "formulas": [
+            "N",
+            "N\\operatorname{Var}(Y)",
+            "\\operatorname{Var}(NEY)",
+            "N",
+            "\\operatorname{Var}(S)=\\lambda tE[Y^2]"
+          ],
+          "canonical_html_sha256": "063172360c66da21c96f347bbf95069f8b8afdefc244edcb4313c60f1e129597"
+        },
+        {
+          "note_id": "chapter02_poisson_processes-s23-2",
+          "kind": "例子",
+          "title": "单笔金额固定时总额仍然随机",
+          "formulas": [
+            "c",
+            "S=cN",
+            "c^2\\lambda t"
+          ],
+          "canonical_html_sha256": "d0c6b328767e006687433a6619bf14f0ffb09fe456a8c5e60d8d09d496164121"
+        }
+      ]
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "section": "s24",
+      "section_title": "2.4 稀疏化、叠加与条件化",
+      "anchor": "notes-s24",
+      "canonical_group_sha256": "06866e847cc4b7bd13aca0e762296714e10c68bae3d9263febe9f20f61af555f",
+      "cards": [
+        {
+          "note_id": "chapter02_poisson_processes-s24-1",
+          "kind": "理解",
+          "title": "给定总数会引入类别间的约束",
+          "formulas": [
+            "n",
+            "-np(1-p)"
+          ],
+          "canonical_html_sha256": "83af4fee4a068882d2d1ed059ff7e0b8f731b2e81ffaff092b958e37c039313d"
+        },
+        {
+          "note_id": "chapter02_poisson_processes-s24-2",
+          "kind": "条件",
+          "title": "标记规则决定能否直接稀疏化",
+          "formulas": [
+            "p\\lambda"
+          ],
+          "canonical_html_sha256": "e98d97e746c15662d79e8c33947156b7a0759ab7422cd3eb863fdf58bedc95be"
+        }
+      ]
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "section": "s25",
+      "section_title": "2.5 本章总结（Chapter Summary）：条件与单位",
+      "anchor": "notes-s25",
+      "canonical_group_sha256": "a9fb373975a913d8ed5204479615fa51e1838a425f3d7c7e2bc7378579516529",
+      "cards": [
+        {
+          "note_id": "chapter02_poisson_processes-s25-1",
+          "kind": "方法",
+          "title": "先确定给定的是总数还是时间",
+          "formulas": [],
+          "canonical_html_sha256": "d9cd5a51ec2937081090dd2c314e4abda40353f723be76a6178bc55f827cc73e"
+        },
+        {
+          "note_id": "chapter02_poisson_processes-s25-2",
+          "kind": "量纲",
+          "title": "速率先换成同一个时间单位",
+          "formulas": [
+            "t",
+            "1/30",
+            "\\lambda t"
+          ],
+          "canonical_html_sha256": "1b9c1463098a81ead7298affdb7f4dbf57b8755de33d590ba6666f8186af14f7"
+        }
+      ]
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "section": "experiment",
+      "section_title": "计算实验：指数间隔产生泊松计数",
+      "anchor": "notes-experiment",
+      "canonical_group_sha256": "52a063c416dfd4edce34210ef6ea60bac39d6c9f330c178b48c1acb0320e76f2",
+      "cards": [
+        {
+          "note_id": "chapter02_poisson_processes-experiment-1",
+          "kind": "验证",
+          "title": "均值正确不能单独确认Poisson",
+          "formulas": [],
+          "canonical_html_sha256": "5547dce6e532dfd761627d970d8867fd2522fe0633fb19d8956bb3528e67105f"
+        },
+        {
+          "note_id": "chapter02_poisson_processes-experiment-2",
+          "kind": "采样",
+          "title": "从均匀数生成指数间隔",
+          "formulas": [
+            "U",
+            "(0,1)",
+            "T=-\\log U/\\lambda",
+            "P(T>t)=e^{-\\lambda t}"
+          ],
+          "canonical_html_sha256": "4266def01596055528e889303776acef4589b0ae25dfcc9a478d91a7895bfd88"
+        }
+      ]
+    },
+    {
+      "page": "chapter02_poisson_processes.html",
+      "section": "exercises",
+      "section_title": "2.6 习题（Exercises）· 61 题",
+      "anchor": "notes-exercises",
+      "canonical_group_sha256": "f646fd2b7c30e1484b7dd393e2f02a25ccaa3445a99a90d32c956c76dad258b4",
+      "cards": [
+        {
+          "note_id": "chapter02_poisson_processes-exercises-1",
+          "kind": "解题",
+          "title": "把事件翻译成计数再选分布",
+          "formulas": [],
+          "canonical_html_sha256": "6d0d94469d773605c4f40036dee0cd7d99f0d898adeb744a5394df1f437c7d64"
+        },
+        {
+          "note_id": "chapter02_poisson_processes-exercises-2",
+          "kind": "检查",
+          "title": "复合计数分别算一阶矩与二阶矩",
+          "formulas": [
+            "EY",
+            "E[Y^2]"
+          ],
+          "canonical_html_sha256": "6f03338eb2e0f42b9d8fc3b6aa114a5b7e68828fef9c3801939f58b6553004af"
+        }
+      ]
+    },
+    {
+      "page": "chapter03_renewal_processes.html",
+      "section": "s31",
+      "section_title": "3.1 更新大数律：把时间拆成周期",
+      "anchor": "notes-s31",
+      "canonical_group_sha256": "757c2757ebb8a1bba0ab620da7093fb77249d5bec70cdf4833ab29dd521a8dd8",
+      "cards": [
+        {
+          "note_id": "chapter03_renewal_processes-s31-1",
+          "kind": "理解",
+          "title": "周期比率不要求周期内每时刻都平均",
+          "formulas": [
+            "R_i",
+            "L_i",
+            "\\sum R_i/\\sum L_i",
+            "ER/EL"
+          ],
+          "canonical_html_sha256": "daa8bce798d3ff239e072cdc24095ee4f92a8306c68de13758c186d83cd58285"
+        },
+        {
+          "note_id": "chapter03_renewal_processes-s31-2",
+          "kind": "边界",
+          "title": "最后一个未完成周期需要单独控制",
+          "formulas": [
+            "t"
+          ],
+          "canonical_html_sha256": "cb17f1f2dba8c834c4c0d6b24960ba36eaf60b7d641187b498259fe32978dc17"
+        }
+      ]
+    },
+    {
+      "page": "chapter03_renewal_processes.html",
+      "section": "s32",
+      "section_title": "3.2 排队应用：用面积把人数和等待联系起来",
+      "anchor": "notes-s32",
+      "canonical_group_sha256": "0b240fb54ff23c89bc3593a9c9591b6673aa20a457854325964d5d0df3177507",
+      "cards": [
+        {
+          "note_id": "chapter03_renewal_processes-s32-1",
+          "kind": "推导",
+          "title": "Little公式来自同一块面积的两种数法",
+          "formulas": [
+            "\\int_0^tL(s)ds",
+            "t"
+          ],
+          "canonical_html_sha256": "0611e0ac21c49a2fd8314836ba8d87fc3b194216afc8b346088e2ec99ca59995"
+        },
+        {
+          "note_id": "chapter03_renewal_processes-s32-2",
+          "kind": "理解",
+          "title": "不同观察时刻会产生不同分布",
+          "formulas": [],
+          "canonical_html_sha256": "86f96a3ff7bdc137c6487182c2499f20ffb5011713f81fec44bc4d45c3ad15e4"
+        }
+      ]
+    },
+    {
+      "page": "chapter03_renewal_processes.html",
+      "section": "s33",
+      "section_title": "3.3 年龄与剩余寿命：观察时刻会偏爱长周期",
+      "anchor": "notes-s33",
+      "canonical_group_sha256": "a1d2df8fad5819ca0adba6c017ff817de5f713aab7f605d008befcc7c16b77f7",
+      "cards": [
+        {
+          "note_id": "chapter03_renewal_processes-s33-1",
+          "kind": "理解",
+          "title": "长周期更容易被随机时刻选中",
+          "formulas": [
+            "l",
+            "l"
+          ],
+          "canonical_html_sha256": "0739c80fcf741ec0bd5440912fc73aa53ff7343c9efa5d7f2beeec46ab25e3f9"
+        },
+        {
+          "note_id": "chapter03_renewal_processes-s33-2",
+          "kind": "补充推导",
+          "title": "平均剩余寿命为何含二阶矩",
+          "formulas": [
+            "l",
+            "l/2",
+            "ER=E[L^2]/(2EL)"
+          ],
+          "canonical_html_sha256": "c2cbd93778add1e58549c03ba5b4ac20b4479b3ac875844e93ceecd425f5668a"
+        }
+      ]
+    },
+    {
+      "page": "chapter03_renewal_processes.html",
+      "section": "s34",
+      "section_title": "3.4 本章总结（Chapter Summary）：分子与分母",
+      "anchor": "notes-s34",
+      "canonical_group_sha256": "21c00182d27bf4edf34ee4fd8017ab125c20be46118df350ca37b6ccea44db8d",
+      "cards": [
+        {
+          "note_id": "chapter03_renewal_processes-s34-1",
+          "kind": "方法",
+          "title": "每次写比率都给分子分母命名",
+          "formulas": [],
+          "canonical_html_sha256": "4201b7f66db0eef5b8ff04fe5410138fd378ba92e26746b015ae1dc865eb45d4"
+        },
+        {
+          "note_id": "chapter03_renewal_processes-s34-2",
+          "kind": "检查",
+          "title": "更换策略还要比较端点",
+          "formulas": [],
+          "canonical_html_sha256": "269c574d62b9fbd3512a0ebbbc198460e0880e5b4e0192c4de9f36579431bf72"
+        }
+      ]
+    },
+    {
+      "page": "chapter03_renewal_processes.html",
+      "section": "experiment",
+      "section_title": "计算实验：长间隔在随机时间中占更多位置",
+      "anchor": "notes-experiment",
+      "canonical_group_sha256": "de7fd0788e42e8d480d47cbe1a8d8f409eaec7d74b7cc190b0561e56e62319a3",
+      "cards": [
+        {
+          "note_id": "chapter03_renewal_processes-experiment-1",
+          "kind": "理解",
+          "title": "同一批间隔可以得到不同的抽样分布",
+          "formulas": [],
+          "canonical_html_sha256": "8104b50cb5f8f15e439af9d6a14454716a6aca2cd05f49be682e455e245185ba"
+        },
+        {
+          "note_id": "chapter03_renewal_processes-experiment-2",
+          "kind": "验证",
+          "title": "年龄加剩余恰好是当前周期长度",
+          "formulas": [
+            "A+R=L",
+            "EL"
+          ],
+          "canonical_html_sha256": "55e581441eed5810703c97f6aaa796ba26c2b0698295a190dd577354baed8efe"
+        }
+      ]
+    },
+    {
+      "page": "chapter03_renewal_processes.html",
+      "section": "exercises",
+      "section_title": "3.5 习题（Exercises）· 24 题",
+      "anchor": "notes-exercises",
+      "canonical_group_sha256": "89a725ef2fbe2c9a24bf4bf210b6d2c113cd3a57faae27c4ffeda7faecae0764",
+      "cards": [
+        {
+          "note_id": "chapter03_renewal_processes-exercises-1",
+          "kind": "解题",
+          "title": "先选一个真正重启的周期",
+          "formulas": [],
+          "canonical_html_sha256": "52f49cf61c4063aa8a9e329a5f5b437d8ae25f79936a25886859814509e589e9"
+        },
+        {
+          "note_id": "chapter03_renewal_processes-exercises-2",
+          "kind": "边界",
+          "title": "积分前先写出随机变量的支持",
+          "formulas": [
+            "\\min(L,T)"
+          ],
+          "canonical_html_sha256": "43b1cd11666eb2983c28247442ce50986a89d7a36f3fb7d345f202e6a6099c79"
+        }
+      ]
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "s41",
+      "section_title": "4.1 生成矩阵：跳转规则加停留时钟",
+      "anchor": "notes-s41",
+      "canonical_group_sha256": "43e61e94235ddf7667b9aae5f7741ba4249986237f9fdeb670767261d9d881dc",
+      "cards": [
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-s41-1",
+          "kind": "建模",
+          "title": "跳向哪里与等多久要一起指定",
+          "formulas": [
+            "i",
+            "q_i=-q_{ii}",
+            "1/q_i",
+            "j",
+            "q_{ij}/q_i"
+          ],
+          "canonical_html_sha256": "5b117840e8f85a51a06bf08db65e3cd597a002230f96a16e57fd7dad6463738e"
+        },
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-s41-2",
+          "kind": "补充",
+          "title": "统一时钟允许有不改变状态的事件",
+          "formulas": [
+            "\\Lambda\\ge\\max_iq_i",
+            "I+Q/\\Lambda",
+            "q_i"
+          ],
+          "canonical_html_sha256": "0f821da0e287529a3fbbff73c2c849dc11e2e1dbac8b9ef6566e148a7bba8aef"
+        }
+      ]
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "s42",
+      "section_title": "4.2 转移概率：两个 Kolmogorov 方程",
+      "anchor": "notes-s42",
+      "canonical_group_sha256": "f073386c7c89c8f9321a95d3723226c06f7999b4cacff799d7a149e43dee732c",
+      "cards": [
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-s42-1",
+          "kind": "推导",
+          "title": "前向与后向看的是路径的两端",
+          "formulas": [
+            "P_{t+h}=P_tP_h=P_hP_t",
+            "P_h=I+hQ+o(h)",
+            "P_tQ",
+            "QP_t"
+          ],
+          "canonical_html_sha256": "46cbe77be2ac526c5b2eb5efde45b4ecb14fd354ab4ed3ace866c6dfa423d205"
+        },
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-s42-2",
+          "kind": "理解",
+          "title": "生成矩阵不是普通转移概率",
+          "formulas": [
+            "e^{tQ}",
+            "I+tQ",
+            "t"
+          ],
+          "canonical_html_sha256": "c637b0228b962c335dfe57e82f38f8e8481dd5e4ba423128496aedce6ddbe0c0"
+        }
+      ]
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "s43",
+      "section_title": "4.3 平稳分布：真实时间改变权重",
+      "anchor": "notes-s43",
+      "canonical_group_sha256": "29de1bd722330760e5891334381b68d3ab31d4840009f652c8ea850cc67f2183",
+      "cards": [
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-s43-1",
+          "kind": "推导",
+          "title": "访问次数要乘平均停留时间",
+          "formulas": [
+            "\\nu_i",
+            "i",
+            "1/q_i",
+            "\\nu_i/q_i"
+          ],
+          "canonical_html_sha256": "4a2805d9ba7002d1c27ea58c1ce05ff4b453496a1548967d1245a443591f48a7"
+        },
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-s43-2",
+          "kind": "例子",
+          "title": "同样访问频率可以有不同时间比例",
+          "formulas": [
+            "1/3",
+            "2/3"
+          ],
+          "canonical_html_sha256": "26ada142a7c821667ec92c2beb698916193ec58503ca2cfa7f2e1e25c690e9c9"
+        }
+      ]
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "s44",
+      "section_title": "4.4 退出分布与退出时间",
+      "anchor": "notes-s44",
+      "canonical_group_sha256": "92188a7b611d694bb0a1c367c34827cc93e6612c43f0b1b44ae7527eb7530776",
+      "cards": [
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-s44-1",
+          "kind": "推导",
+          "title": "先等待再跳转得到时间方程",
+          "formulas": [
+            "g_i=1/q_i+\\sum_{j\\ne i}(q_{ij}/q_i)g_j",
+            "q_i",
+            "Qg=-1",
+            "Qh=0"
+          ],
+          "canonical_html_sha256": "2e77df8b072244347b813435e04b8b8fc018d8d146c118b7e6e3cf70318b0473"
+        },
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-s44-2",
+          "kind": "理解",
+          "title": "共同加快时钟只缩短时间",
+          "formulas": [
+            "c>0",
+            "1/c"
+          ],
+          "canonical_html_sha256": "69f052ae048c7474585f21b22ce6633b64451f539e7bf2fba00504c85892bd99"
+        }
+      ]
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "s45",
+      "section_title": "4.5 马尔可夫排队：稳定、拒绝与实际到达率",
+      "anchor": "notes-s45",
+      "canonical_group_sha256": "5aaaba57cacdbf9b9f7f630c22604b3e7dba97cfeb6ddfda4bcfe7a86afe5db1",
+      "cards": [
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-s45-1",
+          "kind": "条件",
+          "title": "无限排队需要总服务能力压住到达率",
+          "formulas": [
+            "M/M/s",
+            "\\lambda<s\\mu"
+          ],
+          "canonical_html_sha256": "1d125ed6ebc5836a9746408ef60bf52cb4fbef43aa42835811e65d14a01fe5a9"
+        },
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-s45-2",
+          "kind": "分母",
+          "title": "拒绝率与入队后的等待使用不同人群",
+          "formulas": [
+            "\\lambda_a=\\lambda(1-B)",
+            "\\lambda_a"
+          ],
+          "canonical_html_sha256": "2e68c6fdbe23b8e74e72e3f381b7ca22cac26c8985549d266b69ca8d1ad10115"
+        }
+      ]
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "s46",
+      "section_title": "4.6 队列网络：先解交通方程",
+      "anchor": "notes-s46",
+      "canonical_group_sha256": "9ccddc31c607110bc0fca3eaa4e91c362a4c9a9446ba0ef17b8c5bf8df335a8f",
+      "cards": [
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-s46-1",
+          "kind": "理解",
+          "title": "交通方程先算每个节点要承受多少流量",
+          "formulas": [
+            "\\lambda_j=\\alpha_j+\\sum_i\\lambda_i r_{ij}"
+          ],
+          "canonical_html_sha256": "4c1f2bf88686a26dd67bdd5a2932e9781e59bc3a99c99588dc85fa2f38ff664f"
+        },
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-s46-2",
+          "kind": "条件",
+          "title": "乘积形式来自平衡结构",
+          "formulas": [],
+          "canonical_html_sha256": "f160368c0b916113feee57fed6f4b1383a5ff44801d5128970e148a7a93a0727"
+        }
+      ]
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "s47",
+      "section_title": "4.7 本章总结（Chapter Summary）：建模与守恒",
+      "anchor": "notes-s47",
+      "canonical_group_sha256": "3762767ab20c46429c2ac207733b087dd567b2de442b1f3824792e6c3ea2bab7",
+      "cards": [
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-s47-1",
+          "kind": "建模",
+          "title": "人数相同不一定表示状态相同",
+          "formulas": [],
+          "canonical_html_sha256": "409cd30aaaf832e66fcd1aaa5c24c1ac529ef4d0679be6d4568b7a4e3976b159"
+        },
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-s47-2",
+          "kind": "验算",
+          "title": "用率与单位检查生成矩阵",
+          "formulas": [],
+          "canonical_html_sha256": "d9d4f98034072c46f2816841bfdb7b5d15a84163209b41162dd00f859a534cd9"
+        }
+      ]
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "experiment",
+      "section_title": "计算实验：跳转日志不等于时间分布",
+      "anchor": "notes-experiment",
+      "canonical_group_sha256": "02628f815d49f08a12dfef86424a49ef7dd340ed952f0930f085731bc9aa1249",
+      "cards": [
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-experiment-1",
+          "kind": "理解",
+          "title": "日志统计的是事件，观察统计的是时间",
+          "formulas": [],
+          "canonical_html_sha256": "7a816b2329cbf774146f5e84cbdbe95d21c4dbb910e7073256ab497dd4c71166"
+        },
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-experiment-2",
+          "kind": "实现",
+          "title": "观察窗口末尾的停留也要计入",
+          "formulas": [],
+          "canonical_html_sha256": "49ddc834cd1a02baf4baab0c6096e0d9140c2fda54295c81aef0895c20f06ce3"
+        }
+      ]
+    },
+    {
+      "page": "chapter04_continuous_time_markov_chains.html",
+      "section": "exercises",
+      "section_title": "4.8 习题（Exercises）· 39 题",
+      "anchor": "notes-exercises",
+      "canonical_group_sha256": "6cc45c202d8216866323f99659b106802de252933b43a5ac05ba472329c34197",
+      "cards": [
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-exercises-1",
+          "kind": "解题",
+          "title": "先写每个状态允许发生的事件",
+          "formulas": [
+            "Q"
+          ],
+          "canonical_html_sha256": "e02d06938f62f2f7d08d5ab9788cbdb000329d2b8ebb35b40db796eeede10d03"
+        },
+        {
+          "note_id": "chapter04_continuous_time_markov_chains-exercises-2",
+          "kind": "检查",
+          "title": "求时间时用整体加速做验算",
+          "formulas": [],
+          "canonical_html_sha256": "72c3e5f13b1fc7582d6bdae09923e120f07113a1cab565fe98a668f46e025a0e"
+        }
+      ]
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "section": "s51",
+      "section_title": "5.1 条件期望：把现有信息压缩为预测",
+      "anchor": "notes-s51",
+      "canonical_group_sha256": "e048458d4ae30b8f3cd13b81183292aa5f8fd33f0cd883852909508a6f1f7a3d",
+      "cards": [
+        {
+          "note_id": "chapter05_martingales-s51-1",
+          "kind": "理解",
+          "title": "条件期望是按当前信息分组平均",
+          "formulas": [],
+          "canonical_html_sha256": "0a4619c9af2be8b34e42cc556f48906c07c6ec3ef9d879868247d6b20dbf12cd"
+        },
+        {
+          "note_id": "chapter05_martingales-s51-2",
+          "kind": "联系",
+          "title": "更多信息通常改变预测，不改变总体平均",
+          "formulas": [
+            "E[E(Y\\mid F)]=EY"
+          ],
+          "canonical_html_sha256": "f687acb8c9adc1d54c195d9cbcf3b7c7e17e665a3f82d2aa6191c13ceb8474ac"
+        }
+      ]
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "section": "s52",
+      "section_title": "5.2 鞅：公平写在条件期望里",
+      "anchor": "notes-s52",
+      "canonical_group_sha256": "a5da253e8b829e67ef3fdffd10c4a0a9d4f17891016793e1bdfbde7a152df1e1",
+      "cards": [
+        {
+          "note_id": "chapter05_martingales-s52-1",
+          "kind": "理解",
+          "title": "鞅要求每段历史下都公平",
+          "formulas": [
+            "EM_n",
+            "E(M_{n+1}\\mid F_n)=M_n"
+          ],
+          "canonical_html_sha256": "8db6094570822c6baa7581c7ef23375d4eed2bc948fbd0d06dfea35df2aab94b"
+        },
+        {
+          "note_id": "chapter05_martingales-s52-2",
+          "kind": "构造",
+          "title": "先扣除能预测的漂移",
+          "formulas": [
+            "\\mu",
+            "S_n-n\\mu"
+          ],
+          "canonical_html_sha256": "3dab0fc216f0b0799c871eeca040cfda24e8634aea58dcb27cbf9e6886f82ca7"
+        }
+      ]
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "section": "s53",
+      "section_title": "5.3 下注与停时：能提前决定，却不能看未来",
+      "anchor": "notes-s53",
+      "canonical_group_sha256": "22f66ee15c3658ebbbd72ee0c993ea17d2c6ea9ee3aa00f913331b41d1a56711",
+      "cards": [
+        {
+          "note_id": "chapter05_martingales-s53-1",
+          "kind": "条件",
+          "title": "何时下注必须在结果出来前决定",
+          "formulas": [
+            "k",
+            "\\{T\\ge k\\}",
+            "F_{k-1}",
+            "k"
+          ],
+          "canonical_html_sha256": "c3d8e277056a7f4660e5ab17e2d0c2639b930117ed517178e8232156ad7359ee"
+        },
+        {
+          "note_id": "chapter05_martingales-s53-2",
+          "kind": "边界",
+          "title": "截断成立后还需要合法地去掉截断",
+          "formulas": [
+            "T\\wedge n",
+            "n"
+          ],
+          "canonical_html_sha256": "de7074cd847d8f996f9dd8afafc7c7c08455565754c9053626f909a4ae55630b"
+        }
+      ]
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "section": "s54",
+      "section_title": "5.4 应用：退出、灭绝与正再生",
+      "anchor": "notes-s54",
+      "canonical_group_sha256": "60d8def74a3e5e07a50bbc86014f8c04a1e15a38be868f6b87a498607a59922f",
+      "cards": [
+        {
+          "note_id": "chapter05_martingales-s54-1",
+          "kind": "方法",
+          "title": "先证等待有限，再对随机终点取期望",
+          "formulas": [],
+          "canonical_html_sha256": "be730da53c7af033b852e93af3c1580b0c9401b783a81575eac12ceb834df362"
+        },
+        {
+          "note_id": "chapter05_martingales-s54-2",
+          "kind": "理解",
+          "title": "平方鞅给出时间，指数鞅给出概率",
+          "formulas": [
+            "S_n^2-n"
+          ],
+          "canonical_html_sha256": "f1a19d46fe01e4dca315bd825af02cee3303ff446cb7c21811c312cfc72448b6"
+        }
+      ]
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "section": "experiment",
+      "section_title": "计算实验：停止边界与翻倍尾部",
+      "anchor": "notes-experiment",
+      "canonical_group_sha256": "b71e2e0ffff6b373cb6723f62518f60f9e388ec5c8bbb6760c15e0a1ab0f929e",
+      "cards": [
+        {
+          "note_id": "chapter05_martingales-experiment-1",
+          "kind": "实验",
+          "title": "少见的大亏损可能主导总体均值",
+          "formulas": [],
+          "canonical_html_sha256": "a118dab872e28e6fcd93f3cc4601bf82975d5561334db0f9d82b269b986d3295"
+        },
+        {
+          "note_id": "chapter05_martingales-experiment-2",
+          "kind": "验证",
+          "title": "停止游走也能先用方程给出基准",
+          "formulas": [
+            "-a,a",
+            "a^2"
+          ],
+          "canonical_html_sha256": "7fad3387f4e8528abd9102fcc716ad3865c3799214b9d3fb94c62f5b3793f7a9"
+        }
+      ]
+    },
+    {
+      "page": "chapter05_martingales.html",
+      "section": "exercises",
+      "section_title": "5.5 习题（Exercises）· 10 题",
+      "anchor": "notes-exercises",
+      "canonical_group_sha256": "b8e2b82cee7840fa11d39ccf0b453df23d4cb75cfe2205ef50c7ea139cbd7fde",
+      "cards": [
+        {
+          "note_id": "chapter05_martingales-exercises-1",
+          "kind": "解题",
+          "title": "把可积性依据单独写出来",
+          "formulas": [
+            "E|X_1|ET",
+            "|EX_1|",
+            "E|X_1|"
+          ],
+          "canonical_html_sha256": "a2aab193320dce99997092bd81f6a18630f97fe2e207db6c8d73d614716b693b"
+        },
+        {
+          "note_id": "chapter05_martingales-exercises-2",
+          "kind": "检查",
+          "title": "严格越界会移动整数边界",
+          "formulas": [
+            "|S_n|>a",
+            "\\pm(\\lfloor a\\rfloor+1)",
+            "a"
+          ],
+          "canonical_html_sha256": "4debc4e6035206afe83899bd8dc1cd5c6d84d29876f7d4786d73d86cf44ba5dc"
+        }
+      ]
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "section": "s61",
+      "section_title": "6.1 两个例子：从复制组合得到价格",
+      "anchor": "notes-s61",
+      "canonical_group_sha256": "5d652e9684a700415c004c16411694c7d591fdc7e03d21506ab6e70284990e84",
+      "cards": [
+        {
+          "note_id": "chapter06_mathematical_finance-s61-1",
+          "kind": "理解",
+          "title": "复制价格由支付相等确定",
+          "formulas": [],
+          "canonical_html_sha256": "0f3781d35f5124f37662ae89653da1069c0d4d2ba237fbf12b8abef7e0a12932"
+        },
+        {
+          "note_id": "chapter06_mathematical_finance-s61-2",
+          "kind": "补充推导",
+          "title": "一周期持仓可解两条线性方程",
+          "formulas": [
+            "V_u,V_d",
+            "\\Delta=(V_u-V_d)/(S_u-S_d)",
+            "(V_u-\\Delta S_u)/R",
+            "\\Delta"
+          ],
+          "canonical_html_sha256": "2bb63a95941523cdbe06c6abdca9d4183af169a3c69fc99a3fcc07e3970e1cff"
+        }
+      ]
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "section": "s62",
+      "section_title": "6.2 多期二叉模型：从终点向后推",
+      "anchor": "notes-s62",
+      "canonical_group_sha256": "97e48a7a99b4576aed38607b2ad3cd9f328b64e35998036795c44e8b17de9796",
+      "cards": [
+        {
+          "note_id": "chapter06_mathematical_finance-s62-1",
+          "kind": "理解",
+          "title": "风险中性概率是复制方程的另一种写法",
+          "formulas": [
+            "p^*=(R-d)/(u-d)",
+            "d<R<u"
+          ],
+          "canonical_html_sha256": "cfd21112d355c1dbdc7f3042bb0ac16318ed37836677698c08303bdbaf6caf2b"
+        },
+        {
+          "note_id": "chapter06_mathematical_finance-s62-2",
+          "kind": "推导",
+          "title": "向后算价值，再逐节点更新持仓",
+          "formulas": [],
+          "canonical_html_sha256": "19ee18d99b1dcad0c2e22142f0451efc726d29faeab51e9dd428c89146ce3cdc"
+        }
+      ]
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "section": "s63",
+      "section_title": "6.3 路径依赖期权：价格相同，信息未必相同",
+      "anchor": "notes-s63",
+      "canonical_group_sha256": "13dbe8f69ac30fe0ca16dd40bca1cf673214941494d98c8b10dc254a77e7efdc",
+      "cards": [
+        {
+          "note_id": "chapter06_mathematical_finance-s63-1",
+          "kind": "建模",
+          "title": "当前股价相同也可能不能合并节点",
+          "formulas": [],
+          "canonical_html_sha256": "dc13d3be36ae0b98db431befa61cb1d20ff1052a21dea420acc62d6fac52a1e7"
+        },
+        {
+          "note_id": "chapter06_mathematical_finance-s63-2",
+          "kind": "例子",
+          "title": "用两条同价路径检验是否依赖历史",
+          "formulas": [],
+          "canonical_html_sha256": "436c469b4a60a2abac7b6701d9a08714bd76d9694294be6dc3eebb81791880c8"
+        }
+      ]
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "section": "s64",
+      "section_title": "6.4 美式期权：停止与继续的比较",
+      "anchor": "notes-s64",
+      "canonical_group_sha256": "3f82d1c7ad5b8a94aa1566052250ef53a8957b457af5847b766739904b5e04b4",
+      "cards": [
+        {
+          "note_id": "chapter06_mathematical_finance-s64-1",
+          "kind": "理解",
+          "title": "每个节点比较今天与等到下一期",
+          "formulas": [],
+          "canonical_html_sha256": "f2a074f3edfc60d0a381f3b962133fbe11b4ad66f462a5ba1a587981f504cc94"
+        },
+        {
+          "note_id": "chapter06_mathematical_finance-s64-2",
+          "kind": "条件",
+          "title": "无分红看涨为何通常继续持有",
+          "formulas": [],
+          "canonical_html_sha256": "5ff6032efb9dfebab7e649eb215c2a8f24a55cb1d02b4a4bf09c88d67c4f218d"
+        }
+      ]
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "section": "s65",
+      "section_title": "6.5 Black–Scholes：二叉模型的连续极限",
+      "anchor": "notes-s65",
+      "canonical_group_sha256": "2ccf5d4a07d18ad2474838e264d3cb5c2c8f1494fccc6d4f082ce25e54261841",
+      "cards": [
+        {
+          "note_id": "chapter06_mathematical_finance-s65-1",
+          "kind": "联系",
+          "title": "连续极限保留了折现股票鞅",
+          "formulas": [
+            "S_T=S_0e^{(r-\\sigma^2/2)T+\\sigma\\sqrt{T}Z}",
+            "Z",
+            "-\\sigma^2/2",
+            "ES_T=S_0e^{rT}"
+          ],
+          "canonical_html_sha256": "89c5dbb86e6c0b9f8e66c56541d21db1660cbeb269cdfd1342b668a8165e727e"
+        },
+        {
+          "note_id": "chapter06_mathematical_finance-s65-2",
+          "kind": "推导",
+          "title": "Delta的两个正态密度项恰好抵消",
+          "formulas": [
+            "S",
+            "S",
+            "d_1,d_2",
+            "S\\phi(d_1)=Ke^{-rT}\\phi(d_2)",
+            "\\Delta=\\Phi(d_1)"
+          ],
+          "canonical_html_sha256": "87db3b0255727f9723953c20155708da62c8078dd6d36367aeb42634db648bba"
+        }
+      ]
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "section": "s66",
+      "section_title": "6.6 看涨与看跌（Calls and Puts）：量纲与比较",
+      "anchor": "notes-s66",
+      "canonical_group_sha256": "f610078c998994829a553201dae5a918a5a32296c853742174708c4069448d56",
+      "cards": [
+        {
+          "note_id": "chapter06_mathematical_finance-s66-1",
+          "kind": "理解",
+          "title": "平价是终点支付的逐状态恒等式",
+          "formulas": [
+            "S_T-K",
+            "S_0-Ke^{-rT}"
+          ],
+          "canonical_html_sha256": "cb8137a2b649ad4e2d8673e1b029f4d531f31327156d6e94f786b2c05302ef60"
+        },
+        {
+          "note_id": "chapter06_mathematical_finance-s66-2",
+          "kind": "量纲",
+          "title": "期限、波动率与利率要配套",
+          "formulas": [
+            "\\sqrt{T}",
+            "100/365"
+          ],
+          "canonical_html_sha256": "8ac1855c5b1f9cc6130787cdda02446c12a9b161cc5c8afd441c6eee888dc1d2"
+        }
+      ]
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "section": "experiment-tree",
+      "section_title": "计算实验：同一后向程序处理不同支付",
+      "anchor": "notes-experiment-tree",
+      "canonical_group_sha256": "baf405caf6ed8504a049d232a3a54313f6c83d2e11ad932e457736b3280f2887",
+      "cards": [
+        {
+          "note_id": "chapter06_mathematical_finance-experiment-tree-1",
+          "kind": "验证",
+          "title": "每条路径都要检查复制财富",
+          "formulas": [],
+          "canonical_html_sha256": "a2a7242a5d15f2dc0c06f799c54185cdc790b241493464b32360dbf79727dcd2"
+        },
+        {
+          "note_id": "chapter06_mathematical_finance-experiment-tree-2",
+          "kind": "实现",
+          "title": "支付不同，递推框架仍可共用",
+          "formulas": [],
+          "canonical_html_sha256": "1b4b3587ecb1a5254433d478a214d52c038562c45bfd97da68fd5a91852ddc49"
+        }
+      ]
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "section": "experiment-bs",
+      "section_title": "计算实验：二叉树趋向 Black–Scholes",
+      "anchor": "notes-experiment-bs",
+      "canonical_group_sha256": "168f861412026ba1a5f4bf4697bac2ff103940160079dd92ab69aa46147b2cf3",
+      "cards": [
+        {
+          "note_id": "chapter06_mathematical_finance-experiment-bs-1",
+          "kind": "理解",
+          "title": "二叉步数增加是在近似同一模型",
+          "formulas": [
+            "\\sqrt{T/n}",
+            "T/n",
+            "n"
+          ],
+          "canonical_html_sha256": "c5c63da702bf56407a6f71008eda1e77dd91ec301b9ccb83ef07b24aeb52b4b5"
+        },
+        {
+          "note_id": "chapter06_mathematical_finance-experiment-bs-2",
+          "kind": "数值",
+          "title": "误差可以振荡，不一定逐项下降",
+          "formulas": [],
+          "canonical_html_sha256": "bbeda6894f1169390eceeea7f1647a05a890d006213d06b73d771afa2b366ae8"
+        }
+      ]
+    },
+    {
+      "page": "chapter06_mathematical_finance.html",
+      "section": "exercises",
+      "section_title": "6.7 习题（Exercises）· 25 题",
+      "anchor": "notes-exercises",
+      "canonical_group_sha256": "bf3789af6ed4e76e73f65e369f5bfc39c2499c8509380f0c9f87d6c4577d61d6",
+      "cards": [
+        {
+          "note_id": "chapter06_mathematical_finance-exercises-1",
+          "kind": "解题",
+          "title": "先列支付，再求价格",
+          "formulas": [],
+          "canonical_html_sha256": "b86f1ca128e047f4a5f033402cc2ebe45a9a8df31c1cf4ffb10dc668241fd759"
+        },
+        {
+          "note_id": "chapter06_mathematical_finance-exercises-2",
+          "kind": "检查",
+          "title": "把价格与持仓的核对分开",
+          "formulas": [],
+          "canonical_html_sha256": "7f3d89e87d644d6541d489c67ad918ecea74eb56313470e4db28f19df764390f"
+        }
+      ]
+    },
+    {
+      "page": "preface.html",
+      "section": "preface-purpose",
+      "section_title": "序言：本书写给谁，怎样讲清“为什么”",
+      "anchor": "notes-preface-purpose",
+      "canonical_group_sha256": "9e8fa07a437f460d2abbac2c9c87b4f693e8c1cd71e43fb669e6542245115600",
+      "cards": [
+        {
+          "note_id": "preface-preface-purpose-1",
+          "kind": "读法",
+          "title": "直觉与证明各回答什么",
+          "formulas": [],
+          "canonical_html_sha256": "d7ca23321a78b129b3df64d37344d0013221af3924df2642f413f4c2fea04a10"
+        },
+        {
+          "note_id": "preface-preface-purpose-2",
+          "kind": "练习",
+          "title": "二十打与本版的 236 题",
+          "formulas": [
+            "77+61+24+39+10+25=236"
+          ],
+          "canonical_html_sha256": "4ca6c71a9a7e8d367705fe8b18a68a59ac4d9f6fe7e0817b5ae3ba1bbb4e1636"
+        }
+      ]
+    },
+    {
+      "page": "preface.html",
+      "section": "preface-history",
+      "section_title": "从 Cornell 课堂讲义到第二版",
+      "anchor": "notes-preface-history",
+      "canonical_group_sha256": "af6d04a9e8ce436c512c41f5ac60a9e7d580bb2bdebff1fdaf4623ed870af338",
+      "cards": [
+        {
+          "note_id": "preface-preface-history-1",
+          "kind": "理解",
+          "title": "课堂反馈怎样改变一本教材",
+          "formulas": [],
+          "canonical_html_sha256": "2830ee5851fdd60cf0d168e024fddf9368edc3328aee1b32a311c2c0190ed71a"
+        },
+        {
+          "note_id": "preface-preface-history-2",
+          "kind": "补充",
+          "title": "概率基础不足时怎样回补",
+          "formulas": [],
+          "canonical_html_sha256": "b37d9f1b6900bf75c5ca55cecfbc74d594c09315d3c4ab564c46ad1e21668013"
+        }
+      ]
+    },
+    {
+      "page": "preface.html",
+      "section": "preface-structure",
+      "section_title": "六章的顺序为什么这样安排",
+      "anchor": "notes-preface-structure",
+      "canonical_group_sha256": "6a6d0e7de6115121e8442a1f5b2675a6f54a958d0f4534f81dd6702b55c4c1f4",
+      "cards": [
+        {
+          "note_id": "preface-preface-structure-1",
+          "kind": "主线",
+          "title": "指数间隔为何先讲，更新为何随后讲",
+          "formulas": [],
+          "canonical_html_sha256": "d6e1a8ae8c50e3947513734556b4f79c7a5b43e57a42b083372cb5d7f65b3e46"
+        },
+        {
+          "note_id": "preface-preface-structure-2",
+          "kind": "主线",
+          "title": "鞅为何放在金融之前",
+          "formulas": [],
+          "canonical_html_sha256": "1cb975ce7f094385a154afedb261f888774c19fb3d23be6683c126550f4ed094"
+        }
+      ]
+    },
+    {
+      "page": "preface.html",
+      "section": "preface-third",
+      "section_title": "第三版的修订与两种证明方法",
+      "anchor": "notes-preface-third",
+      "canonical_group_sha256": "3f6f32b37c42cac56d3403e9815ad11c70620867c54acbec017f904703734aba",
+      "cards": [
+        {
+          "note_id": "preface-preface-third-1",
+          "kind": "理解",
+          "title": "返回固定状态：把路径切成周期",
+          "formulas": [
+            "x",
+            "y",
+            "pi(y)"
+          ],
+          "canonical_html_sha256": "f6ee969847541d96aaafcfea11e262c6837363aecd7925754af21a77872cf20d"
+        },
+        {
+          "note_id": "preface-preface-third-2",
+          "kind": "理解",
+          "title": "耦合：把两条链放到同一个概率空间",
+          "formulas": [],
+          "canonical_html_sha256": "4203e2ed9e14881fe1da131adabf4d20ff938badb2cb7324659fedc9c3ae5e3c"
+        }
+      ]
+    },
+    {
+      "page": "preface.html",
+      "section": "preface-reading",
+      "section_title": "带着序言进入正文",
+      "anchor": "notes-preface-reading",
+      "canonical_group_sha256": "e82e4b100fcbbb6f9a12122b97f96a600e54e05901f1fb70bdd3d013b0beeb69",
+      "cards": [
+        {
+          "note_id": "preface-preface-reading-1",
+          "kind": "读法",
+          "title": "先读条件，再读等号",
+          "formulas": [
+            "pi(y)=1/E_yT_y",
+            "EM_T=EM_0"
+          ],
+          "canonical_html_sha256": "ca1963d7a96cd15f5ae2dff79e6c76329083d34598270a56c3783f4266f96da1"
+        },
+        {
+          "note_id": "preface-preface-reading-2",
+          "kind": "核对",
+          "title": "把三层内容分开读",
+          "formulas": [],
+          "canonical_html_sha256": "c7c965db5dc683b104ca0248ef149cbf227d61aada04658467d54eeb4304627a"
+        }
+      ]
+    }
+  ],
+  "card_hash_method": "html_support.canonical JSON with sorted attributes, whitespace normalized, SHA-256",
+  "preservation": {
+    "status": "counts_and_source_identity_preserved",
+    "exercises": 236,
+    "solution_steps": 1028,
+    "annotation_groups": 66,
+    "annotation_cards": 132,
+    "scope": "Targeted content and program corrections documented in audit_fix_review.json; before-repair evidence preserved as history."
+  },
+  "structural_checks": {
+    "html_pages": 9,
+    "exercises": 236,
+    "solution_steps": 1028,
+    "formal_statements": 150,
+    "mathml": 8004,
+    "balanced_html": "pass",
+    "source_html_consistency": "pass",
+    "pdf_page_correspondence": {
+      "status": "pass",
+      "numbered_results_and_exercises": 353
+    },
+    "content_binding": {
+      "status": "pass",
+      "pages": 9,
+      "formula_bindings": 8004,
+      "scope": "Reviewed text, formulas, quotes, page links and structure. Program bodies are checked against standalone sources separately. Snapshot equality is a change guard, not a mathematical proof."
+    }
+  },
+  "browser_review": {
+    "status": "pass",
+    "widths": [
+      1800,
+      1440,
+      1024,
+      390
+    ],
+    "layouts": [
+      {
+        "file": "appendix_a_probability_review.html",
+        "started_at_utc": "2026-10-11T13:06:46.714Z",
+        "finished_at_utc": "2026-10-11T13:06:47.824Z",
+        "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 19,
+        "inlineVisible": false,
+        "renderedMath": 380,
+        "badMath": 0,
+        "contexts": 4,
+        "deepLinks": 19
+      },
+      {
+        "file": "book_overview.html",
+        "started_at_utc": "2026-10-11T13:06:47.825Z",
+        "finished_at_utc": "2026-10-11T13:06:48.158Z",
+        "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": false,
+        "renderedMath": 11,
+        "badMath": 0,
+        "contexts": 6,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter01_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:07:49.083Z",
+        "finished_at_utc": "2026-10-11T13:10:50.954Z",
+        "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 77,
+        "statements": 38,
+        "inlineVisible": false,
+        "renderedMath": 2344,
+        "badMath": 0,
+        "contexts": 14,
+        "deepLinks": 115
+      },
+      {
+        "file": "chapter02_poisson_processes.html",
+        "started_at_utc": "2026-10-11T13:10:50.957Z",
+        "finished_at_utc": "2026-10-11T13:11:52.693Z",
+        "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 61,
+        "statements": 19,
+        "inlineVisible": false,
+        "renderedMath": 978,
+        "badMath": 0,
+        "contexts": 7,
+        "deepLinks": 80
+      },
+      {
+        "file": "chapter03_renewal_processes.html",
+        "started_at_utc": "2026-10-11T13:11:52.696Z",
+        "finished_at_utc": "2026-10-11T13:12:06.375Z",
+        "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 24,
+        "statements": 14,
+        "inlineVisible": false,
+        "renderedMath": 485,
+        "badMath": 0,
+        "contexts": 6,
+        "deepLinks": 38
+      },
+      {
+        "file": "chapter04_continuous_time_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:12:06.377Z",
+        "finished_at_utc": "2026-10-11T13:13:18.615Z",
+        "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 39,
+        "statements": 23,
+        "inlineVisible": false,
+        "renderedMath": 1238,
+        "badMath": 0,
+        "contexts": 9,
+        "deepLinks": 62
+      },
+      {
+        "file": "chapter05_martingales.html",
+        "started_at_utc": "2026-10-11T13:13:18.618Z",
+        "finished_at_utc": "2026-10-11T13:13:34.109Z",
+        "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 10,
+        "statements": 20,
+        "inlineVisible": false,
+        "renderedMath": 747,
+        "badMath": 0,
+        "contexts": 6,
+        "deepLinks": 30
+      },
+      {
+        "file": "chapter06_mathematical_finance.html",
+        "started_at_utc": "2026-10-11T13:13:34.111Z",
+        "finished_at_utc": "2026-10-11T13:14:11.392Z",
+        "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 25,
+        "statements": 17,
+        "inlineVisible": false,
+        "renderedMath": 1606,
+        "badMath": 0,
+        "contexts": 9,
+        "deepLinks": 42
+      },
+      {
+        "file": "preface.html",
+        "started_at_utc": "2026-10-11T13:14:11.394Z",
+        "finished_at_utc": "2026-10-11T13:14:12.678Z",
+        "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": false,
+        "renderedMath": 0,
+        "badMath": 0,
+        "contexts": 5,
+        "deepLinks": 0
+      },
+      {
+        "file": "appendix_a_probability_review.html",
+        "started_at_utc": "2026-10-11T13:14:12.685Z",
+        "finished_at_utc": "2026-10-11T13:14:12.894Z",
+        "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 19,
+        "inlineVisible": false,
+        "renderedMath": 380,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "book_overview.html",
+        "started_at_utc": "2026-10-11T13:14:12.895Z",
+        "finished_at_utc": "2026-10-11T13:14:13.026Z",
+        "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": false,
+        "renderedMath": 11,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter01_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:13.029Z",
+        "finished_at_utc": "2026-10-11T13:14:13.823Z",
+        "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 77,
+        "statements": 38,
+        "inlineVisible": false,
+        "renderedMath": 2344,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter02_poisson_processes.html",
+        "started_at_utc": "2026-10-11T13:14:13.824Z",
+        "finished_at_utc": "2026-10-11T13:14:14.096Z",
+        "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 61,
+        "statements": 19,
+        "inlineVisible": false,
+        "renderedMath": 978,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter03_renewal_processes.html",
+        "started_at_utc": "2026-10-11T13:14:14.097Z",
+        "finished_at_utc": "2026-10-11T13:14:14.226Z",
+        "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 24,
+        "statements": 14,
+        "inlineVisible": false,
+        "renderedMath": 485,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter04_continuous_time_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:14.227Z",
+        "finished_at_utc": "2026-10-11T13:14:14.478Z",
+        "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 39,
+        "statements": 23,
+        "inlineVisible": false,
+        "renderedMath": 1238,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter05_martingales.html",
+        "started_at_utc": "2026-10-11T13:14:14.480Z",
+        "finished_at_utc": "2026-10-11T13:14:14.712Z",
+        "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 10,
+        "statements": 20,
+        "inlineVisible": false,
+        "renderedMath": 747,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter06_mathematical_finance.html",
+        "started_at_utc": "2026-10-11T13:14:14.714Z",
+        "finished_at_utc": "2026-10-11T13:14:14.994Z",
+        "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 25,
+        "statements": 17,
+        "inlineVisible": false,
+        "renderedMath": 1606,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "preface.html",
+        "started_at_utc": "2026-10-11T13:14:14.995Z",
+        "finished_at_utc": "2026-10-11T13:14:15.259Z",
+        "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": false,
+        "renderedMath": 0,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "appendix_a_probability_review.html",
+        "started_at_utc": "2026-10-11T13:14:15.264Z",
+        "finished_at_utc": "2026-10-11T13:14:15.578Z",
+        "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 19,
+        "inlineVisible": true,
+        "renderedMath": 405,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "book_overview.html",
+        "started_at_utc": "2026-10-11T13:14:15.579Z",
+        "finished_at_utc": "2026-10-11T13:14:15.728Z",
+        "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": true,
+        "renderedMath": 28,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter01_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:15.729Z",
+        "finished_at_utc": "2026-10-11T13:14:16.481Z",
+        "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 77,
+        "statements": 38,
+        "inlineVisible": true,
+        "renderedMath": 2383,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter02_poisson_processes.html",
+        "started_at_utc": "2026-10-11T13:14:16.482Z",
+        "finished_at_utc": "2026-10-11T13:14:16.732Z",
+        "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 61,
+        "statements": 19,
+        "inlineVisible": true,
+        "renderedMath": 1016,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter03_renewal_processes.html",
+        "started_at_utc": "2026-10-11T13:14:16.733Z",
+        "finished_at_utc": "2026-10-11T13:14:16.962Z",
+        "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 24,
+        "statements": 14,
+        "inlineVisible": true,
+        "renderedMath": 500,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter04_continuous_time_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:16.964Z",
+        "finished_at_utc": "2026-10-11T13:14:17.270Z",
+        "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 39,
+        "statements": 23,
+        "inlineVisible": true,
+        "renderedMath": 1271,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter05_martingales.html",
+        "started_at_utc": "2026-10-11T13:14:17.271Z",
+        "finished_at_utc": "2026-10-11T13:14:17.461Z",
+        "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 10,
+        "statements": 20,
+        "inlineVisible": true,
+        "renderedMath": 767,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter06_mathematical_finance.html",
+        "started_at_utc": "2026-10-11T13:14:17.461Z",
+        "finished_at_utc": "2026-10-11T13:14:17.832Z",
+        "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 25,
+        "statements": 17,
+        "inlineVisible": true,
+        "renderedMath": 1628,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "preface.html",
+        "started_at_utc": "2026-10-11T13:14:17.834Z",
+        "finished_at_utc": "2026-10-11T13:14:17.993Z",
+        "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": true,
+        "renderedMath": 6,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "appendix_a_probability_review.html",
+        "started_at_utc": "2026-10-11T13:14:18.002Z",
+        "finished_at_utc": "2026-10-11T13:14:18.327Z",
+        "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 19,
+        "inlineVisible": true,
+        "renderedMath": 405,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "book_overview.html",
+        "started_at_utc": "2026-10-11T13:14:18.327Z",
+        "finished_at_utc": "2026-10-11T13:14:18.460Z",
+        "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": true,
+        "renderedMath": 28,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter01_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:18.462Z",
+        "finished_at_utc": "2026-10-11T13:14:19.245Z",
+        "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 77,
+        "statements": 38,
+        "inlineVisible": true,
+        "renderedMath": 2383,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter02_poisson_processes.html",
+        "started_at_utc": "2026-10-11T13:14:19.245Z",
+        "finished_at_utc": "2026-10-11T13:14:19.609Z",
+        "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 61,
+        "statements": 19,
+        "inlineVisible": true,
+        "renderedMath": 1016,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter03_renewal_processes.html",
+        "started_at_utc": "2026-10-11T13:14:19.610Z",
+        "finished_at_utc": "2026-10-11T13:14:19.794Z",
+        "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 24,
+        "statements": 14,
+        "inlineVisible": true,
+        "renderedMath": 500,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter04_continuous_time_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:19.795Z",
+        "finished_at_utc": "2026-10-11T13:14:20.093Z",
+        "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 39,
+        "statements": 23,
+        "inlineVisible": true,
+        "renderedMath": 1271,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter05_martingales.html",
+        "started_at_utc": "2026-10-11T13:14:20.093Z",
+        "finished_at_utc": "2026-10-11T13:14:20.327Z",
+        "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 10,
+        "statements": 20,
+        "inlineVisible": true,
+        "renderedMath": 767,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter06_mathematical_finance.html",
+        "started_at_utc": "2026-10-11T13:14:20.327Z",
+        "finished_at_utc": "2026-10-11T13:14:20.685Z",
+        "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 25,
+        "statements": 17,
+        "inlineVisible": true,
+        "renderedMath": 1628,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "preface.html",
+        "started_at_utc": "2026-10-11T13:14:20.685Z",
+        "finished_at_utc": "2026-10-11T13:14:20.844Z",
+        "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": true,
+        "renderedMath": 6,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      }
+    ],
+    "interactions": {
+      "started_at_utc": "2026-10-11T13:19:23.992Z",
+      "tocContext": "s24",
+      "contextReturn": {
+        "hash": "#s24",
+        "top": 23.84375
+      },
+      "breakpoints": [
+        {
+          "width": 1439,
+          "root": 1439,
+          "rail": false,
+          "inline": true
+        },
+        {
+          "width": 1440,
+          "root": 1440,
+          "rail": true,
+          "inline": false
+        },
+        {
+          "width": 390,
+          "root": 390,
+          "rail": false,
+          "inline": true
+        },
+        {
+          "width": 1800,
+          "root": 1800,
+          "rail": true,
+          "inline": false
+        }
+      ],
+      "mobileToc": {
+        "hash": "#s21",
+        "closed": true
+      },
+      "code": {
+        "pythonOpen": true,
+        "scroll": 1243.5,
+        "root": 390
+      },
+      "appendixLink": {
+        "hash": "#lemma-5-2",
+        "open": true
+      },
+      "noJs": [
+        {
+          "file": "appendix_a_probability_review.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 4,
+          "openGroups": 4,
+          "visibleGroups": 4,
+          "badMath": 0
+        },
+        {
+          "file": "book_overview.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter01_markov_chains.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 14,
+          "openGroups": 14,
+          "visibleGroups": 14,
+          "badMath": 0
+        },
+        {
+          "file": "chapter02_poisson_processes.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 7,
+          "openGroups": 7,
+          "visibleGroups": 7,
+          "badMath": 0
+        },
+        {
+          "file": "chapter03_renewal_processes.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter04_continuous_time_markov_chains.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 9,
+          "openGroups": 9,
+          "visibleGroups": 9,
+          "badMath": 0
+        },
+        {
+          "file": "chapter05_martingales.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter06_mathematical_finance.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 9,
+          "openGroups": 9,
+          "visibleGroups": 9,
+          "badMath": 0
+        },
+        {
+          "file": "preface.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 5,
+          "openGroups": 5,
+          "visibleGroups": 5,
+          "badMath": 0
+        },
+        {
+          "file": "appendix_a_probability_review.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 4,
+          "openGroups": 4,
+          "visibleGroups": 4,
+          "badMath": 0
+        },
+        {
+          "file": "book_overview.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter01_markov_chains.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 14,
+          "openGroups": 14,
+          "visibleGroups": 14,
+          "badMath": 0
+        },
+        {
+          "file": "chapter02_poisson_processes.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 7,
+          "openGroups": 7,
+          "visibleGroups": 7,
+          "badMath": 0
+        },
+        {
+          "file": "chapter03_renewal_processes.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter04_continuous_time_markov_chains.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 9,
+          "openGroups": 9,
+          "visibleGroups": 9,
+          "badMath": 0
+        },
+        {
+          "file": "chapter05_martingales.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter06_mathematical_finance.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 9,
+          "openGroups": 9,
+          "visibleGroups": 9,
+          "badMath": 0
+        },
+        {
+          "file": "preface.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 5,
+          "openGroups": 5,
+          "visibleGroups": 5,
+          "badMath": 0
+        }
+      ],
+      "nativeCollapse": true,
+      "nativeExpand": true,
+      "print": {
+        "events": {
+          "before": [
+            90
+          ],
+          "after": [
+            0
+          ]
+        },
+        "total": 90,
+        "restored": true
+      },
+      "finished_at_utc": "2026-10-11T13:19:43.062Z",
+      "status": "pass",
+      "visual_review": {
+        "status": "pass",
+        "inspected_screenshots": [
+          "detailed-balance",
+          "traffic",
+          "literal-payoff",
+          "birth-death",
+          "poisson",
+          "code",
+          "pairwise-proof",
+          "correct-decimal",
+          "weight-calculations",
+          "nojs"
+        ],
+        "print": {
+          "pages": 68,
+          "answer_headings": 64,
+          "example_page": 22,
+          "last_exercise_page": 67
+        },
+        "checked_at_utc": "2026-10-11T13:21:20.481321+00:00"
+      }
+    },
+    "executed_at_utc": {
+      "start": "2026-10-11T13:06:46.714Z",
+      "finish": "2026-10-11T13:14:20.844Z"
+    },
+    "evidence_paths": {
+      "layouts": "../tmp/audit-fix-http/browser-layouts.json",
+      "interactions": "../tmp/audit-fix-http/browser-interactions.json"
+    },
+    "visual_scope": "Nine repair screenshots and no-JS screenshot individually inspected; actual browser PDF print inspected on first, example and final exercise pages; all-page rendered formula and bounded interaction checks."
+  },
+  "files": {
+    "agent.md": {
+      "bytes": 6910,
+      "sha256": "bf0b0b959701437b80da8829b7b7f9ea25a8c0f02a6ade6090f9e316ce90d8fa"
+    },
+    "notes/README.md": {
+      "bytes": 9388,
+      "sha256": "0e9c348ea75c4ad5b4d6d5dc3f4b6b094cc6586d5c81308017526664f3aab2e0"
+    },
+    "notes/appendix_a_probability_review.html": {
+      "bytes": 192942,
+      "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a"
+    },
+    "notes/book_overview.html": {
+      "bytes": 50653,
+      "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0"
+    },
+    "notes/chapter01_markov_chains.html": {
+      "bytes": 1141735,
+      "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f"
+    },
+    "notes/chapter02_poisson_processes.html": {
+      "bytes": 493525,
+      "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b"
+    },
+    "notes/chapter03_renewal_processes.html": {
+      "bytes": 256873,
+      "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa"
+    },
+    "notes/chapter04_continuous_time_markov_chains.html": {
+      "bytes": 644426,
+      "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3"
+    },
+    "notes/chapter05_martingales.html": {
+      "bytes": 322830,
+      "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c"
+    },
+    "notes/chapter06_mathematical_finance.html": {
+      "bytes": 571627,
+      "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17"
+    },
+    "notes/code_deployment_review.json": {
+      "bytes": 213947,
+      "sha256": "bdd9033479957f0338e9f864efce15239eec5fd4f045aa7d76877c3da2f2c63c"
+    },
+    "notes/preface.html": {
+      "bytes": 40431,
+      "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba"
+    },
+    "notes/source_manifest.json": {
+      "bytes": 36372,
+      "sha256": "f139c6dfedbf36be0b24bbae20b3f5af15482c4db068906a629bb6e29aafe23f"
+    },
+    "notes/statements_review.json": {
+      "bytes": 372719,
+      "sha256": "9f08383ac1d6512f315b723c06ab744b7830a45e223da272eeb1784052bc4fce"
+    },
+    "tools/check_notes.py": {
+      "bytes": 26392,
+      "sha256": "483ad49c248314be817587190e008037929ace0c7bbfed7104a836e64fbab026"
+    },
+    "notes/audit_fix_review.json": {
+      "bytes": 47702,
+      "sha256": "b465c4e76ffd73048f97fed779663f7f73b126d91f2d343704e797fff2a74134"
+    }
+  },
+  "review_history": [
+    {
+      "generated_at_utc": "2026-10-10T16:14:56.187968+00:00",
+      "record": "../tmp/statements-before/notes/annotations_review.json",
+      "scope": "八页61组122条注解与40种布局的完整检查点；原有注解内容保持一致。"
+    },
+    {
+      "generated_at_utc": "2026-10-10T17:25:15.102262+00:00",
+      "record": "../tmp/code-deploy-before/notes/annotations_review.json",
+      "scope": "源码抽离前的完整复核检查点；数学内容保持一致，代码与PDF的当前检查见code_deployment_review.json。",
+      "browser_review": {
+        "browser": "Ego Lite Chromium",
+        "result": "pass",
+        "layout_variants": 36,
+        "viewport_widths": [
+          1800,
+          1440,
+          1024,
+          390
+        ],
+        "wide_section_context_transitions": 66,
+        "statement_deep_links": 150,
+        "layouts": [
+          {
+            "file": "book_overview.html",
+            "width": 1800,
+            "root": 1785,
+            "groups": 6,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1318.5,
+            "mainRight": 1286.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 0,
+            "excerpts": 0,
+            "exercises": 0,
+            "openExercises": 0,
+            "codeVersions": 0,
+            "contexts": 6,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": null,
+            "html_sha256": "87e04719e1c47f76f6a1d2ea72d0702d1f5808e00f4876d70fd7581e8ba21d28"
+          },
+          {
+            "file": "preface.html",
+            "width": 1800,
+            "root": 1785,
+            "groups": 5,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1318.5,
+            "mainRight": 1286.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 0,
+            "excerpts": 4,
+            "exercises": 0,
+            "openExercises": 0,
+            "codeVersions": 0,
+            "contexts": 5,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": null,
+            "html_sha256": "957599343017dcc6bf25030b8c1f0e33839397809638350212e5c70f92092228"
+          },
+          {
+            "file": "chapter01_markov_chains.html",
+            "width": 1800,
+            "root": 1785,
+            "groups": 14,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1318.5,
+            "mainRight": 1286.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 38,
+            "excerpts": 37,
+            "exercises": 77,
+            "openExercises": 77,
+            "codeVersions": 2,
+            "contexts": 14,
+            "statementDeepLinks": 38,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "29f1bcb7f8fd3204389a26cc54c06234bac47f82f1c2a8bbb7acc7ca080ef71b"
+          },
+          {
+            "file": "chapter02_poisson_processes.html",
+            "width": 1800,
+            "root": 1785,
+            "groups": 7,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1318.5,
+            "mainRight": 1286.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 19,
+            "excerpts": 19,
+            "exercises": 61,
+            "openExercises": 61,
+            "codeVersions": 2,
+            "contexts": 7,
+            "statementDeepLinks": 19,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "c52ab68ae08d515778806dd0314043b824097f2fdbe7a6d3258b548895ac5136"
+          },
+          {
+            "file": "chapter03_renewal_processes.html",
+            "width": 1800,
+            "root": 1785,
+            "groups": 6,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1318.5,
+            "mainRight": 1286.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 14,
+            "excerpts": 14,
+            "exercises": 24,
+            "openExercises": 24,
+            "codeVersions": 2,
+            "contexts": 6,
+            "statementDeepLinks": 14,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "b71f395abc4906a2282da8cb5b89a3d7f9077d2355007f9aea8701f8e7825807"
+          },
+          {
+            "file": "chapter04_continuous_time_markov_chains.html",
+            "width": 1800,
+            "root": 1785,
+            "groups": 9,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1318.5,
+            "mainRight": 1286.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 23,
+            "excerpts": 19,
+            "exercises": 39,
+            "openExercises": 39,
+            "codeVersions": 2,
+            "contexts": 9,
+            "statementDeepLinks": 23,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "ca3c8af95dafa850b5dddb0ff6f91119e499800bfd7956d7ef3912504b0e8344"
+          },
+          {
+            "file": "appendix_a_probability_review.html",
+            "width": 1800,
+            "root": 1785,
+            "groups": 4,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1318.5,
+            "mainRight": 1286.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 19,
+            "excerpts": 18,
+            "exercises": 0,
+            "openExercises": 0,
+            "codeVersions": 0,
+            "contexts": 4,
+            "statementDeepLinks": 19,
+            "lastExerciseDeepLink": null,
+            "html_sha256": "08a3bc51edc9cf4dce9c5a3f2fcdf1633f4b56aa7ac474766ea1f616177455d4"
+          },
+          {
+            "file": "book_overview.html",
+            "width": 1440,
+            "root": 1425,
+            "groups": 6,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1121,
+            "mainRight": 1089,
+            "mainWidth": 793,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 0,
+            "excerpts": 0,
+            "exercises": 0,
+            "openExercises": 0,
+            "codeVersions": 0,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": null,
+            "html_sha256": "87e04719e1c47f76f6a1d2ea72d0702d1f5808e00f4876d70fd7581e8ba21d28"
+          },
+          {
+            "file": "preface.html",
+            "width": 1440,
+            "root": 1425,
+            "groups": 5,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1121,
+            "mainRight": 1089,
+            "mainWidth": 793,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 0,
+            "excerpts": 4,
+            "exercises": 0,
+            "openExercises": 0,
+            "codeVersions": 0,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": null,
+            "html_sha256": "957599343017dcc6bf25030b8c1f0e33839397809638350212e5c70f92092228"
+          },
+          {
+            "file": "chapter01_markov_chains.html",
+            "width": 1440,
+            "root": 1425,
+            "groups": 14,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1121,
+            "mainRight": 1089,
+            "mainWidth": 793,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 38,
+            "excerpts": 37,
+            "exercises": 77,
+            "openExercises": 77,
+            "codeVersions": 2,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "29f1bcb7f8fd3204389a26cc54c06234bac47f82f1c2a8bbb7acc7ca080ef71b"
+          },
+          {
+            "file": "chapter02_poisson_processes.html",
+            "width": 1440,
+            "root": 1425,
+            "groups": 7,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1121,
+            "mainRight": 1089,
+            "mainWidth": 793,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 19,
+            "excerpts": 19,
+            "exercises": 61,
+            "openExercises": 61,
+            "codeVersions": 2,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "c52ab68ae08d515778806dd0314043b824097f2fdbe7a6d3258b548895ac5136"
+          },
+          {
+            "file": "chapter03_renewal_processes.html",
+            "width": 1440,
+            "root": 1425,
+            "groups": 6,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1121,
+            "mainRight": 1089,
+            "mainWidth": 793,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 14,
+            "excerpts": 14,
+            "exercises": 24,
+            "openExercises": 24,
+            "codeVersions": 2,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "b71f395abc4906a2282da8cb5b89a3d7f9077d2355007f9aea8701f8e7825807"
+          },
+          {
+            "file": "chapter04_continuous_time_markov_chains.html",
+            "width": 1440,
+            "root": 1425,
+            "groups": 9,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1121,
+            "mainRight": 1089,
+            "mainWidth": 793,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 23,
+            "excerpts": 19,
+            "exercises": 39,
+            "openExercises": 39,
+            "codeVersions": 2,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "ca3c8af95dafa850b5dddb0ff6f91119e499800bfd7956d7ef3912504b0e8344"
+          },
+          {
+            "file": "appendix_a_probability_review.html",
+            "width": 1440,
+            "root": 1425,
+            "groups": 4,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1121,
+            "mainRight": 1089,
+            "mainWidth": 793,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 19,
+            "excerpts": 18,
+            "exercises": 0,
+            "openExercises": 0,
+            "codeVersions": 0,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": null,
+            "html_sha256": "08a3bc51edc9cf4dce9c5a3f2fcdf1633f4b56aa7ac474766ea1f616177455d4"
+          },
+          {
+            "file": "book_overview.html",
+            "width": 1024,
+            "root": 1009,
+            "groups": 6,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 934.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 0,
+            "excerpts": 0,
+            "exercises": 0,
+            "openExercises": 0,
+            "codeVersions": 0,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": null,
+            "html_sha256": "87e04719e1c47f76f6a1d2ea72d0702d1f5808e00f4876d70fd7581e8ba21d28"
+          },
+          {
+            "file": "preface.html",
+            "width": 1024,
+            "root": 1009,
+            "groups": 5,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 934.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 0,
+            "excerpts": 4,
+            "exercises": 0,
+            "openExercises": 0,
+            "codeVersions": 0,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": null,
+            "html_sha256": "957599343017dcc6bf25030b8c1f0e33839397809638350212e5c70f92092228"
+          },
+          {
+            "file": "chapter01_markov_chains.html",
+            "width": 1024,
+            "root": 1009,
+            "groups": 14,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 934.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 38,
+            "excerpts": 37,
+            "exercises": 77,
+            "openExercises": 77,
+            "codeVersions": 2,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "29f1bcb7f8fd3204389a26cc54c06234bac47f82f1c2a8bbb7acc7ca080ef71b"
+          },
+          {
+            "file": "chapter02_poisson_processes.html",
+            "width": 1024,
+            "root": 1009,
+            "groups": 7,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 934.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 19,
+            "excerpts": 19,
+            "exercises": 61,
+            "openExercises": 61,
+            "codeVersions": 2,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "c52ab68ae08d515778806dd0314043b824097f2fdbe7a6d3258b548895ac5136"
+          },
+          {
+            "file": "chapter03_renewal_processes.html",
+            "width": 1024,
+            "root": 1009,
+            "groups": 6,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 934.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 14,
+            "excerpts": 14,
+            "exercises": 24,
+            "openExercises": 24,
+            "codeVersions": 2,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "b71f395abc4906a2282da8cb5b89a3d7f9077d2355007f9aea8701f8e7825807"
+          },
+          {
+            "file": "chapter04_continuous_time_markov_chains.html",
+            "width": 1024,
+            "root": 1009,
+            "groups": 9,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 934.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 23,
+            "excerpts": 19,
+            "exercises": 39,
+            "openExercises": 39,
+            "codeVersions": 2,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "ca3c8af95dafa850b5dddb0ff6f91119e499800bfd7956d7ef3912504b0e8344"
+          },
+          {
+            "file": "appendix_a_probability_review.html",
+            "width": 1024,
+            "root": 1009,
+            "groups": 4,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 934.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 19,
+            "excerpts": 18,
+            "exercises": 0,
+            "openExercises": 0,
+            "codeVersions": 0,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": null,
+            "html_sha256": "08a3bc51edc9cf4dce9c5a3f2fcdf1633f4b56aa7ac474766ea1f616177455d4"
+          },
+          {
+            "file": "book_overview.html",
+            "width": 390,
+            "root": 390,
+            "groups": 6,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 390,
+            "mainWidth": 390,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 0,
+            "excerpts": 0,
+            "exercises": 0,
+            "openExercises": 0,
+            "codeVersions": 0,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": null,
+            "html_sha256": "87e04719e1c47f76f6a1d2ea72d0702d1f5808e00f4876d70fd7581e8ba21d28"
+          },
+          {
+            "file": "preface.html",
+            "width": 390,
+            "root": 390,
+            "groups": 5,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 390,
+            "mainWidth": 390,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 0,
+            "excerpts": 4,
+            "exercises": 0,
+            "openExercises": 0,
+            "codeVersions": 0,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": null,
+            "html_sha256": "957599343017dcc6bf25030b8c1f0e33839397809638350212e5c70f92092228"
+          },
+          {
+            "file": "chapter01_markov_chains.html",
+            "width": 390,
+            "root": 390,
+            "groups": 14,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 390,
+            "mainWidth": 390,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 38,
+            "excerpts": 37,
+            "exercises": 77,
+            "openExercises": 77,
+            "codeVersions": 2,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "29f1bcb7f8fd3204389a26cc54c06234bac47f82f1c2a8bbb7acc7ca080ef71b"
+          },
+          {
+            "file": "chapter02_poisson_processes.html",
+            "width": 390,
+            "root": 390,
+            "groups": 7,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 390,
+            "mainWidth": 390,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 19,
+            "excerpts": 19,
+            "exercises": 61,
+            "openExercises": 61,
+            "codeVersions": 2,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "c52ab68ae08d515778806dd0314043b824097f2fdbe7a6d3258b548895ac5136"
+          },
+          {
+            "file": "chapter03_renewal_processes.html",
+            "width": 390,
+            "root": 390,
+            "groups": 6,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 390,
+            "mainWidth": 390,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 14,
+            "excerpts": 14,
+            "exercises": 24,
+            "openExercises": 24,
+            "codeVersions": 2,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "b71f395abc4906a2282da8cb5b89a3d7f9077d2355007f9aea8701f8e7825807"
+          },
+          {
+            "file": "chapter04_continuous_time_markov_chains.html",
+            "width": 390,
+            "root": 390,
+            "groups": 9,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 390,
+            "mainWidth": 390,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 23,
+            "excerpts": 19,
+            "exercises": 39,
+            "openExercises": 39,
+            "codeVersions": 2,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "ca3c8af95dafa850b5dddb0ff6f91119e499800bfd7956d7ef3912504b0e8344"
+          },
+          {
+            "file": "appendix_a_probability_review.html",
+            "width": 390,
+            "root": 390,
+            "groups": 4,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 390,
+            "mainWidth": 390,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 19,
+            "excerpts": 18,
+            "exercises": 0,
+            "openExercises": 0,
+            "codeVersions": 0,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": null,
+            "html_sha256": "08a3bc51edc9cf4dce9c5a3f2fcdf1633f4b56aa7ac474766ea1f616177455d4"
+          },
+          {
+            "file": "chapter05_martingales.html",
+            "width": 1800,
+            "root": 1785,
+            "groups": 6,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1318.5,
+            "mainRight": 1286.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 20,
+            "excerpts": 20,
+            "exercises": 10,
+            "openExercises": 10,
+            "codeVersions": 2,
+            "contexts": 6,
+            "statementDeepLinks": 20,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "ff5040ff5bc2f6fbd80f02aaa4796c0ed1902d5597866301cf61e79cab6c5087"
+          },
+          {
+            "file": "chapter06_mathematical_finance.html",
+            "width": 1800,
+            "root": 1785,
+            "groups": 9,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1318.5,
+            "mainRight": 1286.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 17,
+            "excerpts": 15,
+            "exercises": 25,
+            "openExercises": 25,
+            "codeVersions": 4,
+            "contexts": 9,
+            "statementDeepLinks": 17,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "9e39d9b2a291c1e2ea74f640c567b2a48a1163eaa941d2703df9923c79aaafc8"
+          },
+          {
+            "file": "chapter05_martingales.html",
+            "width": 1440,
+            "root": 1425,
+            "groups": 6,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1121,
+            "mainRight": 1089,
+            "mainWidth": 793,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 20,
+            "excerpts": 20,
+            "exercises": 10,
+            "openExercises": 10,
+            "codeVersions": 2,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "ff5040ff5bc2f6fbd80f02aaa4796c0ed1902d5597866301cf61e79cab6c5087"
+          },
+          {
+            "file": "chapter06_mathematical_finance.html",
+            "width": 1440,
+            "root": 1425,
+            "groups": 9,
+            "railVisible": true,
+            "railWidth": 280,
+            "railX": 1121,
+            "mainRight": 1089,
+            "mainWidth": 793,
+            "badMath": 0,
+            "inlineVisible": false,
+            "statements": 17,
+            "excerpts": 15,
+            "exercises": 25,
+            "openExercises": 25,
+            "codeVersions": 4,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "9e39d9b2a291c1e2ea74f640c567b2a48a1163eaa941d2703df9923c79aaafc8"
+          },
+          {
+            "file": "chapter05_martingales.html",
+            "width": 1024,
+            "root": 1009,
+            "groups": 6,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 934.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 20,
+            "excerpts": 20,
+            "exercises": 10,
+            "openExercises": 10,
+            "codeVersions": 2,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "ff5040ff5bc2f6fbd80f02aaa4796c0ed1902d5597866301cf61e79cab6c5087"
+          },
+          {
+            "file": "chapter06_mathematical_finance.html",
+            "width": 1024,
+            "root": 1009,
+            "groups": 9,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 934.5,
+            "mainWidth": 860,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 17,
+            "excerpts": 15,
+            "exercises": 25,
+            "openExercises": 25,
+            "codeVersions": 4,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "9e39d9b2a291c1e2ea74f640c567b2a48a1163eaa941d2703df9923c79aaafc8"
+          },
+          {
+            "file": "chapter05_martingales.html",
+            "width": 390,
+            "root": 390,
+            "groups": 6,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 390,
+            "mainWidth": 390,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 20,
+            "excerpts": 20,
+            "exercises": 10,
+            "openExercises": 10,
+            "codeVersions": 2,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "ff5040ff5bc2f6fbd80f02aaa4796c0ed1902d5597866301cf61e79cab6c5087"
+          },
+          {
+            "file": "chapter06_mathematical_finance.html",
+            "width": 390,
+            "root": 390,
+            "groups": 9,
+            "railVisible": false,
+            "railWidth": 0,
+            "railX": 0,
+            "mainRight": 390,
+            "mainWidth": 390,
+            "badMath": 0,
+            "inlineVisible": true,
+            "statements": 17,
+            "excerpts": 15,
+            "exercises": 25,
+            "openExercises": 25,
+            "codeVersions": 4,
+            "contexts": 0,
+            "statementDeepLinks": 0,
+            "lastExerciseDeepLink": true,
+            "html_sha256": "9e39d9b2a291c1e2ea74f640c567b2a48a1163eaa941d2703df9923c79aaafc8"
+          }
+        ],
+        "interactions": {
+          "noJs": [
+            {
+              "file": "book_overview.html",
+              "width": 1800,
+              "root": 1785,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 0,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "87e04719e1c47f76f6a1d2ea72d0702d1f5808e00f4876d70fd7581e8ba21d28"
+            },
+            {
+              "file": "preface.html",
+              "width": 1800,
+              "root": 1785,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 0,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "957599343017dcc6bf25030b8c1f0e33839397809638350212e5c70f92092228"
+            },
+            {
+              "file": "chapter01_markov_chains.html",
+              "width": 1800,
+              "root": 1785,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 38,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "29f1bcb7f8fd3204389a26cc54c06234bac47f82f1c2a8bbb7acc7ca080ef71b"
+            },
+            {
+              "file": "chapter02_poisson_processes.html",
+              "width": 1800,
+              "root": 1785,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 19,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "c52ab68ae08d515778806dd0314043b824097f2fdbe7a6d3258b548895ac5136"
+            },
+            {
+              "file": "chapter03_renewal_processes.html",
+              "width": 1800,
+              "root": 1785,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 14,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "b71f395abc4906a2282da8cb5b89a3d7f9077d2355007f9aea8701f8e7825807"
+            },
+            {
+              "file": "chapter04_continuous_time_markov_chains.html",
+              "width": 1800,
+              "root": 1785,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 23,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "ca3c8af95dafa850b5dddb0ff6f91119e499800bfd7956d7ef3912504b0e8344"
+            },
+            {
+              "file": "chapter05_martingales.html",
+              "width": 1800,
+              "root": 1785,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 20,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "ff5040ff5bc2f6fbd80f02aaa4796c0ed1902d5597866301cf61e79cab6c5087"
+            },
+            {
+              "file": "chapter06_mathematical_finance.html",
+              "width": 1800,
+              "root": 1785,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 17,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "9e39d9b2a291c1e2ea74f640c567b2a48a1163eaa941d2703df9923c79aaafc8"
+            },
+            {
+              "file": "appendix_a_probability_review.html",
+              "width": 1800,
+              "root": 1785,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 19,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "08a3bc51edc9cf4dce9c5a3f2fcdf1633f4b56aa7ac474766ea1f616177455d4"
+            },
+            {
+              "file": "book_overview.html",
+              "width": 390,
+              "root": 390,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 0,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "87e04719e1c47f76f6a1d2ea72d0702d1f5808e00f4876d70fd7581e8ba21d28"
+            },
+            {
+              "file": "preface.html",
+              "width": 390,
+              "root": 390,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 0,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "957599343017dcc6bf25030b8c1f0e33839397809638350212e5c70f92092228"
+            },
+            {
+              "file": "chapter01_markov_chains.html",
+              "width": 390,
+              "root": 390,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 38,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "29f1bcb7f8fd3204389a26cc54c06234bac47f82f1c2a8bbb7acc7ca080ef71b"
+            },
+            {
+              "file": "chapter02_poisson_processes.html",
+              "width": 390,
+              "root": 390,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 19,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "c52ab68ae08d515778806dd0314043b824097f2fdbe7a6d3258b548895ac5136"
+            },
+            {
+              "file": "chapter03_renewal_processes.html",
+              "width": 390,
+              "root": 390,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 14,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "b71f395abc4906a2282da8cb5b89a3d7f9077d2355007f9aea8701f8e7825807"
+            },
+            {
+              "file": "chapter04_continuous_time_markov_chains.html",
+              "width": 390,
+              "root": 390,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 23,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "ca3c8af95dafa850b5dddb0ff6f91119e499800bfd7956d7ef3912504b0e8344"
+            },
+            {
+              "file": "chapter05_martingales.html",
+              "width": 390,
+              "root": 390,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 20,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "ff5040ff5bc2f6fbd80f02aaa4796c0ed1902d5597866301cf61e79cab6c5087"
+            },
+            {
+              "file": "chapter06_mathematical_finance.html",
+              "width": 390,
+              "root": 390,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 17,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "9e39d9b2a291c1e2ea74f640c567b2a48a1163eaa941d2703df9923c79aaafc8"
+            },
+            {
+              "file": "appendix_a_probability_review.html",
+              "width": 390,
+              "root": 390,
+              "enhanced": false,
+              "inlineVisible": true,
+              "statements": 19,
+              "badMath": 0,
+              "railHidden": true,
+              "html_sha256": "08a3bc51edc9cf4dce9c5a3f2fcdf1633f4b56aa7ac474766ea1f616177455d4"
+            }
+          ],
+          "indexLink": true,
+          "nativeTheoremCollapse": true,
+          "nativeTheoremExpand": true,
+          "detailedProofLink": true,
+          "prefacePrevious": true,
+          "prefaceNext": true,
+          "duplicateLemmaId": true,
+          "duplicateTheoremId": true,
+          "mobileIndexSelection": true,
+          "prefaceNoteCollapse": true,
+          "prefaceNoteExpand": true,
+          "noJsNativeCollapse": true,
+          "noJsNativeExpand": true,
+          "noJsTheoremCollapse": true,
+          "noJsTheoremExpand": true
+        },
+        "no_javascript_variants": 18,
+        "screenshots": [
+          {
+            "path": "../tmp/notes-check/statements-desktop-appendix_a_probability_review.png",
+            "bytes": 227341,
+            "sha256": "29f6743d8596b57063df4b4023dfda5a7f01f4e6adf2c3ec2516c4b510d2e3fc",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-desktop-book_overview.png",
+            "bytes": 222843,
+            "sha256": "1ed94fb44afce1ff0ade815a2b123fc6943b4d9a0df82cb0feb3aa76e58f69eb",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-desktop-chapter01_markov_chains.png",
+            "bytes": 281833,
+            "sha256": "bb5339756f38cb00b9f2aa287f0170cd1d0862a20f6e5ad04a7ae8b7b454f9dd",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-desktop-chapter02_poisson_processes.png",
+            "bytes": 214213,
+            "sha256": "f33f8dd3bd45b6df85fa60289ba2453aafeb42bef763df563c838bb94e16f9fe",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-desktop-chapter03_renewal_processes.png",
+            "bytes": 251939,
+            "sha256": "dd9d66a570204810a0761c9cd0f4cb9ac5d102e5e018ff106e2924ef6638a30f",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-desktop-chapter04_continuous_time_markov_chains.png",
+            "bytes": 212903,
+            "sha256": "0a4e278051d97749ec973b6404a2a49fdc49893014ae8c46d03d683eaa3e69dd",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-desktop-chapter05_martingales.png",
+            "bytes": 228098,
+            "sha256": "1b2f42ca9f3bdb657a013ea9a88d1c1042c992fec1cf3cf30dd571e540ec0848",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-desktop-chapter06_mathematical_finance.png",
+            "bytes": 312632,
+            "sha256": "a614259d9c01a5c9c5280081f8e143fa3be20bb74a2eb6baf38b24d94a7677c6",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-desktop-preface.png",
+            "bytes": 354018,
+            "sha256": "7a4a865c08bb095a3009bccdd171453a42b27914c49b94f799ed7ecb766d8625",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-mobile-appendix_a_probability_review.png",
+            "bytes": 71489,
+            "sha256": "f0a5472311eb4748305223c34b1e44647dfac910e168ca3721943ef2fae7ac33",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-mobile-book_overview.png",
+            "bytes": 74068,
+            "sha256": "cffa39865022ab5e45c0194f3af76895bcf2c1c18e54f53320eecd6da3e5cae5",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-mobile-chapter01_markov_chains.png",
+            "bytes": 71355,
+            "sha256": "9d080b35b8d4a183537263a74713ea9da2ef06e5042c63b62b27bb4f60715d83",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-mobile-chapter02_poisson_processes.png",
+            "bytes": 69560,
+            "sha256": "30c6c4510257832acdfabcce2c185d4c3a4ab66e31a2cc2e6093a1179e110011",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-mobile-chapter03_renewal_processes.png",
+            "bytes": 66799,
+            "sha256": "43c4301bd071a55f1442c6cb1a8207b167ba07a8c295793129c12c51c129e364",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-mobile-chapter04_continuous_time_markov_chains.png",
+            "bytes": 52386,
+            "sha256": "44cf5449e9c05358a3137eb41a15ea1b1463758672aab81bb2e692f800a8ab4b",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-mobile-chapter05_martingales.png",
+            "bytes": 65366,
+            "sha256": "ce2bea57ba33b922fee44e904e1d0aa8158d42029fb1c575d6e226ab899445a7",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-mobile-chapter06_mathematical_finance.png",
+            "bytes": 76556,
+            "sha256": "47cd673617bcf6551c1a345c2bddb35c9cba0c728e21a3dad9802357585a6a6e",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-mobile-preface.png",
+            "bytes": 99048,
+            "sha256": "f5745616f49f99bb291e5eb9d37f1d00f5a2fa028a0e7e6133f78d2b05281aaf",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-nojs-axioms-mobile.png",
+            "bytes": 84810,
+            "sha256": "8bc29d361b5a7157122d9fb1301dacf9e1eeb3677b2b40583d3bc2fe796fff0e",
+            "visually_reviewed": true
+          },
+          {
+            "path": "../tmp/notes-check/statements-nojs-preface-mobile.png",
+            "bytes": 100374,
+            "sha256": "044518ce931703f4c2428ae859c965c61a565d84adfbbd4bdfffe0516f0acff2",
+            "visually_reviewed": true
+          }
+        ],
+        "visual_review_scope": "九页在1800px和390px的18个阅读位置逐一目视检查，另查看关闭JavaScript后的序言注解与概率公理手机截图。全页公式、展开后的习题及代码版本、页面溢出与注解布局检查覆盖36种布局；1800px逐个验证66个小节上下文和150个正式陈述锚点。索引、详细推导入口、序言章间导航、同编号定理/引理、原生折叠及18种无JS布局另有记录。",
+        "task_space_id": 9,
+        "task_space_finished": true,
+        "task_space_finish": {
+          "task_space_id": 9,
+          "task_space_finished": true,
+          "result": {
+            "spaceId": 9,
+            "closedSpace": true,
+            "keptManagedLabels": [],
+            "closedManagedLabels": [
+              "p1"
+            ],
+            "preservedUnmanagedCount": 0
+          }
+        },
+        "raw_records": [
+          "../tmp/notes-check/statements-browser-layouts.json",
+          "../tmp/notes-check/statements-browser-interactions.json",
+          "../tmp/notes-check/statements-browser-finished.json"
+        ]
+      }
+    },
+    {
+      "phase": "before_audit_repairs",
+      "generated_at_utc": "2026-10-11T09:59:24.093017+00:00",
+      "browser_review": {
+        "record": "code_deployment_review.json",
+        "scope": "九页在Nginx HTTP下分别检查1800px/390px布局、全部展开公式和习题、源码下载路径、PDF链接、脚本错误与CSP。第一章/第六章四个截图、PDF第5页/282页原生阅读器截图和关闭JS的离线手机代码截图逐一目视检查。",
+        "layout_variants": 18,
+        "task_space_id": 10,
+        "task_space_finished": true,
+        "pdf_page_parameter_verified": true
+      },
+      "runtime_evidence": null,
+      "preservation": {
+        "result": "pass",
+        "scope": "原有66个小节逐项比较一致；比较时仅移除新增源码入口与地图说明，并将PDF资源路径映射回原路径。题干、解答、证明、摘录、注解、公式、图与程序算法保持一致。",
+        "pages": [
+          {
+            "page": "appendix_a_probability_review.html",
+            "original_sections": 4,
+            "exercises": 0,
+            "result": "pass",
+            "before_sha256": "08a3bc51edc9cf4dce9c5a3f2fcdf1633f4b56aa7ac474766ea1f616177455d4",
+            "after_sha256": "c1bfd7234433869871c429e8bddc9b0ca25d1d4ad5510e2d61c060b86f3b7bd1"
+          },
+          {
+            "page": "book_overview.html",
+            "original_sections": 6,
+            "exercises": 0,
+            "result": "pass",
+            "before_sha256": "87e04719e1c47f76f6a1d2ea72d0702d1f5808e00f4876d70fd7581e8ba21d28",
+            "after_sha256": "7b31f9e8640023abb540bf6d9abd4c5107e7af987de018dca230e9dc05c0d917"
+          },
+          {
+            "page": "chapter01_markov_chains.html",
+            "original_sections": 14,
+            "exercises": 77,
+            "result": "pass",
+            "before_sha256": "29f1bcb7f8fd3204389a26cc54c06234bac47f82f1c2a8bbb7acc7ca080ef71b",
+            "after_sha256": "c02e0f49e9126cf89b102579ec9acc4a5c7047d72dbc2e6eadb59af71de82445"
+          },
+          {
+            "page": "chapter02_poisson_processes.html",
+            "original_sections": 7,
+            "exercises": 61,
+            "result": "pass",
+            "before_sha256": "c52ab68ae08d515778806dd0314043b824097f2fdbe7a6d3258b548895ac5136",
+            "after_sha256": "3e818260a6ac6b22bb1593c3acdd0dc1842471439a22ef22e5fcb7d0e64887df"
+          },
+          {
+            "page": "chapter03_renewal_processes.html",
+            "original_sections": 6,
+            "exercises": 24,
+            "result": "pass",
+            "before_sha256": "b71f395abc4906a2282da8cb5b89a3d7f9077d2355007f9aea8701f8e7825807",
+            "after_sha256": "c0b8d4467bf44ae2ef68efa982f0e36f5cb1356765af9760324c596632cb1377"
+          },
+          {
+            "page": "chapter04_continuous_time_markov_chains.html",
+            "original_sections": 9,
+            "exercises": 39,
+            "result": "pass",
+            "before_sha256": "ca3c8af95dafa850b5dddb0ff6f91119e499800bfd7956d7ef3912504b0e8344",
+            "after_sha256": "d2b0391006cf8bd9a7db20eab448c38f67d99909add058e8c1478a05d7acdfee"
+          },
+          {
+            "page": "chapter05_martingales.html",
+            "original_sections": 6,
+            "exercises": 10,
+            "result": "pass",
+            "before_sha256": "ff5040ff5bc2f6fbd80f02aaa4796c0ed1902d5597866301cf61e79cab6c5087",
+            "after_sha256": "0af0255167040feb8c560b2db5d20b29aa53bbfc82fffa91e56c25c306023805"
+          },
+          {
+            "page": "chapter06_mathematical_finance.html",
+            "original_sections": 9,
+            "exercises": 25,
+            "result": "pass",
+            "before_sha256": "9e39d9b2a291c1e2ea74f640c567b2a48a1163eaa941d2703df9923c79aaafc8",
+            "after_sha256": "785a2f679a3bcfa91201dab9355c1de551c6783a495075aa3ef5b9a91fa9357e"
+          },
+          {
+            "page": "preface.html",
+            "original_sections": 5,
+            "exercises": 0,
+            "result": "pass",
+            "before_sha256": "957599343017dcc6bf25030b8c1f0e33839397809638350212e5c70f92092228",
+            "after_sha256": "55c629ffbc4373b06490ea0f82f85c0431743abd7b3d0549a21a8b9501c366d0"
+          }
+        ],
+        "program_sha256": {
+          "linear.c": "b476c42cd9d52b2596b9db6af10d864a7b0f0487bf4aa0eadd0db394cb03c647",
+          "linear.py": "0c61e1f3c02df6cafc5d988e6371ceac6d67320d0db4fa3e186dabfe0b38d0dc",
+          "poisson.c": "f116fa396a67c21a20ba62558c126435831f6443bd1a2a4120c441b142677bc5",
+          "poisson.py": "9369dc8500c26361d4e8b9504a0a38ecfd52c73216507eb4f064d7aa90a32726",
+          "renewal.c": "37eb22a629013c3a1e2a59d5b7fe0c46117a911e0b3ca88bab54b70970d48c65",
+          "renewal.py": "f3ec4e1621378623a166c97ba22df5c78e7b12f0786843e1878739f9a383a42c",
+          "ctmc.c": "b3784bd9edcc3bd97bf520e6f150b46f41836bd6b927bd909cc2395d4ea7a705",
+          "ctmc.py": "93eb7b861f5ab47ac2953669df431d0aba26531b188df151f7bf065a571bbc64",
+          "stopping.c": "0cdf239bee7c2c2922f5ebe42db7b52a498cf981cd4183d84e810f77b703bcda",
+          "stopping.py": "6ce4c95d7cdef55cfdb91d8d6ea5f119e129e93c5bd389721ed6fb0a93440183",
+          "finance.c": "5c5f963c4f36c3449f95d26f20ad554c8bda945fb2a77e5122b23ee8a240102a",
+          "finance.py": "ab305289963b2047e5bbb9010bb27ff3665a7a0d66fa4a2b0e760cbebb43ef31",
+          "bs.c": "ff5f7f9505e6715d6e102f7d45552980d2c27d7ee90b9a0a52b83320e3fcaa92",
+          "bs.py": "0e15ee5457bec9316a872d06fda550632d2b4da8d8362ca66d2e4e060991ed3a"
+        }
+      },
+      "structural_checks": {
+        "html_pages": 9,
+        "exercises": 236,
+        "detailed_answers": 236,
+        "solution_steps": 1028,
+        "balanced_html": "pass",
+        "formula_conversion": "pass",
+        "leading_decimal_zeros": "pass",
+        "solution_headings": "pass",
+        "annotation_groups": 66,
+        "annotation_cards": 132,
+        "annotation_bindings": "pass",
+        "formal_statements": 150,
+        "numbered_theorems_and_lemmas": 115,
+        "numbered_definitions": 2,
+        "numbered_source_coverage": "pass",
+        "original_excerpts": 146,
+        "preface_original_paragraphs": 4,
+        "probability_axioms": 3,
+        "code_pairs": 7,
+        "mathml": 7926,
+        "figures": 7,
+        "source_sha256": "2232660e1909b42c6df8b5aca8eba12cdb383bf3741ecb53add49f6c26c6a0e7"
+      },
+      "files": {
+        "agent.md": {
+          "bytes": 5946,
+          "sha256": "66239b1238d16baecc66208ef6306a55919d6c64cd3be00de14929e77c5f2f1a"
+        },
+        "notes/README.md": {
+          "bytes": 7725,
+          "sha256": "5db7af51b845b370b881116b01d3de546bbb6e5554b1f40aaf2dfaa19e4f81df"
+        },
+        "notes/appendix_a_probability_review.html": {
+          "bytes": 191027,
+          "sha256": "c1bfd7234433869871c429e8bddc9b0ca25d1d4ad5510e2d61c060b86f3b7bd1"
+        },
+        "notes/book_overview.html": {
+          "bytes": 49896,
+          "sha256": "7b31f9e8640023abb540bf6d9abd4c5107e7af987de018dca230e9dc05c0d917"
+        },
+        "notes/chapter01_markov_chains.html": {
+          "bytes": 1135008,
+          "sha256": "c02e0f49e9126cf89b102579ec9acc4a5c7047d72dbc2e6eadb59af71de82445"
+        },
+        "notes/chapter02_poisson_processes.html": {
+          "bytes": 491858,
+          "sha256": "3e818260a6ac6b22bb1593c3acdd0dc1842471439a22ef22e5fcb7d0e64887df"
+        },
+        "notes/chapter03_renewal_processes.html": {
+          "bytes": 255508,
+          "sha256": "c0b8d4467bf44ae2ef68efa982f0e36f5cb1356765af9760324c596632cb1377"
+        },
+        "notes/chapter04_continuous_time_markov_chains.html": {
+          "bytes": 611402,
+          "sha256": "d2b0391006cf8bd9a7db20eab448c38f67d99909add058e8c1478a05d7acdfee"
+        },
+        "notes/chapter05_martingales.html": {
+          "bytes": 321148,
+          "sha256": "0af0255167040feb8c560b2db5d20b29aa53bbfc82fffa91e56c25c306023805"
+        },
+        "notes/chapter06_mathematical_finance.html": {
+          "bytes": 567251,
+          "sha256": "785a2f679a3bcfa91201dab9355c1de551c6783a495075aa3ef5b9a91fa9357e"
+        },
+        "notes/code_deployment_review.json": {
+          "bytes": 161011,
+          "sha256": "a0b41e1b075f743b791d7bfb1133b0113731f69a11006536907872cf410e28d7"
+        },
+        "notes/preface.html": {
+          "bytes": 39721,
+          "sha256": "55c629ffbc4373b06490ea0f82f85c0431743abd7b3d0549a21a8b9501c366d0"
+        },
+        "notes/source_manifest.json": {
+          "bytes": 36372,
+          "sha256": "f139c6dfedbf36be0b24bbae20b3f5af15482c4db068906a629bb6e29aafe23f"
+        },
+        "notes/statements_review.json": {
+          "bytes": 328674,
+          "sha256": "5f020e8b5ec50cf75ef9a6e139c3ca0d01bf74b6098062cd3585b2e8e723b80d"
+        },
+        "tools/check_notes.py": {
+          "bytes": 23007,
+          "sha256": "0ef88a3965372cfdabc99fbc45c072f9159b6e0449148c64ffcff2929fb0d828"
+        }
+      },
+      "record_sha256": "702d0c391b7c670309ec4c1d793de7738956b4f2df8cf7f0458f3dbb1535b802"
+    }
+  ],
+  "statements_review_file": "statements_review.json",
+  "code_deployment_review_file": "code_deployment_review.json",
+  "audit_fix_review_file": "audit_fix_review.json",
+  "current_checkpoint": "audit_repairs_final"
+}

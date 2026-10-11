@@ -1425,8 +1425,8 @@
       "sha256": "694683da26051d8dff8cdfb55537b798b6a4d2a7b8be0afe5a43dbc10e64866d"
     },
     "deploy/README.md": {
-      "bytes": 4251,
-      "sha256": "8ba74a135d5eee21c051da5b73756a93cf2315a2ae2b90fdf60b490cd66267ab"
+      "bytes": 10159,
+      "sha256": "72ca20aa844044bef106931473ae22fd373f06a969223821791c8f0329acab78"
     },
     "deploy/build_release.py": {
       "bytes": 6691,
@@ -1540,5 +1540,23 @@
       "bytes": 4990,
       "sha256": "292717c6c5d31d8252e203a94904ee9665c3f26b6d70a40f5933e01605613bb8"
     }
-  }
+  },
+  "file_binding_updates": [
+    {
+      "recorded_at_utc": "2026-10-11T16:01:03.223184+00:00",
+      "bindings": {
+        "deploy/README.md": {
+          "previous": {
+            "bytes": 4251,
+            "sha256": "8ba74a135d5eee21c051da5b73756a93cf2315a2ae2b90fdf60b490cd66267ab"
+          },
+          "current": {
+            "bytes": 10159,
+            "sha256": "72ca20aa844044bef106931473ae22fd373f06a969223821791c8f0329acab78"
+          }
+        }
+      },
+      "scope": "Refresh current file bindings for the reviewed two-book portal deployment documentation and dependent records. Original mathematical, numerical and browser evidence retains its original checkpoint times and hashes."
+    }
+  ]
 }

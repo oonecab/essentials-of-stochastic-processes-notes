@@ -2950,8 +2950,8 @@
       "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17"
     },
     "notes/code_deployment_review.json": {
-      "bytes": 213947,
-      "sha256": "bdd9033479957f0338e9f864efce15239eec5fd4f045aa7d76877c3da2f2c63c"
+      "bytes": 215018,
+      "sha256": "55582c7e484c878d0e08f9739dd8af4bd5649114f8725084de42ba18ddceb1af"
     },
     "notes/preface.html": {
       "bytes": 40431,
@@ -2962,16 +2962,16 @@
       "sha256": "f139c6dfedbf36be0b24bbae20b3f5af15482c4db068906a629bb6e29aafe23f"
     },
     "notes/statements_review.json": {
-      "bytes": 372719,
-      "sha256": "9f08383ac1d6512f315b723c06ab744b7830a45e223da272eeb1784052bc4fce"
+      "bytes": 373809,
+      "sha256": "390906f5cdd79cae356a9c82e223281e7e686dd7db8c025f4d4d83c77f5d7575"
     },
     "tools/check_notes.py": {
       "bytes": 26392,
       "sha256": "483ad49c248314be817587190e008037929ace0c7bbfed7104a836e64fbab026"
     },
     "notes/audit_fix_review.json": {
-      "bytes": 47702,
-      "sha256": "b465c4e76ffd73048f97fed779663f7f73b126d91f2d343704e797fff2a74134"
+      "bytes": 48415,
+      "sha256": "c72c464b9d1f87345281e23bfa898ee597cba52e920dd3e2fbb2594e2a967bf8"
     }
   },
   "review_history": [
@@ -4351,5 +4351,43 @@
   "statements_review_file": "statements_review.json",
   "code_deployment_review_file": "code_deployment_review.json",
   "audit_fix_review_file": "audit_fix_review.json",
-  "current_checkpoint": "audit_repairs_final"
+  "current_checkpoint": "audit_repairs_final",
+  "file_binding_updates": [
+    {
+      "recorded_at_utc": "2026-10-11T16:01:03.223184+00:00",
+      "bindings": {
+        "notes/code_deployment_review.json": {
+          "previous": {
+            "bytes": 213947,
+            "sha256": "bdd9033479957f0338e9f864efce15239eec5fd4f045aa7d76877c3da2f2c63c"
+          },
+          "current": {
+            "bytes": 215018,
+            "sha256": "55582c7e484c878d0e08f9739dd8af4bd5649114f8725084de42ba18ddceb1af"
+          }
+        },
+        "notes/statements_review.json": {
+          "previous": {
+            "bytes": 372719,
+            "sha256": "9f08383ac1d6512f315b723c06ab744b7830a45e223da272eeb1784052bc4fce"
+          },
+          "current": {
+            "bytes": 373809,
+            "sha256": "390906f5cdd79cae356a9c82e223281e7e686dd7db8c025f4d4d83c77f5d7575"
+          }
+        },
+        "notes/audit_fix_review.json": {
+          "previous": {
+            "bytes": 47702,
+            "sha256": "b465c4e76ffd73048f97fed779663f7f73b126d91f2d343704e797fff2a74134"
+          },
+          "current": {
+            "bytes": 48415,
+            "sha256": "c72c464b9d1f87345281e23bfa898ee597cba52e920dd3e2fbb2594e2a967bf8"
+          }
+        }
+      },
+      "scope": "Refresh current file bindings for the reviewed two-book portal deployment documentation and dependent records. Original mathematical, numerical and browser evidence retains its original checkpoint times and hashes."
+    }
+  ]
 }

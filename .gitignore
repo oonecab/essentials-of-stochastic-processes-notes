@@ -11,3 +11,4 @@ code/build/
 tmp/
 deploy/releases/
 deploy/reports/
+deploy/portal-releases/

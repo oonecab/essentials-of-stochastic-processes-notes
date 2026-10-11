@@ -1466,8 +1466,8 @@
       "sha256": "686607ffb03b9d429c870d3f94f73ffabd8e7bc907e34c350c4bb739ac39e849"
     },
     "deploy/README.md": {
-      "bytes": 4251,
-      "sha256": "8ba74a135d5eee21c051da5b73756a93cf2315a2ae2b90fdf60b490cd66267ab"
+      "bytes": 10159,
+      "sha256": "72ca20aa844044bef106931473ae22fd373f06a969223821791c8f0329acab78"
     },
     "deploy/nginx-static.inc.template": {
       "bytes": 743,
@@ -1570,8 +1570,8 @@
       "sha256": "2232660e1909b42c6df8b5aca8eba12cdb383bf3741ecb53add49f6c26c6a0e7"
     },
     "notes/audit_fix_review.json": {
-      "bytes": 47702,
-      "sha256": "b465c4e76ffd73048f97fed779663f7f73b126d91f2d343704e797fff2a74134"
+      "bytes": 48415,
+      "sha256": "c72c464b9d1f87345281e23bfa898ee597cba52e920dd3e2fbb2594e2a967bf8"
     }
   },
   "review_history": [
@@ -6165,5 +6165,33 @@
       "bs.c": "3c84c4a479f244847150055020f350e14be57292e1aeb94a80d825f2cd5e65da",
       "bs.py": "b00e2d2ecada89dc9e9b01263f9abcb009aed4aad658187cdda44f59fa4a82f9"
     }
-  }
+  },
+  "file_binding_updates": [
+    {
+      "recorded_at_utc": "2026-10-11T16:01:03.223184+00:00",
+      "bindings": {
+        "deploy/README.md": {
+          "previous": {
+            "bytes": 4251,
+            "sha256": "8ba74a135d5eee21c051da5b73756a93cf2315a2ae2b90fdf60b490cd66267ab"
+          },
+          "current": {
+            "bytes": 10159,
+            "sha256": "72ca20aa844044bef106931473ae22fd373f06a969223821791c8f0329acab78"
+          }
+        },
+        "notes/audit_fix_review.json": {
+          "previous": {
+            "bytes": 47702,
+            "sha256": "b465c4e76ffd73048f97fed779663f7f73b126d91f2d343704e797fff2a74134"
+          },
+          "current": {
+            "bytes": 48415,
+            "sha256": "c72c464b9d1f87345281e23bfa898ee597cba52e920dd3e2fbb2594e2a967bf8"
+          }
+        }
+      },
+      "scope": "Refresh current file bindings for the reviewed two-book portal deployment documentation and dependent records. Original mathematical, numerical and browser evidence retains its original checkpoint times and hashes."
+    }
+  ]
 }

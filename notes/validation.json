@@ -1418,8 +1418,8 @@
       "sha256": "694683da26051d8dff8cdfb55537b798b6a4d2a7b8be0afe5a43dbc10e64866d"
     },
     "deploy/README.md": {
-      "bytes": 4251,
-      "sha256": "8ba74a135d5eee21c051da5b73756a93cf2315a2ae2b90fdf60b490cd66267ab"
+      "bytes": 10159,
+      "sha256": "72ca20aa844044bef106931473ae22fd373f06a969223821791c8f0329acab78"
     },
     "deploy/build_release.py": {
       "bytes": 6691,
@@ -1434,8 +1434,8 @@
       "sha256": "0e9c348ea75c4ad5b4d6d5dc3f4b6b094cc6586d5c81308017526664f3aab2e0"
     },
     "notes/annotations_review.json": {
-      "bytes": 150924,
-      "sha256": "a34e1ccd0638db83ccbb26a91a66b3ffd4763fd0eac0c01c402e67491b336522"
+      "bytes": 152375,
+      "sha256": "157cf7fd197b8b53284b12723793c210f0455ebbcb223cdf9f47214010d63160"
     },
     "notes/appendix_a_probability_review.html": {
       "bytes": 192942,
@@ -1470,28 +1470,28 @@
       "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17"
     },
     "notes/code_deployment_review.json": {
-      "bytes": 213947,
-      "sha256": "bdd9033479957f0338e9f864efce15239eec5fd4f045aa7d76877c3da2f2c63c"
+      "bytes": 215018,
+      "sha256": "55582c7e484c878d0e08f9739dd8af4bd5649114f8725084de42ba18ddceb1af"
     },
     "notes/preface.html": {
       "bytes": 40431,
       "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba"
     },
     "notes/readability_review.json": {
-      "bytes": 167760,
-      "sha256": "74c58ec3eb11107f682b70b487f6d53401d46300744ddb6b41a1488f2c2d8516"
+      "bytes": 168850,
+      "sha256": "f820a86df74667e99f70bc81b88727aa4a5f829041b88f46b7c02fabc065e2c6"
     },
     "notes/review_manifest.json": {
-      "bytes": 340070,
-      "sha256": "f53a3f1fd5f36f051f345dcff93e24a26acdac6f3fe2348a813a59b714f98e72"
+      "bytes": 342245,
+      "sha256": "c8b64200d32592768e0bfe0a666e8a10ebbc3ba15480b001b806b93f8dc3b39f"
     },
     "notes/source_manifest.json": {
       "bytes": 36372,
       "sha256": "f139c6dfedbf36be0b24bbae20b3f5af15482c4db068906a629bb6e29aafe23f"
     },
     "notes/statements_review.json": {
-      "bytes": 372719,
-      "sha256": "9f08383ac1d6512f315b723c06ab744b7830a45e223da272eeb1784052bc4fce"
+      "bytes": 373809,
+      "sha256": "390906f5cdd79cae356a9c82e223281e7e686dd7db8c025f4d4d83c77f5d7575"
     },
     "tools/check_notes.py": {
       "bytes": 26392,
@@ -1510,8 +1510,8 @@
       "sha256": "f04a7ee6e4f49482128f03cfb996036f7ac6b1107765c3a058f089a4c78efe12"
     },
     "notes/audit_fix_review.json": {
-      "bytes": 47702,
-      "sha256": "b465c4e76ffd73048f97fed779663f7f73b126d91f2d343704e797fff2a74134"
+      "bytes": 48415,
+      "sha256": "c72c464b9d1f87345281e23bfa898ee597cba52e920dd3e2fbb2594e2a967bf8"
     }
   },
   "extracted_code_sha256": {
@@ -6083,5 +6083,83 @@
     }
   ],
   "audit_fix_review_file": "audit_fix_review.json",
-  "current_checkpoint": "audit_repairs_final"
+  "current_checkpoint": "audit_repairs_final",
+  "file_binding_updates": [
+    {
+      "recorded_at_utc": "2026-10-11T16:01:03.223184+00:00",
+      "bindings": {
+        "deploy/README.md": {
+          "previous": {
+            "bytes": 4251,
+            "sha256": "8ba74a135d5eee21c051da5b73756a93cf2315a2ae2b90fdf60b490cd66267ab"
+          },
+          "current": {
+            "bytes": 10159,
+            "sha256": "72ca20aa844044bef106931473ae22fd373f06a969223821791c8f0329acab78"
+          }
+        },
+        "notes/annotations_review.json": {
+          "previous": {
+            "bytes": 150924,
+            "sha256": "a34e1ccd0638db83ccbb26a91a66b3ffd4763fd0eac0c01c402e67491b336522"
+          },
+          "current": {
+            "bytes": 152375,
+            "sha256": "157cf7fd197b8b53284b12723793c210f0455ebbcb223cdf9f47214010d63160"
+          }
+        },
+        "notes/code_deployment_review.json": {
+          "previous": {
+            "bytes": 213947,
+            "sha256": "bdd9033479957f0338e9f864efce15239eec5fd4f045aa7d76877c3da2f2c63c"
+          },
+          "current": {
+            "bytes": 215018,
+            "sha256": "55582c7e484c878d0e08f9739dd8af4bd5649114f8725084de42ba18ddceb1af"
+          }
+        },
+        "notes/readability_review.json": {
+          "previous": {
+            "bytes": 167760,
+            "sha256": "74c58ec3eb11107f682b70b487f6d53401d46300744ddb6b41a1488f2c2d8516"
+          },
+          "current": {
+            "bytes": 168850,
+            "sha256": "f820a86df74667e99f70bc81b88727aa4a5f829041b88f46b7c02fabc065e2c6"
+          }
+        },
+        "notes/review_manifest.json": {
+          "previous": {
+            "bytes": 340070,
+            "sha256": "f53a3f1fd5f36f051f345dcff93e24a26acdac6f3fe2348a813a59b714f98e72"
+          },
+          "current": {
+            "bytes": 342245,
+            "sha256": "c8b64200d32592768e0bfe0a666e8a10ebbc3ba15480b001b806b93f8dc3b39f"
+          }
+        },
+        "notes/statements_review.json": {
+          "previous": {
+            "bytes": 372719,
+            "sha256": "9f08383ac1d6512f315b723c06ab744b7830a45e223da272eeb1784052bc4fce"
+          },
+          "current": {
+            "bytes": 373809,
+            "sha256": "390906f5cdd79cae356a9c82e223281e7e686dd7db8c025f4d4d83c77f5d7575"
+          }
+        },
+        "notes/audit_fix_review.json": {
+          "previous": {
+            "bytes": 47702,
+            "sha256": "b465c4e76ffd73048f97fed779663f7f73b126d91f2d343704e797fff2a74134"
+          },
+          "current": {
+            "bytes": 48415,
+            "sha256": "c72c464b9d1f87345281e23bfa898ee597cba52e920dd3e2fbb2594e2a967bf8"
+          }
+        }
+      },
+      "scope": "Refresh current file bindings for the reviewed two-book portal deployment documentation and dependent records. Original mathematical, numerical and browser evidence retains its original checkpoint times and hashes."
+    }
+  ]
 }

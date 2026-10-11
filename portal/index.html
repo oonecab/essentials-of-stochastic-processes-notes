@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Durrett《随机过程基础》与 Weiss《数据结构与算法分析》的中文读书笔记：章节伴读、数学推导、习题解答与 C / Python 程序。">
+  <title>读书笔记 · Durrett 与 Weiss</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#books">跳到书架</a>
+  <div class="page">
+    <header class="masthead">
+      <a class="brand" href="./" aria-label="读书笔记首页">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7c4-1 8 0 11 2 3-2 7-3 11-2v18c-4-1-8 0-11 2-3-2-7-3-11-2Z"/><path d="M16 9v18M9 12l3 1M20 13l3-1"/></svg>
+        <span>读书笔记</span>
+      </a>
+      <span class="masthead-note">从问题出发，沿着原书读下去</span>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">THE READING SHELF / 学习书架</p>
+        <h1 id="page-title">让理解，在阅读中发生。</h1>
+        <p class="lead">按原书章节组织的中文伴读。读清定义与推导，先尝试习题，再用程序核对自己的理解。</p>
+        <div class="shelf-caption"><span>选择一本书开始</span><span>02 本笔记</span></div>
+      </section>
+      <section class="books" id="books" aria-label="两本书的读书笔记">
+        <article class="book stochastic" aria-labelledby="stochastic-title">
+          <div class="cover" aria-hidden="true">
+            <div class="cover-top"><span>RICHARD DURRETT</span><span>01</span></div>
+            <p class="cover-title">Essentials of<br>Stochastic<br>Processes</p>
+            <svg class="cover-diagram" viewBox="0 0 300 90"><path d="M57 45h67m52 0h67"/><path d="m111 39 13 6-13 6m119-12 13 6-13 6"/><path class="diagram-curve" d="M243 24C187-3 111-3 57 24"/><circle cx="39" cy="45" r="18"/><circle cx="150" cy="45" r="18"/><circle cx="261" cy="45" r="18"/><text x="39" y="50">1</text><text x="150" y="50">2</text><text x="261" y="50">3</text></svg>
+            <div class="cover-bottom"><span>状态 · 周期 · 随机时间</span><span>THIRD EDITION</span></div>
+          </div>
+          <div class="book-body">
+            <p class="book-meta">概率与随机模型 <span>Durrett · 第三版</span></p>
+            <h2 id="stochastic-title"><a href="stochastic/notes/book_overview.html">随机过程基础</a></h2>
+            <p class="book-description">从马尔可夫链出发，理解长期比例、等待时间与随机停止，再走向鞅和数学金融。</p>
+            <p class="book-scope"><strong>6</strong> 章 <i aria-hidden="true">/</i> <strong>236</strong> 道习题 <i aria-hidden="true">/</i> 序言与概率论附录</p>
+            <ul class="topics" aria-label="主要主题"><li>马尔可夫链</li><li>泊松与更新过程</li><li>鞅</li><li>数学金融</li></ul>
+            <div class="book-actions"><a class="read-button" href="stochastic/notes/book_overview.html">进入随机过程笔记 <span aria-hidden="true">↗</span></a><a class="start-link" href="stochastic/notes/chapter01_markov_chains.html">从第一章开始 →</a></div>
+          </div>
+        </article>
+        <article class="book weiss" aria-labelledby="weiss-title">
+          <div class="cover" aria-hidden="true">
+            <div class="cover-top"><span>MARK ALLEN WEISS</span><span>02</span></div>
+            <p class="cover-title">Data Structures<br>&amp; Algorithm<br>Analysis in C</p>
+            <svg class="cover-diagram" viewBox="0 0 300 90"><path d="m150 18-75 32m75-32 75 32M75 50 39 78m36-28 37 28m113-28-37 28m37-28 36 28"/><circle cx="150" cy="18" r="9"/><circle cx="75" cy="50" r="9"/><circle cx="225" cy="50" r="9"/><circle cx="39" cy="78" r="7"/><circle cx="112" cy="78" r="7"/><circle cx="188" cy="78" r="7"/><circle cx="261" cy="78" r="7"/></svg>
+            <div class="cover-bottom"><span>结构 · 算法 · 复杂度</span><span>SECOND EDITION</span></div>
+          </div>
+          <div class="book-body">
+            <p class="book-meta">数据结构与算法 <span>Weiss · 第二版中国改编版</span></p>
+            <h2 id="weiss-title"><a href="weiss/notes/book_overview.html">数据结构与算法分析</a></h2>
+            <p class="book-description">从表、树与堆读到图算法和算法设计，把结构的不变量、操作过程与复杂度联系起来。</p>
+            <p class="book-scope"><strong>12</strong> 章 <i aria-hidden="true">/</i> <strong>362</strong> 道习题 <i aria-hidden="true">/</i> C 与 Python 实现</p>
+            <ul class="topics" aria-label="主要主题"><li>树与优先队列</li><li>排序与散列</li><li>图算法</li><li>算法设计</li></ul>
+            <div class="book-actions"><a class="read-button" href="weiss/notes/book_overview.html">进入 Weiss 笔记 <span aria-hidden="true">↗</span></a><a class="start-link" href="weiss/notes/chapter01_introduction.html">从第一章开始 →</a></div>
+          </div>
+        </article>
+      </section>
+      <aside class="reading-hint" aria-label="阅读建议"><span class="hint-label">一个阅读建议</span><p>先看全书地图找到当前位置；遇到习题，先猜、先算，再展开解答。程序与实验可以帮助检查具体结果，推导则说明它为什么成立。</p></aside>
+    </main>
+    <footer><span>读书笔记</span><span>中文伴读 · 推导与解答 · C / Python</span><a href="#page-title">回到页首 ↑</a></footer>
+  </div>
+</body>
+</html>

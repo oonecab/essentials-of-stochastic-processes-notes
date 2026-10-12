@@ -1,0 +1,51 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "构建指定图例（调试版）",
+      "type": "process",
+      "command": "python3",
+      "args": [
+        "${workspaceFolder}/books/weiss/c/debug_figure.py",
+        "${input:figureName}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/books/weiss/c"
+      },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "构建 TestKit（调试版）",
+      "type": "process",
+      "command": "make",
+      "args": [
+        "-B",
+        "CFLAGS=-std=c11 -Wall -Wextra -Werror -pedantic -O0 -g",
+        "bin/test_figures"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/books/weiss/c"
+      },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "运行全部检查",
+      "type": "process",
+      "command": "make",
+      "args": ["check"],
+      "options": {
+        "cwd": "${workspaceFolder}/books/weiss/c"
+      },
+      "group": "test",
+      "problemMatcher": "$gcc"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "figureName",
+      "type": "promptString",
+      "description": "输入要运行的图例编号，例如 fig3.10",
+      "default": "fig3.10"
+    }
+  ]
+}

@@ -53,7 +53,7 @@ def main():
         mime = headers.get('content-type', '').split(';')[0]
         expected = {'.html': 'text/html', '.css': 'text/css', '.svg': 'image/svg+xml',
                     '.json': 'application/json', '.pdf': 'application/pdf',
-                    '.c': 'text/plain', '.py': 'text/plain', '.md': 'text/plain'}.get(suffix, 'application/octet-stream')
+                    '.c': 'text/plain', '.py': 'text/plain', '.md': 'text/plain', '.zip': 'application/zip'}.get(suffix, 'application/octet-stream')
         assert mime == expected, (row['path'], mime, expected)
         assert headers['x-content-type-options'] == 'nosniff'
         assert headers['cache-control'] == 'no-cache'

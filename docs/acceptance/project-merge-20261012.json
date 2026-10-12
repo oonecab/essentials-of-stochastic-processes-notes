@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "status": "prepared_locally",
+  "checked_at_utc": "2026-10-12T13:04:12.871294+00:00",
+  "issue": "I001",
+  "base_commit": "d13d687f2d253f674cf0a8b8b44010547929640a",
+  "source_preservation": {
+    "baseline_files": 477,
+    "byte_preserved": 462,
+    "planned_document_tool_metadata_changes": 15,
+    "formal_html_preserved": 22,
+    "original_weiss_files_checked_unchanged": 398,
+    "evidence": "tmp/project-merge/20261012/preservation.json"
+  },
+  "program_validation": {
+    "status": "pass",
+    "stochastic": {
+      "code_pairs": 7,
+      "numerical_fixtures": 159,
+      "invalid_inputs": 46,
+      "c11_strict": "pass",
+      "asan_ubsan": "pass",
+      "cross_language": "pass"
+    },
+    "weiss": {
+      "pages": 13,
+      "exercises": 362,
+      "code_pairs": 205,
+      "compiled_collections": 17,
+      "original_figure_demos": 171,
+      "testkit_cases": 11,
+      "chapter10_independent_cases": 11908,
+      "experiment_rows_cross_language_checked": 145,
+      "historical_count_rows_checked": 117
+    },
+    "evidence": "tmp/project-check/20261012T204249-4nv6re20/report.json"
+  },
+  "archive_safety_regressions": {
+    "status": "pass",
+    "tests": 6,
+    "command": "python3 tools/test_release_support.py"
+  },
+  "git_export": {
+    "status": "pass",
+    "exported_maintained_files": 522,
+    "quick_check_evidence": "tmp/project-merge/20261012/git-export/tmp/project-check/20261012T210119-q4codla1/report.json",
+    "built_release_id": "20261012T205800",
+    "archive_matches_main": true
+  },
+  "release": {
+    "release_id": "20261012T205000",
+    "files": 75,
+    "html_pages": 36,
+    "reading_pages": 22,
+    "local_references_checked": 2897,
+    "archive_sha256": "5293d138c88e854c916a5ad27d8f42f1bb63bce7a887e6771213e1ddee7949e0",
+    "html_byte_identical_to_pre_migration": 36,
+    "source_code_pdf_css_svg_zip_unchanged": true,
+    "difference_scope": "Seven current review JSON records only; previous bindings and retired workstation metadata binding retained as history.",
+    "comparison_evidence": "tmp/project-merge/20261012/release-comparison.json"
+  },
+  "local_https": {
+    "status": "pass",
+    "files_checked": 73,
+    "entry_redirects": 6,
+    "pdf_range": "206; bytes 32-63 match release",
+    "evidence": "tmp/release-check/20261012T205000-uuv6cbxw/https-verification.json"
+  },
+  "browser": {
+    "status": "pass",
+    "widths": [
+      1440,
+      390
+    ],
+    "representative_layouts": 10,
+    "scope": "Home, both overviews, stochastic chapter 1, Weiss chapter 5; narrow-screen TOC activation, exercise deep link, Python expansion, both book entry and home returns.",
+    "evidence": [
+      "tmp/project-merge/20261012/browser/layouts.json",
+      "tmp/project-merge/20261012/browser/interactions.json"
+    ],
+    "tested_release_id": "20261012T204600",
+    "final_release_html_css_scripts_identical": true
+  },
+  "governance": {
+    "status": "pass",
+    "profile": "generic",
+    "level": "controlled",
+    "created_files": 25,
+    "preserved_manual_files": [
+      "README.md",
+      ".gitignore"
+    ],
+    "idempotent_preview": "25 UNCHANGED, 2 PRESERVE; no conflict",
+    "strict_mode": "Preserved manual-file warnings make strict mode nonzero; no managed drift."
+  },
+  "secrets": {
+    "status": "pass",
+    "evidence": "tmp/project-merge/20261012/secret-scan.json"
+  },
+  "cleanup": {
+    "browser_task_finished": true,
+    "preview_stopped": true,
+    "temporary_nginx_stopped": true
+  },
+  "publication": {
+    "local_project_changes": "not_committed",
+    "remote_push": "not_performed",
+    "production_deployment": "not_performed",
+    "remote_state": "not_rechecked_this_task"
+  },
+  "final_structure_check": {
+    "status": "pass",
+    "evidence": "tmp/project-check/20261012T210412-q2ywcwuk/report.json"
+  }
+}

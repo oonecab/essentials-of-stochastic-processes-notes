@@ -20,18 +20,28 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
+from catalog import load_books
+BOOKS = load_books()
+STOCHASTIC = BOOKS['stochastic']['root']
+sys.path.insert(0, str(STOCHASTIC / 'tools'))
+sys.path.insert(0, str(STOCHASTIC / 'deploy'))
 from html_support import Document, check_resources
 from build_release import INDEX, write_archive
+from reader_views import BOOKS as READER_BOOKS, EXTERNAL_LINKS, build_reader_views, transform_reading_page
+if set(BOOKS) != set(READER_BOOKS) or any(book['publish_prefix'] != key for key, book in BOOKS.items()):
+    raise ValueError('Book registry changed: extend the reader views, routing and release checks before publishing')
 
 
 class Resources(HTMLParser):
     def __init__(self):
         super().__init__()
-        self.references, self.scripts, self.ids = [], [], set()
+        self.references, self.scripts, self.ids, self.links = [], [], set(), []
         self.script = None
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == 'a' and attrs.get('href'):
+            self.links.append({'href': attrs['href'], 'download': 'download' in attrs})
         if any(k.lower().startswith('on') for k in attrs):
             raise ValueError('Inline event handler in release')
         if tag == 'base':
@@ -69,22 +79,8 @@ def import_checker(path):
     return module
 
 
-def add_home_navigation(blob, href):
-    source = blob.decode('utf-8')
-    marker = '<p class="chapter-nav">'
-    if marker not in source or 'data-notes-home' in source:
-        raise ValueError('Expected one canonical page header navigation')
-    addition = f'<a href="{href}" data-notes-home="true">笔记首页</a>'
-    result = source.replace(marker, marker + addition, 1)
-    if result.replace(addition, '', 1) != source:
-        raise ValueError('Unexpected reading-page change')
-    return result.encode('utf-8')
-
-
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--weiss-root', type=Path, required=True,
-                    help='Path to the Weiss reading-notes checkout')
     ap.add_argument('--release-id', default=datetime.now(ZoneInfo('Asia/Shanghai')).strftime('%Y%m%dT%H%M%S'))
     args = ap.parse_args()
     if not re.fullmatch(r'\d{8}T\d{6}', args.release_id):
@@ -94,18 +90,18 @@ def main():
     out = parent / args.release_id
     if out.exists():
         ap.error(f'Release already exists: {out}')
-    checked = subprocess.run([sys.executable, ROOT / 'tools/check_notes.py', '--extract-only'],
+    checked = subprocess.run([sys.executable, STOCHASTIC / 'tools/check_notes.py', '--extract-only'],
                              capture_output=True, text=True, check=True)
     stochastic_validation = json.loads(checked.stdout)['extracted']
-    source_manifest = json.loads((ROOT / 'notes/source_manifest.json').read_text())
-    programs = json.loads((ROOT / 'code/programs.json').read_text())
-    paths = sorted((ROOT / 'notes').glob('*.html')) + sorted((ROOT / 'notes').glob('*.json'))
-    paths += [ROOT / 'code/README.md', ROOT / 'code/Makefile', ROOT / 'code/programs.json']
+    source_manifest = json.loads((STOCHASTIC / 'notes/source_manifest.json').read_text())
+    programs = json.loads((STOCHASTIC / 'code/programs.json').read_text())
+    paths = sorted((STOCHASTIC / 'notes').glob('*.html')) + sorted((STOCHASTIC / 'notes').glob('*.json'))
+    paths += [STOCHASTIC / 'code/README.md', STOCHASTIC / 'code/Makefile', STOCHASTIC / 'code/programs.json']
     for program in programs['programs']:
-        paths += [ROOT / p for p in program['files'].values()]
-        paths.append((ROOT / program['files']['c']).parent / 'README.md')
-    paths.append(ROOT / source_manifest['web_pdf']['path'])
-    sources = {'stochastic/' + p.relative_to(ROOT).as_posix(): p for p in paths}
+        paths += [STOCHASTIC / p for p in program['files'].values()]
+        paths.append((STOCHASTIC / program['files']['c']).parent / 'README.md')
+    paths.append(STOCHASTIC / source_manifest['web_pdf']['path'])
+    sources = {'stochastic/' + p.relative_to(STOCHASTIC).as_posix(): p for p in paths}
     standalone = {name.removeprefix('stochastic/'): path.read_bytes() for name, path in sources.items()}
     standalone['index.html'] = INDEX
     for name, blob in standalone.items():
@@ -114,7 +110,7 @@ def main():
         if name.endswith('.json') and (b'/Users/' in blob or b'file:///' in blob):
             raise ValueError('Machine-local path in public metadata: ' + name)
 
-    weiss = args.weiss_root.resolve()
+    weiss = BOOKS['weiss']['root']
     weiss_pages = sorted((weiss / 'notes').glob('*.html'))
     if len(weiss_pages) != 13:
         raise ValueError('Expected the Weiss overview and twelve chapters')
@@ -131,11 +127,11 @@ def main():
 
     original = {name: p.read_bytes() for name, p in sources.items()}
     blobs = dict(original)
+    documents, document_views = build_reader_views(blobs)
     for name in list(blobs):
-        if name.startswith('stochastic/notes/') and name.endswith('.html'):
-            blobs[name] = add_home_navigation(blobs[name], '../../')
-        elif name.startswith('weiss/notes/') and name.endswith('.html'):
-            blobs[name] = add_home_navigation(blobs[name], '../../')
+        if name.startswith(('stochastic/notes/', 'weiss/notes/')) and name.endswith('.html'):
+            blobs[name] = transform_reading_page(blobs[name], name, document_views)
+    blobs.update(documents)
     blobs['stochastic/index.html'] = INDEX
     blobs['weiss/index.html'] = ('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
@@ -169,6 +165,16 @@ def main():
             if url.fragment and target in scans and unquote(url.fragment) not in scans[target].ids:
                 raise ValueError(f'{name}: missing anchor {ref}')
             references += 1
+    navigation = []
+    for name, scan in scans.items():
+        for item in scan.links:
+            resolved = urlsplit(urljoin('https://notes.zzzping.top/' + name, item['href']))
+            external = resolved.netloc != 'notes.zzzping.top'
+            target = unquote(resolved.path).lstrip('/')
+            if not target or target.endswith('/'):
+                target += 'index.html'
+            navigation.append({'source': name, **item, 'target': target, 'fragment': unquote(resolved.fragment),
+                               'external': external})
     node = shutil.which('node')
     if not node:
         raise RuntimeError('Node.js is required for inline-script syntax checks')
@@ -190,6 +196,7 @@ def main():
         stage = Path(directory)
         write_archive(stage / 'site.tar.gz', blobs)
         metadata = {'release_id': args.release_id, 'domain': 'notes.zzzping.top',
+            'source_layout': {key: book['directory'] for key, book in BOOKS.items()},
             'created_at': datetime.now(ZoneInfo('Asia/Shanghai')).isoformat(),
             'files': records, 'total_bytes': sum(r['bytes'] for r in records),
             'html_pages': len(scans), 'reading_pages': 22, 'local_references_checked': references,
@@ -198,9 +205,13 @@ def main():
             'navigation': {'stochastic': 'stochastic/notes/book_overview.html', 'weiss': 'weiss/notes/book_overview.html'},
             'entry_redirects': {f'/{book}{suffix}': f'/{book}/notes/book_overview.html'
                                 for book in ('stochastic', 'weiss') for suffix in ('', '/', '/index.html')},
-            'page_transformation': 'Insert one relative home link in the existing header navigation; all other source bytes preserved.',
+            'document_views': document_views, 'document_pages': sum(name.endswith('.html') for name in documents),
+            'external_link_replacements': EXTERNAL_LINKS,
+            'navigation_inventory_file': 'navigation.json', 'navigation_links': len(navigation),
+            'page_transformation': 'Add persistent reading navigation, header and footer home links, reader document views and overview run instructions; original mathematical statements and C/Python implementations preserved.',
             'validation': {'stochastic': stochastic_validation, 'weiss': weiss_validation}}
         (stage / 'release.json').write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + '\n')
+        (stage / 'navigation.json').write_text(json.dumps(navigation, ensure_ascii=False, indent=2) + '\n')
         (stage / 'SHA256SUMS').write_text(''.join(f"{r['sha256']}  {r['path']}\n" for r in records))
         (stage / 'archive.sha256').write_text(metadata['archive_sha256'] + '  site.tar.gz\n')
         (stage / 'nginx-static.inc').write_text(config)
@@ -208,7 +219,8 @@ def main():
         stage.rename(out)
     print(json.dumps({'release_id': args.release_id, 'directory': str(out), 'files': len(records),
         'html_pages': len(scans), 'reading_pages': 22, 'bytes': metadata['total_bytes'],
-        'local_references_checked': references, 'inline_scripts': len(scripts)}, ensure_ascii=False, indent=2))
+        'local_references_checked': references, 'inline_scripts': len(scripts),
+        'document_pages': metadata['document_pages'], 'navigation_links': len(navigation)}, ensure_ascii=False, indent=2))
 
 
 if __name__ == '__main__':

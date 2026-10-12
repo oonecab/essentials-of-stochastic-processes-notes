@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "books": [
+    {
+      "id": "stochastic",
+      "title": "Durrett · 随机过程",
+      "directory": "books/stochastic",
+      "entry": "notes/book_overview.html",
+      "publish_prefix": "stochastic",
+      "notes_directory": "notes",
+      "code_directory": "code",
+      "guidelines": "agent.md",
+      "expected_pages": 9,
+      "expected_exercises": 236,
+      "code_authority": "standalone_sources",
+      "checker": "tools/check_notes.py"
+    },
+    {
+      "id": "weiss",
+      "title": "Weiss · 数据结构与算法",
+      "directory": "books/weiss",
+      "entry": "notes/book_overview.html",
+      "publish_prefix": "weiss",
+      "notes_directory": "notes",
+      "code_directory": "c",
+      "guidelines": "agent.md",
+      "expected_pages": 13,
+      "expected_exercises": 362,
+      "code_authority": "html_code_blocks",
+      "checker": "notes/tools/check_notes.py"
+    }
+  ]
+}

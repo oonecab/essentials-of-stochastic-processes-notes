@@ -10,6 +10,7 @@ types {
     image/svg+xml svg;
     application/json json;
     application/pdf pdf;
+    application/zip zip;
     text/plain c py md;
 }
 default_type application/octet-stream;

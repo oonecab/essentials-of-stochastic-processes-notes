@@ -4,11 +4,24 @@ __pycache__/
 .env
 .env.*
 !.env.example
+*.pem
+*.key
 .venv/
 .idea/
-.vscode/
-code/build/
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
 tmp/
 deploy/releases/
 deploy/reports/
 deploy/portal-releases/
+
+# Book-local build artifacts and validation output
+books/*/code/build/
+books/*/c/bin/
+books/*/c/*.o
+books/*/tmp/
+books/*/deploy/releases/
+books/*/deploy/reports/
+books/*/deploy/portal-releases/
+books/*/deploy/nginx-weiss.zzzping.top.conf

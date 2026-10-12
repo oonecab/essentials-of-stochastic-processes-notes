@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "调试指定图例",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/books/weiss/c/bin/debug-figure",
+      "args": [],
+      "cwd": "${workspaceFolder}/books/weiss/c",
+      "terminal": "integrated",
+      "preLaunchTask": "构建指定图例（调试版）"
+    },
+    {
+      "name": "调试 TestKit 指定用例",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/books/weiss/c/bin/test_figures",
+      "args": ["--debug-case", "${input:testCase}"],
+      "cwd": "${workspaceFolder}/books/weiss/c",
+      "terminal": "integrated",
+      "preLaunchTask": "构建 TestKit（调试版）"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "testCase",
+      "type": "promptString",
+      "description": "输入 TestKit 用例名，例如 binary_search_found",
+      "default": "binary_search_found"
+    }
+  ]
+}

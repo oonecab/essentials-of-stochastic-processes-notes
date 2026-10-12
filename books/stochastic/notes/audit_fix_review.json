@@ -1,0 +1,1589 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "assembled_at_utc": "2026-10-11T13:28:00.496635+00:00",
+  "source_pdf_sha256": "2232660e1909b42c6df8b5aca8eba12cdb383bf3741ecb53add49f6c26c6a0e7",
+  "scope": "针对已独立核实的审计问题修复，并重新运行最终文件检查；既有全书逐题审阅作为历史基础，本次不声称机器证明全部236题或一般定理。",
+  "issues": [
+    {
+      "id": "content-1.11",
+      "status": "resolved",
+      "resolution": "三对细致平衡均成立，链关于(1/7,4/7,2/7)可逆；保留消元并逐对验算",
+      "source_pdf_pages": [
+        89
+      ]
+    },
+    {
+      "id": "content-4.29",
+      "status": "resolved",
+      "resolution": "交通方程消元得(12/7,20/7)，利用率(3/7,40/49)，L=(3/4,40/9)，W=187/108；说明原书算术笔误",
+      "source_pdf_pages": [
+        194
+      ]
+    },
+    {
+      "id": "content-6.4",
+      "status": "resolved",
+      "resolution": "原书两棵树根值均为414.72/49；区分文字S0=32与图S0=36，不再误称144.72",
+      "source_pdf_pages": [
+        243
+      ]
+    },
+    {
+      "id": "content-6.20",
+      "status": "resolved",
+      "resolution": "字面普通看涨支付的64/25=2.56，保留原题矛盾和另一解释",
+      "source_pdf_pages": [
+        258
+      ]
+    },
+    {
+      "id": "content-conditions-and-citations",
+      "status": "resolved",
+      "resolution": "补回生成元极限存在前提、3.7源页、PASTA无编号例归属；五处邻近摘录标明相关原文",
+      "source_pdf_pages": [
+        142,
+        143,
+        156
+      ]
+    },
+    {
+      "id": "content-derivations",
+      "status": "resolved",
+      "resolution": "11道生灭题逐条速率代入和首末边验算；所有236题共1028步保留",
+      "source_pdf_pages": []
+    },
+    {
+      "id": "content-structure",
+      "status": "resolved",
+      "resolution": "补原书小节英文标题和六章Exercises节号；6.6按实际原书Calls and Puts；补附录来回链接",
+      "source_pdf_pages": []
+    },
+    {
+      "id": "notation",
+      "status": "resolved",
+      "resolution": "30处TeX控制词之后省略前导零的小数重新生成MathML；C十六进制浮点保持原词法",
+      "source_pdf_pages": []
+    },
+    {
+      "id": "code-parity",
+      "status": "resolved",
+      "resolution": "关闭FMA收缩，同顺序累加，BS正零，行权32epsilon相对尺度容差和极小价格回归",
+      "source_pdf_pages": []
+    },
+    {
+      "id": "code-input",
+      "status": "resolved",
+      "resolution": "完整读取并拒绝超长字段，输入2／数值3／明确资源4，stderr说明；增加clean及RNG标识",
+      "source_pdf_pages": []
+    },
+    {
+      "id": "code-linear",
+      "status": "resolved",
+      "resolution": "P平稳及边界方程用非对角和防止抵消；保留行缩放和1e-12病态保护，文档说明数学有效但数值拒绝的边界",
+      "source_pdf_pages": []
+    },
+    {
+      "id": "validation-content",
+      "status": "resolved",
+      "resolution": "已审阅正文快照绑定TeX、MathML、摘录、链接；353编号起始页；四项确切内容回归，快照不当作数学证明",
+      "source_pdf_pages": []
+    },
+    {
+      "id": "validation-execution",
+      "status": "resolved",
+      "resolution": "独立生成器移至tools，159基准、46非法输入精确分类，崩溃/信号不算成功；额外多种子检验",
+      "source_pdf_pages": []
+    },
+    {
+      "id": "validation-tooling",
+      "status": "resolved",
+      "resolution": "测试空MathML、变异正文、伪TeX、额外代码块、语言标签、资源导入、base、异常跳转及大数误差",
+      "source_pdf_pages": []
+    },
+    {
+      "id": "browser",
+      "status": "resolved",
+      "resolution": "最终九页36布局，66注解节切换，386正式陈述及习题深链接；打印展开并恢复，无JS原生折叠",
+      "source_pdf_pages": []
+    },
+    {
+      "id": "release",
+      "status": "resolved",
+      "resolution": "元数据相对路径；CSS等依赖检查；固定gzip/tar元数据；完整临时目录一次rename；新包验收保存在deploy/reports/20261011T212759",
+      "source_pdf_pages": []
+    }
+  ],
+  "counts": {
+    "html_pages": 9,
+    "exercises": 236,
+    "solution_steps": 1028,
+    "formal_statements": 150,
+    "mathml": 8004,
+    "annotation_groups": 66,
+    "annotation_cards": 132,
+    "numerical_fixtures": 159,
+    "invalid_inputs": 46
+  },
+  "content_snapshot": {
+    "status": "pass",
+    "pages": 9,
+    "formula_bindings": 8004,
+    "scope": "Reviewed text, formulas, quotes, page links and structure. Program bodies are checked against standalone sources separately. Snapshot equality is a change guard, not a mathematical proof."
+  },
+  "program_checks": {
+    "html_pages": 9,
+    "exercises": 236,
+    "detailed_answers": 236,
+    "solution_steps": 1028,
+    "balanced_html": "pass",
+    "formula_conversion": "pass",
+    "leading_decimal_zeros": "pass",
+    "solution_headings": "pass",
+    "annotation_groups": 66,
+    "annotation_cards": 132,
+    "annotation_bindings": "pass",
+    "formal_statements": 150,
+    "numbered_theorems_and_lemmas": 115,
+    "numbered_definitions": 2,
+    "numbered_source_coverage": "pass",
+    "original_excerpts": 146,
+    "preface_original_paragraphs": 4,
+    "probability_axioms": 3,
+    "code_pairs": 7,
+    "standalone_source_files": 14,
+    "source_html_consistency": "pass",
+    "web_pdf_sha256": "2232660e1909b42c6df8b5aca8eba12cdb383bf3741ecb53add49f6c26c6a0e7",
+    "pdf_links": "pass",
+    "mathml": 8004,
+    "figures": 7,
+    "source_sha256": "2232660e1909b42c6df8b5aca8eba12cdb383bf3741ecb53add49f6c26c6a0e7",
+    "content_binding": {
+      "status": "pass",
+      "pages": 9,
+      "formula_bindings": 8004,
+      "scope": "Reviewed text, formulas, quotes, page links and structure. Program bodies are checked against standalone sources separately. Snapshot equality is a change guard, not a mathematical proof."
+    },
+    "pdf_page_correspondence": {
+      "status": "pass",
+      "numbered_results_and_exercises": 353
+    },
+    "check_scope": "HTML/source consistency, reviewed-content change guard, numeric references and execution. These checks do not prove all translated statements or mathematical arguments.",
+    "started_at_utc": "2026-10-11T13:04:24.109973+00:00",
+    "source_page_number_check": {
+      "status": "pass",
+      "source_numbers_checked": 353,
+      "scope": "Number and starting-page correspondence; translated text and proofs require mathematical/source review."
+    },
+    "numerical_fixtures": 159,
+    "simulation_runs": 4,
+    "crr_periods": [
+      16,
+      32,
+      64,
+      128,
+      256,
+      512
+    ],
+    "c11_strict": "pass",
+    "asan_ubsan": "pass",
+    "python": "pass",
+    "cross_language": "pass",
+    "invalid_inputs": 46,
+    "browser_acceptance": "recorded separately",
+    "content_regressions": "pass",
+    "tooling_regressions": "pass",
+    "additional_seed_checks": {
+      "status": "pass",
+      "extra_simulation_runs": 12,
+      "checks": [
+        {
+          "program": "poisson",
+          "seed": 1,
+          "status": "pass"
+        },
+        {
+          "program": "poisson",
+          "seed": 42,
+          "status": "pass"
+        },
+        {
+          "program": "poisson",
+          "seed": 4294967295,
+          "status": "pass"
+        },
+        {
+          "program": "renewal",
+          "seed": 1,
+          "status": "pass"
+        },
+        {
+          "program": "renewal",
+          "seed": 42,
+          "status": "pass"
+        },
+        {
+          "program": "renewal",
+          "seed": 4294967295,
+          "status": "pass"
+        },
+        {
+          "program": "ctmc",
+          "seed": 1,
+          "status": "pass"
+        },
+        {
+          "program": "ctmc",
+          "seed": 42,
+          "status": "pass"
+        },
+        {
+          "program": "ctmc",
+          "seed": 4294967295,
+          "status": "pass"
+        },
+        {
+          "program": "stopping",
+          "seed": 1,
+          "status": "pass"
+        },
+        {
+          "program": "stopping",
+          "seed": 42,
+          "status": "pass"
+        },
+        {
+          "program": "stopping",
+          "seed": 4294967295,
+          "status": "pass"
+        }
+      ],
+      "scope": "Isolated seed substitutions; original displayed fixed-seed sources remain unchanged. Finite statistical checks do not prove distributional correctness."
+    },
+    "finished_at_utc": "2026-10-11T13:05:02.536802+00:00"
+  },
+  "runtime_evidence": {
+    "status": "pass",
+    "started_at_utc": "2026-10-11T13:04:24.109973+00:00",
+    "finished_at_utc": "2026-10-11T13:05:02.536802+00:00",
+    "record": "../tmp/audit-fix-check/report.json",
+    "log": "../tmp/audit-fix-check/full-check.log",
+    "scope": "7 strict C11 and sanitizer builds; 159 independent numeric cases; 46 exact-status invalid inputs; four fixed-seed plus 12 extra-seed simulations; CRR convergence; source-page and tooling regressions."
+  },
+  "browser_review": {
+    "status": "pass",
+    "widths": [
+      1800,
+      1440,
+      1024,
+      390
+    ],
+    "layouts": [
+      {
+        "file": "appendix_a_probability_review.html",
+        "started_at_utc": "2026-10-11T13:06:46.714Z",
+        "finished_at_utc": "2026-10-11T13:06:47.824Z",
+        "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 19,
+        "inlineVisible": false,
+        "renderedMath": 380,
+        "badMath": 0,
+        "contexts": 4,
+        "deepLinks": 19
+      },
+      {
+        "file": "book_overview.html",
+        "started_at_utc": "2026-10-11T13:06:47.825Z",
+        "finished_at_utc": "2026-10-11T13:06:48.158Z",
+        "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": false,
+        "renderedMath": 11,
+        "badMath": 0,
+        "contexts": 6,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter01_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:07:49.083Z",
+        "finished_at_utc": "2026-10-11T13:10:50.954Z",
+        "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 77,
+        "statements": 38,
+        "inlineVisible": false,
+        "renderedMath": 2344,
+        "badMath": 0,
+        "contexts": 14,
+        "deepLinks": 115
+      },
+      {
+        "file": "chapter02_poisson_processes.html",
+        "started_at_utc": "2026-10-11T13:10:50.957Z",
+        "finished_at_utc": "2026-10-11T13:11:52.693Z",
+        "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 61,
+        "statements": 19,
+        "inlineVisible": false,
+        "renderedMath": 978,
+        "badMath": 0,
+        "contexts": 7,
+        "deepLinks": 80
+      },
+      {
+        "file": "chapter03_renewal_processes.html",
+        "started_at_utc": "2026-10-11T13:11:52.696Z",
+        "finished_at_utc": "2026-10-11T13:12:06.375Z",
+        "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 24,
+        "statements": 14,
+        "inlineVisible": false,
+        "renderedMath": 485,
+        "badMath": 0,
+        "contexts": 6,
+        "deepLinks": 38
+      },
+      {
+        "file": "chapter04_continuous_time_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:12:06.377Z",
+        "finished_at_utc": "2026-10-11T13:13:18.615Z",
+        "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 39,
+        "statements": 23,
+        "inlineVisible": false,
+        "renderedMath": 1238,
+        "badMath": 0,
+        "contexts": 9,
+        "deepLinks": 62
+      },
+      {
+        "file": "chapter05_martingales.html",
+        "started_at_utc": "2026-10-11T13:13:18.618Z",
+        "finished_at_utc": "2026-10-11T13:13:34.109Z",
+        "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 10,
+        "statements": 20,
+        "inlineVisible": false,
+        "renderedMath": 747,
+        "badMath": 0,
+        "contexts": 6,
+        "deepLinks": 30
+      },
+      {
+        "file": "chapter06_mathematical_finance.html",
+        "started_at_utc": "2026-10-11T13:13:34.111Z",
+        "finished_at_utc": "2026-10-11T13:14:11.392Z",
+        "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 25,
+        "statements": 17,
+        "inlineVisible": false,
+        "renderedMath": 1606,
+        "badMath": 0,
+        "contexts": 9,
+        "deepLinks": 42
+      },
+      {
+        "file": "preface.html",
+        "started_at_utc": "2026-10-11T13:14:11.394Z",
+        "finished_at_utc": "2026-10-11T13:14:12.678Z",
+        "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba",
+        "width": 1800,
+        "root": 1785,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1318.5,
+        "mainRight": 1286.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": false,
+        "renderedMath": 0,
+        "badMath": 0,
+        "contexts": 5,
+        "deepLinks": 0
+      },
+      {
+        "file": "appendix_a_probability_review.html",
+        "started_at_utc": "2026-10-11T13:14:12.685Z",
+        "finished_at_utc": "2026-10-11T13:14:12.894Z",
+        "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 19,
+        "inlineVisible": false,
+        "renderedMath": 380,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "book_overview.html",
+        "started_at_utc": "2026-10-11T13:14:12.895Z",
+        "finished_at_utc": "2026-10-11T13:14:13.026Z",
+        "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": false,
+        "renderedMath": 11,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter01_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:13.029Z",
+        "finished_at_utc": "2026-10-11T13:14:13.823Z",
+        "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 77,
+        "statements": 38,
+        "inlineVisible": false,
+        "renderedMath": 2344,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter02_poisson_processes.html",
+        "started_at_utc": "2026-10-11T13:14:13.824Z",
+        "finished_at_utc": "2026-10-11T13:14:14.096Z",
+        "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 61,
+        "statements": 19,
+        "inlineVisible": false,
+        "renderedMath": 978,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter03_renewal_processes.html",
+        "started_at_utc": "2026-10-11T13:14:14.097Z",
+        "finished_at_utc": "2026-10-11T13:14:14.226Z",
+        "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 24,
+        "statements": 14,
+        "inlineVisible": false,
+        "renderedMath": 485,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter04_continuous_time_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:14.227Z",
+        "finished_at_utc": "2026-10-11T13:14:14.478Z",
+        "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 39,
+        "statements": 23,
+        "inlineVisible": false,
+        "renderedMath": 1238,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter05_martingales.html",
+        "started_at_utc": "2026-10-11T13:14:14.480Z",
+        "finished_at_utc": "2026-10-11T13:14:14.712Z",
+        "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 10,
+        "statements": 20,
+        "inlineVisible": false,
+        "renderedMath": 747,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter06_mathematical_finance.html",
+        "started_at_utc": "2026-10-11T13:14:14.714Z",
+        "finished_at_utc": "2026-10-11T13:14:14.994Z",
+        "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 25,
+        "statements": 17,
+        "inlineVisible": false,
+        "renderedMath": 1606,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "preface.html",
+        "started_at_utc": "2026-10-11T13:14:14.995Z",
+        "finished_at_utc": "2026-10-11T13:14:15.259Z",
+        "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba",
+        "width": 1440,
+        "root": 1425,
+        "railVisible": true,
+        "railWidth": 280,
+        "railX": 1121,
+        "mainRight": 1089,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": false,
+        "renderedMath": 0,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "appendix_a_probability_review.html",
+        "started_at_utc": "2026-10-11T13:14:15.264Z",
+        "finished_at_utc": "2026-10-11T13:14:15.578Z",
+        "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 19,
+        "inlineVisible": true,
+        "renderedMath": 405,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "book_overview.html",
+        "started_at_utc": "2026-10-11T13:14:15.579Z",
+        "finished_at_utc": "2026-10-11T13:14:15.728Z",
+        "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": true,
+        "renderedMath": 28,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter01_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:15.729Z",
+        "finished_at_utc": "2026-10-11T13:14:16.481Z",
+        "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 77,
+        "statements": 38,
+        "inlineVisible": true,
+        "renderedMath": 2383,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter02_poisson_processes.html",
+        "started_at_utc": "2026-10-11T13:14:16.482Z",
+        "finished_at_utc": "2026-10-11T13:14:16.732Z",
+        "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 61,
+        "statements": 19,
+        "inlineVisible": true,
+        "renderedMath": 1016,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter03_renewal_processes.html",
+        "started_at_utc": "2026-10-11T13:14:16.733Z",
+        "finished_at_utc": "2026-10-11T13:14:16.962Z",
+        "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 24,
+        "statements": 14,
+        "inlineVisible": true,
+        "renderedMath": 500,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter04_continuous_time_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:16.964Z",
+        "finished_at_utc": "2026-10-11T13:14:17.270Z",
+        "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 39,
+        "statements": 23,
+        "inlineVisible": true,
+        "renderedMath": 1271,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter05_martingales.html",
+        "started_at_utc": "2026-10-11T13:14:17.271Z",
+        "finished_at_utc": "2026-10-11T13:14:17.461Z",
+        "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 10,
+        "statements": 20,
+        "inlineVisible": true,
+        "renderedMath": 767,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter06_mathematical_finance.html",
+        "started_at_utc": "2026-10-11T13:14:17.461Z",
+        "finished_at_utc": "2026-10-11T13:14:17.832Z",
+        "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 25,
+        "statements": 17,
+        "inlineVisible": true,
+        "renderedMath": 1628,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "preface.html",
+        "started_at_utc": "2026-10-11T13:14:17.834Z",
+        "finished_at_utc": "2026-10-11T13:14:17.993Z",
+        "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba",
+        "width": 1024,
+        "root": 1009,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 934.5,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": true,
+        "renderedMath": 6,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "appendix_a_probability_review.html",
+        "started_at_utc": "2026-10-11T13:14:18.002Z",
+        "finished_at_utc": "2026-10-11T13:14:18.327Z",
+        "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 19,
+        "inlineVisible": true,
+        "renderedMath": 405,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "book_overview.html",
+        "started_at_utc": "2026-10-11T13:14:18.327Z",
+        "finished_at_utc": "2026-10-11T13:14:18.460Z",
+        "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": true,
+        "renderedMath": 28,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter01_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:18.462Z",
+        "finished_at_utc": "2026-10-11T13:14:19.245Z",
+        "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 77,
+        "statements": 38,
+        "inlineVisible": true,
+        "renderedMath": 2383,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter02_poisson_processes.html",
+        "started_at_utc": "2026-10-11T13:14:19.245Z",
+        "finished_at_utc": "2026-10-11T13:14:19.609Z",
+        "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 61,
+        "statements": 19,
+        "inlineVisible": true,
+        "renderedMath": 1016,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter03_renewal_processes.html",
+        "started_at_utc": "2026-10-11T13:14:19.610Z",
+        "finished_at_utc": "2026-10-11T13:14:19.794Z",
+        "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 24,
+        "statements": 14,
+        "inlineVisible": true,
+        "renderedMath": 500,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter04_continuous_time_markov_chains.html",
+        "started_at_utc": "2026-10-11T13:14:19.795Z",
+        "finished_at_utc": "2026-10-11T13:14:20.093Z",
+        "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 39,
+        "statements": 23,
+        "inlineVisible": true,
+        "renderedMath": 1271,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter05_martingales.html",
+        "started_at_utc": "2026-10-11T13:14:20.093Z",
+        "finished_at_utc": "2026-10-11T13:14:20.327Z",
+        "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 10,
+        "statements": 20,
+        "inlineVisible": true,
+        "renderedMath": 767,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "chapter06_mathematical_finance.html",
+        "started_at_utc": "2026-10-11T13:14:20.327Z",
+        "finished_at_utc": "2026-10-11T13:14:20.685Z",
+        "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 25,
+        "statements": 17,
+        "inlineVisible": true,
+        "renderedMath": 1628,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      },
+      {
+        "file": "preface.html",
+        "started_at_utc": "2026-10-11T13:14:20.685Z",
+        "finished_at_utc": "2026-10-11T13:14:20.844Z",
+        "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba",
+        "width": 390,
+        "root": 390,
+        "railVisible": false,
+        "railWidth": 0,
+        "railX": 0,
+        "mainRight": 390,
+        "errors": [],
+        "csp": [],
+        "exercises": 0,
+        "statements": 0,
+        "inlineVisible": true,
+        "renderedMath": 6,
+        "badMath": 0,
+        "contexts": 0,
+        "deepLinks": 0
+      }
+    ],
+    "interactions": {
+      "started_at_utc": "2026-10-11T13:19:23.992Z",
+      "tocContext": "s24",
+      "contextReturn": {
+        "hash": "#s24",
+        "top": 23.84375
+      },
+      "breakpoints": [
+        {
+          "width": 1439,
+          "root": 1439,
+          "rail": false,
+          "inline": true
+        },
+        {
+          "width": 1440,
+          "root": 1440,
+          "rail": true,
+          "inline": false
+        },
+        {
+          "width": 390,
+          "root": 390,
+          "rail": false,
+          "inline": true
+        },
+        {
+          "width": 1800,
+          "root": 1800,
+          "rail": true,
+          "inline": false
+        }
+      ],
+      "mobileToc": {
+        "hash": "#s21",
+        "closed": true
+      },
+      "code": {
+        "pythonOpen": true,
+        "scroll": 1243.5,
+        "root": 390
+      },
+      "appendixLink": {
+        "hash": "#lemma-5-2",
+        "open": true
+      },
+      "noJs": [
+        {
+          "file": "appendix_a_probability_review.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 4,
+          "openGroups": 4,
+          "visibleGroups": 4,
+          "badMath": 0
+        },
+        {
+          "file": "book_overview.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter01_markov_chains.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 14,
+          "openGroups": 14,
+          "visibleGroups": 14,
+          "badMath": 0
+        },
+        {
+          "file": "chapter02_poisson_processes.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 7,
+          "openGroups": 7,
+          "visibleGroups": 7,
+          "badMath": 0
+        },
+        {
+          "file": "chapter03_renewal_processes.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter04_continuous_time_markov_chains.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 9,
+          "openGroups": 9,
+          "visibleGroups": 9,
+          "badMath": 0
+        },
+        {
+          "file": "chapter05_martingales.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter06_mathematical_finance.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 9,
+          "openGroups": 9,
+          "visibleGroups": 9,
+          "badMath": 0
+        },
+        {
+          "file": "preface.html",
+          "width": 1800,
+          "root": 1785,
+          "enhanced": false,
+          "groups": 5,
+          "openGroups": 5,
+          "visibleGroups": 5,
+          "badMath": 0
+        },
+        {
+          "file": "appendix_a_probability_review.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 4,
+          "openGroups": 4,
+          "visibleGroups": 4,
+          "badMath": 0
+        },
+        {
+          "file": "book_overview.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter01_markov_chains.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 14,
+          "openGroups": 14,
+          "visibleGroups": 14,
+          "badMath": 0
+        },
+        {
+          "file": "chapter02_poisson_processes.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 7,
+          "openGroups": 7,
+          "visibleGroups": 7,
+          "badMath": 0
+        },
+        {
+          "file": "chapter03_renewal_processes.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter04_continuous_time_markov_chains.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 9,
+          "openGroups": 9,
+          "visibleGroups": 9,
+          "badMath": 0
+        },
+        {
+          "file": "chapter05_martingales.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 6,
+          "openGroups": 6,
+          "visibleGroups": 6,
+          "badMath": 0
+        },
+        {
+          "file": "chapter06_mathematical_finance.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 9,
+          "openGroups": 9,
+          "visibleGroups": 9,
+          "badMath": 0
+        },
+        {
+          "file": "preface.html",
+          "width": 390,
+          "root": 390,
+          "enhanced": false,
+          "groups": 5,
+          "openGroups": 5,
+          "visibleGroups": 5,
+          "badMath": 0
+        }
+      ],
+      "nativeCollapse": true,
+      "nativeExpand": true,
+      "print": {
+        "events": {
+          "before": [
+            90
+          ],
+          "after": [
+            0
+          ]
+        },
+        "total": 90,
+        "restored": true
+      },
+      "finished_at_utc": "2026-10-11T13:19:43.062Z",
+      "status": "pass",
+      "visual_review": {
+        "status": "pass",
+        "inspected_screenshots": [
+          "detailed-balance",
+          "traffic",
+          "literal-payoff",
+          "birth-death",
+          "poisson",
+          "code",
+          "pairwise-proof",
+          "correct-decimal",
+          "weight-calculations",
+          "nojs"
+        ],
+        "print": {
+          "pages": 68,
+          "answer_headings": 64,
+          "example_page": 22,
+          "last_exercise_page": 67
+        },
+        "checked_at_utc": "2026-10-11T13:21:20.481321+00:00"
+      }
+    },
+    "executed_at_utc": {
+      "start": "2026-10-11T13:06:46.714Z",
+      "finish": "2026-10-11T13:14:20.844Z"
+    },
+    "evidence_paths": {
+      "layouts": "../tmp/audit-fix-http/browser-layouts.json",
+      "interactions": "../tmp/audit-fix-http/browser-interactions.json"
+    },
+    "visual_scope": "Nine repair screenshots and no-JS screenshot individually inspected; actual browser PDF print inspected on first, example and final exercise pages; all-page rendered formula and bounded interaction checks."
+  },
+  "numerical_boundary": "行缩放后主元小于1e-12的奇异/严重病态系统返回3；无解与数值精度不足需分别判断。行权舍入容差仅按当前价值尺度计算。",
+  "deployment": {
+    "status": "prepared_locally",
+    "release_id": "20261011T212759",
+    "acceptance_record": "../deploy/reports/20261011T212759/acceptance.json"
+  },
+  "files": {
+    "agent.md": {
+      "bytes": 6910,
+      "sha256": "bf0b0b959701437b80da8829b7b7f9ea25a8c0f02a6ade6090f9e316ce90d8fa"
+    },
+    "assets/essentials-of-stochastic-processes.pdf": {
+      "bytes": 2579008,
+      "sha256": "2232660e1909b42c6df8b5aca8eba12cdb383bf3741ecb53add49f6c26c6a0e7"
+    },
+    "code/Makefile": {
+      "bytes": 847,
+      "sha256": "f6adbc7bf204b54136ebcdf6542ebd3ecc93259c9dee06a3eb810406f1e133db"
+    },
+    "code/README.md": {
+      "bytes": 3064,
+      "sha256": "68cf2436c4b2a1e3591ccf0150f315743a3605dabac9d3c0a077517dd67c2709"
+    },
+    "code/chapter01_markov_chains/README.md": {
+      "bytes": 1667,
+      "sha256": "bfc1a9727b4db8b3187ce1e4724b4e85b0cccdae370a8a07a7e9b58092f07d4e"
+    },
+    "code/chapter01_markov_chains/linear.c": {
+      "bytes": 4812,
+      "sha256": "c37f130775d512fdf3fed1965d8b547d2ee03a87375c0cbb227b944ff43b9533"
+    },
+    "code/chapter01_markov_chains/linear.py": {
+      "bytes": 4144,
+      "sha256": "cbdbc203976adc8d8ac3ff41a086df439bc10eee2dc2335065a77ed9bf7624ac"
+    },
+    "code/chapter02_poisson_processes/README.md": {
+      "bytes": 591,
+      "sha256": "910de1231ebcaef2119fe3a6e43725ad7a6c9cab11a9aabcead0cd9ec560c304"
+    },
+    "code/chapter02_poisson_processes/poisson.c": {
+      "bytes": 787,
+      "sha256": "d2bc153b9dea2f7baf70207248621597e3d62bd9c1d012d4fefade79ac7e1e41"
+    },
+    "code/chapter02_poisson_processes/poisson.py": {
+      "bytes": 729,
+      "sha256": "b55dfcba3aceb4214db7e3a989d10a0fa54c25c2ff38a814830ef04678980e9f"
+    },
+    "code/chapter03_renewal_processes/README.md": {
+      "bytes": 553,
+      "sha256": "15a858b55ef74ec10f0b265876f845ab66ba8d78a808f1dedea9483641f5c325"
+    },
+    "code/chapter03_renewal_processes/renewal.c": {
+      "bytes": 642,
+      "sha256": "2cc22f6794582f56fd0eaf3aad87659dc70695bca16cd9db8fee4fc419e5d56d"
+    },
+    "code/chapter03_renewal_processes/renewal.py": {
+      "bytes": 565,
+      "sha256": "11a18d22032e4f8c1943948a3e50e55db9e91bf43fe69ddbd4385a97905328a2"
+    },
+    "code/chapter04_continuous_time_markov_chains/README.md": {
+      "bytes": 584,
+      "sha256": "f49a8e8e4d5795087071ec49582024d3f9c2d8d51348bbdca0bbe2d09cad638a"
+    },
+    "code/chapter04_continuous_time_markov_chains/ctmc.c": {
+      "bytes": 689,
+      "sha256": "6493f9199e146a5a7d6bef639f13198d163a3d6525e8722cff02263d7b18fd84"
+    },
+    "code/chapter04_continuous_time_markov_chains/ctmc.py": {
+      "bytes": 603,
+      "sha256": "217c365c1cdab883780998a46e8d4e6550aa32caab6f4ff83201184863e4341f"
+    },
+    "code/chapter05_martingales/README.md": {
+      "bytes": 551,
+      "sha256": "93a19752b6ccc53c286958ac51d09023d9196ff9d74f631a21022caa78af3690"
+    },
+    "code/chapter05_martingales/stopping.c": {
+      "bytes": 607,
+      "sha256": "792dcf9a0aa05283d771f7d881bf47ae98308358c99a0d1fe07f192f7a2322ee"
+    },
+    "code/chapter05_martingales/stopping.py": {
+      "bytes": 519,
+      "sha256": "6725b436812708cc80c39363107d10395ba2b940e71c6583688c3140a2ab7d87"
+    },
+    "code/chapter06_mathematical_finance/README.md": {
+      "bytes": 2396,
+      "sha256": "c10f6ab5778f6882235f150c50e3d805f21224e9767061685af0ecd2a320db35"
+    },
+    "code/chapter06_mathematical_finance/bs.c": {
+      "bytes": 2742,
+      "sha256": "3c84c4a479f244847150055020f350e14be57292e1aeb94a80d825f2cd5e65da"
+    },
+    "code/chapter06_mathematical_finance/bs.py": {
+      "bytes": 2700,
+      "sha256": "b00e2d2ecada89dc9e9b01263f9abcb009aed4aad658187cdda44f59fa4a82f9"
+    },
+    "code/chapter06_mathematical_finance/finance.c": {
+      "bytes": 3646,
+      "sha256": "a43e075b3a0bb38bffe59ff3df67e4c784dd086673842d36bff82763200995ff"
+    },
+    "code/chapter06_mathematical_finance/finance.py": {
+      "bytes": 2612,
+      "sha256": "d788304d79d497a667838c4b50ed87310a3ec65986e2a26b5b821b885160d10f"
+    },
+    "code/programs.json": {
+      "bytes": 2608,
+      "sha256": "694683da26051d8dff8cdfb55537b798b6a4d2a7b8be0afe5a43dbc10e64866d"
+    },
+    "deploy/README.md": {
+      "bytes": 4458,
+      "sha256": "c6c3fce1f3c927ad52316b97a135a80868eded1d67cbdc1d7352adbac3c9f0f4"
+    },
+    "deploy/build_release.py": {
+      "bytes": 6691,
+      "sha256": "686607ffb03b9d429c870d3f94f73ffabd8e7bc907e34c350c4bb739ac39e849"
+    },
+    "deploy/nginx-static.inc.template": {
+      "bytes": 743,
+      "sha256": "7977a4f5e1d6b6704b8efd1b8251a963689598d9371e61d58c9d68ac8bf91871"
+    },
+    "notes/README.md": {
+      "bytes": 9388,
+      "sha256": "0e9c348ea75c4ad5b4d6d5dc3f4b6b094cc6586d5c81308017526664f3aab2e0"
+    },
+    "notes/appendix_a_probability_review.html": {
+      "bytes": 192942,
+      "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a"
+    },
+    "notes/book_overview.html": {
+      "bytes": 50653,
+      "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0"
+    },
+    "notes/chapter01_markov_chains.html": {
+      "bytes": 1141735,
+      "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f"
+    },
+    "notes/chapter02_poisson_processes.html": {
+      "bytes": 493525,
+      "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b"
+    },
+    "notes/chapter03_renewal_processes.html": {
+      "bytes": 256873,
+      "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa"
+    },
+    "notes/chapter04_continuous_time_markov_chains.html": {
+      "bytes": 644426,
+      "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3"
+    },
+    "notes/chapter05_martingales.html": {
+      "bytes": 322830,
+      "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c"
+    },
+    "notes/chapter06_mathematical_finance.html": {
+      "bytes": 571627,
+      "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17"
+    },
+    "notes/preface.html": {
+      "bytes": 40431,
+      "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba"
+    },
+    "notes/source_manifest.json": {
+      "bytes": 36372,
+      "sha256": "f139c6dfedbf36be0b24bbae20b3f5af15482c4db068906a629bb6e29aafe23f"
+    },
+    "tools/browser_review.js": {
+      "bytes": 6048,
+      "sha256": "28a10dc0defbf260a5a5cb4da7c1f91c196497521ac620c288bb00b644769559"
+    },
+    "tools/check_content_regressions.py": {
+      "bytes": 2229,
+      "sha256": "b3a06d34b8ed7d502fde6eb69242a68ece45da42c1178e2c11c36cb459f91e67"
+    },
+    "tools/check_http_release.py": {
+      "bytes": 3853,
+      "sha256": "974ea8e9a1b28a1e6f55c338f3a9832c12532ec49e753557e9ea54bd9078646a"
+    },
+    "tools/check_notes.py": {
+      "bytes": 26392,
+      "sha256": "483ad49c248314be817587190e008037929ace0c7bbfed7104a836e64fbab026"
+    },
+    "tools/check_review_records.py": {
+      "bytes": 2601,
+      "sha256": "971e51c2864d4ab04defc56db65068ef1cbd23d172dd7a4090e721ef4877dcd3"
+    },
+    "tools/check_simulation_seeds.py": {
+      "bytes": 2948,
+      "sha256": "ec34fd6b922090e6377ca57477b2c43111c9b1d851e3b0d47960a9d81c2435c3"
+    },
+    "tools/content_baseline.json": {
+      "bytes": 1219972,
+      "sha256": "218e5befe3b030e0b17573a05ff652b090011ce55329c720a227f7b5a67f2d3c"
+    },
+    "tools/content_integrity.py": {
+      "bytes": 5885,
+      "sha256": "b27b4c923dc60100656dc7c448355daa702c6498fe2c85548204f3db84e12b84"
+    },
+    "tools/finalize_audit_repairs.py": {
+      "bytes": 15462,
+      "sha256": "bdc96716be5edc9750a0dcf536cbfeb3846fb175e58ac486910ecd8c8e4886f7"
+    },
+    "tools/generate_cases.py": {
+      "bytes": 5255,
+      "sha256": "ab1cd45f5193c801d3c1c65b9c39e6c15663b0a24b43fd5f985d00125650e502"
+    },
+    "tools/html_support.py": {
+      "bytes": 5978,
+      "sha256": "526e66f7f4bde3fe81eafb2350822c91f6fc8d93e8d8c7cefc53ad5b799d4a43"
+    },
+    "tools/notes_cases.json": {
+      "bytes": 1499759,
+      "sha256": "02a05664d7875f3bc15e324493a9bbbb4e26167b959909e25d88787b33cd7253"
+    },
+    "tools/readable_numbers.py": {
+      "bytes": 1857,
+      "sha256": "9cd18a8d68169aa32d93b45954ee386ed4ae732742ee9913909c08291b03f603"
+    },
+    "tools/sync_code.py": {
+      "bytes": 4837,
+      "sha256": "f04a7ee6e4f49482128f03cfb996036f7ac6b1107765c3a058f089a4c78efe12"
+    },
+    "tools/test_tooling.py": {
+      "bytes": 4990,
+      "sha256": "292717c6c5d31d8252e203a94904ee9665c3f26b6d70a40f5933e01605613bb8"
+    }
+  },
+  "file_binding_updates": [
+    {
+      "recorded_at_utc": "2026-10-11T16:01:03.223184+00:00",
+      "bindings": {
+        "deploy/README.md": {
+          "previous": {
+            "bytes": 4251,
+            "sha256": "8ba74a135d5eee21c051da5b73756a93cf2315a2ae2b90fdf60b490cd66267ab"
+          },
+          "current": {
+            "bytes": 10159,
+            "sha256": "72ca20aa844044bef106931473ae22fd373f06a969223821791c8f0329acab78"
+          }
+        }
+      },
+      "scope": "Refresh current file bindings for the reviewed two-book portal deployment documentation and dependent records. Original mathematical, numerical and browser evidence retains its original checkpoint times and hashes."
+    },
+    {
+      "updated_at_utc": "2026-10-12T12:42:00.939267+00:00",
+      "scope": "2026-10-12 repository merge: reviewed deployment documentation and propagated current file bindings; original mathematical statements, algorithm code, browser records and historical checkpoints preserved.",
+      "changes": [
+        {
+          "path": "deploy/README.md",
+          "previous": {
+            "bytes": 10159,
+            "sha256": "72ca20aa844044bef106931473ae22fd373f06a969223821791c8f0329acab78"
+          },
+          "current": {
+            "bytes": 4458,
+            "sha256": "c6c3fce1f3c927ad52316b97a135a80868eded1d67cbdc1d7352adbac3c9f0f4"
+          }
+        }
+      ]
+    },
+    {
+      "updated_at_utc": "2026-10-12T12:49:10.981418+00:00",
+      "scope": "Isolated-checkout regression: macOS .DS_Store is ignored workstation metadata, not a maintained source file. Its former binding is retained here as history and removed from the current source inventory.",
+      "retired_bindings": [
+        {
+          "path": "code/.DS_Store",
+          "previous": {
+            "bytes": 6148,
+            "sha256": "b0d4d3b8ae7d0eee14f785dc712ad08893cc2da2fde5baa2ebd54372de577e2c"
+          },
+          "reason": "Ignored operating-system metadata absent from a fresh checkout."
+        }
+      ]
+    }
+  ]
+}

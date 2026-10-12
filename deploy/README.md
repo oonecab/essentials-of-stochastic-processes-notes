@@ -1,101 +1,126 @@
-# 静态站点打包与服务器部署
+# 统一笔记站点的构建与部署
 
-本项目的部署单位是完整站点包。保留目录关系：
+Reading Notes 从 `books/stochastic/` 与 `books/weiss/` 读取正式内容，在 `notes.zzzping.top` 发布统一书架。部署单位是完整静态站点包，C/Python 示例供读者下载后在自己的电脑运行。日常发布使用这里的统一入口；各书 `deploy/` 中的工具用于保留原单书发布能力与历史资料。
+
+## 构建与预览
+
+在仓库根目录执行：
+
+```sh
+python3 tools/project.py doctor
+python3 tools/project.py check
+python3 tools/project.py build
+```
+
+构建可以指定 `--release-id YYYYMMDDTHHMMSS`；已存在的版本目录拒绝覆盖。它调用两本书的结构检查，校验随机过程源码与 HTML 同步及 PDF 身份，再扫描全部发布页面的资源、唯一锚点、内链与内嵌 JavaScript，生成对应 CSP 哈希。完整数值/功能验证是单独的 `check` 门禁，不能仅以构建成功替代。
+
+输出目录为 `deploy/portal-releases/<release-id>/`：
+
+| 文件 | 用途 |
+|---|---|
+| `site.tar.gz` | 全部正式站点文件；gzip/tar 元数据固定，便于重复构建对比 |
+| `archive.sha256` | 归档文件的 SHA-256 |
+| `SHA256SUMS` | 解包后逐文件校验 |
+| `release.json` | 本版文件身份、来源目录、检查结果、CSP 与路由 |
+| `navigation.json` | 本版链接及下载清单 |
+| `nginx-static.inc` | 本版静态服务配置与脚本 CSP 哈希 |
+| `nginx-notes.zzzping.top.conf` | 统一域名的 Nginx 虚拟主机配置 |
+
+构建在临时目录完成后一次 rename 发布。元数据和校验清单置于网页根目录之外，只有 `site.tar.gz` 的成员进入站点。构建从当前仓库取源，不使用旧的 `--weiss-root` 参数。
 
 ```text
-index.html                         # 进入全书地图
-notes/                             # 序言、六章、附录与复核记录
-code/                              # 六章源文件、运行说明、Makefile
-assets/essentials-of-stochastic-processes.pdf
+index.html、styles.css、reader.css、favicon.svg
+stochastic/notes/                 # 九个阅读页面、原始记录及其资料网页
+stochastic/code/                  # 源码、运行说明、资料页及 examples.zip
+stochastic/assets/                # 正文引用的原书 PDF
+weiss/notes/                      # 全书总览、十二章、说明及资料网页
+weiss/c/ch8.c                     # 第八章引用的共享源码
+stochastic/index.html、weiss/index.html  # 离线入口
 ```
 
-网页中的源书链接统一使用 `../assets/essentials-of-stochastic-processes.pdf#page=N`，其中 N 是 PDF 实际页序。该相对路径在本地离线打开和 HTTP/HTTPS 中都按当前页面的位置解析，站点无需固定域名；完整目录也可以挂载在某个子路径下。
+本次源码目录调整保留这些发布 URL。六个旧入口 `/stochastic`、`/stochastic/`、`/stochastic/index.html` 及相应 Weiss 路径由 Nginx 返回 301 到本书全书地图，并保留查询参数。章节锚点由浏览器保留和解释。
 
-## 本地构建
-
-在项目根目录执行：
+`portal/` 维护书架与共享阅读样式，`deploy/reader_views.py` 在发布阶段增加首页导航、资料网页和源码 ZIP，不回写正式笔记。原有章节结构、公式与实现保留。可用下面的命令预览已构建版本：
 
 ```sh
-python3 tools/sync_code.py
-python3 tools/check_notes.py
-python3 deploy/build_release.py
+python3 tools/project.py serve --release-id YYYYMMDDTHHMMSS --port 8000
 ```
 
-构建需要 Python 3、clang（完整程序检查）、Poppler/pdftotext（原书编号页码检查）和 Node.js（内嵌脚本语法检查），均为本地工具。网页服务器只需提供静态文件。发布程序会检查十四份源码与网页的一致性、九页结构、全部本地链接、PDF 哈希和内嵌脚本，随后输出独立版本目录 `deploy/releases/YYYYMMDDTHHMMSS/`：
-
-- `site.tar.gz`：正式站点文件。
-- `SHA256SUMS`：解包后逐文件核对。
-- `release.json`、`archive.sha256`：版本清单和压缩包哈希。
-- `nginx-static.inc`：供 HTTPS 虚拟主机包含的静态路由配置，附本次脚本 CSP 哈希。
-
-可以用 `--web-root /var/www/你的站点/current` 指定生成的 Nginx 文档根目录。发布程序只在本地打包。
-
-## 上传与生效
-
-沿用独立 release 加 `current` 符号链接的方式：先将包上传到新版本目录，解包，运行 `sha256sum -c SHA256SUMS`，验证 Nginx 配置与页面响应，再原子切换 `current`。旧版本目录作为回滚点保留。`SHA256SUMS` 和部署元数据应放在站点文档根目录之外。
-
-Nginx 的 `root` 必须指向包含 `index.html`、`notes`、`code` 和 `assets` 的那一级目录。HTTPS 虚拟主机内使用生成的 `nginx-static.inc`；域名、证书、端口和账号认证按实际部署配置。更新内嵌脚本时同步更新对应 CSP 哈希，并执行 `nginx -t` 后 reload。
-
-示例中的 C/Python 是供读者下载后在自己电脑上运行的程序。Nginx 将 `.c`／`.py` 返回为 `text/plain`，网页提供下载入口；`.pdf` 返回为 `application/pdf`，保留浏览器内阅读和页码定位。
-
-## PDF 页码定位与验证
-
-`#page=N` 由浏览器的 PDF 阅读器解释，Nginx 收到的请求只包含 PDF 路径。支持这一参数的阅读器会打开对应页；部分手机浏览器会下载或交给外部应用，此时需要按笔记标出的“PDF 第 N 页”定位。如果后续需要统一阅读器，可增加自托管 PDF.js；它明确支持 [page 参数](https://github.com/mozilla/pdf.js/wiki/Viewer-options)。
-
-上线后分别验证首页、九个页面、十四个代码下载和 PDF。PDF 要检查正确的 MIME 类型、文件哈希、字节范围请求（206）以及浏览器中打开链接后的页码。若启用登录，PDF 和源码路径也应处在同一个服务端认证范围内。
-
-Nginx 官方说明：[MIME 类型映射](https://nginx.org/en/docs/http/ngx_http_core_module.html#types)、[静态文件路径检查](https://nginx.org/en/docs/http/ngx_http_core_module.html#try_files)、[响应头与继承规则](https://nginx.org/en/docs/http/ngx_http_headers_module.html#add_header)。
-
-构建同时扫描外部 CSS 导入、CSS URL、base、异常 meta-refresh、独立资源和元数据中的本机路径；SVG 的 `url(#arrow)` 是页面内引用。仅允许生成的首页跳转到全书地图。gzip 的时间和文件名字段、tar 的排序／权限／用户／时间均固定，相同站点字节在同一构建环境下生成相同压缩包。临时版本目录全部完成后以一次 rename 发布，避免暴露半成品。
-
-本次修订的内容、源码与浏览器证据见 notes/audit_fix_review.json；新版本HTTP、源码下载、PDF Range和两次打包一致性记录保存在 deploy/reports/，独立于包内文件，避免自引用哈希。历史版本继续保留为检查点。
-
-## 两本书的统一入口：notes.zzzping.top
-
-`portal/` 保存读书笔记首页；两本书以独立子目录发布：
-
-```text
-index.html、styles.css、favicon.svg    # 书架首页
-stochastic/index.html                 # 离线入口；HTTPS 由服务器直接重定向到全书地图
-stochastic/notes/                     # 九个笔记页面及页面引用的复核记录
-stochastic/code/                      # 原有章节源码、说明与 Makefile
-stochastic/assets/                    # 原书 PDF
-weiss/index.html                      # 离线入口；HTTPS 由服务器直接重定向到全书地图
-weiss/notes/                          # 总览、十二章与页面引用的辅助文件
-weiss/c/ch8.c                         # 第八章引用的共享实现
-```
-
-维护首页时编辑 `portal/index.html` 和 `portal/styles.css`。首页书名和阅读按钮都直接指向各书的 `notes/book_overview.html`。Nginx 对 `/stochastic`、`/stochastic/`、`/stochastic/index.html` 及对应的 Weiss 三个入口返回301，目标是本书全书地图并保留查询参数；浏览器直接加载地图。包内的两个 `index.html` 保留为离线入口。
-
-书的内容仍在各自项目维护。统一打包在两套原有结构检查通过后执行；发布时在每个书页已有页头导航中插入一个相对路径的“笔记首页”链接，其他页面字节、公式、程序和原有链接保持一致。两本书都保留 `notes/` 这一层，Weiss 的 `../c/ch8.c` 因而仍指向本书的源码目录。
-
-在本项目运行：
+预览仅监听 `127.0.0.1`，提供发布字节和 CSP，不具备 Nginx 的完整 HTTPS/Range 验收语义。完整本地响应检查使用 `verify-release`，需要 Nginx 与 OpenSSL；它建立临时自签名证书，只让本次 Python 验证进程信任，结束后停止临时 Nginx，不改系统配置或证书信任：
 
 ```sh
-python3 deploy/build_portal.py --weiss-root /path/to/WEISS_2ED_C
+python3 tools/project.py verify-release --release-id YYYYMMDDTHHMMSS
 ```
 
-输出位于 `deploy/portal-releases/<release-id>/`，含统一站点包、逐文件 SHA-256、版本清单、静态路由 include 与完整 Nginx 域名配置。构建核对全部本地资源与 HTML 锚点，检查内嵌脚本并生成其 CSP 哈希。`release.json` 与 `SHA256SUMS` 留在站点目录之外；页面引用的复核 JSON 随原有笔记发布。
+## 服务器布局与生效步骤
 
-服务器约定：网页位于 `/var/www/notes.zzzping.top/releases/<release-id>/`，`current` 指向当前版本；发布材料位于 `/var/lib/notes-deploy/<release-id>/`。域名配置为 `/etc/nginx/sites-available/notes.zzzping.top`，其中 include 必须对应本次版本的 `nginx-static.inc`。
+以下为现有站点的部署约定，执行前读取服务器实际配置、证书与当前版本。本次合并只完成本地准备，没有重新确认或改变线上状态。
 
-更新时上传新版本，先校验压缩包和解包后的全部文件，保存当前 `current` 目标与 Nginx 配置，再原子切换 `current`、安装本次配置，运行 `nginx -t` 后 reload。若配置检查失败，立即恢复原配置及原链接。回滚同样要同时恢复版本链接和该版本的配置，因为内嵌脚本改变时 CSP 哈希也会改变。原 Weiss 域名的发布目录独立于这一站点。
+| 位置 | 作用 |
+|---|---|
+| `/var/www/notes.zzzping.top/releases/<release-id>/` | 不可覆盖的网页版本目录 |
+| `/var/www/notes.zzzping.top/current` | 指向生效版本的符号链接 |
+| `/var/lib/notes-deploy/<release-id>/` | 包、清单、配置、验证器和验收证据 |
+| `/etc/nginx/sites-available/notes.zzzping.top` | 当前域名配置；include 对应本版元数据目录 |
+| `/etc/letsencrypt/live/notes.zzzping.top/` | 当前证书与私钥，由服务器管理 |
 
-可用同一个验证器检查本地预览或服务器上的 HTTPS 响应。以下命令在服务器执行，保留域名的 TLS SNI 和证书主机名校验，同时直连源站：
+先完成本地检查并获得本次生产发布授权，再上传；服务器账号、密码与 SSH/DNS 凭据通过现有认证渠道提供，不写入仓库。不要直接编辑当前版本目录。具体操作顺序：
+
+1. 上传整个版本材料和仓库中的 `deploy/verify_portal.py` 到新的元数据目录。确认新网页目录和新元数据目录均不存在或是本次刚创建的目标，记录实际版本 ID。
+2. 执行 `sha256sum -c archive.sha256`，核对归档成员与 `release.json` 的清单一致，且成员是安全相对路径和普通文件；解包到新的网页版本目录，在该目录执行 `sha256sum -c /var/lib/notes-deploy/<release-id>/SHA256SUMS`。
+3. 保存原 `current` 的实际目标、当前 Nginx 配置与证书身份；记录到本版 `previous-current.txt`、`previous-nginx.conf` 和发布记录中。确认恢复点可读。
+4. 安装本版配置并执行 `nginx -t`；通过后原子切换 `current`，再执行 `systemctl reload nginx`。仅在明确授权的服务器目标执行下面的 Linux 命令。
 
 ```sh
-python3 /var/lib/notes-deploy/<release-id>/verify_portal.py \
-  --release-dir /var/lib/notes-deploy/<release-id> \
+NOTES_RELEASE=YYYYMMDDTHHMMSS
+NOTES_META="/var/lib/notes-deploy/$NOTES_RELEASE"
+NOTES_WEB=/var/www/notes.zzzping.top
+
+readlink "$NOTES_WEB/current" > "$NOTES_META/previous-current.txt"
+cp /etc/nginx/sites-available/notes.zzzping.top "$NOTES_META/previous-nginx.conf"
+cp "$NOTES_META/nginx-notes.zzzping.top.conf" /etc/nginx/sites-available/notes.zzzping.top
+nginx -t
+# 上一步成功后再执行；临时链接必须不存在。
+ln -s "releases/$NOTES_RELEASE" "$NOTES_WEB/current.next-$NOTES_RELEASE"
+mv -Tf "$NOTES_WEB/current.next-$NOTES_RELEASE" "$NOTES_WEB/current"
+systemctl reload nginx
+```
+
+5. 新建 HTTPS 连接，等待响应的 CSP 包含本版全部脚本哈希；Nginx 重载期间旧进程可能短暂继续响应。随后运行逐文件源站验证，失败则停止并恢复原链接及配置。
+
+```sh
+python3 /var/lib/notes-deploy/YYYYMMDDTHHMMSS/verify_portal.py \
+  --release-dir /var/lib/notes-deploy/YYYYMMDDTHHMMSS \
   --origin https://notes.zzzping.top --connect-ip 127.0.0.1 \
-  --output /var/lib/notes-deploy/<release-id>/origin-https.json
+  --output /var/lib/notes-deploy/YYYYMMDDTHHMMSS/origin-https.json
 ```
 
-验证器逐一比较直接提供的文件响应内容、MIME、缓存和 CSP 头，并核对首页、六个书目入口的301及查询参数、HEAD 与 POST 行为、PDF 的 `206` 字节范围读取及静态路由。两个离线入口文件的字节随全部文件一起在服务器校验，HTTPS 请求由入口重定向覆盖。公网浏览器的显示与点击验收另存于 `deploy/reports/<release-id>/`，与源站验证分别记录。
+6. 在真实公网浏览器中检查书架、两本书入口、受影响章节、目录高亮与手机折叠、习题/代码展开、返回首页、资料页、下载与 PDF 页码定位。源站响应校验与公网显示验收分别记录，完成后保留旧版本作为回滚点。
 
-证书存放在 `/etc/letsencrypt/live/notes.zzzping.top/`。当前公网 HTTP 的证书验证请求被阿里云备案页面拦截，首次申请使用 Certbot 手动 DNS-01：为 `zzzping.top` 下的 `_acme-challenge.notes` 增加指定 TXT 值后完成验证。手动 DNS 验证的续期同样需要新 TXT 值；运行 `certbot certonly --manual --preferred-challenges dns --cert-name notes.zzzping.top -d notes.zzzping.top`，续期成功后执行 `nginx -t` 与 `systemctl reload nginx`。检查证书实际到期时间后安排续期。
+静态模板设置 `.c/.py/.md` 为 `text/plain`、PDF 为 `application/pdf`，使用 `no-cache`、`nosniff` 与本版 CSP；点路径返回 404，修改方法返回 403。服务器不执行示例源码。保留现有站点的访问控制与安全配置，不因为本地构建而修改其他虚拟主机。
 
-2026-10-11 首次统一发布版本为 `20261011T230300`。本次证书实际到期时间为 **2027-01-09 22:21:02（北京时间）**，手动 DNS 证书尚未配置自动续期。上线后已通过源站 HTTPS、62 个文件的公网浏览器指纹、44 次本地书页布局和10次公网代表页面布局检查；公网点击验证了两本书的进入与返回、手机目录、习题和代码展开，原书 PDF 链接在桌面浏览器实际定位到第10页。原三个站点的配置哈希、发布目录和首页状态与上线前一致。证据保存在 `deploy/reports/20261011T230300/`。
+## 回滚、证书与证据
 
-同日发布 `20261011T233659` 修复首页进入笔记时显示“进入全书地图”中间页的问题：首页两个按钮直接连到地图，六个书目入口由 Nginx 返回301。62个包内文件已在服务器校验；60个直接提供的文件通过源站 HTTPS 指纹检查，两个离线入口由重定向覆盖。本地与公网浏览器分别通过1440px及390px的首页、两本全书地图共6次布局检查，4次直接进入、4次浏览器后退、4次返回首页，以及2次旧入口的查询参数和章节锚点跳转。相对首次发布，包内只有首页字节改变；原三个站点的配置、发布目录及源站状态与更新前一致。证据保存在 `deploy/reports/20261011T233659/`；服务器的该版本发布材料中保存 `previous-current.txt` 和 `previous-nginx.conf`，可同时恢复上一版本链接与配置。
+链接与 CSP 必须同时恢复。出现配置校验失败、文件哈希不符、页面脚本被 CSP 拦截、关键路径失效时，恢复本次记录的旧配置和旧 `current` 目标，运行 `nginx -t` 后 reload，再验证恢复版本。
 
-分享使用完整的 `https://notes.zzzping.top/`。源站 HTTP 返回301，但从本机直连服务器公网IP的 HTTP 请求仍返回阿里云备案拦截页403；浏览器可能直接升级到HTTPS，因此不能据此认定公网HTTP重定向已通过。
+```sh
+NOTES_FAILED_RELEASE=YYYYMMDDTHHMMSS
+NOTES_FAILED_META="/var/lib/notes-deploy/$NOTES_FAILED_RELEASE"
+NOTES_WEB=/var/www/notes.zzzping.top
+NOTES_PREVIOUS_TARGET="$(cat "$NOTES_FAILED_META/previous-current.txt")"
+
+# 先核对旧目录、配置和实际目标；以下临时链接必须不存在。
+cp "$NOTES_FAILED_META/previous-nginx.conf" /etc/nginx/sites-available/notes.zzzping.top
+nginx -t
+ln -s "$NOTES_PREVIOUS_TARGET" "$NOTES_WEB/current.rollback-$NOTES_FAILED_RELEASE"
+mv -Tf "$NOTES_WEB/current.rollback-$NOTES_FAILED_RELEASE" "$NOTES_WEB/current"
+systemctl reload nginx
+```
+
+`#page=N` 是浏览器 PDF 阅读器参数，N 为真实 PDF 页序。响应校验器检查 PDF 哈希、MIME 和 `206` 范围内容，实际页码定位仍需浏览器验收；部分手机会下载或使用外部阅读器。
+
+现有部署历史记载使用手动 DNS-01，公网 HTTP 曾被备案页拦截；这不是本次对当前环境的确认。发布前查看 `certbot certificates`、实际 renewal 配置及证书到期时间。若仍使用未配置自动钩子的手动 DNS 验证，续期需要新的 TXT 值，不能仅依赖 `certbot.timer`。续期成功后执行配置检查及 reload。对外分享完整 HTTPS 地址，HTTP 行为需要另行实测。
+
+发布历史和原验收范围见[合并前部署记录](../docs/history/two-book-deployment-before-merge.md)。每次新发布把源版本、归档/文件哈希、审批来源、备份目标、实际命令、响应校验、浏览器证据及回滚结果保存到 `deploy/reports/<release-id>/`；临时日志不纳入 Git。元数据只记录相对源码路径，不写认证秘密或本机用户目录。
+
+技术边界见 [TECH.md](../TECH.md)，发布门禁见 [发布治理](../docs/governance/RELEASE.md)，本次本地验证范围见[迁移记录](../docs/migration-20261012.md)。

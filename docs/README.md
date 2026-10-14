@@ -19,6 +19,16 @@
 - [人类入口](../README.md)与 [书籍登记](../books/catalog.json)。
 - [统一部署与恢复](../deploy/README.md)：实际发布步骤的唯一操作说明。
 - [治理更新流程](governance-updates.md)。
+- [RN-001 读书笔记共同标准](reading-notes-standard.md)：跨书的来源、全书规划、伴读讲解、题解、程序、版式与分层验收方法；[新书模板](templates/reading-notes/README.md)记录书级事实。
 - [新增子项目](adding-a-book.md)与 [本次迁移](migration-20261012.md)。
 - [架构决策](decisions/ADR-001-book-subprojects.md)、[问题单](../issues/I001-project-merge.md)、[计划](../plan/P001-project-merge.md)、[测试设计](../test/T001-project-merge.md)与 [里程碑](../milestone/M001-project-merge.md)。
 - [书籍内容与计算规则入口](rules/README.md)；专项正文规范随各书维护。
+- [CS:APP 第一批笔记](../books/csapp/README.md)：[I002](../issues/I002-csapp-part-one.md)、[P002](../plan/P002-csapp-part-one.md)、[T002](../test/T002-csapp-part-one.md)、[M002](../milestone/M002-csapp-part-one.md)。
+
+- [CS:APP 全书地图与第一部分伴读](../books/csapp/notes/README.md)：[I003](../issues/I003-csapp-companion.md)、[P003](../plan/P003-csapp-companion.md)、[T003](../test/T003-csapp-companion.md)、[M003](../milestone/M003-csapp-companion.md)。
+
+- [CS:APP 原文、公式与阅读修订](../books/csapp/notes/source_excerpts.json)：[I004](../issues/I004-csapp-source-reading.md)、[P004](../plan/P004-csapp-source-reading.md)、[T004](../test/T004-csapp-source-reading.md)、[M004](../milestone/M004-csapp-source-reading.md)。
+
+- [CS:APP 第三部分伴读](../books/csapp/notes/book_overview.html#part-iii)：[I007](../issues/I007-csapp-part-three.md)、[P007](../plan/P007-csapp-part-three.md)、[T007](../test/T007-csapp-part-three.md)、[M007](../milestone/M007-csapp-part-three.md)。
+
+- [跨书方法固化](reading-notes-standard.md)：[I009](../issues/I009-reading-notes-standard.md)、[P009](../plan/P009-reading-notes-standard.md)、[T009](../test/T009-reading-notes-standard.md)、[M009](../milestone/M009-reading-notes-standard.md)。

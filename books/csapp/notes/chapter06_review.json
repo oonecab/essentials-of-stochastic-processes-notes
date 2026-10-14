@@ -1,0 +1,1193 @@
+{
+  "chapter": 6,
+  "edition": "Computer Systems: A Programmer’s Perspective, Third Global Edition",
+  "source": {
+    "path": "books/csapp/csapp.pdf",
+    "sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+    "pdf_pages": [
+      616,
+      703
+    ],
+    "printed_pages": [
+      615,
+      702
+    ],
+    "entire_chapter_and_practice_solutions_read": true,
+    "source_visual_review": "tmp/csapp/rework/ch06/source-solutions-702.png",
+    "source_visual_finding": "PDF703 confirms the inconsistent two-record-per-32-byte arithmetic in printed practice solutions 6.18-6.20."
+  },
+  "page": "books/csapp/notes/chapter06_memory.html",
+  "scope": {
+    "main_sections": [
+      "s6-1",
+      "s6-2",
+      "s6-3",
+      "s6-4",
+      "s6-5",
+      "s6-6",
+      "s6-7"
+    ],
+    "subsections": [
+      "s6-1-1",
+      "s6-1-2",
+      "s6-1-3",
+      "s6-1-4",
+      "s6-2-1",
+      "s6-2-2",
+      "s6-2-3",
+      "s6-3-1",
+      "s6-3-2",
+      "s6-4-1",
+      "s6-4-2",
+      "s6-4-3",
+      "s6-4-4",
+      "s6-4-5",
+      "s6-4-6",
+      "s6-4-7",
+      "s6-5-1",
+      "s6-6-1",
+      "s6-6-2",
+      "s6-6-3"
+    ],
+    "original_exercises": 46,
+    "practice": 21,
+    "homework": 25,
+    "reading_notes": 7,
+    "annotation_cards": 14,
+    "svg_figures": 4,
+    "legacy_cache_c_python_retained": true,
+    "original_self_checks_retained": [
+      "q6-1",
+      "q6-2",
+      "q6-3"
+    ]
+  },
+  "exercises": [
+    {
+      "number": "6.1",
+      "kind": "practice",
+      "anchor": "ex-6-1",
+      "pdf_pages": [
+        621,
+        622
+      ],
+      "printed_pages": [
+        620,
+        621
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "minimize maximum row/column address bits by balanced powers of two",
+      "source_correction": null
+    },
+    {
+      "number": "6.2",
+      "kind": "practice",
+      "anchor": "ex-6-2",
+      "pdf_pages": [
+        629
+      ],
+      "printed_pages": [
+        628
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "6 surfaces times 15000 tracks times 500 sectors times 1024 bytes",
+      "source_correction": null
+    },
+    {
+      "number": "6.3",
+      "kind": "practice",
+      "anchor": "ex-6-3",
+      "pdf_pages": [
+        632
+      ],
+      "printed_pages": [
+        631
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "5 + 2.5 + 5/300 milliseconds",
+      "source_correction": null
+    },
+    {
+      "number": "6.4",
+      "kind": "practice",
+      "anchor": "ex-6-4",
+      "pdf_pages": [
+        632,
+        633
+      ],
+      "printed_pages": [
+        631,
+        632
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "2048 binary-MB sectors plus separate decimal-MB interpretation; corrected original solution",
+      "source_correction": "书末解答把 1 MB 当成 10,000 个 512 字节块，并据此算两圈；这与题干不符。本解答同时明确二进制与十进制口径。"
+    },
+    {
+      "number": "6.5",
+      "kind": "practice",
+      "anchor": "ex-6-5",
+      "pdf_pages": [
+        638,
+        639
+      ],
+      "printed_pages": [
+        637,
+        638
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "128 PB divided by all three exact rates; corrected original solution",
+      "source_correction": "书末答案改用了 520 MB/s、205 MB/s、50 GB/day，与本版题干三项数值都不一致；这里保留并使用题干数值。"
+    },
+    {
+      "number": "6.6",
+      "kind": "practice",
+      "anchor": "ex-6-6",
+      "pdf_pages": [
+        641
+      ],
+      "printed_pages": [
+        640
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "two-point exponential extrapolation 2024.794 versus textbook rounded 2027",
+      "source_correction": "指数趋势是这里明确采用的模型；两个数据点本身不能唯一决定未来价格。书末粗估与按同一指数率精算的年份不同。"
+    },
+    {
+      "number": "6.7",
+      "kind": "practice",
+      "anchor": "ex-6-7",
+      "pdf_pages": [
+        645
+      ],
+      "printed_pages": [
+        644
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "loop order j,k,i for backward contiguous addresses",
+      "source_correction": null
+    },
+    {
+      "number": "6.8",
+      "kind": "practice",
+      "anchor": "ex-6-8",
+      "pdf_pages": [
+        646
+      ],
+      "printed_pages": [
+        645
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "clear1 > clear2 > clear3; explicit field offsets",
+      "source_correction": null
+    },
+    {
+      "number": "6.9",
+      "kind": "practice",
+      "anchor": "ex-6-9",
+      "pdf_pages": [
+        653
+      ],
+      "printed_pages": [
+        652
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "three complete cache geometry rows",
+      "source_correction": null
+    },
+    {
+      "number": "6.10",
+      "kind": "practice",
+      "anchor": "ex-6-10",
+      "pdf_pages": [
+        661
+      ],
+      "printed_pages": [
+        660
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "padding produces 12 hits in 16 references",
+      "source_correction": null
+    },
+    {
+      "number": "6.11",
+      "kind": "practice",
+      "anchor": "ex-6-11",
+      "pdf_pages": [
+        661
+      ],
+      "printed_pages": [
+        660
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "high-bit index covers 2^t blocks; boundary-aware maximum 2 versus aligned 1",
+      "source_correction": "书末的 1 块结果隐含数组位于同一高位索引区间。这里保留这个常用假设，并给出题干未定基址时的严格最大值 2。"
+    },
+    {
+      "number": "6.12",
+      "kind": "practice",
+      "anchor": "ex-6-12",
+      "pdf_pages": [
+        665
+      ],
+      "printed_pages": [
+        664
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "13-bit CO=1:0, CI=4:2, CT=12:5; full given cache state",
+      "source_correction": null
+    },
+    {
+      "number": "6.13",
+      "kind": "practice",
+      "anchor": "ex-6-13",
+      "pdf_pages": [
+        665,
+        666
+      ],
+      "printed_pages": [
+        664,
+        665
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "0x0D53 fields and miss",
+      "source_correction": null
+    },
+    {
+      "number": "6.14",
+      "kind": "practice",
+      "anchor": "ex-6-14",
+      "pdf_pages": [
+        666
+      ],
+      "printed_pages": [
+        665
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "0x0CB4 fields and miss",
+      "source_correction": null
+    },
+    {
+      "number": "6.15",
+      "kind": "practice",
+      "anchor": "ex-6-15",
+      "pdf_pages": [
+        666,
+        667
+      ],
+      "printed_pages": [
+        665,
+        666
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "0x0A31 fields and miss",
+      "source_correction": null
+    },
+    {
+      "number": "6.16",
+      "kind": "practice",
+      "anchor": "ex-6-16",
+      "pdf_pages": [
+        667
+      ],
+      "printed_pages": [
+        666
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "valid tag 0x32 yields 0x064C through 0x064F",
+      "source_correction": null
+    },
+    {
+      "number": "6.17",
+      "kind": "practice",
+      "anchor": "ex-6-17",
+      "pdf_pages": [
+        673,
+        674
+      ],
+      "printed_pages": [
+        672,
+        673
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "all eight ordered read/write events and both source/destination matrices at C16/C32",
+      "source_correction": null
+    },
+    {
+      "number": "6.18",
+      "kind": "practice",
+      "anchor": "ex-6-18",
+      "pdf_pages": [
+        674,
+        675
+      ],
+      "printed_pages": [
+        673,
+        674
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "2048 reads, 512 misses, 25%; 4 records per 32-byte block",
+      "source_correction": "书末误称一块只放两个结构体，给 1024 misses/50%；这不符合题干 int=4、仅 x/y 两字段和 B=32。这里按完整声明得到 512/25%。"
+    },
+    {
+      "number": "6.19",
+      "kind": "practice",
+      "anchor": "ex-6-19",
+      "pdf_pages": [
+        675
+      ],
+      "printed_pages": [
+        674
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "2048 reads, 1024 hits; same 50% hit at 2048 and 4096 bytes",
+      "source_correction": "书末把数组大小与缓存容量关系算错，声称加倍后容纳整图并给 75%；给定 32×32×8=8192 字节，4096 字节仍不足，逐组轨迹得到 50%。"
+    },
+    {
+      "number": "6.20",
+      "kind": "practice",
+      "anchor": "ex-6-20",
+      "pdf_pages": [
+        675,
+        676
+      ],
+      "printed_pages": [
+        674,
+        675
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "2048 reads, 1792 hits, 87.5%; unchanged when capacity doubles",
+      "source_correction": "书末给 1536 hits/75%，仍按每块两个结构体计算；按题干每块四个结构体应为 1792/87.5%。"
+    },
+    {
+      "number": "6.21",
+      "kind": "practice",
+      "anchor": "ex-6-21",
+      "pdf_pages": [
+        680
+      ],
+      "printed_pages": [
+        679
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "2.8 cycles per 16-byte throughput budget distinguished from dependent latency",
+      "source_correction": "书末把 16 字节对象称为 long；该实验的 long 实际为 8 字节。题目要求的 16 字节可以按两个元素的有效吞吐预算理解。"
+    },
+    {
+      "number": "6.22",
+      "kind": "homework",
+      "anchor": "ex-6-22",
+      "pdf_pages": [
+        686
+      ],
+      "printed_pages": [
+        685
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "maximize x(1-x), x=1/2",
+      "source_correction": null
+    },
+    {
+      "number": "6.23",
+      "kind": "homework",
+      "anchor": "ex-6-23",
+      "pdf_pages": [
+        686
+      ],
+      "printed_pages": [
+        685
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "3+2.5+0.01=5.51ms",
+      "source_correction": null
+    },
+    {
+      "number": "6.24",
+      "kind": "homework",
+      "anchor": "ex-6-24",
+      "pdf_pages": [
+        686,
+        687
+      ],
+      "printed_pages": [
+        685,
+        686
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "4096 binary-MB sectors; sequential/random timings plus decimal alternative",
+      "source_correction": "原题 MB 未定义且要求完整 512 字节逻辑块。这里给二进制文件大小的完整答案，并列十进制向上取整的对应值。"
+    },
+    {
+      "number": "6.25",
+      "kind": "homework",
+      "anchor": "ex-6-25",
+      "pdf_pages": [
+        687
+      ],
+      "printed_pages": [
+        686
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "six complete geometry rows",
+      "source_correction": null
+    },
+    {
+      "number": "6.26",
+      "kind": "homework",
+      "anchor": "ex-6-26",
+      "pdf_pages": [
+        687
+      ],
+      "printed_pages": [
+        686
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "four complete inverse geometry rows",
+      "source_correction": null
+    },
+    {
+      "number": "6.27",
+      "kind": "homework",
+      "anchor": "ex-6-27",
+      "pdf_pages": [
+        687
+      ],
+      "printed_pages": [
+        686
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "enumerate valid tags and four offsets in sets 1 and 6",
+      "source_correction": null
+    },
+    {
+      "number": "6.28",
+      "kind": "homework",
+      "anchor": "ex-6-28",
+      "pdf_pages": [
+        687,
+        688
+      ],
+      "printed_pages": [
+        686,
+        687
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "enumerate sets 2,4,5,7 including no valid lines",
+      "source_correction": null
+    },
+    {
+      "number": "6.29",
+      "kind": "homework",
+      "anchor": "ex-6-29",
+      "pdf_pages": [
+        688
+      ],
+      "printed_pages": [
+        687
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "12-bit correction; miss unknown, hit write, hit 0xC0 sequential references",
+      "source_correction": "题干明确地址为12位，配图却画了位12到0共13格。这里按12位修正为11到0，CO=1:0、CI=3:2、CT=11:4。"
+    },
+    {
+      "number": "6.30",
+      "kind": "homework",
+      "anchor": "ex-6-30",
+      "pdf_pages": [
+        689
+      ],
+      "printed_pages": [
+        688
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "128 data bytes, 8-bit tag/3-bit set/2-bit offset with all 32 input lines",
+      "source_correction": null
+    },
+    {
+      "number": "6.31",
+      "kind": "homework",
+      "anchor": "ex-6-31",
+      "pdf_pages": [
+        689,
+        690
+      ],
+      "printed_pages": [
+        688,
+        689
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "0x071A hits set6 valid line3, value0xEB",
+      "source_correction": null
+    },
+    {
+      "number": "6.32",
+      "kind": "homework",
+      "anchor": "ex-6-32",
+      "pdf_pages": [
+        690
+      ],
+      "printed_pages": [
+        689
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "0x16E8 misses set2 tag0xB7",
+      "source_correction": null
+    },
+    {
+      "number": "6.33",
+      "kind": "homework",
+      "anchor": "ex-6-33",
+      "pdf_pages": [
+        690
+      ],
+      "printed_pages": [
+        689
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "all eight addresses from valid tags BC and B6 in set2",
+      "source_correction": null
+    },
+    {
+      "number": "6.34",
+      "kind": "homework",
+      "anchor": "ex-6-34",
+      "pdf_pages": [
+        690,
+        691
+      ],
+      "printed_pages": [
+        689,
+        690
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "32 ordered events and full 4x4 src/dst H/M matrices for C32",
+      "source_correction": null
+    },
+    {
+      "number": "6.35",
+      "kind": "homework",
+      "anchor": "ex-6-35",
+      "pdf_pages": [
+        691
+      ],
+      "printed_pages": [
+        690
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "8 cold misses, full 4x4 H/M matrices for C128",
+      "source_correction": null
+    },
+    {
+      "number": "6.36",
+      "kind": "homework",
+      "anchor": "ex-6-36",
+      "pdf_pages": [
+        691,
+        692
+      ],
+      "printed_pages": [
+        690,
+        691
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "100%,25%,25%; capacity cold-miss bound and larger-block 12.5% example",
+      "source_correction": null
+    },
+    {
+      "number": "6.37",
+      "kind": "homework",
+      "anchor": "ex-6-37",
+      "pdf_pages": [
+        692,
+        693
+      ],
+      "printed_pages": [
+        691,
+        692
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "N64 rates25/100/50%; N60 rates25/25/25%; group stride gcd explanation",
+      "source_correction": null
+    },
+    {
+      "number": "6.38",
+      "kind": "homework",
+      "anchor": "ex-6-38",
+      "pdf_pages": [
+        693,
+        694
+      ],
+      "printed_pages": [
+        692,
+        693
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "1024 writes,768 hits,75% under write-allocate",
+      "source_correction": null
+    },
+    {
+      "number": "6.39",
+      "kind": "homework",
+      "anchor": "ex-6-39",
+      "pdf_pages": [
+        694,
+        695
+      ],
+      "printed_pages": [
+        693,
+        694
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "1024 writes,768 hits,75%; within-record use survives column order",
+      "source_correction": null
+    },
+    {
+      "number": "6.40",
+      "kind": "homework",
+      "anchor": "ex-6-40",
+      "pdf_pages": [
+        695
+      ],
+      "printed_pages": [
+        694
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "two passes,1024 writes,512 hits,50%",
+      "source_correction": null
+    },
+    {
+      "number": "6.41",
+      "kind": "homework",
+      "anchor": "ex-6-41",
+      "pdf_pages": [
+        695,
+        696
+      ],
+      "printed_pages": [
+        694,
+        695
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "column pixels,75% under write-allocate; group repetition every64 rows",
+      "source_correction": null
+    },
+    {
+      "number": "6.42",
+      "kind": "homework",
+      "anchor": "ex-6-42",
+      "pdf_pages": [
+        696
+      ],
+      "printed_pages": [
+        695
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "sequential bytes,87.5%,153600 misses",
+      "source_correction": null
+    },
+    {
+      "number": "6.43",
+      "kind": "homework",
+      "anchor": "ex-6-43",
+      "pdf_pages": [
+        696
+      ],
+      "printed_pages": [
+        695
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "four-byte stores,50%,same153600 misses; C alias/alignment correction",
+      "source_correction": "这里只分析题给4字节写地址轨迹；原int*强制转换的C类型/对齐问题需与缓存计算分开。"
+    },
+    {
+      "number": "6.44",
+      "kind": "homework",
+      "anchor": "ex-6-44",
+      "pdf_pages": [
+        696
+      ],
+      "printed_pages": [
+        695
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "upstream downloaded, ARM build failure captured; portable C70-point measured mountain and bounded capacity estimates",
+      "source_correction": "本次主机是ARM64 macOS；原x86计时源码的构建失败与可移植C版的真实运行分别记录，缓存容量以曲线区间和系统拓扑相互核对。"
+    },
+    {
+      "number": "6.45",
+      "kind": "homework",
+      "anchor": "ex-6-45",
+      "pdf_pages": [
+        696,
+        697
+      ],
+      "printed_pages": [
+        695,
+        696
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "complete bounded tiled transpose,55 edge tests and actual O2 comparison",
+      "source_correction": null
+    },
+    {
+      "number": "6.46",
+      "kind": "homework",
+      "anchor": "ex-6-46",
+      "pdf_pages": [
+        697
+      ],
+      "printed_pages": [
+        696
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "complete paired upper-triangle tiled OR,55 edge tests and actual O2 comparison; diagonal condition corrected",
+      "source_correction": "“邻接矩阵对角总是1”不是一般图论性质，而是本题附加输入约定。转换不应凭空为原图没有的自环置1。"
+    }
+  ],
+  "source_notes": [
+    {
+      "location": "Figure6.2",
+      "issue": "Persistent describes powered retention; both SRAM and DRAM are volatile."
+    },
+    {
+      "location": "Figure6.40",
+      "issue": "Printed tail uses i++; official downloadable mountain.c uses i+=stride. Model uses stride and exact ceil(elems/stride) count."
+    },
+    {
+      "location": "6.18 introduction",
+      "issue": "512 algae conflicts with declaration grid[32][32]; use1024 records."
+    },
+    {
+      "location": "6.38-6.43",
+      "issue": "Write allocation not explicitly listed; answer states the chapter-default write-allocate assumption and no-write-allocate alternative."
+    }
+  ],
+  "programs": [
+    {
+      "path": "books/csapp/code/ch06_cache.c",
+      "language": "c",
+      "html_code_id": "ch06_cache-c",
+      "sha256": "d98fdc9de99e1cf6c85eb40579f109228c2ed4a98e4bff25f9c3c09915dfae29",
+      "exact_display_match": true,
+      "html_extracted_compile_or_run": "passed",
+      "default_output": "operations=5 hits=1 misses=4 evictions=2 writebacks=0\nread_bytes=8 write_bytes=0 dirty_lines=0\n"
+    },
+    {
+      "path": "books/csapp/code/ch06_cache.py",
+      "language": "python",
+      "html_code_id": "ch06_cache-python",
+      "sha256": "9df4ab5796b681caeb707130af752a5e194188f8909889e5767d0052cc25dc7d",
+      "exact_display_match": true,
+      "html_extracted_compile_or_run": "passed",
+      "default_output": "operations=5 hits=1 misses=4 evictions=2 writebacks=0\nread_bytes=8 write_bytes=0 dirty_lines=0\n"
+    },
+    {
+      "path": "books/csapp/code/ch06_kernels.c",
+      "language": "c",
+      "html_code_id": "ch06_kernels-c",
+      "sha256": "4c2614b90a5d07b1fc7cd9267598193881b82530b341fbfe10ded7c0e1772db8",
+      "exact_display_match": true,
+      "html_extracted_compile_or_run": "passed",
+      "default_output": "dimensions=11 tile-cases=55 transpose=PASS undirect=PASS\n"
+    },
+    {
+      "path": "books/csapp/code/ch06_kernels.py",
+      "language": "python",
+      "html_code_id": "ch06_kernels-python",
+      "sha256": "7d6443abb0d8933da1bf4e979f6b8d2f3b5df1e36eb08123b2673800fdf1e496",
+      "exact_display_match": true,
+      "html_extracted_compile_or_run": "passed",
+      "default_output": "dimensions=11 tile-cases=55 transpose=PASS undirect=PASS\n"
+    },
+    {
+      "path": "books/csapp/code/ch06_mountain.c",
+      "language": "c",
+      "html_code_id": "ch06_mountain-c",
+      "sha256": "6671555e6e468c0d989e676a84b1e4abfc855d988a29a6617b40d57ca311e585",
+      "exact_display_match": true,
+      "html_extracted_compile_or_run": "passed",
+      "default_output": "scan-cases=1105 checksum=PASS\n"
+    },
+    {
+      "path": "books/csapp/code/ch06_mountain.py",
+      "language": "python",
+      "html_code_id": "ch06_mountain-python",
+      "sha256": "fa96deb75cf0d50a7cf27b0ca4497ea05e03e9946c14f37bce85d463e28adda2",
+      "exact_display_match": true,
+      "html_extracted_compile_or_run": "passed",
+      "default_output": "scan-cases=1105 checksum=PASS\n"
+    }
+  ],
+  "interfaces": {
+    "ch06_cache": "no args demo; or S E B wb wa trace_file. Lines R|W 0xADDRESS SIZE.64-bit address,1..4096 bytes. Counts block hits/misses, fills, dirty evictions and traffic; no cycle simulation.",
+    "ch06_kernels": "no args55 deterministic cases; --bench n repeats, n1..2048 repeats1..31. Separate-array transpose; Boolean in-place symmetric closure.",
+    "ch06_mountain": "no args1105 deterministic scan checks; --bench measures70 working-set/stride points. C11 wall-clock byte throughput, no assumed CPU frequency. Python mirrors algorithm but its timings include interpreter cost."
+  },
+  "verification": {
+    "independent_harness": "tmp/csapp/rework/ch06/verify.py",
+    "independent_results": {
+      "seed": 606,
+      "random_traces": 108,
+      "operations_per_random_trace": 201,
+      "cross_language_and_independent_oracle": true,
+      "paper_scenarios": 31,
+      "kernel_dimensions": 11,
+      "kernel_tile_cases": 55,
+      "mountain_scan_cases": 1105
+    },
+    "paper_answers": "tmp/csapp/rework/ch06/answers.json",
+    "independent_oracle": "full block-number dictionary and per-set last-use timestamp oracle; maintained Python uses LRU lists.108 geometries/policies,201 operations each, including UINT64_MAX final-byte access. C sanitizer output compared to both.",
+    "sanitizer": "clang -std=c11 -Wall -Wextra -Werror -pedantic -fsanitize=address,undefined",
+    "final_html_source_extracts": "All six files extracted from final HTML, exact-equality checked, C compiled with sanitizers, both languages run, deterministic default outputs identical.",
+    "html": "no duplicate IDs; all local hash links resolve;46 manifest exercises match type and page; no placeholders",
+    "browser_acceptance": "notes/reading_review.json",
+    "benchmark_semantics_cross_language": "C/Python --bench1 3 and --bench32 3 have identical six names and checksums; times excluded from equality comparison.",
+    "invalid_input_checks": "Both cache models reject wrapped address, invalid operation and zero width with exit2.",
+    "timing_correction": "Kernel timespec values are subtracted before conversion to double; n<256 uses floor(65536/n^2) calls and normalization; volatile function pointers preserve every call. Every graph call uses an independent original directed graph, with all copies initialized before timing. The tiny graph batch occupies at most 256 KiB; n>=256 uses one call per batch. Published1024x1024 samples use batch=1 and are unchanged by the subsequent input-reset fix.",
+    "root_quick_check": {
+      "command": "python3 tools/project.py check --book csapp --quick",
+      "status": "passed_after_parent_template_normalization",
+      "report": "tmp/project-check/20261013T223119-d7fncy_b/report.json"
+    },
+    "earlier_quick_integration_observation": {
+      "command": "python3 tools/project.py check --book csapp --quick",
+      "status": "stopped_at_parent_owned_template_integration_before_normalization",
+      "error": "chapter06_memory.html: inconsistent presentation/navigation",
+      "report": "tmp/project-check/20261013T222458-a754apvo/report.json",
+      "root_structure_and_release_support": "passed"
+    },
+    "benchmark_input_reset": {
+      "issue": "C06-BENCH-INPUT-RESET",
+      "status": "fixed_and_verified",
+      "changed_scope": [
+        "books/csapp/code/ch06_kernels.c",
+        "books/csapp/notes/chapter06_memory.html:ch06_kernels-c and one timing-condition sentence",
+        "books/csapp/notes/chapter06_review.json:related code and verification records"
+      ],
+      "method": "Prepare batch independent copies of the original directed graph before timestamp(); timed call z receives d+z*n*n. Restore all copies before every measured repetition. Transpose continues reading its unchanged separate source array.",
+      "small_n_conditions": "n<256: batch=floor(65536/n^2), all graph copies together use at most 256 KiB and can exceed one graph in cache footprint. n>=256: batch=1. Per-call time is elapsed/batch; printed milliseconds have three decimals and may round to 0.000 for tiny kernels.",
+      "optimized_and_sanitized_benchmarks": {
+        "dimensions": [
+          1,
+          32,
+          1024
+        ],
+        "repetitions": 3,
+        "kernels_per_dimension": 6,
+        "status": "all exit0; checksums match independent formula; sanitizer stderr empty"
+      },
+      "html_extracted_source": "Exact equality confirmed, compiled with -std=c11 -Wall -Wextra -Werror -pedantic -fsanitize=address,undefined, default and all three benchmark dimensions passed.",
+      "per_call_fresh_input_assertions": {
+        "1": 589824,
+        "32": 576,
+        "1024": 9
+      },
+      "assertion_scope": "Test-only instrumented build asserts memcmp(graph,original,n*n*sizeof(uint32_t))==0 immediately before every graph call; all asserted runs passed with ASan/UBSan. Instrumented times are not performance samples.",
+      "negative_control": "A test-only mutant reused d for every graph call. n=32/repetitions=1 triggered the expected memcmp assertion and exited nonzero, proving the regression check detects consumed input.",
+      "cross_language": "Unmodified Python and optimized C n=1/32 repetitions=3 have identical kernel names and checksums; measured times excluded from equality.",
+      "published_1024_samples": "Unchanged: batch=1 before and after the fix; no memory mountain rerun needed for this kernel-only issue.",
+      "evidence_directory": "tmp/csapp/rework/ch06/bench-input-reset",
+      "verification_script": "tmp/csapp/rework/ch06/bench-input-reset/verify.py",
+      "results": "tmp/csapp/rework/ch06/bench-input-reset/results.json",
+      "html_scope_evidence": "tmp/csapp/rework/ch06/bench-input-reset/scope.json",
+      "source_sha256": "4c2614b90a5d07b1fc7cd9267598193881b82530b341fbfe10ded7c0e1772db8",
+      "targeted_diff_check": "git diff --check -- books/csapp/code/ch06_kernels.c books/csapp/notes/chapter06_memory.html books/csapp/notes/chapter06_review.json: passed",
+      "root_quick_check": {
+        "command": "python3 tools/project.py check --book csapp --quick",
+        "status": "passed",
+        "report": "tmp/project-check/20261013T224938-f37i3ytl/report.json"
+      }
+    }
+  },
+  "benchmarks": {
+    "environment": {
+      "time": "2026-10-13T22:18:20.552273",
+      "architecture": "arm64",
+      "model": "Mac15,12",
+      "compiler_flags": "clang -std=c11 -Wall -Wextra -Werror -pedantic -O2",
+      "bench_repetitions": {
+        "kernels": 7,
+        "mountain": 3
+      },
+      "selected_statistic": "minimum elapsed time",
+      "kernel_dimension": 1024,
+      "allocation_and_initialization": "outside timing",
+      "cycle_frequency": "not assumed",
+      "clock": "C11 timespec_get TIME_UTC, reject nonpositive elapsed time",
+      "affinity": "not pinned; scheduler and background activity can affect results"
+    },
+    "kernel_output": "tmp/csapp/rework/ch06/kernels-bench-final.txt",
+    "mountain_output": "tmp/csapp/rework/ch06/mountain-bench.csv",
+    "topology_evidence": {
+      "performance_L1D_bytes": 131072,
+      "performance_L2_bytes": 16777216,
+      "efficiency_L1D_bytes": 65536,
+      "efficiency_L2_bytes": 4194304,
+      "line_bytes": 128
+    },
+    "mountain_estimate": "L1 around128KiB; next ridge effective8-16MiB; unpinned and shared occupancy preclude exact topology inference.",
+    "kernel_final_ms": {
+      "transpose_plain": 3.424,
+      "transpose_tiled16": 0.437,
+      "transpose_tiled32": 0.544,
+      "graph_plain": 4.704,
+      "graph_triangle": 2.324,
+      "graph_tiled16": 0.332
+    }
+  },
+  "upstream_mountain": {
+    "source_page": "https://csapp.cs.cmu.edu/3e/code.html",
+    "archive_url": "https://csapp.cs.cmu.edu/3e/code-all.tar",
+    "archive_sha256": "1be590472f18d26e8d46929c851807d672508e70ca10701b5a7283b679544288",
+    "original_build": "failed on ARM64: unknown register name %edx in asm",
+    "log": "tmp/csapp/rework/ch06/upstream/build-error.txt",
+    "portable_experiment": "completed with maintained C11 implementation"
+  },
+  "boundaries": [
+    "Cache model does not store data contents or simulate time, multilevel inclusion/coherence, TLB, prefetch, write combining or non-temporal stores.",
+    "Cache query worksheet values are evaluated directly against the supplied fixed cache states; trace simulator handles dynamic read/write hit behavior.",
+    "Real hardware timings are samples for the stated ARM64 host, compiler and inputs; no universal fastest algorithm claim.",
+    "Python measurement mode cannot isolate hardware cache throughput because interpreter overhead dominates.",
+    "Original x86 mountain was downloaded but not executed on the ARM host; portable C experiment is separately identified."
+  ],
+  "status": "content_programs_and_local_reading_verified",
+  "page_sha256": "aa335c9232be4be6c3b0516c7a40df688d8bebe6a5dec8fac1b9eb5c57b94f5f",
+  "integrated_reading_review": "notes/reading_review.json",
+  "integrated_check": "tmp/project-check/20261013T225356-n4s1jvtm/csapp/report.json",
+  "independent_review": {
+    "status": "PASS",
+    "open_findings": [],
+    "findings": [
+      {
+        "code": "C06-ADDRESS-SPACE",
+        "status": "CLOSED",
+        "anchor": "s6-1",
+        "basis": "Register identifiers, ordinary memory lookup, and disk page-in are explicitly distinguished."
+      },
+      {
+        "code": "C06-6-21-DENOMINATOR",
+        "status": "CLOSED",
+        "anchor": "ex-6-21",
+        "basis": "Complete bandwidth denominator gives 2.8 cycles."
+      },
+      {
+        "code": "C06-6-46-SHORTCIRCUIT-COUNT",
+        "status": "CLOSED",
+        "anchor": "ex-6-46",
+        "basis": "Displayed integer code uses bitwise OR on 0/1 input; prior counterexample and 64 Boolean graph read-count cases pass."
+      },
+      {
+        "code": "C06-BENCH-INPUT-RESET",
+        "status": "CLOSED",
+        "anchor": "kernel-model",
+        "basis": "Each graph call gets an independent original input; timing excludes copies; batch working-set boundary documented; actual call-site checks and negative control pass."
+      },
+      {
+        "code": "C06-6-7-ZERO-DIMENSION",
+        "status": "CLOSED",
+        "anchor": "ex-6-7",
+        "basis": "Strict C11 array interface states N>0."
+      },
+      {
+        "code": "NNE-SESSION-RESIDUE",
+        "status": "CLOSED",
+        "anchor": "models;ex-6-44",
+        "basis": "Updated reader-facing paragraphs describe teaching usage and actual portable measurement; required compatibility facts remain."
+      }
+    ],
+    "html_sha256": "1bd2b176cbe245339269305af14d2cdcdb060802570e869ad8aaeca8895d1e87",
+    "code_sha256": "4c2614b90a5d07b1fc7cd9267598193881b82530b341fbfe10ded7c0e1772db8",
+    "execution_evidence": "closure-execution.json",
+    "or_count_output": "6.46 prior counterexample now performs two source reads; all 64 three-vertex input graphs with diagonal 1 perform six source reads.\n",
+    "scope": "Read-only closure of six previously reported findings, source/display/review sync; no repeated full memory-mountain benchmark or browser acceptance.",
+    "initial_complete_review": "tmp/csapp/rework/content-review/ch06/independent-results.json"
+  },
+  "source_reading_revision": {
+    "reviewed_at": "2026-10-13T16:41:34.904736+00:00",
+    "page_sha256": "cea816e6af113b7bfcc0437f2df472fa7cd180e8585572952197e91c040b9455",
+    "source_passages": 7,
+    "record": "source_reading_review.json",
+    "reading": "reading_review.json",
+    "binding_note": "本对象绑定I004新增原文、关联解释和最终呈现；顶层旧审阅哈希与逐题结论保留I003的历史范围。"
+  },
+  "part_two_navigation_revision": {
+    "recorded_at": "2026-10-14T01:55:51.767578+00:00",
+    "previous_page_sha256": "cea816e6af113b7bfcc0437f2df472fa7cd180e8585572952197e91c040b9455",
+    "current_page_sha256": "4d2091e128aeca78ab483e9415e558ab8f2058ae3d1520009dc01ba52d3db3dd",
+    "change": "页首和页尾下一章接至第7章；第6章正文/程序保留。",
+    "browser_path": "chapter6-to-7 in reading_review.json"
+  },
+  "pdf_navigation_revision": {
+    "issue": "I011",
+    "reviewed_at": "2026-10-14T14:17:18.562268+00:00",
+    "status": "verified_locally",
+    "scope": "PDF publication navigation only. The chapter 6 changes are exactly two source-link URLs and displayed start-page values; program/source-excerpt content unchanged. The previous F5 browser-proxy acceptance stays pending.",
+    "page_hash_change": {
+      "page": "chapter06_memory.html",
+      "before": "4d2091e128aeca78ab483e9415e558ab8f2058ae3d1520009dc01ba52d3db3dd",
+      "after": "aa335c9232be4be6c3b0516c7a40df688d8bebe6a5dec8fac1b9eb5c57b94f5f"
+    },
+    "source_pdf_sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+    "changes": [
+      {
+        "section": "6.3",
+        "pdf_before": 647,
+        "pdf_after": 646,
+        "printed_after": 645
+      },
+      {
+        "section": "6.4",
+        "pdf_before": 652,
+        "pdf_after": 651,
+        "printed_after": 650
+      }
+    ],
+    "source_pages_visually_read": [
+      646,
+      651
+    ],
+    "regression": "tools/test_reader_views.py",
+    "static_check": "tmp/project-check/20261014T221214-soi4soo2/report.json",
+    "package_audit": "tmp/csapp/pdf-navigation/package-audit.json",
+    "qa_release": "20261014T221113",
+    "acceptance": "test/T011-csapp-pdf-navigation.md"
+  }
+}

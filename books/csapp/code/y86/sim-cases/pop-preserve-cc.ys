@@ -1,0 +1,8 @@
+irmovq stack,%rsp
+xorq %rax,%rax
+popq %rdx
+je ok
+irmovq $99,%rbx
+ok: halt
+.pos 0x200
+stack: .quad 5

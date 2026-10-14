@@ -1,0 +1,8 @@
+irmovq $0xf00,%rsp
+irmovq data,%rcx
+mrmovq 0(%rcx),%rdx
+pushq %rdx
+popq %rax
+halt
+.pos 0x200
+data: .quad 13

@@ -1,0 +1,6 @@
+xorq %rax,%rax
+irmovq $0xf00,%rsp
+jne wrong
+irmovq $42,%rbx
+halt
+wrong: ret

@@ -1,0 +1,7 @@
+xorq %rax,%rax
+irmovq $11,%rax
+jne wrong
+irmovq $42,%rbx
+halt
+wrong: rrmovq %rax,%rcx
+halt

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": {
     "name": "Reading Notes",
-    "summary": "统一管理 Durrett 随机过程与 Weiss 数据结构笔记，保留每本书的正式 HTML、可运行示例、来源与验证记录，共用阅读入口和静态发布流程。",
+    "summary": "统一管理 Durrett 随机过程、Weiss 数据结构与 CS:APP 系统笔记，保留正式 HTML、可运行示例、来源与验证记录，共用阅读入口和静态发布流程。",
     "profile": "generic",
     "governance_level": "controlled"
   },
@@ -20,22 +20,23 @@
       "Python 3.10+",
       "Clang（C11、AddressSanitizer、UndefinedBehaviorSanitizer）",
       "Make",
-      "Poppler pdftotext",
+      "Poppler pdftotext / pdfinfo",
       "Node.js（发布脚本语法校验）",
       "Nginx（服务器静态 HTTPS 服务）"
     ],
     "source_directories": [
       "books/stochastic",
       "books/weiss",
+      "books/csapp",
       "portal",
       "deploy",
       "tools"
     ],
     "architecture_notes": [
       "books/catalog.json 登记书籍入口、目录和发布前缀；每本书保留一份全书总览及按章维护的独立 HTML。",
-      "随机过程以 code/ 下 C/Python 为维护源并同步 HTML；Weiss 教学代码以正式 HTML 为维护源，c/ 为原书图例的独立 C 实现。",
+      "随机过程和 CS:APP 以 code/ 下 C/Python 为维护源并同步 HTML；Weiss 教学代码以正式 HTML 为维护源，c/ 为原书图例的独立 C 实现。",
       "根目录工具统一调用各书既有校验器，输出写入被忽略的 tmp/ 或 deploy/portal-releases/。",
-      "统一发布保留 /stochastic/ 与 /weiss/ URL；部署使用独立版本目录和 current 原子切换，同时维护本版 CSP。",
+      "统一构建保留 /stochastic/、/weiss/ 并接入 /csapp/ URL；部署使用独立版本目录和 current 原子切换，同时维护本版 CSP。",
       "根 Git 历史与远端沿用；原 Weiss 工作目录保留，合并后的维护入口为本仓库。"
     ]
   },
@@ -82,11 +83,11 @@
     ]
   },
   "project_rules": [
-    "修改某本书之前读取 books/<书籍>/agent.md 与 notes/README.md；专项内容标准由这些文档维护。",
+    "新增或修改书籍先读 docs/reading-notes-standard.md（RN-001），再读 books/<书籍>/agent.md 与 notes/README.md；共用方法与书级专项约定各有唯一来源。",
     "保留原书条件、题号、版本、来源页码和校注依据；静态检查和执行样本不能替代原书内容核对。",
     "保留单文件 HTML 的章节顺序、锚点、离线能力与桌面/窄屏阅读行为。",
     "审阅文件的历史哈希保持历史事实；改变当前文件绑定时注明范围、原因和原值。",
-    "新增书籍同步更新 catalog、首页、构建路由、验证与来源说明；只维护一份正式内容。",
+    "新增书籍按 docs/adding-a-book.md 与 docs/templates/reading-notes/ 执行，先核对原书、规划全书并验收样章；同步 catalog、首页、构建路由、验证与来源说明，只维护一份正式内容。",
     "统一部署的操作说明以 deploy/README.md 为准；各书 deploy/ 为保留的单书工具与历史材料。"
   ],
   "generator": {

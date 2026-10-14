@@ -1,0 +1,4 @@
+xorq %rax,%rax
+jne next
+next: irmovq $7,%rax
+halt

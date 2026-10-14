@@ -1,0 +1,412 @@
+{
+  "chapter": 7,
+  "edition": "Computer Systems: A Programmer’s Perspective, Third Global Edition",
+  "source": {
+    "path": "books/csapp/csapp.pdf",
+    "sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+    "printed_pages": [
+      705,
+      755
+    ],
+    "pdf_pages": [
+      706,
+      756
+    ],
+    "entire_chapter_and_practice_solutions_read": true,
+    "source_visual_review": {
+      "directory": "tmp/csapp/part2/ch07",
+      "pdf_pages": [
+        710,
+        713,
+        715,
+        721,
+        725,
+        726,
+        727,
+        730,
+        731,
+        732,
+        733,
+        736,
+        741,
+        742,
+        743,
+        751,
+        752,
+        753,
+        754,
+        755,
+        756
+      ]
+    },
+    "source_visual_finding": "7.8A prints a literal opening square bracket after static int main=1; preserved and explained as syntax error before intended semicolon interpretation."
+  },
+  "page": "books/csapp/notes/chapter07_linking.html",
+  "page_sha256": "e4f84bd481363b070c93772d1c519be4cc3d10fffc9ac06dda957a137ead2b6a",
+  "scope": {
+    "main_sections": [
+      "s7-1",
+      "s7-2",
+      "s7-3",
+      "s7-4",
+      "s7-5",
+      "s7-6",
+      "s7-7",
+      "s7-8",
+      "s7-9",
+      "s7-10",
+      "s7-11",
+      "s7-12",
+      "s7-13",
+      "s7-14",
+      "s7-15"
+    ],
+    "subsections": [
+      "ss7-6-1",
+      "ss7-6-2",
+      "ss7-6-3",
+      "ss7-7-1",
+      "ss7-7-2",
+      "ss7-13-1",
+      "ss7-13-2",
+      "ss7-13-3"
+    ],
+    "original_exercises": 13,
+    "practice": 5,
+    "homework": 8,
+    "reading_notes": 15,
+    "annotation_cards": 30,
+    "mechanism_diagrams": 4,
+    "supplementary_self_checks": [
+      "q7-1",
+      "q7-2",
+      "q7-3"
+    ],
+    "source_excerpts": 5
+  },
+  "exercises": [
+    {
+      "number": "7.1",
+      "kind": "practice",
+      "anchor": "ex-7-1",
+      "pdf_pages": [
+        715,
+        716
+      ],
+      "printed_pages": [
+        714,
+        715
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "buf UNDEF in referrer but data in m.o; common versus fno-common; temp absent",
+      "source_correction": null
+    },
+    {
+      "number": "7.2",
+      "kind": "practice",
+      "anchor": "ex-7-2",
+      "pdf_pages": [
+        721
+      ],
+      "printed_pages": [
+        720
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "strong/common rules; separate C correctness from symbol selection",
+      "source_correction": null
+    },
+    {
+      "number": "7.3",
+      "kind": "practice",
+      "anchor": "ex-7-3",
+      "pdf_pages": [
+        726
+      ],
+      "printed_pages": [
+        725
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "A p x; B p x y; C p x y x with member-granularity caveat",
+      "source_correction": null
+    },
+    {
+      "number": "7.4",
+      "kind": "practice",
+      "anchor": "ex-7-4",
+      "pdf_pages": [
+        731,
+        732
+      ],
+      "printed_pages": [
+        730,
+        731
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "field at call+1=0x4004df, little-endian displacement 5",
+      "source_correction": null
+    },
+    {
+      "number": "7.5",
+      "kind": "practice",
+      "anchor": "ex-7-5",
+      "pdf_pages": [
+        732
+      ],
+      "printed_pages": [
+        731
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "0x4004e8-4-(0x4004d0+0xa)=10",
+      "source_correction": null
+    },
+    {
+      "number": "7.6",
+      "kind": "homework",
+      "anchor": "ex-7-6",
+      "pdf_pages": [
+        751,
+        752
+      ],
+      "printed_pages": [
+        750,
+        751
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "bufp1 and count local bss; incr local text; automatic temp absent",
+      "source_correction": null
+    },
+    {
+      "number": "7.7",
+      "kind": "homework",
+      "anchor": "ex-7-7",
+      "pdf_pages": [
+        752
+      ],
+      "printed_pages": [
+        751
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "static double x preserves foo5 x/y; exact expected 0x3b6d,0x3b6c",
+      "source_correction": null
+    },
+    {
+      "number": "7.8",
+      "kind": "homework",
+      "anchor": "ex-7-8",
+      "pdf_pages": [
+        752,
+        753
+      ],
+      "printed_pages": [
+        751,
+        752
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "static-local main isolates; two common unknown; two strong error; literal syntax error retained",
+      "source_correction": "7.8A prints static int main=1[; literal compile error, intended symbol exercise interpreted with semicolon"
+    },
+    {
+      "number": "7.9",
+      "kind": "homework",
+      "anchor": "ex-7-9",
+      "pdf_pages": [
+        753
+      ],
+      "printed_pages": [
+        752
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "common char binds function; reads observed code byte 0x48, not portable output",
+      "source_correction": null
+    },
+    {
+      "number": "7.10",
+      "kind": "homework",
+      "anchor": "ex-7-10",
+      "pdf_pages": [
+        753,
+        754
+      ],
+      "printed_pages": [
+        752,
+        753
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "minimal textbook orders 2,4,5 arguments; z after both y and revisited x",
+      "source_correction": null
+    },
+    {
+      "number": "7.11",
+      "kind": "homework",
+      "anchor": "ex-7-11",
+      "pdf_pages": [
+        754
+      ],
+      "printed_pages": [
+        753
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "memsz-filesz=8 zero-filled bytes, bss",
+      "source_correction": null
+    },
+    {
+      "number": "7.12",
+      "kind": "homework",
+      "anchor": "ex-7-12",
+      "pdf_pages": [
+        754
+      ],
+      "printed_pages": [
+        753
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "A displacement 10; B 34; bytes 0a and 22",
+      "source_correction": null
+    },
+    {
+      "number": "7.13",
+      "kind": "homework",
+      "anchor": "ex-7-13",
+      "pdf_pages": [
+        754
+      ],
+      "printed_pages": [
+        753
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "actual Darwin arm64 Clang archive unavailability, text equality, gcc shim dependencies; reproducible Linux workflow",
+      "source_correction": null
+    }
+  ],
+  "program_verification": {
+    "models": "C11 with ASan/UBSan; 13 relocation cases and 6 archive cases agree with Python and fixed expected values",
+    "native": "Darwin arm64 Apple Clang 17: separate compile/archive link; missing-symbol link rejects; dlopen succeeds and missing-file/missing-symbol reject",
+    "elf": "x86_64-linux-gnu ELF object generated and objdump inspected; no Linux execution",
+    "records": [
+      "tmp/csapp/part2/ch07/model-results.json",
+      "tmp/csapp/part2/ch07/probe/probe-results.json"
+    ]
+  },
+  "review_status": {
+    "author_source_review": true,
+    "independent_review": "completed_with_scope_in_integrated_verification",
+    "browser_reading": "passed_locally"
+  },
+  "limitations": [
+    "Arithmetic relocation model accepts 32-bit input addresses and signed 32-bit addends; not a full ELF linker",
+    "Archive model uses unique strong definitions and textbook extraction rules",
+    "No claim of Linux runtime interposition or PLT execution; native dynamic loading is Mach-O/dyld",
+    "7.13 system archive counts are unavailable in this Apple toolchain; null means unavailable, not zero"
+  ],
+  "integrated_verification": {
+    "status": "passed_locally",
+    "recorded_at": "2026-10-14T01:55:51.767578+00:00",
+    "author_page_sha256": "e9b5e343fce393c3c0a06af250399dda776e3e0aa970fbf621278c7ee76465cf",
+    "current_page_sha256": "e4f84bd481363b070c93772d1c519be4cc3d10fffc9ac06dda957a137ead2b6a",
+    "independent_review": {
+      "reviewer": "chapter09 peer agent",
+      "chapter": 7,
+      "page": "books/csapp/notes/chapter07_linking.html",
+      "page_sha256": "e9b5e343fce393c3c0a06af250399dda776e3e0aa970fbf621278c7ee76465cf",
+      "scope": {
+        "all_13_original_question_statements_compared": true,
+        "practice_solutions_7_1_to_7_5_read": true,
+        "source_pdf_pages_read": [
+          715,
+          716,
+          721,
+          726,
+          731,
+          732,
+          751,
+          752,
+          753,
+          754,
+          755,
+          756
+        ],
+        "source_visual_pdf_pages": [
+          725,
+          731,
+          742,
+          752,
+          754
+        ],
+        "mechanisms_read": [
+          "symbol resolution COMMON versus STB_WEAK and fno-common",
+          "archive E/U/D fixed point and repeated library/member granularity",
+          "S+A-P call field versus next PC and signed range",
+          "section versus segment and filesz/memsz",
+          "PIC GOT data versus PLT lazy binding",
+          "dlopen POSIX versus ISO C function pointer assumptions",
+          "compile/link/load interposition boundaries"
+        ],
+        "mechanism_diagrams_compared": [
+          "compiler pipeline",
+          "call opcode/field/next PC",
+          "loader handoff",
+          "GOT/PLT first and later call"
+        ]
+      },
+      "program_checks": [
+        {
+          "program": "ch07_relocation",
+          "strict_c11_sanitizers": true,
+          "c_python_stdout_equal": true,
+          "stdout": "sum: 05 00 00 00\nswap: 0a 00 00 00\n7.12A: 0a 00 00 00\n7.12B: 22 00 00 00\narray: 18 10 60 00\nbackward: ed ff ff ff\npc-max: ff ff ff 7f\npc-min: 00 00 00 80\npc-too-high: rejected\npc-too-low: rejected\nabs-max: ff ff ff ff\nabs-overflow: rejected\nabs-negative: rejected\n"
+        },
+        {
+          "program": "ch07_archive",
+          "strict_c11_sanitizers": true,
+          "c_python_stdout_equal": true,
+          "stdout": "good: p x1 y x2 | unresolved=0\none-pass: p x1 y | unresolved=4\nearly-archive: p | unresolved=2\ncombined: p x1 y x2 | unresolved=0\nempty-input: | unresolved=0\nunused-libraries: | unresolved=0\n"
+        }
+      ],
+      "findings": [],
+      "limitations": [
+        "No browser layout acceptance performed by this peer reviewer.",
+        "Native host probe results read from author evidence; native probe not rerun in this peer review.",
+        "No claim to exhaustively validate all linker/platform behavior beyond the stated models."
+      ]
+    },
+    "full_check": "tmp/project-check/20261014T093905-tss_fd89/report.json",
+    "final_static_check": "tmp/project-check/20261014T095134-wubdivie/report.json",
+    "browser_review": "notes/reading_review.json",
+    "presentation_changes_after_peer_review": "4图增加scroll class；正文和程序不变",
+    "boundary": "作者逐题源审、第二人复核、执行和浏览器验收分别记录；旧hash保持其原审阅时点。"
+  },
+  "author_status_before_integration": {
+    "review_status": {
+      "author_source_review": true,
+      "independent_review": "pending",
+      "browser_reading": "pending"
+    }
+  },
+  "status": "content_source_program_and_reading_verified_locally"
+}

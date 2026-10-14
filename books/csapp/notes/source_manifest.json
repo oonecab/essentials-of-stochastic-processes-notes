@@ -1,0 +1,1198 @@
+{
+  "schema_version": 1,
+  "source_pdf": {
+    "path": "csapp.pdf",
+    "title": "Computer Systems: A Programmer’s Perspective",
+    "authors": [
+      "Randal E. Bryant",
+      "David R. O’Hallaron"
+    ],
+    "edition": "Third Edition, Global Edition",
+    "publisher": "Pearson Education Limited",
+    "year": 2016,
+    "isbn_print": "978-1-292-10176-7",
+    "pdf_pages": 1122,
+    "bytes": 6765790,
+    "sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a"
+  },
+  "page_mapping": {
+    "rule": "pdf_page = printed_page + 1",
+    "preface": {
+      "printed": [
+        19,
+        34
+      ],
+      "pdf": [
+        20,
+        35
+      ]
+    },
+    "part_i": {
+      "printed": [
+        65,
+        702
+      ],
+      "pdf": [
+        66,
+        703
+      ]
+    },
+    "contents_pdf": [
+      8,
+      19
+    ],
+    "part_ii": {
+      "printed": [
+        703,
+        922
+      ],
+      "pdf": [
+        704,
+        923
+      ]
+    },
+    "part_iii": {
+      "printed": [
+        923,
+        1076
+      ],
+      "pdf": [
+        924,
+        1077
+      ]
+    }
+  },
+  "scope": {
+    "reading_pages": 14,
+    "chapters": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "part_i_chapters": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "major_sections": 117,
+    "exercise_type": "Global Edition original exercises plus supplementary self-checks",
+    "original_homework_coverage": "chapters 1–12 complete: 419 exercises",
+    "original_exercises": 419,
+    "supplementary_self_checks": 36,
+    "subsections": 261,
+    "part_ii_chapters": [
+      7,
+      8,
+      9
+    ],
+    "part_iii_chapters": [
+      10,
+      11,
+      12
+    ]
+  },
+  "publication": {
+    "include_source_pdf": true,
+    "public_reference": "https://csapp.cs.cmu.edu/3e/students.html"
+  },
+  "official_references": [
+    {
+      "url": "https://csapp.cs.cmu.edu/3e/errata.html",
+      "checked_on": "2026-10-13",
+      "use": "Global Edition practice/homework differ from the North American edition and contain errors; no Global Edition errata maintained by the authors."
+    },
+    {
+      "url": "https://csapp.cs.cmu.edu/3e/home.html",
+      "use": "author materials entry"
+    },
+    {
+      "url": "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf",
+      "checked_on": "2026-10-13",
+      "use": "C11 clauses 7.6 and 7.12: floating-point environment, INFINITY and NAN; source edition section 2.4.6 clarification."
+    },
+    {
+      "url": "https://pubs.opengroup.org/onlinepubs/9799919799/functions/sigsuspend.html",
+      "checked_on": "2026-10-14",
+      "use": "POSIX 2024 atomic signal-mask replacement, wait and restoration."
+    },
+    {
+      "url": "https://pubs.opengroup.org/onlinepubs/9799919799/functions/sigsetjmp.html",
+      "checked_on": "2026-10-14",
+      "use": "POSIX 2024 conditional signal-mask preservation; pending signals are not saved execution state."
+    },
+    {
+      "url": "https://gcc.gnu.org/gcc-10/porting_to.html",
+      "checked_on": "2026-10-14",
+      "use": "GCC10 default fno-common and extern/single-definition guidance"
+    },
+    {
+      "url": "https://pubs.opengroup.org/onlinepubs/9799919799/functions/read.html",
+      "checked_on": "2026-10-14",
+      "use": "POSIX 2024 interface contract for Part III: read"
+    },
+    {
+      "url": "https://pubs.opengroup.org/onlinepubs/9799919799/functions/write.html",
+      "checked_on": "2026-10-14",
+      "use": "POSIX 2024 interface contract for Part III: write"
+    },
+    {
+      "url": "https://pubs.opengroup.org/onlinepubs/9799919799/functions/pthread_create.html",
+      "checked_on": "2026-10-14",
+      "use": "POSIX 2024 interface contract for Part III: pthread_create"
+    },
+    {
+      "url": "https://pubs.opengroup.org/onlinepubs/9799919799/functions/pthread_join.html",
+      "checked_on": "2026-10-14",
+      "use": "POSIX 2024 interface contract for Part III: pthread_join"
+    },
+    {
+      "url": "https://pubs.opengroup.org/onlinepubs/9799919799/functions/select.html",
+      "checked_on": "2026-10-14",
+      "use": "POSIX 2024 interface contract for Part III: select"
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man2/read.2.html",
+      "checked_on": "2026-10-14",
+      "use": "partial read, positive-count EOF, EINTR and count range"
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man2/write.2.html",
+      "checked_on": "2026-10-14",
+      "use": "partial writes and errors"
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man3/readdir.3.html",
+      "checked_on": "2026-10-14",
+      "use": "errno distinction, d_name extent, inode identity"
+    },
+    {
+      "url": "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf#page=324",
+      "checked_on": "2026-10-14",
+      "use": "C11 committee draft 7.21.5.3 paragraph 7 update stream switching requirements"
+    }
+  ],
+  "chapters": [
+    {
+      "chapter": 1,
+      "file": "chapter01_tour.html",
+      "title": "计算机系统漫游",
+      "english": "A Tour of Computer Systems",
+      "printed_pages": [
+        37,
+        64
+      ],
+      "pdf_pages": [
+        38,
+        65
+      ],
+      "sections": [
+        {
+          "number": "1.1",
+          "english": "Information Is Bits + Context",
+          "printed_start": 39,
+          "pdf_start": 40,
+          "anchor": "s1-1"
+        },
+        {
+          "number": "1.2",
+          "english": "Programs Are Translated by Other Programs into Different Forms",
+          "printed_start": 40,
+          "pdf_start": 41,
+          "anchor": "s1-2"
+        },
+        {
+          "number": "1.3",
+          "english": "It Pays to Understand How Compilation Systems Work",
+          "printed_start": 42,
+          "pdf_start": 43,
+          "anchor": "s1-3"
+        },
+        {
+          "number": "1.4",
+          "english": "Processors Read and Interpret Instructions Stored in Memory",
+          "printed_start": 43,
+          "pdf_start": 44,
+          "anchor": "s1-4"
+        },
+        {
+          "number": "1.5",
+          "english": "Caches Matter",
+          "printed_start": 47,
+          "pdf_start": 48,
+          "anchor": "s1-5"
+        },
+        {
+          "number": "1.6",
+          "english": "Storage Devices Form a Hierarchy",
+          "printed_start": 50,
+          "pdf_start": 51,
+          "anchor": "s1-6"
+        },
+        {
+          "number": "1.7",
+          "english": "The Operating System Manages the Hardware",
+          "printed_start": 50,
+          "pdf_start": 51,
+          "anchor": "s1-7"
+        },
+        {
+          "number": "1.8",
+          "english": "Systems Communicate with Other Systems Using Networks",
+          "printed_start": 55,
+          "pdf_start": 56,
+          "anchor": "s1-8"
+        },
+        {
+          "number": "1.9",
+          "english": "Important Themes",
+          "printed_start": 58,
+          "pdf_start": 59,
+          "anchor": "s1-9"
+        },
+        {
+          "number": "1.10",
+          "english": "Summary",
+          "printed_start": 63,
+          "pdf_start": 64,
+          "anchor": "s1-10"
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "file": "chapter02_information.html",
+      "title": "信息的表示和处理",
+      "english": "Representing and Manipulating Information",
+      "printed_pages": [
+        67,
+        197
+      ],
+      "pdf_pages": [
+        68,
+        198
+      ],
+      "sections": [
+        {
+          "number": "2.1",
+          "english": "Information Storage",
+          "printed_start": 70,
+          "pdf_start": 71,
+          "anchor": "s2-1"
+        },
+        {
+          "number": "2.2",
+          "english": "Integer Representations",
+          "printed_start": 95,
+          "pdf_start": 96,
+          "anchor": "s2-2"
+        },
+        {
+          "number": "2.3",
+          "english": "Integer Arithmetic",
+          "printed_start": 120,
+          "pdf_start": 121,
+          "anchor": "s2-3"
+        },
+        {
+          "number": "2.4",
+          "english": "Floating Point",
+          "printed_start": 144,
+          "pdf_start": 145,
+          "anchor": "s2-4"
+        },
+        {
+          "number": "2.5",
+          "english": "Summary",
+          "printed_start": 162,
+          "pdf_start": 163,
+          "anchor": "s2-5"
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "file": "chapter03_machine_level.html",
+      "title": "程序的机器级表示",
+      "english": "Machine-Level Representation of Programs",
+      "printed_pages": [
+        199,
+        386
+      ],
+      "pdf_pages": [
+        200,
+        387
+      ],
+      "sections": [
+        {
+          "number": "3.1",
+          "english": "A Historical Perspective",
+          "printed_start": 202,
+          "pdf_start": 203,
+          "anchor": "s3-1"
+        },
+        {
+          "number": "3.2",
+          "english": "Program Encodings",
+          "printed_start": 205,
+          "pdf_start": 206,
+          "anchor": "s3-2"
+        },
+        {
+          "number": "3.3",
+          "english": "Data Formats",
+          "printed_start": 213,
+          "pdf_start": 214,
+          "anchor": "s3-3"
+        },
+        {
+          "number": "3.4",
+          "english": "Accessing Information",
+          "printed_start": 215,
+          "pdf_start": 216,
+          "anchor": "s3-4"
+        },
+        {
+          "number": "3.5",
+          "english": "Arithmetic and Logical Operations",
+          "printed_start": 227,
+          "pdf_start": 228,
+          "anchor": "s3-5"
+        },
+        {
+          "number": "3.6",
+          "english": "Control",
+          "printed_start": 236,
+          "pdf_start": 237,
+          "anchor": "s3-6"
+        },
+        {
+          "number": "3.7",
+          "english": "Procedures",
+          "printed_start": 274,
+          "pdf_start": 275,
+          "anchor": "s3-7"
+        },
+        {
+          "number": "3.8",
+          "english": "Array Allocation and Access",
+          "printed_start": 291,
+          "pdf_start": 292,
+          "anchor": "s3-8"
+        },
+        {
+          "number": "3.9",
+          "english": "Heterogeneous Data Structures",
+          "printed_start": 301,
+          "pdf_start": 302,
+          "anchor": "s3-9"
+        },
+        {
+          "number": "3.10",
+          "english": "Combining Control and Data in Machine-Level Programs",
+          "printed_start": 312,
+          "pdf_start": 313,
+          "anchor": "s3-10"
+        },
+        {
+          "number": "3.11",
+          "english": "Floating-Point Code",
+          "printed_start": 329,
+          "pdf_start": 330,
+          "anchor": "s3-11"
+        },
+        {
+          "number": "3.12",
+          "english": "Summary",
+          "printed_start": 345,
+          "pdf_start": 346,
+          "anchor": "s3-12"
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "file": "chapter04_architecture.html",
+      "title": "处理器体系结构",
+      "english": "Processor Architecture",
+      "printed_pages": [
+        387,
+        530
+      ],
+      "pdf_pages": [
+        388,
+        531
+      ],
+      "sections": [
+        {
+          "number": "4.1",
+          "english": "The Y86-64 Instruction Set Architecture",
+          "printed_start": 391,
+          "pdf_start": 392,
+          "anchor": "s4-1"
+        },
+        {
+          "number": "4.2",
+          "english": "Logic Design and the Hardware Control Language HCL",
+          "printed_start": 408,
+          "pdf_start": 409,
+          "anchor": "s4-2"
+        },
+        {
+          "number": "4.3",
+          "english": "Sequential Y86-64 Implementations",
+          "printed_start": 420,
+          "pdf_start": 421,
+          "anchor": "s4-3"
+        },
+        {
+          "number": "4.4",
+          "english": "General Principles of Pipelining",
+          "printed_start": 448,
+          "pdf_start": 449,
+          "anchor": "s4-4"
+        },
+        {
+          "number": "4.5",
+          "english": "Pipelined Y86-64 Implementations",
+          "printed_start": 457,
+          "pdf_start": 458,
+          "anchor": "s4-5"
+        },
+        {
+          "number": "4.6",
+          "english": "Summary",
+          "printed_start": 506,
+          "pdf_start": 507,
+          "anchor": "s4-6"
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "file": "chapter05_optimization.html",
+      "title": "优化程序性能",
+      "english": "Optimizing Program Performance",
+      "printed_pages": [
+        531,
+        614
+      ],
+      "pdf_pages": [
+        532,
+        615
+      ],
+      "sections": [
+        {
+          "number": "5.1",
+          "english": "Capabilities and Limitations of Optimizing Compilers",
+          "printed_start": 534,
+          "pdf_start": 535,
+          "anchor": "s5-1"
+        },
+        {
+          "number": "5.2",
+          "english": "Expressing Program Performance",
+          "printed_start": 538,
+          "pdf_start": 539,
+          "anchor": "s5-2"
+        },
+        {
+          "number": "5.3",
+          "english": "Program Example",
+          "printed_start": 540,
+          "pdf_start": 541,
+          "anchor": "s5-3"
+        },
+        {
+          "number": "5.4",
+          "english": "Eliminating Loop Inefficiencies",
+          "printed_start": 544,
+          "pdf_start": 545,
+          "anchor": "s5-4"
+        },
+        {
+          "number": "5.5",
+          "english": "Reducing Procedure Calls",
+          "printed_start": 548,
+          "pdf_start": 549,
+          "anchor": "s5-5"
+        },
+        {
+          "number": "5.6",
+          "english": "Eliminating Unneeded Memory References",
+          "printed_start": 550,
+          "pdf_start": 551,
+          "anchor": "s5-6"
+        },
+        {
+          "number": "5.7",
+          "english": "Understanding Modern Processors",
+          "printed_start": 553,
+          "pdf_start": 554,
+          "anchor": "s5-7"
+        },
+        {
+          "number": "5.8",
+          "english": "Loop Unrolling",
+          "printed_start": 567,
+          "pdf_start": 568,
+          "anchor": "s5-8"
+        },
+        {
+          "number": "5.9",
+          "english": "Enhancing Parallelism",
+          "printed_start": 572,
+          "pdf_start": 573,
+          "anchor": "s5-9"
+        },
+        {
+          "number": "5.10",
+          "english": "Summary of Results for Optimizing Combining Code",
+          "printed_start": 583,
+          "pdf_start": 584,
+          "anchor": "s5-10"
+        },
+        {
+          "number": "5.11",
+          "english": "Some Limiting Factors",
+          "printed_start": 584,
+          "pdf_start": 585,
+          "anchor": "s5-11"
+        },
+        {
+          "number": "5.12",
+          "english": "Understanding Memory Performance",
+          "printed_start": 589,
+          "pdf_start": 590,
+          "anchor": "s5-12"
+        },
+        {
+          "number": "5.13",
+          "english": "Life in the Real World: Performance Improvement Techniques",
+          "printed_start": 597,
+          "pdf_start": 598,
+          "anchor": "s5-13"
+        },
+        {
+          "number": "5.14",
+          "english": "Identifying and Eliminating Performance Bottlenecks",
+          "printed_start": 598,
+          "pdf_start": 599,
+          "anchor": "s5-14"
+        },
+        {
+          "number": "5.15",
+          "english": "Summary",
+          "printed_start": 604,
+          "pdf_start": 605,
+          "anchor": "s5-15"
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "file": "chapter06_memory.html",
+      "title": "存储器层次结构",
+      "english": "The Memory Hierarchy",
+      "printed_pages": [
+        615,
+        702
+      ],
+      "pdf_pages": [
+        616,
+        703
+      ],
+      "sections": [
+        {
+          "number": "6.1",
+          "english": "Storage Technologies",
+          "printed_start": 617,
+          "pdf_start": 618,
+          "anchor": "s6-1"
+        },
+        {
+          "number": "6.2",
+          "english": "Locality",
+          "printed_start": 640,
+          "pdf_start": 641,
+          "anchor": "s6-2"
+        },
+        {
+          "number": "6.3",
+          "english": "The Memory Hierarchy",
+          "printed_start": 645,
+          "pdf_start": 646,
+          "anchor": "s6-3"
+        },
+        {
+          "number": "6.4",
+          "english": "Cache Memories",
+          "printed_start": 650,
+          "pdf_start": 651,
+          "anchor": "s6-4"
+        },
+        {
+          "number": "6.5",
+          "english": "Writing Cache-Friendly Code",
+          "printed_start": 669,
+          "pdf_start": 670,
+          "anchor": "s6-5"
+        },
+        {
+          "number": "6.6",
+          "english": "Putting It Together: The Impact of Caches on Program Performance",
+          "printed_start": 675,
+          "pdf_start": 676,
+          "anchor": "s6-6"
+        },
+        {
+          "number": "6.7",
+          "english": "Summary",
+          "printed_start": 684,
+          "pdf_start": 685,
+          "anchor": "s6-7"
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "file": "chapter07_linking.html",
+      "title": "链接",
+      "english": "Linking",
+      "printed_pages": [
+        705,
+        755
+      ],
+      "pdf_pages": [
+        706,
+        756
+      ],
+      "sections": [
+        {
+          "number": "7.1",
+          "english": "Compiler Drivers",
+          "printed_start": 707,
+          "pdf_start": 708,
+          "anchor": "s7-1"
+        },
+        {
+          "number": "7.2",
+          "english": "Static Linking",
+          "printed_start": 708,
+          "pdf_start": 709,
+          "anchor": "s7-2"
+        },
+        {
+          "number": "7.3",
+          "english": "Object Files",
+          "printed_start": 709,
+          "pdf_start": 710,
+          "anchor": "s7-3"
+        },
+        {
+          "number": "7.4",
+          "english": "Relocatable Object Files",
+          "printed_start": 710,
+          "pdf_start": 711,
+          "anchor": "s7-4"
+        },
+        {
+          "number": "7.5",
+          "english": "Symbols and Symbol Tables",
+          "printed_start": 711,
+          "pdf_start": 712,
+          "anchor": "s7-5"
+        },
+        {
+          "number": "7.6",
+          "english": "Symbol Resolution",
+          "printed_start": 715,
+          "pdf_start": 716,
+          "anchor": "s7-6"
+        },
+        {
+          "number": "7.7",
+          "english": "Relocation",
+          "printed_start": 725,
+          "pdf_start": 726,
+          "anchor": "s7-7"
+        },
+        {
+          "number": "7.8",
+          "english": "Executable Object Files",
+          "printed_start": 731,
+          "pdf_start": 732,
+          "anchor": "s7-8"
+        },
+        {
+          "number": "7.9",
+          "english": "Loading Executable Object Files",
+          "printed_start": 733,
+          "pdf_start": 734,
+          "anchor": "s7-9"
+        },
+        {
+          "number": "7.10",
+          "english": "Dynamic Linking with Shared Libraries",
+          "printed_start": 734,
+          "pdf_start": 735,
+          "anchor": "s7-10"
+        },
+        {
+          "number": "7.11",
+          "english": "Loading and Linking Shared Libraries from Applications",
+          "printed_start": 737,
+          "pdf_start": 738,
+          "anchor": "s7-11"
+        },
+        {
+          "number": "7.12",
+          "english": "Position-Independent Code (PIC)",
+          "printed_start": 740,
+          "pdf_start": 741,
+          "anchor": "s7-12"
+        },
+        {
+          "number": "7.13",
+          "english": "Library Interpositioning",
+          "printed_start": 743,
+          "pdf_start": 744,
+          "anchor": "s7-13"
+        },
+        {
+          "number": "7.14",
+          "english": "Tools for Manipulating Object Files",
+          "printed_start": 749,
+          "pdf_start": 750,
+          "anchor": "s7-14"
+        },
+        {
+          "number": "7.15",
+          "english": "Summary",
+          "printed_start": 749,
+          "pdf_start": 750,
+          "anchor": "s7-15"
+        }
+      ]
+    },
+    {
+      "chapter": 8,
+      "file": "chapter08_exceptional.html",
+      "title": "异常控制流",
+      "english": "Exceptional Control Flow",
+      "printed_pages": [
+        757,
+        835
+      ],
+      "pdf_pages": [
+        758,
+        836
+      ],
+      "sections": [
+        {
+          "number": "8.1",
+          "english": "Exceptions",
+          "printed_start": 759,
+          "pdf_start": 760,
+          "anchor": "s8-1"
+        },
+        {
+          "number": "8.2",
+          "english": "Processes",
+          "printed_start": 768,
+          "pdf_start": 769,
+          "anchor": "s8-2"
+        },
+        {
+          "number": "8.3",
+          "english": "System Call Error Handling",
+          "printed_start": 773,
+          "pdf_start": 774,
+          "anchor": "s8-3"
+        },
+        {
+          "number": "8.4",
+          "english": "Process Control",
+          "printed_start": 774,
+          "pdf_start": 775,
+          "anchor": "s8-4"
+        },
+        {
+          "number": "8.5",
+          "english": "Signals",
+          "printed_start": 792,
+          "pdf_start": 793,
+          "anchor": "s8-5"
+        },
+        {
+          "number": "8.6",
+          "english": "Nonlocal Jumps",
+          "printed_start": 817,
+          "pdf_start": 818,
+          "anchor": "s8-6"
+        },
+        {
+          "number": "8.7",
+          "english": "Tools for Manipulating Processes",
+          "printed_start": 822,
+          "pdf_start": 823,
+          "anchor": "s8-7"
+        },
+        {
+          "number": "8.8",
+          "english": "Summary",
+          "printed_start": 823,
+          "pdf_start": 824,
+          "anchor": "s8-8"
+        }
+      ]
+    },
+    {
+      "chapter": 9,
+      "file": "chapter09_virtual_memory.html",
+      "title": "虚拟内存",
+      "english": "Virtual Memory",
+      "printed_pages": [
+        837,
+        921
+      ],
+      "pdf_pages": [
+        838,
+        922
+      ],
+      "sections": [
+        {
+          "number": "9.1",
+          "english": "Physical and Virtual Addressing",
+          "printed_start": 839,
+          "pdf_start": 840,
+          "anchor": "s9-1"
+        },
+        {
+          "number": "9.2",
+          "english": "Address Spaces",
+          "printed_start": 840,
+          "pdf_start": 841,
+          "anchor": "s9-2"
+        },
+        {
+          "number": "9.3",
+          "english": "VM as a Tool for Caching",
+          "printed_start": 841,
+          "pdf_start": 842,
+          "anchor": "s9-3"
+        },
+        {
+          "number": "9.4",
+          "english": "VM as a Tool for Memory Management",
+          "printed_start": 847,
+          "pdf_start": 848,
+          "anchor": "s9-4"
+        },
+        {
+          "number": "9.5",
+          "english": "VM as a Tool for Memory Protection",
+          "printed_start": 848,
+          "pdf_start": 849,
+          "anchor": "s9-5"
+        },
+        {
+          "number": "9.6",
+          "english": "Address Translation",
+          "printed_start": 849,
+          "pdf_start": 850,
+          "anchor": "s9-6"
+        },
+        {
+          "number": "9.7",
+          "english": "Case Study: The Intel Core i7/Linux Memory System",
+          "printed_start": 861,
+          "pdf_start": 862,
+          "anchor": "s9-7"
+        },
+        {
+          "number": "9.8",
+          "english": "Memory Mapping",
+          "printed_start": 869,
+          "pdf_start": 870,
+          "anchor": "s9-8"
+        },
+        {
+          "number": "9.9",
+          "english": "Dynamic Memory Allocation",
+          "printed_start": 875,
+          "pdf_start": 876,
+          "anchor": "s9-9"
+        },
+        {
+          "number": "9.10",
+          "english": "Garbage Collection",
+          "printed_start": 901,
+          "pdf_start": 902,
+          "anchor": "s9-10"
+        },
+        {
+          "number": "9.11",
+          "english": "Common Memory-Related Bugs in C Programs",
+          "printed_start": 906,
+          "pdf_start": 907,
+          "anchor": "s9-11"
+        },
+        {
+          "number": "9.12",
+          "english": "Summary",
+          "printed_start": 911,
+          "pdf_start": 912,
+          "anchor": "s9-12"
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "file": "chapter10_system_io.html",
+      "title": "系统级 I/O",
+      "english": "System-Level I/O",
+      "printed_pages": [
+        925,
+        952
+      ],
+      "pdf_pages": [
+        926,
+        953
+      ],
+      "sections": [
+        {
+          "number": "10.1",
+          "english": "Unix I/O",
+          "printed_start": 926,
+          "pdf_start": 927,
+          "anchor": "s10-1"
+        },
+        {
+          "number": "10.2",
+          "english": "Files",
+          "printed_start": 927,
+          "pdf_start": 928,
+          "anchor": "s10-2"
+        },
+        {
+          "number": "10.3",
+          "english": "Opening and Closing Files",
+          "printed_start": 929,
+          "pdf_start": 930,
+          "anchor": "s10-3"
+        },
+        {
+          "number": "10.4",
+          "english": "Reading and Writing Files",
+          "printed_start": 931,
+          "pdf_start": 932,
+          "anchor": "s10-4"
+        },
+        {
+          "number": "10.5",
+          "english": "Robust Reading and Writing with the Rio Package",
+          "printed_start": 933,
+          "pdf_start": 934,
+          "anchor": "s10-5"
+        },
+        {
+          "number": "10.6",
+          "english": "Reading File Metadata",
+          "printed_start": 939,
+          "pdf_start": 940,
+          "anchor": "s10-6"
+        },
+        {
+          "number": "10.7",
+          "english": "Reading Directory Contents",
+          "printed_start": 941,
+          "pdf_start": 942,
+          "anchor": "s10-7"
+        },
+        {
+          "number": "10.8",
+          "english": "Sharing Files",
+          "printed_start": 942,
+          "pdf_start": 943,
+          "anchor": "s10-8"
+        },
+        {
+          "number": "10.9",
+          "english": "I/O Redirection",
+          "printed_start": 945,
+          "pdf_start": 946,
+          "anchor": "s10-9"
+        },
+        {
+          "number": "10.10",
+          "english": "Standard I/O",
+          "printed_start": 947,
+          "pdf_start": 948,
+          "anchor": "s10-10"
+        },
+        {
+          "number": "10.11",
+          "english": "Putting It Together: Which I/O Functions Should I Use?",
+          "printed_start": 947,
+          "pdf_start": 948,
+          "anchor": "s10-11"
+        },
+        {
+          "number": "10.12",
+          "english": "Summary",
+          "printed_start": 949,
+          "pdf_start": 950,
+          "anchor": "s10-12"
+        }
+      ]
+    },
+    {
+      "chapter": 11,
+      "file": "chapter11_network.html",
+      "title": "网络编程",
+      "english": "Network Programming",
+      "printed_pages": [
+        953,
+        1006
+      ],
+      "pdf_pages": [
+        954,
+        1007
+      ],
+      "sections": [
+        {
+          "number": "11.1",
+          "english": "The Client-Server Programming Model",
+          "printed_start": 954,
+          "pdf_start": 955,
+          "anchor": "s11-1"
+        },
+        {
+          "number": "11.2",
+          "english": "Networks",
+          "printed_start": 955,
+          "pdf_start": 956,
+          "anchor": "s11-2"
+        },
+        {
+          "number": "11.3",
+          "english": "The Global IP Internet",
+          "printed_start": 960,
+          "pdf_start": 961,
+          "anchor": "s11-3"
+        },
+        {
+          "number": "11.4",
+          "english": "The Sockets Interface",
+          "printed_start": 968,
+          "pdf_start": 969,
+          "anchor": "s11-4"
+        },
+        {
+          "number": "11.5",
+          "english": "Web Servers",
+          "printed_start": 984,
+          "pdf_start": 985,
+          "anchor": "s11-5"
+        },
+        {
+          "number": "11.6",
+          "english": "Putting It Together: The Tiny Web Server",
+          "printed_start": 992,
+          "pdf_start": 993,
+          "anchor": "s11-6"
+        },
+        {
+          "number": "11.7",
+          "english": "Summary",
+          "printed_start": 1000,
+          "pdf_start": 1001,
+          "anchor": "s11-7"
+        }
+      ]
+    },
+    {
+      "chapter": 12,
+      "file": "chapter12_concurrency.html",
+      "title": "并发编程",
+      "english": "Concurrent Programming",
+      "printed_pages": [
+        1007,
+        1076
+      ],
+      "pdf_pages": [
+        1008,
+        1077
+      ],
+      "sections": [
+        {
+          "number": "12.1",
+          "english": "Concurrent Programming with Processes",
+          "printed_start": 1009,
+          "pdf_start": 1010,
+          "anchor": "s12-1"
+        },
+        {
+          "number": "12.2",
+          "english": "Concurrent Programming with I/O Multiplexing",
+          "printed_start": 1013,
+          "pdf_start": 1014,
+          "anchor": "s12-2"
+        },
+        {
+          "number": "12.3",
+          "english": "Concurrent Programming with Threads",
+          "printed_start": 1021,
+          "pdf_start": 1022,
+          "anchor": "s12-3"
+        },
+        {
+          "number": "12.4",
+          "english": "Shared Variables in Threaded Programs",
+          "printed_start": 1028,
+          "pdf_start": 1029,
+          "anchor": "s12-4"
+        },
+        {
+          "number": "12.5",
+          "english": "Synchronizing Threads with Semaphores",
+          "printed_start": 1031,
+          "pdf_start": 1032,
+          "anchor": "s12-5"
+        },
+        {
+          "number": "12.6",
+          "english": "Using Threads for Parallelism",
+          "printed_start": 1049,
+          "pdf_start": 1050,
+          "anchor": "s12-6"
+        },
+        {
+          "number": "12.7",
+          "english": "Other Concurrency Issues",
+          "printed_start": 1056,
+          "pdf_start": 1057,
+          "anchor": "s12-7"
+        },
+        {
+          "number": "12.8",
+          "english": "Summary",
+          "printed_start": 1066,
+          "pdf_start": 1067,
+          "anchor": "s12-8"
+        }
+      ]
+    }
+  ]
+}

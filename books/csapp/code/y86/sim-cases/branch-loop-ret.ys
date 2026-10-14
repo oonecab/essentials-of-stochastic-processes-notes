@@ -1,0 +1,8 @@
+irmovq $0xf00,%rsp
+call func
+halt
+func: irmovq $3,%rax
+irmovq $1,%rcx
+loop: subq %rcx,%rax
+jg loop
+ret

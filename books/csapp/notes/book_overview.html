@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>全书地图：沿一个程序读懂系统 · CS:APP 中文伴读</title><style>
+:root{--ink:#252b29;--sub:#58615d;--rule:#d9dfda;--green:#285a4e;--paper:#fffefa;--tint:#f4f6f2}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.9 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}main{max-width:860px;margin:auto;padding:48px 24px 90px}h1{font-size:2.2rem;line-height:1.3;margin:.2rem 0}h2{font-size:1.55rem;margin:3.4rem 0 1.2rem;padding-bottom:.45rem;border-bottom:1px solid var(--rule)}h3{font-size:1.16rem;margin:2rem 0 .6rem}p{margin:.7rem 0 1.1rem}header{padding-bottom:22px;border-bottom:1px solid var(--rule)}.overline,.source,.small,figcaption{color:var(--sub);font-size:.85rem}.intro{font-size:1.08rem}a{color:var(--green);text-underline-offset:3px}nav{border-left:3px solid var(--green);padding:.6rem 1.3rem;margin:2rem 0;background:var(--tint)}nav ul{margin:.3rem 0;padding-left:1.2rem;columns:2}nav li{break-inside:avoid}.passage{border-left:2px solid var(--green);padding:.15rem 0 .15rem 1.2rem;margin:1.5rem 0}.english{font:italic 1.05rem/1.7 Georgia,serif}.passage p{margin:.25rem 0}pre{background:var(--tint);border:1px solid var(--rule);padding:1rem 1.1rem;overflow:auto;font:14px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}code{font:.9em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}pre code{font:inherit}.callout{background:var(--tint);padding:.8rem 1.1rem;margin:1.4rem 0;border-left:2px solid var(--green)}.scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.91rem;margin:1.1rem 0}th,td{padding:.6rem .7rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule)}th{border-top:1px solid var(--rule);background:var(--tint)}.wide{min-width:640px}figure{margin:1.5rem 0}figure .scroll{padding:12px 8px;border:1px solid var(--rule);background:var(--tint)}figcaption{margin-top:.6rem}svg{display:block;width:100%;height:auto;min-width:620px}svg text{font-family:system-ui,-apple-system,"PingFang SC",sans-serif;text-anchor:middle;fill:var(--ink);font-size:16px}svg .n{fill:var(--paper);stroke:var(--green);stroke-width:1.3}svg .e{fill:none;stroke:#7b8f85;stroke-width:1.4}svg .hint{font-size:13px;fill:var(--sub)}ul,ol{padding-left:1.5rem}li{margin:.35rem 0}footer{border-top:1px solid var(--rule);padding-top:1rem;margin-top:4rem;color:var(--sub);font-size:.85rem}@media(max-width:640px){main{padding:30px 18px 60px}h1{font-size:1.75rem}nav ul{columns:1}h2{font-size:1.3rem}}
+.exercise{margin:.8rem 0;border:1px solid var(--rule);padding:.75rem 1rem;scroll-margin-top:16px}.exercise summary{cursor:pointer;color:var(--green);font-weight:600}.exercise summary:focus-visible{outline:2px solid var(--green);outline-offset:4px}.exercise-index{display:flex;flex-wrap:wrap;gap:.4rem 1rem;margin:1rem 0}.exercise .answer{margin-top:1rem}.tree-code{overflow-wrap:anywhere;word-break:break-word}.exercise .scroll table{min-width:620px}
+
+/* Native, static MathML: no network resources or runtime typesetting. */
+math{font-family:"STIX Two Math","Cambria Math",math;font-size:1.04em}
+.math-inline{display:inline-block;max-width:calc(100% - .16em);overflow-x:auto;overflow-y:hidden;vertical-align:middle;margin:0 .08em;padding:0 .02em}
+.equation,.math-block{overflow-x:auto;max-width:100%;padding:.7rem .25rem;margin:1rem 0;text-align:center}
+.equation math,.math-block math{display:block;width:max-content;margin:0 auto;font-size:1.08em}
+.answer h4{margin:1.35rem 0 .5rem;font-size:1rem}
+:not(pre)>code{overflow-wrap:anywhere}
+pre code{overflow-wrap:normal;white-space:pre}
+
+.comparison,.benchmark{min-width:800px}.array-values{min-width:620px}.array-values th,.array-values td{text-align:center;padding:.4rem .55rem}.forest-label{font-weight:600}svg .hint{font-size:12px}.answer pre{font-size:13px}.exercise{scroll-margin-top:20px}
+
+.code-pair{margin:1.2rem 0;border-left:2px solid var(--rule);padding-left:1rem}.code-version{margin:.5rem 0;padding:.35rem 0}.code-version>summary{cursor:pointer;font-weight:600;color:var(--green)}.code-version>summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}.code-version pre{margin:.7rem 0 1rem}.code-reference{font-size:.92rem}.pair-note{font-size:.9rem;color:var(--sub)}.chapter-nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem}.exercise>summary{line-height:1.65}.experiment{margin:1.2rem 0;padding:.7rem 1rem;border-left:2px solid var(--green);background:var(--tint)}
+
+.meta,.caption{color:var(--sub);font-size:.85rem}
+.scroll,.table-scroll,.diagram{max-width:100%;overflow-x:auto}
+main,header,section,.answer,.code-pair,.code-version{min-width:0}
+.math-inline{padding:.20em .05em}
+.chapter-nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem}
+.scroll>table{min-width:620px}
+.puzzle{width:auto;margin:1.2rem auto}
+.scroll>table.puzzle{min-width:0}
+.puzzle th,.puzzle td{text-align:center;min-width:44px}
+.verification-table,.state-table,.benchmark{font-variant-numeric:tabular-nums}
+.diagram{margin:1.2rem 0;padding:1rem 1.1rem;border:1px solid var(--rule);background:var(--tint)}
+.diagram figcaption{margin:0 0 .65rem}
+.chain{display:flex;align-items:center;gap:.55rem;min-width:max-content;font-size:.92rem}
+.diagram>.chain+.chain{margin-top:.7rem}
+.chain .node{border:1px solid #9caaa2;background:var(--paper);padding:.3rem .6rem;white-space:nowrap}
+.chain .edge{color:var(--green);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:nowrap}
+.diagram-notes{margin:.75rem 0 0;padding-left:1.2rem;font-size:.92rem}
+.diagram-notes li{margin:0}
+.step-table th:first-child,.step-table td:first-child{width:5.3rem;white-space:nowrap}
+.step-table th:nth-child(2){width:14rem}
+.step-table code{white-space:nowrap}
+.step-table .chain{gap:.35rem}
+.step-table .node{padding:.1rem .4rem}
+.state-table{table-layout:fixed}
+.state-table th:first-child{width:37%}
+.state-table td:not(:first-child),.state-table th:not(:first-child){text-align:center}
+.state-table td:last-child{white-space:nowrap}
+svg .node{fill:var(--paper);stroke:var(--green);stroke-width:1.3}
+svg .edge{fill:none;stroke:#7b8f85;stroke-width:1.4}
+svg .small{font-size:12px;fill:var(--sub)}
+svg .chapter-link{cursor:pointer}
+svg .chapter-link:hover .node,svg .chapter-link:focus-visible .node{fill:var(--tint);stroke-width:2.5}
+blockquote{margin:1.4rem 0;padding:.5rem 1.2rem;border-left:2px solid var(--green);background:var(--tint)}
+hr{border:0;border-top:1px solid var(--rule);margin:2.6rem 0}
+@media(max-width:640px){.diagram{padding:.8rem}.state-table{table-layout:auto;min-width:570px}}
+
+/* Chinese textbook prompts precede the worked solutions. */
+.exercise-question{margin:1.15rem 0 1.25rem;padding:.85rem 1rem;background:var(--tint);border-left:2px solid var(--green);min-width:0}
+.question-title,.answer-title{margin:.15rem 0 .8rem;font-size:1rem;color:var(--green)}
+.exercise-question>p:last-child{margin-bottom:.2rem}
+.exercise-question ol{margin:.65rem 0 1rem}
+.question-note{font-size:.9rem;color:var(--sub);border-top:1px solid var(--rule);padding-top:.6rem}
+.question-context{font-size:.94rem}
+.exercise-question .source{margin-top:1rem}
+.question-code{font-size:13px}
+svg.question-large-tree{min-width:1120px}
+
+/* Benchmark figures use recorded table data and native view controls. */
+.benchmark-figure{margin:1.8rem 0;padding:1rem;border:1px solid var(--rule);background:#f7f8f4;min-width:0;max-width:100%}
+.benchmark-kicker{font-size:.73rem;letter-spacing:.09em;color:var(--green);font-weight:650;margin-bottom:.25rem}
+.benchmark-figure .benchmark-title{font-size:1.06rem;line-height:1.6;margin:.15rem 0 1rem;color:var(--ink)}
+.benchmark-selector{min-width:0;margin:0;padding:0;border:0;position:relative}
+.benchmark-sr,.benchmark-input{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.benchmark-tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .9rem}
+.benchmark-tabs label{display:inline-block;cursor:pointer;padding:.22rem .7rem;border:1px solid #cbd7ce;border-radius:4px;background:var(--paper);font-size:.82rem;line-height:1.7;color:var(--sub)}
+.benchmark-tabs label:hover{border-color:var(--green);color:var(--green)}
+.benchmark-view{display:none}.benchmark-view:first-child{display:block}
+.benchmark-input~.benchmark-panels>.benchmark-view{display:none}
+.benchmark-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;align-items:start}
+.benchmark-grid:has(>.benchmark-chart:only-child){grid-template-columns:minmax(0,1fr)}
+.benchmark-chart:only-child:not(.benchmark-wide) .benchmark-svg{max-width:560px;margin:0 auto}
+.benchmark-grid[data-layout="wide"]{grid-template-columns:minmax(0,1fr)}
+.benchmark-chart{min-width:0;max-width:100%;padding:.7rem .6rem .3rem;border:1px solid #e1e7e0;background:var(--paper)}
+.benchmark-chart>h4{font-size:.85rem;line-height:1.5;font-weight:600;color:var(--sub);margin:.1rem .2rem .25rem}
+.benchmark-chart>.scroll{padding:0;border:0;background:transparent}
+.benchmark-svg{width:100%;height:auto;min-width:0;display:block}
+.benchmark-wide .benchmark-svg{min-width:720px}
+.benchmark-figure figcaption{font-size:.8rem;line-height:1.85;margin-top:.8rem}
+.benchmark-index ul{columns:2;font-size:.87rem}.benchmark-index li{break-inside:avoid;margin:.45rem 0}
+@media(max-width:640px){.benchmark-figure{padding:.75rem .6rem}.benchmark-grid{grid-template-columns:minmax(0,1fr)}.benchmark-chart{padding:.6rem .35rem .25rem}.benchmark-tabs label{padding:.25rem .55rem}.benchmark-index ul{columns:1}}
+.benchmark-input:nth-of-type(1):checked~.benchmark-panels>.benchmark-view:nth-child(1){display:block}
+.benchmark-input:nth-of-type(1):checked~.benchmark-tabs>label:nth-child(1){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(1):focus-visible~.benchmark-tabs>label:nth-child(1){outline:2px solid var(--green);outline-offset:3px}
+.benchmark-input:nth-of-type(2):checked~.benchmark-panels>.benchmark-view:nth-child(2){display:block}
+.benchmark-input:nth-of-type(2):checked~.benchmark-tabs>label:nth-child(2){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(2):focus-visible~.benchmark-tabs>label:nth-child(2){outline:2px solid var(--green);outline-offset:3px}
+.benchmark-input:nth-of-type(3):checked~.benchmark-panels>.benchmark-view:nth-child(3){display:block}
+.benchmark-input:nth-of-type(3):checked~.benchmark-tabs>label:nth-child(3){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(3):focus-visible~.benchmark-tabs>label:nth-child(3){outline:2px solid var(--green);outline-offset:3px}
+.benchmark-input:nth-of-type(4):checked~.benchmark-panels>.benchmark-view:nth-child(4){display:block}
+.benchmark-input:nth-of-type(4):checked~.benchmark-tabs>label:nth-child(4){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(4):focus-visible~.benchmark-tabs>label:nth-child(4){outline:2px solid var(--green);outline-offset:3px}
+.benchmark-input:nth-of-type(5):checked~.benchmark-panels>.benchmark-view:nth-child(5){display:block}
+.benchmark-input:nth-of-type(5):checked~.benchmark-tabs>label:nth-child(5){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(5):focus-visible~.benchmark-tabs>label:nth-child(5){outline:2px solid var(--green);outline-offset:3px}
+
+/* Reading rail: one table of contents beside the book page. */
+.reading-layout{display:grid;grid-template-columns:240px minmax(0,860px);gap:32px;max-width:1200px;margin:0 auto;padding:0 24px;align-items:start}
+.reading-layout>main{width:100%;min-width:0;margin:0}
+.chapter-sidebar{position:sticky;top:32px;max-height:calc(100dvh - 64px);overflow-y:auto;overscroll-behavior:contain;padding:8px 16px 12px 0;margin-top:40px;border-right:1px solid var(--rule);scrollbar-width:thin}
+.toc-panel>summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;list-style:none;padding:.45rem .55rem;color:var(--green);font-size:.9rem;font-weight:650;cursor:pointer}
+.toc-panel>summary::-webkit-details-marker{display:none}
+.toc-panel>summary::after{content:"+";font-size:1.1rem;font-weight:400}
+.toc-panel[open]>summary::after{content:"−"}
+.toc-panel>summary:focus-visible,.chapter-toc a:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.chapter-toc{border:0;background:transparent;margin:.45rem 0 0;padding:0;font-size:.84rem;line-height:1.65}
+.chapter-toc ul{columns:1;list-style:none;margin:0;padding:0}
+.chapter-toc li{margin:.18rem 0}
+.chapter-toc a{display:block;padding:.5rem .6rem;border-left:2px solid transparent;text-decoration:none;overflow-wrap:anywhere;color:var(--sub)}
+.chapter-toc a:hover{color:var(--green);background:var(--tint)}
+.chapter-toc a[aria-current="location"]{color:var(--green);border-left-color:var(--green);background:var(--tint);font-weight:600}
+.chapter-toc .toc-home{margin-bottom:.55rem;font-size:.8rem;color:var(--green)}
+.skip-link{position:fixed;left:16px;top:-100px;z-index:100;padding:.5rem 1rem;background:var(--paper);border:1px solid var(--green)}
+.skip-link:focus{top:12px}
+main[id],main [id]{scroll-margin-top:24px}
+@media(max-width:1099px){
+ .reading-layout{display:block;padding:0;max-width:860px}
+ .reading-layout>main{margin:auto}
+ .chapter-sidebar{position:static;top:0;z-index:10;margin:0;padding:8px 24px;border-right:0;border-bottom:1px solid var(--rule);background:var(--paper);max-height:none;overflow:visible}
+ .toc-enhanced .chapter-sidebar{position:sticky}
+ .toc-panel>summary{padding:.35rem 0;font-size:.88rem}
+ .chapter-toc{max-height:60dvh;overflow-y:auto;overscroll-behavior:contain;padding-bottom:.4rem}
+ main[id],main [id]{scroll-margin-top:80px}
+}
+@media(max-width:640px){.chapter-sidebar{padding:8px 18px}}
+@media print{.reading-layout{display:block;max-width:860px;padding:0}.chapter-sidebar,.skip-link{display:none}.reading-layout>main{padding:24px}}
+
+.result{font-variant-numeric:tabular-nums}.source-link{white-space:normal}
+.book-card{padding:1rem 0;border-bottom:1px solid var(--rule)}
+.book-card h3{margin:.2rem 0}.book-card p{margin:.4rem 0}
+.chart-svg{min-width:0} .chart-svg text{font-size:13px}
+.exercise-index a{font-variant-numeric:tabular-nums}.solution-link{font-size:.9rem}
+.exercise-question .scroll>table{min-width:480px}
+.question-note strong{color:var(--green)}
+
+/* Supplementary reading notes share the page's type and color palette. */
+.reading-notes{margin:2rem 0 0;padding:0.8rem 1rem;border-left:2px solid var(--green);background:var(--tint);font-size:0.92rem;line-height:1.85}
+.reading-notes>summary{color:var(--green);font-weight:650;cursor:pointer;list-style:none}
+.reading-notes>summary::-webkit-details-marker{display:none}
+.reading-notes>summary::after{content:"＋";float:right;font-weight:400}
+.reading-notes[open]>summary::after{content:"−"}
+.reading-notes>summary:focus-visible,.annotation-context a:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+.annotation-card{min-width:0;margin:1.15rem 0 0;padding:1rem 0 0;border-top:1px solid var(--rule)}
+.annotation-card:first-child{border-top:0;padding-top:0}
+.annotation-kind{display:block;font-size:0.73rem;font-weight:600;letter-spacing:0.05em;color:var(--green);margin-bottom:0.25rem}
+.annotation-card h3{font-size:0.97rem;line-height:1.65;margin:0 0 0.5rem;font-weight:650}
+.annotation-card p{margin:0.4rem 0 0.7rem}
+.annotation-card p:last-child{margin-bottom:0}
+.annotation-card .equation{padding:0.5rem 0;margin:0.65rem 0}
+.annotation-card math{font-size:1em}
+.annotation-sidebar{display:none}
+@media(min-width:1440px){
+ .notes-enhanced .reading-layout{grid-template-columns:240px minmax(0,860px) 280px;max-width:1524px;gap:32px}
+ .notes-enhanced main .reading-notes{display:none}
+ .notes-enhanced .annotation-sidebar:not([hidden]){display:block;position:sticky;top:32px;max-height:calc(100dvh - 64px);overflow-y:auto;overscroll-behavior:contain;min-width:0;margin-top:40px;padding:8px 0 12px 22px;border-left:1px solid var(--rule);font-size:0.9rem;line-height:1.85;scrollbar-width:thin}
+ .annotation-label{color:var(--green);font-size:0.87rem;font-weight:650;margin:0 0 0.75rem}
+ .annotation-context{font-size:0.85rem;line-height:1.65;margin:0 0 1.25rem}
+ .annotation-context a{color:var(--sub);text-decoration:none}
+ .annotation-context a:hover{color:var(--green);text-decoration:underline}
+ .annotation-sidebar .annotation-card{margin-top:1.5rem;padding-top:1.35rem}
+ .annotation-sidebar .annotation-card:first-child{margin-top:0;padding-top:0}
+ .annotation-sidebar .annotation-card h3{font-size:0.95rem}
+}
+@media print{.annotation-sidebar{display:none!important}main .reading-notes{display:block!important;break-inside:avoid}}
+
+/* Source statements, bilingual excerpts and preface share the reading layout. */
+.source-statement{margin:1.35rem 0;padding:.2rem 0 .8rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);min-width:0}
+.source-statement+.source-statement{border-top:0}
+.source-statement>h3,.source-statement>h4{font-size:1.08rem;line-height:1.65;margin:.75rem 0 .6rem}
+.statement-heading>.statement-label{display:block}
+.source-statement>summary{cursor:pointer;color:var(--green);font-weight:650;line-height:1.7;padding:.55rem 0}
+.source-statement>summary:focus-visible,.statement-index>summary:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+.statement-body{padding:.15rem 0 .15rem .8rem;border-left:2px solid var(--green);min-width:0}
+.statement-label{font-size:.8rem;font-weight:650;letter-spacing:.03em;color:var(--green);margin:.7rem 0 .3rem}
+.original-excerpt{font:1rem/1.85 Georgia,"Times New Roman",serif;margin:.5rem 0 1.15rem;padding:.75rem 1rem;overflow-wrap:break-word;min-width:0}
+.original-excerpt p{margin:.25rem 0 .7rem}.original-excerpt p:last-child{margin-bottom:0}
+.original-excerpt .equation,.original-excerpt .math-block{margin:.45rem 0}.original-excerpt math{font-size:1em}
+.statement-index{margin:1.2rem 0;padding:.7rem 1rem;background:var(--tint);border-left:2px solid var(--green)}
+.statement-index>summary{cursor:pointer;color:var(--green);font-weight:600}
+.statement-links{margin:.8rem 0 .4rem;columns:2;column-gap:1.6rem;list-style:none;padding:0;font-size:.88rem}
+.statement-links li{break-inside:avoid;margin:.3rem 0}.statement-index .source{margin:.6rem 0 .2rem}
+.source-chapter-index{margin:.8rem 0;padding:.65rem .9rem;border:1px solid var(--rule)}
+.source-chapter-index>summary{cursor:pointer;color:var(--green);font-weight:600}
+.source-chapter-index>summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.statement-note{font-size:.91rem;color:var(--sub);padding:.7rem .8rem;background:var(--tint);margin:.8rem 0}
+.preface-signature{margin-top:1.5rem;text-align:right;color:var(--sub)}
+@media(max-width:640px){.statement-body{padding-left:.6rem}.original-excerpt{padding:.65rem .75rem;font-size:.95rem}.statement-links{columns:1}.statement-index{padding:.65rem .8rem}}
+@media print{.source-statement,.original-excerpt{break-inside:avoid}}
+
+@media print{.annotation-rail{display:none!important}.reading-notes{display:block!important}main details{break-inside:auto}main details::details-content{content-visibility:visible!important}main details>summary{font-weight:600}.scroll,pre,.equation,.math-block{overflow:visible}pre{white-space:pre-wrap;overflow-wrap:anywhere}}
+
+/* Long expressions wrap in prose; code, equations and tables own their scrolling. */
+.reading-layout>main,.annotation-card{overflow-wrap:anywhere}
+#s1-2 th:first-child,#s1-2 td:first-child{min-width:76px;white-space:nowrap}
+#map th:nth-child(3),#map td:nth-child(3){min-width:9.2em}
+.scroll>table.compact-table{min-width:0}
+@media(max-width:640px){.compact-table th,.compact-table td{padding:.55rem .4rem}}
+[data-horizontal-overflow="true"]::after{content:attr(data-scroll-label);display:block;position:sticky;left:0;width:100%;margin-top:.25rem;color:var(--green);font: .75rem/1.8 system-ui,-apple-system,"PingFang SC",sans-serif;text-align:left}
+[data-horizontal-overflow="true"]:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+@media print{[data-horizontal-overflow="true"]::after{display:none}}
+
+.reading-layout>main>section:not(#exercises):not(#self-check) pre{font-size:14px}
+
+.worked{background:var(--tint);border-left:2px solid var(--green);padding:.8rem 1.1rem;margin:1.5rem 0}.worked h3{margin:.2rem 0 .7rem}.english-title{display:block;color:var(--sub);font-size:.85rem;font-weight:400}.code-download{font-size:.9rem}.code-explanation li{margin:.7rem 0}.flow-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}svg .highlight{fill:#e6eee7;stroke:var(--green)}.solution-steps>li{margin:1rem 0}.question-note strong{color:var(--green)}.experiment-output{font-size:.9rem}main [id]{scroll-margin-top:100px}@media(max-width:1099px){main [id]{scroll-margin-top:132px}}
+</style></head><body><a class="skip-link" href="#top">跳到正文</a><div class="reading-layout"><aside class="chapter-sidebar" aria-label="章节目录"><details class="toc-panel" id="toc-panel" open><summary>本章目录</summary><nav class="chapter-toc" id="chapter-toc" aria-label="本章目录"><a class="toc-home" href="book_overview.html">全书地图</a><a class="toc-home" href="preface.html">序言</a><ul><li><a href="#map">十二章与三个部分</a></li><li><a href="#part-ii">第二部分：程序怎样获得运行环境</a></li><li><a href="#part-iii">第三部分：程序怎样交换信息并共同推进</a></li><li><a href="#connections">从一段数组代码看章节之间的联系</a></li><li><a href="#reading-path">怎样安排第一轮阅读和回读</a></li><li><a href="#source-reading">经典原文与重要原理</a></li><li><a href="#program-guide">阅读与程序使用说明</a></li><li><a href="#edition">版次、页码与校注</a></li></ul></nav></details></aside><main id="top" tabindex="-1"><header><p class="overline">CS:APP · 第三版 GLOBAL EDITION · 中文伴读</p><h1>全书地图：沿一个程序读懂系统</h1><p class="intro">把表示、执行、运行环境和程序间协作连成一条可以反复回查的阅读路线。</p><p class="source">原书：<a class="source-pdf" href="../csapp.pdf#page=8">印刷 7—34 页 / PDF 8—35 页</a></p>
+<p class="chapter-nav"><a href="book_overview.html">全书地图</a><a href="book_overview.html#program-guide">程序说明</a><a href="preface.html">序言 →</a></p></header><section id="map"><h2>十二章与三个部分<span class="english-title" lang="en">Contents · Program Structure and Execution · Running Programs · Interaction</span></h2><details class="statement-index" id="source-index"><summary>本页原书摘录 · 3 处</summary><ul class="statement-links"><li><a href="#classic-map-part-i">第一部分为什么按这个顺序展开</a></li><li><a href="#classic-map-part-ii">从硬件转向系统软件</a></li><li><a href="#classic-map-part-iii">从孤立运行走向与设备和程序交互</a></li></ul></details>
+<p class="source">原书：<a class="source-pdf" href="../csapp.pdf#page=8">印刷 7 页 / PDF 8 页</a></p>
+
+
+<p>这本书始终围绕一个对象：正在被编写、翻译、执行并与外部交互的程序。数字表示决定“值是什么”，指令与硬件决定“如何完成一步”，操作系统决定“在什么环境中运行”，I/O和并发决定“怎样与其他活动协作”。从这条线进入，厚书便有了可以不断回看的骨架。</p>
+<p>全书由第1章总览、三个部分的第2—12章和附录A组成。先读<a href="preface.html">序言</a>理解学习方式，再沿下表进入各章。序言、第1章和三个部分的第2—12章均提供中文伴读、机制推演和本版题解；附录A作为错误处理的原书回查入口。</p>
+<div class="scroll"><table><thead><tr><th scope="col">位置</th><th scope="col">章</th><th scope="col">阅读入口</th><th scope="col">印刷页</th><th scope="col">这一站解决的问题</th></tr></thead><tbody><tr><td>导读</td><td>1</td><td><a href="chapter01_tour.html">计算机系统漫游</a></td><td>37—64</td><td>画出程序的一生</td></tr><tr><td>I · 程序结构与执行</td><td>2</td><td><a href="chapter02_information.html">信息的表示和处理</a></td><td>67—197</td><td>理解位模式与有限算术</td></tr><tr><td>I · 程序结构与执行</td><td>3</td><td><a href="chapter03_machine_level.html">程序的机器级表示</a></td><td>199—386</td><td>从指令追踪控制与数据</td></tr><tr><td>I · 程序结构与执行</td><td>4</td><td><a href="chapter04_architecture.html">处理器体系结构</a></td><td>387—530</td><td>从指令语义走到执行通路</td></tr><tr><td>I · 程序结构与执行</td><td>5</td><td><a href="chapter05_optimization.html">优化程序性能</a></td><td>531—614</td><td>找出计算依赖和编译器障碍</td></tr><tr><td>I · 程序结构与执行</td><td>6</td><td><a href="chapter06_memory.html">存储器层次结构</a></td><td>615—702</td><td>解释访问顺序为什么影响速度</td></tr><tr><td>II · 在系统上运行</td><td>7</td><td><a href="chapter07_linking.html">链接</a></td><td>705—755</td><td>把目标文件组合成可加载程序；连接第 1 章编译流程与第 9 章装载</td></tr><tr><td>II · 在系统上运行</td><td>8</td><td><a href="chapter08_exceptional.html">异常控制流</a></td><td>757—835</td><td>从一条顺序控制流走向异常、进程、信号与上下文切换</td></tr><tr><td>II · 在系统上运行</td><td>9</td><td><a href="chapter09_virtual_memory.html">虚拟内存</a></td><td>837—921</td><td>把第 6 章缓存思想用于地址空间、页表、保护与动态分配</td></tr><tr><td>III · 交互与通信</td><td>10</td><td><a href="chapter10_system_io.html">系统级 I/O</a></td><td>925—952</td><td>把文件描述符、短读写和缓冲连成可靠输入输出</td></tr><tr><td>III · 交互与通信</td><td>11</td><td><a href="chapter11_network.html">网络编程</a></td><td>953—1006</td><td>用 socket 和客户端/服务器模型把字节送到另一台机器</td></tr><tr><td>III · 交互与通信</td><td>12</td><td><a href="chapter12_concurrency.html">并发编程</a></td><td>1007—1076</td><td>比较进程、事件循环、线程，理解共享状态与同步</td></tr><tr><td>附录</td><td>A</td><td><a class="source-pdf" href="../csapp.pdf#page=1078">错误处理 · 原书</a></td><td>1077—1082</td><td>用返回值、errno 和包装函数明确失败路径</td></tr></tbody></table></div><p>第1章和第一部分的原书练习、作业共298道：第1章2道、第2章97道、第3章75道、第4章59道、第5章19道、第6章46道。第二部分另有59道：第7章13道、第8章26道、第9章20道。第三部分62道：第10章10道、第11章13道、第12章39道，全书共419道。各章按本版题号连续呈现，题干保留必要输入和小问，解答在折叠区内。正文与题目之间可以往返：先在正文理解机制，再在题目中独立推演。</p>
+<div class="source-statement" id="classic-map-part-i"><h3 class="statement-heading"><span class="statement-label">原书摘录</span>第一部分为什么按这个顺序展开</h3><p class="source">Part I · Program Structure and Execution · <a class="source-pdf" href="../csapp.pdf#page=66">印刷 65 页 / PDF 66 页</a></p><blockquote class="original-excerpt" lang="en"><p>Our exploration of computer systems starts by studying the computer itself, comprising a processor and a memory subsystem. At the core, we require ways to represent basic data types, such as approximations to integer and real arithmetic. From there, we can consider how machine-level instructions manipulate data and how a compiler translates C programs into these instructions. Next, we study several methods of implementing a processor to gain a better understanding of how hardware resources are used to execute instructions. Once we understand compilers and machine-level code, we can examine how to maximize program performance by writing C programs that, when compiled, achieve the maximum possible performance. We conclude with the design of the memory subsystem, one of the most complex components of a modern computer system.</p></blockquote><div class="statement-body"><p><strong>译文。</strong>我们从计算机本身开始研究计算机系统，其中包括处理器和存储器子系统。最基本的问题，是如何表示基本数据类型，例如整数和实数算术的近似表示。在此基础上，再考虑机器级指令怎样操纵数据，以及编译器怎样把 C 程序翻译成这些指令。接着研究实现处理器的几种方法，以理解硬件资源怎样用于执行指令。理解编译器和机器级代码之后，就可以考察如何编写经编译后尽可能高效的 C 程序。最后讨论存储器子系统的设计，它是现代计算机系统中最复杂的组成部分之一。</p><p>这段开篇直接给出第 2—6 章的因果链：<strong>表示确定运算语义，指令表达状态变化，处理器安排执行，优化改变工作组织，存储层次决定数据供应。</strong>第 5 章的“快”因此同时受第 2 章的正确性约束、第 3—4 章的执行机制约束和第 6 章的数据访问约束。上面的章节表用于找位置，后一节的数组例子用于沿这条链来回阅读。</p><p><strong>接着读：</strong><a href="#connections">同一段数组代码的跨章联系</a> · <a href="preface.html#overview">序言中的十二章概览</a></p></div></div><details class="reading-notes" id="notes-map" data-notes-for="map" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">读法</span><h3>先找到问题所在层次</h3><p>整数结果异常先看表示和运算；访问很慢再区分地址、依赖和缓存；链接失败则回到名字和目标文件。</p>
+</div><div class="annotation-card"><span class="annotation-kind">来源</span><h3>章节范围和题目采用同一版</h3><p>这里是Pearson2016 Global Edition。PDF页序比印刷页大1，不将其他版的题号直接套进来。</p>
+</div></div></details>
+</section><section id="part-ii"><h2>第二部分：程序怎样获得运行环境<span class="english-title" lang="en">Part II · Running Programs on a System</span></h2>
+<p class="source">原书：<a class="source-pdf" href="../csapp.pdf#page=704">印刷 703 页 / PDF 704 页</a></p>
+<p>第一部分解释指令怎样执行、数据怎样流过存储层次。第二部分把镜头拉到一次完整的运行：独立编译的文件先组成程序，内核再为它建立进程和地址空间，运行过程中随时可能出现系统调用、信号和缺页。三个章节分别回答“名字和地址怎样接起来”“控制权何时交给谁”“地址对应的内存从哪里来”。</p>
+<div class="source-statement" id="classic-map-part-ii"><h3 class="statement-heading"><span class="statement-label">原书摘录</span>从硬件转向构建与运行程序的系统软件</h3><p class="source">Part II · <a class="source-pdf" href="../csapp.pdf#page=704">印刷 703 页 / PDF 704 页</a></p><blockquote class="original-excerpt" lang="en"><p>Our exploration of computer systems continues with a closer look at the systems software that builds and runs application programs.</p></blockquote><div class="statement-body"><p><strong>译文。</strong>我们继续探索计算机系统，进一步观察负责构建和运行应用程序的系统软件。</p><p>本部分开篇随后把链接器、操作系统和硬件放到一起：链接器组合程序的不同部分，操作系统与硬件协作，让并存的程序各自获得处理器和主存的使用视图。学习的落脚点是自己能写出 shell 和动态内存分配器。</p></div></div>
+<div class="scroll"><table><thead><tr><th scope="col">跟着一次运行走</th><th scope="col">具体状态变化</th><th scope="col">继续阅读</th></tr></thead><tbody><tr><td>构建 <code>main.o + sum.o</code></td><td>把 <code>sum</code> 的引用绑定到定义，再按最终布局修补调用位移</td><td><a href="chapter07_linking.html#s7-7">7.7 重定位</a></td></tr><tr><td>shell 启动程序</td><td><code>fork</code> 产生子进程；子进程的 <code>execve</code> 替换地址空间，父进程用 <code>waitpid</code> 回收</td><td><a href="chapter08_exceptional.html#s8-4">8.4 进程控制</a></td></tr><tr><td>首次访问映射页</td><td>硬件查页表；未驻留时进入内核，合法访问装入页面后重试，权限错误走失败路径</td><td><a href="chapter09_virtual_memory.html#s9-6">9.6 地址翻译</a></td></tr><tr><td>程序申请一个对象</td><td><code>malloc</code> 在堆中寻找块、分裂并更新元数据；<code>free</code> 恢复可复用状态</td><td><a href="chapter09_virtual_memory.html#s9-9">9.9 动态分配</a></td></tr></tbody></table></div>
+<p>这里有三种容易混淆的地址：目标文件内的相对位置、链接后程序中的虚拟地址、页表翻译得到的物理地址。链接器处理前两者的关系，运行时装载和重定位还会参与；CPU 的 MMU 和操作系统共同管理后两者。把每次地址变化的执行者写出来，重定位、装载和缺页就能接成同一条路径。</p>
+<p>读第8章时，先画父子两条控制流及必须满足的先后关系，再列可能输出；读信号时，分别标出生成、pending、解除阻塞和执行处理函数。读第9章时，先固定页大小、位宽和访问权限，再算位段及状态。每章的题解与程序都沿这些可核查的中间状态展开。</p>
+<details class="reading-notes" id="notes-part-ii" data-notes-for="part-ii" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">主线</span><h3>同一个程序，三种系统责任</h3><p>链接器建立名字与位置，内核调度和处理事件，虚拟内存系统建立地址与存储的对应关系。</p></div><div class="annotation-card"><span class="annotation-kind">边界</span><h3>区分模型、目标环境和现场观察</h3><p>ELF/Linux 描述以原书目标为准；本机 POSIX 实验和 C/Python 算术模型各自给出实际验证范围。</p></div></div></details></section><section id="part-iii"><h2>第三部分：程序怎样交换信息并共同推进<span class="english-title" lang="en">Part III · Interaction and Communication between Programs</span></h2>
+<p class="source">原书：<a class="source-pdf" href="../csapp.pdf#page=924">印刷 923 页 / PDF 924 页</a></p>
+<p>第二部分给程序准备了运行环境；第三部分让它开始与外界交互。考虑一个接收浏览器请求的服务器：它从连接中读入字节，按 HTTP 规则识别请求，读取文件或运行计算，再把响应送回去。另一个客户到来时，服务器还要决定谁继续执行、谁等待，以及共享状态怎样保持正确。第10章解决字节怎样可靠地进出，第11章把这些字节组织成跨程序的协议，第12章安排同时存在的多条活动。</p>
+<div class="source-statement" id="classic-map-part-iii"><h3 class="statement-heading"><span class="statement-label">原书摘录</span>从孤立运行走向与设备和程序交互</h3><p class="source">Part III · <a class="source-pdf" href="../csapp.pdf#page=924">印刷 923 页 / PDF 924 页</a></p><blockquote class="original-excerpt" lang="en"><p>However, in the real world, application programs use services provided by the operating system to communicate with I/O devices and with other programs.</p></blockquote><div class="statement-body"><p><strong>译文。</strong>然而在现实世界中，应用程序使用操作系统提供的服务，与 I/O 设备以及其他程序通信。</p><p>原书接着把 Unix I/O、Web 客户端与服务器、并发服务和多核加速连在一起。它们共同要求我们弄清一次操作的单位、状态归谁所有，以及什么事件使等待者继续运行。</p></div></div>
+<div class="scroll"><table><thead><tr><th scope="col">一次请求中的问题</th><th scope="col">具体推演</th><th scope="col">章节入口</th></tr></thead><tbody><tr><td>一次 read 能否得到整条请求？</td><td>请求 8 字节但先收到 3 字节，推进缓冲指针并把剩余数减到 5；EOF、错误和暂时的短计数分别处理。</td><td><a href="chapter10_system_io.html#s10-5">10.5 可靠 I/O</a></td></tr><tr><td>字节属于哪个客户、哪条消息？</td><td>连接由两端地址和端口确定；TCP 提供有序字节流，HTTP 再用行结束、空行和正文长度划分消息。</td><td><a href="chapter11_network.html#s11-4">11.4 套接字</a> · <a href="chapter11_network.html#s11-5">11.5 Web</a></td></tr><tr><td>慢客户等待时，其他客户怎样继续？</td><td>进程或线程交给调度器切换；事件循环只推进已就绪描述符，并为每个连接保存尚未完成的输入输出状态。</td><td><a href="chapter12_concurrency.html#s12-2">12.2 I/O 多路复用</a></td></tr><tr><td>多个工作者修改同一计数会怎样？</td><td>两个工作者都先读到 0、各自写回 1，会丢失一次更新；将读改写作为受保护的整体后，结束值才为 2。</td><td><a href="chapter12_concurrency.html#s12-5">12.5 同步</a></td></tr></tbody></table></div>
+<p>先分清三种边界再动手：文件描述符是进程中的句柄，连接提供字节传输，应用协议规定消息；它们的边界并不重合。一次 <code>write</code> 对应的数据可能经多次 <code>read</code> 才收齐，两个请求也可能一起进入接收缓冲。可靠读写负责保存已完成的字节数，协议解析负责判断当前消息是否结束，并发设计则负责保存每条活动尚未完成的状态。</p>
+<p>并发和并行也有不同目标。并发服务器可以在一个客户等待网络时处理另一个客户；这有助于响应性，即使只有一个核心也有意义。把矩阵乘法分给多个核心才是在争取计算加速，还要计入线程启动、同步、访存和不能并行的部分。第12章把正确性与性能分开分析，再回到第5、6章的优化和局部性。</p>
+<details class="reading-notes" id="notes-part-iii" data-notes-for="part-iii" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">主线</span><h3>跟踪每一步还欠什么</h3><p>I/O 记剩余字节，协议记未完成消息，并发记等待条件和资源所有者。同一个请求的状态能贯穿三章。</p></div><div class="annotation-card"><span class="annotation-kind">推演</span><h3>先构造一次不利的交错</h3><p>让输入分两次到达，让另一个工作者插在读和写之间，或让一个客户提前关闭连接，再检查程序怎样结束和释放资源。</p></div></div></details></section><section id="connections"><h2>从一段数组代码看章节之间的联系<span class="english-title" lang="en">A program across representations and execution layers</span></h2>
+<p class="source">原书：<a class="source-pdf" href="../csapp.pdf#page=23">印刷 22 页 / PDF 23 页</a></p>
+<p>考虑一个具体任务：读取一组数，求和，再把结果发送出去。先固定任务，再逐层加上问题，便能看见每章为何出现在这里。</p>
+<div class="scroll"><table><thead><tr><th scope="col">层次</th><th scope="col">对同一任务提出的问题</th><th scope="col">主要章节</th></tr></thead><tbody><tr><td>值</td><td>元素占几位？求和溢出吗？浮点重排是否改变答案？</td><td>2</td></tr><tr><td>指令</td><td>数组下标怎样变成字节地址？循环、调用和返回怎样实现？</td><td>3</td></tr><tr><td>处理器</td><td>上一条结果何时可用？转发或停顿怎样维持顺序语义？</td><td>4</td></tr><tr><td>计算性能</td><td>累积器是不是长依赖链？展开与独立累积各改了什么？</td><td>5</td></tr><tr><td>存储性能</td><td>一次带入几项？工作集多大？访问映射到哪个缓存组？</td><td>6</td></tr><tr><td>运行环境</td><td>目标文件怎样链接？地址空间和异常如何支持执行？</td><td>7—9</td></tr><tr><td>协作</td><td>输入输出怎样处理短计数？多个请求怎样共享状态？</td><td>10—12及附录A</td></tr></tbody></table></div>
+<figure><div class="scroll"><svg viewBox="0 0 960 435" role="img" aria-labelledby="whole-map-title whole-map-desc"><title id="whole-map-title">CSAPP 三部分依赖地图</title><desc id="whole-map-desc">第一章提供总图；第二到六章连接表示、指令、处理器和性能；第七到九章连接链接、进程和虚拟内存；第十到十二章连接输入输出、网络和并发。</desc><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="#7b8f85"/></marker></defs><g class="edge" marker-end="url(#arrow)"><path d="M220 90H250"/><path d="M460 90H490"/><path d="M700 90H730"/><path d="M370 130V205"/><path d="M610 130V205"/><path d="M850 130V205"/><path d="M370 275V345"/><path d="M610 275V345"/><path d="M850 275V345"/></g><g><a href="chapter02_information.html"><rect class="node" x="10" y="50" width="210" height="80" rx="4"/><text x="115" y="80">2 · 位与数值</text><text class="hint" x="115" y="106">数据怎样表示</text></a><a href="chapter03_machine_level.html"><rect class="node" x="250" y="50" width="210" height="80" rx="4"/><text x="355" y="80">3 · 机器指令</text><text class="hint" x="355" y="106">C 怎样变成执行步骤</text></a><a href="chapter04_architecture.html"><rect class="node" x="490" y="50" width="210" height="80" rx="4"/><text x="595" y="80">4 · 处理器</text><text class="hint" x="595" y="106">指令怎样被硬件完成</text></a><a href="chapter05_optimization.html"><rect class="node" x="730" y="50" width="220" height="80" rx="4"/><text x="840" y="80">5 / 6 · 性能与存储</text><text class="hint" x="840" y="106">依赖链与局部性</text></a><rect class="node" x="250" y="205" width="210" height="70" rx="4"/><text x="355" y="234">7 · 链接</text><text class="hint" x="355" y="256">组合与装载</text><rect class="node" x="490" y="205" width="210" height="70" rx="4"/><text x="595" y="234">8 · 异常与进程</text><text class="hint" x="595" y="256">控制流与隔离</text><rect class="node" x="730" y="205" width="220" height="70" rx="4"/><text x="840" y="234">9 · 虚拟内存</text><text class="hint" x="840" y="256">地址、缓存与保护</text><rect class="node" x="250" y="345" width="210" height="70" rx="4"/><text x="355" y="374">10 · I/O</text><text class="hint" x="355" y="396">可靠的字节流</text><rect class="node" x="490" y="345" width="210" height="70" rx="4"/><text x="595" y="374">11 · 网络</text><text class="hint" x="595" y="396">远端通信</text><rect class="node" x="730" y="345" width="220" height="70" rx="4"/><text x="840" y="374">12 · 并发</text><text class="hint" x="840" y="396">共享状态与同步</text><text x="115" y="24">第 1 章先画总图</text><text class="hint" x="115" y="245">第二部分</text><text class="hint" x="115" y="385">第三部分</text></g></svg></div><figcaption>笔记作者归纳的学习联系图。箭头表示主题的承接，不是原书声明的严格先修关系。第一行可进入已有伴读；第 6 章还可从章节表进入。</figcaption></figure><p>图中的箭头表示理解上的承接。第4章的五级教学流水线给出“重叠执行仍须保存语义”的具体机制，第5章再用更高层的现代处理器模型分析依赖与吞吐；两者相关，但不能把Y86的固定停顿数字直接当成实际CPU计时。第6章又加入数据到达时间，解释为什么寄存器内的快速计算会被存储拖慢。</p>
+<p>跨部分的回路也很重要：第7章的链接要联系第3章指令地址；第9章同时使用第6章缓存思想和第8章异常机制；第11章的网络字节序回到第2章的数据表示，第12章的线程共享又回到对象布局与存储可见性。</p>
+<p>与Weiss一起读时，可以先用算法分析确定工作量随规模怎样增长，再用CS:APP检查每份工作怎样落到机器上。两个算法同为线性时间，也可能因依赖链、常数成本和局部性而相差很多；反过来，微观优化也不能挽救错误的渐近复杂度。</p>
+<details class="reading-notes" id="notes-connections" data-notes-for="connections" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">理解</span><h3>复杂度与机器成本互补</h3><p>算法决定做多少工作，执行模型解释这些工作怎样重叠、等待和搬运。两层都需要明确输入规模与假设。</p>
+</div><div class="annotation-card"><span class="annotation-kind">边界</span><h3>教学模型不能直接相乘成实机性能</h3><p>缓存、流水和系统活动互相影响。先用模型提出解释，再在明确机器与输入上核对。</p>
+</div></div></details>
+</section><section id="reading-path"><h2>怎样安排第一轮阅读和回读<span class="english-title" lang="en">How to Read the Book · Course Paths</span></h2>
+<p class="source">原书：<a class="source-pdf" href="../csapp.pdf#page=21">印刷 20 页 / PDF 21 页</a></p>
+<p>第一轮按序言、第1章、第2—6章推进，再沿<a href="#part-ii">第二部分</a>进入第7—9章，最后沿<a href="#part-iii">第三部分</a>完成第10—12章。每章先抓住一个主问题，再读相关小节、图和程序。第2章遇到定理式推导时先算一个小位宽例子，随后补一般式；第3章先追踪一条路径，再整理指令类别；第4章先完整执行一条指令，再让几条指令重叠；第5、6章把同一计算在不同组织下的成本算出来。</p>
+<div class="scroll"><table><thead><tr><th scope="col">读到这里</th><th scope="col">停下来做的一件事</th><th scope="col">能独立回答才继续</th></tr></thead><tbody><tr><td>2章补码与浮点</td><td>把给定位模式写成带权和</td><td>符号、范围、舍入怎样改变结果</td></tr><tr><td>3章过程调用</td><td>画调用前后寄存器和栈中的值</td><td>参数怎样到达、返回怎样继续、活跃值怎样保存</td></tr><tr><td>4章PIPE</td><td>逐周期放入load及其使用者</td><td>数据何时产生，为什么某级保持而另一级注入气泡</td></tr><tr><td>5章优化</td><td>画单累积器和多累积器依赖图</td><td>关键路径与吞吐分别给出什么下界</td></tr><tr><td>6章缓存</td><td>将一串地址分成tag/set/offset</td><td>每次命中或失效后，哪一行保存哪个块</td></tr></tbody></table></div>
+<p>第二轮选一个跨章例子回读，例如矩阵转置或数组内积。保留同一输入与数值模型，分别检查算术、地址、依赖和访问顺序。这样能够发现“一个章节看似成立的建议”附带什么前提：浮点重结合需要数值许可，循环交换需要独立性，缓存分块需要工作集与映射条件。</p>
+<p>原书的课程组合允许不同重心。若优先系统编程，可以在掌握位表示、机器级程序和基本存储后进入第7—12章，同时把第4章作为理解处理器机制的深入路线。这里仍保留第一部分的完整顺序，便于读优化时回查硬件依据。</p>
+<details class="reading-notes" id="notes-reading-path" data-notes-for="reading-path" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">方法</span><h3>每轮都留下一个可检查的结果</h3><p>位图、地址表、状态轨迹或输出都可以。留下具体结果，回读时才知道是哪一个假设发生变化。</p>
+</div><div class="annotation-card"><span class="annotation-kind">理解</span><h3>展开题解之前先固定条件</h3><p>位宽、元素尺寸、初始缓存状态和舍入规则常常比计算本身更容易遗漏。</p>
+</div></div></details>
+</section><section id="source-reading"><h2>经典原文与重要原理<span class="english-title" lang="en">Source Passages and Principles</span></h2><p>原文摘录与中文陈述放在相应机制旁边，接着展开条件、公式、例子和推导。第 2 章的 25 条 <span lang="en">Principle</span> 按原书英文名称定位，保留作者的陈述与原式；原书公式有编号的，同时注明该编号。其余摘录覆盖全书视角、系统抽象、指令语义、流水线、合法优化、存储局部性、第二部分的链接、控制流和虚拟内存，以及第三部分的可靠I/O、网络协议与并发协作。</p><p>沿正文阅读时，可以在同一小节对照“作者怎样说”与“这一结论为何成立”。回读时，也可以从下列索引直达原文与对应解释。所有来源均为本地第三版 Global Edition，页码同时列出印刷页与 PDF 页序。</p><details class="source-chapter-index"><summary>全书地图 · 3 处</summary><ul class="statement-links"><li><a href="#classic-map-part-i">第一部分为什么按这个顺序展开</a></li><li><a href="#classic-map-part-ii">从硬件转向系统软件</a></li><li><a href="#classic-map-part-iii">从孤立运行走向与设备和程序交互</a></li></ul></details><details class="source-chapter-index"><summary>序言 · 5 处</summary><ul class="statement-links"><li><a href="preface.html#classic-preface-perspective">以程序员能写出怎样的程序为尺度</a></li><li><a href="preface.html#classic-preface-machine">例子的机器和软件环境</a></li><li><a href="preface.html#classic-preface-active">学系统要亲手推演和运行</a></li><li><a href="preface.html#classic-preface-code">书中的程序来自实际源文件</a></li><li><a href="preface.html#classic-preface-cache-lab">用同一个模型连接分析与优化</a></li></ul></details><details class="source-chapter-index"><summary>第 1 章：计算机系统漫游 · 9 处</summary><ul class="statement-links"><li><a href="chapter01_tour.html#classic-1-bits-context">位模式的意义取决于解释它的上下文</a></li><li><a href="chapter01_tour.html#classic-1-compilation">四个阶段共同构成编译系统</a></li><li><a href="chapter01_tour.html#classic-1-locality">局部性为什么能同时接近大容量与高速度</a></li><li><a href="chapter01_tour.html#classic-1-hierarchy">相邻层次之间的缓存关系</a></li><li><a href="chapter01_tour.html#classic-1-process">进程把一次运行呈现为独占机器</a></li><li><a href="chapter01_tour.html#classic-1-threads">线程共享进程中的代码和全局数据</a></li><li><a href="chapter01_tour.html#classic-1-amdahl">Amdahl 定律及其上限</a></li><li><a href="chapter01_tour.html#classic-1-concurrency">并发和并行在本章中的用法</a></li><li><a href="chapter01_tour.html#classic-1-isa">顺序的指令语义与并行的内部实现</a></li></ul></details><details class="source-chapter-index"><summary>第 2 章：信息的表示和处理 · 28 处</summary><ul class="statement-links"><li><a href="chapter02_information.html#principle-2-unsigned-encoding">无符号编码的定义</a></li><li><a href="chapter02_information.html#principle-2-unsigned-unique">无符号编码的唯一性</a></li><li><a href="chapter02_information.html#principle-2-twos-encoding">补码编码的定义</a></li><li><a href="chapter02_information.html#principle-2-twos-unique">补码编码的唯一性</a></li><li><a href="chapter02_information.html#principle-2-t2u">补码到无符号的转换</a></li><li><a href="chapter02_information.html#principle-2-u2t">无符号到补码的转换</a></li><li><a href="chapter02_information.html#principle-2-zero-extension">无符号数的零扩展</a></li><li><a href="chapter02_information.html#principle-2-sign-extension">补码数的符号扩展</a></li><li><a href="chapter02_information.html#principle-2-unsigned-truncate">无符号数的截断</a></li><li><a href="chapter02_information.html#principle-2-twos-truncate">补码数的截断</a></li><li><a href="chapter02_information.html#principle-2-unsigned-add">无符号加法</a></li><li><a href="chapter02_information.html#principle-2-unsigned-overflow">检测无符号加法溢出</a></li><li><a href="chapter02_information.html#principle-2-unsigned-negation">无符号加法逆元</a></li><li><a href="chapter02_information.html#principle-2-twos-add">补码加法的三种结果</a></li><li><a href="chapter02_information.html#principle-2-twos-overflow">检测补码加法溢出</a></li><li><a href="chapter02_information.html#principle-2-twos-negation">补码加法逆元</a></li><li><a href="chapter02_information.html#principle-2-unsigned-multiply">无符号乘法</a></li><li><a href="chapter02_information.html#principle-2-twos-multiply">补码乘法</a></li><li><a href="chapter02_information.html#principle-2-product-bits">无符号与补码乘法的低位等价性</a></li><li><a href="chapter02_information.html#principle-2-power-product">扩宽位串后乘以二的幂</a></li><li><a href="chapter02_information.html#principle-2-unsigned-shift">无符号左移与乘法</a></li><li><a href="chapter02_information.html#principle-2-twos-shift">补码左移与乘法</a></li><li><a href="chapter02_information.html#principle-2-unsigned-divide">无符号数除以二的幂</a></li><li><a href="chapter02_information.html#principle-2-arithmetic-floor">算术右移向下取整</a></li><li><a href="chapter02_information.html#principle-2-arithmetic-ceil">加偏置后向上取整</a></li><li><a href="chapter02_information.html#classic-2-byte-memory">经典表述 · 内存的字节数组视图</a></li><li><a href="chapter02_information.html#classic-2-round-even">经典表述 · 最接近值与中点取偶</a></li><li><a href="chapter02_information.html#classic-2-float-association">经典表述 · 每一步舍入会破坏结合律</a></li></ul></details><details class="source-chapter-index"><summary>第 3 章：程序的机器级表示 · 16 处</summary><ul class="statement-links"><li><a href="chapter03_machine_level.html#classic-3-abstractions">经典表述 · ISA 与虚拟内存两种抽象</a></li><li><a href="chapter03_machine_level.html#classic-3-operands">经典表述 · 操作数决定取值的路径</a></li><li><a href="chapter03_machine_level.html#classic-3-zero-extension">经典表述 · 四字节寄存器结果会清零高半部</a></li><li><a href="chapter03_machine_level.html#classic-3-lea">经典表述 · 有效地址计算也能表达算术</a></li><li><a href="chapter03_machine_level.html#classic-3-control-dataflow">经典表述 · 条件可以改变控制流或数据流</a></li><li><a href="chapter03_machine_level.html#classic-3-cmov-boundary">经典表述 · 条件传送的求值前提</a></li><li><a href="chapter03_machine_level.html#classic-3-jump-table">经典表述 · 跳转表把多路选择化为查表</a></li><li><a href="chapter03_machine_level.html#classic-3-procedure-mechanisms">经典表述 · 过程调用的三项责任</a></li><li><a href="chapter03_machine_level.html#classic-3-recursion">经典表述 · 栈为每次递归调用保留私有状态</a></li><li><a href="chapter03_machine_level.html#classic-3-row-major">经典表述 · 二维数组由嵌套数组决定行顺序</a></li><li><a href="chapter03_machine_level.html#classic-3-struct-fields">经典表述 · 字段选择在编译时化为偏移</a></li><li><a href="chapter03_machine_level.html#classic-3-alignment">经典表述 · 对齐约束落在对象起始地址</a></li><li><a href="chapter03_machine_level.html#classic-3-pointer-types">经典表述 · 指针类型是 C 提供的抽象</a></li><li><a href="chapter03_machine_level.html#classic-3-bounds-state">经典表述 · 越界写可能破坏过程状态</a></li><li><a href="chapter03_machine_level.html#classic-3-scalar-float">经典表述 · 标量浮点使用向量寄存器的低部</a></li><li><a href="chapter03_machine_level.html#classic-3-float-unordered">经典表述 · NaN 对应比较的无序结果</a></li></ul></details><details class="source-chapter-index"><summary>第 4 章：处理器体系结构 · 6 处</summary><ul class="statement-links"><li><a href="chapter04_architecture.html#principle-4-isa-visible-state">ISA 约束程序可见的状态</a></li><li><a href="chapter04_architecture.html#principle-4-no-reading-back">原书原则 · 无须回读新状态（No reading back）</a></li><li><a href="chapter04_architecture.html#principle-4-pipeline-throughput-latency">吞吐量与单项延迟</a></li><li><a href="chapter04_architecture.html#principle-4-slowest-stage">最慢阶段决定时钟</a></li><li><a href="chapter04_architecture.html#principle-4-feedback-dependencies">反馈决定哪些工作能够重叠</a></li><li><a href="chapter04_architecture.html#principle-4-pipeline-hazards">依赖何时构成流水冒险</a></li></ul></details><details class="source-chapter-index"><summary>第 5 章：优化程序性能 · 6 处</summary><ul class="statement-links"><li><a href="chapter05_optimization.html#classic-5-safe-optimization">原书原则 · 安全优化的语义边界</a></li><li><a href="chapter05_optimization.html#classic-5-cpe-slope">原书表述 · CPE 是随元素数增加的斜率</a></li><li><a href="chapter05_optimization.html#classic-5-latency-bound">顺序依赖给出延迟下界</a></li><li><a href="chapter05_optimization.html#classic-5-throughput-bound">功能单元给出吞吐下界</a></li><li><a href="chapter05_optimization.html#classic-5-multiple-accumulators">原书方法 · 用独立累积器拆开依赖链</a></li><li><a href="chapter05_optimization.html#classic-5-floating-associativity">浮点运算的结合顺序影响结果</a></li></ul></details><details class="source-chapter-index"><summary>第 6 章：存储器层次结构 · 7 处</summary><ul class="statement-links"><li><a href="chapter06_memory.html#principle-6-locality">局部性描述访问倾向</a></li><li><a href="chapter06_memory.html#principle-6-hierarchy-caching">上层保存下层数据的副本</a></li><li><a href="chapter06_memory.html#principle-6-block-amortization">一次搬块由后续访问分摊</a></li><li><a href="chapter06_memory.html#classic-6-block-line-set">块、行与组</a></li><li><a href="chapter06_memory.html#classic-6-write-back">原书策略 · 写回推迟下层更新</a></li><li><a href="chapter06_memory.html#classic-6-cache-size-hit-time">原书取舍 · 容量与命中时间</a></li><li><a href="chapter06_memory.html#classic-6-cache-friendly-inner-loop">原书方法 · 先减少热点内循环的 miss</a></li></ul></details><!-- part-two-source-index:start --><details class="source-chapter-index"><summary>第 7 章：链接 · 5 处</summary><ul class="statement-links"><li><a href="chapter07_linking.html#classic-7-resolution">每个引用对应一个定义</a></li><li><a href="chapter07_linking.html#classic-7-local-symbols">链接局部与程序局部不同</a></li><li><a href="chapter07_linking.html#classic-7-archive">输入顺序影响归档提取</a></li><li><a href="chapter07_linking.html#classic-7-shared-text">代码页共享需要避免逐进程改写</a></li><li><a href="chapter07_linking.html#classic-7-pic">代码可共享，可写状态仍分开</a></li></ul></details><details class="source-chapter-index"><summary>第 8 章：异常控制流 · 5 处</summary><ul class="statement-links"><li><a href="chapter08_exceptional.html#classic-8-exception">异常由事件触发</a></li><li><a href="chapter08_exceptional.html#classic-8-process">进程的经典定义</a></li><li><a href="chapter08_exceptional.html#classic-8-errors">先查返回值</a></li><li><a href="chapter08_exceptional.html#classic-8-pending">通知表达至少一次</a></li><li><a href="chapter08_exceptional.html#classic-8-nonlocal">跳向仍在执行的调用环境</a></li></ul></details><details class="source-chapter-index"><summary>第 9 章：虚拟内存 · 4 处</summary><ul class="statement-links"><li><a href="chapter09_virtual_memory.html#classic-9-address">翻译是一道运行时映射</a></li><li><a href="chapter09_virtual_memory.html#classic-9-fault">缺页的缓存解释</a></li><li><a href="chapter09_virtual_memory.html#classic-9-cow">推迟复制</a></li><li><a href="chapter09_virtual_memory.html#classic-9-footer">已分配块可以省尾部</a></li></ul></details><!-- part-two-source-index:end --><!-- part-three-source-index:start --><details class="source-chapter-index"><summary>第 10 章：系统级 I/O · 10 处</summary><ul class="statement-links"><li><a href="chapter10_system_io.html#classic-10-eof">EOF 是返回状态，不是藏在文件末尾的字符</a></li><li><a href="chapter10_system_io.html#classic-10-bytes">文本与二进制的区别由应用解释</a></li><li><a href="chapter10_system_io.html#classic-10-lowest">描述符使用最小可用编号</a></li><li><a href="chapter10_system_io.html#classic-10-short">短计数本身不是错误</a></li><li><a href="chapter10_system_io.html#classic-10-readn">固定长度读遇到 EOF 才成功返回短计数</a></li><li><a href="chapter10_system_io.html#classic-10-mix">带缓冲读取必须共享同一套位置状态</a></li><li><a href="chapter10_system_io.html#classic-10-size">长度以字节为单位</a></li><li><a href="chapter10_system_io.html#classic-10-fork">fork 复制描述符表，共享打开状态</a></li><li><a href="chapter10_system_io.html#classic-10-dup">复制的是描述符表项</a></li><li><a href="chapter10_system_io.html#classic-10-stream">流把描述符与缓冲连起来</a></li></ul></details><details class="source-chapter-index"><summary>第 11 章：网络编程 · 6 处</summary><ul class="statement-links"><li><a href="chapter11_network.html#classic-11-processes">角色属于进程</a></li><li><a href="chapter11_network.html#classic-11-byteorder">网络顺序保持大端</a></li><li><a href="chapter11_network.html#classic-11-descriptor">端点通过描述符呈现</a></li><li><a href="chapter11_network.html#classic-11-eof">EOF不是一个特殊字符</a></li><li><a href="chapter11_network.html#classic-11-content">内容的两个部分</a></li><li><a href="chapter11_network.html#classic-11-cgi">标准输出为何成为网络输出</a></li></ul></details><details class="source-chapter-index"><summary>第 12 章：并发编程 · 4 处</summary><ul class="statement-links"><li><a href="chapter12_concurrency.html#classic-12-shared">共享的判据是实例</a></li><li><a href="chapter12_concurrency.html#classic-12-speedup">先定义比较的工作量</a></li><li><a href="chapter12_concurrency.html#classic-12-reentrant">调用者也是条件的一部分</a></li><li><a href="chapter12_concurrency.html#classic-12-lock-order">锁的统一顺序</a></li></ul></details><!-- part-three-source-index:end --></section><section id="program-guide"><h2>阅读与程序使用说明<span class="english-title" lang="en">Programs, models and reproducible observations</span></h2>
+<p class="source">原书：<a class="source-pdf" href="../csapp.pdf#page=21">印刷 20 页 / PDF 21 页</a></p>
+<p>正文的C11/Python程序放在对应章节的机制解释附近，完整维护源位于code目录，页面内保留同步阅读副本。C默认展开，Python可同时展开；下载链接给出可独立保存的文件。各章的源码、输入约定与运行方式集中见<a href="../code/README.md">程序说明</a>，完整索引见<a href="../code/programs.json">程序索引</a>。</p>
+<pre><code data-language="shell" class="language-shell">clang -std=c11 -Wall -Wextra -Werror -pedantic -O1 \
+  -ffp-contract=off ch01_amdahl.c -o ch01_amdahl
+./ch01_amdahl
+python3 ch01_amdahl.py</code></pre>
+<p>命令在存有下载源码的实验目录中执行。其他程序按其说明替换文件名和参数；需要额外文件时，先按章节指明的依赖保存。调试指针和内存例子可加入 <code>-fsanitize=address,undefined -fno-omit-frame-pointer</code>；运行结果与题中的预期表或不变量核对。</p>
+<p>程序有不同职责：有些观察C对象布局，有些明确模拟定宽运算、指令或缓存，有些比较算法的输出或计时。Python使用相同的数值模型时会显式截断或舍入；它不能代替实际ABI或目标汇编执行。源码中的输入范围是实验条件，改变位宽、步长或缓存参数后，应重新推导预期值。</p>
+<p>书中机器例子以x86-64/Linux为主要背景。ARM主机的默认C汇编属于另一指令集；跨目标生成的汇编、兼容环境中的执行、宿主原生执行各有证据范围。历史CPE数据在表注中标为原书测量，本机计时记录机器、编译选项、输入与计时范围。</p>
+<p>题解中的原题程序标为题目材料，教学实现则按解释给出适用条件。对齐、别名、有效对象、算术范围和异常返回均属于程序契约的一部分；读者可以先用小输入逐步推演，再用程序检查更大范围。</p>
+<details class="reading-notes" id="notes-program-guide" data-notes-for="program-guide" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">读法</span><h3>代码与解释在同一处往返</h3><p>先读输入和预期，再按说明逐段看实现。仅复制运行会错过程序怎样表达模型。</p>
+</div><div class="annotation-card"><span class="annotation-kind">验证</span><h3>独立参考比两份程序互相同意更强</h3><p>两种语言可能共享同一个错误。小范围穷举、直接数学结果和不同算法的参考提供额外依据。</p>
+</div></div></details>
+</section><section id="edition"><h2>版次、页码与校注<span class="english-title" lang="en">Source and edition</span></h2>
+<p class="source">原书：<a class="source-pdf" href="../csapp.pdf#page=8">印刷 7 页 / PDF 8 页</a></p>
+<p>来源为Randal E. Bryant、David R. O’Hallaron著《Computer Systems: A Programmer’s Perspective》，第三版Global Edition，Pearson2016，印刷ISBN978-1-292-10176-7。本地PDF共1122页，正文采用PDF页序=印刷页+1的映射。章节页与题干同时给出两种页码，便于直接核对。</p>
+<p>作者<a href="https://csapp.cs.cmu.edu/3e/errata.html">勘误说明</a>指出Global Edition使用不同的练习和作业，题目及解答有错误，作者没有维护本版专用勘误。笔记因此以本地题面为依据，遇到不合法指令、矛盾条件、排版和计算错误时，分别给出原题含义、校注依据及可以核验的解法。</p>
+<p>原书页码链接服务于本地对照；公共阅读包保留版次与页码文字。作者配套资料从<a href="https://csapp.cs.cmu.edu/3e/students.html">学生资源页</a>进入。题目覆盖、逐章审阅和程序版本的记录见<a href="exercise_manifest.json">题号清单</a>与<a href="validation.json">验证摘要</a>。</p>
+<details class="reading-notes" id="notes-edition" data-notes-for="edition" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">来源</span><h3>先核版本，再对照答案</h3><p>题号相同不保证题干相同。尤其要检查寄存器、常数、数组尺寸和所有小问。</p>
+</div><div class="annotation-card"><span class="annotation-kind">校注</span><h3>原书结论和推导依据分别保留</h3><p>可疑结论不能默默替换；读者应能看见为何按当前条件得出不同结果。</p>
+</div></div></details>
+</section><footer><p>依据 Bryant / O’Hallaron《Computer Systems: A Programmer’s Perspective》第三版 Global Edition（Pearson 2016）。模型条件随例子说明，程序说明与来源集中于全书地图。</p><p class="chapter-nav"><a href="#top">返回页首 ↑</a><a href="book_overview.html">全书地图</a><a href="book_overview.html#program-guide">程序说明</a><a href="preface.html">序言 →</a></p></footer></main><aside class="annotation-sidebar" id="annotation-rail" aria-label="阅读注解" hidden><p class="annotation-label">阅读注解</p><p class="annotation-context"><a id="annotation-context-link" href="#top"></a></p><div id="annotation-content"></div></aside></div><script>
+(() => {
+  document.documentElement.classList.add('toc-enhanced');
+  const panel = document.getElementById('toc-panel');
+  const nav = document.getElementById('chapter-toc');
+  const wide = matchMedia('(min-width:1100px)');
+  const links = Array.from(nav.querySelectorAll('li a[href^="#"]'));
+  const entries = links.map(link => ({link, section: document.getElementById(link.hash.slice(1))})).filter(item => item.section);
+  let current = null, scheduled = false;
+  const fit = () => { panel.open = wide.matches; };
+  fit();
+  wide.addEventListener('change', fit);
+  const reveal = () => {
+    let target;
+    try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch { return; }
+    for (let node = target; node; node = node.parentElement) {
+      if (node.tagName === 'DETAILS') node.open = true;
+    }
+  };
+  const mark = () => {
+    scheduled = false;
+    let next = entries[0];
+    for (const entry of entries) {
+      if (entry.section.getBoundingClientRect().top <= (wide.matches ? 110 : 144)) next = entry;
+    }
+    if (window.scrollY + innerHeight >= document.documentElement.scrollHeight - 2) next = entries[entries.length - 1];
+    if (next && next.link !== current) {
+      if (current) current.removeAttribute('aria-current');
+      current = next.link; current.setAttribute('aria-current', 'location');
+    }
+  };
+  const schedule = () => { if (!scheduled) { scheduled = true; requestAnimationFrame(mark); } };
+  nav.addEventListener('click', event => {
+    if (event.target.closest('a[href^="#"]') && !wide.matches) panel.open = false;
+  });
+  addEventListener('scroll', schedule, {passive:true});
+  addEventListener('resize', schedule);
+  addEventListener('hashchange', () => { reveal(); schedule(); });
+  document.addEventListener('toggle', schedule, true);
+  reveal(); mark();
+})();
+
+
+(() => {
+  const rail = document.getElementById('annotation-rail');
+  const content = document.getElementById('annotation-content');
+  const context = document.getElementById('annotation-context-link');
+  const groups = Array.from(document.querySelectorAll('main .reading-notes')).map(notes => ({
+    notes, section: document.getElementById(notes.dataset.notesFor)
+  })).filter(item => item.section);
+  if (!rail || !content || !context || !groups.length) return;
+  const wide = matchMedia('(min-width:1440px)');
+  let current = null, scheduled = false;
+  const update = () => {
+    scheduled = false;
+    if (!wide.matches) return;
+    const sections = Array.from(document.querySelectorAll('main > section'));
+    let active = sections[0];
+    for (const section of sections) if (section.getBoundingClientRect().top <= 110) active = section;
+    const relevant = groups.find(item => item.section === active);
+    rail.hidden = !relevant;
+    if (!relevant) { current = null; return; }
+    let next = groups[0];
+    for (const item of groups) {
+      if (item.section.getBoundingClientRect().top <= 110) next = item;
+    }
+    if (scrollY + innerHeight >= document.documentElement.scrollHeight - 2) next = groups[groups.length - 1];
+    if (current === next) return;
+    const body = next.notes.querySelector('.reading-notes-body');
+    const heading = next.section.querySelector('h2');
+    if (!body || !heading) return;
+    content.replaceChildren(...Array.from(body.children, node => node.cloneNode(true)));
+    const label = heading.cloneNode(true);
+    label.querySelectorAll('.english-title').forEach(node => node.remove());
+    context.textContent = label.textContent;
+    context.href = '#' + next.section.id;
+    rail.dataset.activeSection = next.section.id;
+    rail.scrollTop = 0;
+    current = next;
+  };
+  const schedule = () => {
+    if (!scheduled) { scheduled = true; requestAnimationFrame(update); }
+  };
+  const fit = () => {
+    rail.hidden = !wide.matches;
+    current = null;
+    if (wide.matches) {
+      document.documentElement.classList.add('notes-enhanced');
+      update();
+    } else {
+      document.documentElement.classList.remove('notes-enhanced');
+    }
+  };
+  wide.addEventListener('change', fit);
+  addEventListener('scroll', schedule, {passive:true});
+  addEventListener('resize', schedule);
+  addEventListener('hashchange', schedule);
+  document.addEventListener('toggle', schedule, true);
+  fit();
+})();
+
+
+(() => {
+  let saved=[];
+  addEventListener('beforeprint',()=>{
+    if(saved.length)return;
+    saved=[...document.querySelectorAll('main details')].map(node=>[node,node.open]);
+    saved.forEach(([node])=>{node.open=true;});
+  });
+  addEventListener('afterprint',()=>{
+    saved.forEach(([node,open])=>{node.open=open;});saved=[];
+  });
+})();
+
+(() => {
+  const containers = Array.from(document.querySelectorAll('main .equation, main .math-block, main .scroll'));
+  let pending = false;
+  const update = () => {
+    pending = false;
+    for (const node of containers) {
+      const overflow = node.clientWidth > 0 && node.scrollWidth > node.clientWidth + 2;
+      node.dataset.horizontalOverflow = String(overflow);
+      if (overflow) {
+        const label = node.matches('.equation,.math-block') ? '左右滑动查看完整公式 →' : '左右滑动查看完整图表 →';
+        node.dataset.scrollLabel = label;
+        if (!node.hasAttribute('tabindex')) {
+          node.tabIndex = 0;
+          node.dataset.scrollFocusable = 'true';
+        }
+      } else if (node.dataset.scrollFocusable === 'true') {
+        node.removeAttribute('tabindex');
+        delete node.dataset.scrollFocusable;
+      }
+    }
+  };
+  const schedule = () => {
+    if (!pending) { pending = true; requestAnimationFrame(update); }
+  };
+  addEventListener('resize', schedule);
+  document.addEventListener('toggle', schedule, true);
+  document.fonts.ready.then(schedule);
+  update();
+})();
+</script></body></html>

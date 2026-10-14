@@ -1,0 +1,5 @@
+xorq %rax,%rax
+irmovq $0x100000,%rdi
+mrmovq 0(%rdi),%rcx
+iaddq $-1,%rax
+halt

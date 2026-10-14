@@ -1,7 +1,7 @@
 # AGENTS.md
 
 <!-- project-governance:managed:start -->
-本仓库是 **Reading Notes**：统一管理 Durrett 随机过程与 Weiss 数据结构笔记，保留每本书的正式 HTML、可运行示例、来源与验证记录，共用阅读入口和静态发布流程。
+本仓库是 **Reading Notes**：统一管理 Durrett 随机过程、Weiss 数据结构与 CS:APP 系统笔记，保留正式 HTML、可运行示例、来源与验证记录，共用阅读入口和静态发布流程。
 
 这是 Codex、OpenCode 及兼容编码 Agent 的共享指令入口。详细规范只在下列权威文档中维护，不得在多个 Agent 文件中复制全文。
 
@@ -42,6 +42,6 @@
 
 ## 项目专属补充
 
-修改书籍内容前读取 [规则职责索引](docs/rules/README.md)，再读取该书 `agent.md` 与 `notes/README.md`。从根目录使用 `tools/project.py` 运行检查和构建，输出只放忽略目录。对话默认使用自然、连续的中文，先直接说明结果，再讲必要依据，避免重复总结。
+新增或修改书籍内容前读取 [规则职责索引](docs/rules/README.md)与 [RN-001 读书笔记共同标准](docs/reading-notes-standard.md)，再读取该书 `agent.md` 与 `notes/README.md`。新增书籍按[接入步骤](docs/adding-a-book.md)和[工作模板](docs/templates/reading-notes/README.md)执行，先完成原书清单、全书地图与样章验收，再按批次扩写。从根目录使用 `tools/project.py` 运行检查和构建，输出只放忽略目录。对话默认使用自然、连续的中文，先直接说明结果，再讲必要依据，避免重复总结。
 
 各书原有说明中的“项目/仓库根目录”按子项目根目录解释；公共命令从 Reading Notes 主仓库根目录执行。

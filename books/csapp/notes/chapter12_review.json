@@ -1,0 +1,1344 @@
+{
+  "chapter": 12,
+  "edition": "Computer Systems: A Programmer’s Perspective, Third Global Edition",
+  "source": {
+    "path": "books/csapp/csapp.pdf",
+    "sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+    "printed_pages": [
+      1007,
+      1076
+    ],
+    "pdf_pages": [
+      1008,
+      1077
+    ],
+    "source_visual_review": [
+      "tmp/csapp/part3/ch12/source-1031.png",
+      "tmp/csapp/part3/ch12/source-1034.png",
+      "tmp/csapp/part3/ch12/source-1066.png",
+      "tmp/csapp/part3/ch12/source-1074.png",
+      "tmp/csapp/part3/ch12/source-1075.png"
+    ],
+    "source_review": "chapter text, section inventory, all exercises and practice answers compared; rendered selected original pages inspected"
+  },
+  "page": "books/csapp/notes/chapter12_concurrency.html",
+  "scope": {
+    "main_sections": [
+      "s12-1",
+      "s12-2",
+      "s12-3",
+      "s12-4",
+      "s12-5",
+      "s12-6",
+      "s12-7",
+      "s12-8"
+    ],
+    "subsections": [
+      "ss12-1-1",
+      "ss12-1-2",
+      "ss12-2-1",
+      "ss12-2-2",
+      "ss12-3-1",
+      "ss12-3-2",
+      "ss12-3-3",
+      "ss12-3-4",
+      "ss12-3-5",
+      "ss12-3-6",
+      "ss12-3-7",
+      "ss12-3-8",
+      "ss12-4-1",
+      "ss12-4-2",
+      "ss12-4-3",
+      "ss12-5-1",
+      "ss12-5-2",
+      "ss12-5-3",
+      "ss12-5-4",
+      "ss12-5-5",
+      "ss12-7-1",
+      "ss12-7-2",
+      "ss12-7-3",
+      "ss12-7-4",
+      "ss12-7-5"
+    ],
+    "original_exercises": 39,
+    "practice": 15,
+    "homework": 24,
+    "reading_notes": 8,
+    "annotation_cards": 16,
+    "original_self_checks_retained": [
+      "q12-1",
+      "q12-2",
+      "q12-3"
+    ]
+  },
+  "exercises": [
+    {
+      "number": "12.1",
+      "kind": "practice",
+      "pdf_start": 1012,
+      "printed_start": 1011,
+      "anchor": "ex-12-1",
+      "pdf_pages": [
+        1012
+      ],
+      "printed_pages": [
+        1011
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "跟踪连接文件表引用计数",
+      "source_correction": null
+    },
+    {
+      "number": "12.2",
+      "kind": "practice",
+      "pdf_start": 1012,
+      "printed_start": 1011,
+      "anchor": "ex-12-2",
+      "pdf_pages": [
+        1012
+      ],
+      "printed_pages": [
+        1011
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "父进程漏关连接的原版矛盾",
+      "source_correction": "原题和答案把父进程最终退出清理误当作长期服务器无泄漏；保留第33行原条件并反例说明。"
+    },
+    {
+      "number": "12.3",
+      "kind": "practice",
+      "pdf_start": 1017,
+      "printed_start": 1016,
+      "anchor": "ex-12-3",
+      "pdf_pages": [
+        1017
+      ],
+      "printed_pages": [
+        1016
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "服务远端时本地Ctrl+D会怎样",
+      "source_correction": "区分服务器stdin与connfd；原答案将二者混淆。"
+    },
+    {
+      "number": "12.4",
+      "kind": "practice",
+      "pdf_start": 1021,
+      "printed_start": 1020,
+      "anchor": "ex-12-4",
+      "pdf_pages": [
+        1021
+      ],
+      "printed_pages": [
+        1020
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "每轮重新取得nready",
+      "source_correction": null
+    },
+    {
+      "number": "12.5",
+      "kind": "practice",
+      "pdf_start": 1029,
+      "printed_start": 1028,
+      "anchor": "ex-12-5",
+      "pdf_pages": [
+        1029
+      ],
+      "printed_pages": [
+        1028
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "线程参数与线程资源的两种泄漏",
+      "source_correction": "前提沿用12.2父进程close错误；线程detach与参数free分别解释。"
+    },
+    {
+      "number": "12.6",
+      "kind": "practice",
+      "pdf_start": 1032,
+      "printed_start": 1031,
+      "anchor": "ex-12-6",
+      "pdf_pages": [
+        1032
+      ],
+      "printed_pages": [
+        1031
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "按实例填写共享表",
+      "source_correction": null
+    },
+    {
+      "number": "12.7",
+      "kind": "practice",
+      "pdf_start": 1035,
+      "printed_start": 1034,
+      "anchor": "ex-12-7",
+      "pdf_pages": [
+        1035,
+        1036
+      ],
+      "printed_pages": [
+        1034,
+        1035
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "逐步填写丢失更新轨迹",
+      "source_correction": "图12.17的U/S汇编有操作数和寄存器宽度错误；按文字L/U/S定义校注。"
+    },
+    {
+      "number": "12.8",
+      "kind": "practice",
+      "pdf_start": 1038,
+      "printed_start": 1037,
+      "anchor": "ex-12-8",
+      "pdf_pages": [
+        1038
+      ],
+      "printed_pages": [
+        1037
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "分类安全与不安全轨迹",
+      "source_correction": null
+    },
+    {
+      "number": "12.9",
+      "kind": "practice",
+      "pdf_start": 1043,
+      "printed_start": 1042,
+      "anchor": "ex-12-9",
+      "pdf_pages": [
+        1043
+      ],
+      "printed_pages": [
+        1042
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "图中mutex是否真的必要",
+      "source_correction": "原答案A过强；按图12.25的SPSC独立游标和槽位许可推导可省buffer mutex，附限定条件实际实现。"
+    },
+    {
+      "number": "12.10",
+      "kind": "practice",
+      "pdf_start": 1045,
+      "printed_start": 1044,
+      "anchor": "ex-12-10",
+      "pdf_pages": [
+        1045
+      ],
+      "printed_pages": [
+        1044
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "弱读者优先怎样仍使读者饥饿",
+      "source_correction": null
+    },
+    {
+      "number": "12.11",
+      "kind": "practice",
+      "pdf_start": 1057,
+      "printed_start": 1056,
+      "anchor": "ex-12-11",
+      "pdf_pages": [
+        1057
+      ],
+      "printed_pages": [
+        1056
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "强扩展的加速比与效率",
+      "source_correction": "原答案8核效率25%应为4/8=50%。"
+    },
+    {
+      "number": "12.12",
+      "kind": "practice",
+      "pdf_start": 1061,
+      "printed_start": 1060,
+      "anchor": "ex-12-12",
+      "pdf_pages": [
+        1061
+      ],
+      "printed_pages": [
+        1060
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "rand_r隐式可重入的条件",
+      "source_correction": null
+    },
+    {
+      "number": "12.13",
+      "kind": "practice",
+      "pdf_start": 1063,
+      "printed_start": 1062,
+      "anchor": "ex-12-13",
+      "pdf_pages": [
+        1063
+      ],
+      "printed_pages": [
+        1062
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "为何不能由创建者立即free参数",
+      "source_correction": null
+    },
+    {
+      "number": "12.14",
+      "kind": "practice",
+      "pdf_start": 1063,
+      "printed_start": 1062,
+      "anchor": "ex-12-14",
+      "pdf_pages": [
+        1063
+      ],
+      "printed_pages": [
+        1062
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "不用malloc/free传入稳定ID",
+      "source_correction": null
+    },
+    {
+      "number": "12.15",
+      "kind": "practice",
+      "pdf_start": 1066,
+      "printed_start": 1065,
+      "anchor": "ex-12-15",
+      "pdf_pages": [
+        1066,
+        1067
+      ],
+      "printed_pages": [
+        1065,
+        1066
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "零许可导致必然死锁",
+      "source_correction": null
+    },
+    {
+      "number": "12.16",
+      "kind": "homework",
+      "pdf_start": 1068,
+      "printed_start": 1067,
+      "anchor": "ex-12-16",
+      "pdf_pages": [
+        1068
+      ],
+      "printed_pages": [
+        1067
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "创建并回收n个同伴",
+      "source_correction": null
+    },
+    {
+      "number": "12.17",
+      "kind": "homework",
+      "pdf_start": 1068,
+      "printed_start": 1067,
+      "anchor": "ex-12-17",
+      "pdf_pages": [
+        1068
+      ],
+      "printed_pages": [
+        1067
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "exit终止了整个进程",
+      "source_correction": null
+    },
+    {
+      "number": "12.18",
+      "kind": "homework",
+      "pdf_start": 1069,
+      "printed_start": 1068,
+      "anchor": "ex-12-18",
+      "pdf_pages": [
+        1069
+      ],
+      "printed_pages": [
+        1068
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "分类安全与不安全轨迹",
+      "source_correction": null
+    },
+    {
+      "number": "12.19",
+      "kind": "homework",
+      "pdf_start": 1069,
+      "printed_start": 1068,
+      "anchor": "ex-12-19",
+      "pdf_pages": [
+        1069
+      ],
+      "printed_pages": [
+        1068
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "让等待读者真正先于写者进入",
+      "source_correction": null
+    },
+    {
+      "number": "12.20",
+      "kind": "homework",
+      "pdf_start": 1069,
+      "printed_start": 1068,
+      "anchor": "ex-12-20",
+      "pdf_pages": [
+        1069
+      ],
+      "printed_pages": [
+        1068
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "至多N个读者的统一入口",
+      "source_correction": null
+    },
+    {
+      "number": "12.21",
+      "kind": "homework",
+      "pdf_start": 1069,
+      "printed_start": 1068,
+      "anchor": "ex-12-21",
+      "pdf_pages": [
+        1069
+      ],
+      "printed_pages": [
+        1068
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "写者等待后关闭新读者入口",
+      "source_correction": null
+    },
+    {
+      "number": "12.22",
+      "kind": "homework",
+      "pdf_start": 1069,
+      "printed_start": 1068,
+      "anchor": "ex-12-22",
+      "pdf_pages": [
+        1069
+      ],
+      "printed_pages": [
+        1068
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "每轮至多回送一行",
+      "source_correction": null
+    },
+    {
+      "number": "12.23",
+      "kind": "homework",
+      "pdf_start": 1069,
+      "printed_start": 1068,
+      "anchor": "ex-12-23",
+      "pdf_pages": [
+        1069
+      ],
+      "printed_pages": [
+        1068
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "部分行不能堵住事件循环",
+      "source_correction": null
+    },
+    {
+      "number": "12.24",
+      "kind": "homework",
+      "pdf_start": 1069,
+      "printed_start": 1068,
+      "anchor": "ex-12-24",
+      "pdf_pages": [
+        1069
+      ],
+      "printed_pages": [
+        1068
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "RIO何时可重入",
+      "source_correction": null
+    },
+    {
+      "number": "12.25",
+      "kind": "homework",
+      "pdf_start": 1069,
+      "printed_start": 1068,
+      "anchor": "ex-12-25",
+      "pdf_pages": [
+        1069
+      ],
+      "printed_pages": [
+        1068
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "echo_cnt安全但不属于可重入子集",
+      "source_correction": null
+    },
+    {
+      "number": "12.26",
+      "kind": "homework",
+      "pdf_start": 1070,
+      "printed_start": 1069,
+      "anchor": "ex-12-26",
+      "pdf_pages": [
+        1070
+      ],
+      "printed_pages": [
+        1069
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "hostent必须逐层深拷贝",
+      "source_correction": null
+    },
+    {
+      "number": "12.27",
+      "kind": "homework",
+      "pdf_start": 1070,
+      "printed_start": 1069,
+      "anchor": "ex-12-27",
+      "pdf_pages": [
+        1070
+      ],
+      "printed_pages": [
+        1069
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "同一fd被fclose两次",
+      "source_correction": null
+    },
+    {
+      "number": "12.28",
+      "kind": "homework",
+      "pdf_start": 1070,
+      "printed_start": 1069,
+      "anchor": "ex-12-28",
+      "pdf_pages": [
+        1070
+      ],
+      "printed_pages": [
+        1069
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "四种释放次序的进度图",
+      "source_correction": null
+    },
+    {
+      "number": "12.29",
+      "kind": "homework",
+      "pdf_start": 1070,
+      "printed_start": 1069,
+      "anchor": "ex-12-29",
+      "pdf_pages": [
+        1070
+      ],
+      "printed_pages": [
+        1069
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "不持有b等待c，就没有那个环",
+      "source_correction": null
+    },
+    {
+      "number": "12.30",
+      "kind": "homework",
+      "pdf_start": 1071,
+      "printed_start": 1070,
+      "anchor": "ex-12-30",
+      "pdf_pages": [
+        1071
+      ],
+      "printed_pages": [
+        1070
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "找出同时持有的锁并重新排序",
+      "source_correction": null
+    },
+    {
+      "number": "12.31",
+      "kind": "homework",
+      "pdf_start": 1071,
+      "printed_start": 1070,
+      "anchor": "ex-12-31",
+      "pdf_pages": [
+        1071
+      ],
+      "printed_pages": [
+        1070
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "进程、信号与非局部跳转实现tfgets",
+      "source_correction": null
+    },
+    {
+      "number": "12.32",
+      "kind": "homework",
+      "pdf_start": 1072,
+      "printed_start": 1071,
+      "anchor": "ex-12-32",
+      "pdf_pages": [
+        1072
+      ],
+      "printed_pages": [
+        1071
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "select实现tfgets",
+      "source_correction": null
+    },
+    {
+      "number": "12.33",
+      "kind": "homework",
+      "pdf_start": 1072,
+      "printed_start": 1071,
+      "anchor": "ex-12-33",
+      "pdf_pages": [
+        1072
+      ],
+      "printed_pages": [
+        1071
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "线程实现tfgets",
+      "source_correction": null
+    },
+    {
+      "number": "12.34",
+      "kind": "homework",
+      "pdf_start": 1072,
+      "printed_start": 1071,
+      "anchor": "ex-12-34",
+      "pdf_pages": [
+        1072
+      ],
+      "printed_pages": [
+        1071
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "按输出行并行矩阵乘法并测量",
+      "source_correction": null
+    },
+    {
+      "number": "12.35",
+      "kind": "homework",
+      "pdf_start": 1072,
+      "printed_start": 1071,
+      "anchor": "ex-12-35",
+      "pdf_pages": [
+        1072
+      ],
+      "printed_pages": [
+        1071
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "每连接一个进程的Tiny",
+      "source_correction": null
+    },
+    {
+      "number": "12.36",
+      "kind": "homework",
+      "pdf_start": 1072,
+      "printed_start": 1071,
+      "anchor": "ex-12-36",
+      "pdf_pages": [
+        1072
+      ],
+      "printed_pages": [
+        1071
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "I/O多路复用的Tiny",
+      "source_correction": null
+    },
+    {
+      "number": "12.37",
+      "kind": "homework",
+      "pdf_start": 1072,
+      "printed_start": 1071,
+      "anchor": "ex-12-37",
+      "pdf_pages": [
+        1072
+      ],
+      "printed_pages": [
+        1071
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "每连接一个线程的Tiny",
+      "source_correction": null
+    },
+    {
+      "number": "12.38",
+      "kind": "homework",
+      "pdf_start": 1072,
+      "printed_start": 1071,
+      "anchor": "ex-12-38",
+      "pdf_pages": [
+        1072
+      ],
+      "printed_pages": [
+        1071
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "动态预线程池的Tiny",
+      "source_correction": null
+    },
+    {
+      "number": "12.39",
+      "kind": "homework",
+      "pdf_start": 1072,
+      "printed_start": 1071,
+      "anchor": "ex-12-39",
+      "pdf_pages": [
+        1072,
+        1073
+      ],
+      "printed_pages": [
+        1071,
+        1072
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "会过滤、记录并并发转发的Web代理",
+      "source_correction": null,
+      "review_v2": {
+        "issue": "I010",
+        "status": "pending_browser_acceptance",
+        "summary": "Protocol/concurrency tests pass. Real browser through configured proxy not executed because isolated target creation is denied; ALLOW/BLOCK/slow-upstream browser evidence still required."
+      },
+      "acceptance_status": "pending_browser_acceptance"
+    }
+  ],
+  "source_corrections": [
+    "原题和答案把父进程最终退出清理误当作长期服务器无泄漏；保留第33行原条件并反例说明。",
+    "区分服务器stdin与connfd；原答案将二者混淆。",
+    "前提沿用12.2父进程close错误；线程detach与参数free分别解释。",
+    "图12.17的U/S汇编有操作数和寄存器宽度错误；按文字L/U/S定义校注。",
+    "原答案A过强；按图12.25的SPSC独立游标和槽位许可推导可省buffer mutex，附限定条件实际实现。",
+    "原答案8核效率25%应为4/8=50%。"
+  ],
+  "review_status": "programs_and_reading_verified_proxy_browser_pending",
+  "page_sha256": "a9e7498b225e3d6ff261b47c64b0f1a6a5bed71b3598b3b4fdfa8e9905c8cc1e",
+  "limitations": [
+    "Finite state models do not define behavior of C programs with data races.",
+    "POSIX execution observed on macOS; unnamed sem_init replaced by mutex/condition counting semantics.",
+    "The shared C HTTP core computes adder directly; actual CGI exec is demonstrated separately in Chapter 11 Python.",
+    "Server/proxy experiments are bounded and loopback-only; proxy supports HTTP GET, not TLS or general Internet forwarding.",
+    "Four Tiny scheduling modes were exercised in a real browser by the integrating reviewer; chapter reading-layout acceptance is recorded separately."
+  ],
+  "author_execution_evidence": "tmp/csapp/part3/ch12/execution.json",
+  "independent_review_evidence": {
+    "path": "tmp/csapp/part3/ch11/review12/review.json",
+    "sha256": "13a3ffe8a9be6690623d1783c4cde29186c210464ef1e8c2677af6e71fa307d3",
+    "scope": "12.19-27 and 12.31-39, independent matrix/resolver/protocol checks",
+    "binding_note": "Independent record retains the page hash it actually reviewed; later additions only include the original Figure12.13 source input and this evidence reference."
+  },
+  "author_verification": {
+    "strict_c11_asan_ubsan_programs": 6,
+    "cross_language_model": true,
+    "bounded_socket_modes": [
+      "process",
+      "select",
+      "thread",
+      "pool",
+      "echo",
+      "proxy-serial",
+      "proxy"
+    ],
+    "matrix_observation": "tmp/csapp/part3/ch12/benchmark.txt",
+    "local_dom": "unique IDs, exact maintained code text, question before answer, 25 subsection IDs"
+  },
+  "integrator_browser_evidence": {
+    "artifact": "tmp/csapp/part3/http-browser/four-browser.json",
+    "scope": "four Tiny modes, real home.html browser loads, GET20+22 and POST-8+50 forms",
+    "pool_resize_evidence": "separate socket load test, not inferred from browser rendering"
+  },
+  "independent_reviews": [
+    {
+      "status": "complete",
+      "reviewer": "chapter10 independent reviewer, early chapter12 exercises",
+      "reviewed_at": "2026-10-14T03:55:47.201581+00:00",
+      "scope": {
+        "exercise_count": 16,
+        "exercises": [
+          "12.1",
+          "12.2",
+          "12.3",
+          "12.4",
+          "12.5",
+          "12.6",
+          "12.7",
+          "12.8",
+          "12.10",
+          "12.12",
+          "12.13",
+          "12.14",
+          "12.15",
+          "12.16",
+          "12.17",
+          "12.18"
+        ],
+        "not_reviewed_here": "Other chapter12 exercises and general implementation are assigned to other reviewers."
+      },
+      "source_pdf": "books/csapp/csapp.pdf",
+      "source_solution_pdf_pages": [
+        1073,
+        1074,
+        1075,
+        1076,
+        1077
+      ],
+      "visual_source_pdf_pages": [
+        1013,
+        1034,
+        1066,
+        1077
+      ],
+      "exercise_reviews": [
+        {
+          "exercise": "12.1",
+          "question_pdf_pages": [
+            1012
+          ],
+          "question_printed_pages": [
+            1011
+          ],
+          "complete_question_and_subparts": true,
+          "conclusion": "pass",
+          "analysis": "accept creates the connection reference before fork; two closes may occur in either order; correct 1-2-1-0.",
+          "html_region_sha256": "7330d00a3d9bee648d59f6ed034bcb71ea535562c6c8b9afc152bf25581fce05"
+        },
+        {
+          "exercise": "12.2",
+          "question_pdf_pages": [
+            1012
+          ],
+          "question_printed_pages": [
+            1011
+          ],
+          "complete_question_and_subparts": true,
+          "conclusion": "pass",
+          "analysis": "GE premise contradicts permanent server loop. Note preserves premise and corrects runtime leak, distinguishes child exit cleanup.",
+          "html_region_sha256": "fee2b16e2235820d0622e832b50b62fb87a468bf9ea0b15d70e59fd0967980bd"
+        },
+        {
+          "exercise": "12.3",
+          "question_pdf_pages": [
+            1017
+          ],
+          "question_printed_pages": [
+            1016
+          ],
+          "complete_question_and_subparts": true,
+          "conclusion": "pass",
+          "analysis": "Server stdin and connected socket are distinct fds; echo blocks on socket until client EOF. GE solution confused them.",
+          "html_region_sha256": "01832555270de1ef449c1cfffcc47adc2dd663eb8cd42b330e557e70d106e854"
+        },
+        {
+          "exercise": "12.4",
+          "question_pdf_pages": [
+            1021
+          ],
+          "question_printed_pages": [
+            1020
+          ],
+          "complete_question_and_subparts": true,
+          "conclusion": "pass",
+          "analysis": "nready is per-select snapshot decremented for ready listening/client fds, not persistent count.",
+          "html_region_sha256": "cade28f484a3308baad2f163f0ea8e62df8e85b3835fd909ca69c9556b3e163a"
+        },
+        {
+          "exercise": "12.5",
+          "question_pdf_pages": [
+            1029
+          ],
+          "question_printed_pages": [
+            1028
+          ],
+          "complete_question_and_subparts": true,
+          "conclusion": "pass",
+          "analysis": "detach/join resources and malloc parameter ownership are independent; inherited erroneous line33 premise retained and corrected.",
+          "html_region_sha256": "9f03493c43ab1c95f225d507f98219283763a6ad65352378fa7f2fae940d58c6"
+        },
+        {
+          "exercise": "12.6",
+          "question_pdf_pages": [
+            1032
+          ],
+          "question_printed_pages": [
+            1031
+          ],
+          "complete_question_and_subparts": true,
+          "conclusion": "pass",
+          "analysis": "All six instances and all three thread columns match source and corrected memory-lifetime/data-race interpretation.",
+          "html_region_sha256": "09778c98c0e78ae8661dbabdea960ea496feb0e7758905bc8a872ce61e3a00f2"
+        },
+        {
+          "exercise": "12.7",
+          "question_pdf_pages": [
+            1035,
+            1036
+          ],
+          "question_printed_pages": [
+            1034,
+            1035
+          ],
+          "complete_question_and_subparts": true,
+          "conclusion": "pass",
+          "analysis": "All 10 instruction states independently recalculated. Source Figure12.17 malformed eax/q assembly visually confirmed and accurately annotated.",
+          "html_region_sha256": "09275e9a6eb0485cea8fd6be4f87ce3aa1c601d6b691e2f05bc10d86e323a033"
+        },
+        {
+          "exercise": "12.8",
+          "question_pdf_pages": [
+            1038
+          ],
+          "question_printed_pages": [
+            1037
+          ],
+          "complete_question_and_subparts": true,
+          "conclusion": "pass",
+          "analysis": "All three source instruction orders match; A safe2, B unsafe1, C safe2 independently evaluated.",
+          "html_region_sha256": "3315070565179eaccf997f2b27fafd57de9107a017a948840b7fba889bf0c620"
+        },
+        {
+          "exercise": "12.10",
+          "question_pdf_pages": [
+            1045
+          ],
+          "question_printed_pages": [
+            1044
+          ],
+          "complete_question_and_subparts": true,
+          "conclusion": "pass",
+          "analysis": "LIFO is allowed by abstract P/V; alternating writers can keep first waiting reader below top indefinitely. Trace matches source rationale.",
+          "html_region_sha256": "440dbb0ca0e0e829355f55d9ebe6c68adbfc8a7c285d2b33a26b2fe02600e7bf"
+        },
+        {
+          "exercise": "12.12",
+          "question_pdf_pages": [
+            1061
+          ],
+          "question_printed_pages": [
+            1060
+          ],
+          "complete_question_and_subparts": true,
+          "conclusion": "pass",
+          "analysis": "Caller-specific seeds are necessary; by-reference alone is insufficient. Correct implicit reentrancy condition.",
+          "html_region_sha256": "cd0e16a6b77413d333f132617c904b2b047128fae66ecdc12ffdfc3651abbed2"
+        },
+        {
+          "exercise": "12.13",
+          "question_pdf_pages": [
+            1063
+          ],
+          "question_printed_pages": [
+            1062
+          ],
+          "complete_question_and_subparts": true,
+          "conclusion": "pass",
+          "analysis": "pthread_create return does not imply peer dereference completed; parent free could precede peer load.",
+          "html_region_sha256": "2eb0cce6e77182c5edd903083169d3ac4f1f03ac295d3dbdbf883389102b7acd"
+        },
+        {
+          "exercise": "12.14",
+          "question_pdf_pages": [
+            1063
+          ],
+          "question_printed_pages": [
+            1062
+          ],
+          "complete_question_and_subparts": true,
+          "conclusion": "pass",
+          "analysis": "Stable distinct array slots retained through join avoid heap allocations and integer/pointer representation assumptions; pros/cons complete.",
+          "html_region_sha256": "9330512ad4cb910302c1b86061e7aeea842cc7f5d6fa29a32eb51e82de837fb2"
+        },
+        {
+          "exercise": "12.15",
+          "question_pdf_pages": [
+            1066,
+            1067
+          ],
+          "question_printed_pages": [
+            1065,
+            1066
+          ],
+          "complete_question_and_subparts": true,
+          "conclusion": "pass",
+          "analysis": "All four subparts present; both progress graphs independently enumerated against SVG vertices/edges. t0 sole terminal deadlock at(2,2); t1 has no deadlock.",
+          "html_region_sha256": "c9e3090abeb489b4e56a4c1fd8dc4d1592c962bea9849552d230521feb346064"
+        },
+        {
+          "exercise": "12.16",
+          "question_pdf_pages": [
+            1068
+          ],
+          "question_printed_pages": [
+            1067
+          ],
+          "complete_question_and_subparts": true,
+          "conclusion": "pass",
+          "analysis": "Bounded explicit 1..64 scope, all joinable peers created before joins, stable parameter array. Strict sanitizer compile and actual hello1,2,4,64 validated.",
+          "html_region_sha256": "d5249c06e240d47472030a1b241630f302d21b9e9b3797b6d8e7fb63e4fd20d1"
+        },
+        {
+          "exercise": "12.17",
+          "question_pdf_pages": [
+            1068
+          ],
+          "question_printed_pages": [
+            1067
+          ],
+          "complete_question_and_subparts": true,
+          "conclusion": "pass",
+          "analysis": "exit ends process; pthread_join waits/reaps while pthread_exit only ends main thread. Both requested alternatives present with ownership distinction.",
+          "html_region_sha256": "83fb68feb912c674bb67a8562abb82a94ce6038355bbacec492594eacea42426"
+        },
+        {
+          "exercise": "12.18",
+          "question_pdf_pages": [
+            1069
+          ],
+          "question_printed_pages": [
+            1068
+          ],
+          "complete_question_and_subparts": true,
+          "conclusion": "pass",
+          "analysis": "All three source instruction orders match; A unsafe1, B safe2, C unsafe1 independently evaluated.",
+          "html_region_sha256": "3210fffe36413bf9acdef0efa3ca001b998bb62aba1c1c9ef7609327336c199e"
+        }
+      ],
+      "existing_source_errata_verified": [
+        "12.2/12.5 deletion of parent close leaks while server runs, despite GE answer citing process-exit cleanup.",
+        "12.3 local server stdin EOF does not directly become peer socket EOF.",
+        "12.7 Figure12.17 uses addq %eax and movq %eax,cnt(%rip); notes correct to text-defined rdx load/increment/store.",
+        "12.12 distinct caller-owned mutable seeds are essential, not merely pass-by-reference.",
+        "12.14 GE integer/pointer shortcut is not a portable strict-C11 argument representation."
+      ],
+      "new_findings": [],
+      "open_findings": [],
+      "independent_execution": {
+        "checks": 22,
+        "passed": 22,
+        "record": "tmp/csapp/part3/ch12/independent-early/results.json",
+        "script": "tmp/csapp/part3/ch12/independent-early/verify.py",
+        "limits": [
+          "Host macOS, no Linux runtime claim.",
+          "12.15 finite abstract P/V state model; does not execute deliberately deadlocking native threads.",
+          "12.7/12.8/12.18 abstract instruction interpretation, not a claim that racing C has defined behavior.",
+          "12.16 resource exhaustion injection not performed; failure branch read and compiler checked."
+        ]
+      },
+      "snapshot_hashes": {
+        "books/csapp/notes/chapter12_concurrency.html": "67a2911427e6b2ae4ab3134b535905eaa53eff6ee6f71be9129ecb1bc1f420e1",
+        "books/csapp/code/ch12_threads.c": "e45ba52cee98920d121a0ea0a8165dc2008a15b6b507763e244659d18bfc2b30"
+      },
+      "visual_evidence": [
+        "tmp/csapp/part3/ch12/independent-early/source-1013.png",
+        "tmp/csapp/part3/ch12/independent-early/source-1034.png",
+        "tmp/csapp/part3/ch12/independent-early/source-1066.png",
+        "tmp/csapp/part3/ch12/independent-early/source-1077.png"
+      ]
+    },
+    {
+      "reviewer": "chapter11 author, independent of chapter12 author",
+      "chapter": 12,
+      "scope": [
+        "Read all original exercise wording12.19-12.27 and12.31-12.39 against source PDF pages1069-1073",
+        "Rendered PDF1069/1072 inspected",
+        "Reader/writer entry/exit predicates and equal-gate counting-semaphore proof",
+        "tfgets proc/select/thread implementation contracts and cleanup source review",
+        "Full ch12_servers.c lifecycle/event/pool/proxy source read",
+        "ch12_resolver.c ownership and deep-copy read",
+        "ch12_threads matrix partition read",
+        "Final HTML question and answer text reviewed for18 selected exercises"
+      ],
+      "source_visual": [
+        "tmp/csapp/part3/ch11/review12/source-1069.png",
+        "tmp/csapp/part3/ch11/review12/source-1072.png"
+      ],
+      "execution": [
+        "Strict C11/pthread ASanUBSan: resolver synthetic2 aliases2 addresses16B with source mutation and NULL failure",
+        "Strict C11/pthread ASanUBSan: 630 matrix dimensions/workers checked against independent closed-form formula",
+        "Strict C11/pthread ASanUBSan: all4 Tiny modes HEAD metadata/body and disconnect-followed-by-valid-request",
+        "Threaded proxy slow1s origin plus independent fast origin request completed in0.00068s;2 URLs logged"
+      ],
+      "evidence": "tmp/csapp/part3/ch11/review12/",
+      "page_sha256": "2c72819761ac8adbb30bf9380870eb03d8d1a461c1b69cc72ca8f195164a79d0",
+      "code_sha256": {
+        "ch12_servers.c": "8a00b5bd7efc43f351e9a6f77e4c0fa0c8869e87583ae4523925a3059cf7f8df",
+        "ch12_resolver.c": "2d5c161ded9d450251d411c6e1b8b4c02e9fc9552b16f08a5d218f4f66e2cadf",
+        "ch12_threads.c": "e45ba52cee98920d121a0ea0a8165dc2008a15b6b507763e244659d18bfc2b30",
+        "ch12_tfgets.c": "618dc0f7d3ada1c3e3029b3b8d9eef047b259615b9fbc074682ebf3c047abcb7"
+      },
+      "open_findings": [],
+      "status": "passed_scoped_independent_review",
+      "limits": [
+        "Fairness is conditional on the gate scheduler; finite runs do not prove starvation freedom.",
+        "No browser rendering or public-network proxy tests performed by this reviewer.",
+        "tfgets was source-reviewed here; deadline execution evidence belongs to parent author tests.",
+        "Original CGI exec is implemented in chapter11 Python; C concurrent adder is deliberately in-process."
+      ]
+    },
+    {
+      "status": "reviewed_locally",
+      "reviewer": "parent independent source/model review",
+      "exercises": [
+        "12.9",
+        "12.11",
+        "12.28",
+        "12.29",
+        "12.30"
+      ],
+      "source_question_pdf_pages": [
+        1043,
+        1057,
+        1070,
+        1071
+      ],
+      "source_visual_pdf_pages": [
+        1071,
+        1075
+      ],
+      "page_sha256": "52d5fc5c26d4bff651d299a4c78cec838ea594d835c661ec44c541d17a3c388c",
+      "findings": [],
+      "basis": [
+        "12.9 follows the exact separate front/rear fields and slots/items ownership; SPSC distinct array elements do not conflict. Author source figure and source solution read separately.",
+        "12.11 16/4=4 speedup and 4/8=50 percent efficiency; source answer 25 percent retained as a correction.",
+        "12.28 four acquire/release programs and 12.29/30 complete operation tables compared with original; independent per-lock owner BFS agrees with C/Python model reachable counts and four 12.30 deadlocks."
+      ],
+      "execution": "books/csapp/tools/part_three_regressions.py",
+      "boundaries": [
+        "Sequential finite model and invariant reasoning; no deliberately racing C execution is treated as defined semantics."
+      ]
+    }
+  ],
+  "integrated_at": "2026-10-14T04:06:11.311864+00:00",
+  "integration_scope": "Same-edition source questions, solutions and listed code mechanisms reviewed; final presentation hash bound here. Reviewer snapshot hashes retained in individual records.",
+  "open_findings": 1,
+  "last_author_snapshot_sha256": "14ebb86104fb485cdf5dfc6cbc04d88ee0d749c0f4ee54c226ecc1f78b81541a",
+  "presentation_followup": "Reader wording cleaned and actual HTTP/1.1 observation recorded; code and question semantics retained.",
+  "part_three_review_fixes": {
+    "issue": "I008",
+    "reviewed_at": "2026-10-14T11:57:09.032789+00:00",
+    "scope": "Three runtime review findings and affected Chapter11/12 mechanism explanations and code copies. Original questions and excerpts unchanged; not a new full-book proof.",
+    "findings": [
+      {
+        "id": "CSAPP-EXPECT-HANDSHAKE",
+        "priority": "P2",
+        "status": "fixed_verified",
+        "summary": "C在完整有效首部后拒绝Expect，handle/select共享request_ready，消息完整性接口保持。",
+        "evidence": "tmp/csapp/review-fixes-part3/http/after/report.json"
+      },
+      {
+        "id": "CSAPP-ACCEPT-WINDOW",
+        "priority": "P2",
+        "status": "fixed_verified",
+        "summary": "select/echo停止接入后继续处理活动连接；短窗口和默认120秒均验证。",
+        "evidence": "tmp/csapp/review-fixes-part3/window/default-120s.json"
+      },
+      {
+        "id": "CSAPP-TIMER-CANCEL",
+        "priority": "P3",
+        "status": "fixed_verified",
+        "summary": "proc以SIGKILL取消专有未回收计时孩子，忽略/屏蔽SIGTERM环境及时返回并恢复信号状态。",
+        "evidence": "tmp/project-check/20261014T195029-yzxp2owq/csapp/part-three-regressions/tfgets-cleanup/tfgets_cleanup_report.json"
+      }
+    ],
+    "open_findings": 0,
+    "full_program_report": "tmp/project-check/20261014T195029-yzxp2owq/csapp/report.json",
+    "independent_review": "tmp/csapp/review-fixes-part3/independent-review.json",
+    "acceptance": "test/T008-csapp-part-three-review-fixes.md",
+    "page_hash_changes": {
+      "chapter11_network.html": {
+        "before": "8575612733b6812822223f19b2d36fb363bd51a0d6770abd537f4a5fe9c2aaf1",
+        "after": "1cc3175d529620d03b112ee3cae11983ecb1771e8c215cb9a68f759b02faa3a1"
+      },
+      "chapter12_concurrency.html": {
+        "before": "52d5fc5c26d4bff651d299a4c78cec838ea594d835c661ec44c541d17a3c388c",
+        "after": "7ac23fb0e0d8418cd69dc616895e9994444abfc967c1f6113d03992f7347da1d"
+      }
+    }
+  },
+  "review_v2_revision": {
+    "issue": "I010",
+    "reviewed_at": "2026-10-14T13:44:25.640972+00:00",
+    "scope": "Only this chapter's listed REA v2 findings and affected source copies; prior reviews retain their scope.",
+    "previous_current_fields": {
+      "review_status": "author_and_independent_source_reviewed_locally",
+      "open_findings": 0,
+      "page_sha256": "7ac23fb0e0d8418cd69dc616895e9994444abfc967c1f6113d03992f7347da1d"
+    },
+    "page_hash_change": {
+      "before": "7ac23fb0e0d8418cd69dc616895e9994444abfc967c1f6113d03992f7347da1d",
+      "after": "a9e7498b225e3d6ff261b47c64b0f1a6a5bed71b3598b3b4fdfa8e9905c8cc1e"
+    },
+    "findings": [
+      {
+        "id": "F1",
+        "priority": "P2",
+        "status": "fixed_verified",
+        "chapters": [
+          11,
+          12
+        ],
+        "summary": "HTTP field values trim only SP/HTAB OWS; invalid Host/framing is rejected before Expect. Five server modes pass 150 TCP cases; old source passes 112.",
+        "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/part-three-http-review/report.json"
+      },
+      {
+        "id": "F2",
+        "priority": "P2",
+        "status": "fixed_verified",
+        "chapters": [
+          5,
+          8,
+          9,
+          12
+        ],
+        "summary": "Necessary computations and self-checks execute independently of assert; 24 ordinary/disabled-assertion runs pass and 42 wrong variants fail as intended.",
+        "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/assertion-regressions/report.json"
+      },
+      {
+        "id": "F4",
+        "priority": "P2",
+        "status": "fixed_verified",
+        "chapters": [
+          11,
+          12
+        ],
+        "summary": "Actual C parent forks/execs C or Python CGI and reaps through SIGCHLD; eight lifecycle/overlap/error groups pass, including CGI closing stdin before its response.",
+        "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/part-three-cgi-review/report.json"
+      },
+      {
+        "id": "F5",
+        "priority": "P2",
+        "status": "pending_browser_acceptance",
+        "chapters": [
+          12
+        ],
+        "summary": "12.39 protocol behavior is tested, but no real browser proxy request was made. Isolated proxy-context target creation was denied: Target.createTarget is not allowed.",
+        "evidence": "tmp/csapp/review-v2-fixes/proxy/browser-attempt.json"
+      }
+    ],
+    "full_program_report": "tmp/project-check/20261014T213638-7e7waj6i/csapp/report.json",
+    "reading_review": "notes/reading_review.json",
+    "acceptance": "test/T010-csapp-review-v2-fixes.md"
+  }
+}

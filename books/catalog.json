@@ -28,6 +28,22 @@
       "expected_exercises": 362,
       "code_authority": "html_code_blocks",
       "checker": "notes/tools/check_notes.py"
+    },
+    {
+      "id": "csapp",
+      "title": "CS:APP · 深入理解计算机系统",
+      "directory": "books/csapp",
+      "entry": "notes/book_overview.html",
+      "publish_prefix": "csapp",
+      "notes_directory": "notes",
+      "code_directory": "code",
+      "guidelines": "agent.md",
+      "expected_pages": 14,
+      "expected_exercises": 419,
+      "original_self_checks": 36,
+      "scope": "preface and chapters 1–12, including Parts I, II and III",
+      "code_authority": "standalone_sources",
+      "checker": "tools/check_notes.py"
     }
   ]
 }

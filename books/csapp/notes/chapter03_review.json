@@ -1,0 +1,2048 @@
+{
+  "chapter": 3,
+  "edition": "Computer Systems: A Programmer's Perspective, Third Edition, Global Edition, Pearson 2016",
+  "source_pdf": "../csapp.pdf",
+  "source_pdf_sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+  "chapter_pdf_pages": [
+    200,
+    387
+  ],
+  "printed_to_pdf_offset": 1,
+  "coverage": {
+    "major_sections": 12,
+    "practice_problems": 57,
+    "homework_problems": 18,
+    "total_original_problems": 75,
+    "retained_original_self_checks": [
+      "q3-1",
+      "q3-2",
+      "q3-3"
+    ],
+    "secondary_sections": [
+      {
+        "number": "3.2.1",
+        "anchor": "s3-2-1",
+        "english_title": "Machine-Level Code"
+      },
+      {
+        "number": "3.2.2",
+        "anchor": "s3-2-2",
+        "english_title": "Code Examples"
+      },
+      {
+        "number": "3.2.3",
+        "anchor": "s3-2-3",
+        "english_title": "Notes on Formatting"
+      },
+      {
+        "number": "3.4.1",
+        "anchor": "s3-4-1",
+        "english_title": "Operand Specifiers"
+      },
+      {
+        "number": "3.4.2",
+        "anchor": "s3-4-2",
+        "english_title": "Data Movement Instructions"
+      },
+      {
+        "number": "3.4.3",
+        "anchor": "s3-4-3",
+        "english_title": "Data Movement Example"
+      },
+      {
+        "number": "3.4.4",
+        "anchor": "s3-4-4",
+        "english_title": "Pushing and Popping Stack Data"
+      },
+      {
+        "number": "3.5.1",
+        "anchor": "s3-5-1",
+        "english_title": "Load Effective Address"
+      },
+      {
+        "number": "3.5.2",
+        "anchor": "s3-5-2",
+        "english_title": "Unary and Binary Operations"
+      },
+      {
+        "number": "3.5.3",
+        "anchor": "s3-5-3",
+        "english_title": "Shift Operations"
+      },
+      {
+        "number": "3.5.4",
+        "anchor": "s3-5-4",
+        "english_title": "Discussion"
+      },
+      {
+        "number": "3.5.5",
+        "anchor": "s3-5-5",
+        "english_title": "Special Arithmetic Operations"
+      },
+      {
+        "number": "3.6.1",
+        "anchor": "s3-6-1",
+        "english_title": "Condition Codes"
+      },
+      {
+        "number": "3.6.2",
+        "anchor": "s3-6-2",
+        "english_title": "Accessing the Condition Codes"
+      },
+      {
+        "number": "3.6.3",
+        "anchor": "s3-6-3",
+        "english_title": "Jump Instructions"
+      },
+      {
+        "number": "3.6.4",
+        "anchor": "s3-6-4",
+        "english_title": "Jump Instruction Encodings"
+      },
+      {
+        "number": "3.6.5",
+        "anchor": "s3-6-5",
+        "english_title": "Implementing Conditional Branches with Conditional Control"
+      },
+      {
+        "number": "3.6.6",
+        "anchor": "s3-6-6",
+        "english_title": "Implementing Conditional Branches with Conditional Moves"
+      },
+      {
+        "number": "3.6.7",
+        "anchor": "s3-6-7",
+        "english_title": "Loops"
+      },
+      {
+        "number": "3.6.8",
+        "anchor": "s3-6-8",
+        "english_title": "Switch Statements"
+      },
+      {
+        "number": "3.7.1",
+        "anchor": "s3-7-1",
+        "english_title": "The Run-Time Stack"
+      },
+      {
+        "number": "3.7.2",
+        "anchor": "s3-7-2",
+        "english_title": "Control Transfer"
+      },
+      {
+        "number": "3.7.3",
+        "anchor": "s3-7-3",
+        "english_title": "Data Transfer"
+      },
+      {
+        "number": "3.7.4",
+        "anchor": "s3-7-4",
+        "english_title": "Local Storage on the Stack"
+      },
+      {
+        "number": "3.7.5",
+        "anchor": "s3-7-5",
+        "english_title": "Local Storage in Registers"
+      },
+      {
+        "number": "3.7.6",
+        "anchor": "s3-7-6",
+        "english_title": "Recursive Procedures"
+      },
+      {
+        "number": "3.8.1",
+        "anchor": "s3-8-1",
+        "english_title": "Basic Principles"
+      },
+      {
+        "number": "3.8.2",
+        "anchor": "s3-8-2",
+        "english_title": "Pointer Arithmetic"
+      },
+      {
+        "number": "3.8.3",
+        "anchor": "s3-8-3",
+        "english_title": "Nested Arrays"
+      },
+      {
+        "number": "3.8.4",
+        "anchor": "s3-8-4",
+        "english_title": "Fixed-Size Arrays"
+      },
+      {
+        "number": "3.8.5",
+        "anchor": "s3-8-5",
+        "english_title": "Variable-Size Arrays"
+      },
+      {
+        "number": "3.9.1",
+        "anchor": "s3-9-1",
+        "english_title": "Structures"
+      },
+      {
+        "number": "3.9.2",
+        "anchor": "s3-9-2",
+        "english_title": "Unions"
+      },
+      {
+        "number": "3.9.3",
+        "anchor": "s3-9-3",
+        "english_title": "Data Alignment"
+      },
+      {
+        "number": "3.10.1",
+        "anchor": "s3-10-1",
+        "english_title": "Understanding Pointers"
+      },
+      {
+        "number": "3.10.2",
+        "anchor": "s3-10-2",
+        "english_title": "Life in the Real World: Using the gdb Debugger"
+      },
+      {
+        "number": "3.10.3",
+        "anchor": "s3-10-3",
+        "english_title": "Out-of-Bounds Memory References and Buffer Overflow"
+      },
+      {
+        "number": "3.10.4",
+        "anchor": "s3-10-4",
+        "english_title": "Thwarting Buffer Overflow Attacks"
+      },
+      {
+        "number": "3.10.5",
+        "anchor": "s3-10-5",
+        "english_title": "Supporting Variable-Size Stack Frames"
+      },
+      {
+        "number": "3.11.1",
+        "anchor": "s3-11-1",
+        "english_title": "Floating-Point Movement and Conversion Operations"
+      },
+      {
+        "number": "3.11.2",
+        "anchor": "s3-11-2",
+        "english_title": "Floating-Point Code in Procedures"
+      },
+      {
+        "number": "3.11.3",
+        "anchor": "s3-11-3",
+        "english_title": "Floating-Point Arithmetic Operations"
+      },
+      {
+        "number": "3.11.4",
+        "anchor": "s3-11-4",
+        "english_title": "Defining and Using Floating-Point Constants"
+      },
+      {
+        "number": "3.11.5",
+        "anchor": "s3-11-5",
+        "english_title": "Using Bitwise Operations in Floating-Point Code"
+      },
+      {
+        "number": "3.11.6",
+        "anchor": "s3-11-6",
+        "english_title": "Floating-Point Comparison Operations"
+      },
+      {
+        "number": "3.11.7",
+        "anchor": "s3-11-7",
+        "english_title": "Observations about Floating-Point Code"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "number": "3.1",
+      "kind": "practice",
+      "anchor": "ex-3-1",
+      "pdf_pages": [
+        219
+      ],
+      "title": "从操作数算出有效地址",
+      "correction": null,
+      "source_question_pdf_start": 219,
+      "printed_pages": [
+        218
+      ],
+      "reference_solution_pdf_start": 362,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.2",
+      "kind": "practice",
+      "anchor": "ex-3-2",
+      "pdf_pages": [
+        222
+      ],
+      "title": "根据寄存器宽度补指令后缀",
+      "correction": null,
+      "source_question_pdf_start": 222,
+      "printed_pages": [
+        221
+      ],
+      "reference_solution_pdf_start": 362,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.3",
+      "kind": "practice",
+      "anchor": "ex-3-3",
+      "pdf_pages": [
+        223
+      ],
+      "title": "定位数据传送中的非法形式",
+      "correction": "原书答案将 %ebx 一概判为非法地址寄存器，但真实 x86-64 允许 32 位地址尺寸覆盖；本章的静态汇编实验确认该行可汇编。这里区分“与惯用 64 位寻址不符”和“根本不能编码”。",
+      "source_question_pdf_start": 223,
+      "printed_pages": [
+        222
+      ],
+      "reference_solution_pdf_start": 363,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.4",
+      "kind": "practice",
+      "anchor": "ex-3-4",
+      "pdf_pages": [
+        224,
+        225,
+        226
+      ],
+      "title": "按源类型选择扩展与截断",
+      "correction": null,
+      "source_question_pdf_start": 224,
+      "printed_pages": [
+        223,
+        224,
+        225
+      ],
+      "reference_solution_pdf_start": 363,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.5",
+      "kind": "practice",
+      "anchor": "ex-3-5",
+      "pdf_pages": [
+        226
+      ],
+      "title": "先读后写的三值轮换",
+      "correction": null,
+      "source_question_pdf_start": 226,
+      "printed_pages": [
+        225
+      ],
+      "reference_solution_pdf_start": 364,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.6",
+      "kind": "practice",
+      "anchor": "ex-3-6",
+      "pdf_pages": [
+        229,
+        230
+      ],
+      "title": "lea 的算式与合法比例因子",
+      "correction": "x86-64 内存操作数的比例只能是 1、2、4、8。原题及本版题解都写有 3、7，这不是新的寻址模式。",
+      "source_question_pdf_start": 229,
+      "printed_pages": [
+        228,
+        229
+      ],
+      "reference_solution_pdf_start": 364,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.7",
+      "kind": "practice",
+      "anchor": "ex-3-7",
+      "pdf_pages": [
+        230
+      ],
+      "title": "不能编码的 lea 怎样还原意图",
+      "correction": "本版原题与答案使用了不存在的寻址形式。这里给出原书可识别的代数意图及一份合法修正，不声称原汇编具有确定执行语义。",
+      "source_question_pdf_start": 230,
+      "printed_pages": [
+        229
+      ],
+      "reference_solution_pdf_start": 365,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.8",
+      "kind": "practice",
+      "anchor": "ex-3-8",
+      "pdf_pages": [
+        231
+      ],
+      "title": "读改写内存的最终状态",
+      "correction": "两操作数 imul 的目的必须为寄存器，原来的立即数到内存乘法不能编码。可以用 movq (%rax,%rdx,8),%r8；imulq $16,%r8；movq %r8,(%rax,%rdx,8)。",
+      "source_question_pdf_start": 231,
+      "printed_pages": [
+        230
+      ],
+      "reference_solution_pdf_start": 365,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.9",
+      "kind": "practice",
+      "anchor": "ex-3-9",
+      "pdf_pages": [
+        232
+      ],
+      "title": "把变量移位量放入 cl",
+      "correction": null,
+      "source_question_pdf_start": 232,
+      "printed_pages": [
+        231
+      ],
+      "reference_solution_pdf_start": 365,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.10",
+      "kind": "practice",
+      "anchor": "ex-3-10",
+      "pdf_pages": [
+        233,
+        234
+      ],
+      "title": "追踪逻辑运算与减法的方向",
+      "correction": "没有 %bax 寄存器，原题又在未初始化的 %rbx 上减法，且没有返回值写入。故无法从原汇编唯一补出 C；本解明确采用本版题解的 y−p3 意图，并指出与 AT&amp;T 的源、目的顺序的冲突。",
+      "source_question_pdf_start": 233,
+      "printed_pages": [
+        232,
+        233
+      ],
+      "reference_solution_pdf_start": 366,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.11",
+      "kind": "practice",
+      "anchor": "ex-3-11",
+      "pdf_pages": [
+        234
+      ],
+      "title": "用异或清零与编码长度",
+      "correction": null,
+      "source_question_pdf_start": 234,
+      "printed_pages": [
+        233
+      ],
+      "reference_solution_pdf_start": 366,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.12",
+      "kind": "practice",
+      "anchor": "ex-3-12",
+      "pdf_pages": [
+        237
+      ],
+      "title": "无符号除法的高半部准备",
+      "correction": null,
+      "source_question_pdf_start": 237,
+      "printed_pages": [
+        236
+      ],
+      "reference_solution_pdf_start": 366,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.13",
+      "kind": "practice",
+      "anchor": "ex-3-13",
+      "pdf_pages": [
+        241,
+        242
+      ],
+      "title": "由比较宽度与条件反推类型",
+      "correction": "原文字的 %rdx 应与代码统一为 %rdi，D 的 %a 不是寄存器，按返回布尔值应为 %al。",
+      "source_question_pdf_start": 241,
+      "printed_pages": [
+        240,
+        241
+      ],
+      "reference_solution_pdf_start": 367,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.14",
+      "kind": "practice",
+      "anchor": "ex-3-14",
+      "pdf_pages": [
+        242
+      ],
+      "title": "test 与零比较的等价条件",
+      "correction": "D 的指令是 setle 而非 setl；C 在 test 后仅检验非零，不能仅凭 seta 就排除 signed char 的 !=0。",
+      "source_question_pdf_start": 242,
+      "printed_pages": [
+        241
+      ],
+      "reference_solution_pdf_start": 367,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.15",
+      "kind": "practice",
+      "anchor": "ex-3-15",
+      "pdf_pages": [
+        246
+      ],
+      "title": "相对跳转的基准是下一条指令",
+      "correction": null,
+      "source_question_pdf_start": 246,
+      "printed_pages": [
+        245
+      ],
+      "reference_solution_pdf_start": 367,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.16",
+      "kind": "practice",
+      "anchor": "ex-3-16",
+      "pdf_pages": [
+        249
+      ],
+      "title": "短路求值与两个条件跳转",
+      "correction": "原 cmpq 把 a 当地址解引用、把 p 当比较值，movq 还会写 8 字节而非 short 的 2 字节。本版答案的第二个条件也反向写成 a≥*p。原 C、原汇编和原答案不等价，本解以完整给出的 C 为题意并提供匹配实现。",
+      "source_question_pdf_start": 249,
+      "printed_pages": [
+        248
+      ],
+      "reference_solution_pdf_start": 368,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.17",
+      "kind": "practice",
+      "anchor": "ex-3-17",
+      "pdf_pages": [
+        249,
+        250
+      ],
+      "title": "选择 if 的跳转方向",
+      "correction": null,
+      "source_question_pdf_start": 249,
+      "printed_pages": [
+        248,
+        249
+      ],
+      "reference_solution_pdf_start": 368,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.18",
+      "kind": "practice",
+      "anchor": "ex-3-18",
+      "pdf_pages": [
+        250
+      ],
+      "title": "嵌套分支的每条返回路径",
+      "correction": "机器指令 idivq 使用 %rdx:%rax 为被除数，商只能写 %rax。此次 Clang 汇编器接受题中 idivq %rdx,%rax 等冗余的 %rax 写法，反汇编仍为单显式除数；这并不表示可任意指定目的寄存器。原程序没有准备高半部，仍无法实现题设除法；特别是 z 在 %rdx 时，须先保存 z，再用 cqto。short 参数也须正确扩展。",
+      "source_question_pdf_start": 250,
+      "printed_pages": [
+        249
+      ],
+      "reference_solution_pdf_start": 369,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.19",
+      "kind": "practice",
+      "anchor": "ex-3-19",
+      "pdf_pages": [
+        253
+      ],
+      "title": "反推分支预测失败代价",
+      "correction": null,
+      "source_question_pdf_start": 253,
+      "printed_pages": [
+        252
+      ],
+      "reference_solution_pdf_start": 369,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.20",
+      "kind": "practice",
+      "anchor": "ex-3-20",
+      "pdf_pages": [
+        256
+      ],
+      "title": "除以 16 的向零舍入",
+      "correction": "原代码没有把结果送入返回寄存器，且未保存 %rbx。另需按 short 类型扩展输入；原书题解称“4 的幂”是口误，此处为 2⁴=16。",
+      "source_question_pdf_start": 256,
+      "printed_pages": [
+        255
+      ],
+      "reference_solution_pdf_start": 370,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.21",
+      "kind": "practice",
+      "anchor": "ex-3-21",
+      "pdf_pages": [
+        256,
+        257
+      ],
+      "title": "条件传送中比较的等号边界",
+      "correction": "原 idivq %rsi,%rdi 不能把商指定到 %rdi，汇编器拒绝该操作数；返回位置与 short 参数扩展也有问题。本版答案 y&gt;10 与给出的 cmovge 不符。本解按可判定的分支及比较修正，不能把原机器片段当作合法 C 的完整编译结果。",
+      "source_question_pdf_start": 256,
+      "printed_pages": [
+        255,
+        256
+      ],
+      "reference_solution_pdf_start": 370,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.22",
+      "kind": "practice",
+      "anchor": "ex-3-22",
+      "pdf_pages": [
+        258
+      ],
+      "title": "阶乘何时超出整数范围",
+      "correction": null,
+      "source_question_pdf_start": 258,
+      "printed_pages": [
+        257
+      ],
+      "reference_solution_pdf_start": 370,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.23",
+      "kind": "practice",
+      "anchor": "ex-3-23",
+      "pdf_pages": [
+        259,
+        260
+      ],
+      "title": "指针别名怎样被化为一次更新",
+      "correction": "原 idivq 不能以立即数作除数，也不能指定 %rcx 为商的目的；循环目的应是 x 的寄存器；递减应为 2；结果需送入 %ax，%rbx 若使用须保存。本版答案仍保留若干上述问题，本解以题中 C 定义为准。",
+      "source_question_pdf_start": 259,
+      "printed_pages": [
+        258,
+        259
+      ],
+      "reference_solution_pdf_start": 371,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.24",
+      "kind": "practice",
+      "anchor": "ex-3-24",
+      "pdf_pages": [
+        261,
+        262
+      ],
+      "title": "先跳到测试的 while",
+      "correction": "lea 的 scale 位置写了 %rdi，不能汇编；据本版答案可确定想表达 a*b，应以乘法替换，并按 short 实际宽度编译。",
+      "source_question_pdf_start": 261,
+      "printed_pages": [
+        260,
+        261
+      ],
+      "reference_solution_pdf_start": 372,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.25",
+      "kind": "practice",
+      "anchor": "ex-3-25",
+      "pdf_pages": [
+        263,
+        264,
+        265
+      ],
+      "title": "带入口守卫的 while",
+      "correction": null,
+      "source_question_pdf_start": 263,
+      "printed_pages": [
+        262,
+        263,
+        264
+      ],
+      "reference_solution_pdf_start": 372,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.26",
+      "kind": "practice",
+      "anchor": "ex-3-26",
+      "pdf_pages": [
+        265
+      ],
+      "title": "掩码零使所谓奇偶计算失效",
+      "correction": "原书题解同时写 return val &amp; 0 并称其计算奇偶性，两者矛盾。本解先回答原代码的恒零结果，再给出奇校验的明确修正；short 参数还需按 16 位输入限定高位。",
+      "source_question_pdf_start": 265,
+      "printed_pages": [
+        264
+      ],
+      "reference_solution_pdf_start": 373,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.27",
+      "kind": "practice",
+      "anchor": "ex-3-27",
+      "pdf_pages": [
+        268
+      ],
+      "title": "用 guarded-do 打印 Fibonacci 序列",
+      "correction": "本版参考代码没有打印任何项，且最后 return n；这不能满足题目“打印 Fibonacci 数”的要求。这里保留题意并明确补足接口与数值边界。",
+      "source_question_pdf_start": 268,
+      "printed_pages": [
+        267
+      ],
+      "reference_solution_pdf_start": 373,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.28",
+      "kind": "practice",
+      "anchor": "ex-3-28",
+      "pdf_pages": [
+        268,
+        269
+      ],
+      "title": "位反转题中损坏的循环计数",
+      "correction": "初值 1/65、增量 +1、short 接口与题解的 64 位反转互相不一致。这里给出原机器代码的确定结论和与原 C 接口一致的修正，不能静默换成北美版题目。",
+      "source_question_pdf_start": 268,
+      "printed_pages": [
+        267,
+        268
+      ],
+      "reference_solution_pdf_start": 373,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.29",
+      "kind": "practice",
+      "anchor": "ex-3-29",
+      "pdf_pages": [
+        269
+      ],
+      "title": "continue 必须经过 for 的更新表达式",
+      "correction": null,
+      "source_question_pdf_start": 269,
+      "printed_pages": [
+        268
+      ],
+      "reference_solution_pdf_start": 374,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.30",
+      "kind": "practice",
+      "anchor": "ex-3-30",
+      "pdf_pages": [
+        273,
+        274
+      ],
+      "title": "从跳转表恢复不连续 case",
+      "correction": null,
+      "source_question_pdf_start": 273,
+      "printed_pages": [
+        272,
+        273
+      ],
+      "reference_solution_pdf_start": 375,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.31",
+      "kind": "practice",
+      "anchor": "ex-3-31",
+      "pdf_pages": [
+        274,
+        275
+      ],
+      "title": "贯穿与共用目标的 switch",
+      "correction": "图 3.24 参数注释误将 a、b 的寄存器互换，代码的数据流与原型支持 rdi=a、rsi=b。此外 .rodata 伪指令出现在可执行标签之前，不可据此把整段原样作为完整可执行汇编文件；这里按图示代码块分析控制流。",
+      "source_question_pdf_start": 274,
+      "printed_pages": [
+        273,
+        274
+      ],
+      "reference_solution_pdf_start": 375,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.32",
+      "kind": "practice",
+      "anchor": "ex-3-32",
+      "pdf_pages": [
+        281,
+        282
+      ],
+      "title": "把两层 call 与 ret 逐条走完",
+      "correction": "原题第二个函数说明误写 last(long x)，实际标签为 first。该轨迹是题给地址的机器模型，不是本机 GDB 观测。",
+      "source_question_pdf_start": 281,
+      "printed_pages": [
+        280,
+        281
+      ],
+      "reference_solution_pdf_start": 376,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.33",
+      "kind": "practice",
+      "anchor": "ex-3-33",
+      "pdf_pages": [
+        283,
+        284,
+        285
+      ],
+      "title": "从读写宽度反推参数次序",
+      "correction": null,
+      "source_question_pdf_start": 283,
+      "printed_pages": [
+        282,
+        283,
+        284
+      ],
+      "reference_solution_pdf_start": 376,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件",
+      "review_v2": {
+        "issue": "I010",
+        "status": "fixed_verified",
+        "summary": "Both original candidates retained; second needs nonoverlap. Legal char alias counterexample verified: 1 versus 257."
+      },
+      "acceptance_status": "fixed_verified"
+    },
+    {
+      "number": "3.34",
+      "kind": "practice",
+      "anchor": "ex-3-34",
+      "pdf_pages": [
+        289,
+        290
+      ],
+      "title": "跨调用存活值放在哪里",
+      "correction": "原题说 a0— a8，但展示代码只生成 a0— a7；a8 的位置无法从缺失的后续代码推断，本版答案也只处理八个值。",
+      "source_question_pdf_start": 289,
+      "printed_pages": [
+        288,
+        289
+      ],
+      "reference_solution_pdf_start": 377,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.35",
+      "kind": "practice",
+      "anchor": "ex-3-35",
+      "pdf_pages": [
+        291,
+        292
+      ],
+      "title": "递归保留本层参数",
+      "correction": null,
+      "source_question_pdf_start": 291,
+      "printed_pages": [
+        290,
+        291
+      ],
+      "reference_solution_pdf_start": 377,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.36",
+      "kind": "practice",
+      "anchor": "ex-3-36",
+      "pdf_pages": [
+        293,
+        294
+      ],
+      "title": "指针数组的元素也是指针",
+      "correction": null,
+      "source_question_pdf_start": 293,
+      "printed_pages": [
+        292,
+        293
+      ],
+      "reference_solution_pdf_start": 378,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.37",
+      "kind": "practice",
+      "anchor": "ex-3-37",
+      "pdf_pages": [
+        295
+      ],
+      "title": "short 下标怎样形成字节地址",
+      "correction": "本版参考答案第三项写出 scale=12 的 movw，不能编码。这里拆成一条 lea 与一条 movw，保留相同地址公式。",
+      "source_question_pdf_start": 295,
+      "printed_pages": [
+        294
+      ],
+      "reference_solution_pdf_start": 378,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.38",
+      "kind": "practice",
+      "anchor": "ex-3-38",
+      "pdf_pages": [
+        296,
+        297
+      ],
+      "title": "由行跨度反推二维数组维数",
+      "correction": null,
+      "source_question_pdf_start": 296,
+      "printed_pages": [
+        295,
+        296
+      ],
+      "reference_solution_pdf_start": 378,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.39",
+      "kind": "practice",
+      "anchor": "ex-3-39",
+      "pdf_pages": [
+        298,
+        299
+      ],
+      "title": "内积指针的三个初始地址",
+      "correction": "原书将机器字节地址等式写成 C 指针表达式，容易掩盖二维子数组及尾后指针的边界。这里保留公式并指出可执行 C 的限制。",
+      "source_question_pdf_start": 299,
+      "printed_pages": [
+        297,
+        298
+      ],
+      "reference_solution_pdf_start": 379,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.40",
+      "kind": "practice",
+      "anchor": "ex-3-40",
+      "pdf_pages": [
+        299
+      ],
+      "title": "沿对角线累加字节偏移",
+      "correction": null,
+      "source_question_pdf_start": 299,
+      "printed_pages": [
+        298
+      ],
+      "reference_solution_pdf_start": 379,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.41",
+      "kind": "practice",
+      "anchor": "ex-3-41",
+      "pdf_pages": [
+        305
+      ],
+      "title": "嵌套结构与指针对齐",
+      "correction": "原题用 movl 读写 short，且把 next 写在偏移 12；题解据此声称总长 20。即便使用紧凑布局，4 字节写 s.y 仍会越过字段。这里以原结构声明和本章未启用 packed 的 ABI 为准。",
+      "source_question_pdf_start": 305,
+      "printed_pages": [
+        304
+      ],
+      "reference_solution_pdf_start": 380,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.42",
+      "kind": "practice",
+      "anchor": "ex-3-42",
+      "pdf_pages": [
+        306
+      ],
+      "title": "链表上累乘的终止条件",
+      "correction": "原指令偏移 2 与正常对齐不符，imulq 也读错尺寸；本版答案最后称其求“和”与乘法指令矛盾。合法短整数实现可用 movswl (%rdi),%ecx；imull %ecx,%eax；movswl %ax,%eax；movq 8(%rdi),%rdi，并限制中间值可表示。",
+      "source_question_pdf_start": 306,
+      "printed_pages": [
+        305
+      ],
+      "reference_solution_pdf_start": 380,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.43",
+      "kind": "practice",
+      "anchor": "ex-3-43",
+      "pdf_pages": [
+        309,
+        310
+      ],
+      "title": "联合体的重叠布局与间接访问",
+      "correction": null,
+      "source_question_pdf_start": 309,
+      "printed_pages": [
+        308,
+        309
+      ],
+      "reference_solution_pdf_start": 381,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.44",
+      "kind": "practice",
+      "anchor": "ex-3-44",
+      "pdf_pages": [
+        312
+      ],
+      "title": "五个结构的字段偏移与尾部填充",
+      "correction": "原题 C、D、E 漏了末字段分号；本版答案 P1 给 0/2/6/14 和总长16，P5 给 t=24、总长40，都违背字段大小与普通对齐。上表按补齐分号后的声明计算。",
+      "source_question_pdf_start": 312,
+      "printed_pages": [
+        311
+      ],
+      "reference_solution_pdf_start": 382,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.45",
+      "kind": "practice",
+      "anchor": "ex-3-45",
+      "pdf_pages": [
+        312,
+        313
+      ],
+      "title": "重排字段能省多少字节",
+      "correction": "本版题解把 short d 错误对齐到 16，继而得到总长56。short 的对齐是2，地址14已经满足；该错误导致“重排节省8字节”的结论不成立。",
+      "source_question_pdf_start": 312,
+      "printed_pages": [
+        311,
+        312
+      ],
+      "reference_solution_pdf_start": 382,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.46",
+      "kind": "practice",
+      "anchor": "ex-3-46",
+      "pdf_pages": [
+        319,
+        320,
+        321
+      ],
+      "title": "从输入字节恢复损坏的栈",
+      "correction": "原书栈图把已知返回地址印作 0x400076，与题干 0x400776 不一致；这里按题干起点。溢出后低两字节均被覆盖，两种起点都会得到 0x400034。",
+      "source_question_pdf_start": 319,
+      "printed_pages": [
+        318,
+        319,
+        320
+      ],
+      "reference_solution_pdf_start": 383,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.47",
+      "kind": "practice",
+      "anchor": "ex-3-47",
+      "pdf_pages": [
+        323
+      ],
+      "title": "地址随机化样本的范围",
+      "correction": null,
+      "source_question_pdf_start": 323,
+      "printed_pages": [
+        322
+      ],
+      "reference_solution_pdf_start": 384,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.48",
+      "kind": "practice",
+      "anchor": "ex-3-48",
+      "pdf_pages": [
+        325,
+        326
+      ],
+      "title": "把局部标量放到字符数组之前",
+      "correction": null,
+      "source_question_pdf_start": 325,
+      "printed_pages": [
+        324,
+        325
+      ],
+      "reference_solution_pdf_start": 384,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.49",
+      "kind": "practice",
+      "anchor": "ex-3-49",
+      "pdf_pages": [
+        328,
+        329,
+        330
+      ],
+      "title": "变长数组的分配与对齐",
+      "correction": "题文一处说 e2 位于 s1 与 p 之间，但图3.44清楚标在 s2 与 p 之间；这里按图及公式统一。",
+      "source_question_pdf_start": 330,
+      "printed_pages": [
+        327,
+        328,
+        329
+      ],
+      "reference_solution_pdf_start": 384,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.50",
+      "kind": "practice",
+      "anchor": "ex-3-50",
+      "pdf_pages": [
+        337
+      ],
+      "title": "追踪四种数值转换",
+      "correction": null,
+      "source_question_pdf_start": 337,
+      "printed_pages": [
+        336
+      ],
+      "reference_solution_pdf_start": 384,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.51",
+      "kind": "practice",
+      "anchor": "ex-3-51",
+      "pdf_pages": [
+        337,
+        338
+      ],
+      "title": "为类型转换选正确指令",
+      "correction": "原题示范 AVX 整数到double指令少一源操作数；本版题解把 double→float 的标签倒写。本表给出可汇编的标量形式。",
+      "source_question_pdf_start": 337,
+      "printed_pages": [
+        336,
+        337
+      ],
+      "reference_solution_pdf_start": 385,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.52",
+      "kind": "practice",
+      "anchor": "ex-3-52",
+      "pdf_pages": [
+        338,
+        339
+      ],
+      "title": "整数与浮点参数独立计数",
+      "correction": null,
+      "source_question_pdf_start": 338,
+      "printed_pages": [
+        337,
+        338
+      ],
+      "reference_solution_pdf_start": 385,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.53",
+      "kind": "practice",
+      "anchor": "ex-3-53",
+      "pdf_pages": [
+        340
+      ],
+      "title": "从浮点转换反推混合参数类型",
+      "correction": null,
+      "source_question_pdf_start": 340,
+      "printed_pages": [
+        339
+      ],
+      "reference_solution_pdf_start": 385,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.54",
+      "kind": "practice",
+      "anchor": "ex-3-54",
+      "pdf_pages": [
+        340,
+        341
+      ],
+      "title": "保持单精度乘法的舍入点",
+      "correction": null,
+      "source_question_pdf_start": 340,
+      "printed_pages": [
+        339,
+        340
+      ],
+      "reference_solution_pdf_start": 386,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.55",
+      "kind": "practice",
+      "anchor": "ex-3-55",
+      "pdf_pages": [
+        342
+      ],
+      "title": "从两个 long 常量恢复 32.0",
+      "correction": null,
+      "source_question_pdf_start": 342,
+      "printed_pages": [
+        341
+      ],
+      "reference_solution_pdf_start": 386,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.56",
+      "kind": "practice",
+      "anchor": "ex-3-56",
+      "pdf_pages": [
+        342,
+        343
+      ],
+      "title": "按位掩码对浮点数做了什么",
+      "correction": null,
+      "source_question_pdf_start": 342,
+      "printed_pages": [
+        341,
+        342
+      ],
+      "reference_solution_pdf_start": 387,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.57",
+      "kind": "practice",
+      "anchor": "ex-3-57",
+      "pdf_pages": [
+        345,
+        346
+      ],
+      "title": "浮点分支必须保留 unordered 情形",
+      "correction": null,
+      "source_question_pdf_start": 345,
+      "printed_pages": [
+        344,
+        345
+      ],
+      "reference_solution_pdf_start": 387,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.58",
+      "kind": "homework",
+      "anchor": "ex-3-58",
+      "pdf_pages": [
+        348
+      ],
+      "title": "最低位扩成全字掩码",
+      "correction": null,
+      "source_question_pdf_start": 348,
+      "printed_pages": [
+        347
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.59",
+      "kind": "homework",
+      "anchor": "ex-3-59",
+      "pdf_pages": [
+        348,
+        349
+      ],
+      "title": "用三个64位乘法组合有符号128位积",
+      "correction": null,
+      "source_question_pdf_start": 348,
+      "printed_pages": [
+        347,
+        348
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.60",
+      "kind": "homework",
+      "anchor": "ex-3-60",
+      "pdf_pages": [
+        349,
+        350
+      ],
+      "title": "稀疏掩码循环与移位边界",
+      "correction": "汇编注释原型用int n，C模板用long n；代码只复制低32位，移位又只用低6位。这里明确位模型接口及可终止输入域。",
+      "source_question_pdf_start": 349,
+      "printed_pages": [
+        348,
+        349
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.61",
+      "kind": "homework",
+      "anchor": "ex-3-61",
+      "pdf_pages": [
+        350
+      ],
+      "title": "先选安全地址，再做一次读取",
+      "correction": null,
+      "source_question_pdf_start": 350,
+      "printed_pages": [
+        349
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.62",
+      "kind": "homework",
+      "anchor": "ex-3-62",
+      "pdf_pages": [
+        350,
+        351,
+        352
+      ],
+      "title": "恢复枚举分支的副作用与贯穿",
+      "correction": null,
+      "source_question_pdf_start": 350,
+      "printed_pages": [
+        349,
+        350,
+        351
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.63",
+      "kind": "homework",
+      "anchor": "ex-3-63",
+      "pdf_pages": [
+        351,
+        352,
+        353
+      ],
+      "title": "跳转表、移位和两次贯穿",
+      "correction": null,
+      "source_question_pdf_start": 351,
+      "printed_pages": [
+        350,
+        351,
+        352
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.64",
+      "kind": "homework",
+      "anchor": "ex-3-64",
+      "pdf_pages": [
+        353,
+        354
+      ],
+      "title": "三维数组的地址公式与尺寸",
+      "correction": null,
+      "source_question_pdf_start": 353,
+      "printed_pages": [
+        352,
+        353
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.65",
+      "kind": "homework",
+      "anchor": "ex-3-65",
+      "pdf_pages": [
+        354
+      ],
+      "title": "转置循环的两个指针步长",
+      "correction": null,
+      "source_question_pdf_start": 354,
+      "printed_pages": [
+        353
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.66",
+      "kind": "homework",
+      "anchor": "ex-3-66",
+      "pdf_pages": [
+        354,
+        355
+      ],
+      "title": "变长数组中的行数与列数",
+      "correction": null,
+      "source_question_pdf_start": 354,
+      "printed_pages": [
+        353,
+        354
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.67",
+      "kind": "homework",
+      "anchor": "ex-3-67",
+      "pdf_pages": [
+        355,
+        356,
+        357
+      ],
+      "title": "结构参数与隐藏返回指针",
+      "correction": null,
+      "source_question_pdf_start": 355,
+      "printed_pages": [
+        354,
+        355,
+        356
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.68",
+      "kind": "homework",
+      "anchor": "ex-3-68",
+      "pdf_pages": [
+        357,
+        358
+      ],
+      "title": "把字段偏移化为整型约束",
+      "correction": null,
+      "source_question_pdf_start": 357,
+      "printed_pages": [
+        356,
+        357
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.69",
+      "kind": "homework",
+      "anchor": "ex-3-69",
+      "pdf_pages": [
+        358
+      ],
+      "title": "从汇编找回丢失的结构声明",
+      "correction": null,
+      "source_question_pdf_start": 358,
+      "printed_pages": [
+        357
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.70",
+      "kind": "homework",
+      "anchor": "ex-3-70",
+      "pdf_pages": [
+        359,
+        360
+      ],
+      "title": "在联合体链中用类型消除歧义",
+      "correction": null,
+      "source_question_pdf_start": 359,
+      "printed_pages": [
+        358,
+        359
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.71",
+      "kind": "homework",
+      "anchor": "ex-3-71",
+      "pdf_pages": [
+        360
+      ],
+      "title": "任意长一行的分块回显",
+      "correction": null,
+      "source_question_pdf_start": 360,
+      "printed_pages": [
+        359
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.72",
+      "kind": "homework",
+      "anchor": "ex-3-72",
+      "pdf_pages": [
+        360,
+        361
+      ],
+      "title": "alloca 的16字节对齐余量",
+      "correction": null,
+      "source_question_pdf_start": 360,
+      "printed_pages": [
+        359,
+        360
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.73",
+      "kind": "homework",
+      "anchor": "ex-3-73",
+      "pdf_pages": [
+        361
+      ],
+      "title": "一次浮点比较后的条件跳转",
+      "correction": null,
+      "source_question_pdf_start": 361,
+      "printed_pages": [
+        360
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.74",
+      "kind": "homework",
+      "anchor": "ex-3-74",
+      "pdf_pages": [
+        361
+      ],
+      "title": "一次比较后的条件传送优先级",
+      "correction": null,
+      "source_question_pdf_start": 361,
+      "printed_pages": [
+        360
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    },
+    {
+      "number": "3.75",
+      "kind": "homework",
+      "anchor": "ex-3-75",
+      "pdf_pages": [
+        361,
+        362
+      ],
+      "title": "复数参数占用两个浮点寄存器",
+      "correction": null,
+      "source_question_pdf_start": 361,
+      "printed_pages": [
+        360,
+        361
+      ],
+      "reference_solution_pdf_start": null,
+      "question_inputs_reviewed": "题干、小问、给定数值、表格、C/汇编及所引必要图数据逐题对照；原版错误在解答前校注",
+      "answer_method": "逐项状态/算式推导及完整确定结论；可执行版本注明输入域与语言/ABI条件"
+    }
+  ],
+  "source_review": {
+    "method": "原PDF版次、页序、逐题文本及原题代码/表格核对；重点矛盾页面另以100dpi图像检查",
+    "visually_checked_pdf_pages": [
+      230,
+      234,
+      249,
+      250,
+      260,
+      269,
+      305,
+      306,
+      312,
+      382
+    ],
+    "source_text_pages": "tmp/csapp/source/book.txt",
+    "original_practice_solution_pdf_pages": [
+      362,
+      387
+    ],
+    "additional_text_rechecks_pdf_pages": [
+      273,
+      274,
+      275,
+      281,
+      282,
+      294,
+      295,
+      298,
+      299,
+      325,
+      326,
+      328,
+      329,
+      330,
+      342,
+      344,
+      345,
+      348,
+      350,
+      351,
+      352,
+      353,
+      354,
+      358,
+      359,
+      360,
+      361,
+      362
+    ],
+    "source_pdf_sha256_verified": true,
+    "solution_map_complete": true
+  },
+  "programs": [
+    {
+      "id": "ch03-models",
+      "c": "code/ch03_models.c",
+      "python": "code/ch03_models.py",
+      "page_code_ids": [
+        "ch03-models-c",
+        "ch03-models-python"
+      ],
+      "interface": "无参数；退出0通过、1模型差异、2宿主不满足LP64；输出确定性检查、布局、乘积和递归值"
+    },
+    {
+      "id": "ch03-good-echo",
+      "c": "code/ch03_good_echo.c",
+      "python": "code/ch03_good_echo.py",
+      "page_code_ids": [
+        "ch03-good-echo-c",
+        "ch03-good-echo-python"
+      ],
+      "interface": "标准输入一行文本到标准输出；退出0成功、3读写/刷新错误"
+    },
+    {
+      "id": "ch03-range-check",
+      "c": "code/ch03_range_check.c",
+      "python": "code/ch03_range_check.py",
+      "page_code_ids": [
+        "ch03-range-check-c",
+        "ch03-range-check-python"
+      ],
+      "interface": "无参数16种边界位模式；--exhaustive遍历全部2^32；退出0通过、1分类差异、2参数/表示不支持；C需链接汇编，Python独立模型"
+    }
+  ],
+  "extra_sources": [
+    "code/ch03_ranges.S",
+    "code/ch03_compiler.c"
+  ],
+  "boundaries": [
+    "机器模型以 LP64、8-bit byte、IEEE binary32/binary64、x86-64/Linux System V 为教材基准；各处源码题意、数学表达式、定宽机器结果分别说明。",
+    "实际原生 C11/ASan/UBSan 程序运行在 macOS arm64，Apple Clang 17.0.0；它验证模型、对象布局和 C 边界，不等同于 x86-64 ABI 执行。",
+    "ch03_ranges.S 两种实现实际通过 macOS x86-64 可执行文件及 /usr/bin/arch -x86_64 系统兼容环境运行，各覆盖全部 4,294,967,296 个 binary32 位模式。默认浮点异常屏蔽；包含信号 NaN。该结果不宣称原生 Linux 运行。",
+    "256 个移位计数乘 8/16/32/64 四种位宽在相同 x86-64 兼容环境实测；Linux x86_64-unknown-linux-gnu 仅生成 .s/.o 和反汇编检查。",
+    "Python 模型只验证定宽算式、布局递推和位字段分类，不执行真实汇编 ABI；Python 全 2^32 参数模式没有运行。",
+    "题内 C 回答将有符号溢出、无效指针、非法移位排除出有效输入域，需全域位结果的题改用 uint64_t/uint16_t。原题非法代码保留在 data-source=textbook 区，不把它列入可执行 C11 成功记录。",
+    "3.27 打印 F0 至 F(n-1)，n=0..94；3.40 接收整个矩阵对象的指针；3.60 n=1..63；3.71 处理不含嵌入 NUL 的任意长度文本行，I/O 错误返回3；这些接口调整均在读者页面明示。",
+    "原书给出的 GDB 跳转表、栈状态与本章设定的状态表作为输入/模型；GDB 操作是复现说明，没有伪造本机 GDB 观察。"
+  ],
+  "status": "content_programs_and_local_reading_verified",
+  "page_sha256": "77c0b6e876335f5d33205473fef0f85671f09162dcf91089cd7ed9857d8a2351",
+  "tests": {
+    "structural": {
+      "original_questions": 75,
+      "practice": 57,
+      "homework": 18,
+      "retained_self_checks": 3,
+      "major_sections": 12,
+      "secondary_sections": 46,
+      "annotation_groups": 12,
+      "annotation_cards": 24,
+      "unique_ids": 191,
+      "local_links": 134,
+      "inline_svg": 3,
+      "state_and_solution_tables": 44,
+      "standalone_c_fragment_syntax_checks": 16,
+      "source_pairs_byte_identical": 4,
+      "assembly_reading_copy_byte_identical": true,
+      "status": "pass"
+    },
+    "execution": {
+      "models": {
+        "host_c": "C11+ASan+UBSan",
+        "cross_language_identical": true,
+        "compare8_pairs": 65536,
+        "reverse16_patterns": 65536,
+        "signed128_products": 81,
+        "recurrence_values": 22,
+        "factorial_boundaries": [
+          14,
+          20,
+          21
+        ],
+        "layout_structures": [
+          "Test",
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5",
+          "ACE",
+          "Record",
+          "CompactRecord"
+        ]
+      },
+      "source_copies": "4 full C/Python pairs byte-identical",
+      "html_fragments": {
+        "c_sanitized_functional_blocks": [
+          "caller-example-c",
+          "ex3-5-code-c",
+          "ex3-16-code-c",
+          "ex3-17-code-c",
+          "ex3-28-code-c",
+          "ex3-29-code-c",
+          "ex3-40-code-c",
+          "ex3-58-code-c",
+          "ex3-60-code-c",
+          "ex3-61-code-c"
+        ],
+        "python_syntax_blocks": 16,
+        "alias_permutations": 27,
+        "conditional_inputs": 121,
+        "reverse_patterns": 65536,
+        "mask_shifts": 63,
+        "python_functional": "matching cases pass"
+      },
+      "fibonacci_counts": [
+        0,
+        1,
+        2,
+        7,
+        94,
+        95
+      ],
+      "good_echo": {
+        "normal_boundary_inputs": 10,
+        "longest_line": 10000,
+        "io_errors": "C read/flush errors and Python read/write errors return 3"
+      },
+      "assembler_errata": {
+        "address32": {
+          "accepted": true,
+          "diagnostic": ""
+        },
+        "scale3": {
+          "accepted": false,
+          "diagnostic": "tmp/csapp/rework/ch03/scale3.s:3:17: error: scale factor in address must be 1, 2, 4 or 8\nleaq (%rdx,%rbx,3),%rax\n                ^\n"
+        },
+        "scale7": {
+          "accepted": false,
+          "diagnostic": "tmp/csapp/rework/ch03/scale7.s:3:18: error: scale factor in address must be 1, 2, 4 or 8\nleaq 2(%rbx,%rbx,7),%rax\n                 ^\n"
+        },
+        "scale9": {
+          "accepted": false,
+          "diagnostic": "tmp/csapp/rework/ch03/scale9.s:3:17: error: scale factor in address must be 1, 2, 4 or 8\nleaq (%rsi,%rsi,9),%rbx\n                ^\n"
+        },
+        "register_scale": {
+          "accepted": false,
+          "diagnostic": "tmp/csapp/rework/ch03/register_scale.s:3:17: error: expected absolute expression\nleaq (%rbx,%rdi,%rsi),%rbx\n                ^\ntmp/csapp/rework/ch03/register_scale.s:3:17: error: expected scale expression\nleaq (%rbx,%rdi,%rsi),%rbx\n                ^\n"
+        },
+        "bax": {
+          "accepted": false,
+          "diagnostic": "tmp/csapp/rework/ch03/bax.s:3:11: error: invalid register name\nmovq %rdx,%bax\n          ^~~~\n"
+        },
+        "imul_memory": {
+          "accepted": false,
+          "diagnostic": "tmp/csapp/rework/ch03/imul_memory.s:3:1: error: too few operands for instruction\nimulq $16,(%rax,%rdx,8)\n^\n"
+        },
+        "redundant_rax_idiv": {
+          "accepted": true,
+          "diagnostic": ""
+        },
+        "invalid_idiv_destination": {
+          "accepted": false,
+          "diagnostic": "tmp/csapp/rework/ch03/invalid_idiv_destination.s:3:12: error: invalid operand for instruction\nidivq %rsi,%rdi\n           ^~~~\n"
+        },
+        "immediate_idiv": {
+          "accepted": false,
+          "diagnostic": "tmp/csapp/rework/ch03/immediate_idiv.s:3:7: error: invalid operand for instruction\nidivq $9,%rcx\n      ^~\n"
+        },
+        "short_st_init": {
+          "accepted": true,
+          "diagnostic": ""
+        },
+        "zero_variants": {
+          "accepted": true,
+          "diagnostic": ""
+        },
+        "avx_missing_merge": {
+          "accepted": false,
+          "diagnostic": "tmp/csapp/rework/ch03/avx_missing_merge.s:3:1: error: too few operands for instruction\nvcvtsi2sdq %rdi,%xmm0\n^\n"
+        },
+        "avx_conversions": {
+          "accepted": true,
+          "diagnostic": ""
+        },
+        "correct_scale3": {
+          "accepted": true,
+          "diagnostic": ""
+        },
+        "pointer_scale12": {
+          "accepted": true,
+          "diagnostic": ""
+        }
+      },
+      "zero_encodings": {
+        "xorq": 3,
+        "movq_immediate": 7,
+        "xorl": 2,
+        "movl_immediate": 5
+      },
+      "shift_execution": {
+        "execution": "macOS x86_64 through compatibility runtime",
+        "counts": 256,
+        "widths": [
+          8,
+          16,
+          32,
+          64
+        ],
+        "cases": 1024,
+        "status": "pass"
+      },
+      "cross_target": "clang x86_64-unknown-linux-gnu assembly and ELF object generation only",
+      "range_execution": {
+        "host": "arm64 macOS",
+        "execution": "x86_64 binary through system compatibility runtime",
+        "patterns": 4294967296,
+        "branch": "pass",
+        "cmov": "pass",
+        "counts": [
+          2139095040,
+          2,
+          2139095040,
+          16777214
+        ],
+        "evidence": "tmp/csapp/rework/ch03/range-exhaustive.out"
+      },
+      "compiler": "Apple clang version 17.0.0 (clang-1700.6.3.2)",
+      "python": "3.14.6"
+    },
+    "report_paths": [
+      "tmp/csapp/rework/ch03/validation-report.json",
+      "tmp/csapp/rework/ch03/structural-report.json",
+      "tmp/csapp/rework/ch03/range-exhaustive.out",
+      "tmp/csapp/rework/ch03/shift-counts.out",
+      "tmp/csapp/rework/ch03/zero-encoding.out"
+    ],
+    "registered_root_check": {
+      "command": "python3 tools/project.py check --book csapp --quick",
+      "status": "blocked_by_shared_presentation_integration",
+      "passed": [
+        "tools/check_structure.py",
+        "tools/test_release_support.py"
+      ],
+      "failure": "chapter02_information.html: missing reading-position marker",
+      "report": "tmp/project-check/20261013T215949-2j5_gq2w/report.json"
+    }
+  },
+  "reproduction_commands": [
+    "python3 tmp/csapp/rework/ch03/validate.py",
+    "clang -std=c11 -Wall -Wextra -Werror -pedantic -O1 -fsanitize=address,undefined books/csapp/code/ch03_models.c -o tmp/csapp/rework/ch03/models",
+    "tmp/csapp/rework/ch03/models",
+    "python3 books/csapp/code/ch03_models.py",
+    "clang -std=c11 -Wall -Wextra -Werror -pedantic -O1 -fsanitize=address,undefined books/csapp/code/ch03_good_echo.c -o tmp/csapp/rework/ch03/good-echo",
+    "clang -arch x86_64 -std=c11 -Wall -Wextra -Werror -pedantic -O3 books/csapp/code/ch03_range_check.c books/csapp/code/ch03_ranges.S -o tmp/csapp/rework/ch03/range-check",
+    "/usr/bin/arch -x86_64 tmp/csapp/rework/ch03/range-check --exhaustive",
+    "python3 books/csapp/code/ch03_range_check.py",
+    "clang -target x86_64-unknown-linux-gnu -std=c11 -Wall -Wextra -Werror -pedantic -O1 -S books/csapp/code/ch03_compiler.c -o tmp/csapp/rework/ch03/compiler-x86-linux.s",
+    "clang -target x86_64-unknown-linux-gnu -c books/csapp/code/ch03_ranges.S -o tmp/csapp/rework/ch03/ranges-x86-linux.o"
+  ],
+  "source_hashes": {
+    "code/ch03_compiler.c": "94071b72a3017203bbf19eda8a3da59e2716bff548f349749a2b2dcbf1788471",
+    "code/ch03_good_echo.c": "f6a3db899f6caa5e464e42bfba06419b96af68923124f2c7a49958292d375d0c",
+    "code/ch03_good_echo.py": "460c3784d96e7c1e89fdf500fbaa52a17e5b5067ae8410be7ba7eee6f2dac329",
+    "code/ch03_models.c": "32cd5493c4acae7b22dea1aefbc34c2a5df7d39fe9eb07212cc5bed98e87eb54",
+    "code/ch03_models.py": "74b25a0ad3590339cd3bd412654591873c37a6788a6e9753359ef65305bf972d",
+    "code/ch03_range_check.c": "880a63f6088c005b46b7b05c19b72aaf3a078cd3ff39c1851d6337e6509ae08b",
+    "code/ch03_range_check.py": "fcd0c99a942e90e2523d9c47673d31f0f815e0917851c6336aa83a07f122c678",
+    "code/ch03_ranges.S": "b29f385c89d888a99c8fe35e7b7ca165fcb5156f894d5020947051ee46b2264a",
+    "code/addresses.c": "f4134b28953a01ab380cd12ec265009c0744f9dc5baf507d038a8964eb2d9745",
+    "code/addresses.py": "0715ea9900fd527e45652d7a0891ccb1392f6f30c81afc1f2af01a0baf453e25"
+  },
+  "artifacts": {
+    "tmp/csapp/rework/ch03/validation-report.json": "852dad17ee8ef5d7e85bd8b82d479bcd80bb63670faa7fbaa55d82c2b6136a27",
+    "tmp/csapp/rework/ch03/structural-report.json": "3995b91d53c56304c9691b4879879dc02af3dac56302d6801babbb384f93e613",
+    "tmp/csapp/rework/ch03/range-exhaustive.out": "200096ed5dc26218563ee9a3707d5a91d78397083e6057c6af4076327f6ea9a5",
+    "tmp/csapp/rework/ch03/range-check": "b467ae91494014445863e4f46b2df17954d4d993189f4eb723f6474ee6e8142a",
+    "tmp/csapp/rework/ch03/models": "6a3c94755bb6798d0359045c8c1fdaa7d282f08515e2d6a9d275cab36f9781be",
+    "tmp/csapp/rework/ch03/shift-counts": "19a8df3828ea98491c11e223cc1f5788192a921a5ffe05a859105ba498db3e64",
+    "tmp/csapp/rework/ch03/zero-encoding.out": "cb6462197fdfa08391f3b20dc2a452ef5f9b6719273512948d15185fe4a68cca"
+  },
+  "document_impact": "正文为本章机制与习题校注权威说明；新增代码维护源与阅读副本已同步，原addresses代码保持同步。全书程序登记、测试设计与模板由主任务统一整合；未更改技术栈、环境或部署。",
+  "verified_at": "2026-10-13T14:09:16.758244+00:00",
+  "content_validation_page_sha256": "029d4343908f70d5055d47b661fe967b99d67c4487e47de18100645ec8fa2f58",
+  "integrated_reading_review": "notes/reading_review.json",
+  "integrated_check": "tmp/project-check/20261013T225356-n4s1jvtm/csapp/report.json",
+  "independent_review": {
+    "status": "PASS",
+    "exercise_scope": [
+      "2.19",
+      "2.24",
+      "2.45",
+      "2.54",
+      "2.89",
+      "2.90",
+      "2.91",
+      "2.92",
+      "2.93",
+      "2.94",
+      "2.95",
+      "2.96",
+      "2.97",
+      "3.10",
+      "3.26",
+      "3.28",
+      "3.39",
+      "3.49",
+      "3.63",
+      "3.66",
+      "3.69",
+      "3.73",
+      "3.74",
+      "4.4",
+      "4.17",
+      "4.26",
+      "4.44",
+      "4.52",
+      "4.53",
+      "4.54",
+      "4.55",
+      "4.56",
+      "4.57",
+      "4.58",
+      "4.59"
+    ],
+    "evidence": "tmp/csapp/rework/mechanism-review/mechanism_review.json"
+  },
+  "source_reading_revision": {
+    "reviewed_at": "2026-10-13T16:41:34.904736+00:00",
+    "page_sha256": "893833bdeda3fd325cd55595ac6109c6e0aae62da0fa612f09322a50edfcaa16",
+    "source_passages": 16,
+    "record": "source_reading_review.json",
+    "reading": "reading_review.json",
+    "binding_note": "本对象绑定I004新增原文、关联解释和最终呈现；顶层旧审阅哈希与逐题结论保留I003的历史范围。"
+  },
+  "review_v2_revision": {
+    "issue": "I010",
+    "reviewed_at": "2026-10-14T13:44:25.640972+00:00",
+    "scope": "Only this chapter's listed REA v2 findings and affected source copies; prior reviews retain their scope.",
+    "previous_current_fields": {
+      "status": "content_programs_and_local_reading_verified",
+      "page_sha256": "11d6a4d8e52a91497c6cfdbe85e4022f71e90200ec148ded9a6a0a6b3688aa5d"
+    },
+    "page_hash_change": {
+      "before": "893833bdeda3fd325cd55595ac6109c6e0aae62da0fa612f09322a50edfcaa16",
+      "after": "77c0b6e876335f5d33205473fef0f85671f09162dcf91089cd7ed9857d8a2351"
+    },
+    "findings": [
+      {
+        "id": "F3",
+        "priority": "P2",
+        "status": "fixed_verified",
+        "chapters": [
+          3
+        ],
+        "summary": "3.33 retains both textbook candidates and states the non-overlap condition; legal char alias gives source-order 1 versus assembly-order C model 257 under the declared LP64/little-endian model.",
+        "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/content-review/report.json"
+      }
+    ],
+    "full_program_report": "tmp/project-check/20261014T213638-7e7waj6i/csapp/report.json",
+    "reading_review": "notes/reading_review.json",
+    "acceptance": "test/T010-csapp-review-v2-fixes.md"
+  },
+  "review_status": "content_programs_and_local_reading_verified",
+  "open_findings": 0
+}

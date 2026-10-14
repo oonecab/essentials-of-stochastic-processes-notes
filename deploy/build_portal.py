@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the checked two-book release for notes.zzzping.top."""
+"""Build the checked registered-book release for notes.zzzping.top."""
 from __future__ import annotations
 
 import argparse
@@ -121,6 +121,28 @@ def main():
     for p in weiss_pages + [weiss / 'notes/README.md', weiss / 'notes/tools/check_notes.py']:
         sources['weiss/notes/' + p.relative_to(weiss / 'notes').as_posix()] = p
     sources['weiss/c/ch8.c'] = weiss / 'c/ch8.c'
+    book_validations = {'stochastic': stochastic_validation, 'weiss': weiss_validation}
+    if 'csapp' in BOOKS:
+        csapp = BOOKS['csapp']['root']
+        checked = subprocess.run([sys.executable, csapp / 'tools/check_notes.py', '--quick'],
+                                 capture_output=True, text=True, check=True)
+        book_validations['csapp'] = json.loads(checked.stdout)['structure']
+        csapp_paths = sorted((csapp / 'notes').glob('*.html')) + sorted((csapp / 'notes').glob('*.json'))
+        csapp_source = json.loads((csapp / 'notes/source_manifest.json').read_text())
+        include_pdf = csapp_source['publication']['include_source_pdf']
+        if not isinstance(include_pdf, bool):
+            raise ValueError('CSAPP include_source_pdf must be a boolean')
+        if include_pdf:
+            if csapp_source['source_pdf']['path'] != 'csapp.pdf':
+                raise ValueError('Expected the registered CSAPP source PDF path')
+            csapp_paths.append(csapp / 'csapp.pdf')
+        csapp_paths += [csapp / 'code/README.md', csapp / 'code/programs.json']
+        csapp_programs = json.loads((csapp / 'code/programs.json').read_text())
+        for program in csapp_programs['programs']:
+            csapp_paths.extend(csapp / p for p in program['files'].values())
+        csapp_paths.extend(csapp / p for p in csapp_programs.get('additional_sources', []))
+        for path in csapp_paths:
+            sources['csapp/' + path.relative_to(csapp).as_posix()] = path
     for p in sorted((ROOT / 'portal').iterdir()):
         if p.is_file():
             sources[p.name] = p
@@ -129,8 +151,10 @@ def main():
     blobs = dict(original)
     documents, document_views = build_reader_views(blobs)
     for name in list(blobs):
-        if name.startswith(('stochastic/notes/', 'weiss/notes/')) and name.endswith('.html'):
-            blobs[name] = transform_reading_page(blobs[name], name, document_views)
+        if any(name.startswith(book['publish_prefix'] + '/notes/') for book in BOOKS.values()) and name.endswith('.html'):
+            blobs[name] = transform_reading_page(
+                blobs[name], name, document_views,
+                csapp_pdf_included='csapp/csapp.pdf' in original)
     blobs.update(documents)
     blobs['stochastic/index.html'] = INDEX
     blobs['weiss/index.html'] = ('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
@@ -138,6 +162,12 @@ def main():
         '<meta http-equiv="refresh" content="0;url=notes/book_overview.html">'
         '<title>Weiss 读书笔记</title></head><body><p>'
         '<a href="notes/book_overview.html">进入 Weiss 全书地图</a></p></body></html>\n').encode()
+    if 'csapp' in BOOKS:
+        blobs['csapp/index.html'] = ('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
+            '<meta name="viewport" content="width=device-width,initial-scale=1">'
+            '<meta http-equiv="refresh" content="0;url=notes/book_overview.html">'
+            '<title>CS:APP 读书笔记</title></head><body><p>'
+            '<a href="notes/book_overview.html">进入 CS:APP 全书地图</a></p></body></html>\n').encode()
 
     scans, scripts, references = {}, set(), 0
     for name, blob in blobs.items():
@@ -199,17 +229,17 @@ def main():
             'source_layout': {key: book['directory'] for key, book in BOOKS.items()},
             'created_at': datetime.now(ZoneInfo('Asia/Shanghai')).isoformat(),
             'files': records, 'total_bytes': sum(r['bytes'] for r in records),
-            'html_pages': len(scans), 'reading_pages': 22, 'local_references_checked': references,
+            'html_pages': len(scans), 'reading_pages': sum(b['expected_pages'] for b in BOOKS.values()), 'local_references_checked': references,
             'archive_sha256': hashlib.sha256((stage / 'site.tar.gz').read_bytes()).hexdigest(),
             'inline_script_csp_sources': hashes, 'inline_script_syntax_check': 'pass',
-            'navigation': {'stochastic': 'stochastic/notes/book_overview.html', 'weiss': 'weiss/notes/book_overview.html'},
+            'navigation': {key: book['publish_prefix'] + '/' + book['entry'] for key, book in BOOKS.items()},
             'entry_redirects': {f'/{book}{suffix}': f'/{book}/notes/book_overview.html'
-                                for book in ('stochastic', 'weiss') for suffix in ('', '/', '/index.html')},
+                                for book in BOOKS for suffix in ('', '/', '/index.html')},
             'document_views': document_views, 'document_pages': sum(name.endswith('.html') for name in documents),
             'external_link_replacements': EXTERNAL_LINKS,
             'navigation_inventory_file': 'navigation.json', 'navigation_links': len(navigation),
             'page_transformation': 'Add persistent reading navigation, header and footer home links, reader document views and overview run instructions; original mathematical statements and C/Python implementations preserved.',
-            'validation': {'stochastic': stochastic_validation, 'weiss': weiss_validation}}
+            'validation': book_validations}
         (stage / 'release.json').write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + '\n')
         (stage / 'navigation.json').write_text(json.dumps(navigation, ensure_ascii=False, indent=2) + '\n')
         (stage / 'SHA256SUMS').write_text(''.join(f"{r['sha256']}  {r['path']}\n" for r in records))
@@ -218,7 +248,7 @@ def main():
         (stage / 'nginx-notes.zzzping.top.conf').write_text(server)
         stage.rename(out)
     print(json.dumps({'release_id': args.release_id, 'directory': str(out), 'files': len(records),
-        'html_pages': len(scans), 'reading_pages': 22, 'bytes': metadata['total_bytes'],
+        'html_pages': len(scans), 'reading_pages': metadata['reading_pages'], 'bytes': metadata['total_bytes'],
         'local_references_checked': references, 'inline_scripts': len(scripts),
         'document_pages': metadata['document_pages'], 'navigation_links': len(navigation)}, ensure_ascii=False, indent=2))
 

@@ -1,0 +1,1163 @@
+{
+  "chapter": 4,
+  "title": "Processor Architecture",
+  "edition": "Computer Systems: A Programmer’s Perspective, Third Global Edition",
+  "source": {
+    "pdf": "books/csapp/csapp.pdf",
+    "sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+    "pdf_pages": [
+      388,
+      531
+    ],
+    "printed_pages": [
+      387,
+      530
+    ],
+    "entire_chapter_read": true,
+    "practice_solution_pages_read": [
+      517,
+      531
+    ]
+  },
+  "page": "books/csapp/notes/chapter04_architecture.html",
+  "scope": {
+    "main_sections": [
+      "s4-1",
+      "s4-2",
+      "s4-3",
+      "s4-4",
+      "s4-5",
+      "s4-6"
+    ],
+    "subsections": [
+      "s4-1-1",
+      "s4-1-2",
+      "s4-1-3",
+      "s4-1-4",
+      "s4-1-5",
+      "s4-1-6",
+      "s4-2-1",
+      "s4-2-2",
+      "s4-2-3",
+      "s4-2-4",
+      "s4-2-5",
+      "s4-3-1",
+      "s4-3-2",
+      "s4-3-3",
+      "s4-3-4",
+      "s4-4-1",
+      "s4-4-2",
+      "s4-4-3",
+      "s4-4-4",
+      "s4-5-1",
+      "s4-5-2",
+      "s4-5-3",
+      "s4-5-4",
+      "s4-5-5",
+      "s4-5-6",
+      "s4-5-7",
+      "s4-5-8",
+      "s4-5-9",
+      "s4-5-10",
+      "s4-6-1"
+    ],
+    "original_exercises": 59,
+    "practice": 44,
+    "homework": 15,
+    "retained_original_self_checks": [
+      "q4-1",
+      "q4-2",
+      "q4-3"
+    ],
+    "reading_notes": 6,
+    "reading_annotation_cards": 12,
+    "svg_figures": 6,
+    "legacy_pipeline_model_retained": true
+  },
+  "exercises": [
+    {
+      "number": "4.1",
+      "kind": "practice",
+      "anchor": "ex-4-1",
+      "pdf_pages": [
+        397
+      ],
+      "printed_pages": [
+        396
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "逐字段编码及小端位移",
+      "source_correction": null
+    },
+    {
+      "number": "4.2",
+      "kind": "practice",
+      "anchor": "ex-4-2",
+      "pdf_pages": [
+        397
+      ],
+      "printed_pages": [
+        396
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "逐段解码及非法分支定位",
+      "source_correction": "书末解答为 A、B 另加 halt/ret；本解答严格止于题干给定字节。"
+    },
+    {
+      "number": "4.3",
+      "kind": "practice",
+      "anchor": "ex-4-3",
+      "pdf_pages": [
+        406
+      ],
+      "printed_pages": [
+        405
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "完整 iaddq sum 与 CC 更新次序",
+      "source_correction": null
+    },
+    {
+      "number": "4.4",
+      "kind": "practice",
+      "anchor": "ex-4-4",
+      "pdf_pages": [
+        407
+      ],
+      "printed_pages": [
+        406
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "严格 count<=1 的递归乘积；基础 ISA mul64",
+      "source_correction": "书末解答混用了 count<=0、xorq 清零却注释为1以及基础ISA不存在的 imulq；此处保留原题条件并给基础指令实现。"
+    },
+    {
+      "number": "4.5",
+      "kind": "practice",
+      "anchor": "ex-4-5",
+      "pdf_pages": [
+        407
+      ],
+      "printed_pages": [
+        406
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "分支绝对值求和",
+      "source_correction": null
+    },
+    {
+      "number": "4.6",
+      "kind": "practice",
+      "anchor": "ex-4-6",
+      "pdf_pages": [
+        407
+      ],
+      "printed_pages": [
+        406
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "条件移动绝对值求和",
+      "source_correction": null
+    },
+    {
+      "number": "4.7",
+      "kind": "practice",
+      "anchor": "ex-4-7",
+      "pdf_pages": [
+        407,
+        408
+      ],
+      "printed_pages": [
+        406,
+        407
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "旧 rsp 压栈测试得 0",
+      "source_correction": "原程序注释沿用了4字节数量，64位pushq应区分0和8。"
+    },
+    {
+      "number": "4.8",
+      "kind": "practice",
+      "anchor": "ex-4-8",
+      "pdf_pages": [
+        408
+      ],
+      "printed_pages": [
+        407
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "pop rsp 内存值优先测试",
+      "source_correction": null
+    },
+    {
+      "number": "4.9",
+      "kind": "practice",
+      "anchor": "ex-4-9",
+      "pdf_pages": [
+        411
+      ],
+      "printed_pages": [
+        410
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "异或真值表与相等的互补",
+      "source_correction": null
+    },
+    {
+      "number": "4.10",
+      "kind": "practice",
+      "anchor": "ex-4-10",
+      "pdf_pages": [
+        414
+      ],
+      "printed_pages": [
+        413
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "64 位 XOR 门网络",
+      "source_correction": null
+    },
+    {
+      "number": "4.11",
+      "kind": "practice",
+      "anchor": "ex-4-11",
+      "pdf_pages": [
+        416
+      ],
+      "printed_pages": [
+        415
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "三数最小值的 HCL 分支证明",
+      "source_correction": null
+    },
+    {
+      "number": "4.12",
+      "kind": "practice",
+      "anchor": "ex-4-12",
+      "pdf_pages": [
+        417
+      ],
+      "printed_pages": [
+        416
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "六种次序及相等情况的中位数 HCL",
+      "source_correction": null
+    },
+    {
+      "number": "4.13",
+      "kind": "practice",
+      "anchor": "ex-4-13",
+      "pdf_pages": [
+        424,
+        425
+      ],
+      "printed_pages": [
+        423,
+        424
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "irmovq rsp=128 六阶段表",
+      "source_correction": null
+    },
+    {
+      "number": "4.14",
+      "kind": "practice",
+      "anchor": "ex-4-14",
+      "pdf_pages": [
+        427,
+        428
+      ],
+      "printed_pages": [
+        426,
+        427
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "pop rax=9 六阶段表",
+      "source_correction": null
+    },
+    {
+      "number": "4.15",
+      "kind": "practice",
+      "anchor": "ex-4-15",
+      "pdf_pages": [
+        428
+      ],
+      "printed_pages": [
+        427
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "push rsp 六阶段结果",
+      "source_correction": null
+    },
+    {
+      "number": "4.16",
+      "kind": "practice",
+      "anchor": "ex-4-16",
+      "pdf_pages": [
+        429
+      ],
+      "printed_pages": [
+        428
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "pop rsp 双写目的优先",
+      "source_correction": null
+    },
+    {
+      "number": "4.17",
+      "kind": "practice",
+      "anchor": "ex-4-17",
+      "pdf_pages": [
+        430
+      ],
+      "printed_pages": [
+        429
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "CC 条件与 OF",
+      "source_correction": null
+    },
+    {
+      "number": "4.18",
+      "kind": "practice",
+      "anchor": "ex-4-18",
+      "pdf_pages": [
+        431,
+        432
+      ],
+      "printed_pages": [
+        430,
+        431
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "call 六阶段返回地址",
+      "source_correction": null
+    },
+    {
+      "number": "4.19",
+      "kind": "practice",
+      "anchor": "ex-4-19",
+      "pdf_pages": [
+        443
+      ],
+      "printed_pages": [
+        442
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "need_valC 集合",
+      "source_correction": null
+    },
+    {
+      "number": "4.20",
+      "kind": "practice",
+      "anchor": "ex-4-20",
+      "pdf_pages": [
+        444
+      ],
+      "printed_pages": [
+        443
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "srcB 选择",
+      "source_correction": null
+    },
+    {
+      "number": "4.21",
+      "kind": "practice",
+      "anchor": "ex-4-21",
+      "pdf_pages": [
+        445
+      ],
+      "printed_pages": [
+        444
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "dstM 选择",
+      "source_correction": null
+    },
+    {
+      "number": "4.22",
+      "kind": "practice",
+      "anchor": "ex-4-22",
+      "pdf_pages": [
+        445
+      ],
+      "printed_pages": [
+        444
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "双写端口 M 优先的 pop rsp 反例",
+      "source_correction": null
+    },
+    {
+      "number": "4.23",
+      "kind": "practice",
+      "anchor": "ex-4-23",
+      "pdf_pages": [
+        446
+      ],
+      "printed_pages": [
+        445
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "aluB 选择",
+      "source_correction": null
+    },
+    {
+      "number": "4.24",
+      "kind": "practice",
+      "anchor": "ex-4-24",
+      "pdf_pages": [
+        446
+      ],
+      "printed_pages": [
+        445
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "cmov dstE 条件抑制",
+      "source_correction": null
+    },
+    {
+      "number": "4.25",
+      "kind": "practice",
+      "anchor": "ex-4-25",
+      "pdf_pages": [
+        447
+      ],
+      "printed_pages": [
+        446
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "mem_data 选择",
+      "source_correction": null
+    },
+    {
+      "number": "4.26",
+      "kind": "practice",
+      "anchor": "ex-4-26",
+      "pdf_pages": [
+        447
+      ],
+      "printed_pages": [
+        446
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "mem_write 集合",
+      "source_correction": null
+    },
+    {
+      "number": "4.27",
+      "kind": "practice",
+      "anchor": "ex-4-27",
+      "pdf_pages": [
+        448
+      ],
+      "printed_pages": [
+        447
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "Stat 异常优先",
+      "source_correction": null
+    },
+    {
+      "number": "4.28",
+      "kind": "practice",
+      "anchor": "ex-4-28",
+      "pdf_pages": [
+        454,
+        455
+      ],
+      "printed_pages": [
+        453,
+        454
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "连续分段最优时钟及吞吐",
+      "source_correction": null
+    },
+    {
+      "number": "4.29",
+      "kind": "practice",
+      "anchor": "ex-4-29",
+      "pdf_pages": [
+        455,
+        456
+      ],
+      "printed_pages": [
+        454,
+        455
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "k 级延迟吞吐公式与 50 GIPS 极限",
+      "source_correction": null
+    },
+    {
+      "number": "4.30",
+      "kind": "practice",
+      "anchor": "ex-4-30",
+      "pdf_pages": [
+        486
+      ],
+      "printed_pages": [
+        485
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "取指阶段 f_stat 优先级",
+      "source_correction": null
+    },
+    {
+      "number": "4.31",
+      "kind": "practice",
+      "anchor": "ex-4-31",
+      "pdf_pages": [
+        486
+      ],
+      "printed_pages": [
+        485
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "d_dstE 选择",
+      "source_correction": null
+    },
+    {
+      "number": "4.32",
+      "kind": "practice",
+      "anchor": "ex-4-32",
+      "pdf_pages": [
+        489
+      ],
+      "printed_pages": [
+        488
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "M 级错误优先使 rax=0x108 而非 5",
+      "source_correction": null
+    },
+    {
+      "number": "4.33",
+      "kind": "practice",
+      "anchor": "ex-4-33",
+      "pdf_pages": [
+        489
+      ],
+      "printed_pages": [
+        488
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "两个 nop 触发 W 级错误优先的反例",
+      "source_correction": null
+    },
+    {
+      "number": "4.34",
+      "kind": "practice",
+      "anchor": "ex-4-34",
+      "pdf_pages": [
+        490
+      ],
+      "printed_pages": [
+        489
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "d_valB 五源转发",
+      "source_correction": null
+    },
+    {
+      "number": "4.35",
+      "kind": "practice",
+      "anchor": "ex-4-35",
+      "pdf_pages": [
+        491
+      ],
+      "printed_pages": [
+        490
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "失败 cmov 错用 E_dstE 导致 0x444，而非 0x642",
+      "source_correction": "书末解释把0x123与0x321的输入文字对调；按给定寄存器和仅修改d_valA的范围，错误和仍为0x444。"
+    },
+    {
+      "number": "4.36",
+      "kind": "practice",
+      "anchor": "ex-4-36",
+      "pdf_pages": [
+        492
+      ],
+      "printed_pages": [
+        491
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "m_stat 保留既有状态并补充 ADR",
+      "source_correction": null
+    },
+    {
+      "number": "4.37",
+      "kind": "practice",
+      "anchor": "ex-4-37",
+      "pdf_pages": [
+        498
+      ],
+      "printed_pages": [
+        497
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "错误路径 ret 组合 A 完整程序",
+      "source_correction": null
+    },
+    {
+      "number": "4.38",
+      "kind": "practice",
+      "anchor": "ex-4-38",
+      "pdf_pages": [
+        499
+      ],
+      "printed_pages": [
+        498
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "load rsp 后 ret 组合 B 完整程序",
+      "source_correction": "书末文字将冲突误写为stall与bubble都为0；真正冲突是两者同时为1。"
+    },
+    {
+      "number": "4.39",
+      "kind": "practice",
+      "anchor": "ex-4-39",
+      "pdf_pages": [
+        500
+      ],
+      "printed_pages": [
+        499
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "D_stall 只检测 load-use",
+      "source_correction": null
+    },
+    {
+      "number": "4.40",
+      "kind": "practice",
+      "anchor": "ex-4-40",
+      "pdf_pages": [
+        501
+      ],
+      "printed_pages": [
+        500
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "E_bubble 合并 load-use 与分支错误",
+      "source_correction": null
+    },
+    {
+      "number": "4.41",
+      "kind": "practice",
+      "anchor": "ex-4-41",
+      "pdf_pages": [
+        501
+      ],
+      "printed_pages": [
+        500
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "set_cc 同时检查 m_stat 与 W_stat",
+      "source_correction": null
+    },
+    {
+      "number": "4.42",
+      "kind": "practice",
+      "anchor": "ex-4-42",
+      "pdf_pages": [
+        501
+      ],
+      "printed_pages": [
+        500
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "M_bubble 与 W_stall 的异常抵达顺序",
+      "source_correction": null
+    },
+    {
+      "number": "4.43",
+      "kind": "practice",
+      "anchor": "ex-4-43",
+      "pdf_pages": [
+        505
+      ],
+      "printed_pages": [
+        504
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "预测成功率 65% 给 CPI=1.25",
+      "source_correction": null
+    },
+    {
+      "number": "4.44",
+      "kind": "practice",
+      "anchor": "ex-4-44",
+      "pdf_pages": [
+        505
+      ],
+      "printed_pages": [
+        504
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "绝对值循环实际指令计数校正",
+      "source_correction": "书末给10.5/10条及11.5/10周期，与本版4.5/4.6所列循环各多计两条；此处逐行核算为8.5/8条、9.5/8周期。"
+    },
+    {
+      "number": "4.45",
+      "kind": "homework",
+      "anchor": "ex-4-45",
+      "pdf_pages": [
+        510
+      ],
+      "printed_pages": [
+        509
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "push 等价展开及 rsp 特例",
+      "source_correction": null
+    },
+    {
+      "number": "4.46",
+      "kind": "homework",
+      "anchor": "ex-4-46",
+      "pdf_pages": [
+        510,
+        511
+      ],
+      "printed_pages": [
+        509,
+        510
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "pop 等价展开及 rsp 特例",
+      "source_correction": null
+    },
+    {
+      "number": "4.47",
+      "kind": "homework",
+      "anchor": "ex-4-47",
+      "pdf_pages": [
+        511
+      ],
+      "printed_pages": [
+        510
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "指针冒泡排序 C/Python/Y86 完整代码",
+      "source_correction": null
+    },
+    {
+      "number": "4.48",
+      "kind": "homework",
+      "anchor": "ex-4-48",
+      "pdf_pages": [
+        511
+      ],
+      "printed_pages": [
+        510
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "两条 cmov 排序完整代码",
+      "source_correction": null
+    },
+    {
+      "number": "4.49",
+      "kind": "homework",
+      "anchor": "ex-4-49",
+      "pdf_pages": [
+        511
+      ],
+      "printed_pages": [
+        510
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "一条 cmov 差值排序完整代码",
+      "source_correction": null
+    },
+    {
+      "number": "4.50",
+      "kind": "homework",
+      "anchor": "ex-4-50",
+      "pdf_pages": [
+        511,
+        512,
+        513
+      ],
+      "printed_pages": [
+        510,
+        511,
+        512
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "范围保护和压栈 ret 跳转表",
+      "source_correction": null
+    },
+    {
+      "number": "4.51",
+      "kind": "homework",
+      "anchor": "ex-4-51",
+      "pdf_pages": [
+        513
+      ],
+      "printed_pages": [
+        512
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "iaddq 六阶段表",
+      "source_correction": null
+    },
+    {
+      "number": "4.52",
+      "kind": "homework",
+      "anchor": "ex-4-52",
+      "pdf_pages": [
+        513
+      ],
+      "printed_pages": [
+        512
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "SEQ iaddq HCL 全部改变点",
+      "source_correction": null
+    },
+    {
+      "number": "4.53",
+      "kind": "homework",
+      "anchor": "ex-4-53",
+      "pdf_pages": [
+        513
+      ],
+      "printed_pages": [
+        512
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "无转发流水的寄存器等待和分支优先",
+      "source_correction": null
+    },
+    {
+      "number": "4.54",
+      "kind": "homework",
+      "anchor": "ex-4-54",
+      "pdf_pages": [
+        513,
+        514
+      ],
+      "printed_pages": [
+        512,
+        513
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "PIPE iaddq HCL 与 CC 异常屏蔽",
+      "source_correction": null
+    },
+    {
+      "number": "4.55",
+      "kind": "homework",
+      "anchor": "ex-4-55",
+      "pdf_pages": [
+        514
+      ],
+      "printed_pages": [
+        513
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "NT 预测及恢复两个候选地址",
+      "source_correction": null
+    },
+    {
+      "number": "4.56",
+      "kind": "homework",
+      "anchor": "ex-4-56",
+      "pdf_pages": [
+        514
+      ],
+      "printed_pages": [
+        513
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "BTFNT 地址方向比较及相等地址",
+      "source_correction": null
+    },
+    {
+      "number": "4.57",
+      "kind": "homework",
+      "anchor": "ex-4-57",
+      "pdf_pages": [
+        514,
+        515
+      ],
+      "printed_pages": [
+        513,
+        514
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "load 到 store/push 的 E 级数据转发",
+      "source_correction": null
+    },
+    {
+      "number": "4.58",
+      "kind": "homework",
+      "anchor": "ex-4-58",
+      "pdf_pages": [
+        516,
+        517
+      ],
+      "printed_pages": [
+        515,
+        516
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "pop 两微操作、单写口和精确异常",
+      "source_correction": "题面选择器之后的文字说由dstE决定且E优先，与所给HCL相反；本解答按HCL的W_dstM优先。其两条指令类比还须明确保留popq的CC与异常语义。"
+    },
+    {
+      "number": "4.59",
+      "kind": "homework",
+      "anchor": "ex-4-59",
+      "pdf_pages": [
+        517
+      ],
+      "printed_pages": [
+        516
+      ],
+      "question_present": true,
+      "answer_present": true,
+      "source_manifest_match": true,
+      "substantive_check": "三版本实测轨迹与 PIPE 周期模型",
+      "source_correction": null
+    }
+  ],
+  "source_notes": [
+    {
+      "location": "Figures 4.5 and 4.26",
+      "issue": "AOK/HLT/ADR/INS numeric assignments conflict; use symbolic state labels."
+    },
+    {
+      "location": "Figure 4.27 caption",
+      "issue": "The caption says six bytes while the Y86-64 instruction is ten bytes."
+    },
+    {
+      "location": "Figures 4.7 and 4.8",
+      "issue": "Listed words and actual sum are 0x0000abcdabcdabcd; surrounding prose repeats abcd one group too many."
+    },
+    {
+      "location": "4.35 solution",
+      "issue": "The explanation swaps the 123/321 operand labels; the d_valA-only priority bug yields 444."
+    },
+    {
+      "location": "4.38 solution",
+      "issue": "Stall and bubble simultaneously true is the contradictory case, not both zero."
+    },
+    {
+      "location": "4.44 solution",
+      "issue": "The printed loop executes 8 or 9 instructions per element, not 10 or 11; page supplies corrected instruction/CPE accounting."
+    },
+    {
+      "location": "4.58",
+      "issue": "Prose priority contradicts the provided HCL. Answer follows HCL M-result priority, suppresses CC updates and addresses failed pop atomicity."
+    }
+  ],
+  "programs": [
+    {
+      "file": "books/csapp/code/ch04_machine.c",
+      "language": "c",
+      "html_code_id": "ch04_machine-c",
+      "sha256": "54f2e781f370be0dfd669b2bb55f60cb87b61719b97a9153d10566d0c876085b",
+      "source_and_display_exact": true,
+      "html_extracted_compile_or_run": "passed",
+      "interface": "optional raw binary image path, otherwise Figure 4.17 demo; status/registers/CC/memory digest; 4096-byte memory, 1000000-step bound"
+    },
+    {
+      "file": "books/csapp/code/ch04_machine.py",
+      "language": "python",
+      "html_code_id": "ch04_machine-python",
+      "sha256": "13f5b2788a677383cfe19380a10c2eb2d42338f6ca9efead2d7b1fa85c951cc6",
+      "source_and_display_exact": true,
+      "html_extracted_compile_or_run": "passed",
+      "interface": "optional raw binary image path, otherwise Figure 4.17 demo; status/registers/CC/memory digest; 4096-byte memory, 1000000-step bound"
+    },
+    {
+      "file": "books/csapp/code/ch04_algorithms.c",
+      "language": "c",
+      "html_code_id": "ch04_algorithms-c",
+      "sha256": "cddd66e0157c5815944deefca12d91098b2d986b328e52782ea24e35e174b7ac",
+      "source_and_display_exact": true,
+      "html_extracted_compile_or_run": "passed",
+      "interface": "no arguments; signed-64-bit pointer bubble sort and switchv cases -1 through 6"
+    },
+    {
+      "file": "books/csapp/code/ch04_algorithms.py",
+      "language": "python",
+      "html_code_id": "ch04_algorithms-python",
+      "sha256": "a4593431d442cb085f09f6c40e5fe35287dc1ee3c1aee3d108477ed4c0e5100e",
+      "source_and_display_exact": true,
+      "html_extracted_compile_or_run": "passed",
+      "interface": "no arguments; signed-64-bit pointer bubble sort and switchv cases -1 through 6"
+    }
+  ],
+  "verification": {
+    "independent_harness": "tmp/csapp/rework/ch04/verify.py",
+    "results": {
+      "sort_runs": 1092,
+      "cross_language_images": 40,
+      "alu_oracle_cases": 1020,
+      "branch_variants": 72,
+      "exercise_programs": 13
+    },
+    "compiler": "clang -std=c11 -Wall -Wextra -Werror -pedantic -fsanitize=address,undefined",
+    "c_python_default_output_equal": true,
+    "final_html_extracted_sources_compiled_and_run": true,
+    "algorithm_oracle": "Python sorted for all 364 arrays over {-1,0,1} of lengths 0..5, three assembly versions; additional signed endpoints. ALU oracle uses mathematical signed result bounds independently of carry formulas.",
+    "predictor_cases": "72 NT/BTFNT target-direction/condition/unconditional cases",
+    "pop_micro_operations": "36 pop alias/value/address cases plus failed access atomicity",
+    "controls": "24 reachable combinations in maintained model; no-forward branch precedence and two counterexample programs in independent harness",
+    "html": "no duplicate ids; no unresolved same-page links; all 59 manifest exercises match; exact source-display equality",
+    "root_quick_check": {
+      "command": "python3 tools/project.py check --book csapp --quick",
+      "status": "passed_after_parent_template_normalization",
+      "report": "tmp/project-check/20261013T223119-d7fncy_b/report.json"
+    },
+    "browser_acceptance": "notes/reading_review.json",
+    "earlier_quick_integration_observation": {
+      "command": "python3 tools/project.py check --book csapp --quick",
+      "status": "blocked_in_shared_template_check",
+      "observed_error": "book_overview.html: inconsistent presentation/navigation",
+      "report": "tmp/project-check/20261013T214401-hbw1mjkd/report.json"
+    },
+    "official_simulators": "notes/simulator_review.json"
+  },
+  "boundaries": [
+    "This is a bounded base Y86-64+iaddq ISA interpreter, plus isolated forwarding/control logic; it is not a full PIPE or complete book simulator.",
+    "标准PIPE含填充总周期由N+4+L+2B+3R计算，与九行官方psim排序结果+4逐项一致；变体需按自身控制计算。",
+    "官方旧工具在macOS/arm64文字界面实际构建运行，7个HCL变体及所列7117+24+29次比较通过。原始prog10和非法pop的基线差异及地址/畸形编码范围见simulator_review.json。"
+  ],
+  "status": "content_programs_and_local_reading_verified",
+  "page_sha256": "815ebf024cd7094c288f6071c12b3f0ec9bd087fab62470fa69f86780cfacfbb",
+  "integrated_reading_review": "notes/reading_review.json",
+  "integrated_check": "tmp/project-check/20261013T225356-n4s1jvtm/csapp/report.json",
+  "source_reading_revision": {
+    "reviewed_at": "2026-10-13T16:41:34.904736+00:00",
+    "page_sha256": "487557ae047d4d8f62d6e7eab3dba894eb075909f36b4a8873d09c0ef3b920ca",
+    "source_passages": 6,
+    "record": "source_reading_review.json",
+    "reading": "reading_review.json",
+    "binding_note": "本对象绑定I004新增原文、关联解释和最终呈现；顶层旧审阅哈希与逐题结论保留I003的历史范围。"
+  }
+}

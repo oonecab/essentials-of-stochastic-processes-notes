@@ -1,0 +1,3237 @@
+{
+  "schema_version": 2,
+  "status": "scoped_revisions_verified_proxy_browser_pending",
+  "reviewed_at": "2026-10-14T13:44:25.640972+00:00",
+  "source_sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+  "page_sha256": {
+    "chapter02_information.html": "4080270fb0beb7cd0b77815af29817646cce78048ff1288eade3585b59a17c4b",
+    "chapter09_virtual_memory.html": "8b5cc09eaff849778b16e67dae2d8c1aff72863739f7cb319ef027f7d288e23a",
+    "book_overview.html": "2644b09a826cf4a11999d7b27437dad4b0a0fa6cddfc5d5597a01ba4da099dd2",
+    "chapter12_concurrency.html": "a9e7498b225e3d6ff261b47c64b0f1a6a5bed71b3598b3b4fdfa8e9905c8cc1e",
+    "chapter08_exceptional.html": "7b2fc2581526cdd2cfb8cd54a6ee110e234141ad8d031e7d8d4ab9b8dae77f4c",
+    "chapter03_machine_level.html": "77c0b6e876335f5d33205473fef0f85671f09162dcf91089cd7ed9857d8a2351",
+    "chapter01_tour.html": "02fdb836a9f352c53926e97879c4fa884b6f50992ce9e1df4bd07e2e54dd7fad",
+    "chapter04_architecture.html": "487557ae047d4d8f62d6e7eab3dba894eb075909f36b4a8873d09c0ef3b920ca",
+    "chapter11_network.html": "accfab6b86c5cb39e9c1a5526aee616afeffbc6f58e9bddbb970395a6bae39d0",
+    "chapter07_linking.html": "e4f84bd481363b070c93772d1c519be4cc3d10fffc9ac06dda957a137ead2b6a",
+    "chapter06_memory.html": "aa335c9232be4be6c3b0516c7a40df688d8bebe6a5dec8fac1b9eb5c57b94f5f",
+    "preface.html": "5552a76573e27c1e9cd02e4045101e3aa43990327a7d16e391bf2d6f9930e424",
+    "chapter10_system_io.html": "143d063dbab69cc150c2c6beb64b6e26edfae2718c8a1477048c40a2d7ca61dc",
+    "chapter05_optimization.html": "3f06e019bdf7932d09661c4fbc1952a5c2cfdb7c2176e1a7ea5d9a52f09476e0"
+  },
+  "coverage": {
+    "source_passages": 114,
+    "newly_reviewed_passages": 21,
+    "retained_historical_passages": 93,
+    "page_counts": {
+      "book_overview.html": 3,
+      "preface.html": 5,
+      "chapter01_tour.html": 9,
+      "chapter02_information.html": 28,
+      "chapter03_machine_level.html": 16,
+      "chapter04_architecture.html": 6,
+      "chapter05_optimization.html": 6,
+      "chapter06_memory.html": 7,
+      "chapter07_linking.html": 5,
+      "chapter08_exceptional.html": 5,
+      "chapter09_virtual_memory.html": 4,
+      "chapter10_system_io.html": 10,
+      "chapter11_network.html": 6,
+      "chapter12_concurrency.html": 4
+    },
+    "new_original_exercises": 62,
+    "independently_reviewed_new_original_exercises": 62
+  },
+  "scope": {
+    "new": "Part III opening and chapters 10–12, complete same-edition 62 questions and answers; 21 excerpts, translations and adjacent mechanism explanations.",
+    "retained": "Prior 93 excerpt entries unchanged against starting snapshot; prior 357 exercise reviews retain their historical scope.",
+    "independent_exercises": "Chapter10 all10 by parent; Chapter11 all13 by Chapter10 reviewer; Chapter12 16 early questions by Chapter10 reviewer, 18 later questions by Chapter11 reviewer, remaining5 by parent."
+  },
+  "method": "Authors read the local Global Edition. Independent inventory derived from PDF headings and question markers. All21 new English excerpts matched declared source pages after whitespace/ligature normalization. Page images separately checked for typeset tables, diagrams and corrections; source-render scope remains in chapter records.",
+  "entries": [
+    {
+      "id": "classic-map-part-i",
+      "file": "book_overview.html",
+      "pdf_pages": [
+        66
+      ],
+      "status": "PASS",
+      "basis": "印刷65的第一段完整摘录；PDF首字O下沉，已对整页PNG逐句确认。第2—6章次序、译文及数组跨章解释一致。"
+    },
+    {
+      "id": "classic-preface-perspective",
+      "file": "preface.html",
+      "pdf_pages": [
+        20
+      ],
+      "status": "PASS",
+      "basis": "印刷19首个主题段连续摘录；correctness/performance/utility 三维译义与后续例子一致。"
+    },
+    {
+      "id": "classic-preface-machine",
+      "file": "preface.html",
+      "pdf_pages": [
+        20,
+        21
+      ],
+      "status": "PASS",
+      "basis": "印刷19两句及20末段的末两句分别摘录；正文明确三段分别来自相关说明，不伪装连续原段。x86-64/Linux/gcc与无需汇编经验均保留。"
+    },
+    {
+      "id": "classic-preface-active",
+      "file": "preface.html",
+      "pdf_pages": [
+        21,
+        22
+      ],
+      "status": "PASS",
+      "basis": "印刷20末段与跨到21的练习说明；整页PNG确认跨页被Figure 1及页眉打断。明确省略中间过渡句，先解再查的译文准确。"
+    },
+    {
+      "id": "classic-preface-code",
+      "file": "preface.html",
+      "pdf_pages": [
+        22
+      ],
+      "status": "PASS",
+      "basis": "印刷21直接连续摘录；自动排版、gcc/Linux实测及不同编译器行为一致的原意保留；中文补有效输入与环境条件合理。"
+    },
+    {
+      "id": "classic-preface-cache-lab",
+      "file": "preface.html",
+      "pdf_pages": [
+        31
+      ],
+      "status": "PASS",
+      "basis": "印刷30 Cache Lab完整连续说明；整页PNG确认general-purpose保留词内连字符。模拟器、转置、Valgrind角色无错位。"
+    },
+    {
+      "id": "classic-1-bits-context",
+      "file": "chapter01_tour.html",
+      "pdf_pages": [
+        40
+      ],
+      "status": "PASS",
+      "basis": "印刷39 Information Is Bits + Context段落连续摘录；255/-1示例明确8位且不改变原位模式。"
+    },
+    {
+      "id": "classic-1-compilation",
+      "file": "chapter01_tour.html",
+      "pdf_pages": [
+        42
+      ],
+      "status": "PASS",
+      "basis": "印刷41 gcc driver与Figure 1.3说明连续摘录；四阶段、编译驱动和链接对象的解释准确。"
+    },
+    {
+      "id": "classic-1-locality",
+      "file": "chapter01_tour.html",
+      "pdf_pages": [
+        50
+      ],
+      "status": "PASS",
+      "basis": "印刷49缓存动机连续摘录；中文明确依赖多数命中，并补工作集、步长与映射边界。"
+    },
+    {
+      "id": "classic-1-hierarchy",
+      "file": "chapter01_tour.html",
+      "pdf_pages": [
+        51
+      ],
+      "status": "PASS",
+      "basis": "印刷50层级类比连续摘录；中文区分寄存器显式管理和硬件缓存地址查找，避免将类比变成相同实现。"
+    },
+    {
+      "id": "classic-1-process",
+      "file": "chapter01_tour.html",
+      "pdf_pages": [
+        52
+      ],
+      "status": "PASS",
+      "basis": "印刷51进程定义连续摘录；交错执行按本章单CPU直觉解释，系统调用和进程切换另行区分。"
+    },
+    {
+      "id": "classic-1-threads",
+      "file": "chapter01_tour.html",
+      "pdf_pages": [
+        54
+      ],
+      "status": "PASS",
+      "basis": "印刷53 Threads首句连续摘录；代码/全局数据共享、执行位置/寄存器/栈各自保持的补充准确。"
+    },
+    {
+      "id": "classic-1-amdahl",
+      "file": "chapter01_tour.html",
+      "pdf_pages": [
+        59,
+        60
+      ],
+      "status": "PASS",
+      "basis": "印刷58与59分别摘录；图像确认(1.1)和(1.2)编号、分母、下标。α为原耗时比例，固定任务、Told>0、k≥1、其他耗时不变、无新增开销，α=1单独处理。"
+    },
+    {
+      "id": "classic-1-concurrency",
+      "file": "chapter01_tour.html",
+      "pdf_pages": [
+        61
+      ],
+      "status": "PASS",
+      "basis": "印刷60开篇连续摘录；保留作者对concurrency和parallelism的用法，中文未将交错运行直接等同加速。"
+    },
+    {
+      "id": "classic-1-isa",
+      "file": "chapter01_tour.html",
+      "pdf_pages": [
+        64
+      ],
+      "status": "PASS",
+      "basis": "印刷63 ISA抽象说明连续摘录；单程序顺序可观察语义限定及多线程内存模型边界合理。"
+    },
+    {
+      "id": "principle-4-isa-visible-state",
+      "file": "chapter04_architecture.html",
+      "pdf_pages": [
+        392
+      ],
+      "status": "PASS",
+      "basis": "印刷391 Programmer-Visible State段落中连续句；未给原书没有的定理号，内部组织与可见ISA状态区分准确。"
+    },
+    {
+      "id": "principle-4-no-reading-back",
+      "file": "chapter04_architecture.html",
+      "pdf_pages": [
+        438
+      ],
+      "status": "PASS",
+      "basis": "印刷437确有单列principle: No reading back；中文用pushq旧栈顶/同一valE说明无须先写再读，与SEQ边沿提交一致。"
+    },
+    {
+      "id": "principle-4-pipeline-throughput-latency",
+      "file": "chapter04_architecture.html",
+      "pdf_pages": [
+        449
+      ],
+      "status": "PASS",
+      "basis": "印刷448流水一般讨论连续句；印刷449—450图4.32—4.34补核：串行320ps，三段120ps一拍/360ps延迟/约8.33GIPS正确。"
+    },
+    {
+      "id": "principle-4-slowest-stage",
+      "file": "chapter04_architecture.html",
+      "pdf_pages": [
+        453
+      ],
+      "status": "PASS",
+      "basis": "印刷452 Nonuniform Partitioning连续句；整页图确认50/150/100ps、170ps周期与510ps延迟。中文保留统一时钟及每级寄存器开销。"
+    },
+    {
+      "id": "principle-4-feedback-dependencies",
+      "file": "chapter04_architecture.html",
+      "pdf_pages": [
+        458
+      ],
+      "status": "PASS",
+      "basis": "印刷457反馈段结尾连续句；后续依赖示例由50、7得到57和地址157；转发/等待依据值可用时刻。"
+    },
+    {
+      "id": "principle-4-pipeline-hazards",
+      "file": "chapter04_architecture.html",
+      "pdf_pages": [
+        466
+      ],
+      "status": "PASS",
+      "basis": "印刷465数据/控制依赖后连续定义；中文将依赖与需停顿分开，后续load-use、ret和误预测的取消/等待解释一致。"
+    },
+    {
+      "id": "classic-5-safe-optimization",
+      "file": "chapter05_optimization.html",
+      "pdf_pages": [
+        535
+      ],
+      "status": "PASS",
+      "basis": "印刷534 safe optimizations段连续句；C保证范围、别名、副作用和未定义行为条件保留；2→4→8与一次读取得6的例子成立。"
+    },
+    {
+      "id": "classic-5-cpe-slope",
+      "file": "chapter05_optimization.html",
+      "pdf_pages": [
+        540
+      ],
+      "status": "PASS",
+      "basis": "印刷539 Figure5.2图注原句；T(n)的线性区间、截距和按元素斜率解释明确，不将ns直接转换为周期。"
+    },
+    {
+      "id": "classic-5-latency-bound",
+      "file": "chapter05_optimization.html",
+      "pdf_pages": [
+        561
+      ],
+      "status": "PASS",
+      "basis": "印刷560界限表之后连续句；顺序归约每元素一次、延迟L的前提清楚，三次5周期乘法15周期正确。"
+    },
+    {
+      "id": "classic-5-throughput-bound",
+      "file": "chapter05_optimization.html",
+      "pdf_pages": [
+        561
+      ],
+      "status": "PASS",
+      "basis": "同印刷560连续句；原书C/I最大操作率倒数为I/C，中文限定每元素一次该运算，并补载入约束。"
+    },
+    {
+      "id": "classic-5-multiple-accumulators",
+      "file": "chapter05_optimization.html",
+      "pdf_pages": [
+        573
+      ],
+      "status": "PASS",
+      "basis": "印刷572 Multiple Accumulators首句；中文要求所用模型满足交换结合，模2^64成立，有符号C限定前后中间值可表示。"
+    },
+    {
+      "id": "classic-5-floating-associativity",
+      "file": "chapter05_optimization.html",
+      "pdf_pages": [
+        577
+      ],
+      "status": "PASS",
+      "basis": "印刷576连续两句，舍入/溢出意义保留，结合下一句含underflow语境解释下溢合理。前缀反例已补binary32/最近偶数逐次舍入，并正确给出1与2的原因及binary64对照。"
+    },
+    {
+      "id": "principle-6-locality",
+      "file": "chapter06_memory.html",
+      "pdf_pages": [
+        641
+      ],
+      "status": "PASS",
+      "basis": "印刷640 Locality首段前两句；时间/空间局部性分别映射重用和邻近访问，并明确命中仍受缓存状态约束。"
+    },
+    {
+      "id": "principle-6-hierarchy-caching",
+      "file": "chapter06_memory.html",
+      "pdf_pages": [
+        648
+      ],
+      "status": "PASS",
+      "basis": "印刷647层级缓存图后连续句；中文按层级管理者解释，寄存器未误写成普通load的按地址查找层。"
+    },
+    {
+      "id": "principle-6-block-amortization",
+      "file": "chapter06_memory.html",
+      "pdf_pages": [
+        651
+      ],
+      "status": "PASS",
+      "basis": "印刷650 Exploiting spatial locality连续两句；摊销要求邻居在替换前使用，16字节块/4字节元素例子一致。"
+    },
+    {
+      "id": "classic-6-block-line-set",
+      "file": "chapter06_memory.html",
+      "pdf_pages": [
+        671
+      ],
+      "status": "PASS",
+      "basis": "印刷670 Aside: Cache lines, sets, and blocks的line定义原句；中文补块和组来自同一旁注，容量公式不含元数据。"
+    },
+    {
+      "id": "classic-6-write-back",
+      "file": "chapter06_memory.html",
+      "pdf_pages": [
+        667
+      ],
+      "status": "PASS",
+      "basis": "印刷666 Issues with Writes连续句；写命中传播与写miss分配分开，整块写回只在模型淘汰时统计，末尾dirty_lines另计。"
+    },
+    {
+      "id": "classic-6-cache-size-hit-time",
+      "file": "chapter06_memory.html",
+      "pdf_pages": [
+        669
+      ],
+      "status": "PASS",
+      "basis": "印刷668 Impact of Cache Size连续三句；中文保留tend的倾向，不把更大容量等同必然更快。"
+    },
+    {
+      "id": "classic-6-cache-friendly-inner-loop",
+      "file": "chapter06_memory.html",
+      "pdf_pages": [
+        671
+      ],
+      "status": "PASS",
+      "basis": "印刷670优化建议第2条连续两句；其他条件相同和总读写次数明确，访问比例也带步长/块宽/跨块边界。"
+    },
+    {
+      "id": "principle-2-unsigned-encoding",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        100
+      ],
+      "status": "PASS",
+      "basis": "页图确认完整 PRINCIPLE 及 (2.1)：求和下限0、上限w−1，位权2^i。中文补w≥1、位取0/1，范围与逆向除2证明正确。"
+    },
+    {
+      "id": "principle-2-unsigned-unique",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        101
+      ],
+      "status": "PASS",
+      "basis": "页图确认完整陈述 Function B2U_w is a bijection；中文给出定义域、值域和U2B逆映射，唯一性与存在性均有说明。"
+    },
+    {
+      "id": "principle-2-twos-encoding",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        101
+      ],
+      "status": "PASS",
+      "basis": "页图确认完整 PRINCIPLE 及 (2.3)：最高位负权−2^(w−1)，其余求和至w−2。中文处理w=1空和并给出TMin/TMax。"
+    },
+    {
+      "id": "principle-2-twos-unique",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        102
+      ],
+      "status": "PASS",
+      "basis": "页图确认完整陈述 Function B2T_w is a bijection；紧邻原文给出T2B。中文两段区间覆盖、不重叠的证明成立。"
+    },
+    {
+      "id": "principle-2-t2u",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        109
+      ],
+      "status": "PASS",
+      "basis": "页图确认完整输入范围和 (2.5) 两支：x<0加2^w，x≥0不变。中文权值相减与同位串解释一致。"
+    },
+    {
+      "id": "principle-2-u2t",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        110
+      ],
+      "status": "PASS",
+      "basis": "页图确认完整输入范围和 (2.7)：u≤TMax保留，u>TMax减2^w。中文补出C11超范围转换由实现定义的边界；链接段亦保留可产生实现定义信号的情况。"
+    },
+    {
+      "id": "principle-2-zero-extension",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        114
+      ],
+      "status": "PASS",
+      "basis": "页图确认u/u′、w/w′及w′>w全部条件，结论B2U_w(u)=B2U_w′(u′)。中文新增项系数为零的证明准确。"
+    },
+    {
+      "id": "principle-2-sign-extension",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        114
+      ],
+      "status": "PASS",
+      "basis": "页图确认复制最高位的向量及w′>w，结论B2T相等。中文一次扩位−s2^w+s2^(w−1)不改原贡献，再归纳到任意宽度。"
+    },
+    {
+      "id": "principle-2-unsigned-truncate",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        118
+      ],
+      "status": "PASS",
+      "basis": "页图确认x、x′的B2U定义和x′=x mod2^k；中文明确1≤k<w及非负余数，删除高位项的证明成立。"
+    },
+    {
+      "id": "principle-2-twos-truncate",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        119
+      ],
+      "status": "PASS",
+      "basis": "页图确认B2T解码及U2T_k(x mod2^k)完整结论。中文明确先取非负模再重解释，并区分C负数%运算；4位5截3位为−3正确。"
+    },
+    {
+      "id": "principle-2-unsigned-add",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        124
+      ],
+      "status": "PASS",
+      "basis": "页图确认完整范围0≤x,y<2^w及 (2.11)，Normal/Overflow标签与两支阈值完整。中文最多丢一位、至多减一次模数的推导正确。"
+    },
+    {
+      "id": "principle-2-unsigned-overflow",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        125
+      ],
+      "status": "PASS",
+      "basis": "页图确认完整s定义及两个等价充要条件s<x、s<y；文本提取中下标w移行不改变原句。中文要求s已按目标宽度保存，避免小整数提升误用。"
+    },
+    {
+      "id": "principle-2-unsigned-negation",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        126
+      ],
+      "status": "PASS",
+      "basis": "页图确认0≤x<2^w及 (2.12)，x=0返回x，x>0返回2^w−x。中文模加法逆元与取反加一说明准确。"
+    },
+    {
+      "id": "principle-2-twos-add",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        127
+      ],
+      "status": "PASS",
+      "basis": "页图确认 (2.13) 三支、输入补码范围和两端严格/非严格不等号。中文按精确和分段并明确C11有符号越界加法未定义。"
+    },
+    {
+      "id": "principle-2-twos-overflow",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        129
+      ],
+      "status": "PASS",
+      "basis": "页图确认正溢出条件x>0、y>0、s≤0，负溢出条件x<0、y<0、s≥0。中文解释正分支实际s<0、负分支允许0，并要求C预先检查；无删改原书判据。"
+    },
+    {
+      "id": "principle-2-twos-negation",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        132
+      ],
+      "status": "PASS",
+      "basis": "页图确认 (2.15) 输入范围及TMin特殊分支。中文以2TMin=−2^w解释模逆元，并区分当前补码环境中的INT_MIN取负越界。"
+    },
+    {
+      "id": "principle-2-unsigned-multiply",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        134
+      ],
+      "status": "PASS",
+      "basis": "页图确认完整范围及 (2.16) 精确积模2^w。中文完整积至多2w位、截断保留低位的推导准确。"
+    },
+    {
+      "id": "principle-2-twos-multiply",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        134
+      ],
+      "status": "PASS",
+      "basis": "页图确认完整范围及 (2.17) U2T_w((xy) mod2^w)。中文先算数学积、再截断再解码，并明确C11结果可表示限制；3位−4×−3的例子成立。"
+    },
+    {
+      "id": "principle-2-product-bits",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        134
+      ],
+      "status": "PASS",
+      "basis": "页图确认完整x/y位向量定义、两种解码、x′/y′及T2B/U2B等式；原式无编号。中文只主张低w位相等，展开积差含2^w的证明正确。"
+    },
+    {
+      "id": "principle-2-power-product",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        138
+      ],
+      "status": "PASS",
+      "basis": "页图确认任意k≥0、结果宽w+k及追加k个零，完整陈述无删项。中文区分扩宽精确乘法与后续固定宽度截断，1011→101100为11×4=44。"
+    },
+    {
+      "id": "principle-2-unsigned-shift",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        139
+      ],
+      "status": "PASS",
+      "basis": "页图确认原书C表达式x<<k及0≤k<w；HTML code标签仅改变排版。中文明确计算宽度、无符号解释和整数提升，固定宽度模型的模乘结论成立。"
+    },
+    {
+      "id": "principle-2-twos-shift",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        139
+      ],
+      "status": "PASS",
+      "basis": "页图确认原书将补码左移直接写作C表达式的原陈述。中文语义校注保留此原文，同时明确C11要求非负左操作数及可表示结果，全域复现使用无符号位串。"
+    },
+    {
+      "id": "principle-2-unsigned-divide",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        141
+      ],
+      "status": "PASS",
+      "basis": "页图确认原书x>>k、0≤k<w和floor(x/2^k)；HTML将斜线式排为分数，含义相同。中文商余分解以及非负时向下=向零正确。"
+    },
+    {
+      "id": "principle-2-arithmetic-floor",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        142
+      ],
+      "status": "PASS",
+      "basis": "页图确认原书明确arithmetically及floor(x/2^k)，条件与陈述完整。中文明确负数右移由C11实现定义；−7/4的两种舍入区别正确。"
+    },
+    {
+      "id": "principle-2-arithmetic-ceil",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        143
+      ],
+      "status": "PASS",
+      "basis": "页图确认原书(x+(1<<k)−1)>>k、算术右移和ceil(x/2^k)。中文把数学恒等式与C11中间表达式合法性区分，专门指出x+(1<<k)不能先溢出；q/r证明正确。"
+    },
+    {
+      "id": "classic-2-byte-memory",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        71
+      ],
+      "status": "PASS",
+      "basis": "印刷70 §2.1开篇原句连续匹配；中文按字节、对象占连续字节及类型决定读取宽度，后续0x01234567大小端表与数值一致。"
+    },
+    {
+      "id": "classic-2-round-even",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        157
+      ],
+      "status": "PASS",
+      "basis": "印刷156舍入讨论原句连续匹配；原句上下文专门讨论中点。中文保留先最近、仅中点取偶，1.125和1.375在四分之一网格上的例子正确。"
+    },
+    {
+      "id": "classic-2-float-association",
+      "file": "chapter02_information.html",
+      "pdf_pages": [
+        160
+      ],
+      "status": "PASS",
+      "basis": "印刷159原句连续匹配；中文给Round模型，并说明不等式表示存在反例。伴读精度已改binary64，和链接的10^16、−10^16、1例子一致。"
+    },
+    {
+      "id": "classic-3-abstractions",
+      "file": "chapter03_machine_level.html",
+      "pdf_pages": [
+        207,
+        208
+      ],
+      "status": "PASS",
+      "basis": "PDF207—208整页图确认两句准确；第二句跨页被脚注/页眉插入，需拼接页207句尾与208首行。两句在同一段中不相邻，来源行现明确中间省略两句。中文分清ISA及虚拟地址。"
+    },
+    {
+      "id": "classic-3-operands",
+      "file": "chapter03_machine_level.html",
+      "pdf_pages": [
+        218
+      ],
+      "status": "PASS",
+      "basis": "印刷217 Figure3.3图注原句连续匹配；中文EA=Imm+R[rb]+sR[ri]、scale集合正确，后续0x1000+4×3+8=0x1014及四字节小端读取一致。"
+    },
+    {
+      "id": "classic-3-zero-extension",
+      "file": "chapter03_machine_level.html",
+      "pdf_pages": [
+        222
+      ],
+      "status": "PASS",
+      "basis": "印刷221传送讨论原句连续匹配；中文限定整数寄存器四字节目的，区分内存写，0xA5零/符号扩展例与指令表正确。"
+    },
+    {
+      "id": "classic-3-lea",
+      "file": "chapter03_machine_level.html",
+      "pdf_pages": [
+        229
+      ],
+      "status": "PASS",
+      "basis": "印刷228 LEA讨论原句连续匹配；中文不解引用、不改条件码、3x+7计算与实际leaq一致。"
+    },
+    {
+      "id": "classic-3-control-dataflow",
+      "file": "chapter03_machine_level.html",
+      "pdf_pages": [
+        237
+      ],
+      "status": "PASS",
+      "basis": "印刷236 §3.6原句连续匹配；中文条件码到控制流/数据流选择准确，后续8位减法SF⊕OF及三行CF/ZF表推演一致。"
+    },
+    {
+      "id": "classic-3-cmov-boundary",
+      "file": "chapter03_machine_level.html",
+      "pdf_pages": [
+        255
+      ],
+      "status": "PASS",
+      "basis": "印刷254原句连续匹配；原文先计算两个候选表达式的上下文已补齐。中文空指针访存不能被后续选择撤销，最小值cmov候选已在寄存器的例子成立。"
+    },
+    {
+      "id": "classic-3-jump-table",
+      "file": "chapter03_machine_level.html",
+      "pdf_pages": [
+        270
+      ],
+      "status": "PASS",
+      "basis": "印刷269原句连续匹配；中文将不随case数增长限定在查表选择步骤，并说明表大小/缓存/稠密度代价；索引归一化和贯穿解释一致。"
+    },
+    {
+      "id": "classic-3-procedure-mechanisms",
+      "file": "chapter03_machine_level.html",
+      "pdf_pages": [
+        276
+      ],
+      "status": "PASS",
+      "basis": "印刷275连续三条机制逐条匹配，中间没有省略正文。中文先定义P调用Q，保留按实际调用需求的限定；栈帧与16字节调用对齐解释一致。"
+    },
+    {
+      "id": "classic-3-recursion",
+      "file": "chapter03_machine_level.html",
+      "pdf_pages": [
+        291
+      ],
+      "status": "PASS",
+      "basis": "印刷290原句连续匹配；中文每次调用的私有保存状态准确。链接rfact先push旧rbx、写本层n，子调用返回先恢复旧rbx，n=3轨迹算6正确。"
+    },
+    {
+      "id": "classic-3-row-major",
+      "file": "chapter03_machine_level.html",
+      "pdf_pages": [
+        295
+      ],
+      "status": "PASS",
+      "basis": "印刷294原句连续匹配，前文明确row-major；同页 (3.1) 的x_D+L(Ci+j)与中文一致。后续数组与指针数组的两次/一次读取及步长区别正确。"
+    },
+    {
+      "id": "classic-3-struct-fields",
+      "file": "chapter03_machine_level.html",
+      "pdf_pages": [
+        304
+      ],
+      "status": "PASS",
+      "basis": "印刷303末尾两句连续匹配；中文限定机器访问中的字段偏移，不把字段名残留当作指令语义。LP64示例偏移0/8/16、总长24与访问指令一致。"
+    },
+    {
+      "id": "classic-3-alignment",
+      "file": "chapter03_machine_level.html",
+      "pdf_pages": [
+        310
+      ],
+      "status": "PASS",
+      "basis": "印刷309 §3.9.3首句连续匹配；中文K正、a非负、ABI取值及alignUp公式明确；内部7字节填充与尾部4字节保证数组步长24。"
+    },
+    {
+      "id": "classic-3-pointer-types",
+      "file": "chapter03_machine_level.html",
+      "pdf_pages": [
+        314
+      ],
+      "status": "PASS",
+      "basis": "印刷313 pointer types条目原句连续匹配；中文区分地址位与类型决定步长/访问，后续补对象生存期、对齐、别名边界。"
+    },
+    {
+      "id": "classic-3-bounds-state",
+      "file": "chapter03_machine_level.html",
+      "pdf_pages": [
+        316
+      ],
+      "status": "PASS",
+      "basis": "印刷315原句连续匹配，上一句的组合条件是缺少数组边界检查与局部量/状态同栈；中文已明确这两点，错误路径与容量控制说明一致。"
+    },
+    {
+      "id": "classic-3-scalar-float",
+      "file": "chapter03_machine_level.html",
+      "pdf_pages": [
+        332
+      ],
+      "status": "PASS",
+      "basis": "印刷331标量浮点讨论原句连续匹配；中文限定本节标量数据使用低32/64位，后续移动位与数值转换、源/目的宽度区分正确。"
+    },
+    {
+      "id": "classic-3-float-unordered",
+      "file": "chapter03_machine_level.html",
+      "pdf_pages": [
+        343
+      ],
+      "status": "PASS",
+      "basis": "印刷342两句连续匹配，同页条件码表核对PF/CF/ZF=1。中文单独jb/je不能排除NaN、先jp或最后cmovp覆盖的解释正确。"
+    },
+    {
+      "id": "classic-map-part-ii",
+      "file": "book_overview.html",
+      "pdf_pages": [
+        704
+      ],
+      "status": "PASS",
+      "english_text_sha256": "ead4a0546c61e6b1eec78484f758ef86d66676c8472a8e8dbbbbc5075725a771",
+      "basis": "实际目视PDF704开篇，首字下沉导致文本提取漏O，页图核对句子及PartII承接关系。"
+    },
+    {
+      "id": "classic-7-resolution",
+      "file": "chapter07_linking.html",
+      "pdf_pages": [
+        710
+      ],
+      "status": "PASS",
+      "english_text_sha256": "60810250bdbc1fc7128fad3f0aa86692ab7ec88b4d26cb477c36aa5a076370b5",
+      "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+    },
+    {
+      "id": "classic-7-local-symbols",
+      "file": "chapter07_linking.html",
+      "pdf_pages": [
+        713
+      ],
+      "status": "PASS",
+      "english_text_sha256": "6683ced7ec34770b4a63e2fe63f0be8b9b4b7ae9db810582e97f170c0dff2e70",
+      "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+    },
+    {
+      "id": "classic-7-archive",
+      "file": "chapter07_linking.html",
+      "pdf_pages": [
+        725
+      ],
+      "status": "PASS",
+      "english_text_sha256": "7ff0b43197558e1428d8c96ebc286fbe0d7923511c9032f0133f89063b8cf5e3",
+      "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+    },
+    {
+      "id": "classic-7-shared-text",
+      "file": "chapter07_linking.html",
+      "pdf_pages": [
+        736
+      ],
+      "status": "PASS",
+      "english_text_sha256": "c3227d96209dc586610881eb42ad29d34b2da4aaaae52f95c003ed1fa0f24668",
+      "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+    },
+    {
+      "id": "classic-7-pic",
+      "file": "chapter07_linking.html",
+      "pdf_pages": [
+        741
+      ],
+      "status": "PASS",
+      "english_text_sha256": "73185db1d4c44d56c75450830cbe122f35e67122a7cef6dac8482ed35ce4cbd8",
+      "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+    },
+    {
+      "id": "classic-8-exception",
+      "file": "chapter08_exceptional.html",
+      "pdf_pages": [
+        760
+      ],
+      "status": "PASS",
+      "english_text_sha256": "905da858033bfe3595804e8754b6b12f8357193ad5106a4c1fa945a8bbfdb93b",
+      "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+    },
+    {
+      "id": "classic-8-process",
+      "file": "chapter08_exceptional.html",
+      "pdf_pages": [
+        769
+      ],
+      "status": "PASS",
+      "english_text_sha256": "3ff588469553b70fbe92232fae8c3c5097778ccb6924686e914fcc16f7d5d0cf",
+      "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+    },
+    {
+      "id": "classic-8-errors",
+      "file": "chapter08_exceptional.html",
+      "pdf_pages": [
+        774
+      ],
+      "status": "PASS",
+      "english_text_sha256": "8bfef20abc928bcd8a74adb2ca0b254afcec673dd3e310f6fa27f340c7c1a472",
+      "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+    },
+    {
+      "id": "classic-8-pending",
+      "file": "chapter08_exceptional.html",
+      "pdf_pages": [
+        807
+      ],
+      "status": "PASS",
+      "english_text_sha256": "7f98ddb3584dad272188aa77cdfefb52b440eb1a44ea2909e86198a37f336b0e",
+      "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+    },
+    {
+      "id": "classic-8-nonlocal",
+      "file": "chapter08_exceptional.html",
+      "pdf_pages": [
+        818
+      ],
+      "status": "PASS",
+      "english_text_sha256": "7ef6f906b6ad6ec108ef8626ac24257c122d94ac514ab283c799711af6d2fe3a",
+      "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+    },
+    {
+      "id": "classic-9-address",
+      "file": "chapter09_virtual_memory.html",
+      "pdf_pages": [
+        841
+      ],
+      "status": "PASS",
+      "english_text_sha256": "324fd67a5cbb81ee84af2fd7d9e4aa54f990c1aa10ce6ec2a7b889e76105e8c0",
+      "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+    },
+    {
+      "id": "classic-9-fault",
+      "file": "chapter09_virtual_memory.html",
+      "pdf_pages": [
+        845
+      ],
+      "status": "PASS",
+      "english_text_sha256": "d3ff9f6281e3bbfa72bc68c52e3516bf7c57b5664dc9d5e80b952f8ded93d774",
+      "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+    },
+    {
+      "id": "classic-9-cow",
+      "file": "chapter09_virtual_memory.html",
+      "pdf_pages": [
+        873
+      ],
+      "status": "PASS",
+      "english_text_sha256": "15d33bfd28bd36943caf67da30757ec56b6bb1e094a775b9f42bb2631c42137c",
+      "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+    },
+    {
+      "id": "classic-9-footer",
+      "file": "chapter09_virtual_memory.html",
+      "pdf_pages": [
+        889
+      ],
+      "status": "PASS",
+      "english_text_sha256": "5b659348cc5dd086b630cef1537af3408618da24771d52f4534e9f78ff7070de",
+      "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+    },
+    {
+      "id": "classic-map-part-iii",
+      "file": "book_overview.html",
+      "pdf_pages": [
+        924
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-10-eof",
+      "file": "chapter10_system_io.html",
+      "pdf_pages": [
+        928
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-10-bytes",
+      "file": "chapter10_system_io.html",
+      "pdf_pages": [
+        928
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-10-lowest",
+      "file": "chapter10_system_io.html",
+      "pdf_pages": [
+        930
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-10-short",
+      "file": "chapter10_system_io.html",
+      "pdf_pages": [
+        932
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-10-readn",
+      "file": "chapter10_system_io.html",
+      "pdf_pages": [
+        934
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-10-mix",
+      "file": "chapter10_system_io.html",
+      "pdf_pages": [
+        935
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-10-size",
+      "file": "chapter10_system_io.html",
+      "pdf_pages": [
+        940
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-10-fork",
+      "file": "chapter10_system_io.html",
+      "pdf_pages": [
+        944
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-10-dup",
+      "file": "chapter10_system_io.html",
+      "pdf_pages": [
+        946
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-10-stream",
+      "file": "chapter10_system_io.html",
+      "pdf_pages": [
+        948
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-11-processes",
+      "file": "chapter11_network.html",
+      "pdf_pages": [
+        956
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-11-byteorder",
+      "file": "chapter11_network.html",
+      "pdf_pages": [
+        962
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-11-descriptor",
+      "file": "chapter11_network.html",
+      "pdf_pages": [
+        970
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-11-eof",
+      "file": "chapter11_network.html",
+      "pdf_pages": [
+        985
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-11-content",
+      "file": "chapter11_network.html",
+      "pdf_pages": [
+        986
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-11-cgi",
+      "file": "chapter11_network.html",
+      "pdf_pages": [
+        1001
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-12-shared",
+      "file": "chapter12_concurrency.html",
+      "pdf_pages": [
+        1032
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-12-speedup",
+      "file": "chapter12_concurrency.html",
+      "pdf_pages": [
+        1056
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-12-reentrant",
+      "file": "chapter12_concurrency.html",
+      "pdf_pages": [
+        1061
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    },
+    {
+      "id": "classic-12-lock-order",
+      "file": "chapter12_concurrency.html",
+      "pdf_pages": [
+        1066
+      ],
+      "status": "PASS",
+      "basis": "Declared-source English matched independently; Chinese explanation and neighboring mechanism read in the scoped chapter review."
+    }
+  ],
+  "part_three_reviews": {
+    "10": "notes/chapter10_review.json",
+    "11": "notes/chapter11_review.json",
+    "12": "notes/chapter12_review.json"
+  },
+  "open_findings": 1,
+  "findings": [
+    {
+      "id": "F1",
+      "priority": "P2",
+      "status": "fixed_verified",
+      "chapters": [
+        11,
+        12
+      ],
+      "summary": "HTTP field values trim only SP/HTAB OWS; invalid Host/framing is rejected before Expect. Five server modes pass 150 TCP cases; old source passes 112.",
+      "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/part-three-http-review/report.json"
+    },
+    {
+      "id": "F2",
+      "priority": "P2",
+      "status": "fixed_verified",
+      "chapters": [
+        5,
+        8,
+        9,
+        12
+      ],
+      "summary": "Necessary computations and self-checks execute independently of assert; 24 ordinary/disabled-assertion runs pass and 42 wrong variants fail as intended.",
+      "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/assertion-regressions/report.json"
+    },
+    {
+      "id": "F3",
+      "priority": "P2",
+      "status": "fixed_verified",
+      "chapters": [
+        3
+      ],
+      "summary": "3.33 retains both textbook candidates and states the non-overlap condition; legal char alias gives source-order 1 versus assembly-order C model 257 under the declared LP64/little-endian model.",
+      "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/content-review/report.json"
+    },
+    {
+      "id": "F4",
+      "priority": "P2",
+      "status": "fixed_verified",
+      "chapters": [
+        11,
+        12
+      ],
+      "summary": "Actual C parent forks/execs C or Python CGI and reaps through SIGCHLD; eight lifecycle/overlap/error groups pass, including CGI closing stdin before its response.",
+      "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/part-three-cgi-review/report.json"
+    },
+    {
+      "id": "F5",
+      "priority": "P2",
+      "status": "pending_browser_acceptance",
+      "chapters": [
+        12
+      ],
+      "summary": "12.39 protocol behavior is tested, but no real browser proxy request was made. Isolated proxy-context target creation was denied: Target.createTarget is not allowed.",
+      "evidence": "tmp/csapp/review-v2-fixes/proxy/browser-attempt.json"
+    },
+    {
+      "id": "F6",
+      "priority": "P3",
+      "status": "fixed_verified",
+      "chapters": [
+        9
+      ],
+      "summary": "9.20 compares the same two allocation traces with peak payload / maximum reserved block-storage regions, three repeats. Darwin private scalable zone only; not RSS or total allocator cost.",
+      "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/content-review/report.json"
+    },
+    {
+      "id": "F7",
+      "priority": "P3",
+      "status": "fixed_verified",
+      "chapters": [
+        2
+      ],
+      "summary": "Both negative-t powers in 2.85 have complete MathML and data-tex; missing-exponent variant is rejected and desktop/mobile rendering read.",
+      "evidence": "tmp/csapp/review-v2-fixes/browser/reading-targets.json"
+    },
+    {
+      "id": "F8",
+      "priority": "P3",
+      "status": "fixed_verified",
+      "chapters": [
+        9
+      ],
+      "summary": "9.6.3 distinguishes index 8 from the ninth region; 9215 = 8*1024+1023, with the 16 KiB total unchanged.",
+      "evidence": "tmp/csapp/review-v2-fixes/content/source-readback.json"
+    }
+  ],
+  "evidence": {
+    "inventory": "tmp/csapp/part3/source_inventory.json",
+    "excerpt_matches": "tmp/csapp/part3/excerpt-independent-matches.json",
+    "acceptance": "test/T007-csapp-part-three.md",
+    "I010": "tmp/csapp/review-v2-fixes/revision-summary.json"
+  },
+  "previous_review": {
+    "schema_version": 2,
+    "status": "reviewed_locally",
+    "reviewed_at": "2026-10-14T01:55:51.767578+00:00",
+    "source_sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+    "page_sha256": {
+      "chapter02_information.html": "8099dbba0002bfb3d7b58d888c576502b3533296c43e9218aff0bcf95bbbd6ac",
+      "chapter09_virtual_memory.html": "14fd1fc70e6bfb683d9c99058dc21ef22dbed6097dc9fda2d9afc5ef4353728d",
+      "book_overview.html": "2eb878e96d5c256de4344220b51d30f119c75beb190de76a32f2e9bfa86d20a4",
+      "chapter08_exceptional.html": "d49cb73d2268104470393dd67b3f603d55f82c520f62949b3c910865853a4a9c",
+      "chapter03_machine_level.html": "893833bdeda3fd325cd55595ac6109c6e0aae62da0fa612f09322a50edfcaa16",
+      "chapter01_tour.html": "02fdb836a9f352c53926e97879c4fa884b6f50992ce9e1df4bd07e2e54dd7fad",
+      "chapter04_architecture.html": "487557ae047d4d8f62d6e7eab3dba894eb075909f36b4a8873d09c0ef3b920ca",
+      "chapter07_linking.html": "e4f84bd481363b070c93772d1c519be4cc3d10fffc9ac06dda957a137ead2b6a",
+      "chapter06_memory.html": "4d2091e128aeca78ab483e9415e558ab8f2058ae3d1520009dc01ba52d3db3dd",
+      "preface.html": "5552a76573e27c1e9cd02e4045101e3aa43990327a7d16e391bf2d6f9930e424",
+      "chapter05_optimization.html": "5ac95eb5cd636bc184179b44434122d779b53267944ca3c5928586b6cf9a668b"
+    },
+    "coverage": {
+      "source_passages": 93,
+      "newly_reviewed_passages": 15,
+      "retained_historical_passages": 78,
+      "page_counts": {
+        "book_overview.html": 2,
+        "preface.html": 5,
+        "chapter01_tour.html": 9,
+        "chapter02_information.html": 28,
+        "chapter03_machine_level.html": 16,
+        "chapter04_architecture.html": 6,
+        "chapter05_optimization.html": 6,
+        "chapter06_memory.html": 7,
+        "chapter07_linking.html": 5,
+        "chapter08_exceptional.html": 5,
+        "chapter09_virtual_memory.html": 4
+      }
+    },
+    "scope": {
+      "new": "PartII开篇及7—9章15段原文/中文释读/邻接机制；三章作者源审与独立复核分别保留。",
+      "retained": "原78条清单逐项与起始快照一致；历史完整审阅嵌于previous_review。",
+      "exercises": "作者59题逐题对照本版；第二人第7章13题、第8章26题逐项源审，第9章20题读回与所列机制、源图及作业范围核对。"
+    },
+    "method": "作者按本地同版PDF逐章编写；根任务独立提取章节/题号清单，逐段核对新增英文的源页文本，PartII开篇首字下沉的提取差异回到PDF704页图；关键图/公式/排印问题另用源页图与跨章独立审阅。",
+    "entries": [
+      {
+        "id": "classic-map-part-i",
+        "file": "book_overview.html",
+        "pdf_pages": [
+          66
+        ],
+        "status": "PASS",
+        "basis": "印刷65的第一段完整摘录；PDF首字O下沉，已对整页PNG逐句确认。第2—6章次序、译文及数组跨章解释一致。"
+      },
+      {
+        "id": "classic-preface-perspective",
+        "file": "preface.html",
+        "pdf_pages": [
+          20
+        ],
+        "status": "PASS",
+        "basis": "印刷19首个主题段连续摘录；correctness/performance/utility 三维译义与后续例子一致。"
+      },
+      {
+        "id": "classic-preface-machine",
+        "file": "preface.html",
+        "pdf_pages": [
+          20,
+          21
+        ],
+        "status": "PASS",
+        "basis": "印刷19两句及20末段的末两句分别摘录；正文明确三段分别来自相关说明，不伪装连续原段。x86-64/Linux/gcc与无需汇编经验均保留。"
+      },
+      {
+        "id": "classic-preface-active",
+        "file": "preface.html",
+        "pdf_pages": [
+          21,
+          22
+        ],
+        "status": "PASS",
+        "basis": "印刷20末段与跨到21的练习说明；整页PNG确认跨页被Figure 1及页眉打断。明确省略中间过渡句，先解再查的译文准确。"
+      },
+      {
+        "id": "classic-preface-code",
+        "file": "preface.html",
+        "pdf_pages": [
+          22
+        ],
+        "status": "PASS",
+        "basis": "印刷21直接连续摘录；自动排版、gcc/Linux实测及不同编译器行为一致的原意保留；中文补有效输入与环境条件合理。"
+      },
+      {
+        "id": "classic-preface-cache-lab",
+        "file": "preface.html",
+        "pdf_pages": [
+          31
+        ],
+        "status": "PASS",
+        "basis": "印刷30 Cache Lab完整连续说明；整页PNG确认general-purpose保留词内连字符。模拟器、转置、Valgrind角色无错位。"
+      },
+      {
+        "id": "classic-1-bits-context",
+        "file": "chapter01_tour.html",
+        "pdf_pages": [
+          40
+        ],
+        "status": "PASS",
+        "basis": "印刷39 Information Is Bits + Context段落连续摘录；255/-1示例明确8位且不改变原位模式。"
+      },
+      {
+        "id": "classic-1-compilation",
+        "file": "chapter01_tour.html",
+        "pdf_pages": [
+          42
+        ],
+        "status": "PASS",
+        "basis": "印刷41 gcc driver与Figure 1.3说明连续摘录；四阶段、编译驱动和链接对象的解释准确。"
+      },
+      {
+        "id": "classic-1-locality",
+        "file": "chapter01_tour.html",
+        "pdf_pages": [
+          50
+        ],
+        "status": "PASS",
+        "basis": "印刷49缓存动机连续摘录；中文明确依赖多数命中，并补工作集、步长与映射边界。"
+      },
+      {
+        "id": "classic-1-hierarchy",
+        "file": "chapter01_tour.html",
+        "pdf_pages": [
+          51
+        ],
+        "status": "PASS",
+        "basis": "印刷50层级类比连续摘录；中文区分寄存器显式管理和硬件缓存地址查找，避免将类比变成相同实现。"
+      },
+      {
+        "id": "classic-1-process",
+        "file": "chapter01_tour.html",
+        "pdf_pages": [
+          52
+        ],
+        "status": "PASS",
+        "basis": "印刷51进程定义连续摘录；交错执行按本章单CPU直觉解释，系统调用和进程切换另行区分。"
+      },
+      {
+        "id": "classic-1-threads",
+        "file": "chapter01_tour.html",
+        "pdf_pages": [
+          54
+        ],
+        "status": "PASS",
+        "basis": "印刷53 Threads首句连续摘录；代码/全局数据共享、执行位置/寄存器/栈各自保持的补充准确。"
+      },
+      {
+        "id": "classic-1-amdahl",
+        "file": "chapter01_tour.html",
+        "pdf_pages": [
+          59,
+          60
+        ],
+        "status": "PASS",
+        "basis": "印刷58与59分别摘录；图像确认(1.1)和(1.2)编号、分母、下标。α为原耗时比例，固定任务、Told>0、k≥1、其他耗时不变、无新增开销，α=1单独处理。"
+      },
+      {
+        "id": "classic-1-concurrency",
+        "file": "chapter01_tour.html",
+        "pdf_pages": [
+          61
+        ],
+        "status": "PASS",
+        "basis": "印刷60开篇连续摘录；保留作者对concurrency和parallelism的用法，中文未将交错运行直接等同加速。"
+      },
+      {
+        "id": "classic-1-isa",
+        "file": "chapter01_tour.html",
+        "pdf_pages": [
+          64
+        ],
+        "status": "PASS",
+        "basis": "印刷63 ISA抽象说明连续摘录；单程序顺序可观察语义限定及多线程内存模型边界合理。"
+      },
+      {
+        "id": "principle-4-isa-visible-state",
+        "file": "chapter04_architecture.html",
+        "pdf_pages": [
+          392
+        ],
+        "status": "PASS",
+        "basis": "印刷391 Programmer-Visible State段落中连续句；未给原书没有的定理号，内部组织与可见ISA状态区分准确。"
+      },
+      {
+        "id": "principle-4-no-reading-back",
+        "file": "chapter04_architecture.html",
+        "pdf_pages": [
+          438
+        ],
+        "status": "PASS",
+        "basis": "印刷437确有单列principle: No reading back；中文用pushq旧栈顶/同一valE说明无须先写再读，与SEQ边沿提交一致。"
+      },
+      {
+        "id": "principle-4-pipeline-throughput-latency",
+        "file": "chapter04_architecture.html",
+        "pdf_pages": [
+          449
+        ],
+        "status": "PASS",
+        "basis": "印刷448流水一般讨论连续句；印刷449—450图4.32—4.34补核：串行320ps，三段120ps一拍/360ps延迟/约8.33GIPS正确。"
+      },
+      {
+        "id": "principle-4-slowest-stage",
+        "file": "chapter04_architecture.html",
+        "pdf_pages": [
+          453
+        ],
+        "status": "PASS",
+        "basis": "印刷452 Nonuniform Partitioning连续句；整页图确认50/150/100ps、170ps周期与510ps延迟。中文保留统一时钟及每级寄存器开销。"
+      },
+      {
+        "id": "principle-4-feedback-dependencies",
+        "file": "chapter04_architecture.html",
+        "pdf_pages": [
+          458
+        ],
+        "status": "PASS",
+        "basis": "印刷457反馈段结尾连续句；后续依赖示例由50、7得到57和地址157；转发/等待依据值可用时刻。"
+      },
+      {
+        "id": "principle-4-pipeline-hazards",
+        "file": "chapter04_architecture.html",
+        "pdf_pages": [
+          466
+        ],
+        "status": "PASS",
+        "basis": "印刷465数据/控制依赖后连续定义；中文将依赖与需停顿分开，后续load-use、ret和误预测的取消/等待解释一致。"
+      },
+      {
+        "id": "classic-5-safe-optimization",
+        "file": "chapter05_optimization.html",
+        "pdf_pages": [
+          535
+        ],
+        "status": "PASS",
+        "basis": "印刷534 safe optimizations段连续句；C保证范围、别名、副作用和未定义行为条件保留；2→4→8与一次读取得6的例子成立。"
+      },
+      {
+        "id": "classic-5-cpe-slope",
+        "file": "chapter05_optimization.html",
+        "pdf_pages": [
+          540
+        ],
+        "status": "PASS",
+        "basis": "印刷539 Figure5.2图注原句；T(n)的线性区间、截距和按元素斜率解释明确，不将ns直接转换为周期。"
+      },
+      {
+        "id": "classic-5-latency-bound",
+        "file": "chapter05_optimization.html",
+        "pdf_pages": [
+          561
+        ],
+        "status": "PASS",
+        "basis": "印刷560界限表之后连续句；顺序归约每元素一次、延迟L的前提清楚，三次5周期乘法15周期正确。"
+      },
+      {
+        "id": "classic-5-throughput-bound",
+        "file": "chapter05_optimization.html",
+        "pdf_pages": [
+          561
+        ],
+        "status": "PASS",
+        "basis": "同印刷560连续句；原书C/I最大操作率倒数为I/C，中文限定每元素一次该运算，并补载入约束。"
+      },
+      {
+        "id": "classic-5-multiple-accumulators",
+        "file": "chapter05_optimization.html",
+        "pdf_pages": [
+          573
+        ],
+        "status": "PASS",
+        "basis": "印刷572 Multiple Accumulators首句；中文要求所用模型满足交换结合，模2^64成立，有符号C限定前后中间值可表示。"
+      },
+      {
+        "id": "classic-5-floating-associativity",
+        "file": "chapter05_optimization.html",
+        "pdf_pages": [
+          577
+        ],
+        "status": "PASS",
+        "basis": "印刷576连续两句，舍入/溢出意义保留，结合下一句含underflow语境解释下溢合理。前缀反例已补binary32/最近偶数逐次舍入，并正确给出1与2的原因及binary64对照。"
+      },
+      {
+        "id": "principle-6-locality",
+        "file": "chapter06_memory.html",
+        "pdf_pages": [
+          641
+        ],
+        "status": "PASS",
+        "basis": "印刷640 Locality首段前两句；时间/空间局部性分别映射重用和邻近访问，并明确命中仍受缓存状态约束。"
+      },
+      {
+        "id": "principle-6-hierarchy-caching",
+        "file": "chapter06_memory.html",
+        "pdf_pages": [
+          648
+        ],
+        "status": "PASS",
+        "basis": "印刷647层级缓存图后连续句；中文按层级管理者解释，寄存器未误写成普通load的按地址查找层。"
+      },
+      {
+        "id": "principle-6-block-amortization",
+        "file": "chapter06_memory.html",
+        "pdf_pages": [
+          651
+        ],
+        "status": "PASS",
+        "basis": "印刷650 Exploiting spatial locality连续两句；摊销要求邻居在替换前使用，16字节块/4字节元素例子一致。"
+      },
+      {
+        "id": "classic-6-block-line-set",
+        "file": "chapter06_memory.html",
+        "pdf_pages": [
+          671
+        ],
+        "status": "PASS",
+        "basis": "印刷670 Aside: Cache lines, sets, and blocks的line定义原句；中文补块和组来自同一旁注，容量公式不含元数据。"
+      },
+      {
+        "id": "classic-6-write-back",
+        "file": "chapter06_memory.html",
+        "pdf_pages": [
+          667
+        ],
+        "status": "PASS",
+        "basis": "印刷666 Issues with Writes连续句；写命中传播与写miss分配分开，整块写回只在模型淘汰时统计，末尾dirty_lines另计。"
+      },
+      {
+        "id": "classic-6-cache-size-hit-time",
+        "file": "chapter06_memory.html",
+        "pdf_pages": [
+          669
+        ],
+        "status": "PASS",
+        "basis": "印刷668 Impact of Cache Size连续三句；中文保留tend的倾向，不把更大容量等同必然更快。"
+      },
+      {
+        "id": "classic-6-cache-friendly-inner-loop",
+        "file": "chapter06_memory.html",
+        "pdf_pages": [
+          671
+        ],
+        "status": "PASS",
+        "basis": "印刷670优化建议第2条连续两句；其他条件相同和总读写次数明确，访问比例也带步长/块宽/跨块边界。"
+      },
+      {
+        "id": "principle-2-unsigned-encoding",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          100
+        ],
+        "status": "PASS",
+        "basis": "页图确认完整 PRINCIPLE 及 (2.1)：求和下限0、上限w−1，位权2^i。中文补w≥1、位取0/1，范围与逆向除2证明正确。"
+      },
+      {
+        "id": "principle-2-unsigned-unique",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          101
+        ],
+        "status": "PASS",
+        "basis": "页图确认完整陈述 Function B2U_w is a bijection；中文给出定义域、值域和U2B逆映射，唯一性与存在性均有说明。"
+      },
+      {
+        "id": "principle-2-twos-encoding",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          101
+        ],
+        "status": "PASS",
+        "basis": "页图确认完整 PRINCIPLE 及 (2.3)：最高位负权−2^(w−1)，其余求和至w−2。中文处理w=1空和并给出TMin/TMax。"
+      },
+      {
+        "id": "principle-2-twos-unique",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          102
+        ],
+        "status": "PASS",
+        "basis": "页图确认完整陈述 Function B2T_w is a bijection；紧邻原文给出T2B。中文两段区间覆盖、不重叠的证明成立。"
+      },
+      {
+        "id": "principle-2-t2u",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          109
+        ],
+        "status": "PASS",
+        "basis": "页图确认完整输入范围和 (2.5) 两支：x<0加2^w，x≥0不变。中文权值相减与同位串解释一致。"
+      },
+      {
+        "id": "principle-2-u2t",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          110
+        ],
+        "status": "PASS",
+        "basis": "页图确认完整输入范围和 (2.7)：u≤TMax保留，u>TMax减2^w。中文补出C11超范围转换由实现定义的边界；链接段亦保留可产生实现定义信号的情况。"
+      },
+      {
+        "id": "principle-2-zero-extension",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          114
+        ],
+        "status": "PASS",
+        "basis": "页图确认u/u′、w/w′及w′>w全部条件，结论B2U_w(u)=B2U_w′(u′)。中文新增项系数为零的证明准确。"
+      },
+      {
+        "id": "principle-2-sign-extension",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          114
+        ],
+        "status": "PASS",
+        "basis": "页图确认复制最高位的向量及w′>w，结论B2T相等。中文一次扩位−s2^w+s2^(w−1)不改原贡献，再归纳到任意宽度。"
+      },
+      {
+        "id": "principle-2-unsigned-truncate",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          118
+        ],
+        "status": "PASS",
+        "basis": "页图确认x、x′的B2U定义和x′=x mod2^k；中文明确1≤k<w及非负余数，删除高位项的证明成立。"
+      },
+      {
+        "id": "principle-2-twos-truncate",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          119
+        ],
+        "status": "PASS",
+        "basis": "页图确认B2T解码及U2T_k(x mod2^k)完整结论。中文明确先取非负模再重解释，并区分C负数%运算；4位5截3位为−3正确。"
+      },
+      {
+        "id": "principle-2-unsigned-add",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          124
+        ],
+        "status": "PASS",
+        "basis": "页图确认完整范围0≤x,y<2^w及 (2.11)，Normal/Overflow标签与两支阈值完整。中文最多丢一位、至多减一次模数的推导正确。"
+      },
+      {
+        "id": "principle-2-unsigned-overflow",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          125
+        ],
+        "status": "PASS",
+        "basis": "页图确认完整s定义及两个等价充要条件s<x、s<y；文本提取中下标w移行不改变原句。中文要求s已按目标宽度保存，避免小整数提升误用。"
+      },
+      {
+        "id": "principle-2-unsigned-negation",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          126
+        ],
+        "status": "PASS",
+        "basis": "页图确认0≤x<2^w及 (2.12)，x=0返回x，x>0返回2^w−x。中文模加法逆元与取反加一说明准确。"
+      },
+      {
+        "id": "principle-2-twos-add",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          127
+        ],
+        "status": "PASS",
+        "basis": "页图确认 (2.13) 三支、输入补码范围和两端严格/非严格不等号。中文按精确和分段并明确C11有符号越界加法未定义。"
+      },
+      {
+        "id": "principle-2-twos-overflow",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          129
+        ],
+        "status": "PASS",
+        "basis": "页图确认正溢出条件x>0、y>0、s≤0，负溢出条件x<0、y<0、s≥0。中文解释正分支实际s<0、负分支允许0，并要求C预先检查；无删改原书判据。"
+      },
+      {
+        "id": "principle-2-twos-negation",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          132
+        ],
+        "status": "PASS",
+        "basis": "页图确认 (2.15) 输入范围及TMin特殊分支。中文以2TMin=−2^w解释模逆元，并区分当前补码环境中的INT_MIN取负越界。"
+      },
+      {
+        "id": "principle-2-unsigned-multiply",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          134
+        ],
+        "status": "PASS",
+        "basis": "页图确认完整范围及 (2.16) 精确积模2^w。中文完整积至多2w位、截断保留低位的推导准确。"
+      },
+      {
+        "id": "principle-2-twos-multiply",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          134
+        ],
+        "status": "PASS",
+        "basis": "页图确认完整范围及 (2.17) U2T_w((xy) mod2^w)。中文先算数学积、再截断再解码，并明确C11结果可表示限制；3位−4×−3的例子成立。"
+      },
+      {
+        "id": "principle-2-product-bits",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          134
+        ],
+        "status": "PASS",
+        "basis": "页图确认完整x/y位向量定义、两种解码、x′/y′及T2B/U2B等式；原式无编号。中文只主张低w位相等，展开积差含2^w的证明正确。"
+      },
+      {
+        "id": "principle-2-power-product",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          138
+        ],
+        "status": "PASS",
+        "basis": "页图确认任意k≥0、结果宽w+k及追加k个零，完整陈述无删项。中文区分扩宽精确乘法与后续固定宽度截断，1011→101100为11×4=44。"
+      },
+      {
+        "id": "principle-2-unsigned-shift",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          139
+        ],
+        "status": "PASS",
+        "basis": "页图确认原书C表达式x<<k及0≤k<w；HTML code标签仅改变排版。中文明确计算宽度、无符号解释和整数提升，固定宽度模型的模乘结论成立。"
+      },
+      {
+        "id": "principle-2-twos-shift",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          139
+        ],
+        "status": "PASS",
+        "basis": "页图确认原书将补码左移直接写作C表达式的原陈述。中文语义校注保留此原文，同时明确C11要求非负左操作数及可表示结果，全域复现使用无符号位串。"
+      },
+      {
+        "id": "principle-2-unsigned-divide",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          141
+        ],
+        "status": "PASS",
+        "basis": "页图确认原书x>>k、0≤k<w和floor(x/2^k)；HTML将斜线式排为分数，含义相同。中文商余分解以及非负时向下=向零正确。"
+      },
+      {
+        "id": "principle-2-arithmetic-floor",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          142
+        ],
+        "status": "PASS",
+        "basis": "页图确认原书明确arithmetically及floor(x/2^k)，条件与陈述完整。中文明确负数右移由C11实现定义；−7/4的两种舍入区别正确。"
+      },
+      {
+        "id": "principle-2-arithmetic-ceil",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          143
+        ],
+        "status": "PASS",
+        "basis": "页图确认原书(x+(1<<k)−1)>>k、算术右移和ceil(x/2^k)。中文把数学恒等式与C11中间表达式合法性区分，专门指出x+(1<<k)不能先溢出；q/r证明正确。"
+      },
+      {
+        "id": "classic-2-byte-memory",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          71
+        ],
+        "status": "PASS",
+        "basis": "印刷70 §2.1开篇原句连续匹配；中文按字节、对象占连续字节及类型决定读取宽度，后续0x01234567大小端表与数值一致。"
+      },
+      {
+        "id": "classic-2-round-even",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          157
+        ],
+        "status": "PASS",
+        "basis": "印刷156舍入讨论原句连续匹配；原句上下文专门讨论中点。中文保留先最近、仅中点取偶，1.125和1.375在四分之一网格上的例子正确。"
+      },
+      {
+        "id": "classic-2-float-association",
+        "file": "chapter02_information.html",
+        "pdf_pages": [
+          160
+        ],
+        "status": "PASS",
+        "basis": "印刷159原句连续匹配；中文给Round模型，并说明不等式表示存在反例。伴读精度已改binary64，和链接的10^16、−10^16、1例子一致。"
+      },
+      {
+        "id": "classic-3-abstractions",
+        "file": "chapter03_machine_level.html",
+        "pdf_pages": [
+          207,
+          208
+        ],
+        "status": "PASS",
+        "basis": "PDF207—208整页图确认两句准确；第二句跨页被脚注/页眉插入，需拼接页207句尾与208首行。两句在同一段中不相邻，来源行现明确中间省略两句。中文分清ISA及虚拟地址。"
+      },
+      {
+        "id": "classic-3-operands",
+        "file": "chapter03_machine_level.html",
+        "pdf_pages": [
+          218
+        ],
+        "status": "PASS",
+        "basis": "印刷217 Figure3.3图注原句连续匹配；中文EA=Imm+R[rb]+sR[ri]、scale集合正确，后续0x1000+4×3+8=0x1014及四字节小端读取一致。"
+      },
+      {
+        "id": "classic-3-zero-extension",
+        "file": "chapter03_machine_level.html",
+        "pdf_pages": [
+          222
+        ],
+        "status": "PASS",
+        "basis": "印刷221传送讨论原句连续匹配；中文限定整数寄存器四字节目的，区分内存写，0xA5零/符号扩展例与指令表正确。"
+      },
+      {
+        "id": "classic-3-lea",
+        "file": "chapter03_machine_level.html",
+        "pdf_pages": [
+          229
+        ],
+        "status": "PASS",
+        "basis": "印刷228 LEA讨论原句连续匹配；中文不解引用、不改条件码、3x+7计算与实际leaq一致。"
+      },
+      {
+        "id": "classic-3-control-dataflow",
+        "file": "chapter03_machine_level.html",
+        "pdf_pages": [
+          237
+        ],
+        "status": "PASS",
+        "basis": "印刷236 §3.6原句连续匹配；中文条件码到控制流/数据流选择准确，后续8位减法SF⊕OF及三行CF/ZF表推演一致。"
+      },
+      {
+        "id": "classic-3-cmov-boundary",
+        "file": "chapter03_machine_level.html",
+        "pdf_pages": [
+          255
+        ],
+        "status": "PASS",
+        "basis": "印刷254原句连续匹配；原文先计算两个候选表达式的上下文已补齐。中文空指针访存不能被后续选择撤销，最小值cmov候选已在寄存器的例子成立。"
+      },
+      {
+        "id": "classic-3-jump-table",
+        "file": "chapter03_machine_level.html",
+        "pdf_pages": [
+          270
+        ],
+        "status": "PASS",
+        "basis": "印刷269原句连续匹配；中文将不随case数增长限定在查表选择步骤，并说明表大小/缓存/稠密度代价；索引归一化和贯穿解释一致。"
+      },
+      {
+        "id": "classic-3-procedure-mechanisms",
+        "file": "chapter03_machine_level.html",
+        "pdf_pages": [
+          276
+        ],
+        "status": "PASS",
+        "basis": "印刷275连续三条机制逐条匹配，中间没有省略正文。中文先定义P调用Q，保留按实际调用需求的限定；栈帧与16字节调用对齐解释一致。"
+      },
+      {
+        "id": "classic-3-recursion",
+        "file": "chapter03_machine_level.html",
+        "pdf_pages": [
+          291
+        ],
+        "status": "PASS",
+        "basis": "印刷290原句连续匹配；中文每次调用的私有保存状态准确。链接rfact先push旧rbx、写本层n，子调用返回先恢复旧rbx，n=3轨迹算6正确。"
+      },
+      {
+        "id": "classic-3-row-major",
+        "file": "chapter03_machine_level.html",
+        "pdf_pages": [
+          295
+        ],
+        "status": "PASS",
+        "basis": "印刷294原句连续匹配，前文明确row-major；同页 (3.1) 的x_D+L(Ci+j)与中文一致。后续数组与指针数组的两次/一次读取及步长区别正确。"
+      },
+      {
+        "id": "classic-3-struct-fields",
+        "file": "chapter03_machine_level.html",
+        "pdf_pages": [
+          304
+        ],
+        "status": "PASS",
+        "basis": "印刷303末尾两句连续匹配；中文限定机器访问中的字段偏移，不把字段名残留当作指令语义。LP64示例偏移0/8/16、总长24与访问指令一致。"
+      },
+      {
+        "id": "classic-3-alignment",
+        "file": "chapter03_machine_level.html",
+        "pdf_pages": [
+          310
+        ],
+        "status": "PASS",
+        "basis": "印刷309 §3.9.3首句连续匹配；中文K正、a非负、ABI取值及alignUp公式明确；内部7字节填充与尾部4字节保证数组步长24。"
+      },
+      {
+        "id": "classic-3-pointer-types",
+        "file": "chapter03_machine_level.html",
+        "pdf_pages": [
+          314
+        ],
+        "status": "PASS",
+        "basis": "印刷313 pointer types条目原句连续匹配；中文区分地址位与类型决定步长/访问，后续补对象生存期、对齐、别名边界。"
+      },
+      {
+        "id": "classic-3-bounds-state",
+        "file": "chapter03_machine_level.html",
+        "pdf_pages": [
+          316
+        ],
+        "status": "PASS",
+        "basis": "印刷315原句连续匹配，上一句的组合条件是缺少数组边界检查与局部量/状态同栈；中文已明确这两点，错误路径与容量控制说明一致。"
+      },
+      {
+        "id": "classic-3-scalar-float",
+        "file": "chapter03_machine_level.html",
+        "pdf_pages": [
+          332
+        ],
+        "status": "PASS",
+        "basis": "印刷331标量浮点讨论原句连续匹配；中文限定本节标量数据使用低32/64位，后续移动位与数值转换、源/目的宽度区分正确。"
+      },
+      {
+        "id": "classic-3-float-unordered",
+        "file": "chapter03_machine_level.html",
+        "pdf_pages": [
+          343
+        ],
+        "status": "PASS",
+        "basis": "印刷342两句连续匹配，同页条件码表核对PF/CF/ZF=1。中文单独jb/je不能排除NaN、先jp或最后cmovp覆盖的解释正确。"
+      },
+      {
+        "id": "classic-map-part-ii",
+        "file": "book_overview.html",
+        "pdf_pages": [
+          704
+        ],
+        "status": "PASS",
+        "english_text_sha256": "ead4a0546c61e6b1eec78484f758ef86d66676c8472a8e8dbbbbc5075725a771",
+        "basis": "实际目视PDF704开篇，首字下沉导致文本提取漏O，页图核对句子及PartII承接关系。"
+      },
+      {
+        "id": "classic-7-resolution",
+        "file": "chapter07_linking.html",
+        "pdf_pages": [
+          710
+        ],
+        "status": "PASS",
+        "english_text_sha256": "60810250bdbc1fc7128fad3f0aa86692ab7ec88b4d26cb477c36aa5a076370b5",
+        "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+      },
+      {
+        "id": "classic-7-local-symbols",
+        "file": "chapter07_linking.html",
+        "pdf_pages": [
+          713
+        ],
+        "status": "PASS",
+        "english_text_sha256": "6683ced7ec34770b4a63e2fe63f0be8b9b4b7ae9db810582e97f170c0dff2e70",
+        "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+      },
+      {
+        "id": "classic-7-archive",
+        "file": "chapter07_linking.html",
+        "pdf_pages": [
+          725
+        ],
+        "status": "PASS",
+        "english_text_sha256": "7ff0b43197558e1428d8c96ebc286fbe0d7923511c9032f0133f89063b8cf5e3",
+        "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+      },
+      {
+        "id": "classic-7-shared-text",
+        "file": "chapter07_linking.html",
+        "pdf_pages": [
+          736
+        ],
+        "status": "PASS",
+        "english_text_sha256": "c3227d96209dc586610881eb42ad29d34b2da4aaaae52f95c003ed1fa0f24668",
+        "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+      },
+      {
+        "id": "classic-7-pic",
+        "file": "chapter07_linking.html",
+        "pdf_pages": [
+          741
+        ],
+        "status": "PASS",
+        "english_text_sha256": "73185db1d4c44d56c75450830cbe122f35e67122a7cef6dac8482ed35ce4cbd8",
+        "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+      },
+      {
+        "id": "classic-8-exception",
+        "file": "chapter08_exceptional.html",
+        "pdf_pages": [
+          760
+        ],
+        "status": "PASS",
+        "english_text_sha256": "905da858033bfe3595804e8754b6b12f8357193ad5106a4c1fa945a8bbfdb93b",
+        "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+      },
+      {
+        "id": "classic-8-process",
+        "file": "chapter08_exceptional.html",
+        "pdf_pages": [
+          769
+        ],
+        "status": "PASS",
+        "english_text_sha256": "3ff588469553b70fbe92232fae8c3c5097778ccb6924686e914fcc16f7d5d0cf",
+        "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+      },
+      {
+        "id": "classic-8-errors",
+        "file": "chapter08_exceptional.html",
+        "pdf_pages": [
+          774
+        ],
+        "status": "PASS",
+        "english_text_sha256": "8bfef20abc928bcd8a74adb2ca0b254afcec673dd3e310f6fa27f340c7c1a472",
+        "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+      },
+      {
+        "id": "classic-8-pending",
+        "file": "chapter08_exceptional.html",
+        "pdf_pages": [
+          807
+        ],
+        "status": "PASS",
+        "english_text_sha256": "7f98ddb3584dad272188aa77cdfefb52b440eb1a44ea2909e86198a37f336b0e",
+        "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+      },
+      {
+        "id": "classic-8-nonlocal",
+        "file": "chapter08_exceptional.html",
+        "pdf_pages": [
+          818
+        ],
+        "status": "PASS",
+        "english_text_sha256": "7ef6f906b6ad6ec108ef8626ac24257c122d94ac514ab283c799711af6d2fe3a",
+        "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+      },
+      {
+        "id": "classic-9-address",
+        "file": "chapter09_virtual_memory.html",
+        "pdf_pages": [
+          841
+        ],
+        "status": "PASS",
+        "english_text_sha256": "324fd67a5cbb81ee84af2fd7d9e4aa54f990c1aa10ce6ec2a7b889e76105e8c0",
+        "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+      },
+      {
+        "id": "classic-9-fault",
+        "file": "chapter09_virtual_memory.html",
+        "pdf_pages": [
+          845
+        ],
+        "status": "PASS",
+        "english_text_sha256": "d3ff9f6281e3bbfa72bc68c52e3516bf7c57b5664dc9d5e80b952f8ded93d774",
+        "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+      },
+      {
+        "id": "classic-9-cow",
+        "file": "chapter09_virtual_memory.html",
+        "pdf_pages": [
+          873
+        ],
+        "status": "PASS",
+        "english_text_sha256": "15d33bfd28bd36943caf67da30757ec56b6bb1e094a775b9f42bb2631c42137c",
+        "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+      },
+      {
+        "id": "classic-9-footer",
+        "file": "chapter09_virtual_memory.html",
+        "pdf_pages": [
+          889
+        ],
+        "status": "PASS",
+        "english_text_sha256": "5b659348cc5dd086b630cef1537af3408618da24771d52f4534e9f78ff7070de",
+        "basis": "同版源页原文与页面登记一致；中文条件与邻接机制随章节作者/独立审阅。"
+      }
+    ],
+    "findings": [
+      {
+        "id": "C000_DIRECTION",
+        "page": "book_overview.html",
+        "original": "摘录之后写“下面的章节表”，表实际在上方。",
+        "resolution": "改为“上面的章节表”。",
+        "status": "closed_after_independent_readback"
+      },
+      {
+        "id": "C002_FORMAT",
+        "page": "chapter02_information.html",
+        "original": "伴读将链接的 10^16 浮点结合律例子称为 binary32。",
+        "resolution": "按实际推导改为 binary64，保留最近偶数舍入语义。",
+        "status": "closed_after_independent_readback"
+      },
+      {
+        "id": "C003_OMISSION",
+        "page": "chapter03_machine_level.html",
+        "original": "ISA 与虚拟内存的 First/Second 两句之间省略原文两句，未标选择范围。",
+        "resolution": "来源行明确“同段节选，中间省略两句”，清单同步 selection_note。",
+        "status": "closed_after_independent_readback"
+      },
+      {
+        "id": "C005_PRECISION",
+        "page": "chapter05_optimization.html",
+        "original": "前缀反例缺少就近的精度与逐次舍入条件。",
+        "resolution": "明确 binary32 与每次最近偶数舍入，展开 2^24+1 的中点和分组得 2 的过程，给出 binary64 对照。",
+        "status": "closed_after_independent_readback"
+      },
+      {
+        "id": "C006_PRECONDITION",
+        "page": "chapter06_memory.html",
+        "original": "跨块写例子未就近说明初始缓存状态和写策略。",
+        "resolution": "补出空缓存、写回、写分配，读回确认 2 次失效、1 次脏淘汰、读 16 字节、写 8 字节。",
+        "status": "closed_after_independent_readback"
+      }
+    ],
+    "open_findings": [],
+    "part_two_reviews": {
+      "7": "chapter07_review.json",
+      "8": "chapter08_review.json",
+      "9": "chapter09_review.json"
+    },
+    "evidence": {
+      "source_inventory": "tmp/csapp/part2/source_inventory.json",
+      "opening_image": "tmp/csapp/part2/part-ii.png",
+      "browser": "reading_review.json"
+    },
+    "previous_review": {
+      "schema_version": 1,
+      "status": "reviewed_locally",
+      "reviewed_at": "2026-10-13T16:41:34.904736+00:00",
+      "source_sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+      "page_sha256": {
+        "book_overview.html": "512b3e25cabd0da106770d54e8f32cc0466a392768e94e1b7e86ab3a0e320b7f",
+        "preface.html": "5552a76573e27c1e9cd02e4045101e3aa43990327a7d16e391bf2d6f9930e424",
+        "chapter01_tour.html": "02fdb836a9f352c53926e97879c4fa884b6f50992ce9e1df4bd07e2e54dd7fad",
+        "chapter02_information.html": "8099dbba0002bfb3d7b58d888c576502b3533296c43e9218aff0bcf95bbbd6ac",
+        "chapter03_machine_level.html": "893833bdeda3fd325cd55595ac6109c6e0aae62da0fa612f09322a50edfcaa16",
+        "chapter04_architecture.html": "487557ae047d4d8f62d6e7eab3dba894eb075909f36b4a8873d09c0ef3b920ca",
+        "chapter05_optimization.html": "5ac95eb5cd636bc184179b44434122d779b53267944ca3c5928586b6cf9a668b",
+        "chapter06_memory.html": "cea816e6af113b7bfcc0437f2df472fa7cd180e8585572952197e91c040b9455"
+      },
+      "coverage": {
+        "source_passages": 78,
+        "page_counts": {
+          "book_overview.html": 1,
+          "preface.html": 5,
+          "chapter01_tour.html": 9,
+          "chapter02_information.html": 28,
+          "chapter03_machine_level.html": 16,
+          "chapter04_architecture.html": 6,
+          "chapter05_optimization.html": 6,
+          "chapter06_memory.html": 7
+        },
+        "chapter2_principles": 25
+      },
+      "scope": {
+        "source_statements": "78 条英文原文、中文陈述、条件和相邻解释；第2章包括全部25条 PRINCIPLE。",
+        "reading": "地图、序言、第1/4/5/6章连续主文；第2/3章44条新卡片及31个推导定位的关联公式、表格和短代码。",
+        "code": "第4/6章两组长程序导读、18个函数/状态锚点及四份完整C/Python维护源。",
+        "retained_prior_review": "298 道既有题解的原作者审阅与第二人抽查边界保存在逐章记录及 validation.previous_validation；本轮不扩展为298题再次独立重审。"
+      },
+      "method": "独立复核者逐条对照本地同版PDF及上下文；25条正式原理另逐条读取20张完整源页图。文本提取有断词、首字下沉或跨页差异时回到页图。主任务另做真实Chrome DevTools MCP呈现验收。",
+      "content_readback": {
+        "cards": 78,
+        "unchanged_after_final_presentation_changes": true,
+        "comparison": "每卡完整文本SHA-256与独立复核最终读回一致；最终变化只涉及CSS/滚动提示脚本和短表class。"
+      },
+      "findings": [
+        {
+          "id": "C000_DIRECTION",
+          "page": "book_overview.html",
+          "original": "摘录之后写“下面的章节表”，表实际在上方。",
+          "resolution": "改为“上面的章节表”。",
+          "status": "closed_after_independent_readback"
+        },
+        {
+          "id": "C002_FORMAT",
+          "page": "chapter02_information.html",
+          "original": "伴读将链接的 10^16 浮点结合律例子称为 binary32。",
+          "resolution": "按实际推导改为 binary64，保留最近偶数舍入语义。",
+          "status": "closed_after_independent_readback"
+        },
+        {
+          "id": "C003_OMISSION",
+          "page": "chapter03_machine_level.html",
+          "original": "ISA 与虚拟内存的 First/Second 两句之间省略原文两句，未标选择范围。",
+          "resolution": "来源行明确“同段节选，中间省略两句”，清单同步 selection_note。",
+          "status": "closed_after_independent_readback"
+        },
+        {
+          "id": "C005_PRECISION",
+          "page": "chapter05_optimization.html",
+          "original": "前缀反例缺少就近的精度与逐次舍入条件。",
+          "resolution": "明确 binary32 与每次最近偶数舍入，展开 2^24+1 的中点和分组得 2 的过程，给出 binary64 对照。",
+          "status": "closed_after_independent_readback"
+        },
+        {
+          "id": "C006_PRECONDITION",
+          "page": "chapter06_memory.html",
+          "original": "跨块写例子未就近说明初始缓存状态和写策略。",
+          "resolution": "补出空缓存、写回、写分配，读回确认 2 次失效、1 次脏淘汰、读 16 字节、写 8 字节。",
+          "status": "closed_after_independent_readback"
+        }
+      ],
+      "open_findings": 0,
+      "entries": [
+        {
+          "id": "classic-map-part-i",
+          "file": "book_overview.html",
+          "pdf_pages": [
+            66
+          ],
+          "status": "PASS",
+          "basis": "印刷65的第一段完整摘录；PDF首字O下沉，已对整页PNG逐句确认。第2—6章次序、译文及数组跨章解释一致。"
+        },
+        {
+          "id": "classic-preface-perspective",
+          "file": "preface.html",
+          "pdf_pages": [
+            20
+          ],
+          "status": "PASS",
+          "basis": "印刷19首个主题段连续摘录；correctness/performance/utility 三维译义与后续例子一致。"
+        },
+        {
+          "id": "classic-preface-machine",
+          "file": "preface.html",
+          "pdf_pages": [
+            20,
+            21
+          ],
+          "status": "PASS",
+          "basis": "印刷19两句及20末段的末两句分别摘录；正文明确三段分别来自相关说明，不伪装连续原段。x86-64/Linux/gcc与无需汇编经验均保留。"
+        },
+        {
+          "id": "classic-preface-active",
+          "file": "preface.html",
+          "pdf_pages": [
+            21,
+            22
+          ],
+          "status": "PASS",
+          "basis": "印刷20末段与跨到21的练习说明；整页PNG确认跨页被Figure 1及页眉打断。明确省略中间过渡句，先解再查的译文准确。"
+        },
+        {
+          "id": "classic-preface-code",
+          "file": "preface.html",
+          "pdf_pages": [
+            22
+          ],
+          "status": "PASS",
+          "basis": "印刷21直接连续摘录；自动排版、gcc/Linux实测及不同编译器行为一致的原意保留；中文补有效输入与环境条件合理。"
+        },
+        {
+          "id": "classic-preface-cache-lab",
+          "file": "preface.html",
+          "pdf_pages": [
+            31
+          ],
+          "status": "PASS",
+          "basis": "印刷30 Cache Lab完整连续说明；整页PNG确认general-purpose保留词内连字符。模拟器、转置、Valgrind角色无错位。"
+        },
+        {
+          "id": "classic-1-bits-context",
+          "file": "chapter01_tour.html",
+          "pdf_pages": [
+            40
+          ],
+          "status": "PASS",
+          "basis": "印刷39 Information Is Bits + Context段落连续摘录；255/-1示例明确8位且不改变原位模式。"
+        },
+        {
+          "id": "classic-1-compilation",
+          "file": "chapter01_tour.html",
+          "pdf_pages": [
+            42
+          ],
+          "status": "PASS",
+          "basis": "印刷41 gcc driver与Figure 1.3说明连续摘录；四阶段、编译驱动和链接对象的解释准确。"
+        },
+        {
+          "id": "classic-1-locality",
+          "file": "chapter01_tour.html",
+          "pdf_pages": [
+            50
+          ],
+          "status": "PASS",
+          "basis": "印刷49缓存动机连续摘录；中文明确依赖多数命中，并补工作集、步长与映射边界。"
+        },
+        {
+          "id": "classic-1-hierarchy",
+          "file": "chapter01_tour.html",
+          "pdf_pages": [
+            51
+          ],
+          "status": "PASS",
+          "basis": "印刷50层级类比连续摘录；中文区分寄存器显式管理和硬件缓存地址查找，避免将类比变成相同实现。"
+        },
+        {
+          "id": "classic-1-process",
+          "file": "chapter01_tour.html",
+          "pdf_pages": [
+            52
+          ],
+          "status": "PASS",
+          "basis": "印刷51进程定义连续摘录；交错执行按本章单CPU直觉解释，系统调用和进程切换另行区分。"
+        },
+        {
+          "id": "classic-1-threads",
+          "file": "chapter01_tour.html",
+          "pdf_pages": [
+            54
+          ],
+          "status": "PASS",
+          "basis": "印刷53 Threads首句连续摘录；代码/全局数据共享、执行位置/寄存器/栈各自保持的补充准确。"
+        },
+        {
+          "id": "classic-1-amdahl",
+          "file": "chapter01_tour.html",
+          "pdf_pages": [
+            59,
+            60
+          ],
+          "status": "PASS",
+          "basis": "印刷58与59分别摘录；图像确认(1.1)和(1.2)编号、分母、下标。α为原耗时比例，固定任务、Told>0、k≥1、其他耗时不变、无新增开销，α=1单独处理。"
+        },
+        {
+          "id": "classic-1-concurrency",
+          "file": "chapter01_tour.html",
+          "pdf_pages": [
+            61
+          ],
+          "status": "PASS",
+          "basis": "印刷60开篇连续摘录；保留作者对concurrency和parallelism的用法，中文未将交错运行直接等同加速。"
+        },
+        {
+          "id": "classic-1-isa",
+          "file": "chapter01_tour.html",
+          "pdf_pages": [
+            64
+          ],
+          "status": "PASS",
+          "basis": "印刷63 ISA抽象说明连续摘录；单程序顺序可观察语义限定及多线程内存模型边界合理。"
+        },
+        {
+          "id": "principle-4-isa-visible-state",
+          "file": "chapter04_architecture.html",
+          "pdf_pages": [
+            392
+          ],
+          "status": "PASS",
+          "basis": "印刷391 Programmer-Visible State段落中连续句；未给原书没有的定理号，内部组织与可见ISA状态区分准确。"
+        },
+        {
+          "id": "principle-4-no-reading-back",
+          "file": "chapter04_architecture.html",
+          "pdf_pages": [
+            438
+          ],
+          "status": "PASS",
+          "basis": "印刷437确有单列principle: No reading back；中文用pushq旧栈顶/同一valE说明无须先写再读，与SEQ边沿提交一致。"
+        },
+        {
+          "id": "principle-4-pipeline-throughput-latency",
+          "file": "chapter04_architecture.html",
+          "pdf_pages": [
+            449
+          ],
+          "status": "PASS",
+          "basis": "印刷448流水一般讨论连续句；印刷449—450图4.32—4.34补核：串行320ps，三段120ps一拍/360ps延迟/约8.33GIPS正确。"
+        },
+        {
+          "id": "principle-4-slowest-stage",
+          "file": "chapter04_architecture.html",
+          "pdf_pages": [
+            453
+          ],
+          "status": "PASS",
+          "basis": "印刷452 Nonuniform Partitioning连续句；整页图确认50/150/100ps、170ps周期与510ps延迟。中文保留统一时钟及每级寄存器开销。"
+        },
+        {
+          "id": "principle-4-feedback-dependencies",
+          "file": "chapter04_architecture.html",
+          "pdf_pages": [
+            458
+          ],
+          "status": "PASS",
+          "basis": "印刷457反馈段结尾连续句；后续依赖示例由50、7得到57和地址157；转发/等待依据值可用时刻。"
+        },
+        {
+          "id": "principle-4-pipeline-hazards",
+          "file": "chapter04_architecture.html",
+          "pdf_pages": [
+            466
+          ],
+          "status": "PASS",
+          "basis": "印刷465数据/控制依赖后连续定义；中文将依赖与需停顿分开，后续load-use、ret和误预测的取消/等待解释一致。"
+        },
+        {
+          "id": "classic-5-safe-optimization",
+          "file": "chapter05_optimization.html",
+          "pdf_pages": [
+            535
+          ],
+          "status": "PASS",
+          "basis": "印刷534 safe optimizations段连续句；C保证范围、别名、副作用和未定义行为条件保留；2→4→8与一次读取得6的例子成立。"
+        },
+        {
+          "id": "classic-5-cpe-slope",
+          "file": "chapter05_optimization.html",
+          "pdf_pages": [
+            540
+          ],
+          "status": "PASS",
+          "basis": "印刷539 Figure5.2图注原句；T(n)的线性区间、截距和按元素斜率解释明确，不将ns直接转换为周期。"
+        },
+        {
+          "id": "classic-5-latency-bound",
+          "file": "chapter05_optimization.html",
+          "pdf_pages": [
+            561
+          ],
+          "status": "PASS",
+          "basis": "印刷560界限表之后连续句；顺序归约每元素一次、延迟L的前提清楚，三次5周期乘法15周期正确。"
+        },
+        {
+          "id": "classic-5-throughput-bound",
+          "file": "chapter05_optimization.html",
+          "pdf_pages": [
+            561
+          ],
+          "status": "PASS",
+          "basis": "同印刷560连续句；原书C/I最大操作率倒数为I/C，中文限定每元素一次该运算，并补载入约束。"
+        },
+        {
+          "id": "classic-5-multiple-accumulators",
+          "file": "chapter05_optimization.html",
+          "pdf_pages": [
+            573
+          ],
+          "status": "PASS",
+          "basis": "印刷572 Multiple Accumulators首句；中文要求所用模型满足交换结合，模2^64成立，有符号C限定前后中间值可表示。"
+        },
+        {
+          "id": "classic-5-floating-associativity",
+          "file": "chapter05_optimization.html",
+          "pdf_pages": [
+            577
+          ],
+          "status": "PASS",
+          "basis": "印刷576连续两句，舍入/溢出意义保留，结合下一句含underflow语境解释下溢合理。前缀反例已补binary32/最近偶数逐次舍入，并正确给出1与2的原因及binary64对照。"
+        },
+        {
+          "id": "principle-6-locality",
+          "file": "chapter06_memory.html",
+          "pdf_pages": [
+            641
+          ],
+          "status": "PASS",
+          "basis": "印刷640 Locality首段前两句；时间/空间局部性分别映射重用和邻近访问，并明确命中仍受缓存状态约束。"
+        },
+        {
+          "id": "principle-6-hierarchy-caching",
+          "file": "chapter06_memory.html",
+          "pdf_pages": [
+            648
+          ],
+          "status": "PASS",
+          "basis": "印刷647层级缓存图后连续句；中文按层级管理者解释，寄存器未误写成普通load的按地址查找层。"
+        },
+        {
+          "id": "principle-6-block-amortization",
+          "file": "chapter06_memory.html",
+          "pdf_pages": [
+            651
+          ],
+          "status": "PASS",
+          "basis": "印刷650 Exploiting spatial locality连续两句；摊销要求邻居在替换前使用，16字节块/4字节元素例子一致。"
+        },
+        {
+          "id": "classic-6-block-line-set",
+          "file": "chapter06_memory.html",
+          "pdf_pages": [
+            671
+          ],
+          "status": "PASS",
+          "basis": "印刷670 Aside: Cache lines, sets, and blocks的line定义原句；中文补块和组来自同一旁注，容量公式不含元数据。"
+        },
+        {
+          "id": "classic-6-write-back",
+          "file": "chapter06_memory.html",
+          "pdf_pages": [
+            667
+          ],
+          "status": "PASS",
+          "basis": "印刷666 Issues with Writes连续句；写命中传播与写miss分配分开，整块写回只在模型淘汰时统计，末尾dirty_lines另计。"
+        },
+        {
+          "id": "classic-6-cache-size-hit-time",
+          "file": "chapter06_memory.html",
+          "pdf_pages": [
+            669
+          ],
+          "status": "PASS",
+          "basis": "印刷668 Impact of Cache Size连续三句；中文保留tend的倾向，不把更大容量等同必然更快。"
+        },
+        {
+          "id": "classic-6-cache-friendly-inner-loop",
+          "file": "chapter06_memory.html",
+          "pdf_pages": [
+            671
+          ],
+          "status": "PASS",
+          "basis": "印刷670优化建议第2条连续两句；其他条件相同和总读写次数明确，访问比例也带步长/块宽/跨块边界。"
+        },
+        {
+          "id": "principle-2-unsigned-encoding",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            100
+          ],
+          "status": "PASS",
+          "basis": "页图确认完整 PRINCIPLE 及 (2.1)：求和下限0、上限w−1，位权2^i。中文补w≥1、位取0/1，范围与逆向除2证明正确。"
+        },
+        {
+          "id": "principle-2-unsigned-unique",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            101
+          ],
+          "status": "PASS",
+          "basis": "页图确认完整陈述 Function B2U_w is a bijection；中文给出定义域、值域和U2B逆映射，唯一性与存在性均有说明。"
+        },
+        {
+          "id": "principle-2-twos-encoding",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            101
+          ],
+          "status": "PASS",
+          "basis": "页图确认完整 PRINCIPLE 及 (2.3)：最高位负权−2^(w−1)，其余求和至w−2。中文处理w=1空和并给出TMin/TMax。"
+        },
+        {
+          "id": "principle-2-twos-unique",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            102
+          ],
+          "status": "PASS",
+          "basis": "页图确认完整陈述 Function B2T_w is a bijection；紧邻原文给出T2B。中文两段区间覆盖、不重叠的证明成立。"
+        },
+        {
+          "id": "principle-2-t2u",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            109
+          ],
+          "status": "PASS",
+          "basis": "页图确认完整输入范围和 (2.5) 两支：x<0加2^w，x≥0不变。中文权值相减与同位串解释一致。"
+        },
+        {
+          "id": "principle-2-u2t",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            110
+          ],
+          "status": "PASS",
+          "basis": "页图确认完整输入范围和 (2.7)：u≤TMax保留，u>TMax减2^w。中文补出C11超范围转换由实现定义的边界；链接段亦保留可产生实现定义信号的情况。"
+        },
+        {
+          "id": "principle-2-zero-extension",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            114
+          ],
+          "status": "PASS",
+          "basis": "页图确认u/u′、w/w′及w′>w全部条件，结论B2U_w(u)=B2U_w′(u′)。中文新增项系数为零的证明准确。"
+        },
+        {
+          "id": "principle-2-sign-extension",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            114
+          ],
+          "status": "PASS",
+          "basis": "页图确认复制最高位的向量及w′>w，结论B2T相等。中文一次扩位−s2^w+s2^(w−1)不改原贡献，再归纳到任意宽度。"
+        },
+        {
+          "id": "principle-2-unsigned-truncate",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            118
+          ],
+          "status": "PASS",
+          "basis": "页图确认x、x′的B2U定义和x′=x mod2^k；中文明确1≤k<w及非负余数，删除高位项的证明成立。"
+        },
+        {
+          "id": "principle-2-twos-truncate",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            119
+          ],
+          "status": "PASS",
+          "basis": "页图确认B2T解码及U2T_k(x mod2^k)完整结论。中文明确先取非负模再重解释，并区分C负数%运算；4位5截3位为−3正确。"
+        },
+        {
+          "id": "principle-2-unsigned-add",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            124
+          ],
+          "status": "PASS",
+          "basis": "页图确认完整范围0≤x,y<2^w及 (2.11)，Normal/Overflow标签与两支阈值完整。中文最多丢一位、至多减一次模数的推导正确。"
+        },
+        {
+          "id": "principle-2-unsigned-overflow",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            125
+          ],
+          "status": "PASS",
+          "basis": "页图确认完整s定义及两个等价充要条件s<x、s<y；文本提取中下标w移行不改变原句。中文要求s已按目标宽度保存，避免小整数提升误用。"
+        },
+        {
+          "id": "principle-2-unsigned-negation",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            126
+          ],
+          "status": "PASS",
+          "basis": "页图确认0≤x<2^w及 (2.12)，x=0返回x，x>0返回2^w−x。中文模加法逆元与取反加一说明准确。"
+        },
+        {
+          "id": "principle-2-twos-add",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            127
+          ],
+          "status": "PASS",
+          "basis": "页图确认 (2.13) 三支、输入补码范围和两端严格/非严格不等号。中文按精确和分段并明确C11有符号越界加法未定义。"
+        },
+        {
+          "id": "principle-2-twos-overflow",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            129
+          ],
+          "status": "PASS",
+          "basis": "页图确认正溢出条件x>0、y>0、s≤0，负溢出条件x<0、y<0、s≥0。中文解释正分支实际s<0、负分支允许0，并要求C预先检查；无删改原书判据。"
+        },
+        {
+          "id": "principle-2-twos-negation",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            132
+          ],
+          "status": "PASS",
+          "basis": "页图确认 (2.15) 输入范围及TMin特殊分支。中文以2TMin=−2^w解释模逆元，并区分当前补码环境中的INT_MIN取负越界。"
+        },
+        {
+          "id": "principle-2-unsigned-multiply",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            134
+          ],
+          "status": "PASS",
+          "basis": "页图确认完整范围及 (2.16) 精确积模2^w。中文完整积至多2w位、截断保留低位的推导准确。"
+        },
+        {
+          "id": "principle-2-twos-multiply",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            134
+          ],
+          "status": "PASS",
+          "basis": "页图确认完整范围及 (2.17) U2T_w((xy) mod2^w)。中文先算数学积、再截断再解码，并明确C11结果可表示限制；3位−4×−3的例子成立。"
+        },
+        {
+          "id": "principle-2-product-bits",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            134
+          ],
+          "status": "PASS",
+          "basis": "页图确认完整x/y位向量定义、两种解码、x′/y′及T2B/U2B等式；原式无编号。中文只主张低w位相等，展开积差含2^w的证明正确。"
+        },
+        {
+          "id": "principle-2-power-product",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            138
+          ],
+          "status": "PASS",
+          "basis": "页图确认任意k≥0、结果宽w+k及追加k个零，完整陈述无删项。中文区分扩宽精确乘法与后续固定宽度截断，1011→101100为11×4=44。"
+        },
+        {
+          "id": "principle-2-unsigned-shift",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            139
+          ],
+          "status": "PASS",
+          "basis": "页图确认原书C表达式x<<k及0≤k<w；HTML code标签仅改变排版。中文明确计算宽度、无符号解释和整数提升，固定宽度模型的模乘结论成立。"
+        },
+        {
+          "id": "principle-2-twos-shift",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            139
+          ],
+          "status": "PASS",
+          "basis": "页图确认原书将补码左移直接写作C表达式的原陈述。中文语义校注保留此原文，同时明确C11要求非负左操作数及可表示结果，全域复现使用无符号位串。"
+        },
+        {
+          "id": "principle-2-unsigned-divide",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            141
+          ],
+          "status": "PASS",
+          "basis": "页图确认原书x>>k、0≤k<w和floor(x/2^k)；HTML将斜线式排为分数，含义相同。中文商余分解以及非负时向下=向零正确。"
+        },
+        {
+          "id": "principle-2-arithmetic-floor",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            142
+          ],
+          "status": "PASS",
+          "basis": "页图确认原书明确arithmetically及floor(x/2^k)，条件与陈述完整。中文明确负数右移由C11实现定义；−7/4的两种舍入区别正确。"
+        },
+        {
+          "id": "principle-2-arithmetic-ceil",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            143
+          ],
+          "status": "PASS",
+          "basis": "页图确认原书(x+(1<<k)−1)>>k、算术右移和ceil(x/2^k)。中文把数学恒等式与C11中间表达式合法性区分，专门指出x+(1<<k)不能先溢出；q/r证明正确。"
+        },
+        {
+          "id": "classic-2-byte-memory",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            71
+          ],
+          "status": "PASS",
+          "basis": "印刷70 §2.1开篇原句连续匹配；中文按字节、对象占连续字节及类型决定读取宽度，后续0x01234567大小端表与数值一致。"
+        },
+        {
+          "id": "classic-2-round-even",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            157
+          ],
+          "status": "PASS",
+          "basis": "印刷156舍入讨论原句连续匹配；原句上下文专门讨论中点。中文保留先最近、仅中点取偶，1.125和1.375在四分之一网格上的例子正确。"
+        },
+        {
+          "id": "classic-2-float-association",
+          "file": "chapter02_information.html",
+          "pdf_pages": [
+            160
+          ],
+          "status": "PASS",
+          "basis": "印刷159原句连续匹配；中文给Round模型，并说明不等式表示存在反例。伴读精度已改binary64，和链接的10^16、−10^16、1例子一致。"
+        },
+        {
+          "id": "classic-3-abstractions",
+          "file": "chapter03_machine_level.html",
+          "pdf_pages": [
+            207,
+            208
+          ],
+          "status": "PASS",
+          "basis": "PDF207—208整页图确认两句准确；第二句跨页被脚注/页眉插入，需拼接页207句尾与208首行。两句在同一段中不相邻，来源行现明确中间省略两句。中文分清ISA及虚拟地址。"
+        },
+        {
+          "id": "classic-3-operands",
+          "file": "chapter03_machine_level.html",
+          "pdf_pages": [
+            218
+          ],
+          "status": "PASS",
+          "basis": "印刷217 Figure3.3图注原句连续匹配；中文EA=Imm+R[rb]+sR[ri]、scale集合正确，后续0x1000+4×3+8=0x1014及四字节小端读取一致。"
+        },
+        {
+          "id": "classic-3-zero-extension",
+          "file": "chapter03_machine_level.html",
+          "pdf_pages": [
+            222
+          ],
+          "status": "PASS",
+          "basis": "印刷221传送讨论原句连续匹配；中文限定整数寄存器四字节目的，区分内存写，0xA5零/符号扩展例与指令表正确。"
+        },
+        {
+          "id": "classic-3-lea",
+          "file": "chapter03_machine_level.html",
+          "pdf_pages": [
+            229
+          ],
+          "status": "PASS",
+          "basis": "印刷228 LEA讨论原句连续匹配；中文不解引用、不改条件码、3x+7计算与实际leaq一致。"
+        },
+        {
+          "id": "classic-3-control-dataflow",
+          "file": "chapter03_machine_level.html",
+          "pdf_pages": [
+            237
+          ],
+          "status": "PASS",
+          "basis": "印刷236 §3.6原句连续匹配；中文条件码到控制流/数据流选择准确，后续8位减法SF⊕OF及三行CF/ZF表推演一致。"
+        },
+        {
+          "id": "classic-3-cmov-boundary",
+          "file": "chapter03_machine_level.html",
+          "pdf_pages": [
+            255
+          ],
+          "status": "PASS",
+          "basis": "印刷254原句连续匹配；原文先计算两个候选表达式的上下文已补齐。中文空指针访存不能被后续选择撤销，最小值cmov候选已在寄存器的例子成立。"
+        },
+        {
+          "id": "classic-3-jump-table",
+          "file": "chapter03_machine_level.html",
+          "pdf_pages": [
+            270
+          ],
+          "status": "PASS",
+          "basis": "印刷269原句连续匹配；中文将不随case数增长限定在查表选择步骤，并说明表大小/缓存/稠密度代价；索引归一化和贯穿解释一致。"
+        },
+        {
+          "id": "classic-3-procedure-mechanisms",
+          "file": "chapter03_machine_level.html",
+          "pdf_pages": [
+            276
+          ],
+          "status": "PASS",
+          "basis": "印刷275连续三条机制逐条匹配，中间没有省略正文。中文先定义P调用Q，保留按实际调用需求的限定；栈帧与16字节调用对齐解释一致。"
+        },
+        {
+          "id": "classic-3-recursion",
+          "file": "chapter03_machine_level.html",
+          "pdf_pages": [
+            291
+          ],
+          "status": "PASS",
+          "basis": "印刷290原句连续匹配；中文每次调用的私有保存状态准确。链接rfact先push旧rbx、写本层n，子调用返回先恢复旧rbx，n=3轨迹算6正确。"
+        },
+        {
+          "id": "classic-3-row-major",
+          "file": "chapter03_machine_level.html",
+          "pdf_pages": [
+            295
+          ],
+          "status": "PASS",
+          "basis": "印刷294原句连续匹配，前文明确row-major；同页 (3.1) 的x_D+L(Ci+j)与中文一致。后续数组与指针数组的两次/一次读取及步长区别正确。"
+        },
+        {
+          "id": "classic-3-struct-fields",
+          "file": "chapter03_machine_level.html",
+          "pdf_pages": [
+            304
+          ],
+          "status": "PASS",
+          "basis": "印刷303末尾两句连续匹配；中文限定机器访问中的字段偏移，不把字段名残留当作指令语义。LP64示例偏移0/8/16、总长24与访问指令一致。"
+        },
+        {
+          "id": "classic-3-alignment",
+          "file": "chapter03_machine_level.html",
+          "pdf_pages": [
+            310
+          ],
+          "status": "PASS",
+          "basis": "印刷309 §3.9.3首句连续匹配；中文K正、a非负、ABI取值及alignUp公式明确；内部7字节填充与尾部4字节保证数组步长24。"
+        },
+        {
+          "id": "classic-3-pointer-types",
+          "file": "chapter03_machine_level.html",
+          "pdf_pages": [
+            314
+          ],
+          "status": "PASS",
+          "basis": "印刷313 pointer types条目原句连续匹配；中文区分地址位与类型决定步长/访问，后续补对象生存期、对齐、别名边界。"
+        },
+        {
+          "id": "classic-3-bounds-state",
+          "file": "chapter03_machine_level.html",
+          "pdf_pages": [
+            316
+          ],
+          "status": "PASS",
+          "basis": "印刷315原句连续匹配，上一句的组合条件是缺少数组边界检查与局部量/状态同栈；中文已明确这两点，错误路径与容量控制说明一致。"
+        },
+        {
+          "id": "classic-3-scalar-float",
+          "file": "chapter03_machine_level.html",
+          "pdf_pages": [
+            332
+          ],
+          "status": "PASS",
+          "basis": "印刷331标量浮点讨论原句连续匹配；中文限定本节标量数据使用低32/64位，后续移动位与数值转换、源/目的宽度区分正确。"
+        },
+        {
+          "id": "classic-3-float-unordered",
+          "file": "chapter03_machine_level.html",
+          "pdf_pages": [
+            343
+          ],
+          "status": "PASS",
+          "basis": "印刷342两句连续匹配，同页条件码表核对PF/CF/ZF=1。中文单独jb/je不能排除NaN、先jp或最后cmovp覆盖的解释正确。"
+        }
+      ],
+      "evidence": [
+        "tmp/csapp/refine/review/review-front-456.md",
+        "tmp/csapp/refine/review/review-23.md",
+        "tmp/csapp/refine/review/final-style-readback.json",
+        "tmp/csapp/refine/review/function-anchor-verification.json"
+      ]
+    },
+    "mechanism_revisions": [
+      {
+        "recorded_at": "2026-10-14T02:51:27.674618+00:00",
+        "status": "passed_locally",
+        "assessment": {
+          "thread_title": "rea-评估-v-1",
+          "thread_id": "01a135dd-ac7b-7091-b444-2a06be2b49b3",
+          "report": "tmp/csapp/rea-review-part2/review.json"
+        },
+        "scope": "定点修正8.5.7等待掩码和shell退出清理，补足allocator next-fit独立回归；原文引句、题目条件、章节拓扑保持起始快照内容。",
+        "previous_page_sha256": "d49cb73d2268104470393dd67b3f603d55f82c520f62949b3c910865853a4a9c",
+        "current_page_sha256": "a2f913bc1f83d2e89746e3928f245af56eecf595a339f6d48ec7c0af02e2455b",
+        "findings": [
+          {
+            "id": "cleanup-moved-pgid",
+            "priority": 2,
+            "status": "closed",
+            "behavior": "全部仍登记原进程组和未回收直属PID分别发信号，然后回收；直属信号失败采用WNOHANG并报告失败。"
+          },
+          {
+            "id": "sigsuspend-original-mask",
+            "priority": 3,
+            "status": "closed",
+            "behavior": "waiting复制old后删除SIGCHLD，保留无关信号掩码，结束后恢复old。"
+          },
+          {
+            "id": "next-fit-independent-reference",
+            "kind": "maintenance",
+            "status": "completed",
+            "behavior": "活动区间补集与独立游标覆盖first/next-fit和两种尾部布局，失败核对arena与控制状态。"
+          }
+        ],
+        "evidence": {
+          "old_shell": "tmp/csapp/part2-review-fixes/independent-shell-red.json",
+          "old_template": "tmp/csapp/part2-review-fixes/template-red.json",
+          "independent_review": "tmp/csapp/part2-review-fixes/independent-review.json",
+          "full_check": "tmp/project-check/20261014T104957-jd33ad7l/report.json",
+          "csapp_report": "tmp/project-check/20261014T104957-jd33ad7l/csapp/report.json",
+          "quick_check": "tmp/project-check/20261014T104958-p7j9y0_i/report.json",
+          "browser": "notes/reading_review.json",
+          "test_design": "test/T006-csapp-part-two-review-fixes.md"
+        },
+        "official_interface_review": [
+          "https://pubs.opengroup.org/onlinepubs/9799919799/functions/kill.html",
+          "https://pubs.opengroup.org/onlinepubs/9799919799/functions/sigsuspend.html"
+        ],
+        "boundaries": [
+          "本轮复验使用真实本机POSIX进程、严格C11、ASan/UBSan及ego-browser；引用REA原评估，未新增REA运行。",
+          "仍登记作业的直属PID及原进程组属于本shell清理范围；已经回收移除的历史作业不再跟踪。",
+          "原逐章源审保留原时点；未重复全书逐题源审或生产部署。"
+        ]
+      }
+    ]
+  },
+  "incremental_reviews": [
+    {
+      "issue": "I008",
+      "reviewed_at": "2026-10-14T11:57:09.032789+00:00",
+      "scope": "Three runtime review findings and affected Chapter11/12 mechanism explanations and code copies. Original questions and excerpts unchanged; not a new full-book proof.",
+      "findings": [
+        {
+          "id": "CSAPP-EXPECT-HANDSHAKE",
+          "priority": "P2",
+          "status": "fixed_verified",
+          "summary": "C在完整有效首部后拒绝Expect，handle/select共享request_ready，消息完整性接口保持。",
+          "evidence": "tmp/csapp/review-fixes-part3/http/after/report.json"
+        },
+        {
+          "id": "CSAPP-ACCEPT-WINDOW",
+          "priority": "P2",
+          "status": "fixed_verified",
+          "summary": "select/echo停止接入后继续处理活动连接；短窗口和默认120秒均验证。",
+          "evidence": "tmp/csapp/review-fixes-part3/window/default-120s.json"
+        },
+        {
+          "id": "CSAPP-TIMER-CANCEL",
+          "priority": "P3",
+          "status": "fixed_verified",
+          "summary": "proc以SIGKILL取消专有未回收计时孩子，忽略/屏蔽SIGTERM环境及时返回并恢复信号状态。",
+          "evidence": "tmp/project-check/20261014T195029-yzxp2owq/csapp/part-three-regressions/tfgets-cleanup/tfgets_cleanup_report.json"
+        }
+      ],
+      "open_findings": 0,
+      "full_program_report": "tmp/project-check/20261014T195029-yzxp2owq/csapp/report.json",
+      "independent_review": "tmp/csapp/review-fixes-part3/independent-review.json",
+      "acceptance": "test/T008-csapp-part-three-review-fixes.md",
+      "page_hash_changes": {
+        "chapter11_network.html": {
+          "before": "8575612733b6812822223f19b2d36fb363bd51a0d6770abd537f4a5fe9c2aaf1",
+          "after": "1cc3175d529620d03b112ee3cae11983ecb1771e8c215cb9a68f759b02faa3a1"
+        },
+        "chapter12_concurrency.html": {
+          "before": "52d5fc5c26d4bff651d299a4c78cec838ea594d835c661ec44c541d17a3c388c",
+          "after": "7ac23fb0e0d8418cd69dc616895e9994444abfc967c1f6113d03992f7347da1d"
+        }
+      }
+    },
+    {
+      "issue": "I010",
+      "reviewed_at": "2026-10-14T13:44:25.640972+00:00",
+      "scope": "I010 scoped revision of REA v2 F1-F8: seven findings fixed and verified; 12.39 real-browser proxy acceptance remains pending. Original question conditions, source excerpts and chapter topology retained. Historical whole-book and specialty reviews keep their original scope; this is not a new full-book proof.",
+      "findings": [
+        {
+          "id": "F1",
+          "priority": "P2",
+          "status": "fixed_verified",
+          "chapters": [
+            11,
+            12
+          ],
+          "summary": "HTTP field values trim only SP/HTAB OWS; invalid Host/framing is rejected before Expect. Five server modes pass 150 TCP cases; old source passes 112.",
+          "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/part-three-http-review/report.json"
+        },
+        {
+          "id": "F2",
+          "priority": "P2",
+          "status": "fixed_verified",
+          "chapters": [
+            5,
+            8,
+            9,
+            12
+          ],
+          "summary": "Necessary computations and self-checks execute independently of assert; 24 ordinary/disabled-assertion runs pass and 42 wrong variants fail as intended.",
+          "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/assertion-regressions/report.json"
+        },
+        {
+          "id": "F3",
+          "priority": "P2",
+          "status": "fixed_verified",
+          "chapters": [
+            3
+          ],
+          "summary": "3.33 retains both textbook candidates and states the non-overlap condition; legal char alias gives source-order 1 versus assembly-order C model 257 under the declared LP64/little-endian model.",
+          "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/content-review/report.json"
+        },
+        {
+          "id": "F4",
+          "priority": "P2",
+          "status": "fixed_verified",
+          "chapters": [
+            11,
+            12
+          ],
+          "summary": "Actual C parent forks/execs C or Python CGI and reaps through SIGCHLD; eight lifecycle/overlap/error groups pass, including CGI closing stdin before its response.",
+          "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/part-three-cgi-review/report.json"
+        },
+        {
+          "id": "F5",
+          "priority": "P2",
+          "status": "pending_browser_acceptance",
+          "chapters": [
+            12
+          ],
+          "summary": "12.39 protocol behavior is tested, but no real browser proxy request was made. Isolated proxy-context target creation was denied: Target.createTarget is not allowed.",
+          "evidence": "tmp/csapp/review-v2-fixes/proxy/browser-attempt.json"
+        },
+        {
+          "id": "F6",
+          "priority": "P3",
+          "status": "fixed_verified",
+          "chapters": [
+            9
+          ],
+          "summary": "9.20 compares the same two allocation traces with peak payload / maximum reserved block-storage regions, three repeats. Darwin private scalable zone only; not RSS or total allocator cost.",
+          "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/content-review/report.json"
+        },
+        {
+          "id": "F7",
+          "priority": "P3",
+          "status": "fixed_verified",
+          "chapters": [
+            2
+          ],
+          "summary": "Both negative-t powers in 2.85 have complete MathML and data-tex; missing-exponent variant is rejected and desktop/mobile rendering read.",
+          "evidence": "tmp/csapp/review-v2-fixes/browser/reading-targets.json"
+        },
+        {
+          "id": "F8",
+          "priority": "P3",
+          "status": "fixed_verified",
+          "chapters": [
+            9
+          ],
+          "summary": "9.6.3 distinguishes index 8 from the ninth region; 9215 = 8*1024+1023, with the 16 KiB total unchanged.",
+          "evidence": "tmp/csapp/review-v2-fixes/content/source-readback.json"
+        }
+      ],
+      "open_findings": 1,
+      "full_program_report": "tmp/project-check/20261014T213638-7e7waj6i/csapp/report.json",
+      "independent_reviews": [
+        "tmp/csapp/review-v2-fixes/assertions/independent-review.json",
+        "tmp/csapp/review-v2-fixes/independent-assertions.json"
+      ],
+      "acceptance": "test/T010-csapp-review-v2-fixes.md",
+      "page_hash_changes": {
+        "chapter02_information.html": {
+          "before": "8099dbba0002bfb3d7b58d888c576502b3533296c43e9218aff0bcf95bbbd6ac",
+          "after": "4080270fb0beb7cd0b77815af29817646cce78048ff1288eade3585b59a17c4b"
+        },
+        "chapter03_machine_level.html": {
+          "before": "893833bdeda3fd325cd55595ac6109c6e0aae62da0fa612f09322a50edfcaa16",
+          "after": "77c0b6e876335f5d33205473fef0f85671f09162dcf91089cd7ed9857d8a2351"
+        },
+        "chapter05_optimization.html": {
+          "before": "5ac95eb5cd636bc184179b44434122d779b53267944ca3c5928586b6cf9a668b",
+          "after": "3f06e019bdf7932d09661c4fbc1952a5c2cfdb7c2176e1a7ea5d9a52f09476e0"
+        },
+        "chapter08_exceptional.html": {
+          "before": "a2f913bc1f83d2e89746e3928f245af56eecf595a339f6d48ec7c0af02e2455b",
+          "after": "7b2fc2581526cdd2cfb8cd54a6ee110e234141ad8d031e7d8d4ab9b8dae77f4c"
+        },
+        "chapter09_virtual_memory.html": {
+          "before": "21d1f4d466c82be050150ad90602a466191dd850a6c47e90c137695cac8408cf",
+          "after": "8b5cc09eaff849778b16e67dae2d8c1aff72863739f7cb319ef027f7d288e23a"
+        },
+        "chapter11_network.html": {
+          "before": "1cc3175d529620d03b112ee3cae11983ecb1771e8c215cb9a68f759b02faa3a1",
+          "after": "accfab6b86c5cb39e9c1a5526aee616afeffbc6f58e9bddbb970395a6bae39d0"
+        },
+        "chapter12_concurrency.html": {
+          "before": "7ac23fb0e0d8418cd69dc616895e9994444abfc967c1f6113d03992f7347da1d",
+          "after": "a9e7498b225e3d6ff261b47c64b0f1a6a5bed71b3598b3b4fdfa8e9905c8cc1e"
+        }
+      }
+    },
+    {
+      "issue": "I011",
+      "reviewed_at": "2026-10-14T14:17:18.562268+00:00",
+      "status": "verified_locally",
+      "scope": "PDF publication navigation only. The chapter 6 changes are exactly two source-link URLs and displayed start-page values; program/source-excerpt content unchanged. The previous F5 browser-proxy acceptance stays pending.",
+      "page_hash_change": {
+        "page": "chapter06_memory.html",
+        "before": "4d2091e128aeca78ab483e9415e558ab8f2058ae3d1520009dc01ba52d3db3dd",
+        "after": "aa335c9232be4be6c3b0516c7a40df688d8bebe6a5dec8fac1b9eb5c57b94f5f"
+      },
+      "source_pdf_sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+      "changes": [
+        {
+          "section": "6.3",
+          "pdf_before": 647,
+          "pdf_after": 646,
+          "printed_after": 645
+        },
+        {
+          "section": "6.4",
+          "pdf_before": 652,
+          "pdf_after": 651,
+          "printed_after": 650
+        }
+      ],
+      "source_pages_visually_read": [
+        646,
+        651
+      ],
+      "regression": "tools/test_reader_views.py",
+      "static_check": "tmp/project-check/20261014T221214-soi4soo2/report.json",
+      "package_audit": "tmp/csapp/pdf-navigation/package-audit.json",
+      "qa_release": "20261014T221113",
+      "acceptance": "test/T011-csapp-pdf-navigation.md"
+    }
+  ],
+  "current_revision_scope": "I010 scoped revision of REA v2 F1-F8: seven findings fixed and verified; 12.39 real-browser proxy acceptance remains pending. Original question conditions, source excerpts and chapter topology retained. Historical whole-book and specialty reviews keep their original scope; this is not a new full-book proof.",
+  "pdf_navigation_revision": {
+    "issue": "I011",
+    "reviewed_at": "2026-10-14T14:17:18.562268+00:00",
+    "status": "verified_locally",
+    "scope": "PDF publication navigation only. The chapter 6 changes are exactly two source-link URLs and displayed start-page values; program/source-excerpt content unchanged. The previous F5 browser-proxy acceptance stays pending.",
+    "page_hash_change": {
+      "page": "chapter06_memory.html",
+      "before": "4d2091e128aeca78ab483e9415e558ab8f2058ae3d1520009dc01ba52d3db3dd",
+      "after": "aa335c9232be4be6c3b0516c7a40df688d8bebe6a5dec8fac1b9eb5c57b94f5f"
+    },
+    "source_pdf_sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+    "changes": [
+      {
+        "section": "6.3",
+        "pdf_before": 647,
+        "pdf_after": 646,
+        "printed_after": 645
+      },
+      {
+        "section": "6.4",
+        "pdf_before": 652,
+        "pdf_after": 651,
+        "printed_after": 650
+      }
+    ],
+    "source_pages_visually_read": [
+      646,
+      651
+    ],
+    "regression": "tools/test_reader_views.py",
+    "static_check": "tmp/project-check/20261014T221214-soi4soo2/report.json",
+    "package_audit": "tmp/csapp/pdf-navigation/package-audit.json",
+    "qa_release": "20261014T221113",
+    "acceptance": "test/T011-csapp-pdf-navigation.md"
+  }
+}

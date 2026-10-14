@@ -1,0 +1,1110 @@
+{
+  "chapter": 8,
+  "edition": "Computer Systems: A Programmer’s Perspective, Third Global Edition",
+  "source": {
+    "path": "books/csapp/csapp.pdf",
+    "sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+    "pdf_pages": [
+      758,
+      836
+    ],
+    "printed_pages": [
+      757,
+      835
+    ],
+    "source_text": "tmp/csapp/part2/ch08/source.txt",
+    "visual_pages": [
+      818,
+      825,
+      826,
+      827,
+      828,
+      829,
+      830,
+      831,
+      832,
+      833,
+      834
+    ],
+    "visual_scope": "sigsuspend pseudocode, complete homework pages, practice solution figures 8.47-8.49 and wakeup correction"
+  },
+  "page": "books/csapp/notes/chapter08_exceptional.html",
+  "page_sha256": "7b2fc2581526cdd2cfb8cd54a6ee110e234141ad8d031e7d8d4ab9b8dae77f4c",
+  "scope": {
+    "main_sections": [
+      "s8-1",
+      "s8-2",
+      "s8-3",
+      "s8-4",
+      "s8-5",
+      "s8-6",
+      "s8-7",
+      "s8-8"
+    ],
+    "subsections": [
+      "ss8-1-1",
+      "ss8-1-2",
+      "ss8-1-3",
+      "ss8-2-1",
+      "ss8-2-2",
+      "ss8-2-3",
+      "ss8-2-4",
+      "ss8-2-5",
+      "ss8-4-1",
+      "ss8-4-2",
+      "ss8-4-3",
+      "ss8-4-4",
+      "ss8-4-5",
+      "ss8-4-6",
+      "ss8-5-1",
+      "ss8-5-2",
+      "ss8-5-3",
+      "ss8-5-4",
+      "ss8-5-5",
+      "ss8-5-6",
+      "ss8-5-7"
+    ],
+    "original_exercises": 26,
+    "practice": 8,
+    "homework": 18,
+    "reading_notes": 8,
+    "annotation_cards": 16,
+    "original_self_checks": [
+      "q8-1",
+      "q8-2",
+      "q8-3"
+    ]
+  },
+  "exercises": [
+    {
+      "number": "8.1",
+      "kind": "practice",
+      "anchor": "ex-8-1",
+      "pdf_pages": [
+        771
+      ],
+      "printed_pages": [
+        770
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.2",
+      "kind": "practice",
+      "anchor": "ex-8-2",
+      "pdf_pages": [
+        780
+      ],
+      "printed_pages": [
+        779
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": "书末 p832 的 8、9、10 把后缀运算当成先缀；父行还误印成 p1。这里按题干 C 表达式的取值规则计算，保留题干不改。"
+    },
+    {
+      "number": "8.3",
+      "kind": "practice",
+      "anchor": "ex-8-3",
+      "pdf_pages": [
+        782,
+        783
+      ],
+      "printed_pages": [
+        781,
+        782
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": "书末 p833 只列三种，遗漏 930636。每个字符都按题干的 fflush 或 exit 刷新，故这个排列有合法实现。"
+    },
+    {
+      "number": "8.4",
+      "kind": "practice",
+      "anchor": "ex-8-4",
+      "pdf_pages": [
+        785
+      ],
+      "printed_pages": [
+        784
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": "图 8.49 将父子 !pid 标签颠倒；题干程序与所给一种顺序可以正确解释为父 0、子 1。"
+    },
+    {
+      "number": "8.5",
+      "kind": "practice",
+      "anchor": "ex-8-5",
+      "pdf_pages": [
+        787
+      ],
+      "printed_pages": [
+        786
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": "书末 p833 使用 secs−rc+1，完整 sleep(4) 会打印 5，sleep(0) 也会打印 1，均不符合题意；无符号量格式应使用 %u。"
+    },
+    {
+      "number": "8.6",
+      "kind": "practice",
+      "anchor": "ex-8-6",
+      "pdf_pages": [
+        789,
+        790
+      ],
+      "printed_pages": [
+        788,
+        789
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": "原书印刷788/PDF789样例标题 Command-ine arguments 漏印字母 l；页面规范为 Command-line arguments 并明示校注。"
+    },
+    {
+      "number": "8.7",
+      "kind": "practice",
+      "anchor": "ex-8-7",
+      "pdf_pages": [
+        801
+      ],
+      "printed_pages": [
+        800
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": "题 8.5 实际把接口命名为 wakeup，8.7 却称 snooze；本题保留示例所要求的显示文本，底层计算采用 8.5 的纠正公式。"
+    },
+    {
+      "number": "8.8",
+      "kind": "practice",
+      "anchor": "ex-8-8",
+      "pdf_pages": [
+        810,
+        811
+      ],
+      "printed_pages": [
+        809,
+        810
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.9",
+      "kind": "homework",
+      "anchor": "ex-8-9",
+      "pdf_pages": [
+        825
+      ],
+      "printed_pages": [
+        824
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.10",
+      "kind": "homework",
+      "anchor": "ex-8-10",
+      "pdf_pages": [
+        825
+      ],
+      "printed_pages": [
+        824
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": "题目选项不足；不能把 setenv 硬配 B。正文已标出旧 unsetenv 原型，接口应按实际 POSIX 声明使用。"
+    },
+    {
+      "number": "8.11",
+      "kind": "homework",
+      "anchor": "ex-8-11",
+      "pdf_pages": [
+        825
+      ],
+      "printed_pages": [
+        824
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.12",
+      "kind": "homework",
+      "anchor": "ex-8-12",
+      "pdf_pages": [
+        826
+      ],
+      "printed_pages": [
+        825
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.13",
+      "kind": "homework",
+      "anchor": "ex-8-13",
+      "pdf_pages": [
+        826
+      ],
+      "printed_pages": [
+        825
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.14",
+      "kind": "homework",
+      "anchor": "ex-8-14",
+      "pdf_pages": [
+        826,
+        827
+      ],
+      "printed_pages": [
+        825,
+        826
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.15",
+      "kind": "homework",
+      "anchor": "ex-8-15",
+      "pdf_pages": [
+        827
+      ],
+      "printed_pages": [
+        826
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.16",
+      "kind": "homework",
+      "anchor": "ex-8-16",
+      "pdf_pages": [
+        827,
+        828
+      ],
+      "printed_pages": [
+        826,
+        827
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.17",
+      "kind": "homework",
+      "anchor": "ex-8-17",
+      "pdf_pages": [
+        828
+      ],
+      "printed_pages": [
+        827
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.18",
+      "kind": "homework",
+      "anchor": "ex-8-18",
+      "pdf_pages": [
+        828,
+        829
+      ],
+      "printed_pages": [
+        827,
+        828
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.19",
+      "kind": "homework",
+      "anchor": "ex-8-19",
+      "pdf_pages": [
+        829
+      ],
+      "printed_pages": [
+        828
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.20",
+      "kind": "homework",
+      "anchor": "ex-8-20",
+      "pdf_pages": [
+        829
+      ],
+      "printed_pages": [
+        828
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.21",
+      "kind": "homework",
+      "anchor": "ex-8-21",
+      "pdf_pages": [
+        829,
+        830
+      ],
+      "printed_pages": [
+        828,
+        829
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.22",
+      "kind": "homework",
+      "anchor": "ex-8-22",
+      "pdf_pages": [
+        830
+      ],
+      "printed_pages": [
+        829
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.23",
+      "kind": "homework",
+      "anchor": "ex-8-23",
+      "pdf_pages": [
+        830,
+        831
+      ],
+      "printed_pages": [
+        829,
+        830
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.24",
+      "kind": "homework",
+      "anchor": "ex-8-24",
+      "pdf_pages": [
+        830
+      ],
+      "printed_pages": [
+        829
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.25",
+      "kind": "homework",
+      "anchor": "ex-8-25",
+      "pdf_pages": [
+        831
+      ],
+      "printed_pages": [
+        830
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    },
+    {
+      "number": "8.26",
+      "kind": "homework",
+      "anchor": "ex-8-26",
+      "pdf_pages": [
+        831,
+        832,
+        833
+      ],
+      "printed_pages": [
+        830,
+        831,
+        832
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "source_correction": null
+    }
+  ],
+  "programs": [
+    {
+      "path": "books/csapp/code/ch08_ecf.c",
+      "language": "c",
+      "html_code_id": "ch08_ecf-c",
+      "sha256": "23d53686b4e50f111158d2c0d155833eb87bff5de500164bf5fb4d9a1c923846",
+      "exact_display_match": true
+    },
+    {
+      "path": "books/csapp/code/ch08_ecf.py",
+      "language": "python",
+      "html_code_id": "ch08_ecf-python",
+      "sha256": "3a3aeb8c5152105501ed8eb98c870342cd4d980bcfe5eff9fe21e1375569f0e2",
+      "exact_display_match": true
+    },
+    {
+      "path": "books/csapp/code/ch08_io.c",
+      "language": "c",
+      "html_code_id": "ch08_io-c",
+      "sha256": "e1127d2d2151de28351431760fe673dd5b337f5365051e7357ea0202ff10e63e",
+      "exact_display_match": true
+    },
+    {
+      "path": "books/csapp/code/ch08_io.py",
+      "language": "python",
+      "html_code_id": "ch08_io-python",
+      "sha256": "74a2981809056f691c54bfb6490632833f4845e99078fa262f8dfb97a4134188",
+      "exact_display_match": true
+    },
+    {
+      "path": "books/csapp/code/ch08_shell.c",
+      "language": "c",
+      "html_code_id": "ch08_shell-c",
+      "sha256": "c8eb7e7066aa6aa04a70b11cb0e3fb9f6bcc3d33f4a37a305453c0cf7ac8328d",
+      "exact_display_match": true
+    },
+    {
+      "path": "books/csapp/code/ch08_shell.py",
+      "language": "python",
+      "html_code_id": "ch08_shell-python",
+      "sha256": "a395a858cb56fc8541f9317f3d3d79d6dbf987f264779522561e3851667c123f",
+      "exact_display_match": true
+    }
+  ],
+  "verification": {
+    "strict_compile_and_default_run": "passed strict C11 POSIX ASan/UBSan on current macOS host; all 3 C and Python default outputs match",
+    "independent_review": "not performed by chapter author",
+    "browser_acceptance": "integration owner runs separately",
+    "parent_pty_regression": "tmp/csapp/part2/independent-regressions-v2/shell-pty.txt; external SIGINT forwarding, not physical keyboard input",
+    "author_evidence": "tmp/csapp/part2/ch08/verification.json",
+    "additional_cases": "12 ECF runs; tfgets line/partial/EOF and measured 5.07 second timeout; signal-interrupted snooze; invalid seconds; independent 8.18 permutation oracle"
+  },
+  "source_notes": [
+    "8.2 postfix operators miscomputed in printed solutions",
+    "8.3 omitted 930636",
+    "8.4 figure parent/child !pid labels reversed",
+    "8.5 erroneous +1",
+    "8.10 missing setenv option and obsolete unsetenv prototype",
+    "Figure 8.19 out-of-range pid[i++] loop",
+    "p817 SIG_BLOCK pseudocode should be atomic mask replacement",
+    "p821 sigsetjmp does not save pending signals"
+  ],
+  "boundaries": [
+    "POSIX single-threaded process examples on current host; Linux/x86-64 ABI explanation is separate",
+    "Python programs model logic and do not certify native signal handlers or hardware exceptions",
+    "tfgets requires exclusive fd-backed FILE use and restores file status flags; timeout consumes partial input",
+    "Shell implements textbook signal-forwarding job control, not tcsetpgrp terminal handoff",
+    "Linux intentional text-write fault mode is excluded from default/sanitizer runs"
+  ],
+  "status": "content_programs_and_local_reading_verified",
+  "editorial_revision": {
+    "scope": "ex-8-6 original example heading typo note only",
+    "previous_page_sha256": "6092f2161fd098f4827a62688bc3f386ce59b72eb6a8a6cb983dd9ff8973443a",
+    "page_sha256": "8527a00be7a1a8fe833906ac29b808cf9ca2f1762380b8d9fc5f4f735b5a96c9",
+    "programs_changed": false
+  },
+  "integrated_verification": {
+    "status": "passed_locally",
+    "recorded_at": "2026-10-14T01:55:51.767578+00:00",
+    "author_page_sha256": "8527a00be7a1a8fe833906ac29b808cf9ca2f1762380b8d9fc5f4f735b5a96c9",
+    "current_page_sha256": "d49cb73d2268104470393dd67b3f603d55f82c520f62949b3c910865853a4a9c",
+    "independent_review": {
+      "reviewer": "independent chapter07 author reviewing chapter08",
+      "scope": {
+        "source_pages_read": [
+          782,
+          783,
+          831,
+          832,
+          833,
+          834
+        ],
+        "source_visual_pages": [
+          831
+        ],
+        "page_sections_read": [
+          "8.1",
+          "8.2",
+          "8.3",
+          "8.4",
+          "8.5",
+          "8.6"
+        ],
+        "exercise_checks": [
+          "8.2",
+          "8.3",
+          "8.7",
+          "8.8",
+          "8.21",
+          "8.23",
+          "8.24",
+          "8.25",
+          "8.26"
+        ],
+        "sources_read": [
+          "code/ch08_ecf.c",
+          "code/ch08_io.c",
+          "code/ch08_shell.c"
+        ]
+      },
+      "independent_calculation": {
+        "8.3_topological_orders": [
+          "093636",
+          "903636",
+          "930636",
+          "936036"
+        ]
+      },
+      "mechanism_findings": [],
+      "source_locator_findings": [
+        {
+          "exercise": "8.3",
+          "current": "PDF782 only",
+          "required": "PDF782-783",
+          "severity": "P3"
+        },
+        {
+          "exercise": "8.26",
+          "current": "PDF831 only",
+          "required": "PDF831-833 including complete requirements and Figure8.46",
+          "severity": "P3"
+        }
+      ],
+      "not_checked": [
+        "All other original exercises",
+        "Browser rendering",
+        "Linux intentional text-write fault",
+        "Full POSIX portability beyond documented host"
+      ],
+      "bindings": {
+        "notes/chapter08_exceptional.html": "acff8b22d16c451d148678b60dcecc32996b59738f0109b140959da6b60a3a9b",
+        "code/ch08_ecf.c": "23d53686b4e50f111158d2c0d155833eb87bff5de500164bf5fb4d9a1c923846",
+        "code/ch08_io.c": "e1127d2d2151de28351431760fe673dd5b337f5365051e7357ea0202ff10e63e",
+        "code/ch08_shell.c": "c8eb7e7066aa6aa04a70b11cb0e3fb9f6bcc3d33f4a37a305453c0cf7ac8328d"
+      },
+      "source_locator_resolution": {
+        "status": "resolved",
+        "scope": "visible source range only; data attributes had already included the full page lists",
+        "visible_ranges_verified": [
+          "8.3 PDF782-783",
+          "8.26 PDF831-833"
+        ],
+        "updated_page_sha256": "6092f2161fd098f4827a62688bc3f386ce59b72eb6a8a6cb983dd9ff8973443a"
+      },
+      "full_exercise_review": {
+        "status": "complete_no_open_findings",
+        "part_ii_original_exercises_total": 59,
+        "chapter_original_exercises_total": 26,
+        "historical_review_count": 9,
+        "count_correction": "Earlier message saying 10 was a counting error; historical exercise_checks actually lists 9. This continuation adds all 17 missing exercises.",
+        "new_exercises": [
+          "8.1",
+          "8.4",
+          "8.5",
+          "8.6",
+          "8.9",
+          "8.10",
+          "8.11",
+          "8.12",
+          "8.13",
+          "8.14",
+          "8.15",
+          "8.16",
+          "8.17",
+          "8.18",
+          "8.19",
+          "8.20",
+          "8.22"
+        ],
+        "source_text_pages_read_this_continuation": [
+          771,
+          780,
+          785,
+          786,
+          787,
+          788,
+          789,
+          790,
+          801,
+          810,
+          811,
+          825,
+          826,
+          827,
+          828,
+          829,
+          830,
+          831
+        ],
+        "source_visual_pages_this_continuation": [
+          771,
+          785,
+          787,
+          789,
+          790,
+          810,
+          811,
+          825,
+          826,
+          827,
+          828,
+          829,
+          830
+        ],
+        "source_pdf_sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+        "exercises": [
+          {
+            "number": "8.1",
+            "source_pdf_pages": [
+              771
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "核对进程区间表A[1,3]、B[2,5]、C[4,6]；独立区间交集计算AB/BC并发，AC不并发。",
+            "review_stage": "continuation"
+          },
+          {
+            "number": "8.2",
+            "source_pdf_pages": [
+              780
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "复读PDF780完整程序与A/B：后缀运算先取旧值，子p1=9,p2=8；父p2=9。保留并纠正书末先缀式误算。",
+            "review_stage": "historical_with_selective_recheck"
+          },
+          {
+            "number": "8.3",
+            "source_pdf_pages": [
+              782,
+              783
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "历史轮独立枚举093636、903636、930636、936036；父子私有a、wait与显式fflush建立偏序，书末漏930636。跨页782-783可见来源修复已核验。",
+            "review_stage": "historical_with_selective_recheck"
+          },
+          {
+            "number": "8.4",
+            "source_pdf_pages": [
+              785
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "完整核对程序与A/B；行缓冲模型7行，父!pid=0子!pid=1；给出合法顺序，图8.49父子标签错误已标注；全缓冲Start复制后8物理行边界说明正确。",
+            "review_stage": "continuation"
+          },
+          {
+            "number": "8.5",
+            "source_pdf_pages": [
+              787
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "wakeup接口、示例与返回剩余秒数吻合；secs-rem而非书末+1。独立严格编译ASan/UBSan运行wakeup(0)打印0且返回0。",
+            "review_stage": "continuation"
+          },
+          {
+            "number": "8.6",
+            "source_pdf_pages": [
+              789,
+              790
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "跨页789-790核对全部argv/env样例、程序循环和NULL终止；维护程序--myecho演示模式首参数差异已明确。原页Command-ine排印漏l已通知作者。 已读回显式漏印l校注，关闭该编辑项。",
+            "review_stage": "continuation"
+          },
+          {
+            "number": "8.7",
+            "source_pdf_pages": [
+              801
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "复读PDF801：参数5、Ctrl+C在约3秒、输出Slept for3of5完整；空handler使sleep返回，输出不在handler内，原8.5接口名与本题snooze不一致已说明。",
+            "review_stage": "historical_with_selective_recheck"
+          },
+          {
+            "number": "8.8",
+            "source_pdf_pages": [
+              810,
+              811
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "重读并目视PDF810-811全部36行，先输出并flush2，子handler输出1且_exit，父wait后私有counter递增为3，结果213；信号安全边界与父子不共享counter说明匹配。",
+            "review_stage": "historical_with_selective_recheck"
+          },
+          {
+            "number": "8.9",
+            "source_pdf_pages": [
+              825
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "逐项核对四区间和6对问题；独立交集计算仅AB不并发，其余5对并发。",
+            "review_stage": "continuation"
+          },
+          {
+            "number": "8.10",
+            "source_pdf_pages": [
+              825
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "核对4函数与A/B/C选项；execve=A,getenv=C，原书void unsetenv可对应B；setenv返回int无对应选项，当代unsetenv也int，页面未强行错配。",
+            "review_stage": "continuation"
+          },
+          {
+            "number": "8.11",
+            "source_pdf_pages": [
+              825
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "核对i=3;i>0;i--的3次Fork，打印在循环之后，8进程各输出一次。",
+            "review_stage": "continuation"
+          },
+          {
+            "number": "8.12",
+            "source_pdf_pages": [
+              826
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "核对try内两Fork/中间输出及main再Fork，终端2+8=10行；全缓冲早期2次内容各经历2次复制，物理16行说明正确。",
+            "review_stage": "continuation"
+          },
+          {
+            "number": "8.13",
+            "source_pdf_pages": [
+              826
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "核对a=5、父分支--a及共同++a，父4后5，子6；页面一个合法输出及插入约束成立。",
+            "review_stage": "continuation"
+          },
+          {
+            "number": "8.14",
+            "source_pdf_pages": [
+              826,
+              827
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "目视跨页826-827，try中父分支Fork、打印且exit，子返回main再Fork打印，合计2+2=4，exit阻止继续main已讲清。",
+            "review_stage": "continuation"
+          },
+          {
+            "number": "8.15",
+            "source_pdf_pages": [
+              827
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "核对try首Fork的子分支再Fork两次并打印，4个分支都return到main再打印，原父main再1，合计4+4+1=9。",
+            "review_stage": "continuation"
+          },
+          {
+            "number": "8.16",
+            "source_pdf_pages": [
+              827,
+              828
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "核对跨页827-828父wait子退出及counter初值1；子修改不回写父，父再加1打印2。",
+            "review_stage": "continuation"
+          },
+          {
+            "number": "8.17",
+            "source_pdf_pages": [
+              828
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "枚举所有满足父0<父2<父Stop、子1<Child<子Stop<父2约束的排列，恰4种，与页面完整列表一致。",
+            "review_stage": "continuation"
+          },
+          {
+            "number": "8.18",
+            "source_pdf_pages": [
+              828,
+              829
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "目视跨页828-829及5个选项；独立枚举6个有身份输出事件的720排列，约束两条atexit输出顺序，50种不同字符串，A/C/E可达、B/D不可达。",
+            "review_stage": "continuation"
+          },
+          {
+            "number": "8.19",
+            "source_pdf_pages": [
+              829
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "核对foo(6)、i=n-1、i-=2，i=5,3,1三次fork产生8次Hello；n非负时ceil(n/2)边界n=0也成立。",
+            "review_stage": "continuation"
+          },
+          {
+            "number": "8.20",
+            "source_pdf_pages": [
+              829
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "核对myls接收原参数、原环境并调用execve的要求及COLUMNS40/80环境示例；实现argv0=ls和失败127，模式argv+1正确，80列为原题历史假设已区分。",
+            "review_stage": "continuation"
+          },
+          {
+            "number": "8.21",
+            "source_pdf_pages": [
+              829,
+              830
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "历史已核对；本轮再读829-830跨页：fork前p已fflush，父输出q、子输出r；子没有孩子，waitpid返回ECHILD，q/r无次序约束，因此pqr或prq，与页面一致。",
+            "review_stage": "historical_with_selective_recheck"
+          },
+          {
+            "number": "8.22",
+            "source_pdf_pages": [
+              830
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "核对/bin/sh -c、正常返回退出码及异常返回状态要求；源码fork/execve/_exit127/waitpid指定子与EINTR循环。独立运行exit8→8、exit0→0、自有shell SIGTERM→WIFSIGNALED+15、NULL→EINVAL。",
+            "review_stage": "continuation"
+          },
+          {
+            "number": "8.23",
+            "source_pdf_pages": [
+              830,
+              831
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "历史已核对SIGUSR2五次发送与标准信号合并；本轮复读PDF830-831的全部题干和图8.45的29行程序，handler休眠1秒、父Wait后打印。第1次处理期间其余通知合并成一个pending的时间线可给2，但不是所有调度必为2，页面明确此边界。",
+            "review_stage": "historical_with_selective_recheck"
+          },
+          {
+            "number": "8.24",
+            "source_pdf_pages": [
+              830
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "历史核对对原waitprob0增加打印终止信号及修改子写只读代码段；维护实现仅Linux专用模式、默认与sanitizer排除，未假称宿主Darwin实际Linux fault。",
+            "review_stage": "historical_with_selective_recheck"
+          },
+          {
+            "number": "8.25",
+            "source_pdf_pages": [
+              831
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "历史核对tfgets在5秒内读行并超时NULL要求，审读实现与边界：单调时钟、既有stdio缓冲、poll、恢复flags、部分EOF/timeout语义明确；本次未重复耗时超时测试。",
+            "review_stage": "historical_with_selective_recheck"
+          },
+          {
+            "number": "8.26",
+            "source_pdf_pages": [
+              831,
+              832,
+              833
+            ],
+            "complete_question_subparts_input_program_checked": true,
+            "answer_derivation_checked": true,
+            "evidence": "历史跨页831-833逐项核对shell全部要求及图8.46；维护shell审读job表、屏蔽CHLD后fork/register、pselect、reap、前台信号转发与bg/fg；简化模型不含tcsetpgrp已声明，浏览器与PTY由root另验。",
+            "review_stage": "historical_with_selective_recheck"
+          }
+        ],
+        "independent_calculations": "tmp/csapp/part2/ch07/review08/independent-results.json",
+        "runtime_harness": "tmp/csapp/part2/ch07/review08/io_harness.c",
+        "runtime_result": "tmp/csapp/part2/ch07/review08/io-harness.txt",
+        "runtime_compile": "cc -std=c11 -Wall -Wextra -Werror -pedantic -fsanitize=address,undefined",
+        "mechanism_findings": [],
+        "editorial_findings": [
+          {
+            "exercise": "8.6",
+            "severity": "P3",
+            "source": "PDF789 original sample says Command-ine arguments:",
+            "page": "Command-line arguments:",
+            "action": "Requested a visible note that the missing l is a source typo; no program change required.",
+            "status": "resolved",
+            "resolution": "Visible source typo note inserted and read back; author review source_correction synchronized."
+          }
+        ],
+        "current_bindings": {
+          "notes/chapter08_exceptional.html": "8527a00be7a1a8fe833906ac29b808cf9ca2f1762380b8d9fc5f4f735b5a96c9",
+          "code/ch08_ecf.c": "23d53686b4e50f111158d2c0d155833eb87bff5de500164bf5fb4d9a1c923846",
+          "code/ch08_io.c": "e1127d2d2151de28351431760fe673dd5b337f5365051e7357ea0202ff10e63e",
+          "code/ch08_shell.c": "c8eb7e7066aa6aa04a70b11cb0e3fb9f6bcc3d33f4a37a305453c0cf7ac8328d"
+        },
+        "remaining_unverified": [
+          "Browser rendering (root owns integrated browser acceptance)",
+          "Linux intentional text-write fault on a Linux runtime",
+          "Full POSIX portability beyond current documented Darwin host"
+        ],
+        "history_preservation": "Top-level scope, not_checked and bindings retain the first limited review as history; this object expands exercise coverage to all 26."
+      }
+    },
+    "full_check": "tmp/project-check/20261014T093905-tss_fd89/report.json",
+    "final_static_check": "tmp/project-check/20261014T095134-wubdivie/report.json",
+    "browser_review": "notes/reading_review.json",
+    "presentation_changes_after_peer_review": "3张短表增加compact-table；8.6校注已由独审者读回",
+    "boundary": "作者逐题源审、第二人复核、执行和浏览器验收分别记录；旧hash保持其原审阅时点。"
+  },
+  "author_status_before_integration": {
+    "status": "authored_and_program_verified_pending_integrated_reading"
+  },
+  "assessment_revision": {
+    "recorded_at": "2026-10-14T02:51:27.674618+00:00",
+    "status": "passed_locally",
+    "assessment": {
+      "thread_title": "rea-评估-v-1",
+      "thread_id": "01a135dd-ac7b-7091-b444-2a06be2b49b3",
+      "report": "tmp/csapp/rea-review-part2/review.json"
+    },
+    "scope": "定点修正8.5.7等待掩码和shell退出清理，补足allocator next-fit独立回归；原文引句、题目条件、章节拓扑保持起始快照内容。",
+    "previous_page_sha256": "d49cb73d2268104470393dd67b3f603d55f82c520f62949b3c910865853a4a9c",
+    "current_page_sha256": "a2f913bc1f83d2e89746e3928f245af56eecf595a339f6d48ec7c0af02e2455b",
+    "findings": [
+      {
+        "id": "cleanup-moved-pgid",
+        "priority": 2,
+        "status": "closed",
+        "behavior": "全部仍登记原进程组和未回收直属PID分别发信号，然后回收；直属信号失败采用WNOHANG并报告失败。"
+      },
+      {
+        "id": "sigsuspend-original-mask",
+        "priority": 3,
+        "status": "closed",
+        "behavior": "waiting复制old后删除SIGCHLD，保留无关信号掩码，结束后恢复old。"
+      },
+      {
+        "id": "next-fit-independent-reference",
+        "kind": "maintenance",
+        "status": "completed",
+        "behavior": "活动区间补集与独立游标覆盖first/next-fit和两种尾部布局，失败核对arena与控制状态。"
+      }
+    ],
+    "evidence": {
+      "old_shell": "tmp/csapp/part2-review-fixes/independent-shell-red.json",
+      "old_template": "tmp/csapp/part2-review-fixes/template-red.json",
+      "independent_review": "tmp/csapp/part2-review-fixes/independent-review.json",
+      "full_check": "tmp/project-check/20261014T104957-jd33ad7l/report.json",
+      "csapp_report": "tmp/project-check/20261014T104957-jd33ad7l/csapp/report.json",
+      "quick_check": "tmp/project-check/20261014T104958-p7j9y0_i/report.json",
+      "browser": "notes/reading_review.json",
+      "test_design": "test/T006-csapp-part-two-review-fixes.md"
+    },
+    "official_interface_review": [
+      "https://pubs.opengroup.org/onlinepubs/9799919799/functions/kill.html",
+      "https://pubs.opengroup.org/onlinepubs/9799919799/functions/sigsuspend.html"
+    ],
+    "boundaries": [
+      "本轮复验使用真实本机POSIX进程、严格C11、ASan/UBSan及ego-browser；引用REA原评估，未新增REA运行。",
+      "仍登记作业的直属PID及原进程组属于本shell清理范围；已经回收移除的历史作业不再跟踪。",
+      "原逐章源审保留原时点；未重复全书逐题源审或生产部署。"
+    ]
+  },
+  "review_v2_revision": {
+    "issue": "I010",
+    "reviewed_at": "2026-10-14T13:44:25.640972+00:00",
+    "scope": "Only this chapter's listed REA v2 findings and affected source copies; prior reviews retain their scope.",
+    "previous_current_fields": {
+      "status": "content_source_program_and_reading_verified_locally",
+      "page_sha256": "a2f913bc1f83d2e89746e3928f245af56eecf595a339f6d48ec7c0af02e2455b"
+    },
+    "page_hash_change": {
+      "before": "a2f913bc1f83d2e89746e3928f245af56eecf595a339f6d48ec7c0af02e2455b",
+      "after": "7b2fc2581526cdd2cfb8cd54a6ee110e234141ad8d031e7d8d4ab9b8dae77f4c"
+    },
+    "findings": [
+      {
+        "id": "F2",
+        "priority": "P2",
+        "status": "fixed_verified",
+        "chapters": [
+          5,
+          8,
+          9,
+          12
+        ],
+        "summary": "Necessary computations and self-checks execute independently of assert; 24 ordinary/disabled-assertion runs pass and 42 wrong variants fail as intended.",
+        "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/assertion-regressions/report.json"
+      }
+    ],
+    "full_program_report": "tmp/project-check/20261014T213638-7e7waj6i/csapp/report.json",
+    "reading_review": "notes/reading_review.json",
+    "acceptance": "test/T010-csapp-review-v2-fixes.md"
+  },
+  "review_status": "content_programs_and_local_reading_verified",
+  "open_findings": 0
+}

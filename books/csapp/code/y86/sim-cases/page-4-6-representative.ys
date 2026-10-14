@@ -1,0 +1,27 @@
+irmovq $0xf00,%rsp
+irmovq data,%rdi
+irmovq $3,%rsi
+call absSum_cmov
+halt
+absSum_cmov:
+    irmovq $8,%r8
+    irmovq $1,%r9
+    xorq %rax,%rax
+    andq %rsi,%rsi
+    jmp abc_test
+abc_loop:
+    mrmovq 0(%rdi),%r10
+    xorq %r11,%r11
+    subq %r10,%r11
+    cmovg %r11,%r10
+    addq %r10,%rax
+    addq %r8,%rdi
+    subq %r9,%rsi
+abc_test:
+    jne abc_loop
+    ret
+.pos 0x400
+data:
+ .quad 0xfffffffffffffffc
+ .quad 0x0000000000000000
+ .quad 0x0000000000000003

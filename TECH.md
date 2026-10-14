@@ -3,7 +3,7 @@
 <!-- project-governance:managed:start -->
 ## 项目目的
 
-统一管理 Durrett 随机过程与 Weiss 数据结构笔记，保留每本书的正式 HTML、可运行示例、来源与验证记录，共用阅读入口和静态发布流程。
+统一管理 Durrett 随机过程、Weiss 数据结构与 CS:APP 系统笔记，保留正式 HTML、可运行示例、来源与验证记录，共用阅读入口和静态发布流程。
 
 ## 项目分类
 
@@ -28,7 +28,7 @@
 - Python 3.10+
 - Clang（C11、AddressSanitizer、UndefinedBehaviorSanitizer）
 - Make
-- Poppler pdftotext
+- Poppler pdftotext / pdfinfo
 - Node.js（发布脚本语法校验）
 - Nginx（服务器静态 HTTPS 服务）
 
@@ -36,6 +36,7 @@
 
 - books/stochastic
 - books/weiss
+- books/csapp
 - portal
 - deploy
 - tools
@@ -43,9 +44,9 @@
 ## 架构事实
 
 - books/catalog.json 登记书籍入口、目录和发布前缀；每本书保留一份全书总览及按章维护的独立 HTML。
-- 随机过程以 code/ 下 C/Python 为维护源并同步 HTML；Weiss 教学代码以正式 HTML 为维护源，c/ 为原书图例的独立 C 实现。
+- 随机过程和 CS:APP 以 code/ 下 C/Python 为维护源并同步 HTML；Weiss 教学代码以正式 HTML 为维护源，c/ 为原书图例的独立 C 实现。
 - 根目录工具统一调用各书既有校验器，输出写入被忽略的 tmp/ 或 deploy/portal-releases/。
-- 统一发布保留 /stochastic/ 与 /weiss/ URL；部署使用独立版本目录和 current 原子切换，同时维护本版 CSP。
+- 统一构建保留 /stochastic/、/weiss/ 并接入 /csapp/ URL；部署使用独立版本目录和 current 原子切换，同时维护本版 CSP。
 - 根 Git 历史与远端沿用；原 Weiss 工作目录保留，合并后的维护入口为本仓库。
 
 ## 项目类型约束
@@ -54,11 +55,11 @@
 
 ## 项目专属规则
 
-- 修改某本书之前读取 books/<书籍>/agent.md 与 notes/README.md；专项内容标准由这些文档维护。
+- 新增或修改书籍先读 docs/reading-notes-standard.md（RN-001），再读 books/<书籍>/agent.md 与 notes/README.md；共用方法与书级专项约定各有唯一来源。
 - 保留原书条件、题号、版本、来源页码和校注依据；静态检查和执行样本不能替代原书内容核对。
 - 保留单文件 HTML 的章节顺序、锚点、离线能力与桌面/窄屏阅读行为。
 - 审阅文件的历史哈希保持历史事实；改变当前文件绑定时注明范围、原因和原值。
-- 新增书籍同步更新 catalog、首页、构建路由、验证与来源说明；只维护一份正式内容。
+- 新增书籍按 docs/adding-a-book.md 与 docs/templates/reading-notes/ 执行，先核对原书、规划全书并验收样章；同步 catalog、首页、构建路由、验证与来源说明，只维护一份正式内容。
 - 统一部署的操作说明以 deploy/README.md 为准；各书 deploy/ 为保留的单书工具与历史材料。
 <!-- project-governance:managed:end -->
 
@@ -68,6 +69,20 @@
 
 内容与计算规则的权威入口见 [规则职责索引](docs/rules/README.md)，兼容取舍见 [ADR-001](docs/decisions/ADR-001-book-subprojects.md)。
 
+跨书伴读方法由 [RN-001](docs/reading-notes-standard.md)维护，新书按[接入步骤](docs/adding-a-book.md)和[工作模板](docs/templates/reading-notes/README.md)执行。该层只统一内容生产及验收方法，书级来源/计算规则和历史审阅保持原权威位置；现有按书检查与构建仍需显式接线。本次方法固化见 [I009](issues/I009-reading-notes-standard.md)，技术栈与服务环境保持不变。
+
+CS:APP 子项目当前为第三版 Global Edition 的全书地图、序言、第 1 章、Part I 第 2—6 章、Part II 第 7—9 章与 Part III 第 10—12 章，共十四页。正文沿 117 个大节、261 个二级节展开，涵盖 419 道本版原书题、36 道补充自测。`code/` 是 C/Python 维护源，固定宽度运算、ABI、Y86、优化与缓存条件随正文说明；源码及额外汇编/性能基准由 `code/programs.json` 登记。`tools/check_notes.py` 核对来源、逐题页码、源码同步和独立计算基准。普通 C 使用 C11 编译并配合 ASan/UBSan；按字填充明确使用 GNU/Clang may_alias 扩展，x86-64 分类汇编经 Rosetta 执行，Linux 跨目标汇编生成另列，Y86 教学模型与官方 yas/yis/ssim/psim 执行分别记录，code/y86/ 提供七个 HCL 补丁、31 个输入与复现命令；官方旧工具以 GNU89、Clang、Lex 兼容选项构建，普通教学程序继续使用严格 C11。完整原 PDF 按来源清单的 publication.include_source_pdf 纳入构建包，当前已启用；发布页保留章节、来源和习题的 #page 页序链接，关闭收录时退回文字来源。接入与本地验收见 [I011](issues/I011-csapp-pdf-navigation.md) / [T011](test/T011-csapp-pdf-navigation.md)。宽屏目录和右侧阅读注解、窄屏折叠、题目/代码结构沿现有两书版式。详见 [I003](issues/I003-csapp-companion.md) 和 [T003](test/T003-csapp-companion.md)。
+
+CS:APP 原文清单 `notes/source_excerpts.json` 保留第一批 78 处摘录并追加第二部分摘录、来源页和英文正文，其中第 2 章保留 25 条原书 `PRINCIPLE`。数学以静态 MathML 表达，共用块公式和行内公式容器。维护回归增加 Python 容器上界、四种缓存写策略的独立参考与脏位变异检查、`-DNDEBUG` 填充验证；浏览器阅读验收使用独立 Chrome DevTools MCP 实例，证据写入忽略目录。相关模型条件与阅读验证见 [I004](issues/I004-csapp-source-reading.md) 和 [T004](test/T004-csapp-source-reading.md)，运行时和发布架构保持既有设置。
+
+CS:APP 第二部分新增 ELF/归档搜索与重定位模型、POSIX 进程/信号示例、地址翻译与堆分配模型。严格 C11 是编译语言基线，POSIX 接口通过特性宏显式请求并记录 macOS 宿主执行条件；Linux/x86-64 ELF 的跨目标对象生成与宿主程序运行分开验收。新增范围与对应计算契约见 [I005](issues/I005-csapp-part-two.md) 和 [T005](test/T005-csapp-part-two.md)，没有引入新运行时、前端框架或服务。后续信号等待、作业退出清理和 next-fit 独立回归修订见 [I006](issues/I006-csapp-part-two-review-fixes.md) / [T006](test/T006-csapp-part-two-review-fixes.md)。
+
+CS:APP 第三部分增加可靠读写、描述符共享、回环网络和 HTTP、POSIX 线程及并发状态模型。程序继续沿用 C11/Python 与 POSIX 接口；线程程序显式使用 `-pthread`，Python 独立程序在索引中单独声明并核对预期输出。接口语义、宿主实验和状态模型分别记录。来源与计算契约见 [I007](issues/I007-csapp-part-three.md) / [T007](test/T007-csapp-part-three.md)，未改变核心依赖或服务环境。
+
+第三部分全书评估后的 HTTP Expect 首部决策、select/echo 接入与既有连接处理、proc tfgets 计时器取消修订见 [I008](issues/I008-csapp-part-three-review-fixes.md) / [T008](test/T008-csapp-part-three-review-fixes.md)。修复继续使用既有 C11/POSIX 与静态发布流程。
+
+CS:APP 第二轮严格评估修订见 [I010](issues/I010-csapp-review-v2-fixes.md) / [T010](test/T010-csapp-review-v2-fixes.md)，继续使用现有 C11/POSIX、Python 和静态页面流程。必要自测在关闭断言时仍执行；原题实验按逐项证据标记，12.39 的代理浏览器验收当前待完成。
+
 ## 技术栈变更索引（只追加）
 
 “技术栈变更”至少包括语言、运行时、框架、核心库、构建工具、数据库或中间件的新增、移除、替换、主版本升级，以及兼容基线变化。普通补丁升级仅在影响行为、兼容性或安全基线时记录。
@@ -75,5 +90,6 @@
 | 日期 | 变更前 → 变更后 | 科学/工程理由 | 兼容、迁移与回滚影响 | 问题单 / ADR |
 |---|---|---|---|---|
 | 2026-10-12 | 分散笔记目录和外部 Weiss 构建来源 → 同仓库书籍子项目、统一标准库工具入口 | 一次克隆包含维护与验证所需源，保留原代码维护源 | 发布 URL 保持，原 Weiss 目录及迁移前快照保留；无新前端框架 | [I001](issues/I001-project-merge.md) / [ADR-001](docs/decisions/ADR-001-book-subprojects.md) |
+| 2026-10-13 | 两书登记边界 → 增加 CS:APP 子项目和 /csapp/ 本地构建路由 | 复用静态 HTML、C11、Python 与既有 Poppler；显式区分机器模型和宿主执行 | 原两书 URL 与内容保持；新增目录和路由可独立回退；完整书籍 PDF 仅本地对照 | [I002](issues/I002-csapp-part-one.md) |
 
 > 详细论证写入问题单或 ADR；本表保存可追踪索引，不得覆盖历史记录。

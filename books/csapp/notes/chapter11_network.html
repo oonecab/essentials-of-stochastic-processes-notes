@@ -1,0 +1,1548 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第11章：网络编程 · CS:APP 中文伴读</title><style>
+:root{--ink:#252b29;--sub:#58615d;--rule:#d9dfda;--green:#285a4e;--paper:#fffefa;--tint:#f4f6f2}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.9 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}main{max-width:860px;margin:auto;padding:48px 24px 90px}h1{font-size:2.2rem;line-height:1.3;margin:.2rem 0}h2{font-size:1.55rem;margin:3.4rem 0 1.2rem;padding-bottom:.45rem;border-bottom:1px solid var(--rule)}h3{font-size:1.16rem;margin:2rem 0 .6rem}p{margin:.7rem 0 1.1rem}header{padding-bottom:22px;border-bottom:1px solid var(--rule)}.overline,.source,.small,figcaption{color:var(--sub);font-size:.85rem}.intro{font-size:1.08rem}a{color:var(--green);text-underline-offset:3px}nav{border-left:3px solid var(--green);padding:.6rem 1.3rem;margin:2rem 0;background:var(--tint)}nav ul{margin:.3rem 0;padding-left:1.2rem;columns:2}nav li{break-inside:avoid}.passage{border-left:2px solid var(--green);padding:.15rem 0 .15rem 1.2rem;margin:1.5rem 0}.english{font:italic 1.05rem/1.7 Georgia,serif}.passage p{margin:.25rem 0}pre{background:var(--tint);border:1px solid var(--rule);padding:1rem 1.1rem;overflow:auto;font:14px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}code{font:.9em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}pre code{font:inherit}.callout{background:var(--tint);padding:.8rem 1.1rem;margin:1.4rem 0;border-left:2px solid var(--green)}.scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.91rem;margin:1.1rem 0}th,td{padding:.6rem .7rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule)}th{border-top:1px solid var(--rule);background:var(--tint)}.wide{min-width:640px}figure{margin:1.5rem 0}figure .scroll{padding:12px 8px;border:1px solid var(--rule);background:var(--tint)}figcaption{margin-top:.6rem}svg{display:block;width:100%;height:auto;min-width:620px}svg text{font-family:system-ui,-apple-system,"PingFang SC",sans-serif;text-anchor:middle;fill:var(--ink);font-size:16px}svg .n{fill:var(--paper);stroke:var(--green);stroke-width:1.3}svg .e{fill:none;stroke:#7b8f85;stroke-width:1.4}svg .hint{font-size:13px;fill:var(--sub)}ul,ol{padding-left:1.5rem}li{margin:.35rem 0}footer{border-top:1px solid var(--rule);padding-top:1rem;margin-top:4rem;color:var(--sub);font-size:.85rem}@media(max-width:640px){main{padding:30px 18px 60px}h1{font-size:1.75rem}nav ul{columns:1}h2{font-size:1.3rem}}
+.exercise{margin:.8rem 0;border:1px solid var(--rule);padding:.75rem 1rem;scroll-margin-top:16px}.exercise summary{cursor:pointer;color:var(--green);font-weight:600}.exercise summary:focus-visible{outline:2px solid var(--green);outline-offset:4px}.exercise-index{display:flex;flex-wrap:wrap;gap:.4rem 1rem;margin:1rem 0}.exercise .answer{margin-top:1rem}.tree-code{overflow-wrap:anywhere;word-break:break-word}.exercise .scroll table{min-width:620px}
+
+/* Native, static MathML: no network resources or runtime typesetting. */
+math{font-family:"STIX Two Math","Cambria Math",math;font-size:1.04em}
+.math-inline{display:inline-block;max-width:calc(100% - .16em);overflow-x:auto;overflow-y:hidden;vertical-align:middle;margin:0 .08em;padding:0 .02em}
+.equation,.math-block{overflow-x:auto;max-width:100%;padding:.7rem .25rem;margin:1rem 0;text-align:center}
+.equation math,.math-block math{display:block;width:max-content;margin:0 auto;font-size:1.08em}
+.answer h4{margin:1.35rem 0 .5rem;font-size:1rem}
+:not(pre)>code{overflow-wrap:anywhere}
+pre code{overflow-wrap:normal;white-space:pre}
+
+.comparison,.benchmark{min-width:800px}.array-values{min-width:620px}.array-values th,.array-values td{text-align:center;padding:.4rem .55rem}.forest-label{font-weight:600}svg .hint{font-size:12px}.answer pre{font-size:13px}.exercise{scroll-margin-top:20px}
+
+.code-pair{margin:1.2rem 0;border-left:2px solid var(--rule);padding-left:1rem}.code-version{margin:.5rem 0;padding:.35rem 0}.code-version>summary{cursor:pointer;font-weight:600;color:var(--green)}.code-version>summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}.code-version pre{margin:.7rem 0 1rem}.code-reference{font-size:.92rem}.pair-note{font-size:.9rem;color:var(--sub)}.chapter-nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem}.exercise>summary{line-height:1.65}.experiment{margin:1.2rem 0;padding:.7rem 1rem;border-left:2px solid var(--green);background:var(--tint)}
+
+.meta,.caption{color:var(--sub);font-size:.85rem}
+.scroll,.table-scroll,.diagram{max-width:100%;overflow-x:auto}
+main,header,section,.answer,.code-pair,.code-version{min-width:0}
+.math-inline{padding:.20em .05em}
+.chapter-nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem}
+.scroll>table{min-width:620px}
+.puzzle{width:auto;margin:1.2rem auto}
+.scroll>table.puzzle{min-width:0}
+.puzzle th,.puzzle td{text-align:center;min-width:44px}
+.verification-table,.state-table,.benchmark{font-variant-numeric:tabular-nums}
+.diagram{margin:1.2rem 0;padding:1rem 1.1rem;border:1px solid var(--rule);background:var(--tint)}
+.diagram figcaption{margin:0 0 .65rem}
+.chain{display:flex;align-items:center;gap:.55rem;min-width:max-content;font-size:.92rem}
+.diagram>.chain+.chain{margin-top:.7rem}
+.chain .node{border:1px solid #9caaa2;background:var(--paper);padding:.3rem .6rem;white-space:nowrap}
+.chain .edge{color:var(--green);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:nowrap}
+.diagram-notes{margin:.75rem 0 0;padding-left:1.2rem;font-size:.92rem}
+.diagram-notes li{margin:0}
+.step-table th:first-child,.step-table td:first-child{width:5.3rem;white-space:nowrap}
+.step-table th:nth-child(2){width:14rem}
+.step-table code{white-space:nowrap}
+.step-table .chain{gap:.35rem}
+.step-table .node{padding:.1rem .4rem}
+.state-table{table-layout:fixed}
+.state-table th:first-child{width:37%}
+.state-table td:not(:first-child),.state-table th:not(:first-child){text-align:center}
+.state-table td:last-child{white-space:nowrap}
+svg .node{fill:var(--paper);stroke:var(--green);stroke-width:1.3}
+svg .edge{fill:none;stroke:#7b8f85;stroke-width:1.4}
+svg .small{font-size:12px;fill:var(--sub)}
+svg .chapter-link{cursor:pointer}
+svg .chapter-link:hover .node,svg .chapter-link:focus-visible .node{fill:var(--tint);stroke-width:2.5}
+blockquote{margin:1.4rem 0;padding:.5rem 1.2rem;border-left:2px solid var(--green);background:var(--tint)}
+hr{border:0;border-top:1px solid var(--rule);margin:2.6rem 0}
+@media(max-width:640px){.diagram{padding:.8rem}.state-table{table-layout:auto;min-width:570px}}
+
+/* Chinese textbook prompts precede the worked solutions. */
+.exercise-question{margin:1.15rem 0 1.25rem;padding:.85rem 1rem;background:var(--tint);border-left:2px solid var(--green);min-width:0}
+.question-title,.answer-title{margin:.15rem 0 .8rem;font-size:1rem;color:var(--green)}
+.exercise-question>p:last-child{margin-bottom:.2rem}
+.exercise-question ol{margin:.65rem 0 1rem}
+.question-note{font-size:.9rem;color:var(--sub);border-top:1px solid var(--rule);padding-top:.6rem}
+.question-context{font-size:.94rem}
+.exercise-question .source{margin-top:1rem}
+.question-code{font-size:13px}
+svg.question-large-tree{min-width:1120px}
+
+/* Benchmark figures use recorded table data and native view controls. */
+.benchmark-figure{margin:1.8rem 0;padding:1rem;border:1px solid var(--rule);background:#f7f8f4;min-width:0;max-width:100%}
+.benchmark-kicker{font-size:.73rem;letter-spacing:.09em;color:var(--green);font-weight:650;margin-bottom:.25rem}
+.benchmark-figure .benchmark-title{font-size:1.06rem;line-height:1.6;margin:.15rem 0 1rem;color:var(--ink)}
+.benchmark-selector{min-width:0;margin:0;padding:0;border:0;position:relative}
+.benchmark-sr,.benchmark-input{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.benchmark-tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .9rem}
+.benchmark-tabs label{display:inline-block;cursor:pointer;padding:.22rem .7rem;border:1px solid #cbd7ce;border-radius:4px;background:var(--paper);font-size:.82rem;line-height:1.7;color:var(--sub)}
+.benchmark-tabs label:hover{border-color:var(--green);color:var(--green)}
+.benchmark-view{display:none}.benchmark-view:first-child{display:block}
+.benchmark-input~.benchmark-panels>.benchmark-view{display:none}
+.benchmark-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;align-items:start}
+.benchmark-grid:has(>.benchmark-chart:only-child){grid-template-columns:minmax(0,1fr)}
+.benchmark-chart:only-child:not(.benchmark-wide) .benchmark-svg{max-width:560px;margin:0 auto}
+.benchmark-grid[data-layout="wide"]{grid-template-columns:minmax(0,1fr)}
+.benchmark-chart{min-width:0;max-width:100%;padding:.7rem .6rem .3rem;border:1px solid #e1e7e0;background:var(--paper)}
+.benchmark-chart>h4{font-size:.85rem;line-height:1.5;font-weight:600;color:var(--sub);margin:.1rem .2rem .25rem}
+.benchmark-chart>.scroll{padding:0;border:0;background:transparent}
+.benchmark-svg{width:100%;height:auto;min-width:0;display:block}
+.benchmark-wide .benchmark-svg{min-width:720px}
+.benchmark-figure figcaption{font-size:.8rem;line-height:1.85;margin-top:.8rem}
+.benchmark-index ul{columns:2;font-size:.87rem}.benchmark-index li{break-inside:avoid;margin:.45rem 0}
+@media(max-width:640px){.benchmark-figure{padding:.75rem .6rem}.benchmark-grid{grid-template-columns:minmax(0,1fr)}.benchmark-chart{padding:.6rem .35rem .25rem}.benchmark-tabs label{padding:.25rem .55rem}.benchmark-index ul{columns:1}}
+.benchmark-input:nth-of-type(1):checked~.benchmark-panels>.benchmark-view:nth-child(1){display:block}
+.benchmark-input:nth-of-type(1):checked~.benchmark-tabs>label:nth-child(1){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(1):focus-visible~.benchmark-tabs>label:nth-child(1){outline:2px solid var(--green);outline-offset:3px}
+.benchmark-input:nth-of-type(2):checked~.benchmark-panels>.benchmark-view:nth-child(2){display:block}
+.benchmark-input:nth-of-type(2):checked~.benchmark-tabs>label:nth-child(2){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(2):focus-visible~.benchmark-tabs>label:nth-child(2){outline:2px solid var(--green);outline-offset:3px}
+.benchmark-input:nth-of-type(3):checked~.benchmark-panels>.benchmark-view:nth-child(3){display:block}
+.benchmark-input:nth-of-type(3):checked~.benchmark-tabs>label:nth-child(3){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(3):focus-visible~.benchmark-tabs>label:nth-child(3){outline:2px solid var(--green);outline-offset:3px}
+.benchmark-input:nth-of-type(4):checked~.benchmark-panels>.benchmark-view:nth-child(4){display:block}
+.benchmark-input:nth-of-type(4):checked~.benchmark-tabs>label:nth-child(4){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(4):focus-visible~.benchmark-tabs>label:nth-child(4){outline:2px solid var(--green);outline-offset:3px}
+.benchmark-input:nth-of-type(5):checked~.benchmark-panels>.benchmark-view:nth-child(5){display:block}
+.benchmark-input:nth-of-type(5):checked~.benchmark-tabs>label:nth-child(5){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(5):focus-visible~.benchmark-tabs>label:nth-child(5){outline:2px solid var(--green);outline-offset:3px}
+
+/* Reading rail: one table of contents beside the book page. */
+.reading-layout{display:grid;grid-template-columns:240px minmax(0,860px);gap:32px;max-width:1200px;margin:0 auto;padding:0 24px;align-items:start}
+.reading-layout>main{width:100%;min-width:0;margin:0}
+.chapter-sidebar{position:sticky;top:32px;max-height:calc(100dvh - 64px);overflow-y:auto;overscroll-behavior:contain;padding:8px 16px 12px 0;margin-top:40px;border-right:1px solid var(--rule);scrollbar-width:thin}
+.toc-panel>summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;list-style:none;padding:.45rem .55rem;color:var(--green);font-size:.9rem;font-weight:650;cursor:pointer}
+.toc-panel>summary::-webkit-details-marker{display:none}
+.toc-panel>summary::after{content:"+";font-size:1.1rem;font-weight:400}
+.toc-panel[open]>summary::after{content:"−"}
+.toc-panel>summary:focus-visible,.chapter-toc a:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.chapter-toc{border:0;background:transparent;margin:.45rem 0 0;padding:0;font-size:.84rem;line-height:1.65}
+.chapter-toc ul{columns:1;list-style:none;margin:0;padding:0}
+.chapter-toc li{margin:.18rem 0}
+.chapter-toc a{display:block;padding:.5rem .6rem;border-left:2px solid transparent;text-decoration:none;overflow-wrap:anywhere;color:var(--sub)}
+.chapter-toc a:hover{color:var(--green);background:var(--tint)}
+.chapter-toc a[aria-current="location"]{color:var(--green);border-left-color:var(--green);background:var(--tint);font-weight:600}
+.chapter-toc .toc-home{margin-bottom:.55rem;font-size:.8rem;color:var(--green)}
+.skip-link{position:fixed;left:16px;top:-100px;z-index:100;padding:.5rem 1rem;background:var(--paper);border:1px solid var(--green)}
+.skip-link:focus{top:12px}
+main[id],main [id]{scroll-margin-top:24px}
+@media(max-width:1099px){
+ .reading-layout{display:block;padding:0;max-width:860px}
+ .reading-layout>main{margin:auto}
+ .chapter-sidebar{position:static;top:0;z-index:10;margin:0;padding:8px 24px;border-right:0;border-bottom:1px solid var(--rule);background:var(--paper);max-height:none;overflow:visible}
+ .toc-enhanced .chapter-sidebar{position:sticky}
+ .toc-panel>summary{padding:.35rem 0;font-size:.88rem}
+ .chapter-toc{max-height:60dvh;overflow-y:auto;overscroll-behavior:contain;padding-bottom:.4rem}
+ main[id],main [id]{scroll-margin-top:80px}
+}
+@media(max-width:640px){.chapter-sidebar{padding:8px 18px}}
+@media print{.reading-layout{display:block;max-width:860px;padding:0}.chapter-sidebar,.skip-link{display:none}.reading-layout>main{padding:24px}}
+
+.result{font-variant-numeric:tabular-nums}.source-link{white-space:normal}
+.book-card{padding:1rem 0;border-bottom:1px solid var(--rule)}
+.book-card h3{margin:.2rem 0}.book-card p{margin:.4rem 0}
+.chart-svg{min-width:0} .chart-svg text{font-size:13px}
+.exercise-index a{font-variant-numeric:tabular-nums}.solution-link{font-size:.9rem}
+.exercise-question .scroll>table{min-width:480px}
+.question-note strong{color:var(--green)}
+
+/* Supplementary reading notes share the page's type and color palette. */
+.reading-notes{margin:2rem 0 0;padding:0.8rem 1rem;border-left:2px solid var(--green);background:var(--tint);font-size:0.92rem;line-height:1.85}
+.reading-notes>summary{color:var(--green);font-weight:650;cursor:pointer;list-style:none}
+.reading-notes>summary::-webkit-details-marker{display:none}
+.reading-notes>summary::after{content:"＋";float:right;font-weight:400}
+.reading-notes[open]>summary::after{content:"−"}
+.reading-notes>summary:focus-visible,.annotation-context a:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+.annotation-card{min-width:0;margin:1.15rem 0 0;padding:1rem 0 0;border-top:1px solid var(--rule)}
+.annotation-card:first-child{border-top:0;padding-top:0}
+.annotation-kind{display:block;font-size:0.73rem;font-weight:600;letter-spacing:0.05em;color:var(--green);margin-bottom:0.25rem}
+.annotation-card h3{font-size:0.97rem;line-height:1.65;margin:0 0 0.5rem;font-weight:650}
+.annotation-card p{margin:0.4rem 0 0.7rem}
+.annotation-card p:last-child{margin-bottom:0}
+.annotation-card .equation{padding:0.5rem 0;margin:0.65rem 0}
+.annotation-card math{font-size:1em}
+.annotation-sidebar{display:none}
+@media(min-width:1440px){
+ .notes-enhanced .reading-layout{grid-template-columns:240px minmax(0,860px) 280px;max-width:1524px;gap:32px}
+ .notes-enhanced main .reading-notes{display:none}
+ .notes-enhanced .annotation-sidebar:not([hidden]){display:block;position:sticky;top:32px;max-height:calc(100dvh - 64px);overflow-y:auto;overscroll-behavior:contain;min-width:0;margin-top:40px;padding:8px 0 12px 22px;border-left:1px solid var(--rule);font-size:0.9rem;line-height:1.85;scrollbar-width:thin}
+ .annotation-label{color:var(--green);font-size:0.87rem;font-weight:650;margin:0 0 0.75rem}
+ .annotation-context{font-size:0.85rem;line-height:1.65;margin:0 0 1.25rem}
+ .annotation-context a{color:var(--sub);text-decoration:none}
+ .annotation-context a:hover{color:var(--green);text-decoration:underline}
+ .annotation-sidebar .annotation-card{margin-top:1.5rem;padding-top:1.35rem}
+ .annotation-sidebar .annotation-card:first-child{margin-top:0;padding-top:0}
+ .annotation-sidebar .annotation-card h3{font-size:0.95rem}
+}
+@media print{.annotation-sidebar{display:none!important}main .reading-notes{display:block!important;break-inside:avoid}}
+
+/* Source statements, bilingual excerpts and preface share the reading layout. */
+.source-statement{margin:1.35rem 0;padding:.2rem 0 .8rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);min-width:0}
+.source-statement+.source-statement{border-top:0}
+.source-statement>h3,.source-statement>h4{font-size:1.08rem;line-height:1.65;margin:.75rem 0 .6rem}
+.statement-heading>.statement-label{display:block}
+.source-statement>summary{cursor:pointer;color:var(--green);font-weight:650;line-height:1.7;padding:.55rem 0}
+.source-statement>summary:focus-visible,.statement-index>summary:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+.statement-body{padding:.15rem 0 .15rem .8rem;border-left:2px solid var(--green);min-width:0}
+.statement-label{font-size:.8rem;font-weight:650;letter-spacing:.03em;color:var(--green);margin:.7rem 0 .3rem}
+.original-excerpt{font:1rem/1.85 Georgia,"Times New Roman",serif;margin:.5rem 0 1.15rem;padding:.75rem 1rem;overflow-wrap:break-word;min-width:0}
+.original-excerpt p{margin:.25rem 0 .7rem}.original-excerpt p:last-child{margin-bottom:0}
+.original-excerpt .equation,.original-excerpt .math-block{margin:.45rem 0}.original-excerpt math{font-size:1em}
+.statement-index{margin:1.2rem 0;padding:.7rem 1rem;background:var(--tint);border-left:2px solid var(--green)}
+.statement-index>summary{cursor:pointer;color:var(--green);font-weight:600}
+.statement-links{margin:.8rem 0 .4rem;columns:2;column-gap:1.6rem;list-style:none;padding:0;font-size:.88rem}
+.statement-links li{break-inside:avoid;margin:.3rem 0}.statement-index .source{margin:.6rem 0 .2rem}
+.source-chapter-index{margin:.8rem 0;padding:.65rem .9rem;border:1px solid var(--rule)}
+.source-chapter-index>summary{cursor:pointer;color:var(--green);font-weight:600}
+.source-chapter-index>summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.statement-note{font-size:.91rem;color:var(--sub);padding:.7rem .8rem;background:var(--tint);margin:.8rem 0}
+.preface-signature{margin-top:1.5rem;text-align:right;color:var(--sub)}
+@media(max-width:640px){.statement-body{padding-left:.6rem}.original-excerpt{padding:.65rem .75rem;font-size:.95rem}.statement-links{columns:1}.statement-index{padding:.65rem .8rem}}
+@media print{.source-statement,.original-excerpt{break-inside:avoid}}
+
+@media print{.annotation-rail{display:none!important}.reading-notes{display:block!important}main details{break-inside:auto}main details::details-content{content-visibility:visible!important}main details>summary{font-weight:600}.scroll,pre,.equation,.math-block{overflow:visible}pre{white-space:pre-wrap;overflow-wrap:anywhere}}
+
+/* Long expressions wrap in prose; code, equations and tables own their scrolling. */
+.reading-layout>main,.annotation-card{overflow-wrap:anywhere}
+#s1-2 th:first-child,#s1-2 td:first-child{min-width:76px;white-space:nowrap}
+#map th:nth-child(3),#map td:nth-child(3){min-width:9.2em}
+.scroll>table.compact-table{min-width:0}
+@media(max-width:640px){.compact-table th,.compact-table td{padding:.55rem .4rem}}
+[data-horizontal-overflow="true"]::after{content:attr(data-scroll-label);display:block;position:sticky;left:0;width:100%;margin-top:.25rem;color:var(--green);font: .75rem/1.8 system-ui,-apple-system,"PingFang SC",sans-serif;text-align:left}
+[data-horizontal-overflow="true"]:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+@media print{[data-horizontal-overflow="true"]::after{display:none}}
+
+.reading-layout>main>section:not(#exercises):not(#self-check) pre{font-size:14px}
+
+.worked{background:var(--tint);border-left:2px solid var(--green);padding:.8rem 1.1rem;margin:1.5rem 0}.worked h3{margin:.2rem 0 .7rem}.english-title{display:block;color:var(--sub);font-size:.85rem;font-weight:400}.code-download{font-size:.9rem}.code-explanation li{margin:.7rem 0}.flow-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}svg .highlight{fill:#e6eee7;stroke:var(--green)}.solution-steps>li{margin:1rem 0}.question-note strong{color:var(--green)}.experiment-output{font-size:.9rem}main [id]{scroll-margin-top:100px}@media(max-width:1099px){main [id]{scroll-margin-top:132px}}
+</style></head><body><a class="skip-link" href="#top">跳到正文</a><div class="reading-layout"><aside class="chapter-sidebar"><details class="toc-panel" id="toc-panel" open><summary>本章目录</summary><nav class="chapter-toc" id="chapter-toc" aria-label="本章目录"><a class="toc-home" href="book_overview.html">← 全书地图</a><ul><li><a href="#top">本章导读</a></li><li><a href="#s11-1">11.1 · 一次请求与响应，把资源变成服务</a></li><li><a href="#s11-2">11.2 · 封装让异构链路承载同一种通信</a></li><li><a href="#s11-3">11.3 · 程序看见地址、名字与连接</a></li><li><a href="#s11-4">11.4 · 沿一个连接的生存期理解接口</a></li><li><a href="#s11-5">11.5 · 把字节流上的协议接到文件与程序</a></li><li><a href="#s11-6">11.6 · 沿doit走完静态与动态两条路径</a></li><li><a href="#s11-7">11.7 · 把资源、协议与生命周期放在同一条线上</a></li><li><a href="#experiment">可执行实验</a></li><li><a href="#exercises">本版13道题</a></li><li><a href="#self-check">原创自测</a></li></ul></nav></details></aside><main id="top"><header><p class="overline">CS:APP · 第三版 GLOBAL EDITION · PART III</p><h1>第11章：网络编程</h1><p class="intro">从端点的命名与连接开始，沿请求、解析、资源操作和响应走完一次网络交互；把第10章的字节与描述符接到HTTP、CGI和真实loopback实验。</p><p class="source"><a class="source-pdf" href="../csapp.pdf#page=954">来源：印刷 953—1006 页 / PDF 954—1007 页</a></p><p class="chapter-nav"><a href="book_overview.html">全书地图</a><a href="book_overview.html#program-guide">程序说明</a><a href="chapter10_system_io.html">← 第10章：系统级I/O</a><a href="chapter12_concurrency.html">第12章：并发编程 →</a></p></header><details class="statement-index" id="source-index"><summary>本页原书摘录 · 6 处</summary><ul class="statement-links"><li><a href="#classic-11-processes">角色属于进程</a></li><li><a href="#classic-11-byteorder">网络顺序保持大端</a></li><li><a href="#classic-11-descriptor">端点通过描述符呈现</a></li><li><a href="#classic-11-eof">EOF不是一个特殊字符</a></li><li><a href="#classic-11-content">内容的两个部分</a></li><li><a href="#classic-11-cgi">标准输出为何成为网络输出</a></li></ul></details><section id="s11-1"><h2>11.1 · 一次请求与响应，把资源变成服务<span class="english-title" lang="en">The Client-Server Programming Model</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=955">来源：印刷 954—955 页 / PDF 955—956 页</a></p><p>第10章使程序能够从描述符读取和写出字节；本章进一步问：另一端如何知道这些字节要它做什么？客户端先发送请求，服务器解释请求并操作它管理的资源，再返回响应，客户端最后解释响应。一次网页访问中，资源可能是磁盘上的HTML；一次动态加法请求中，资源可能是运行计算程序的能力。真正把“字节通信”变成“服务”的，是双方对消息格式和处理含义的约定。</p><figure><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 120" role="img" aria-label="客户端与服务器的四步交互"><title>客户端与服务器的四步交互</title><rect class="n" x="10.0" y="25" width="170.0" height="70" rx="4"/><text x="95.0" y="51">客户端请求</text><text class="hint" x="95.0" y="77">GET /hello.txt</text><text x="188.0" y="65">→</text><rect class="n" x="195.0" y="25" width="170.0" height="70" rx="4"/><text x="280.0" y="51">服务器操作资源</text><text class="hint" x="280.0" y="77">读文件的12个字节</text><text x="373.0" y="65">→</text><rect class="n" x="380.0" y="25" width="170.0" height="70" rx="4"/><text x="465.0" y="51">服务器响应</text><text class="hint" x="465.0" y="77">状态、头部与文件</text><text x="558.0" y="65">→</text><rect class="n" x="565.0" y="25" width="170.0" height="70" rx="4"/><text x="650.0" y="51">客户端处理</text><text class="hint" x="650.0" y="77">显示或保存内容</text></svg></div><figcaption>客户端与服务器的四步交互</figcaption></figure><div class="source-statement" id="classic-11-processes" data-source-kind="classic-passage"><h4>原文伴读 · 角色属于进程</h4><blockquote class="original-excerpt" lang="en"><p>It is important to realize that clients and servers are processes and not machines, or hosts as they are often called in this context.</p></blockquote><div class="statement-body"><p><strong>中文：</strong>应当认识到，客户端和服务器是进程，而不是机器；这里常把机器称为主机。</p><p>因此127.0.0.1上的本地实验同样是在做网络编程。一个server进程也能为了取得数据而成为另一个server的client。</p></div><p class="source"><a class="source-pdf" href="../csapp.pdf#page=956">来源：印刷 955 页 / PDF 956 页</a></p></div><p>书中称这四步为transaction（事务），但没有赋予它数据库事务的原子性。服务器可能已写入文件而响应途中断线；客户端看到失败并不自动证明操作没有发生。这里只建立交互框架，重试、去重、事务提交需要应用另行设计。请求方主动开始交互、服务方等待请求，是本章client/server的角色约定。</p><details class="reading-notes" id="notes-s11-1" data-notes-for="s11-1"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">角色</span><h3>进程承担服务角色</h3><p>同一主机可同时有多个client和server；一个进程在不同交互中也可承担两种角色。</p></div><div class="annotation-card"><span class="annotation-kind">语义</span><h3>一次交互不承诺原子性</h3><p>本章transaction描述请求到响应的步骤，并没有自动加入数据库的ACID性质。</p></div></div></details></section><section id="s11-2"><h2>11.2 · 封装让异构链路承载同一种通信<span class="english-title" lang="en">Networks</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=956">来源：印刷 955—960 页 / PDF 956—961 页</a></p><p>从主机看，网络适配器是一种I/O设备。CPU通过内核组织数据，网卡通常借DMA在设备与主存之间搬运字节。网络把许多主机连接起来，但每一种链路的帧格式、寻址和带宽可能不同：原书先用集线器把比特复制到同段各端口，再用网桥选择性地转发帧，最后用路由器连接不同LAN/WAN。图中100 Mb/s与1 Gb/s是原书示意条件，不应被当作当前网络速率上限。</p><p>集线器重复比特，网桥依据学习到的链路地址选择端口，路由器依据网络层目的地址选择下一跳；三者工作的层次不同。一个IP分组的目的主机在远处时，本段以太网帧的目的地址可以是本地路由器。路由器收到后取出IP分组，换上下一段链路需要的帧头再发送。统一命名和统一分组格式，把各段不同的物理技术藏在网络层之下。</p><div class="scroll"><table class="compact-table"><thead><tr><th scope="col">阶段</th><th scope="col">外层链路帧</th><th scope="col">内层分组与数据</th></tr></thead><tbody><tr><td>A发往路由器</td><td>LAN1头：下一跳为路由器</td><td>IP目的B；载荷为应用字节</td></tr><tr><td>路由器转发</td><td>去掉LAN1头，建立LAN2头</td><td>查看目的IP以选择接口；IP头的部分字段可能改变</td></tr><tr><td>B交给服务器</td><td>去掉LAN2头及协议头</td><td>内核把字节复制到服务器读取缓冲区</td></tr></tbody></table></div><p>原图11.7的八步是：用户A调用系统调用；A内核加网络头与LAN1帧头；网卡送出；路由器接收；路由软件选择LAN2并重新封装；LAN2网卡发送；B接收；B内核在server读取时交付载荷。先抓住“内部数据被装入外部容器”，再看MTU、分片、重传与路由更新；后几项被原书有意省去。</p><p>一条write调用传入3000字节，并不等于网上出现一个3000字节帧，也不保证对端一次read正好收到3000字节。TCP分段、内核缓冲和调度都会改变分批交付方式。后面的程序以返回字节数推进读取位置，正是为了让协议独立于这些分批方式。</p><details class="reading-notes" id="notes-s11-2" data-notes-for="s11-2"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">分层</span><h3>目的IP与下一跳不同</h3><p>跨路由器后链路帧头会更换；目的IP描述最后要到的主机，下一跳只描述本链路接收者。</p></div><div class="annotation-card"><span class="annotation-kind">边界</span><h3>图是封装模型</h3><p>原书把分段、重传、MTU等细节省去；一次write不是一个以太网帧。</p></div></div></details></section><section id="s11-3"><h2>11.3 · 程序看见地址、名字与连接<span class="english-title" lang="en">The Global IP Internet</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=961">来源：印刷 960—968 页 / PDF 961—969 页</a></p><p>原书把复杂的TCP/IP内部机制压缩成三个应用可用的服务：地址命名、域名映射和进程间连接。IP提供尽力交付的分组，TCP在其上提供字节流；UDP属于另一种报文接口，本章不展开。原书印刷960页把UDP展开成“Unreliable Datagram Protocol”，标准名称是User Datagram Protocol，不能把描述性“不可靠”当作正式名称。</p><p>原书2015年的IPv6采用率和“最新HTTP版本”等陈述属于出版时背景。下面继续使用IPv4与HTTP/1.x解释机制，并在接口处明确如何扩展，避免把历史数据变成当前互联网的断言。</p><h3 id="ss11-3-1">11.3.1 · 把数值、字节序与显示格式分开<span class="english-title" lang="en">IP Addresses</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=962">来源：印刷 961 页 / PDF 962 页</a></p><p>本章的IP地址特指IPv4的32位值。<code>struct in_addr.s_addr</code>保存网络字节序；端口用16位网络字节序。对128.2.194.242，依次取四个字节80、02、C2、F2（十六进制），得到数学上的32位地址0x8002C2F2。把一个十进制点分字符串直接按C字符串发送，与发送这四个地址字节，是两种完全不同的编码。</p><div class="source-statement" id="classic-11-byteorder" data-source-kind="classic-passage"><h4>原文伴读 · 网络顺序保持大端</h4><blockquote class="original-excerpt" lang="en"><p>Addresses in IP address structures are always stored in (big-endian) network byte order, even if the host byte order is little-endian.</p></blockquote><div class="statement-body"><p><strong>中文：</strong>IP地址结构中的地址总以大端网络字节序保存，即使主机采用小端字节序。</p><p>这里转换的是对象表示。不要把htons返回的本机数值打印结果误认为“网络的十进制表示”。</p></div><p class="source"><a class="source-pdf" href="../csapp.pdf#page=962">来源：印刷 961 页 / PDF 962 页</a></p></div><div class="scroll"><table class="compact-table"><thead><tr><th scope="col">接口</th><th scope="col">输入→输出</th><th scope="col">宽度/返回判断</th></tr></thead><tbody><tr><td>htons / ntohs</td><td>主机16位整数 ↔ 网络16位表示</td><td>端口等16位字段</td></tr><tr><td>htonl / ntohl</td><td>主机32位整数 ↔ 网络32位表示</td><td>IPv4字段；l不表示宿主long宽度</td></tr><tr><td>inet_pton</td><td>文本 → 网络二进制地址</td><td>1成功，0非法文本，−1接口错误</td></tr><tr><td>inet_ntop</td><td>网络二进制地址 → 文本</td><td>返回目标缓冲区或NULL</td></tr></tbody></table></div><p>以端口1024为例，主机数学值是0x0400；网络内存中从低地址到高地址必须是04 00。小端机器里，若把这两字节作为本机uint16_t读取，得到0x0004；这并不改变协议里的端口1024。只有在需要本机整数参与算术或格式化时调用ntohs。重复转换两遍在小端机器上会恢复原排列，恰好破坏了发送所需的顺序。</p><h3 id="ss11-3-2">11.3.2 · 名字解析返回候选地址集合<span class="english-title" lang="en">Internet Domain Names</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=964">来源：印刷 963 页 / PDF 964 页</a></p><p>域名按点分的层级命名，但不能从名字推断IP地址。DNS把名字映射到资源记录，常见地址记录包括IPv4的A和IPv6的AAAA。一个名字可能给出多个地址，多个名字也可指向相同地址；有的合法域名只有其他类型记录而没有主机地址。书中用“名字与地址的等价类”帮助理解多对多关系，实际DNS不保证正反向映射对称，也不保证查询一直返回同一列表。</p><p>程序调用getaddrinfo时，结果可能来自DNS、hosts文件或本机的名称服务配置。因此“函数成功”只说明获得了候选地址，不保证每个地址上的指定服务都能连接。书中twitter和大学主机的解析结果是当时的样例，本页不把它们写成实时事实。默认实验仅使用数值127.0.0.1，不依赖公网DNS。</p><p>原书称localhost总映射到127.0.0.1，适用于它的IPv4讲解。实际名称服务也可提供IPv6回环::1。学习地址无关接口时应保留AF_UNSPEC与候选遍历；需要确定IPv4实验时显式使用AF_INET或数值IPv4地址，而不是根据第一次解析结果猜协议。</p><h3 id="ss11-3-3">11.3.3 · 连接由两个端点共同标识<span class="english-title" lang="en">Internet Connections</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=966">来源：印刷 965 页 / PDF 966 页</a></p><p>TCP向应用提供有序、双向的字节流。一个socket是一个通信端点，端点地址含IP与16位端口；在这里固定TCP协议时，两端IP/port组成的四元组区分连接。服务器通常在约定端口等待，客户端由内核选择临时端口。原书的实例是(128.2.194.242:51213, 208.216.181.15:80)，客户端再建立第二条连接时通常得到另一个临时端口。</p><div class="scroll"><table class="compact-table"><thead><tr><th scope="col">连接</th><th scope="col">客户端端点</th><th scope="col">服务端端点</th></tr></thead><tbody><tr><td>A</td><td>127.0.0.1:51001</td><td>127.0.0.1:42000</td></tr><tr><td>B</td><td>127.0.0.1:51002</td><td>127.0.0.1:42000</td></tr></tbody></table></div><p>两条连接共享服务器端口42000，内核仍能把到达字节分送到不同connfd。端口不是永久独占地标识一个进程：一个进程可持有许多socket，父子也可共享一个打开的socket。端口与协议、地址和连接状态一起才构成准确描述。</p><p>可靠传输表示协议在连接正常工作的条件下处理丢失、重复和顺序。它不保证对端应用已经执行请求；write成功往往只表示字节进入本地发送路径。对端崩溃或网络故障仍可让操作失败。应用若要确认“加法已计算”或“文件已提交”，需要读取有约定含义的响应。</p><details class="reading-notes" id="notes-s11-3" data-notes-for="s11-3"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">先猜</span><h3>0x0400的网络字节</h3><p>数值1024写成大端字节是04 00；小端主机将这两字节当本地整数读，会看到4。</p></div><div class="annotation-card"><span class="annotation-kind">校注</span><h3>地址长度随协议而定</h3><p>本章32位指IPv4；IPv6为128位。DNS地址结果及原书2015年统计不能当当前事实。</p></div></div></details></section><section id="s11-4"><h2>11.4 · 沿一个连接的生存期理解接口<span class="english-title" lang="en">The Sockets Interface</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=969">来源：印刷 968—984 页 / PDF 969—985 页</a></p><figure><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 120" role="img" aria-label="socket接口的两个分支"><title>socket接口的两个分支</title><rect class="n" x="10.0" y="25" width="170.0" height="70" rx="4"/><text x="95.0" y="51">客户端</text><text class="hint" x="95.0" y="77">socket → connect</text><text x="188.0" y="65">→</text><rect class="n" x="195.0" y="25" width="170.0" height="70" rx="4"/><text x="280.0" y="51">服务器监听</text><text class="hint" x="280.0" y="77">socket → bind → listen</text><text x="373.0" y="65">→</text><rect class="n" x="380.0" y="25" width="170.0" height="70" rx="4"/><text x="465.0" y="51">接受与通信</text><text class="hint" x="465.0" y="77">accept → 新connfd</text><text x="558.0" y="65">→</text><rect class="n" x="565.0" y="25" width="170.0" height="70" rx="4"/><text x="650.0" y="51">收尾</text><text class="hint" x="650.0" y="77">读写完成 → close</text></svg></div><figcaption>socket接口的两个分支</figcaption></figure><h3 id="ss11-4-1">11.4.1 · 地址结构描述协议，描述符表示对象<span class="english-title" lang="en">Socket Address Structures</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=970">来源：印刷 969 页 / PDF 970 页</a></p><p>sockaddr_in包含AF_INET、网络序端口和网络序地址。应用从系统头文件取得结构定义，不手写图11.13的布局：原图描述Linux，而Darwin等系统还可能包含长度字段。把具体结构指针转成<code>struct sockaddr *</code>，是旧式通用接口的调用约定；不会把IPv4地址“转换成另一种协议”。</p><p>接收未知地址族时可用sockaddr_storage，它提供足够的大小和合适对齐；实际长度另放在socklen_t变量中。传给accept前把它置为容量，返回后它变成实际地址长度。不要把inet地址结构大小固定写死，也不要把原书印刷972页的int *addrlen当作本机声明：使用头文件中的socklen_t *。</p><div class="source-statement" id="classic-11-descriptor" data-source-kind="classic-passage"><h4>原文伴读 · 端点通过描述符呈现</h4><blockquote class="original-excerpt" lang="en"><p>From the perspective of a Linux program, a socket is an open file with a corresponding descriptor.</p></blockquote><div class="statement-body"><p><strong>中文：</strong>从Linux程序的角度看，socket是一个带有对应描述符的打开文件。</p><p>因此连接建立后可以使用read/write，dup2也能把标准输出指向连接；但socket不支持普通磁盘文件的所有操作，例如不能用lseek随意回退字节流。</p></div><p class="source"><a class="source-pdf" href="../csapp.pdf#page=970">来源：印刷 969 页 / PDF 970 页</a></p></div><h3 id="ss11-4-2">11.4.2 · 先申请端点对象，还没有建立连接<span class="english-title" lang="en">The socket Function</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=971">来源：印刷 970 页 / PDF 971 页</a></p><p><code>socket(AF_INET, SOCK_STREAM, 0)</code>申请IPv4流socket。成功返回非负fd，失败返回−1并设置errno；fd=0也可能是合法返回值，所以不能用“是否大于0”判断成功。此时没有对端，不能把“socket创建成功”称为“已经连上服务器”。地址无关代码则把getaddrinfo返回的ai_family/ai_socktype/ai_protocol原样传入。</p><pre><code data-language="c" class="language-c">int fd = socket(p-&gt;ai_family, p-&gt;ai_socktype, p-&gt;ai_protocol);
+if (fd &lt; 0) { /* try the next candidate */ }</code></pre><p>本章讨论TCP流，默认协议0让内核为给定family/type选择协议。数据报socket有不同的连接与消息语义，不能把这里“连接之后再读写”的步骤无限推广到所有socket类型。</p><h3 id="ss11-4-3">11.4.3 · 把主动端点接到服务器地址<span class="english-title" lang="en">The connect Function</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=971">来源：印刷 970 页 / PDF 971 页</a></p><p>connect(fd, addr, addrlen)发起连接。阻塞socket一般等到成功或错误才返回；成功后内核已确定本地地址和临时端口，程序可用getsockname检查本地端点、getpeername检查对端。调用返回成功不必等server用户代码已经从accept返回，内核的连接队列会衔接两边。</p><p>一个域名可返回多个候选地址。每个候选先socket，再connect；失败后关闭这个fd再试下一项。保留失败fd重复当作全新端点使用，会把状态和所有权弄混。非阻塞connect的EINPROGRESS属于另一条状态机，需要等待就绪并查询SO_ERROR；本页echo使用小型loopback阻塞连接，HTTP收发则明确设置有界等待。</p><h3 id="ss11-4-4">11.4.4 · 把服务端socket绑定到本地地址<span class="english-title" lang="en">The bind Function</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=972">来源：印刷 971 页 / PDF 972 页</a></p><p>bind把socket与本地地址/端口关联。固定端口使客户端知道去哪里找服务；端口0则要求内核分配空闲端口，再用getsockname取回实际值。绑定127.0.0.1只接受本机IPv4回环访问；通配地址0.0.0.0可以覆盖多个本地接口，两者开放范围不同。</p><p>原书open_listenfd用AI_PASSIVE和NULL主机生成通配地址。本页实验明确绑定127.0.0.1和端口0，避免冲突，也使测试不依赖外部网络。SO_REUSEADDR常用于服务重启时的地址复用，具体行为由平台决定；它不等于允许任意两个活动服务器无条件占用同一个监听地址。</p><h3 id="ss11-4-5">11.4.5 · 监听对象维护待接受连接<span class="english-title" lang="en">The listen Function</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=972">来源：印刷 971 页 / PDF 972 页</a></p><p>listen把已绑定的流socket变成被动监听对象。backlog描述待处理连接排队的容量请求，实际队列、上限和含义由系统实现约束；它既不是线程数，也不是服务器一生最多能服务的客户端数量。默认测试只有一个客户端，所以backlog=1足以表达这个实验。</p><p>监听fd通常随服务器进程长期存在。客户端慢慢发送HTTP头时，它占用的是已经accept出来的连接；增加backlog并不能让迭代服务器同时处理这些连接的数据。要解决这个阻塞，需要第12章的进程、事件驱动或线程调度。</p><h3 id="ss11-4-6">11.4.6 · 一次接受，产生一个新的连接fd<span class="english-title" lang="en">The accept Function</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=973">来源：印刷 972 页 / PDF 973 页</a></p><p>accept在listenfd上等待，返回connfd并可选地填入客户端地址。listenfd继续保持监听状态；connfd才是这次客户端字节流的端点。在原书图11.14中listenfd=3、connfd=4只是示意，操作系统可以返回任意可用非负fd。</p><div class="scroll"><table class="compact-table"><thead><tr><th scope="col">时刻</th><th scope="col">listenfd</th><th scope="col">connfd</th><th scope="col">客户端fd</th></tr></thead><tbody><tr><td>socket/bind/listen完成</td><td>接受连接的入口</td><td>尚不存在</td><td>可能尚不存在</td></tr><tr><td>客户端connect，server accept</td><td>仍是原监听对象</td><td>新建连接端点</td><td>连接完成后可读写</td></tr><tr><td>请求处理完关闭connfd</td><td>仍可接受下一次连接</td><td>释放本次引用</td><td>读完最后字节后见EOF</td></tr></tbody></table></div><p>常见错误是拿listenfd去read：它不代表某一条已建立连接。另一种错误是fork后忘记关闭多余connfd引用，导致另一端迟迟看不到EOF。第10章的“描述符是引用，不等于唯一所有者”在这里直接决定连接什么时候结束。</p><h3 id="ss11-4-7">11.4.7 · 候选链表把地址族细节封装起来<span class="english-title" lang="en">Host and Service Conversion</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=974">来源：印刷 973 页 / PDF 974 页</a></p><p>getaddrinfo(host, service, &amp;hints, &amp;list)把主机/服务文本转换成候选链表。hints先整体清零，再设置family、socktype和flags；每个节点已经带好socket、connect或bind需要的参数。使用完毕调用freeaddrinfo，即使连接失败也要释放。返回值是EAI_*错误码，用gai_strerror解释；它不是统一的−1/errno接口。</p><div class="scroll"><table class="compact-table"><thead><tr><th scope="col">字段或flag</th><th scope="col">作用</th><th scope="col">实验中的选择</th></tr></thead><tbody><tr><td>AF_UNSPEC / AF_INET</td><td>不限制地址族 / 仅IPv4</td><td>hostinfo题沿原书用AF_INET</td></tr><tr><td>SOCK_STREAM</td><td>限制为流socket候选</td><td>排除数据报和原始socket候选</td></tr><tr><td>AI_NUMERICHOST / AI_NUMERICSERV</td><td>拒绝把输入当名字查询</td><td>纯数字实验不依赖DNS或服务数据库</td></tr><tr><td>AI_PASSIVE + NULL host</td><td>用于服务器通配本地地址</td><td>本实验改用明确回环地址</td></tr><tr><td>NI_NUMERICHOST / NI_NUMERICSERV</td><td>把地址/端口显示成数字</td><td>日志不会为反向解析额外等待</td></tr></tbody></table></div><p>getnameinfo做相反方向的显示转换，能依据sockaddr中的地址族自动选择格式；inet_ntop需要先确定family并取得对应结构中的地址字段。练习11.4故意用较低层接口，让我们看清被高级接口隐藏的强制转换和结构成员选择。</p><p>例如getaddrinfo("127.0.0.1","8080",…)生成IPv4流候选，socket使用候选类型，connect使用ai_addr/ai_addrlen；getnameinfo加两个NI_NUMERIC旗标又把它显示成127.0.0.1与8080。返回链表不应按程序想象的固定节点数遍历，始终跟随ai_next直到NULL。</p><h3 id="ss11-4-8">11.4.8 · 封装候选搜索，也封装失败清理<span class="english-title" lang="en">Helper Functions for the Sockets Interface</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=979">来源：印刷 978 页 / PDF 979 页</a></p><p>open_clientfd把解析、候选循环与连接合在一起，open_listenfd把解析、候选循环、bind和listen合在一起。它们减少的是重复的资源管理，并没有消除失败状态：socket失败试下一项，connect或bind失败关闭当前fd，全失败释放链表并报告；listen失败也必须关闭已创建的fd。</p><pre><code data-language="c" class="language-c">for (p = list; p != NULL; p = p-&gt;ai_next) {
+    fd = socket(p-&gt;ai_family, p-&gt;ai_socktype, p-&gt;ai_protocol);
+    if (fd &lt; 0) continue;
+    if (connect(fd, p-&gt;ai_addr, p-&gt;ai_addrlen) == 0) break;
+    close(fd);
+}
+freeaddrinfo(list);
+/* Save the success state before releasing data you still need. */</code></pre><p>正文的循环是调用关系片段，完整可运行代码在下方。真正封装应把成功状态独立保存，避免释放链表后继续解引用节点。还需区分“名字解析失败”和“所有地址都无法连接”，以便定位配置与运行故障。原书大写包装器通常遇错退出，这对一次性客户端很方便；长期服务中普通连接错误应返回给主循环，仅结束当前事务。</p><h3 id="ss11-4-9">11.4.9 · 收到多少字节，就按同样长度回送<span class="english-title" lang="en">Example Echo Client and Server</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=981">来源：印刷 980 页 / PDF 981 页</a></p><p>原书echo client逐行读取stdin，用rio_writen发出，再用rio_readlineb读回一行；server循环接受一个client，直到该client EOF才接下一个。行协议依赖换行字符作为边界，TCP本身不知道“行”。如果双方都先等对方发送一行，就会互相等待；如果client发送未换行的最后片段又等待完整行，server也可能仍在等换行。</p><div class="source-statement" id="classic-11-eof" data-source-kind="classic-passage"><h4>原文伴读 · EOF不是一个特殊字符</h4><blockquote class="original-excerpt" lang="en"><p>First, we need to understand that there is no such thing as an EOF character.</p></blockquote><div class="statement-body"><p><strong>中文：</strong>首先要明白，不存在一个所谓EOF字符。</p><p>read返回0表达流结束状态；它不占一个字节。TCP半关闭可结束发送方向，同时保留接收响应的能力。</p></div><p class="source"><a class="source-pdf" href="../csapp.pdf#page=985">来源：印刷 984 页 / PDF 985 页</a></p></div><p>实验<code>ch11_echo</code>发送11个字节：<code>ab\nx\0y\ntail</code>。client故意分两次写，随后shutdown(SHUT_WR)；server每次最多读3字节并按实际n回写，读到0后也关闭发送方向；client继续读到EOF并逐字节比较。内嵌NUL和最后无换行的tail都保持原样，因为我们不用strlen决定二进制载荷长度。</p><div class="scroll"><table class="compact-table"><thead><tr><th scope="col">状态</th><th scope="col">client发送方向</th><th scope="col">server动作</th><th scope="col">client接收方向</th></tr></thead><tbody><tr><td>写入11 B</td><td>开放</td><td>read可得到不同分块</td><td>仍开放</td></tr><tr><td>shutdown(SHUT_WR)</td><td>结束，已排队字节仍可交付</td><td>先读完11 B，再得到0</td><td>继续接收echo</td></tr><tr><td>server完成echo并半关闭</td><td>已结束</td><td>总字节计数必须为11</td><td>读完echo后得到0</td></tr></tbody></table></div><p>这个小实验让两种角色在同一进程按顺序执行，11字节足以放入内核缓冲；它验证真实TCP接口、短块处理与半关闭语义，不是大流量服务器。大数据若“全部发完才读回复”，可能因为双方缓冲区填满而死锁，必须交错收发或引入并发。</p><details class="reading-notes" id="notes-s11-4" data-notes-for="s11-4"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">不变量</span><h3>监听fd不承载本连接数据</h3><p>accept返回另一个fd；关闭connfd不应顺便关闭下一位客户端所需的listenfd。</p></div><div class="annotation-card"><span class="annotation-kind">接口</span><h3>字节流不保留write分界</h3><p>读到2字节并不说明消息只有2字节。应用自己定义换行、长度或关闭作为边界。</p></div></div></details></section><section id="s11-5"><h2>11.5 · 把字节流上的协议接到文件与程序<span class="english-title" lang="en">Web Servers</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=985">来源：印刷 984—992 页 / PDF 985—993 页</a></p><h3 id="ss11-5-1">11.5.1 · HTTP约定交互，HTML描述内容<span class="english-title" lang="en">Web Basics</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=985">来源：印刷 984 页 / PDF 985 页</a></p><p>本章的HTTP/1.x把请求行、首部和响应行编码成文本，再在TCP上发送。HTML则是响应内容的一种表示，浏览器解析标签来排版和构造超链接。网络上传来的字节只有在Content-Type、编码和HTML语法的共同解释下，才成为读者看到的页面。</p><p>原书Tiny每次处理一条请求，发送响应后关闭连接；这是一种方便理解的HTTP/1.0服务方式。它不是所有HTTP版本和连接策略的共同要求。HTTP/1.1可以保持连接，现代HTTP还有不同的传输与帧结构；本页实验明确只处理HTTP/1.0与1.1文本请求，并在响应中声明Connection: close。</p><h3 id="ss11-5-2">11.5.2 · URL定位资源，MIME描述字节<span class="english-title" lang="en">Web Content</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=986">来源：印刷 985 页 / PDF 986 页</a></p><div class="source-statement" id="classic-11-content" data-source-kind="classic-passage"><h4>原文伴读 · 内容的两个部分</h4><blockquote class="original-excerpt" lang="en"><p>To Web clients and servers, content is a sequence of bytes with an associated MIME (multipurpose internet mail extensions) type.</p></blockquote><div class="statement-body"><p><strong>中文：</strong>对Web客户端和服务器，内容是一串字节以及与之关联的MIME类型。</p><p>把同样字节标作text/plain与text/html，浏览器会采取不同解释。文件扩展名只是服务器选择类型的一种策略。</p></div><p class="source"><a class="source-pdf" href="../csapp.pdf#page=986">来源：印刷 985 页 / PDF 986 页</a></p></div><p>静态内容来自文件，动态内容由程序在请求时生成。URL如<code>http://example.test:8000/cgi-bin/adder?15000&amp;213</code>分成scheme、主机、端口、路径和查询；client使用前半部分找到服务，server使用路径与查询决定操作。路径开头的/是该站点的资源根，不应直接拼成操作系统根目录。</p><div class="scroll"><table class="compact-table"><thead><tr><th scope="col">URI</th><th scope="col">本页规则</th><th scope="col">返回的字节与类型</th></tr></thead><tbody><tr><td>/</td><td>root/home.html</td><td>HTML文件，text/html</td></tr><tr><td>/hello.txt</td><td>root/hello.txt</td><td>原文件字节，text/plain</td></tr><tr><td>/sample.mpg</td><td>root/sample.mpg</td><td>原文件字节，video/mpeg</td></tr><tr><td>/cgi-bin/adder?a=2&amp;b=3</td><td>固定加法处理器</td><td>生成HTML，结果为5</td></tr></tbody></table></div><p>把请求路径变成本地路径需要明确边界。教学实现仅接受根目录下一层普通文件名，拒绝..、百分号路径编码、斜杠子目录和符号链接；只开放固定adder动态入口。它牺牲通用性来使每次文件访问可解释，不能当成完整静态站点服务器。根目录与文件在请求处理期间需保持稳定。</p><h3 id="ss11-5-3">11.5.3 · 先定消息边界，再解释字段<span class="english-title" lang="en">HTTP Transactions</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=987">来源：印刷 986 页 / PDF 987 页</a></p><p>一次请求以<code>method SP request-target SP version CRLF</code>开始，后面每条首部也以CRLF结束，空行CRLF结束首部。请求正文是否存在及其长度由协议字段决定，不能把“读完首部”当作“整个请求读完”。响应也先有状态行和首部，然后才是正文。</p><pre><code data-language="http" class="language-http">POST /cgi-bin/adder HTTP/1.1
+Host: 127.0.0.1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 7
+
+a=2&amp;b=3</code></pre><p>这里正文恰为7字节。假设一次read取回“首部空行加a=2”，下一次取回“&amp;b=3”，解析器必须保留首次多读的3字节，再补4字节；不能丢掉已进入用户缓冲区的内容。若连接在6字节时EOF，是截断请求；若收到两个互相矛盾的Content-Length，必须拒绝，不能由不同层各自挑一个解释。</p><pre><code data-language="http" class="language-http">HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 17
+Connection: close
+
+&lt;p&gt;2 + 3 = 5&lt;/p&gt;
+</code></pre><p>正文<code>&lt;p&gt;2 + 3 = 5&lt;/p&gt;
+</code>为17个ASCII字节。Content-Length不包括响应头，也不包括头与正文之间的空行；若正文有中文，应先UTF-8编码再计数。HEAD保留GET本应发送的长度，但实际不发送body，所以不能机械地要求所有响应都跟着Content-Length字节正文。</p><p>首部值两端的OWS只包括SP与HTAB；例如<code>Content-Length: 7 \t</code>仍表示7字节，<code>Content-Type: application/x-www-form-urlencoded\t</code>仍是相同媒体类型。C与Python都先剔除首尾这两种字节，保留值内空白；<code>Content-Length : 7</code>在字段名与冒号之间插入空白，仍须拒绝，控制字符也不作为普通空白放行。此处依据<a href="https://www.rfc-editor.org/rfc/rfc9112.html#section-5.1">RFC 9112 §5.1</a>。本页拒绝Transfer-Encoding、Expect和过大的请求；不实现chunked、持久连接、流水请求、Range或TLS。它对一个连接只生成一个响应。遇到Expect: 100-continue时，客户端可能只发送请求头，然后等待服务器决定是否接收正文。本实验先验证完整首部、消息长度语法与HTTP/1.1的Host要求：缺失、空值或重复Host返回400；只有通过这些检查的Expect请求才立即返回417并关闭连接；如果先等待Content-Length指定的正文，客户端与服务器就会互相等待。普通POST仍须收到完整正文才处理。原书引用RFC2616来解释HTTP/1.1，是教材的历史标准入口；题解使用其字段语义，同时不沿用“HTTP/1.1是当前最新版本”的出版时陈述。</p><h3 id="ss11-5-4">11.5.4 · CGI把请求信息转为环境和标准流<span class="english-title" lang="en">Serving Dynamic Content</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=990">来源：印刷 989 页 / PDF 990 页</a></p><p>CGI定义服务器与子程序之间的约定。GET查询通常放进QUERY_STRING；POST数据放在标准输入，CONTENT_LENGTH说明应读多少字节，CONTENT_TYPE说明格式，REQUEST_METHOD说明方法。子程序把类型、长度等CGI响应头和内容写到stdout。服务器可直接把stdout连到socket，也可以先用pipe收集结果，再组成最终HTTP响应。</p><figure><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 120" role="img" aria-label="POST请求到CGI程序的具体传递"><title>POST请求到CGI程序的具体传递</title><rect class="n" x="10.0" y="25" width="170.0" height="70" rx="4"/><text x="95.0" y="51">HTTP解析</text><text class="hint" x="95.0" y="77">body=a=2&b=3；7 B</text><text x="188.0" y="65">→</text><rect class="n" x="195.0" y="25" width="170.0" height="70" rx="4"/><text x="280.0" y="51">子进程环境</text><text class="hint" x="280.0" y="77">POST；length=7</text><text x="373.0" y="65">→</text><rect class="n" x="380.0" y="25" width="170.0" height="70" rx="4"/><text x="465.0" y="51">CGI stdin</text><text class="hint" x="465.0" y="77">准确读取7 B</text><text x="558.0" y="65">→</text><rect class="n" x="565.0" y="25" width="170.0" height="70" rx="4"/><text x="650.0" y="51">CGI stdout</text><text class="hint" x="650.0" y="77">Content-Type与结果5</text></svg></div><figcaption>POST请求到CGI程序的具体传递</figcaption></figure><p>原书Tiny在fork后的child里setenv，再dup2(connfd, STDOUT_FILENO)，最后execve执行adder。exec替换程序映像，未设置close-on-exec的打开描述符仍可继承，因此adder的printf会进入socket。原书parent调用wait回收child；其他回收策略在练习11.8和第12章展开。</p><p>缓冲输入使POST比GET更微妙：若RIO已经把正文预读进自己的缓冲区，直接dup2原socket到stdin会让child读不到这些预读字节。本页Python实现先从同一解析器取得精确正文，再通过subprocess的stdin管道交给固定CGI程序，收集stdout后核对CGI长度。这样也能在child失败时返回502，而不是先发送200再发现失败。</p><p>网页表单默认发送<code>a=15000&amp;b=213</code>，原书adder只接受裸<code>15000&amp;213</code>并用atoi。完整伴读实现接受两种明确格式，表单方式检查键名与重复键、百分号编码、整数范围，保留正负号并拒绝垃圾尾缀；两个操作数都限制在±1000000，和自然落在±2000000内。</p><details class="reading-notes" id="notes-s11-5" data-notes-for="s11-5"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">单位</span><h3>Content-Length计字节</h3><p>UTF-8汉字通常多于1字节；长度应从已编码body计算，不能用字符数。</p></div><div class="annotation-card"><span class="annotation-kind">生命周期</span><h3>HTTP完成与TCP关闭</h3><p>本实验每连接一个响应并关闭；一般HTTP协议的连接复用需独立分析。</p></div></div></details></section><section id="s11-6"><h2>11.6 · 沿doit走完静态与动态两条路径<span class="english-title" lang="en">Putting It Together: The Tiny Web Server</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=993">来源：印刷 992—1000 页 / PDF 993—1001 页</a></p><p>Tiny最值得学习的是函数分工：main持有监听fd并接受连接；doit读请求、判方法、解析URI、检查对象，再分派静态或动态处理；clienterror生成错误响应；read_requesthdrs找首部边界；parse_uri把请求映射到受控资源；serve_static发送文件，serve_dynamic运行CGI。每个连接处理结束后，main关闭connfd并回到accept。</p><div class="scroll"><table class="compact-table"><thead><tr><th scope="col">原书函数</th><th scope="col">要维持的不变量</th><th scope="col">伴读实现位置</th></tr></thead><tbody><tr><td>read_requesthdrs / doit</td><td>同一字节只消费一次；正文按长度保留</td><td>request_size / read_request</td></tr><tr><td>parse_uri</td><td>请求只能选择已授权的资源</td><td>read_asset / asset / route</td></tr><tr><td>serve_static</td><td>按文件长度读写，二进制不使用strlen</td><td>read_asset + build_response</td></tr><tr><td>serve_dynamic</td><td>环境、stdin、stdout与child生命周期明确</td><td>C的dispatch_cgi / cgi_main；Python的route / cgi_main</td></tr><tr><td>clienterror</td><td>错误也有完整状态行、头与长度</td><td>build_response / handle</td></tr></tbody></table></div><p>静态例子先打开文件并fstat，普通文件长度n确定后申请n字节（空文件单独处理），循环read到n，再统一形成响应并write_all。原书版本用mmap，关闭源fd后映射仍然有效；最后还要munmap。读入malloc版本增加一次数据复制，但不再依赖映射区域的生命周期，正好对应11.9。两者都要求文件在读取/映射过程中不会被并发截短或替换成不同内容。</p><p>逐段读C核心时，先看request_size：它寻找CRLFCRLF，只按十进制解析Content-Length，限制首部8192 B、正文4096 B，并拒绝重复长度和Transfer-Encoding。request_ready另外判断当前字节是否足以生成最终响应：请求尚未完整时继续等输入，头部已完整且能拒绝Expect时立即响应；request_size仍只表示消息长度是否完整，供代理等调用者使用。再看read_asset：用打开的root目录和openat定位单层文件，O_NOFOLLOW拒绝最终符号链接，fstat确保普通文件与64 KiB上限。最后build_response集中计算长度，HEAD只抑制正文，handle负责socket读写而不关闭调用者的fd。</p><p>C的build_response动态分支直接计算adder，供第12章不同调度模型复用；第11章另有实际的<code>--serve-cgi</code>入口：dispatch_cgi验证请求后fork，child把已读POST正文接到stdin、把连接接到stdout，再exec同一二进制的<code>--cgi</code>模式；父进程关闭自己的连接引用并继续accept，由SIGCHLD处理器回收。Python的<code>--serve</code>通过subprocess.run同步等待CGI并收集stdout，是另一条便于观察管道转交的参考路径。第11.8题的异步接入由C主循环实现；Python CGI程序也能由该C主循环异步exec，两者在回归中分别运行。</p><p>原书Tiny有多处为了紧凑而省略的边界：sscanf的%s无宽度限制；路径直接拼接；反复sprintf把目标缓冲区同时当%s输入造成重叠对象问题；头部EOF可能使循环不结束；空文件的零长度mmap不适用；adder缺少&amp;时可能解引用空指针，atoi也不能报告格式或溢出。这里保留其函数组织来讲机制，运行代码使用有界解析、定长长度与失败返回。</p><p>本页C收发在入口保存fd flags并临时设O_NONBLOCK，poll使用单调时钟的绝对期限；EINTR/EAGAIN重新等待，但不会重新发放两秒额度。成功和失败都恢复原flags，调用方仍须保证该fd没有被其他线程同时使用或关闭。Python的socket读取也用绝对截止时间，sendall限时。SIGPIPE忽略后write仍可能返回EPIPE；必须停止这一条连接的写入并回到服务层，不可把信号处理当作写入成功。</p><div class="source-statement" id="classic-11-cgi" data-source-kind="classic-passage"><h4>原文伴读 · 标准输出为何成为网络输出</h4><blockquote class="original-excerpt" lang="en"><p>Thus, everything that the CGI program writes to standard output goes directly to the client process, without any intervention from the parent process.</p></blockquote><div class="statement-body"><p><strong>中文：</strong>所以，CGI程序写到标准输出的内容直接发往客户端进程，无需父进程介入。</p><p>这是原书dup2后直接连socket的具体设计。本页C异步模式按这条路径把stdout接到连接；Python同步参考用pipe收集输出，由父进程转发。相同请求的计算结果可以对应，但描述符路径与父进程是否等待须分别观察。</p></div><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1001">来源：印刷 1000 页 / PDF 1001 页</a></p></div><p>默认实验结束后没有监听器或CGI子进程遗留。Python用于人工浏览器验收的--serve必须显式给根目录，绑定127.0.0.1、随机端口且接受新连接的窗口最多300秒，截止时完成当前有界请求后退出；它只作为本机教学入口。C异步入口同样只绑定回环地址，接收指定数量的连接，120秒接入窗口后停止监听；退出前由处理器回收已创建的CGI，child的五秒alarm跨exec生效。即使具备长度和路径检查，这仍是单请求、有限文件、固定CGI的实现，不能据此推断已覆盖完整HTTP规范或长期服务故障。</p><details class="reading-notes" id="notes-s11-6" data-notes-for="s11-6"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">失败</span><h3>客户端断开是单请求失败</h3><p>EPIPE、ECONNRESET和超时必须返回连接层处理，不能让普通写入包装器退出整个server。</p></div><div class="annotation-card"><span class="annotation-kind">资源</span><h3>每条路径都结束所有权</h3><p>分配的响应由调用者free；socket由accept调用方close；CGI子进程要回收。</p></div></div></details></section><section id="s11-7"><h2>11.7 · 把资源、协议与生命周期放在同一条线上<span class="english-title" lang="en">Summary</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1001">来源：印刷 1000—1001 页 / PDF 1001—1002 页</a></p><p>现在可以从一个具体请求解释整个系统：DNS或数值解析给出地址，client创建socket并connect，server在监听fd上accept得到连接fd；双方按HTTP规则划分请求行、首部和正文；server读取文件或运行CGI，把状态与内容按字节长度写回；双方关闭描述符，child被回收，临时内存被释放。任何一处把“已发送”混同于“已处理”，把一次read混同于一条消息，或把一个fd混同于唯一引用，都可能导致错误。</p><p>第12章将让多个client同时前进。并发不会自动修好消息解析、错误处理和路径映射；它只是让这些代码在更多交错次序下运行。进入下一章前，先把本章半关闭、POST预读、HEAD长度、SIGPIPE与child回收的状态变化讲清，再考虑共享状态需要怎样同步。</p><details class="reading-notes" id="notes-s11-7" data-notes-for="s11-7"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">串联</span><h3>第10章在这里成为协议工具</h3><p>短读写、描述符复制、缓冲预读和EOF都是网络行为的一部分，而不只是磁盘文件知识。</p></div><div class="annotation-card"><span class="annotation-kind">下一章</span><h3>慢client如何影响其他client</h3><p>迭代服务一次只有一个活跃事务。第12章改变调度与共享状态，应用协议的解析仍需正确。</p></div></div></details></section><section id="experiment"><h2>可执行实验：地址、流与HTTP</h2><p>普通C使用严格C11语法与POSIX接口，本机macOS的运行不冒充Linux内核验证；O_NOFOLLOW在Darwin头文件中由显式平台特性宏开放。默认所有TCP访问仅在127.0.0.1，数值转换默认不做公网解析。下载同章源码后，可按下面命令编译；与源码相邻的代码副本逐字同步。</p><pre><code data-language="shell" class="language-shell">mkdir -p tmp/csapp/part3/ch11
+clang -std=c11 -Wall -Wextra -Werror -pedantic -O1 \
+  -fsanitize=address,undefined -fno-omit-frame-pointer \
+  books/csapp/code/ch11_echo.c -o tmp/csapp/part3/ch11/echo
+./tmp/csapp/part3/ch11/echo
+python3 books/csapp/code/ch11_echo.py</code></pre><article id="address-code"><h3>地址与端口：同一数值的三种表示</h3><p>hex2dd与dd2hex遵守本版16位题意；ipv4hex与hexipv4另处理32位IPv4。输入必须是完整数字，拒绝空串、前后空白、越界与垃圾尾部。hostinfo按11.4使用inet_ntop显示getaddrinfo结果；只有显式传入域名时才会请求名称解析。</p><div class="code-pair"><details class="code-version" data-language="c"><summary>C11 / POSIX · ch11_address.c</summary><p><a href="../code/ch11_address.c" download>下载 ch11_address.c</a></p><pre><code id="ch11_address-c" data-language="c" class="language-c">#define _POSIX_C_SOURCE 200809L
+/* C11 + POSIX sockets; defaults perform numeric loopback conversion only. */
+#include &lt;arpa/inet.h&gt;
+#include &lt;errno.h&gt;
+#include &lt;inttypes.h&gt;
+#include &lt;netdb.h&gt;
+#include &lt;stdint.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+static int number(const char *s, int base, uint32_t limit, uint32_t *out) {
+    const char *digits = s;
+    if (base == 16 &amp;&amp; s[0] == &#x27;0&#x27; &amp;&amp; (s[1] == &#x27;x&#x27; || s[1] == &#x27;X&#x27;)) digits += 2;
+    if (!*digits) return 0;
+    for (const char *p = digits; *p; ++p) {
+        int valid = (*p &gt;= &#x27;0&#x27; &amp;&amp; *p &lt;= &#x27;9&#x27;) ||
+            (base == 16 &amp;&amp; ((*p &gt;= &#x27;a&#x27; &amp;&amp; *p &lt;= &#x27;f&#x27;) || (*p &gt;= &#x27;A&#x27; &amp;&amp; *p &lt;= &#x27;F&#x27;)));
+        if (!valid) return 0;
+    }
+    char *end; errno = 0;
+    uintmax_t n = strtoumax(s, &amp;end, base);
+    if (errno || *end || n &gt; limit) return 0;
+    *out = (uint32_t)n; return 1;
+}
+static int hostinfo(const char *host) {
+    struct addrinfo hints = {0}, *list = NULL;
+    hints.ai_family = AF_INET; hints.ai_socktype = SOCK_STREAM;
+    int rc = getaddrinfo(host, NULL, &amp;hints, &amp;list);
+    if (rc) { fprintf(stderr, &quot;%s\n&quot;, gai_strerror(rc)); return 2; }
+    for (struct addrinfo *p = list; p; p = p-&gt;ai_next) {
+        const struct sockaddr_in *a = (const struct sockaddr_in *)p-&gt;ai_addr;
+        char text[INET_ADDRSTRLEN];
+        if (!inet_ntop(AF_INET, &amp;a-&gt;sin_addr, text, sizeof(text))) {
+            freeaddrinfo(list); return 2;
+        }
+        puts(text);
+    }
+    freeaddrinfo(list); return 0;
+}
+int main(int argc, char **argv) {
+    uint32_t n;
+    if (argc == 3) {
+        if (!strcmp(argv[1], &quot;hostinfo&quot;)) return hostinfo(argv[2]);
+        if (!strcmp(argv[1], &quot;hex2dd&quot;) &amp;&amp; number(argv[2], 16, UINT16_MAX, &amp;n)) {
+            uint16_t wire = htons((uint16_t)n);
+            printf(&quot;%u\n&quot;, (unsigned)ntohs(wire)); return 0;
+        }
+        if (!strcmp(argv[1], &quot;dd2hex&quot;) &amp;&amp; number(argv[2], 10, UINT16_MAX, &amp;n)) {
+            uint16_t wire = htons((uint16_t)n);
+            printf(&quot;0x%x\n&quot;, (unsigned)ntohs(wire)); return 0;
+        }
+        if (!strcmp(argv[1], &quot;ipv4hex&quot;)) {
+            struct in_addr a;
+            if (inet_pton(AF_INET, argv[2], &amp;a) == 1) {
+                printf(&quot;0x%08&quot; PRIX32 &quot;\n&quot;, ntohl(a.s_addr)); return 0;
+            }
+        }
+        if (!strcmp(argv[1], &quot;hexipv4&quot;) &amp;&amp; number(argv[2], 16, UINT32_MAX, &amp;n)) {
+            struct in_addr a = {.s_addr = htonl(n)};
+            char buf[INET_ADDRSTRLEN];
+            if (inet_ntop(AF_INET, &amp;a, buf, sizeof(buf))) { puts(buf); return 0; }
+        }
+        fputs(&quot;invalid input\n&quot;, stderr); return 2;
+    }
+    if (argc != 1) { fputs(&quot;usage: ch11_address MODE VALUE\n&quot;, stderr); return 2; }
+    const char *samples[] = {&quot;107.212.122.205&quot;, &quot;64.12.149.13&quot;, &quot;107.212.96.29&quot;,
+                            &quot;0.0.0.128&quot;, &quot;255.255.255.0&quot;, &quot;10.1.1.64&quot;};
+    for (size_t i = 0; i &lt; sizeof(samples) / sizeof(*samples); ++i) {
+        struct in_addr a;
+        if (inet_pton(AF_INET, samples[i], &amp;a) != 1) return 1;
+        printf(&quot;%s = 0x%08&quot; PRIX32 &quot;\n&quot;, samples[i], ntohl(a.s_addr));
+    }
+    uint16_t wire = htons(1024);
+    unsigned char bytes[2]; memcpy(bytes, &amp;wire, sizeof(bytes));
+    printf(&quot;port=1024 wire=%02x %02x\n&quot;, bytes[0], bytes[1]);
+    return hostinfo(&quot;127.0.0.1&quot;);
+}
+</code></pre></details><details class="code-version" data-language="python"><summary>Python 3 · ch11_address.py</summary><p><a href="../code/ch11_address.py" download>下载 ch11_address.py</a></p><pre><code id="ch11_address-python" data-language="python" class="language-python">&quot;&quot;&quot;Numeric byte-order examples; hostinfo performs DNS only when explicitly requested.&quot;&quot;&quot;
+import socket
+import sys
+
+
+def number(text, base, limit):
+    digits = text[2:] if base == 16 and text.lower().startswith(&#x27;0x&#x27;) else text
+    allowed = &#x27;0123456789abcdef&#x27;[:base]
+    if not digits or any(c.lower() not in allowed for c in digits):
+        raise ValueError(&#x27;invalid input&#x27;)
+    value = int(digits, base)
+    if value &gt; limit:
+        raise ValueError(&#x27;invalid input&#x27;)
+    return value
+
+
+def hostinfo(host):
+    for entry in socket.getaddrinfo(host, None, socket.AF_INET, socket.SOCK_STREAM):
+        print(socket.inet_ntop(socket.AF_INET, socket.inet_pton(socket.AF_INET, entry[4][0])))
+
+
+def main(args):
+    if not args:
+        for text in [&#x27;107.212.122.205&#x27;, &#x27;64.12.149.13&#x27;, &#x27;107.212.96.29&#x27;,
+                     &#x27;0.0.0.128&#x27;, &#x27;255.255.255.0&#x27;, &#x27;10.1.1.64&#x27;]:
+            print(f&#x27;{text} = 0x{int.from_bytes(socket.inet_pton(socket.AF_INET, text), &quot;big&quot;):08X}&#x27;)
+        print(&#x27;port=1024 wire=&#x27; + (1024).to_bytes(2, &#x27;big&#x27;).hex(&#x27; &#x27;))
+        hostinfo(&#x27;127.0.0.1&#x27;)
+        return
+    if len(args) != 2:
+        raise ValueError(&#x27;usage: ch11_address MODE VALUE&#x27;)
+    mode, text = args
+    if mode == &#x27;hostinfo&#x27;:
+        hostinfo(text)
+    elif mode in (&#x27;hex2dd&#x27;, &#x27;dd2hex&#x27;):
+        value = number(text, 16 if mode == &#x27;hex2dd&#x27; else 10, 65535)
+        value = int.from_bytes(value.to_bytes(2, &#x27;big&#x27;), &#x27;big&#x27;)
+        print(value if mode == &#x27;hex2dd&#x27; else hex(value))
+    elif mode == &#x27;ipv4hex&#x27;:
+        print(f&#x27;0x{int.from_bytes(socket.inet_pton(socket.AF_INET, text), &quot;big&quot;):08X}&#x27;)
+    elif mode == &#x27;hexipv4&#x27;:
+        print(socket.inet_ntop(socket.AF_INET, number(text, 16, 2**32-1).to_bytes(4, &#x27;big&#x27;)))
+    else:
+        raise ValueError(&#x27;invalid input&#x27;)
+
+
+if __name__ == &#x27;__main__&#x27;:
+    try:
+        main(sys.argv[1:])
+    except (ValueError, OSError) as error:
+        print(error, file=sys.stderr)
+        sys.exit(2)
+</code></pre></details></div><p>本次默认运行的实际输出：</p><pre><code data-language="text" class="language-text">107.212.122.205 = 0x6BD47ACD
+64.12.149.13 = 0x400C950D
+107.212.96.29 = 0x6BD4601D
+0.0.0.128 = 0x00000080
+255.255.255.0 = 0xFFFFFF00
+10.1.1.64 = 0x0A010140
+port=1024 wire=04 00
+127.0.0.1
+</code></pre></article><pre><code data-language="shell" class="language-shell">./tmp/csapp/part3/ch11/ch11_address hex2dd 0x400
+python3 books/csapp/code/ch11_address.py dd2hex 1024
+python3 books/csapp/code/ch11_address.py ipv4hex 128.2.194.242</code></pre><article id="echo-code"><h3>TCP流：11字节穿过不匹配的读写分块</h3><p>C/Python都建立真实loopback TCP连接，验证内嵌NUL、尾部无换行、3字节读取缓冲及双向半关闭；所有socket在退出路径关闭。没有把多次write应对应多少次read写死成断言。</p><div class="code-pair"><details class="code-version" data-language="c"><summary>C11 / POSIX · ch11_echo.c</summary><p><a href="../code/ch11_echo.c" download>下载 ch11_echo.c</a></p><pre><code id="ch11_echo-c" data-language="c" class="language-c">#define _POSIX_C_SOURCE 200809L
+/* Bounded real TCP experiment. C11 syntax, POSIX sockets, loopback only. */
+#include &lt;arpa/inet.h&gt;
+#include &lt;errno.h&gt;
+#include &lt;poll.h&gt;
+#include &lt;signal.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;sys/time.h&gt;
+#include &lt;unistd.h&gt;
+
+static int ready(int fd, short events) {
+    struct pollfd p = {fd, events, 0};
+    int rc;
+    do { rc = poll(&amp;p, 1, 2000); } while (rc &lt; 0 &amp;&amp; errno == EINTR);
+    return rc &gt; 0;
+}
+static int write_all(int fd, const unsigned char *data, size_t n) {
+    while (n) {
+        if (!ready(fd, POLLOUT)) return -1;
+        ssize_t k = write(fd, data, n);
+        if (k &lt; 0 &amp;&amp; errno == EINTR) continue;
+        if (k &lt;= 0) return -1;
+        data += (size_t)k; n -= (size_t)k;
+    }
+    return 0;
+}
+static ssize_t read_some(int fd, void *buf, size_t cap) {
+    if (!ready(fd, POLLIN)) return -1;
+    ssize_t n;
+    do { n = read(fd, buf, cap); } while (n &lt; 0 &amp;&amp; errno == EINTR);
+    return n;
+}
+static int timeout(int fd) {
+    struct timeval tv = {2, 0};
+    return setsockopt(fd, SOL_SOCKET, SO_RCVTIMEO, &amp;tv, sizeof(tv)) ||
+           setsockopt(fd, SOL_SOCKET, SO_SNDTIMEO, &amp;tv, sizeof(tv));
+}
+int main(void) {
+    int listener = -1, client = -1, server = -1, rc = 1;
+    struct sigaction act = {0}; act.sa_handler = SIG_IGN;
+    if (sigemptyset(&amp;act.sa_mask) || sigaction(SIGPIPE, &amp;act, NULL)) return 1;
+    struct sockaddr_in addr = {0};
+    addr.sin_family = AF_INET;
+    if (inet_pton(AF_INET, &quot;127.0.0.1&quot;, &amp;addr.sin_addr) != 1) return 1;
+    addr.sin_port = htons(0); /* Ask the kernel for an unused port. */
+    listener = socket(AF_INET, SOCK_STREAM, 0);
+    if (listener &lt; 0 || bind(listener, (struct sockaddr *)&amp;addr, sizeof(addr)) ||
+        listen(listener, 1)) goto done;
+    socklen_t len = sizeof(addr);
+    if (getsockname(listener, (struct sockaddr *)&amp;addr, &amp;len)) goto done;
+    client = socket(AF_INET, SOCK_STREAM, 0);
+    if (client &lt; 0 || timeout(client) ||
+        connect(client, (struct sockaddr *)&amp;addr, sizeof(addr)) ||
+        !ready(listener, POLLIN)) goto done;
+    server = accept(listener, NULL, NULL);
+    if (server &lt; 0 || timeout(server)) goto done;
+    const unsigned char sent[] = {&#x27;a&#x27;, &#x27;b&#x27;, &#x27;\n&#x27;, &#x27;x&#x27;, 0, &#x27;y&#x27;, &#x27;\n&#x27;, &#x27;t&#x27;, &#x27;a&#x27;, &#x27;i&#x27;, &#x27;l&#x27;};
+    if (write_all(client, sent, 2) || write_all(client, sent + 2, sizeof(sent) - 2) ||
+        shutdown(client, SHUT_WR)) goto done;
+    size_t count = 0; unsigned char block[3]; ssize_t n;
+    while ((n = read_some(server, block, sizeof(block))) &gt; 0) {
+        count += (size_t)n;
+        if (count &gt; sizeof(sent) || write_all(server, block, (size_t)n)) goto done;
+    }
+    if (n &lt; 0 || count != sizeof(sent) || shutdown(server, SHUT_WR)) goto done;
+    unsigned char got[sizeof(sent) + 1]; size_t used = 0;
+    while ((n = read_some(client, got + used, sizeof(got) - used)) &gt; 0) {
+        used += (size_t)n;
+        if (used &gt; sizeof(sent)) goto done;
+    }
+    if (n &lt; 0 || used != sizeof(sent) || memcmp(sent, got, sizeof(sent))) goto done;
+    puts(&quot;echo bytes=11 binary=preserved half-close=EOF listener=separate&quot;);
+    rc = 0;
+done:
+    if (server &gt;= 0) close(server);
+    if (client &gt;= 0) close(client);
+    if (listener &gt;= 0) close(listener);
+    if (rc) fputs(&quot;echo experiment failed\n&quot;, stderr);
+    return rc;
+}
+</code></pre></details><details class="code-version" data-language="python"><summary>Python 3 · ch11_echo.py</summary><p><a href="../code/ch11_echo.py" download>下载 ch11_echo.py</a></p><pre><code id="ch11_echo-python" data-language="python" class="language-python">&quot;&quot;&quot;Real loopback TCP, bounded payload; sequential roles fit kernel buffers.&quot;&quot;&quot;
+import socket
+
+
+def main():
+    sent = b&#x27;ab\nx\0y\ntail&#x27;
+    with socket.socket() as listener:
+        listener.settimeout(2)
+        listener.bind((&#x27;127.0.0.1&#x27;, 0))
+        listener.listen(1)
+        with socket.create_connection(listener.getsockname(), timeout=2) as client:
+            server, _ = listener.accept()
+            with server:
+                server.settimeout(2)
+                client.sendall(sent[:2])
+                client.sendall(sent[2:])
+                client.shutdown(socket.SHUT_WR)
+                count = 0
+                while block := server.recv(3):
+                    count += len(block)
+                    if count &gt; len(sent):
+                        raise RuntimeError(&#x27;unexpected data&#x27;)
+                    server.sendall(block)
+                if count != len(sent):
+                    raise RuntimeError(&#x27;truncated stream&#x27;)
+                server.shutdown(socket.SHUT_WR)
+                result = b&#x27;&#x27;
+                while block := client.recv(16):
+                    result += block
+                    if len(result) &gt; len(sent):
+                        raise RuntimeError(&#x27;unexpected echo&#x27;)
+                if result != sent:
+                    raise RuntimeError(&#x27;echo differs&#x27;)
+    print(&#x27;echo bytes=11 binary=preserved half-close=EOF listener=separate&#x27;)
+
+
+if __name__ == &#x27;__main__&#x27;:
+    main()
+</code></pre></details></div><p>本次默认运行的实际输出：</p><pre><code data-language="text" class="language-text">echo bytes=11 binary=preserved half-close=EOF listener=separate
+</code></pre></article><article id="http-c-code"><h3>C核心：有界HTTP响应、文件读取与信号恢复</h3><p>build_response接受完整消息或已经可以拒绝的Expect首部，并返回malloc分配的完整响应；调用者free。handle读写调用者的socket并恢复原阻塞标志，不替调用者close。read_asset是11.9的malloc+循环read版本。11.8从serve_cgi进入dispatch_cgi，实际fork/exec后立即返回接入循环；child_handler独占该单线程服务器全部子进程的回收权。默认自测输出保持为HTTP核心和单子进程机制检查，完整异步服务另由维护回归执行。</p><div class="code-pair"><details class="code-version" data-language="c"><summary>C11 / POSIX · ch11_http.c</summary><p><a href="../code/ch11_http.c" download>下载 ch11_http.c</a></p><pre><code id="ch11_http_core-c" data-language="c" class="language-c">#define _POSIX_C_SOURCE 200809L
+#ifdef __APPLE__
+#define _DARWIN_C_SOURCE
+#endif
+/* C11 + POSIX. A bounded HTTP/1.x teaching core, not a general HTTP server.
+ * Static assets: one plain filename beneath root, no symlinks, &lt;=64 KiB.
+ * build_response computes the adder in process. --serve-cgi actually forks and
+ * execs this binary (or an operator-selected CGI), reaping via SIGCHLD.
+ * build_response owns no socket; caller frees *response. handle owns no fd.
+ */
+#include &lt;arpa/inet.h&gt;
+#include &lt;ctype.h&gt;
+#include &lt;errno.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;limits.h&gt;
+#include &lt;poll.h&gt;
+#include &lt;signal.h&gt;
+#include &lt;stdbool.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;strings.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/wait.h&gt;
+#include &lt;time.h&gt;
+#include &lt;unistd.h&gt;
+
+#define CH11_REQUEST_LIMIT 12288
+#define CH11_HEADER_LIMIT 8192
+#define CH11_BODY_LIMIT 4096
+#define CH11_FILE_LIMIT 65536
+
+static long long now_ms(void) {
+    struct timespec ts;
+    if (clock_gettime(CLOCK_MONOTONIC, &amp;ts)) return -1;
+    return (long long)ts.tv_sec * 1000 + ts.tv_nsec / 1000000;
+}
+static int io_ready(int fd, short events, long long end) {
+    for (;;) {
+        long long left = end - now_ms();
+        if (left &lt;= 0) return 0;
+        struct pollfd p = {fd, events, 0};
+        int rc = poll(&amp;p, 1, (int)left);
+        if (rc &lt; 0 &amp;&amp; errno == EINTR) continue;
+        return rc &gt; 0;
+    }
+}
+static int write_all(int fd, const void *data, size_t n) {
+    const unsigned char *p = data;
+    int flags = fcntl(fd, F_GETFL), rc = -1;
+    if (flags &lt; 0 || fcntl(fd, F_SETFL, flags | O_NONBLOCK)) return -1;
+    long long end = now_ms() + 2000;
+    while (n) {
+        if (!io_ready(fd, POLLOUT, end)) { errno = ETIMEDOUT; goto done; }
+        ssize_t k = write(fd, p, n &gt; 4096 ? 4096 : n);
+        if (k &lt; 0 &amp;&amp; (errno == EINTR || errno == EAGAIN || errno == EWOULDBLOCK)) continue;
+        if (k &lt;= 0) goto done;
+        p += (size_t)k; n -= (size_t)k;
+    }
+    rc = 0;
+done: {
+        int saved = errno;
+        if (fcntl(fd, F_SETFL, flags)) return -1;
+        errno = saved; return rc;
+    }
+}
+/* Returns 0 for an incomplete request, 1 for a complete request, -1 if invalid.
+ * Input need not be NUL terminated. This conservative framing rejects TE and
+ * repeated Content-Length rather than attempting ambiguous interpretations. */
+static int request_size(const char *data, size_t n, size_t *expected) {
+    if (n &gt; CH11_REQUEST_LIMIT || memchr(data, 0, n)) return -1;
+    char text[CH11_REQUEST_LIMIT + 1]; memcpy(text, data, n); text[n] = 0;
+    char *end = strstr(text, "\r\n\r\n");
+    if (!end) return n &gt;= CH11_HEADER_LIMIT ? -1 : 0;
+    size_t head = (size_t)(end - text) + 4, body = 0;
+    if (head &gt; CH11_HEADER_LIMIT) return -1;
+    char *line = strstr(text, "\r\n");
+    if (!line) return -1;
+    line += 2; bool seen = false;
+    while (line &lt; end) {
+        char *next = strstr(line, "\r\n");
+        if (!next) return -1;
+        *next = 0;
+        char *colon = strchr(line, ':');
+        if (!colon || colon == line || line[0] == ' ' || line[0] == '\t') return -1;
+        *colon = 0; char *value = colon + 1;
+        while (*value == ' ' || *value == '\t') ++value;
+        char *tail = next;
+        while (tail &gt; value &amp;&amp; (tail[-1] == ' ' || tail[-1] == '\t')) --tail;
+        *tail = 0;
+        for (const unsigned char *q = (const unsigned char *)value; *q; ++q)
+            if ((*q &lt; 32 &amp;&amp; *q != '\t') || *q == 127) return -1;
+        for (const char *q = line; *q; ++q)
+            if (!isalnum((unsigned char)*q) &amp;&amp; *q != '-') return -1;
+        if (!strcasecmp(line, "Transfer-Encoding")) return -1;
+        if (!strcasecmp(line, "Content-Length")) {
+            if (seen || !*value) return -1;
+            seen = true;
+            for (const char *q = value; *q; ++q) {
+                if (*q &lt; '0' || *q &gt; '9') return -1;
+                body = body * 10 + (size_t)(*q - '0');
+                if (body &gt; CH11_BODY_LIMIT) return -1;
+            }
+        }
+        line = next + 2;
+    }
+    *expected = head + body;
+    return n &gt;= *expected;
+}
+static int integer(const char *s, long *result) {
+    if (!*s || strlen(s) &gt; 8) return 0;
+    const char *p = s;
+    if (*p == '+' || *p == '-') ++p;
+    if (!*p) return 0;
+    for (; *p; ++p) if (*p &lt; '0' || *p &gt; '9') return 0;
+    char *end; errno = 0; long v = strtol(s, &amp;end, 10);
+    if (errno || *end || v &lt; -1000000 || v &gt; 1000000) return 0;
+    *result = v; return 1;
+}
+static int hex_digit(char c) {
+    if (c &gt;= '0' &amp;&amp; c &lt;= '9') return c - '0';
+    if (c &gt;= 'a' &amp;&amp; c &lt;= 'f') return c - 'a' + 10;
+    if (c &gt;= 'A' &amp;&amp; c &lt;= 'F') return c - 'A' + 10;
+    return -1;
+}
+static int unescape(char *s) {
+    char *w = s;
+    while (*s) {
+        if (*s == '%') {
+            if (!s[1] || !s[2]) return 0;
+            int a = hex_digit(s[1]), b = hex_digit(s[2]);
+            if (a &lt; 0 || b &lt; 0 || a * 16 + b == 0) return 0;
+            *w++ = (char)(a * 16 + b); s += 3;
+        } else { *w++ = *s == '+' ? ' ' : *s; ++s; }
+    }
+    *w = 0; return 1;
+}
+static int sum_arguments(char *args, long *a, long *b) {
+    char *amp = strchr(args, '&amp;');
+    if (!amp || strchr(amp + 1, '&amp;')) return 0;
+    *amp++ = 0;
+    if (!strncmp(args, "a=", 2) &amp;&amp; !strncmp(amp, "b=", 2)) {
+        args += 2; amp += 2;
+        if (!unescape(args) || !unescape(amp)) return 0;
+    }
+    return integer(args, a) &amp;&amp; integer(amp, b);
+}
+static const char *mime(const char *name) {
+    const char *ext = strrchr(name, '.');
+    if (!ext) return "application/octet-stream";
+    if (!strcmp(ext, ".html")) return "text/html; charset=utf-8";
+    if (!strcmp(ext, ".txt")) return "text/plain; charset=utf-8";
+    if (!strcmp(ext, ".png")) return "image/png";
+    if (!strcmp(ext, ".gif")) return "image/gif";
+    if (!strcmp(ext, ".jpg")) return "image/jpeg";
+    if (!strcmp(ext, ".mpg") || !strcmp(ext, ".mpeg")) return "video/mpeg";
+    return "application/octet-stream";
+}
+static int read_asset(const char *root, const char *name, char **body, size_t *n) {
+    if (!*name || strstr(name, "..")) return 403;
+    for (const char *p = name; *p; ++p)
+        if (!isalnum((unsigned char)*p) &amp;&amp; *p != '_' &amp;&amp; *p != '-' &amp;&amp; *p != '.') return 403;
+    int dir = open(root, O_RDONLY | O_DIRECTORY);
+    if (dir &lt; 0) return 500;
+    int fd = openat(dir, name, O_RDONLY | O_NOFOLLOW | O_NONBLOCK); close(dir);
+    if (fd &lt; 0) return errno == ENOENT ? 404 : 403;
+    struct stat st;
+    if (fstat(fd, &amp;st) || !S_ISREG(st.st_mode) || st.st_size &lt; 0 || st.st_size &gt; CH11_FILE_LIMIT) {
+        close(fd); return 403;
+    }
+    *n = (size_t)st.st_size; *body = malloc(*n ? *n : 1);
+    if (!*body) { close(fd); return 500; }
+    size_t done = 0;
+    while (done &lt; *n) {
+        ssize_t k = read(fd, *body + done, *n - done);
+        if (k &lt; 0 &amp;&amp; errno == EINTR) continue;
+        if (k &lt;= 0) { free(*body); *body = NULL; close(fd); return 500; }
+        done += (size_t)k;
+    }
+    close(fd); return 200;
+}
+static int header_value(const char *request, const char *name, char *value, size_t cap) {
+    const char *p = strstr(request, "\r\n"); int found = 0;
+    if (!p) return 0;
+    p += 2;
+    while (*p &amp;&amp; strncmp(p, "\r\n", 2)) {
+        const char *end = strstr(p, "\r\n"), *colon = strchr(p, ':');
+        if (!end || !colon || colon &gt; end) return -1;
+        if ((size_t)(colon - p) == strlen(name) &amp;&amp; !strncasecmp(p, name, strlen(name))) {
+            if (found++) return -1;
+            const char *v = colon + 1;
+            while (v &lt; end &amp;&amp; (*v == ' ' || *v == '\t')) ++v;
+            const char *tail = end;
+            while (tail &gt; v &amp;&amp; (tail[-1] == ' ' || tail[-1] == '\t')) --tail;
+            size_t n = (size_t)(tail - v);
+            if (n &gt;= cap) return -1;
+            memcpy(value, v, n); value[n] = 0;
+        }
+        p = end + 2;
+    }
+    return found;
+}
+/* Ready to generate a final response, not necessarily a complete message.
+ * A validated header with unsupported Expect must be rejected before waiting
+ * for its body: the client may be waiting for our decision before sending it.
+ * request_size retains its framing contract for callers such as the proxy. */
+static int request_ready(const char *request, size_t n) {
+    size_t expected = 0;
+    if (request_size(request, n, &amp;expected) != 0) return 1;
+    if (!expected) return 0; /* The complete header has not been validated yet. */
+    char text[CH11_REQUEST_LIMIT + 1], value[100];
+    memcpy(text, request, n); text[n] = 0;
+    return header_value(text, "Expect", value, sizeof(value)) != 0;
+}
+static int build_response(const char *request, size_t request_len, const char *root,
+                          char **response, size_t *response_len) {
+    char text[CH11_REQUEST_LIMIT + 1], method[16] = "", target[2048], version[16], extra, header_scratch[100];
+    char original[CH11_REQUEST_LIMIT + 1];
+    int status = 400; size_t expected = 0, n = 0; char *body = NULL;
+    const char *type = "text/plain; charset=utf-8";
+    *response = NULL; *response_len = 0;
+    if (request_len &gt;= 5 &amp;&amp; !memcmp(request, "HEAD ", 5)) strcpy(method, "HEAD");
+    if (request_len &lt;= CH11_REQUEST_LIMIT) {
+        memcpy(text, request, request_len); text[request_len] = 0;
+        memcpy(original, text, request_len + 1);
+        char *end = strstr(text, "\r\n"), *headers_end = strstr(text, "\r\n\r\n");
+        if (end &amp;&amp; headers_end) {
+            *end = 0;
+            int fields = sscanf(text, "%15s %2047s %15s %c", method, target, version, &amp;extra);
+            int framing = request_size(request, request_len, &amp;expected);
+            int expect = header_value(original, "Expect", header_scratch, sizeof(header_scratch)) != 0;
+            /* Valid Expect headers are actionable before the declared body.
+             * Invalid framing and extra bytes still reject as a bad request. */
+            if (fields == 3 &amp;&amp; framing &gt;= 0 &amp;&amp; expected &amp;&amp; request_len &lt;= expected &amp;&amp;
+                (request_len == expected || expect)) {
+                if (strcmp(version, "HTTP/1.0") &amp;&amp; strcmp(version, "HTTP/1.1")) status = 505;
+                else if (strcmp(method, "GET") &amp;&amp; strcmp(method, "HEAD") &amp;&amp; strcmp(method, "POST")) status = 501;
+                else if (target[0] != '/') status = 400;
+                else if (!strcmp(version, "HTTP/1.1") &amp;&amp;
+                         (header_value(original, "Host", header_scratch, sizeof(header_scratch)) != 1 || !header_scratch[0])) status = 400;
+                else if (expect) status = 417;
+                else if (!strcmp(method, "POST") &amp;&amp; header_value(original, "Content-Length", header_scratch, sizeof(header_scratch)) != 1) status = 411;
+                else if (!strcmp(method, "POST") &amp;&amp;
+                         (header_value(original, "Content-Type", header_scratch, sizeof(header_scratch)) != 1 ||
+                          strcmp(header_scratch, "application/x-www-form-urlencoded"))) status = 415;
+                else {
+                    char *query = strchr(target, '?');
+                    if (query) *query++ = 0;
+                    if (!strcmp(target, "/cgi-bin/adder")) {
+                        char args[CH11_BODY_LIMIT + 1];
+                        const char *source = !strcmp(method, "POST") ? headers_end + 4 : query;
+                        if (!source) source = "";
+                        size_t len = strlen(source);
+                        if (len &lt;= CH11_BODY_LIMIT) {
+                            memcpy(args, source, len + 1); long a, b;
+                            if (sum_arguments(args, &amp;a, &amp;b)) {
+                                char result[128]; int k = snprintf(result, sizeof(result), "&lt;p&gt;%ld + %ld = %ld&lt;/p&gt;\n", a, b, a + b);
+                                n = (size_t)k; body = malloc(n ? n : 1);
+                                if (!body) status = 500;
+                                else { memcpy(body, result, n); status = 200; type = "text/html; charset=utf-8"; }
+                            }
+                        }
+                    } else if (!strcmp(method, "POST")) status = 405;
+                    else {
+                        const char *name = !strcmp(target, "/") ? "home.html" : target + 1;
+                        status = read_asset(root, name, &amp;body, &amp;n); type = mime(name);
+                    }
+                }
+            }
+        }
+    }
+    const char *reason = status == 200 ? "OK" : status == 403 ? "Forbidden" :
+        status == 404 ? "Not Found" : status == 405 ? "Method Not Allowed" :
+        status == 411 ? "Length Required" : status == 415 ? "Unsupported Media Type" :
+        status == 417 ? "Expectation Failed" :
+        status == 500 ? "Internal Server Error" : status == 501 ? "Not Implemented" :
+        status == 505 ? "HTTP Version Not Supported" : "Bad Request";
+    if (status != 200) {
+        free(body); n = strlen(reason); body = malloc(n);
+        if (!body) return -1;
+        memcpy(body, reason, n); type = "text/plain; charset=utf-8";
+    }
+    char header[512]; int h = snprintf(header, sizeof(header),
+        "HTTP/1.0 %d %s\r\nContent-Type: %s\r\nContent-Length: %zu\r\nConnection: close\r\n\r\n",
+        status, reason, type, n);
+    if (h &lt; 0 || (size_t)h &gt;= sizeof(header)) { free(body); return -1; }
+    size_t payload = !strcmp(method, "HEAD") ? 0 : n;
+    *response_len = (size_t)h + payload; *response = malloc(*response_len);
+    if (!*response) { free(body); return -1; }
+    memcpy(*response, header, (size_t)h); memcpy(*response + h, body, payload);
+    free(body); return 0;
+}
+static int handle(int fd, const char *root) {
+    char request[CH11_REQUEST_LIMIT]; size_t n = 0;
+    int flags = fcntl(fd, F_GETFL), rc = -1;
+    if (flags &lt; 0 || fcntl(fd, F_SETFL, flags | O_NONBLOCK)) return -1;
+    long long end = now_ms() + 2000;
+    while (n &lt; sizeof(request)) {
+        if (!io_ready(fd, POLLIN, end)) { errno = ETIMEDOUT; goto done; }
+        ssize_t k = read(fd, request + n, sizeof(request) - n);
+        if (k &lt; 0 &amp;&amp; (errno == EINTR || errno == EAGAIN || errno == EWOULDBLOCK)) continue;
+        if (k &lt;= 0) break;
+        n += (size_t)k;
+        if (request_ready(request, n)) break;
+    }
+    char *response; size_t len;
+    if (build_response(request, n, root, &amp;response, &amp;len)) goto done;
+    rc = write_all(fd, response, len); free(response);
+done: {
+        int saved = errno;
+        if (fcntl(fd, F_SETFL, flags)) return -1;
+        errno = saved; return rc;
+    }
+}
+static volatile sig_atomic_t reaped, reap_max_batch;
+static void child_handler(int sig) {
+    (void)sig; int saved = errno; pid_t p; sig_atomic_t batch = 0;
+    do { p = waitpid(-1, NULL, WNOHANG); if (p &gt; 0) { ++reaped; ++batch; } }
+    while (p &gt; 0 || (p &lt; 0 &amp;&amp; errno == EINTR));
+    if (batch &gt; reap_max_batch) reap_max_batch = batch;
+    errno = saved;
+}
+static int reaper_test(void) {
+    sigset_t block, old, suspend_mask; sigemptyset(&amp;block); sigaddset(&amp;block, SIGCHLD);
+    struct sigaction action = {0}; action.sa_handler = child_handler;
+    sigemptyset(&amp;action.sa_mask); action.sa_flags = SA_RESTART;
+    if (sigaction(SIGCHLD, &amp;action, NULL) || sigprocmask(SIG_BLOCK, &amp;block, &amp;old)) return 1;
+    reaped = 0; pid_t child = fork();
+    if (child == 0) _exit(0);
+    if (child &lt; 0) { sigprocmask(SIG_SETMASK, &amp;old, NULL); return 1; }
+    suspend_mask = old; sigdelset(&amp;suspend_mask, SIGCHLD);
+    if (sigprocmask(SIG_SETMASK, &amp;suspend_mask, NULL)) return 1;
+    long long deadline = now_ms() + 2000;
+    while (!reaped &amp;&amp; now_ms() &lt; deadline) {
+        struct timespec pause = {0, 10000000}; nanosleep(&amp;pause, NULL);
+    }
+    int failed = !reaped;
+    if (failed) { kill(child, SIGKILL); while (waitpid(child, NULL, 0) &lt; 0 &amp;&amp; errno == EINTR) {} }
+    return sigprocmask(SIG_SETMASK, &amp;old, NULL) != 0 || failed;
+}
+/* An actual CGI program: exec resets caught handlers and reads standard CGI
+ * variables. The trusted executable is selected by the server operator only.
+ * The alarm inherited across exec bounds its lifetime even if a client stalls. */
+static int cgi_main(void) {
+    const char *method = getenv("REQUEST_METHOD"), *query = getenv("QUERY_STRING");
+    char args[CH11_BODY_LIMIT + 1]; size_t n = 0;
+    if (!method) return 1;
+    if (!strcmp(method, "POST")) {
+        const char *length = getenv("CONTENT_LENGTH");
+        if (!length || !*length) return 1;
+        char *end; errno = 0; unsigned long amount = strtoul(length, &amp;end, 10);
+        if (errno || *end || amount &gt; CH11_BODY_LIMIT) return 1;
+        while (n &lt; amount) {
+            ssize_t got = read(STDIN_FILENO, args + n, amount - n);
+            if (got &lt; 0 &amp;&amp; errno == EINTR) continue;
+            if (got &lt;= 0) return 1;
+            n += (size_t)got;
+        }
+    } else {
+        n = query ? strlen(query) : 0;
+        if (n &gt; CH11_BODY_LIMIT) return 1;
+        if (n) memcpy(args, query, n);
+    }
+    args[n] = 0; long a, b;
+    if (!sum_arguments(args, &amp;a, &amp;b)) return 1;
+    char body[128], header[512];
+    int size = snprintf(body, sizeof(body), "&lt;p&gt;%ld + %ld = %ld&lt;/p&gt;\n", a, b, a + b);
+    int h = snprintf(header, sizeof(header),
+        "HTTP/1.0 200 OK\r\nContent-Type: text/html; charset=utf-8\r\n"
+        "Content-Length: %d\r\nConnection: close\r\n\r\n", size);
+    if (size &lt; 0 || h &lt; 0 || (size_t)h &gt;= sizeof(header) ||
+        write_all(STDOUT_FILENO, header, (size_t)h)) return 1;
+    return strcmp(method, "HEAD") &amp;&amp; write_all(STDOUT_FILENO, body, (size_t)size);
+}
+/* Returns 1 when this connection was transferred to a CGI child, 0 when the
+ * parent served it, and -1 on an I/O/setup failure. Caller always closes fd.
+ * Single-threaded, with exclusive ownership of every child in this server. */
+static int dispatch_cgi(int fd, int listener, const char *root, const char *program) {
+    char request[CH11_REQUEST_LIMIT + 1]; size_t n = 0;
+    long long end = now_ms() + 2000;
+    while (n &lt; CH11_REQUEST_LIMIT) {
+        if (!io_ready(fd, POLLIN, end)) return -1;
+        ssize_t got = read(fd, request + n, CH11_REQUEST_LIMIT - n);
+        if (got &lt; 0 &amp;&amp; errno == EINTR) continue;
+        if (got &lt;= 0) break;
+        n += (size_t)got;
+        if (request_ready(request, n)) break;
+    }
+    request[n] = 0;
+    char *response = NULL; size_t length = 0;
+    if (build_response(request, n, root, &amp;response, &amp;length)) return -1;
+    char method[16] = "", target[2048] = "";
+    (void)sscanf(request, "%15s %2047s", method, target);
+    char *query = strchr(target, '?');
+    if (query) *query++ = 0;
+    if (length &lt; 15 || memcmp(response, "HTTP/1.0 200 OK\r", 15) || strcmp(target, "/cgi-bin/adder")) {
+        int rc = write_all(fd, response, length); free(response); return rc ? -1 : 0;
+    }
+    free(response);
+    char *body = strstr(request, "\r\n\r\n") + 4;
+    /* GET/HEAD use QUERY_STRING; their already-consumed HTTP bodies do not
+     * become CGI stdin. Only POST transfers its declared body through pipe. */
+    size_t body_size = !strcmp(method, "POST") ? n - (size_t)(body - request) : 0;
+    int input[2];
+    if (pipe(input)) return -1;
+    pid_t child = fork();
+    if (child &lt; 0) { close(input[0]); close(input[1]); return -1; }
+    if (child == 0) {
+        close(listener); close(input[1]);
+        if (dup2(input[0], STDIN_FILENO) &lt; 0 || dup2(fd, STDOUT_FILENO) &lt; 0) _exit(126);
+        if (input[0] != STDIN_FILENO) close(input[0]);
+        if (fd != STDOUT_FILENO) close(fd);
+        char count[32]; (void)snprintf(count, sizeof(count), "%zu", body_size);
+        if (setenv("REQUEST_METHOD", method, 1) || setenv("QUERY_STRING", query ? query : "", 1) ||
+            setenv("CONTENT_LENGTH", count, 1) ||
+            setenv("CONTENT_TYPE", !strcmp(method, "POST") ? "application/x-www-form-urlencoded" : "", 1) ||
+            setenv("CSAPP_FULL_HTTP", "1", 1)) _exit(126);
+        struct sigaction default_action = {0}; default_action.sa_handler = SIG_DFL;
+        sigemptyset(&amp;default_action.sa_mask);
+        if (sigaction(SIGCHLD, &amp;default_action, NULL) || sigaction(SIGALRM, &amp;default_action, NULL)) _exit(126);
+        sigset_t mask; sigemptyset(&amp;mask);
+        if (sigprocmask(SIG_SETMASK, &amp;mask, NULL)) _exit(126);
+        alarm(5);
+        execlp(program, program, "--cgi", (char *)NULL);
+        const char failure[] = "HTTP/1.0 502 Bad Gateway\r\nContent-Length: 11\r\nConnection: close\r\n\r\nBad Gateway";
+        (void)write_all(STDOUT_FILENO, failure, sizeof(failure) - 1); _exit(127);
+    }
+    close(input[0]);
+    int rc = write_all(input[1], body, body_size), saved = errno;
+    close(input[1]);
+    /* A CGI may reject POST early, close stdin, then send its own response.
+     * EPIPE is not permission to kill that response. Other transfer failures
+     * cancel this child; the handler owns it in either case, and alarm bounds
+     * its remaining lifetime even when it elects not to consume stdin. */
+    if (rc &amp;&amp; saved != EPIPE) (void)kill(child, SIGKILL);
+    return 1;
+}
+static int serve_cgi(const char *root, const char *program, int limit) {
+    sigset_t block, old_mask, running;
+    struct sigaction action = {0}, old_action;
+    sigemptyset(&amp;block); sigaddset(&amp;block, SIGCHLD);
+    action.sa_handler = child_handler; sigemptyset(&amp;action.sa_mask); action.sa_flags = SA_RESTART;
+    if (sigprocmask(SIG_BLOCK, &amp;block, &amp;old_mask)) return 1;
+    if (sigaction(SIGCHLD, &amp;action, &amp;old_action)) {
+        (void)sigprocmask(SIG_SETMASK, &amp;old_mask, NULL); return 1;
+    }
+    running = old_mask; sigdelset(&amp;running, SIGCHLD);
+    reaped = 0; reap_max_batch = 0;
+    int listener = socket(AF_INET, SOCK_STREAM, 0), accepted = 0, spawned = 0, failed = 0;
+    struct sockaddr_in address = {0}; address.sin_family = AF_INET;
+    address.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
+    socklen_t address_size = sizeof(address);
+    if (listener &lt; 0 || bind(listener, (struct sockaddr *)&amp;address, sizeof(address)) ||
+        listen(listener, 16) || getsockname(listener, (struct sockaddr *)&amp;address, &amp;address_size)) failed = 1;
+    if (!failed) {
+        printf("LISTEN 127.0.0.1 %u\n", (unsigned)ntohs(address.sin_port)); fflush(stdout);
+        long long deadline = now_ms() + 120000;
+        while (accepted &lt; limit) {
+            if (sigprocmask(SIG_SETMASK, &amp;running, NULL) || !io_ready(listener, POLLIN, deadline)) { failed = 1; break; }
+            int fd = accept(listener, NULL, NULL);
+            if (fd &lt; 0 &amp;&amp; errno == EINTR) continue;
+            if (fd &lt; 0) { failed = 1; break; }
+            ++accepted;
+            if (sigprocmask(SIG_BLOCK, &amp;block, NULL)) { close(fd); failed = 1; break; }
+            int rc = dispatch_cgi(fd, listener, root, program);
+            close(fd); /* Child owns the remaining connected socket reference. */
+            if (rc &gt; 0) ++spawned;
+            else if (rc &lt; 0) failed = 1;
+        }
+    }
+    if (listener &gt;= 0) close(listener);
+    if (sigprocmask(SIG_BLOCK, &amp;block, NULL)) failed = 1;
+    while (reaped &lt; spawned) sigsuspend(&amp;running);
+    printf("CGI accepted=%d spawned=%d reaped=%d max-batch=%d\n",
+           accepted, spawned, (int)reaped, (int)reap_max_batch); fflush(stdout);
+    if (sigaction(SIGCHLD, &amp;old_action, NULL) || sigprocmask(SIG_SETMASK, &amp;old_mask, NULL)) failed = 1;
+    return failed || accepted != limit;
+}
+
+int main(int argc, char **argv) {
+    struct sigaction ignore = {0}; ignore.sa_handler = SIG_IGN;
+    sigemptyset(&amp;ignore.sa_mask);
+    if (sigaction(SIGPIPE, &amp;ignore, NULL)) return 1;
+    if (argc == 2 &amp;&amp; !strcmp(argv[1], "--cgi")) return cgi_main();
+    if (argc &gt;= 3 &amp;&amp; argc &lt;= 5 &amp;&amp; !strcmp(argv[1], "--serve-cgi")) {
+        long limit = 1;
+        if (argc &gt;= 4 &amp;&amp; (!integer(argv[3], &amp;limit) || limit &lt; 1 || limit &gt; 1000)) return 2;
+        return serve_cgi(argv[2], argc == 5 ? argv[4] : argv[0], (int)limit);
+    }
+    if (argc != 1) { fputs("usage: ch11_http [--cgi | --serve-cgi ROOT [REQUESTS [CGI_PROGRAM]]]\n", stderr); return 2; }
+    const char *req = "GET /cgi-bin/adder?15000&amp;213 HTTP/1.0\r\n\r\n";
+    char *response; size_t len;
+    if (build_response(req, strlen(req), ".", &amp;response, &amp;len)) return 1;
+    int valid;
+    /* Verify payload by locating the boundary in a NUL-terminated test copy. */
+    char *copy = malloc(len + 1);
+    if (!copy) { free(response); return 1; }
+    memcpy(copy, response, len); copy[len] = 0;
+    valid = strstr(copy, "\r\n\r\n&lt;p&gt;15000 + 213 = 15213&lt;/p&gt;\n") != NULL;
+    free(copy); free(response); if (!valid) return 1;
+    int pair[2]; if (socketpair(AF_UNIX, SOCK_STREAM, 0, pair)) return 1;
+    if (write_all(pair[0], req, strlen(req)) || shutdown(pair[0], SHUT_WR) || handle(pair[1], ".")) return 1;
+    close(pair[0]); close(pair[1]);
+    if (socketpair(AF_UNIX, SOCK_STREAM, 0, pair)) return 1;
+    close(pair[1]); errno = 0;
+    int broken = write_all(pair[0], "x", 1); close(pair[0]);
+    if (broken != -1 || errno != EPIPE || reaper_test()) return 1;
+    puts("http core: adder=15213 framing=bounded SIGPIPE=survived child=reaped");
+    return 0;
+}
+</code></pre></details></div><p>本次默认运行的实际输出：</p><pre><code data-language="text" class="language-text">http core: adder=15213 framing=bounded SIGPIPE=survived child=reaped
+</code></pre></article><article id="http-python-code"><h3>Python Tiny：真实CGI和本地HTTP回归</h3><p>默认20个真实loopback案例覆盖二进制/空文件、HEAD、两种GET查询、POST、404、路径与符号链接拒绝、重复参数、缺少Host、缺少/截断/重复长度以及不支持的Transfer-Encoding。默认MPG夹具验证MIME与字节传输；真实MPEG-1样本的浏览器解码结果见11.7。</p><div class="code-pair"><details class="code-version" data-language="python"><summary>Python 3 · ch11_http.py</summary><p><a href="../code/ch11_http.py" download>下载 ch11_http.py</a></p><pre><code id="ch11_http-python" data-language="python" class="language-python">"""Bounded loopback Tiny companion with a real CGI subprocess.
+
+handle(conn, root, log=None) handles one request without closing conn. Callers
+own sockets; static root must remain stable while serving. --serve ROOT [SECONDS]
+accepts on 127.0.0.1 and an ephemeral port for SECONDS (default 60);
+an in-flight request then finishes within its bounded I/O/CGI timeouts.
+No arguments run temporary-file and loopback regressions then exit.
+"""
+import os
+from pathlib import Path
+import re
+import socket
+import stat
+import subprocess
+import sys
+import tempfile
+import threading
+import time
+from urllib.parse import parse_qs, urlsplit
+
+HEADER_LIMIT = 8192
+BODY_LIMIT = 4096
+FILE_LIMIT = 65536
+FORM = '''&lt;!doctype html&gt;&lt;meta charset="utf-8"&gt;&lt;title&gt;Adder&lt;/title&gt;
+&lt;h1&gt;Two integer adder&lt;/h1&gt;
+&lt;form action="/cgi-bin/adder" method="get"&gt;
+&lt;label&gt;A &lt;input name="a" value="15000"&gt;&lt;/label&gt;
+&lt;label&gt;B &lt;input name="b" value="213"&gt;&lt;/label&gt;&lt;button&gt;GET sum&lt;/button&gt;&lt;/form&gt;
+&lt;form action="/cgi-bin/adder" method="post"&gt;
+&lt;label&gt;A &lt;input name="a" value="15000"&gt;&lt;/label&gt;
+&lt;label&gt;B &lt;input name="b" value="213"&gt;&lt;/label&gt;&lt;button&gt;POST sum&lt;/button&gt;&lt;/form&gt;
+'''
+
+
+class RequestError(Exception):
+    def __init__(self, status):
+        self.status = status
+
+
+def sum_body(args):
+    if '=' in args:
+        if re.search(r'%(?![0-9A-Fa-f]{2})', args):
+            raise ValueError('malformed percent encoding')
+        fields = parse_qs(args, strict_parsing=True, keep_blank_values=True,
+                          encoding='ascii', errors='strict', max_num_fields=2)
+        if set(fields) != {'a', 'b'} or any(len(v) != 1 for v in fields.values()):
+            raise ValueError('need one a and one b')
+        values = [fields['a'][0], fields['b'][0]]
+    else:
+        values = args.split('&amp;')
+    if len(values) != 2 or any(not re.fullmatch(r'[+-]?[0-9]{1,7}', v) for v in values):
+        raise ValueError('need two decimal integers')
+    a, b = map(int, values)
+    if max(abs(a), abs(b)) &gt; 1000000:
+        raise ValueError('integer out of range')
+    return f'&lt;p&gt;{a} + {b} = {a+b}&lt;/p&gt;\n'.encode()
+
+
+def cgi_main():
+    method = os.environ.get('REQUEST_METHOD', '')
+    if method == 'POST':
+        n = int(os.environ.get('CONTENT_LENGTH', '-1'))
+        if not 0 &lt;= n &lt;= BODY_LIMIT:
+            raise ValueError('invalid body length')
+        data = sys.stdin.buffer.read(n)
+        if len(data) != n:
+            raise ValueError('truncated body')
+        args = data.decode('ascii')
+    else:
+        args = os.environ.get('QUERY_STRING', '')
+    body = sum_body(args)
+    full_http = os.environ.get('CSAPP_FULL_HTTP') == '1'
+    prefix = b'HTTP/1.0 200 OK\r\n' if full_http else b''
+    connection = b'Connection: close\r\n' if full_http else b''
+    sys.stdout.buffer.write(prefix + b'Content-Type: text/html; charset=utf-8\r\n'
+                            + f'Content-Length: {len(body)}\r\n'.encode() + connection
+                            + b'\r\n' + (b'' if method == 'HEAD' else body))
+
+
+def read_request(conn, log=None, state=None):
+    deadline = time.monotonic() + 2
+    data = bytearray()
+    while b'\r\n\r\n' not in data:
+        conn.settimeout(max(0.001, deadline-time.monotonic()))
+        if time.monotonic() &gt;= deadline:
+            raise RequestError(408)
+        part = conn.recv(1024)
+        if not part:
+            raise RequestError(400)
+        data.extend(part)
+        if state is not None and data.startswith(b'HEAD '):
+            state[0] = 'HEAD'
+        if len(data) &gt; HEADER_LIMIT + BODY_LIMIT:
+            raise RequestError(413)
+    head, body = bytes(data).split(b'\r\n\r\n', 1)
+    if len(head) + 4 &gt; HEADER_LIMIT or b'\0' in head:
+        raise RequestError(400)
+    lines = head.decode('ascii').split('\r\n')
+    if log is not None:
+        log.write('\n'.join(lines) + '\n\n')
+        log.flush()
+    fields = lines[0].split(' ')
+    if len(fields) != 3 or not all(fields):
+        raise RequestError(400)
+    method, target, version = fields
+    if state is not None:
+        state[0] = method
+    if version not in ('HTTP/1.0', 'HTTP/1.1'):
+        raise RequestError(505)
+    headers = {}
+    for line in lines[1:]:
+        name, sep, value = line.partition(':')
+        if not sep or not re.fullmatch(r'[A-Za-z0-9-]+', name):
+            raise RequestError(400)
+        if any((ord(c) &lt; 32 and c != '\t') or ord(c) == 127 for c in value):
+            raise RequestError(400)
+        name, value = name.lower(), value.strip(' \t')
+        if name in headers:
+            raise RequestError(400)
+        headers[name] = value
+    if version == 'HTTP/1.1' and not headers.get('host'):
+        raise RequestError(400)
+    if 'transfer-encoding' in headers:
+        raise RequestError(501)
+    length = headers.get('content-length', '0')
+    if not re.fullmatch('[0-9]{1,10}', length) or int(length) &gt; BODY_LIMIT:
+        raise RequestError(413)
+    n = int(length)
+    if method == 'POST' and 'content-length' not in headers:
+        raise RequestError(411)
+    if 'expect' in headers:
+        raise RequestError(417)
+    while len(body) &lt; n:
+        remaining = deadline - time.monotonic()
+        if remaining &lt;= 0:
+            raise RequestError(408)
+        conn.settimeout(remaining)
+        part = conn.recv(n-len(body))
+        if not part:
+            raise RequestError(400)
+        body += part
+    if len(body) != n:
+        raise RequestError(400)
+    return method, target, headers, body
+
+
+def asset(root, name):
+    if not re.fullmatch(r'[A-Za-z0-9_.-]+', name) or '..' in name:
+        raise RequestError(403)
+    directory = os.open(root, os.O_RDONLY | os.O_DIRECTORY)
+    try:
+        fd = os.open(name, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK, dir_fd=directory)
+    except FileNotFoundError:
+        raise RequestError(404) from None
+    except OSError:
+        raise RequestError(403) from None
+    finally:
+        os.close(directory)
+    with os.fdopen(fd, 'rb') as stream:
+        info = os.fstat(stream.fileno())
+        if not stat.S_ISREG(info.st_mode) or info.st_size &gt; FILE_LIMIT:
+            raise RequestError(403)
+        body = stream.read(info.st_size)
+        if len(body) != info.st_size:
+            raise RequestError(500)
+    extension = Path(name).suffix.lower()
+    kind = {'.html': 'text/html; charset=utf-8', '.txt': 'text/plain; charset=utf-8',
+            '.mpg': 'video/mpeg', '.mpeg': 'video/mpeg', '.png': 'image/png',
+            '.gif': 'image/gif', '.jpg': 'image/jpeg'}.get(extension, 'application/octet-stream')
+    return kind, body
+
+
+def route(method, target, headers, body, root):
+    if method not in ('GET', 'HEAD', 'POST'):
+        raise RequestError(501)
+    parts = urlsplit(target)
+    if parts.scheme or parts.netloc or parts.fragment or not target.startswith('/'):
+        raise RequestError(400)
+    if parts.path == '/cgi-bin/adder':
+        if method == 'POST' and headers.get('content-type') != 'application/x-www-form-urlencoded':
+            raise RequestError(415)
+        args = body.decode('ascii') if method == 'POST' else parts.query
+        sum_body(args)  # Validate before starting the fixed, trusted executable.
+        environment = {'REQUEST_METHOD': 'GET' if method == 'HEAD' else method,
+                       'QUERY_STRING': parts.query, 'CONTENT_LENGTH': str(len(body)),
+                       'CONTENT_TYPE': headers.get('content-type', '')}
+        result = subprocess.run([sys.executable, str(Path(__file__).resolve()), '--cgi'],
+                                input=body, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                                env=environment, timeout=2, check=False)
+        if result.returncode or len(result.stdout) &gt; BODY_LIMIT:
+            raise RequestError(502)
+        cgi_headers, payload = result.stdout.split(b'\r\n\r\n', 1)
+        if cgi_headers != (b'Content-Type: text/html; charset=utf-8\r\n'
+                           + f'Content-Length: {len(payload)}'.encode()):
+            raise RequestError(502)
+        return 'text/html; charset=utf-8', payload
+    if method == 'POST':
+        raise RequestError(405)
+    return asset(root, 'home.html' if parts.path == '/' else parts.path[1:])
+
+
+def handle(conn, root, log=None):
+    """Caller closes conn. Returns status; peer-close errors affect this client only."""
+    status, method = 200, ''
+    state = ['']
+    try:
+        method, target, headers, body = read_request(conn, log, state)
+        kind, payload = route(method, target, headers, body, root)
+    except RequestError as error:
+        status = error.status
+    except (UnicodeError, ValueError):
+        status = 400
+    except (TimeoutError, socket.timeout):
+        status = 408
+    except (OSError, subprocess.SubprocessError):
+        status = 500
+    method = state[0]
+    reasons = {200: 'OK', 400: 'Bad Request', 403: 'Forbidden', 404: 'Not Found',
+               405: 'Method Not Allowed', 408: 'Request Timeout', 411: 'Length Required',
+               413: 'Content Too Large', 415: 'Unsupported Media Type',
+               417: 'Expectation Failed', 500: 'Internal Server Error',
+               501: 'Not Implemented', 502: 'Bad Gateway', 505: 'HTTP Version Not Supported'}
+    if status != 200:
+        payload = reasons[status].encode()
+        kind = 'text/plain; charset=utf-8'
+    response = (f'HTTP/1.0 {status} {reasons[status]}\r\nContent-Type: {kind}\r\n'
+                f'Content-Length: {len(payload)}\r\nConnection: close\r\n\r\n').encode()
+    try:
+        conn.settimeout(2)
+        conn.sendall(response + (b'' if method == 'HEAD' else payload))
+    except OSError:
+        pass
+    return status
+
+
+def exchange(root, request):
+    errors = []
+    with socket.socket() as listener:
+        listener.bind(('127.0.0.1', 0))
+        listener.listen(1)
+        listener.settimeout(3)
+        def worker():
+            try:
+                connection, _ = listener.accept()
+                with connection:
+                    handle(connection, root)
+            except BaseException as error:
+                errors.append(error)
+        thread = threading.Thread(target=worker)
+        thread.start()
+        try:
+            with socket.create_connection(listener.getsockname(), timeout=3) as client:
+                for offset in range(0, len(request), 7):
+                    client.sendall(request[offset:offset+7])
+                client.shutdown(socket.SHUT_WR)
+                output = b''
+                while part := client.recv(4096):
+                    output += part
+        finally:
+            thread.join(5)
+        if thread.is_alive() or errors:
+            raise RuntimeError('server did not finish cleanly')
+    return output
+
+
+def selftest():
+    with tempfile.TemporaryDirectory(prefix='csapp-ch11-') as root:
+        base = Path(root)
+        (base / 'home.html').write_text(FORM)
+        (base / 'hello.txt').write_bytes(b'hello\0world\n')
+        (base / 'empty.txt').write_bytes(b'')
+        (base / 'sample.mpg').write_bytes(b'\0\0\x01\xba')  # MIME fixture, not playable video.
+        (base / 'link.txt').symlink_to('hello.txt')
+        cases = [
+            (b'GET /hello.txt HTTP/1.0\r\n\r\n', 200, b'hello\0world\n'),
+            (b'HEAD / HTTP/1.1\r\n\r\n', 400, b''),
+            (b'HEAD / HTTP/2.0\r\n\r\n', 505, b''),
+            (b'HEAD / HTTP/1.0\r\nContent-Length: 0\r\nContent-Length: 0\r\n\r\n', 400, b''),
+            (b'GET /empty.txt HTTP/1.0\r\n\r\n', 200, b''),
+            (b'HEAD /hello.txt HTTP/1.0\r\n\r\n', 200, b''),
+            (b'GET /cgi-bin/adder?15000&amp;213 HTTP/1.0\r\n\r\n', 200, b'&lt;p&gt;15000 + 213 = 15213&lt;/p&gt;\n'),
+            (b'GET /cgi-bin/adder?a=-4&amp;b=7 HTTP/1.0\r\n\r\n', 200, b'&lt;p&gt;-4 + 7 = 3&lt;/p&gt;\n'),
+            (b'POST /cgi-bin/adder HTTP/1.0\r\nContent-Type: application/x-www-form-urlencoded\r\nContent-Length: 7\r\n\r\na=2&amp;b=3', 200, b'&lt;p&gt;2 + 3 = 5&lt;/p&gt;\n'),
+            (b'GET /missing.txt HTTP/1.0\r\n\r\n', 404, b'Not Found'),
+            (b'GET /../hello.txt HTTP/1.0\r\n\r\n', 403, b'Forbidden'),
+            (b'GET /%2e%2e/hello.txt HTTP/1.0\r\n\r\n', 403, b'Forbidden'),
+            (b'GET /link.txt HTTP/1.0\r\n\r\n', 403, b'Forbidden'),
+            (b'GET /cgi-bin/adder?a=1&amp;a=2 HTTP/1.0\r\n\r\n', 400, b'Bad Request'),
+            (b'GET / HTTP/1.1\r\n\r\n', 400, b'Bad Request'),
+            (b'POST /cgi-bin/adder HTTP/1.0\r\n\r\n', 411, b'Length Required'),
+            (b'POST /cgi-bin/adder HTTP/1.0\r\nContent-Length: 8\r\n\r\na=2&amp;b=3', 400, b'Bad Request'),
+            (b'POST /cgi-bin/adder HTTP/1.0\r\nContent-Length: 0\r\nContent-Length: 0\r\n\r\n', 400, b'Bad Request'),
+            (b'POST /cgi-bin/adder HTTP/1.0\r\nTransfer-Encoding: chunked\r\n\r\n', 501, b'Not Implemented'),
+        ]
+        for request, status, expected in cases:
+            response = exchange(root, request)
+            header, payload = response.split(b'\r\n\r\n', 1)
+            if int(header.split()[1]) != status or payload != expected:
+                raise RuntimeError(f'HTTP regression failed: {request!r}: {response!r}')
+        response = exchange(root, b'GET /sample.mpg HTTP/1.0\r\n\r\n')
+        if b'Content-Type: video/mpeg\r\n' not in response:
+            raise RuntimeError('MIME regression')
+        print(f'http loopback: {len(cases)+1} cases passed; CGI=exec; temporary-root=removed')
+
+
+def serve(root, seconds):
+    root = Path(root).resolve(strict=True)
+    if not root.is_dir() or not 1 &lt;= seconds &lt;= 300:
+        raise ValueError('root must be a directory; seconds must be 1..300')
+    with socket.socket() as listener:
+        listener.bind(('127.0.0.1', 0))
+        listener.listen(16)
+        listener.settimeout(0.25)
+        print(f'http://127.0.0.1:{listener.getsockname()[1]}/ duration={seconds}s', flush=True)
+        end = time.monotonic()+seconds
+        while time.monotonic() &lt; end:
+            try:
+                connection, _ = listener.accept()
+            except socket.timeout:
+                continue
+            with connection:
+                handle(connection, root, sys.stdout)
+
+
+if __name__ == '__main__':
+    try:
+        if sys.argv[1:] == ['--cgi']:
+            cgi_main()
+        elif len(sys.argv) in (3, 4) and sys.argv[1] == '--serve':
+            serve(sys.argv[2], int(sys.argv[3]) if len(sys.argv) == 4 else 60)
+        elif len(sys.argv) == 1:
+            selftest()
+        else:
+            raise ValueError('usage: ch11_http.py [--serve ROOT [SECONDS]]')
+    except (ValueError, OSError) as error:
+        print(error, file=sys.stderr)
+        sys.exit(2)
+</code></pre></details></div><p>本次默认运行的实际输出：</p><pre><code data-language="text" class="language-text">http loopback: 20 cases passed; CGI=exec; temporary-root=removed
+</code></pre></article><p>人工阅读实验可先把程序中的FORM写到新建的临时根目录home.html，再运行<code>python3 books/csapp/code/ch11_http.py --serve 临时根目录 120</code>。程序显示本次随机端口URL，访问页面可提交GET和POST表单；它在两分钟后停止接受新连接，完成当前有界请求后关闭监听器。stdout保存请求行与首部，可用于11.6观察实际浏览器版本。</p></section><section id="exercises"><h2>本版练习与作业：11.1—11.13</h2><p>11.1—11.5为practice，11.6—11.13为homework。原题按Global Edition逐题保留完整条件；16位转换与书后解答冲突明确校注。需要浏览器或telnet的题同时给出操作与期望，实际观测与可执行协议检查分别记录。</p><div class="exercise-index"><a href="#ex-11-1">11.1</a><a href="#ex-11-2">11.2</a><a href="#ex-11-3">11.3</a><a href="#ex-11-4">11.4</a><a href="#ex-11-5">11.5</a><a href="#ex-11-6">11.6</a><a href="#ex-11-7">11.7</a><a href="#ex-11-8">11.8</a><a href="#ex-11-9">11.9</a><a href="#ex-11-10">11.10</a><a href="#ex-11-11">11.11</a><a href="#ex-11-12">11.12</a><a href="#ex-11-13">11.13</a></div><details class="exercise" id="ex-11-1"><summary>11.1 · 点分地址与32位十六进制</summary><div class="exercise-question" data-original-exercise="11.1" data-source-pdf-pages="964"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=964">来源：印刷 963 页 / PDF 964 页</a></p><p>完成下表的空缺：前三行给出点分十进制地址，后三行给出十六进制地址。</p><div class="scroll"><table class="compact-table"><thead><tr><th scope="col">点分十进制地址</th><th scope="col">十六进制地址</th></tr></thead><tbody><tr><td>107.212.122.205</td><td>?</td></tr><tr><td>64.12.149.13</td><td>?</td></tr><tr><td>107.212.96.29</td><td>?</td></tr><tr><td>?</td><td>0x00000080</td></tr><tr><td>?</td><td>0xFFFFFF00</td></tr><tr><td>?</td><td>0x0A010140</td></tr></tbody></table></div></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>逐字节转换，从最高8位向最低8位排列。107=0x6B、212=0xD4、122=0x7A、205=0xCD，所以第一项为0x6BD47ACD。反向则把0x0A010140拆成0A、01、01、40，分别换为10、1、1、64。</p><div class="scroll"><table class="compact-table"><thead><tr><th scope="col">点分十进制地址</th><th scope="col">十六进制地址</th></tr></thead><tbody><tr><td>107.212.122.205</td><td>0x6BD47ACD</td></tr><tr><td>64.12.149.13</td><td>0x400C950D</td></tr><tr><td>107.212.96.29</td><td>0x6BD4601D</td></tr><tr><td>0.0.0.128</td><td>0x00000080</td></tr><tr><td>255.255.255.0</td><td>0xFFFFFF00</td></tr><tr><td>10.1.1.64</td><td>0x0A010140</td></tr></tbody></table></div><p>书后答案把后三个点分地址排成带方括号的两组，例如[0.0].[0.128]；标准表示仍是四个十进制字节，中间三个点。可用<a href="#address-code">address程序</a>输出逐项复核。</p></div></details><details class="exercise" id="ex-11-2"><summary>11.2 · 16位十六进制转十进制及网络表示</summary><div class="exercise-question" data-original-exercise="11.2" data-source-pdf-pages="964"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=964">来源：印刷 963 页 / PDF 964 页</a></p><p>编写hex2dd.c，将其16位十六进制参数转换为16位网络字节序并打印结果。原题示例：</p><pre><code data-language="text" class="language-text">linux&gt; ./hex2dd 0x400
+1024</code></pre></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>依本版给定示例，输出是数值1024的十进制文本；网络表示则是两个字节04 00。<a href="#address-code">ch11_address.c</a>的hex2dd模式先严格解析0…65535，再htons形成网络字节，最后ntohs取回语义数值并以十进制打印，命令<code>ch11_address hex2dd 0x400</code>输出1024。若目标是观察线上编码，应另打印wire对象的两字节04 00，不能打印htons返回值的本机解释来假装网络数值。</p><p>原书题干在印刷963页明确写16-bit，但印刷1003页答案仍用IPv4的inet_ntop，并把uint16_t地址传给sscanf的%x（后者要求unsigned int *），还有把htons的16位结果写到32位s_addr的问题。因此那段答案既不符合本版示例，也不能作为正确C程序运行。本页保留题意，用独立ipv4模式展示正确的uint32_t、htonl/ntohl版本。</p></div></details><details class="exercise" id="ex-11-3"><summary>11.3 · 16位十进制表示转十六进制</summary><div class="exercise-question" data-original-exercise="11.3" data-source-pdf-pages="964"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=964">来源：印刷 963 页 / PDF 964 页</a></p><p>编写dd2hex.c，将其16位网络字节序输入转换成16位十六进制数并打印。原题示例：</p><pre><code data-language="text" class="language-text">linux&gt; ./dd2hex 1024
+0x400</code></pre></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>命令行1024是字符序列，它自身没有“主机序/网络序”。按示例先把它解释为0…65535的数值，可序列化为两个网络字节，再用ntohs恢复数值并以十六进制输出。完整实现是<a href="#address-code">dd2hex模式</a>，输入1024输出0x400，输入65535输出0xffff，65536拒绝且返回2。</p><p>若输入是真正来自网络的两个字节04 00，应先保存到uint16_t对象，再ntohs；若输入是IPv4字符串，应另用inet_pton与ntohl处理32位。原书印刷1003—1004页答案以inet_pton读取点分地址却调用ntohs，混用了32位地址与16位转换；这与本版十进制样例不一致。</p></div></details><details class="exercise" id="ex-11-4"><summary>11.4 · 用inet_ntop重写hostinfo</summary><div class="exercise-question" data-original-exercise="11.4" data-source-pdf-pages="979"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=979">来源：印刷 978 页 / PDF 979 页</a></p><p>getaddrinfo与getnameinfo分别包含inet_pton和inet_ntop的功能，并提供与特定地址格式无关的较高层抽象。重写图11.17的hostinfo：把每个socket地址转为点分地址时，用inet_ntop代替getnameinfo。图11.17的条件是AF_INET、SOCK_STREAM，接收一个主机名参数，用getaddrinfo(host,NULL,…)获取候选并逐项打印，最后freeaddrinfo。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>完整hostinfo函数在<a href="#address-code">ch11_address.c</a>。因hints限定AF_INET，每个ai_addr才可解释为sockaddr_in；传给inet_ntop的必须是<code>&amp;a-&gt;sin_addr</code>，而不是整个sockaddr_in，也不是s_addr数值强转出的指针。缓冲区用INET_ADDRSTRLEN容纳最长IPv4地址和NUL。</p><pre><code data-language="c" class="language-c">const struct sockaddr_in *a = (const struct sockaddr_in *)p-&gt;ai_addr;
+char text[INET_ADDRSTRLEN];
+if (!inet_ntop(AF_INET, &amp;a-&gt;sin_addr, text, sizeof(text))) {
+    freeaddrinfo(list);
+    return 2;
+}
+puts(text);</code></pre><p>默认实验使用数值127.0.0.1；显式<code>hostinfo 某域名</code>才触发名称服务查询。若要支持AF_UNSPEC，就必须分支取得IPv4 sin_addr或IPv6 sin6_addr，而getnameinfo已替调用者封装这层差异。</p></div></details><details class="exercise" id="ex-11-5"><summary>11.5 · CGI的stdout如何到达客户端</summary><div class="exercise-question" data-original-exercise="11.5" data-source-pdf-pages="991"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=991">来源：印刷 990 页 / PDF 991 页</a></p><p>假设CGI程序需要把动态内容发送给客户端。通常CGI把内容写到标准输出；解释这些内容是如何发送到客户端的。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>server先fork。child继承connfd，再执行<code>dup2(connfd, STDOUT_FILENO)</code>，让fd1引用同一连接；随后execve装入CGI程序。CGI看到的stdout仍对应fd1，因此printf/fflush最终沿socket送给client。dup2改变的是描述符引用，exec改变的是程序映像，保留下来的描述符把两者接起来。</p><pre><code data-language="c" class="language-c">/* In the child; check all return values in a complete program. */
+if (dup2(connfd, STDOUT_FILENO) &lt; 0) _exit(127);
+if (connfd != STDOUT_FILENO) close(connfd);
+execve(cgi_path, cgi_argv, cgi_env);
+_exit(127);</code></pre><p>parent应关闭自己不再使用的连接引用并回收child。若stdout是缓冲stdio，CGI须在正常结束或显式fflush时提交缓冲；调用_exit不刷新stdio。本页Python CGI通过pipe把stdout先交给parent验证再转发，这是另一种合法路径，不能把“parent不介入”同时套在两种实现上。</p></div></details><details class="exercise" id="ex-11-6"><summary>11.6 · 记录真实浏览器的请求与首部</summary><div class="exercise-question" data-original-exercise="11.6" data-source-pdf-pages="1002,1003"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1002">来源：印刷 1001—1002 页 / PDF 1002—1003 页</a></p><p>A. 修改Tiny，使它回显每条请求行和每条请求首部。B. 用你常用的浏览器向Tiny请求静态内容，把Tiny输出捕获到文件。C. 检查输出，确定浏览器使用的HTTP版本。D. 查阅HTTP/1.1标准RFC2616，解释浏览器请求中每个首部的含义；原题给出rfc-editor.org/rfc.html作为标准入口。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>A的完整实现是<a href="#http-python-code">read_request(conn, log)</a>：读到CRLFCRLF后，把拆出的请求行及全部首部按收到顺序写入log，不会像原书read_requesthdrs那样先读一行却等下一轮才打印而漏掉首条首部。启动--serve时把stdout重定向到临时日志；页面的FORM可作为静态内容。</p><pre><code data-language="shell" class="language-shell">python3 books/csapp/code/ch11_http.py --serve 临时根目录 120 &gt; 临时请求日志.txt</code></pre><p>C必须看这次请求行的版本字段，不能从浏览器品牌猜。本次保存的静态页面请求行为<code>GET / HTTP/1.1</code>，因此这条本地浏览器请求使用HTTP/1.1；响应若写HTTP/1.0，表示服务器这条响应的版本，不会把请求版本改写。本次真实浏览器GET与POST表单路径均已观察；服务日志保存请求行、全部首部以及POST的Content-Length: 9。实际日志与截图在本批阅读验收记录中，结果不由代码静态检查替代。</p><div class="scroll"><table class="compact-table"><thead><tr><th scope="col">可能出现的请求首部</th><th scope="col">解释</th></tr></thead><tbody><tr><td>Host</td><td>目标主机名及可选端口；HTTP/1.1必须有</td></tr><tr><td>User-Agent</td><td>客户端软件标识；可被客户端自行设置</td></tr><tr><td>Accept</td><td>客户端可接受的媒体类型及偏好</td></tr><tr><td>Accept-Language</td><td>语言偏好，不是内容已经采用的语言</td></tr><tr><td>Accept-Encoding</td><td>可接受的内容编码，如gzip；本实验发送未压缩正文</td></tr><tr><td>Connection</td><td>本次连接的逐跳选项，如keep-alive或close</td></tr><tr><td>Cache-Control / Pragma</td><td>缓存控制指令；no-cache不等价于完全禁止存储</td></tr><tr><td>Referer</td><td>发起请求的来源URI，拼写沿历史字段名</td></tr><tr><td>Content-Type / Content-Length</td><td>POST正文媒体类型及字节数</td></tr></tbody></table></div><p>下面补齐现代浏览器可能随表单/导航发送的字段。它们来自较新的独立规范；原题RFC2616没有定义这些名字。</p><div class="scroll"><table class="compact-table"><thead><tr><th scope="col">首部</th><th scope="col">具体含义与示例</th></tr></thead><tbody><tr><td>Sec-Fetch-Site</td><td>发起者与目标的站点关系；同源表单常为same-origin，直接地址栏导航可为none</td></tr><tr><td>Sec-Fetch-Mode</td><td>请求模式；整页导航为navigate</td></tr><tr><td>Sec-Fetch-Dest</td><td>响应将用作什么；页面为document，视频为video</td></tr><tr><td>Sec-Fetch-User</td><td>导航是否带用户激活；?1表示是，并非每种请求都发送</td></tr><tr><td>Sec-CH-UA</td><td>浏览器品牌与主要版本列表；可含防止固定解析假设的额外品牌项</td></tr><tr><td>Sec-CH-UA-Mobile</td><td>是否偏好移动设备体验；?0表示否，?1表示是</td></tr><tr><td>Sec-CH-UA-Platform</td><td>客户端平台提示，如macOS；不是处理器指令集字段</td></tr><tr><td>Upgrade-Insecure-Requests</td><td>值1表示客户端支持并偏好将适用的不安全请求升级；单独出现不证明这条连接已使用HTTPS</td></tr><tr><td>Origin</td><td>发起请求的源（scheme、host、port）；与可能含路径的Referer不同</td></tr></tbody></table></div><p>字段依据分别为<a href="https://www.w3.org/TR/fetch-metadata/">W3C Fetch Metadata</a>、<a href="https://wicg.github.io/ua-client-hints/">User-Agent Client Hints</a>、<a href="https://www.w3.org/TR/upgrade-insecure-requests/">Upgrade Insecure Requests</a>和<a href="https://www.rfc-editor.org/rfc/rfc6454#section-7">RFC6454的Origin</a>。这些字段描述请求上下文和客户端声明，不替代服务端鉴权。本次题解于2026-10-14核对规范，并把教材历史字段与后续扩展分开。</p></div></details><details class="exercise" id="ex-11-7"><summary>11.7 · MPG的MIME与浏览器能力</summary><div class="exercise-question" data-original-exercise="11.7" data-source-pdf-pages="1003"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1003">来源：印刷 1002 页 / PDF 1003 页</a></p><p>扩展Tiny，使它能服务MPG视频文件。使用真实浏览器检查你的工作。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>在get_filetype里按最终后缀识别.mpg或.mpeg，返回<code>video/mpeg</code>；正文仍按文件原始长度传输，不能经过字符串处理。C的mime与Python的asset已实现这一映射。若文件内容含NUL，用strlen决定长度会截断视频。</p><pre><code data-language="c" class="language-c">if (!strcmp(ext, &quot;.mpg&quot;) || !strcmp(ext, &quot;.mpeg&quot;))
+    return &quot;video/mpeg&quot;;</code></pre><p>服务传输验证和浏览器解码是两层：网络面要确认状态200、Content-Type为video/mpeg、Content-Length与实际字节相等；浏览器能否播放还取决于容器/codec支持。默认自测的4字节夹具只核对MIME与二进制传输，不构成播放测试。本次另用ffmpeg生成160×120、0.4秒的真实MPEG-1样本，浏览器已向服务请求此媒体；当前Chromium的canPlayType返回空串，媒体error.code=4、readyState=0，因此此环境未能播放。可下载传输与MIME检验成立，解码播放不成立，不能把两者混报。</p></div></details><details class="exercise" id="ex-11-8"><summary>11.8 · 在SIGCHLD处理器中回收CGI</summary><div class="exercise-question" data-original-exercise="11.8" data-source-pdf-pages="1003"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1003">来源：印刷 1002 页 / PDF 1003 页</a></p><p>修改Tiny，在SIGCHLD处理器内回收CGI子进程，不再显式等待它们结束。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>在server启动前安装sigaction；处理器保存errno，用waitpid(-1,NULL,WNOHANG)循环回收所有已结束child，最后恢复errno。不能仅调用一次wait：标准信号可能合并，一次通知可能对应多个退出。处理器不printf、不malloc、不调用非异步信号安全的日志函数。</p><pre><code data-language="c" class="language-c">static void reap_cgi(int sig) {
+    (void)sig;
+    int saved = errno;
+    pid_t p;
+    do {
+        p = waitpid(-1, NULL, WNOHANG);
+    } while (p &gt; 0 || (p &lt; 0 &amp;&amp; errno == EINTR));
+    errno = saved;
+}
+/* Install before accepting clients and before creating children. */
+struct sigaction action = {0};
+action.sa_handler = reap_cgi;
+sigemptyset(&amp;action.sa_mask);
+action.sa_flags = SA_RESTART;
+if (sigaction(SIGCHLD, &amp;action, NULL) &lt; 0) { /* report startup failure */ }</code></pre><p>serve_dynamic的parent删除Wait，返回main并关闭自己的connfd；child保留继承的引用继续写，完毕退出时触发回收。child还应关闭无用listenfd，避免它额外延长监听对象的生命周期。若server以后又创建需要同步waitpid的其他子进程，不能让全局处理器与它们争抢回收权；应设计统一子进程表或把处理器收窄到它拥有的PID。</p><p>完整实现见<a href="#http-c-code">serve_cgi → dispatch_cgi → cgi_main</a>。父进程在fork及spawned记账时屏蔽SIGCHLD，然后恢复允许递送的掩码再接收下一个请求，避免child先退出、计数尚未登记的竞争。动态请求验证后，已读取的POST正文经pipe交给child；GET/HEAD使用QUERY_STRING，HTTP层消费完它们可能携带的正文后，不再转交给CGI stdin。child关闭listenfd和管道写端，dup2后关闭原始fd，用固定CGI环境exec；父进程关闭管道和自己的connfd。程序只接受操作者指定的可信可执行文件，URL不能选择本地程序。退出服务时，父进程先关闭listener，再用sigsuspend等待尚未回收的子进程数量归零（reaped达到spawned）；正常回收的waitpid调用只发生在处理器内，最后恢复原SIGCHLD处理器与掩码。</p><pre><code data-language="sh" class="language-sh">mkdir -p tmp/csapp/cgi-root
+printf '&lt;p&gt;static page&lt;/p&gt;\n' &gt; tmp/csapp/cgi-root/home.html
+clang -std=c11 -Wall -Wextra -Werror -pedantic \
+  books/csapp/code/ch11_http.c -o tmp/csapp/cgi-server
+tmp/csapp/cgi-server --serve-cgi tmp/csapp/cgi-root 3</code></pre><p>服务打印随机回环端口，接收3个连接；向该端口依次发送GET /cgi-bin/adder?a=2&amp;b=3、HEAD及POST即可。CGI自身生成完整HTTP首部，HEAD仍报告17字节表示长度而不写正文。父进程默认exec同一二进制，也可在最后提供可信CGI程序路径；该程序应接受<code>--cgi</code>、读取标准CGI环境，并按本实验约定输出完整HTTP响应。Python cgi_main遇到<code>CSAPP_FULL_HTTP=1</code>时使用这一约定，原同步管道入口仍只产生CGI首部。</p><p>维护回归实际让三个CGI同时等待，期间静态请求先完成；随后暂停父进程并释放这三个child，客户端仍收到完整正文及EOF，说明父进程已关闭连接引用。恢复父进程后，一次处理器调用回收至少三个退出，验证通知合并时必须循环waitpid。还检查child只保留stdout连接、服务结束无剩余子进程且描述符数及SIGCHLD状态恢复；GET、POST、HEAD、客户端提前断开和exec失败都有实际请求。exec失败生成完整502。CGI可以提前关闭POST stdin并生成自己的错误响应；父进程遇到EPIPE时只结束管道转交，保留child完成响应的机会，不能把EPIPE当作杀掉child的理由。其他管道传输错误会取消该child。超时CGI由五秒alarm终止并被回收，此时连接关闭，可能只有部分或没有响应，不把它当作200成功。维护回归特意安排child先关闭stdin再继续父进程，覆盖GET/HEAD的有效请求正文及POST由CGI自行返回400的路径。原书静态文件读取和请求解析仍可能阻塞，所以这里实现的是CGI重叠执行。</p></div></details><details class="exercise" id="ex-11-9"><summary>11.9 · 用malloc和稳健读写发送静态文件</summary><div class="exercise-question" data-original-exercise="11.9" data-source-pdf-pages="1003"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1003">来源：印刷 1002 页 / PDF 1003 页</a></p><p>修改Tiny，在服务静态内容时，用malloc、rio_readn和rio_writen把请求文件复制到连接描述符，不再使用mmap与rio_writen。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>先open/fstat得到长度n；申请n字节，rio_readn必须返回恰好n，否则视为文件变化或I/O失败；完成后再发响应头与n字节正文；每条失败路径close/free。零长度文件不必依赖malloc(0)的特殊返回值。下面是以原书csapp.h为上下文的替换核心，完整独立版本见<a href="#http-c-code">read_asset + write_all</a>。</p><pre><code data-language="c" class="language-c">/* srcfd was opened and fstat validated a stable regular file of n bytes. */
+char *data = malloc(n ? n : 1);
+if (data == NULL) { close(srcfd); return; }
+ssize_t got = rio_readn(srcfd, data, n);
+close(srcfd);
+if (got &lt; 0 || (size_t)got != n) { free(data); return; }
+/* Send the 200 header only after preparation has succeeded. */
+if (send_headers(connfd, n, filetype) == 0)
+    (void)rio_writen(connfd, data, n); /* caller handles a failed connection */
+free(data);</code></pre><p>片段中的send_headers代表原书已展示的响应头构造，不是新的POSIX接口。维护源不依赖csapp.h：循环read等价实现rio_readn的短读/EINTR处理，write_all处理短写。为避免单个请求申请任意大内存，实验限64 KiB；更大文件可改成固定缓冲流式发送，但若发头后源读取失败，就只能结束连接，不能再伪造第二个HTTP错误响应。</p></div></details><details class="exercise" id="ex-11-10"><summary>11.10 · 给adder添加GET表单</summary><div class="exercise-question" data-original-exercise="11.10" data-source-pdf-pages="1003"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1003">来源：印刷 1002 页 / PDF 1003 页</a></p><p>A. 为图11.27的CGI adder编写HTML表单，包含两个用于输入待相加数字的文本框，使用GET请求内容。B. 用真实浏览器向Tiny请求表单，填写并提交，再显示adder生成的动态内容。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><pre><code data-language="html" class="language-html">&lt;form action=&quot;/cgi-bin/adder&quot; method=&quot;get&quot;&gt;
+  &lt;label&gt;A &lt;input name=&quot;a&quot; value=&quot;15000&quot;&gt;&lt;/label&gt;
+  &lt;label&gt;B &lt;input name=&quot;b&quot; value=&quot;213&quot;&gt;&lt;/label&gt;
+  &lt;button&gt;计算&lt;/button&gt;
+&lt;/form&gt;</code></pre><p>表单会生成<code>/cgi-bin/adder?a=15000&amp;b=213</code>，而原书adder期待<code>15000&amp;213</code>，两者不能直接混接。维护代码sum_body支持命名参数，要求a/b各一次并检查整数；FORM常量已包含可用表单。对15000和213，CGI生成<code>&lt;p&gt;15000 + 213 = 15213&lt;/p&gt;</code>，浏览器显示加法结果。</p><p>默认自测走真实TCP与真实CGI进程验证GET结果；本次另在真实浏览器填写−4和7并提交GET表单，页面显示−4 + 7 = 3，交互与显示证据随本批阅读验收记录。</p></div></details><details class="exercise" id="ex-11-11"><summary>11.11 · HEAD保留GET的响应头，省略正文</summary><div class="exercise-question" data-original-exercise="11.11" data-source-pdf-pages="1003"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1003">来源：印刷 1002 页 / PDF 1003 页</a></p><p>扩展Tiny，使它支持HTTP HEAD方法。用telnet作为Web客户端检查。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>先按GET相同规则定位资源并计算状态、类型和表示长度，发出相同必要首部；若method=HEAD，发送阶段跳过正文。不能把Content-Length改成0，因为它应描述相应GET本来会有的表示长度。错误响应也必须抑制正文。对于动态内容，若要知道长度，可先运行CGI并收集结果，再只发送头；不能让未修改的CGI直接把正文写到socket。</p><pre><code data-language="text" class="language-text">telnet 127.0.0.1 本次端口
+HEAD /hello.txt HTTP/1.1
+Host: 127.0.0.1
+
+</code></pre><p>hello.txt若为12字节<code>hello\0world\n</code>，应看到Content-Length: 12及空行，随后连接结束而无正文。C build_response以payload=0保留n=12，Python handle亦如此；默认loopback自测检查实际body为空。telnet只用作本机明文协议工具，此处不涉及远程登录凭据。</p></div></details><details class="exercise" id="ex-11-12"><summary>11.12 · POST正文通过stdin传给CGI</summary><div class="exercise-question" data-original-exercise="11.12" data-source-pdf-pages="1003"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1003">来源：印刷 1002 页 / PDF 1003 页</a></p><p>扩展Tiny，使它可以服务由HTTP POST方法请求的动态内容。使用你常用的Web浏览器检查。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>FORM中的第二个表单使用method=post。client发送Content-Type: application/x-www-form-urlencoded与Content-Length，再在空行后发送a=2&amp;b=3。server先检查长度、类型和范围，从同一个缓冲解析器取得精确7字节，然后设置REQUEST_METHOD=POST、CONTENT_LENGTH=7与CONTENT_TYPE，将正文送到CGI标准输入。</p><p>完整实现见<a href="#http-python-code">read_request → route → cgi_main</a>：subprocess.run(input=body)把已经读取的正文写入child stdin管道，child准确读n字节；stdout包含CGI首部与动态结果，再由parent封装HTTP响应。小正文上限与两秒超时使读取、子进程执行都有明确边界。</p><p>直接dup2(connfd,0)只在server没有预读正文时才足够；原书RIO预读可能已从内核拿走一段正文，child换了流之后看不见它。这里的管道转交解决这一具体问题。未给长度返回411，超过上限返回413，不支持的正文类型返回415，截断/重复长度拒绝；chunked不在本实验范围。默认回归验证POST结果5；本次真实浏览器填写12和30后提交POST，页面显示12 + 30 = 42，服务记录正文Content-Length为9，对应a=12&amp;b=30。</p></div></details><details class="exercise" id="ex-11-13"><summary>11.13 · SIGPIPE与EPIPE只能结束当前连接</summary><div class="exercise-question" data-original-exercise="11.13" data-source-pdf-pages="1003"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1003">来源：印刷 1002 页 / PDF 1003 页</a></p><p>修改Tiny，使它在向提前关闭的连接write时，能够妥善处理SIGPIPE信号和EPIPE错误，而不会终止服务器。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>进程启动时用sigaction把SIGPIPE设为SIG_IGN；每次写入继续检查返回值，EINTR重试，EPIPE或ECONNRESET停止该连接并释放资源，主循环继续accept。若仍调用原书遇错exit的大写Rio_writen，忽略SIGPIPE后也会因包装器退出进程，所以必须沿整个调用链改成返回错误。</p><pre><code data-language="c" class="language-c">struct sigaction ignore = {0};
+ignore.sa_handler = SIG_IGN;
+sigemptyset(&amp;ignore.sa_mask);
+if (sigaction(SIGPIPE, &amp;ignore, NULL) &lt; 0) { /* startup failure */ }
+/* In the write loop: */
+ssize_t k = write(fd, data, n);
+if (k &lt; 0 &amp;&amp; errno == EINTR) { /* retry */ }
+else if (k &lt; 0) { /* end this connection; do not exit the server */ }</code></pre><p>原书“第一次write正常、第二次产生SIGPIPE”的描述是典型情景，不是所有平台和时序的保证：FIN/RST到达、内核缓冲和应用调度会改变第几次调用看到EPIPE或ECONNRESET。正确实现检查每次调用，不预设计数。C默认socketpair回归关闭对端后真实得到EPIPE并继续完成child回收测试，证明本进程存活；TCP断开路径在服务回归另测。</p></div></details></section><section id="self-check"><h2>原创自测：先预测，再展开</h2><details class="exercise" id="q11-1"><summary>原创自测 1 · 两次write就会有两次read吗？</summary><div class="exercise-question"><p>client先write("AB",2)，再write("CDE",3)。server一次read缓冲大小为4。它一定先收到AB再收到CDE吗？</p></div><div class="answer"><p>不一定。TCP只保证字节序ABCDE；合法分块包括ABCD/E、AB/CDE、A/BCDE等。server需累计返回字节数，并用应用的长度或分隔规则判定消息完整。</p></div></details><details class="exercise" id="q11-2"><summary>原创自测 2 · POST首部后的字节去了哪里？</summary><div class="exercise-question"><p>RIO读首部时预读了正文前三字节a=2。server随后dup2(socket,0)并exec CGI，CGI期望7字节正文，会怎样？</p></div><div class="answer"><p>新CGI只能从socket读取仍在内核中的&b=3四字节，预读的a=2留在旧进程用户缓冲。它可能等待或得到截断正文。应从同一个RIO实例读足正文再用pipe交给child，或逐字节无预读读取首部。</p></div></details><details class="exercise" id="q11-3"><summary>原创自测 3 · HEAD的长度20，但正文0是矛盾吗？</summary><div class="exercise-question"><p>HEAD响应Content-Length:20，空行后服务器关闭连接，没有发送20字节正文。是否截断？</p></div><div class="answer"><p>对HEAD不是截断：该字段描述相应GET的表示长度，HEAD按语义不带正文。若相同响应是普通GET且没有其他特殊状态，少于宣告长度则是截断。</p></div></details></section><footer><p>依据 Bryant / O’Hallaron 第三版 Global Edition（Pearson 2016）。IPv4与HTTP/1.x教学范围、POSIX接口、本机运行及浏览器观测分别说明；源码、题号与来源随页面同步。</p><p class="chapter-nav"><a href="#top">返回页首 ↑</a><a href="book_overview.html">全书地图</a><a href="chapter10_system_io.html">← 第10章：系统级I/O</a><a href="chapter12_concurrency.html">第12章：并发编程 →</a></p></footer></main><aside class="annotation-sidebar" id="annotation-rail" aria-label="阅读注解" hidden><p class="annotation-label">阅读注解</p><p class="annotation-context"><a id="annotation-context-link" href="#top"></a></p><div id="annotation-content"></div></aside></div><script>
+(() => {
+  document.documentElement.classList.add('toc-enhanced');
+  const panel = document.getElementById('toc-panel');
+  const nav = document.getElementById('chapter-toc');
+  const wide = matchMedia('(min-width:1100px)');
+  const links = Array.from(nav.querySelectorAll('li a[href^="#"]'));
+  const entries = links.map(link => ({link, section: document.getElementById(link.hash.slice(1))})).filter(item => item.section);
+  let current = null, scheduled = false;
+  const fit = () => { panel.open = wide.matches; };
+  fit();
+  wide.addEventListener('change', fit);
+  const reveal = () => {
+    let target;
+    try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch { return; }
+    for (let node = target; node; node = node.parentElement) {
+      if (node.tagName === 'DETAILS') node.open = true;
+    }
+  };
+  const mark = () => {
+    scheduled = false;
+    let next = entries[0];
+    for (const entry of entries) {
+      if (entry.section.getBoundingClientRect().top <= (wide.matches ? 110 : 144)) next = entry;
+    }
+    if (window.scrollY + innerHeight >= document.documentElement.scrollHeight - 2) next = entries[entries.length - 1];
+    if (next && next.link !== current) {
+      if (current) current.removeAttribute('aria-current');
+      current = next.link; current.setAttribute('aria-current', 'location');
+    }
+  };
+  const schedule = () => { if (!scheduled) { scheduled = true; requestAnimationFrame(mark); } };
+  nav.addEventListener('click', event => {
+    if (event.target.closest('a[href^="#"]') && !wide.matches) panel.open = false;
+  });
+  addEventListener('scroll', schedule, {passive:true});
+  addEventListener('resize', schedule);
+  addEventListener('hashchange', () => { reveal(); schedule(); });
+  document.addEventListener('toggle', schedule, true);
+  reveal(); mark();
+})();
+
+
+(() => {
+  const rail = document.getElementById('annotation-rail');
+  const content = document.getElementById('annotation-content');
+  const context = document.getElementById('annotation-context-link');
+  const groups = Array.from(document.querySelectorAll('main .reading-notes')).map(notes => ({
+    notes, section: document.getElementById(notes.dataset.notesFor)
+  })).filter(item => item.section);
+  if (!rail || !content || !context || !groups.length) return;
+  const wide = matchMedia('(min-width:1440px)');
+  let current = null, scheduled = false;
+  const update = () => {
+    scheduled = false;
+    if (!wide.matches) return;
+    const sections = Array.from(document.querySelectorAll('main > section'));
+    let active = sections[0];
+    for (const section of sections) if (section.getBoundingClientRect().top <= 110) active = section;
+    const relevant = groups.find(item => item.section === active);
+    rail.hidden = !relevant;
+    if (!relevant) { current = null; return; }
+    let next = groups[0];
+    for (const item of groups) {
+      if (item.section.getBoundingClientRect().top <= 110) next = item;
+    }
+    if (scrollY + innerHeight >= document.documentElement.scrollHeight - 2) next = groups[groups.length - 1];
+    if (current === next) return;
+    const body = next.notes.querySelector('.reading-notes-body');
+    const heading = next.section.querySelector('h2');
+    if (!body || !heading) return;
+    content.replaceChildren(...Array.from(body.children, node => node.cloneNode(true)));
+    const label = heading.cloneNode(true);
+    label.querySelectorAll('.english-title').forEach(node => node.remove());
+    context.textContent = label.textContent;
+    context.href = '#' + next.section.id;
+    rail.dataset.activeSection = next.section.id;
+    rail.scrollTop = 0;
+    current = next;
+  };
+  const schedule = () => {
+    if (!scheduled) { scheduled = true; requestAnimationFrame(update); }
+  };
+  const fit = () => {
+    rail.hidden = !wide.matches;
+    current = null;
+    if (wide.matches) {
+      document.documentElement.classList.add('notes-enhanced');
+      update();
+    } else {
+      document.documentElement.classList.remove('notes-enhanced');
+    }
+  };
+  wide.addEventListener('change', fit);
+  addEventListener('scroll', schedule, {passive:true});
+  addEventListener('resize', schedule);
+  addEventListener('hashchange', schedule);
+  document.addEventListener('toggle', schedule, true);
+  fit();
+})();
+
+
+(() => {
+  let saved=[];
+  addEventListener('beforeprint',()=>{
+    if(saved.length)return;
+    saved=[...document.querySelectorAll('main details')].map(node=>[node,node.open]);
+    saved.forEach(([node])=>{node.open=true;});
+  });
+  addEventListener('afterprint',()=>{
+    saved.forEach(([node,open])=>{node.open=open;});saved=[];
+  });
+})();
+
+(() => {
+  const containers = Array.from(document.querySelectorAll('main .equation, main .math-block, main .scroll'));
+  let pending = false;
+  const update = () => {
+    pending = false;
+    for (const node of containers) {
+      const overflow = node.clientWidth > 0 && node.scrollWidth > node.clientWidth + 2;
+      node.dataset.horizontalOverflow = String(overflow);
+      if (overflow) {
+        const label = node.matches('.equation,.math-block') ? '左右滑动查看完整公式 →' : '左右滑动查看完整图表 →';
+        node.dataset.scrollLabel = label;
+        if (!node.hasAttribute('tabindex')) {
+          node.tabIndex = 0;
+          node.dataset.scrollFocusable = 'true';
+        }
+      } else if (node.dataset.scrollFocusable === 'true') {
+        node.removeAttribute('tabindex');
+        delete node.dataset.scrollFocusable;
+      }
+    }
+  };
+  const schedule = () => {
+    if (!pending) { pending = true; requestAnimationFrame(update); }
+  };
+  addEventListener('resize', schedule);
+  document.addEventListener('toggle', schedule, true);
+  document.fonts.ready.then(schedule);
+  update();
+})();
+</script></body></html>

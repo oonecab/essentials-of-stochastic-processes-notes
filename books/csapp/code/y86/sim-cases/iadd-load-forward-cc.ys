@@ -1,0 +1,11 @@
+irmovq data,%rdi
+mrmovq 0(%rdi),%rax
+iaddq $-7,%rax
+jge wrong
+rrmovq %rax,%rdx
+addq %rax,%rdx
+halt
+wrong: irmovq $99,%rbx
+halt
+.pos 0x200
+data: .quad 5

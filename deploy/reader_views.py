@@ -10,7 +10,8 @@ import zipfile
 from urllib.parse import urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
-BOOKS = {'stochastic': 'Durrett · 随机过程', 'weiss': 'Weiss · 数据结构与算法'}
+BOOKS = {'stochastic': 'Durrett · 随机过程', 'weiss': 'Weiss · 数据结构与算法',
+         'csapp': 'CS:APP · 深入理解计算机系统'}
 EXTERNAL_LINKS = {
     'https://epubs.siam.org/doi/10.1137/0206024': 'https://www.cs.jhu.edu/~misha/Spring23/Knuth77.pdf',
     'https://epubs.siam.org/doi/10.1137/0218001': 'https://www.dcs.gla.ac.uk/~pat/cpM/papers/GAC/SMJ000001%5B1%5D.pdf',
@@ -45,14 +46,15 @@ def rewrite_link(name, href, views):
     return href
 
 
-def transform_reading_page(blob, name, views):
+def transform_reading_page(blob, name, views, *, csapp_pdf_included=False):
     source = blob.decode('utf-8')
     if '<body>' not in source or 'reader-bar' in source:
         raise ValueError('Expected a canonical, untransformed reading page: ' + name)
     source = source.replace('</head>', f'<link rel="stylesheet" href="{relative(name, "reader.css")}"></head>', 1)
     source = source.replace('<body>', '<body class="portal-reader">' + navigation(name), 1)
     # Narrow-screen anchors sit below the home bar and the collapsed TOC.
-    marker_threshold = 'wide.matches ? 100 : 110'
+    marker_threshold = ('wide.matches ? 110 : 144' if name.startswith('csapp/notes/')
+                        else 'wide.matches ? 100 : 110')
     if source.count(marker_threshold) != 1:
         raise ValueError('Expected one TOC reading-position threshold: ' + name)
     source = source.replace(marker_threshold, 'wide.matches ? 100 : 132', 1)
@@ -77,6 +79,12 @@ def transform_reading_page(blob, name, views):
             tag = tag[:-1] + ' download>'
         return tag
     source = re.sub(r'<a\b[^>]*>', update, source)
+    if name.startswith('csapp/notes/') and not csapp_pdf_included:
+        # Keep page references readable when this release omits the source PDF.
+        source = re.sub(r'<a class="source-pdf" href="\.\./csapp\.pdf#page=\d+">([^<]*)</a>',
+                        lambda m: '<span class="source-printed">' + m[1] + '</span>', source)
+        if '../csapp.pdf' in source:
+            raise ValueError('Unmarked CSAPP local-source link: ' + name)
     if name == 'stochastic/notes/book_overview.html':
         source = source.replace('>code 目录</a>', '>示例程序与运行说明</a>')
         source = source.replace('最终 HTML 中的代码是维护入口，校验脚本每次重新提取到临时目录。',
@@ -192,6 +200,8 @@ def build_reader_views(blobs):
             views[name] = name.removesuffix('README.md') + 'index.html'
     for stem in ('source_manifest', 'review_manifest', 'validation'):
         views[f'stochastic/notes/{stem}.json'] = f'stochastic/notes/{stem}.html'
+    if 'csapp/code/README.md' in blobs:
+        views['csapp/code/README.md'] = 'csapp/code/index.html'
     generated = {}
     programs = json.loads(blobs['stochastic/code/programs.json'])['programs']
     index = 'stochastic/code/index.html'
@@ -280,4 +290,10 @@ def build_reader_views(blobs):
     body += '<h2>页面与浏览器检查</h2><p>记录包含 ' + '、'.join(str(width) + 'px' for width in browser['widths']) + ' 宽度下的页面检查，以及目录定位、习题深链接、代码展开和阅读注解的交互。</p>'
     body += '<div class="doc-note">这些结果记录有限输入、数值基准和实际浏览器操作的表现。完整题干与数学论证的依据见逐章校订记录。</div><div class="doc-links">' + link('review_manifest.html', '逐章校订记录') + link('source_manifest.html', '原书版本与页码') + '</div>'
     generated[name] = document(name, '程序与页面验证结果', '用清晰的检查项目查看已有验证结果，并区分数值运行、页面功能与数学内容的复核依据。', body, 'stochastic/notes/validation.json', validation['generated_at_utc'])
+    if 'csapp/code/README.md' in blobs:
+        name = views['csapp/code/README.md']
+        text = blobs['csapp/code/README.md'].decode().split('## 校验', 1)[0]
+        generated[name] = document(name, '教学程序与运行说明',
+            '选择一组程序，复现位表示、地址布局、流水线时间、归约或缓存计算。',
+            markdown(text, 'csapp/code/README.md', views), 'csapp/code/README.md')
     return generated, views

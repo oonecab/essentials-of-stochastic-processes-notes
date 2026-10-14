@@ -1,0 +1,44 @@
+irmovq $0xf00,%rsp
+irmovq data,%rdi
+irmovq $6,%rsi
+call bubble
+halt
+bubble:
+    irmovq $1,%r8
+    subq %r8,%rsi
+    jle bubble_done
+    rrmovq %rsi,%r9
+    addq %r9,%r9
+    addq %r9,%r9
+    addq %r9,%r9
+    addq %rdi,%r9
+    irmovq $8,%r8
+bubble_outer:
+    rrmovq %rdi,%rsi
+bubble_inner:
+    mrmovq 0(%rsi),%rax
+    mrmovq 8(%rsi),%rdx
+    rrmovq %rax,%rcx
+    subq %rdx,%rcx
+    jle bubble_ordered
+    rmmovq %rdx,0(%rsi)
+    rmmovq %rax,8(%rsi)
+bubble_ordered:
+    addq %r8,%rsi
+    rrmovq %r9,%rcx
+    subq %rsi,%rcx
+    jg bubble_inner
+    subq %r8,%r9
+    rrmovq %r9,%rcx
+    subq %rdi,%rcx
+    jg bubble_outer
+bubble_done:
+    ret
+.pos 0x400
+data:
+ .quad 0xfffffffffffffffd
+ .quad 0xfffffffffffffffe
+ .quad 0xffffffffffffffff
+ .quad 0x0000000000000000
+ .quad 0x0000000000000001
+ .quad 0x0000000000000002

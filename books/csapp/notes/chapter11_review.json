@@ -1,0 +1,623 @@
+{
+  "chapter": 11,
+  "edition": "Computer Systems: A Programmer’s Perspective, Third Global Edition",
+  "source": {
+    "path": "books/csapp/csapp.pdf",
+    "sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+    "printed_pages": [
+      953,
+      1006
+    ],
+    "pdf_pages": [
+      954,
+      1007
+    ],
+    "entire_chapter_and_practice_solutions_read": true,
+    "source_visual_review": [
+      "tmp/csapp/part3/ch11/source-964.png",
+      "tmp/csapp/part3/ch11/source-1003.png",
+      "tmp/csapp/part3/ch11/source-1004.png"
+    ]
+  },
+  "page": "books/csapp/notes/chapter11_network.html",
+  "scope": {
+    "main_sections": [
+      "s11-1",
+      "s11-2",
+      "s11-3",
+      "s11-4",
+      "s11-5",
+      "s11-6",
+      "s11-7"
+    ],
+    "subsections": [
+      "ss11-3-1",
+      "ss11-3-2",
+      "ss11-3-3",
+      "ss11-4-1",
+      "ss11-4-2",
+      "ss11-4-3",
+      "ss11-4-4",
+      "ss11-4-5",
+      "ss11-4-6",
+      "ss11-4-7",
+      "ss11-4-8",
+      "ss11-4-9",
+      "ss11-5-1",
+      "ss11-5-2",
+      "ss11-5-3",
+      "ss11-5-4"
+    ],
+    "original_exercises": 13,
+    "practice": 5,
+    "homework": 8,
+    "reading_notes": 7,
+    "annotation_cards": 14,
+    "original_self_checks_retained": [
+      "q11-1",
+      "q11-2",
+      "q11-3"
+    ]
+  },
+  "exercises": [
+    {
+      "number": "11.1",
+      "kind": "practice",
+      "pdf_start": 964,
+      "printed_start": 963,
+      "anchor": "ex-11-1",
+      "pdf_pages": [
+        964
+      ],
+      "printed_pages": [
+        963
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "点分地址与32位十六进制",
+      "source_correction": null
+    },
+    {
+      "number": "11.2",
+      "kind": "practice",
+      "pdf_start": 964,
+      "printed_start": 963,
+      "anchor": "ex-11-2",
+      "pdf_pages": [
+        964
+      ],
+      "printed_pages": [
+        963
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "16位十六进制转十进制及网络表示",
+      "source_correction": "Global16-bit题意与书后IPv4程序不一致；%x和uint16_t对象类型不匹配，htons不可替代IPv4的htonl。"
+    },
+    {
+      "number": "11.3",
+      "kind": "practice",
+      "pdf_start": 964,
+      "printed_start": 963,
+      "anchor": "ex-11-3",
+      "pdf_pages": [
+        964
+      ],
+      "printed_pages": [
+        963
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "16位十进制表示转十六进制",
+      "source_correction": "命令行十进制文本不具有字节序；书后IPv4 inet_pton+ntohs与本版16-bit题意冲突。"
+    },
+    {
+      "number": "11.4",
+      "kind": "practice",
+      "pdf_start": 979,
+      "printed_start": 978,
+      "anchor": "ex-11-4",
+      "pdf_pages": [
+        979
+      ],
+      "printed_pages": [
+        978
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "用inet_ntop重写hostinfo",
+      "source_correction": null
+    },
+    {
+      "number": "11.5",
+      "kind": "practice",
+      "pdf_start": 991,
+      "printed_start": 990,
+      "anchor": "ex-11-5",
+      "pdf_pages": [
+        991
+      ],
+      "printed_pages": [
+        990
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "CGI的stdout如何到达客户端",
+      "source_correction": null
+    },
+    {
+      "number": "11.6",
+      "kind": "homework",
+      "pdf_start": 1002,
+      "printed_start": 1001,
+      "anchor": "ex-11-6",
+      "pdf_pages": [
+        1002,
+        1003
+      ],
+      "printed_pages": [
+        1001,
+        1002
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "记录真实浏览器的请求与首部",
+      "source_correction": null
+    },
+    {
+      "number": "11.7",
+      "kind": "homework",
+      "pdf_start": 1003,
+      "printed_start": 1002,
+      "anchor": "ex-11-7",
+      "pdf_pages": [
+        1003
+      ],
+      "printed_pages": [
+        1002
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "MPG的MIME与浏览器能力",
+      "source_correction": null
+    },
+    {
+      "number": "11.8",
+      "kind": "homework",
+      "pdf_start": 1003,
+      "printed_start": 1002,
+      "anchor": "ex-11-8",
+      "pdf_pages": [
+        1003
+      ],
+      "printed_pages": [
+        1002
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "在SIGCHLD处理器中回收CGI",
+      "source_correction": null,
+      "review_v2": {
+        "issue": "I010",
+        "status": "fixed_verified",
+        "summary": "Actual CGI exec, overlap, descriptor ownership and SIGCHLD reaping verified, including closed stdin and failed/slow CGI."
+      },
+      "acceptance_status": "fixed_verified"
+    },
+    {
+      "number": "11.9",
+      "kind": "homework",
+      "pdf_start": 1003,
+      "printed_start": 1002,
+      "anchor": "ex-11-9",
+      "pdf_pages": [
+        1003
+      ],
+      "printed_pages": [
+        1002
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "用malloc和稳健读写发送静态文件",
+      "source_correction": null
+    },
+    {
+      "number": "11.10",
+      "kind": "homework",
+      "pdf_start": 1003,
+      "printed_start": 1002,
+      "anchor": "ex-11-10",
+      "pdf_pages": [
+        1003
+      ],
+      "printed_pages": [
+        1002
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "给adder添加GET表单",
+      "source_correction": null
+    },
+    {
+      "number": "11.11",
+      "kind": "homework",
+      "pdf_start": 1003,
+      "printed_start": 1002,
+      "anchor": "ex-11-11",
+      "pdf_pages": [
+        1003
+      ],
+      "printed_pages": [
+        1002
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "HEAD保留GET的响应头，省略正文",
+      "source_correction": null
+    },
+    {
+      "number": "11.12",
+      "kind": "homework",
+      "pdf_start": 1003,
+      "printed_start": 1002,
+      "anchor": "ex-11-12",
+      "pdf_pages": [
+        1003
+      ],
+      "printed_pages": [
+        1002
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "POST正文通过stdin传给CGI",
+      "source_correction": null
+    },
+    {
+      "number": "11.13",
+      "kind": "homework",
+      "pdf_start": 1003,
+      "printed_start": 1002,
+      "anchor": "ex-11-13",
+      "pdf_pages": [
+        1003
+      ],
+      "printed_pages": [
+        1002
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "SIGPIPE与EPIPE只能结束当前连接",
+      "source_correction": null
+    }
+  ],
+  "source_corrections": [
+    "11.2/11.3 Global 16-bit tasks versus incorrect IPv4 answer code",
+    "UDP expansion in printed960",
+    "socklen_t versus accept int* typography",
+    "Tiny sprintf overlap and bounded parsing",
+    "localhost IPv4 teaching statement versus possible IPv6",
+    "SIGPIPE first/second-write timing is not guaranteed"
+  ],
+  "execution": "tmp/csapp/part3/ch11/execution.json",
+  "review_status": "content_programs_and_local_reading_verified",
+  "page_sha256": "accfab6b86c5cb39e9c1a5526aee616afeffbc6f58e9bddbb970395a6bae39d0",
+  "limitations": [
+    "Default HTTP Python selftest uses real loopback TCP and a real CGI child; browser checks are separate.",
+    "C HTTP dynamic adder is computed in-process; C SIGCHLD test observes a separate forked child.",
+    "No general HTTP server, TLS, chunked, keepalive, Range, or unrestricted path support claimed.",
+    "MPG selftest fixture verifies MIME and bytes, not playable video decoding."
+  ],
+  "scoped_independent_review": "tmp/csapp/part3/ch11/independent-review.json",
+  "browser_exercise_evidence": {
+    "recorded_on": "2026-10-14",
+    "get": "tmp/csapp/part3/http-browser/get.json",
+    "post": "tmp/csapp/part3/http-browser/post.json",
+    "post_screenshot": "tmp/csapp/part3/http-browser/post.png",
+    "mpg": "real MPEG-1 160x120 0.4s fixture; browser requested media; canPlayType empty and MEDIA_ERR_SRC_NOT_SUPPORTED; no playback success claimed"
+  },
+  "external_header_references_checked_on": "2026-10-14",
+  "integrator_http_version": {
+    "request_line": "GET / HTTP/1.1",
+    "evidence": "tmp/csapp/part3/http-browser/version-observation.log",
+    "date": "2026-10-14",
+    "scope": "actual Chromium request to static page"
+  },
+  "independent_reviews": [
+    {
+      "status": "complete",
+      "reviewer": "chapter10 independent reviewer of chapter11",
+      "source_pdf": "books/csapp/csapp.pdf",
+      "source_scope": {
+        "printed_pages": [
+          953,
+          1006
+        ],
+        "exercise_pages_read": [
+          963,
+          978,
+          990,
+          1001,
+          1002,
+          1003,
+          1004,
+          1005
+        ],
+        "visual_pages_read": [
+          964,
+          1002,
+          1003,
+          1004,
+          1005,
+          1006
+        ],
+        "note": "Chapter range includes printed 1006 blank; substantive final solution at printed 1005."
+      },
+      "code_scope": [
+        "books/csapp/code/ch11_address.c",
+        "books/csapp/code/ch11_address.py",
+        "books/csapp/code/ch11_echo.c",
+        "books/csapp/code/ch11_echo.py",
+        "books/csapp/code/ch11_http.c",
+        "books/csapp/code/ch11_http.py"
+      ],
+      "page_scope": {
+        "major_sections": [
+          "11.1",
+          "11.2",
+          "11.3",
+          "11.4",
+          "11.5",
+          "11.6",
+          "11.7"
+        ],
+        "secondary_sections": 16,
+        "original_exercises": [
+          "11.1",
+          "11.2",
+          "11.3",
+          "11.4",
+          "11.5",
+          "11.6",
+          "11.7",
+          "11.8",
+          "11.9",
+          "11.10",
+          "11.11",
+          "11.12",
+          "11.13"
+        ],
+        "self_checks": 3,
+        "source_excerpts": 6,
+        "all_sections_and_answers_read": true,
+        "complete_chinese_question_conditions_and_subparts": true
+      },
+      "findings": [
+        {
+          "id": "CH11-HEAD-ERROR",
+          "priority": "P2",
+          "status": "fixed_verified",
+          "files": [
+            "books/csapp/code/ch11_http.py",
+            "books/csapp/code/ch11_http.c"
+          ],
+          "summary": "HEAD errors raised before method assignment leaked error bodies; method is now preserved once HEAD plus space is recognized, including incomplete headers.",
+          "basis": "https://www.rfc-editor.org/rfc/rfc9110.html#name-head",
+          "before_evidence": "tmp/csapp/part3/ch11/independent/head-before.json",
+          "after_evidence": [
+            "tmp/csapp/part3/ch11/independent/results.json",
+            "tmp/csapp/part3/ch11/independent/targeted-results.json"
+          ]
+        },
+        {
+          "id": "CH11-EXPECT",
+          "priority": "P2",
+          "status": "fixed_verified",
+          "file": "books/csapp/code/ch11_http.c",
+          "summary": "C accepted Expect despite declared rejection; now returns 417 for complete valid-framed requests with Expect, including overlong/repeated field; HEAD suppresses body. Duplicate Expect is separately rejected with 400 by Python.",
+          "after_evidence": "tmp/csapp/part3/ch11/independent/targeted-results.json"
+        },
+        {
+          "id": "CH11-NUL",
+          "priority": "P2",
+          "status": "fixed_verified",
+          "file": "books/csapp/notes/chapter11_network.html",
+          "summary": "Two binary NUL bytes in visible examples replaced by visible backslash escapes. All six embedded code blocks remain byte-identical to maintained source.",
+          "after_evidence": "tmp/csapp/part3/ch11/independent/page-checks.json"
+        },
+        {
+          "id": "CH11-SERVE-WINDOW",
+          "priority": "P3",
+          "status": "fixed_verified",
+          "summary": "Serving duration now means window for accepting new connections; current bounded request may finish after deadline, consistently stated in source docstring and notes."
+        },
+        {
+          "id": "CH11-CGI-SCOPE",
+          "priority": "P3",
+          "status": "fixed_verified",
+          "summary": "C output now says child=reaped and prose distinguishes C minimal fork/reap test and direct adder from Python actual CGI exec with environment and pipes."
+        },
+        {
+          "id": "CH11-11.6D",
+          "priority": "P2",
+          "status": "fixed_verified",
+          "summary": "Modern browser header meanings were previously deferred to reader; answer now explains four Sec-Fetch fields, three Sec-CH-UA fields, Upgrade-Insecure-Requests and Origin with primary specification links separately from historical RFC2616."
+        }
+      ],
+      "independent_execution": {
+        "regression_checks": 220,
+        "regression_passed": 220,
+        "targeted_checks": 15,
+        "targeted_passed": 15,
+        "page_checks": 15,
+        "page_checks_passed": 15,
+        "strict_C_probe_compile": "cc -std=c11 -Wall -Wextra -Wpedantic -Werror -fsanitize=address,undefined -g tmp/csapp/part3/ch11/independent/http_probe.c -o tmp/csapp/part3/ch11/independent/http_probe",
+        "records": [
+          "tmp/csapp/part3/ch11/independent/results-before.json",
+          "tmp/csapp/part3/ch11/independent/results.json",
+          "tmp/csapp/part3/ch11/independent/targeted-results.json",
+          "tmp/csapp/part3/ch11/independent/page-checks.json"
+        ],
+        "limits": [
+          "C build_response directly probed under ASan/UBSan; Python exercised actual local TCP and actual CGI subprocess.",
+          "Runtime host macOS; no Linux execution claim.",
+          "Browser GET/POST and MPEG observations belong to root agent separate acceptance evidence, not independently repeated in this review.",
+          "telnet executable unavailable in this host PATH; HEAD independently checked over actual raw TCP, not claimed as a telnet run.",
+          "Teaching HTTP subset, not a full standards conformance audit; no chunked, keep-alive, TLS, Range or concurrent root mutation claim."
+        ]
+      },
+      "reviewed_at": "2026-10-14T03:52:36.805868+00:00",
+      "final_hashes": {
+        "books/csapp/code/ch11_address.c": "b54a7a59129aa892eceebc4eee961df189daa68399c90e1ba885c3bf6017afcf",
+        "books/csapp/code/ch11_address.py": "38c1bac8ac65c3f1616e15568f7323eccb70356f84f542343e4ce72b064ef0f6",
+        "books/csapp/code/ch11_echo.c": "cae23d959a71e46ea641fbdf9281101386f87f127475d6b07830bb31c409e201",
+        "books/csapp/code/ch11_echo.py": "856fb9c20a63acc17da3155abecb1f415d3f9929502efcb75d35543ec344a160",
+        "books/csapp/code/ch11_http.c": "7276ea8092755ad9b9386e3fb786aca3e44bf2cd7b6051518a732ed53808c826",
+        "books/csapp/code/ch11_http.py": "c86ad84e4fcf0085f4df49e194599616d6960cbc48ebb80cde99a586aa92dc3b",
+        "books/csapp/notes/chapter11_network.html": "4427cea4f9005fa903587e2daa6329c7b6ffeb976df20918f436c56066e605aa",
+        "tmp/csapp/part3/ch11/integration.json": "f6f50193c4e3031271529ca0403852216f2eb5c8b1a08cdd480f722cf14b228f"
+      },
+      "open_findings": [],
+      "presentation_revision": {
+        "reviewed_at": "2026-10-14T03:56:03.922874+00:00",
+        "reason": "Author standardized program article anchors and existing code-pair/code-version DOM components after substantive review; original review hashes are preserved.",
+        "page_sha256": "fc647e55d8da51ebcf5c277430e7b2f63c4959e929eaf2ee9e9d15674b0d5398",
+        "integration_sha256": "f6f50193c4e3031271529ca0403852216f2eb5c8b1a08cdd480f722cf14b228f",
+        "embedded_sources": [
+          {
+            "source": "books/csapp/code/ch11_address.c",
+            "matches": true,
+            "source_unchanged_since_review": true
+          },
+          {
+            "source": "books/csapp/code/ch11_address.py",
+            "matches": true,
+            "source_unchanged_since_review": true
+          },
+          {
+            "source": "books/csapp/code/ch11_echo.c",
+            "matches": true,
+            "source_unchanged_since_review": true
+          },
+          {
+            "source": "books/csapp/code/ch11_echo.py",
+            "matches": true,
+            "source_unchanged_since_review": true
+          },
+          {
+            "source": "books/csapp/code/ch11_http.c",
+            "matches": true,
+            "source_unchanged_since_review": true
+          },
+          {
+            "source": "books/csapp/code/ch11_http.py",
+            "matches": true,
+            "source_unchanged_since_review": true
+          }
+        ],
+        "no_NUL": true,
+        "HTML_balanced": true,
+        "exercise_containers": 13
+      }
+    }
+  ],
+  "integrated_at": "2026-10-14T04:06:11.311864+00:00",
+  "integration_scope": "Same-edition source questions, solutions and listed code mechanisms reviewed; final presentation hash bound here. Reviewer snapshot hashes retained in individual records.",
+  "open_findings": 0,
+  "last_author_snapshot_sha256": "fc647e55d8da51ebcf5c277430e7b2f63c4959e929eaf2ee9e9d15674b0d5398",
+  "presentation_followup": "Reader wording cleaned and actual HTTP/1.1 observation recorded; code and question semantics retained.",
+  "part_three_review_fixes": {
+    "issue": "I008",
+    "reviewed_at": "2026-10-14T11:57:09.032789+00:00",
+    "scope": "Three runtime review findings and affected Chapter11/12 mechanism explanations and code copies. Original questions and excerpts unchanged; not a new full-book proof.",
+    "findings": [
+      {
+        "id": "CSAPP-EXPECT-HANDSHAKE",
+        "priority": "P2",
+        "status": "fixed_verified",
+        "summary": "C在完整有效首部后拒绝Expect，handle/select共享request_ready，消息完整性接口保持。",
+        "evidence": "tmp/csapp/review-fixes-part3/http/after/report.json"
+      }
+    ],
+    "open_findings": 0,
+    "full_program_report": "tmp/project-check/20261014T195029-yzxp2owq/csapp/report.json",
+    "independent_review": "tmp/csapp/review-fixes-part3/independent-review.json",
+    "acceptance": "test/T008-csapp-part-three-review-fixes.md",
+    "page_hash_changes": {
+      "chapter11_network.html": {
+        "before": "8575612733b6812822223f19b2d36fb363bd51a0d6770abd537f4a5fe9c2aaf1",
+        "after": "1cc3175d529620d03b112ee3cae11983ecb1771e8c215cb9a68f759b02faa3a1"
+      },
+      "chapter12_concurrency.html": {
+        "before": "52d5fc5c26d4bff651d299a4c78cec838ea594d835c661ec44c541d17a3c388c",
+        "after": "7ac23fb0e0d8418cd69dc616895e9994444abfc967c1f6113d03992f7347da1d"
+      }
+    }
+  },
+  "review_v2_revision": {
+    "issue": "I010",
+    "reviewed_at": "2026-10-14T13:44:25.640972+00:00",
+    "scope": "Only this chapter's listed REA v2 findings and affected source copies; prior reviews retain their scope.",
+    "previous_current_fields": {
+      "review_status": "author_and_independent_source_reviewed_locally",
+      "open_findings": 0,
+      "page_sha256": "1cc3175d529620d03b112ee3cae11983ecb1771e8c215cb9a68f759b02faa3a1"
+    },
+    "page_hash_change": {
+      "before": "1cc3175d529620d03b112ee3cae11983ecb1771e8c215cb9a68f759b02faa3a1",
+      "after": "accfab6b86c5cb39e9c1a5526aee616afeffbc6f58e9bddbb970395a6bae39d0"
+    },
+    "findings": [
+      {
+        "id": "F1",
+        "priority": "P2",
+        "status": "fixed_verified",
+        "chapters": [
+          11,
+          12
+        ],
+        "summary": "HTTP field values trim only SP/HTAB OWS; invalid Host/framing is rejected before Expect. Five server modes pass 150 TCP cases; old source passes 112.",
+        "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/part-three-http-review/report.json"
+      },
+      {
+        "id": "F4",
+        "priority": "P2",
+        "status": "fixed_verified",
+        "chapters": [
+          11,
+          12
+        ],
+        "summary": "Actual C parent forks/execs C or Python CGI and reaps through SIGCHLD; eight lifecycle/overlap/error groups pass, including CGI closing stdin before its response.",
+        "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/part-three-cgi-review/report.json"
+      }
+    ],
+    "full_program_report": "tmp/project-check/20261014T213638-7e7waj6i/csapp/report.json",
+    "reading_review": "notes/reading_review.json",
+    "acceptance": "test/T010-csapp-review-v2-fixes.md"
+  }
+}

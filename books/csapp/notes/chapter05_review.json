@@ -1,0 +1,119 @@
+{
+  "chapter": 5,
+  "source_pdf_pages": [
+    532,
+    615
+  ],
+  "major_sections": 15,
+  "original_exercises": 19,
+  "subsections": [
+    "5.7.1",
+    "5.7.2",
+    "5.7.3",
+    "5.9.1",
+    "5.9.2",
+    "5.11.1",
+    "5.11.2",
+    "5.12.1",
+    "5.12.2",
+    "5.14.1",
+    "5.14.2"
+  ],
+  "corrections": [
+    {
+      "where": "5.14.2",
+      "original": "209 / alpha with alpha a fraction",
+      "correction": "1/(1-alpha) = 209/5.3",
+      "basis": "Amdahl denominator is unchanged runtime"
+    }
+  ],
+  "programs": [
+    "ch05_loops",
+    "ch05_polynomial",
+    "ch05_fill",
+    "ch05_bench"
+  ],
+  "runtime_evidence": {
+    "machine": "arm64",
+    "platform": "macOS-15.8.1-arm64-arm-64bit-Mach-O",
+    "cpu": "Apple M3",
+    "compiler": "Apple clang version 17.0.0 (clang-1700.6.3.2)",
+    "command": [
+      "clang",
+      "-std=c11",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-O3",
+      "-ffp-contract=off",
+      "-fno-vectorize",
+      "-fno-slp-vectorize",
+      "books/csapp/code/ch05_bench.c",
+      "-o",
+      "tmp/csapp/rework/ch05/ch05_bench"
+    ],
+    "runs": [
+      "unit=ns/element n=8192 repetitions=4000 scalar no-fma\ndirect 1.764\nhorner 1.907\nsplit8 0.239\nprefix1 0.744\nprefix3 0.256\n",
+      "unit=ns/element n=8192 repetitions=4000 scalar no-fma\ndirect 1.045\nhorner 1.787\nsplit8 0.243\nprefix1 0.721\nprefix3 0.260\n",
+      "unit=ns/element n=8192 repetitions=4000 scalar no-fma\ndirect 1.049\nhorner 1.775\nsplit8 0.242\nprefix1 0.720\nprefix3 0.258\n"
+    ]
+  },
+  "review_status": "content_programs_and_local_reading_verified",
+  "independent_review": {
+    "scope": "overview, preface, chapter 1, chapter 5 complete and all 19 exercises",
+    "findings": [
+      {
+        "code": "C05-PREFIX-ALIAS-CONTRACT",
+        "resolution": "Explicit disjoint or same-address contract, exact partial-overlap counterexample, 131 in-place tests in C/Python."
+      },
+      {
+        "code": "C05-BENCH-INLINING-DESCRIPTION",
+        "resolution": "Measurement wording matches actual inlined compiler output."
+      }
+    ]
+  },
+  "page_sha256": "3f06e019bdf7932d09661c4fbc1952a5c2cfdb7c2176e1a7ea5d9a52f09476e0",
+  "integrated_reading_review": "notes/reading_review.json",
+  "integrated_check": "tmp/project-check/20261013T225356-n4s1jvtm/csapp/report.json",
+  "source_reading_revision": {
+    "reviewed_at": "2026-10-13T16:41:34.904736+00:00",
+    "page_sha256": "5ac95eb5cd636bc184179b44434122d779b53267944ca3c5928586b6cf9a668b",
+    "source_passages": 6,
+    "record": "source_reading_review.json",
+    "reading": "reading_review.json",
+    "binding_note": "本对象绑定I004新增原文、关联解释和最终呈现；顶层旧审阅哈希与逐题结论保留I003的历史范围。"
+  },
+  "review_v2_revision": {
+    "issue": "I010",
+    "reviewed_at": "2026-10-14T13:44:25.640972+00:00",
+    "scope": "Only this chapter's listed REA v2 findings and affected source copies; prior reviews retain their scope.",
+    "previous_current_fields": {
+      "review_status": "content_programs_and_local_reading_verified",
+      "page_sha256": "bd25fa7bf55f48250d8b7cc8c29e6d4e0da5b8ad0b147e8e06ab656ac782abab"
+    },
+    "page_hash_change": {
+      "before": "5ac95eb5cd636bc184179b44434122d779b53267944ca3c5928586b6cf9a668b",
+      "after": "3f06e019bdf7932d09661c4fbc1952a5c2cfdb7c2176e1a7ea5d9a52f09476e0"
+    },
+    "findings": [
+      {
+        "id": "F2",
+        "priority": "P2",
+        "status": "fixed_verified",
+        "chapters": [
+          5,
+          8,
+          9,
+          12
+        ],
+        "summary": "Necessary computations and self-checks execute independently of assert; 24 ordinary/disabled-assertion runs pass and 42 wrong variants fail as intended.",
+        "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/assertion-regressions/report.json"
+      }
+    ],
+    "full_program_report": "tmp/project-check/20261014T213638-7e7waj6i/csapp/report.json",
+    "reading_review": "notes/reading_review.json",
+    "acceptance": "test/T010-csapp-review-v2-fixes.md"
+  },
+  "open_findings": 0
+}

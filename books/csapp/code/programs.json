@@ -1,0 +1,535 @@
+{
+  "schema_version": 1,
+  "programs": [
+    {
+      "id": "hello",
+      "chapter": 1,
+      "title": "观察一个最小程序",
+      "page": "notes/chapter01_tour.html",
+      "anchor": "experiment",
+      "files": {
+        "c": "code/hello.c",
+        "python": "code/hello.py"
+      }
+    },
+    {
+      "id": "representation",
+      "chapter": 2,
+      "title": "8 位表示与浮点反例",
+      "page": "notes/chapter02_information.html",
+      "anchor": "experiment",
+      "files": {
+        "c": "code/representation.c",
+        "python": "code/representation.py"
+      }
+    },
+    {
+      "id": "addresses",
+      "chapter": 3,
+      "title": "地址、布局与简单函数",
+      "page": "notes/chapter03_machine_level.html",
+      "anchor": "experiment",
+      "files": {
+        "c": "code/addresses.c",
+        "python": "code/addresses.py"
+      }
+    },
+    {
+      "id": "pipeline",
+      "chapter": 4,
+      "title": "理想流水线时间模型",
+      "page": "notes/chapter04_architecture.html",
+      "anchor": "experiment",
+      "files": {
+        "c": "code/pipeline.c",
+        "python": "code/pipeline.py"
+      }
+    },
+    {
+      "id": "reductions",
+      "chapter": 5,
+      "title": "模 2^64 归约与两个累积器",
+      "page": "notes/chapter05_optimization.html",
+      "anchor": "experiment",
+      "files": {
+        "c": "code/reductions.c",
+        "python": "code/reductions.py"
+      }
+    },
+    {
+      "id": "cache",
+      "chapter": 6,
+      "title": "缓存轨迹与行列访问",
+      "page": "notes/chapter06_memory.html",
+      "anchor": "experiment",
+      "files": {
+        "c": "code/cache.c",
+        "python": "code/cache.py"
+      }
+    },
+    {
+      "id": "ch01-amdahl",
+      "chapter": 1,
+      "title": "Amdahl 正反计算",
+      "page": "notes/chapter01_tour.html",
+      "anchor": "experiment",
+      "files": {
+        "c": "code/ch01_amdahl.c",
+        "python": "code/ch01_amdahl.py"
+      }
+    },
+    {
+      "id": "ch03-models",
+      "chapter": 3,
+      "title": "状态、布局和整数模型",
+      "page": "notes/chapter03_machine_level.html",
+      "anchor": "experiment",
+      "files": {
+        "c": "code/ch03_models.c",
+        "python": "code/ch03_models.py"
+      }
+    },
+    {
+      "id": "ch03-good-echo",
+      "chapter": 3,
+      "title": "任意长度文本行",
+      "page": "notes/chapter03_machine_level.html",
+      "anchor": "experiment",
+      "files": {
+        "c": "code/ch03_good_echo.c",
+        "python": "code/ch03_good_echo.py"
+      }
+    },
+    {
+      "id": "ch03-range-check",
+      "chapter": 3,
+      "title": "x86-64 binary32 分类",
+      "page": "notes/chapter03_machine_level.html",
+      "anchor": "experiment",
+      "files": {
+        "c": "code/ch03_range_check.c",
+        "python": "code/ch03_range_check.py"
+      },
+      "execution": "x86_64_assembly"
+    },
+    {
+      "id": "ch03_procprob_alias",
+      "chapter": 3,
+      "title": "字符别名下的内存更新顺序反例",
+      "page": "notes/chapter03_machine_level.html",
+      "anchor": "procprob-alias-code",
+      "files": {
+        "c": "code/ch03_procprob_alias.c"
+      },
+      "expected_stdout": "alias source-order=1 assembly-order=257 independent-long=256 independent-char=0 checks=2\n"
+    },
+    {
+      "id": "ch04_machine",
+      "chapter": 4,
+      "title": "Y86-64 状态执行与控制组合",
+      "page": "notes/chapter04_architecture.html",
+      "anchor": "machine-model",
+      "files": {
+        "c": "code/ch04_machine.c",
+        "python": "code/ch04_machine.py"
+      }
+    },
+    {
+      "id": "ch04_algorithms",
+      "chapter": 4,
+      "title": "指针冒泡与 switch",
+      "page": "notes/chapter04_architecture.html",
+      "anchor": "algorithm-model",
+      "files": {
+        "c": "code/ch04_algorithms.c",
+        "python": "code/ch04_algorithms.py"
+      }
+    },
+    {
+      "id": "ch05-loops",
+      "chapter": 5,
+      "title": "展开、内积、归并和前缀",
+      "page": "notes/chapter05_optimization.html",
+      "anchor": "experiment",
+      "files": {
+        "c": "code/ch05_loops.c",
+        "python": "code/ch05_loops.py"
+      }
+    },
+    {
+      "id": "ch05-polynomial",
+      "chapter": 5,
+      "title": "多项式八链分组",
+      "page": "notes/chapter05_optimization.html",
+      "anchor": "experiment",
+      "files": {
+        "c": "code/ch05_polynomial.c",
+        "python": "code/ch05_polynomial.py"
+      }
+    },
+    {
+      "id": "ch05-fill",
+      "chapter": 5,
+      "title": "按字填充和边界",
+      "page": "notes/chapter05_optimization.html",
+      "anchor": "experiment",
+      "files": {
+        "c": "code/ch05_fill.c",
+        "python": "code/ch05_fill.py"
+      }
+    },
+    {
+      "id": "ch02-integer-source",
+      "chapter": 2,
+      "title": "定宽整数",
+      "page": "notes/chapter02_information.html",
+      "anchor": "programs",
+      "files": {
+        "c": "code/ch02_integer.c",
+        "python": "code/ch02_integer.py"
+      }
+    },
+    {
+      "id": "ch02-float-source",
+      "chapter": 2,
+      "title": "浮点位模式",
+      "page": "notes/chapter02_information.html",
+      "anchor": "programs",
+      "files": {
+        "c": "code/ch02_float.c",
+        "python": "code/ch02_float.py"
+      }
+    },
+    {
+      "id": "ch06_cache",
+      "chapter": 6,
+      "title": "可配置缓存与写流量",
+      "page": "notes/chapter06_memory.html",
+      "anchor": "cache-model",
+      "files": {
+        "c": "code/ch06_cache.c",
+        "python": "code/ch06_cache.py"
+      }
+    },
+    {
+      "id": "ch06_kernels",
+      "chapter": 6,
+      "title": "分块转置与图转换",
+      "page": "notes/chapter06_memory.html",
+      "anchor": "kernel-model",
+      "files": {
+        "c": "code/ch06_kernels.c",
+        "python": "code/ch06_kernels.py"
+      }
+    },
+    {
+      "id": "ch06_mountain",
+      "chapter": 6,
+      "title": "存储山工作集与步长",
+      "page": "notes/chapter06_memory.html",
+      "anchor": "mountain-model",
+      "files": {
+        "c": "code/ch06_mountain.c",
+        "python": "code/ch06_mountain.py"
+      }
+    },
+    {
+      "id": "ch07_relocation",
+      "chapter": 7,
+      "title": "重定位算术与 32 位边界",
+      "page": "notes/chapter07_linking.html",
+      "anchor": "relocation-model",
+      "files": {
+        "c": "code/ch07_relocation.c",
+        "python": "code/ch07_relocation.py"
+      },
+      "expected_stdout": "sum: 05 00 00 00\nswap: 0a 00 00 00\n7.12A: 0a 00 00 00\n7.12B: 22 00 00 00\narray: 18 10 60 00\nbackward: ed ff ff ff\npc-max: ff ff ff 7f\npc-min: 00 00 00 80\npc-too-high: rejected\npc-too-low: rejected\nabs-max: ff ff ff ff\nabs-overflow: rejected\nabs-negative: rejected\n"
+    },
+    {
+      "id": "ch07_archive",
+      "chapter": 7,
+      "title": "库扫描的 E、U、D 轨迹",
+      "page": "notes/chapter07_linking.html",
+      "anchor": "archive-model",
+      "files": {
+        "c": "code/ch07_archive.c",
+        "python": "code/ch07_archive.py"
+      },
+      "expected_stdout": "good: p x1 y x2 | unresolved=0\none-pass: p x1 y | unresolved=4\nearly-archive: p | unresolved=2\ncombined: p x1 y x2 | unresolved=0\nempty-input: | unresolved=0\nunused-libraries: | unresolved=0\n"
+    },
+    {
+      "id": "ch08_ecf",
+      "chapter": 8,
+      "title": "进程、信号与非局部跳转",
+      "page": "notes/chapter08_exceptional.html",
+      "anchor": "experiment",
+      "files": {
+        "c": "code/ch08_ecf.c",
+        "python": "code/ch08_ecf.py"
+      },
+      "expected_stdout": "private-copy parent=9 child=8\nexec-status=7\nstandard-signals sent=5 pending=1 handled=1\nmask-register-suspend reaped=1 status=23\nnonlocal-jump=2\n"
+    },
+    {
+      "id": "ch08_io",
+      "chapter": 8,
+      "title": "参数、执行与超时读取",
+      "page": "notes/chapter08_exceptional.html",
+      "anchor": "io-model",
+      "files": {
+        "c": "code/ch08_io.c",
+        "python": "code/ch08_io.py"
+      },
+      "expected_stdout": "mysystem exit8=8 exit0=0\ntfgets line=abc partial=def eof=null\n"
+    },
+    {
+      "id": "ch08_shell",
+      "chapter": 8,
+      "title": "作业控制的完整 C shell 与状态模型",
+      "page": "notes/chapter08_exceptional.html",
+      "anchor": "shell-model",
+      "files": {
+        "c": "code/ch08_shell.c",
+        "python": "code/ch08_shell.py"
+      },
+      "expected_stdout": "shell foreground-completed jobs=0\n"
+    },
+    {
+      "id": "ch09_vm",
+      "chapter": 9,
+      "title": "图9.20翻译快照：四条路径",
+      "page": "notes/chapter09_virtual_memory.html",
+      "anchor": "vm-code",
+      "files": {
+        "c": "code/ch09_vm.c",
+        "python": "code/ch09_vm.py"
+      },
+      "expected_stdout": "va=03d7 vpn=0f vpo=17 tlbi=3 tlbt=03 tlb=Y fault=N pa=357 co=3 ci=5 ct=0d cache=Y byte=1d\nva=027c vpn=09 vpo=3c tlbi=1 tlbt=02 tlb=N fault=N pa=5fc co=0 ci=f ct=17 cache=N\nva=03a9 vpn=0e vpo=29 tlbi=2 tlbt=03 tlb=N fault=N pa=469 co=1 ci=a ct=11 cache=N\nva=0040 vpn=01 vpo=00 tlbi=1 tlbt=00 tlb=N fault=Y\n"
+    },
+    {
+      "id": "ch09_allocator",
+      "chapter": 9,
+      "title": "四种合并、next fit与省略已分配尾部",
+      "page": "notes/chapter09_virtual_memory.html",
+      "anchor": "allocator-code",
+      "files": {
+        "c": "code/ch09_allocator.c",
+        "python": "code/ch09_allocator.py"
+      },
+      "expected_stdout": "allocator=first footer=all cases=4 stress=512 restored=65520\nallocator=next footer=all cases=4 stress=512 restored=65520\nallocator=first footer=free-only cases=4 stress=512 restored=65520\nallocator=next footer=free-only cases=4 stress=512 restored=65520\n"
+    },
+    {
+      "id": "ch09_mmap",
+      "chapter": 9,
+      "title": "文件映射复制与共享写回",
+      "page": "notes/chapter09_virtual_memory.html",
+      "anchor": "mmap-code",
+      "files": {
+        "c": "code/ch09_mmap.c"
+      },
+      "expected_stdout": "usage: ch09_mmap copy FILE | change FILE\n"
+    },
+    {
+      "id": "ch10_rio",
+      "chapter": 10,
+      "title": "短计数循环和同一 Rio 缓冲的读行/读块",
+      "page": "notes/chapter10_system_io.html",
+      "anchor": "rio-code",
+      "files": {
+        "c": "code/ch10_rio.c",
+        "python": "code/ch10_rio.py"
+      },
+      "expected_stdout": "readn short+EINTR+EOF bytes=6 calls=5\nwriten short+EINTR bytes=6 calls=4\nerrors partial=2 zero-write=EIO nonblocking=EAGAIN\nbuffer mixed line=3 body=4 tail=2 retained-after-line=5\nlong-line fragments=abc|de\\n capacity1=EINVAL\nhost-pipe binary=6 EOF=observed\n"
+    },
+    {
+      "id": "ch10_files",
+      "chapter": 10,
+      "title": "open、dup2、fork 与最后一个引用",
+      "page": "notes/chapter10_system_io.html",
+      "anchor": "files-code",
+      "files": {
+        "c": "code/ch10_files.c",
+        "python": "code/ch10_files.py"
+      },
+      "expected_stdout": "independent=f dup2-shared=o fork-shared=o\nmetadata regular=yes size=6 shared-offset=2\nclose-one remaining-byte=o\n"
+    },
+    {
+      "id": "ch11_address",
+      "chapter": 11,
+      "title": "地址与端口：同一数值的三种表示",
+      "page": "notes/chapter11_network.html",
+      "anchor": "address-code",
+      "files": {
+        "c": "code/ch11_address.c",
+        "python": "code/ch11_address.py"
+      },
+      "expected_stdout": "107.212.122.205 = 0x6BD47ACD\n64.12.149.13 = 0x400C950D\n107.212.96.29 = 0x6BD4601D\n0.0.0.128 = 0x00000080\n255.255.255.0 = 0xFFFFFF00\n10.1.1.64 = 0x0A010140\nport=1024 wire=04 00\n127.0.0.1\n"
+    },
+    {
+      "id": "ch11_echo",
+      "chapter": 11,
+      "title": "TCP流：11字节穿过不匹配的读写分块",
+      "page": "notes/chapter11_network.html",
+      "anchor": "echo-code",
+      "files": {
+        "c": "code/ch11_echo.c",
+        "python": "code/ch11_echo.py"
+      },
+      "expected_stdout": "echo bytes=11 binary=preserved half-close=EOF listener=separate\n"
+    },
+    {
+      "id": "ch11_http_core",
+      "chapter": 11,
+      "title": "C核心：有界HTTP响应、文件读取与信号恢复",
+      "page": "notes/chapter11_network.html",
+      "anchor": "http-c-code",
+      "files": {
+        "c": "code/ch11_http.c"
+      },
+      "expected_stdout": "http core: adder=15213 framing=bounded SIGPIPE=survived child=reaped\n"
+    },
+    {
+      "id": "ch11_http",
+      "chapter": 11,
+      "title": "Python Tiny：真实CGI和本地HTTP回归",
+      "page": "notes/chapter11_network.html",
+      "anchor": "http-python-code",
+      "files": {
+        "python": "code/ch11_http.py"
+      },
+      "expected_stdout": "http loopback: 20 cases passed; CGI=exec; temporary-root=removed\n",
+      "execution": "python"
+    },
+    {
+      "id": "ch12_models",
+      "chapter": 12,
+      "title": "交错、锁顺序与死锁的有限状态模型",
+      "page": "notes/chapter12_concurrency.html",
+      "anchor": "models-code",
+      "files": {
+        "c": "code/ch12_models.c",
+        "python": "code/ch12_models.py"
+      },
+      "expected_stdout": "counter schedules=20 final1=18 final2=2\n12.15-original deadlocks=1 completed=0\n12.15-fixed deadlocks=0 completed=1\n12.28-case1 deadlocks=0 completed=1\n12.28-case2 deadlocks=0 completed=1\n12.28-case3 deadlocks=0 completed=1\n12.28-case4 deadlocks=0 completed=1\n12.29 deadlocks=0 completed=1\n12.30 deadlocks=4 completed=1\n"
+    },
+    {
+      "id": "ch12_threads",
+      "chapter": 12,
+      "title": "安全计数、有界队列、线程参数与矩阵乘法",
+      "page": "notes/chapter12_concurrency.html",
+      "anchor": "threads-code",
+      "files": {
+        "c": "code/ch12_threads.c"
+      },
+      "pthread": true,
+      "expected_stdout": "mutex counter=30000\nqueue items=1000 sum=500500 exactly_once=YES\nmatrix cases=2 exact=YES workers=3\n"
+    },
+    {
+      "id": "ch12_sbuf",
+      "chapter": 12,
+      "title": "12.9的槽位所有权与mutex省略条件",
+      "page": "notes/chapter12_concurrency.html",
+      "anchor": "sbuf-code",
+      "files": {
+        "c": "code/ch12_sbuf.c"
+      },
+      "pthread": true,
+      "expected_stdout": "sbuf no_buffer_mutex capacity=7 producers=1 consumers=1 items=1000 exactly_once=YES\nsbuf no_buffer_mutex capacity=1 producers=1 consumers=1 items=1000 exactly_once=YES\nsbuf no_buffer_mutex capacity=1 producers=3 consumers=3 items=1000 exactly_once=YES\n"
+    },
+    {
+      "id": "ch12_tfgets",
+      "chapter": 12,
+      "title": "进程/信号/非局部跳转、select与线程超时输入",
+      "page": "notes/chapter12_concurrency.html",
+      "anchor": "tfgets-code",
+      "files": {
+        "c": "code/ch12_tfgets.c"
+      },
+      "pthread": true,
+      "expected_stdout": "usage: ch12_tfgets proc|select|thread (five-second stdin deadline)\n"
+    },
+    {
+      "id": "ch12_resolver",
+      "chapter": 12,
+      "title": "旧式地址解析的锁内深拷贝",
+      "page": "notes/chapter12_concurrency.html",
+      "anchor": "resolver-code",
+      "files": {
+        "c": "code/ch12_resolver.c"
+      },
+      "pthread": true,
+      "expected_stdout": "resolver threads=3 copies=96 independent=YES\n"
+    },
+    {
+      "id": "ch12_servers",
+      "chapter": 12,
+      "title": "四种并发Tiny、部分行echo与过滤日志proxy",
+      "page": "notes/chapter12_concurrency.html",
+      "anchor": "servers-code",
+      "files": {
+        "c": "code/ch12_servers.c"
+      },
+      "pthread": true,
+      "expected_stdout": "usage: ch12_servers --serve process|select|thread|pool|echo|proxy|proxy-serial ROOT PORT LIMIT [FILTER LOG]\n"
+    },
+    {
+      "id": "ch12_server_checks",
+      "chapter": 12,
+      "title": "环回协议验证、动态扩缩容与慢客户",
+      "page": "notes/chapter12_concurrency.html",
+      "anchor": "server-checks-code",
+      "files": {
+        "python": "code/ch12_server_checks.py"
+      },
+      "execution": "python",
+      "expected_stdout": "servers modes=4 slow_client=3 pool_growth_shrink=YES\necho partial_lines=YES buffered_lines=YES eof_tail=YES\nproxy sequential_and_threads=YES filter=YES log=YES\n"
+    }
+  ],
+  "additional_sources": [
+    "code/ch03_compiler.c",
+    "code/ch03_ranges.S",
+    "code/ch05_bench.c",
+    "code/y86-verification-support.tar.gz",
+    "code/y86/Y86_REPRODUCE.md",
+    "code/y86/build_y86_variants.sh",
+    "code/y86/csapp-ex4-52-58.patch",
+    "code/y86/sim-cases/branch-equal-taken.ys",
+    "code/y86/sim-cases/branch-equal-untaken.ys",
+    "code/y86/sim-cases/branch-loop-ret.ys",
+    "code/y86/sim-cases/branch-unconditional-target-once.ys",
+    "code/y86/sim-cases/iadd-load-forward-cc.ys",
+    "code/y86/sim-cases/iadd-negative.ys",
+    "code/y86/sim-cases/iadd-old-memory-error.ys",
+    "code/y86/sim-cases/iadd-overflow.ys",
+    "code/y86/sim-cases/lf-load-push-data.ys",
+    "code/y86/sim-cases/lf-load-rsp-push.ys",
+    "code/y86/sim-cases/lf-load-store-address.ys",
+    "code/y86/sim-cases/noforward-h-b-r.ys",
+    "code/y86/sim-cases/noforward-h-b.ys",
+    "code/y86/sim-cases/page-4-4-representative.ys",
+    "code/y86/sim-cases/page-4-47-mixed.ys",
+    "code/y86/sim-cases/page-4-47-reverse.ys",
+    "code/y86/sim-cases/page-4-47-sorted.ys",
+    "code/y86/sim-cases/page-4-48-mixed.ys",
+    "code/y86/sim-cases/page-4-48-reverse.ys",
+    "code/y86/sim-cases/page-4-48-sorted.ys",
+    "code/y86/sim-cases/page-4-49-mixed.ys",
+    "code/y86/sim-cases/page-4-49-reverse.ys",
+    "code/y86/sim-cases/page-4-49-sorted.ys",
+    "code/y86/sim-cases/page-4-5-representative.ys",
+    "code/y86/sim-cases/page-4-6-representative.ys",
+    "code/y86/sim-cases/pop-adjacent.ys",
+    "code/y86/sim-cases/pop-invalid-address.ys",
+    "code/y86/sim-cases/pop-load-rsp-refetch.ys",
+    "code/y86/sim-cases/pop-preserve-cc.ys",
+    "code/y86/sim-cases/pop-rsp-ret.ys",
+    "code/y86/sim-cases/pop-wrongpath-flush.ys",
+    "code/ch07_link_main.c",
+    "code/ch07_link_sum.c",
+    "code/ch07_plugin.c",
+    "code/ch07_dlopen.c",
+    "code/ch07_probe.py",
+    "code/ch10_fstatcheck.c",
+    "code/ch10_cpfile.c",
+    "code/ch09_space.c"
+  ]
+}

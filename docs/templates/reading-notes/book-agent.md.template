@@ -1,0 +1,21 @@
+# {{BOOK_TITLE}}：维护入口
+
+先读仓库[规则职责索引](../../docs/rules/README.md)和[共同标准 RN-001](../../docs/reading-notes-standard.md)，再读本书[阅读计划](reading-plan.md)与[章节说明](notes/README.md)。公共命令从 Reading Notes 主仓库根目录执行。
+
+- 书籍 ID：`{{BOOK_ID}}`；原书版次和来源权威清单：待填写。
+- 本次范围：见 `reading-plan.md` 与来源覆盖清单；实际完成情况由审阅记录确认。
+- 正式入口：`notes/book_overview.html`；页面名称与原书定位见 `notes/README.md`。
+- 代码唯一维护源及同步/提取命令：待填写；与 catalog 登记一致。
+- 本书必须保留的编号、语义/模型、输入输出、精度、平台和失败条件：待填写。
+- 版式及组件基准：见 `notes/README.md`；已有文件名、锚点与相对链接保持稳定。
+- 内容、程序和浏览器记录路径：待填写；更改后按影响范围补充实际复核。
+- 本书补充约定：待填写；共用方法引用 RN-001，不重复抄写全文。
+
+完成检查器及根入口接线后，执行：
+
+```sh
+python3 tools/project.py check --book {{BOOK_ID}} --quick
+python3 tools/project.py check --book {{BOOK_ID}}
+```
+
+检查器必须实际覆盖本书内容与执行入口；来源读回和真实阅读验收分别记录。发布步骤遵循根目录 `deploy/README.md`。

@@ -21,7 +21,7 @@ from release_support import extract_release
 
 def doctor() -> int:
     required = {"python3": "Python 3.10+", "clang": "C11 / ASan / UBSan", "make": "C 图例构建",
-                "pdftotext": "原书页码核对", "node": "发布页内脚本语法检查"}
+                "pdftotext": "原书页码核对", "pdfinfo": "原书总页数核对", "node": "发布页内脚本语法检查"}
     found = {name: shutil.which(name) is not None for name in required}
     optional = {name: shutil.which(name) is not None for name in ("nginx", "openssl")}
     version_ok = sys.version_info >= (3, 10)
@@ -38,7 +38,8 @@ def check(book_id: str, quick: bool, benchmarks: bool) -> int:
     parent.mkdir(parents=True, exist_ok=True)
     run = Path(tempfile.mkdtemp(prefix=datetime.now().strftime("%Y%m%dT%H%M%S-") , dir=parent))
     commands = [[sys.executable, ROOT / "tools/check_structure.py"],
-                [sys.executable, ROOT / "tools/test_release_support.py"]]
+                [sys.executable, ROOT / "tools/test_release_support.py"],
+                [sys.executable, ROOT / "tools/test_reader_views.py"]]
     if "stochastic" in selected:
         base = selected["stochastic"]["root"]
         commands += [[sys.executable, base / "tools/check_review_records.py"],
@@ -54,6 +55,12 @@ def check(book_id: str, quick: bool, benchmarks: bool) -> int:
             if benchmarks:
                 command.append("--benchmarks")
             commands.append(command)
+    if "csapp" in selected:
+        command = [sys.executable, selected["csapp"]["root"] / "tools/check_notes.py",
+                   "--run-dir", run / "csapp"]
+        if quick:
+            command.append("--quick")
+        commands.append(command)
     report = {"status": "running", "book": book_id, "quick": quick, "benchmarks": benchmarks,
               "started_at": datetime.now(timezone.utc).isoformat(), "checks": []}
     evidence = run / "report.json"
@@ -156,7 +163,7 @@ def main() -> int:
     subs = parser.add_subparsers(dest="action", required=True)
     subs.add_parser("doctor", help="检查环境；不安装或升级软件")
     p = subs.add_parser("check", help="运行登记的结构与程序检查")
-    p.add_argument("--book", choices=("all", "stochastic", "weiss"), default="all")
+    p.add_argument("--book", choices=("all", *load_books()), default="all")
     p.add_argument("--quick", action="store_true", help="仅结构、链接、代码同步和审阅记录检查")
     p.add_argument("--benchmarks", action="store_true", help="另核对 Weiss 已登记的实验计数与关闭断言模式")
     p = subs.add_parser("build", help="构建统一站点；已有版本不会覆盖")

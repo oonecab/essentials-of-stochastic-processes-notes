@@ -1,0 +1,1906 @@
+{
+  "schema_version": 2,
+  "status": "revised_reading_pages_verified_locally",
+  "reviewed_at": "2026-10-14T13:44:25.640972+00:00",
+  "scope": "I010 scoped revision of REA v2 F1-F8: seven findings fixed and verified; 12.39 real-browser proxy acceptance remains pending. Original question conditions, source excerpts and chapter topology retained. Historical whole-book and specialty reviews keep their original scope; this is not a new full-book proof.",
+  "page_sha256": {
+    "chapter02_information.html": "4080270fb0beb7cd0b77815af29817646cce78048ff1288eade3585b59a17c4b",
+    "chapter03_machine_level.html": "77c0b6e876335f5d33205473fef0f85671f09162dcf91089cd7ed9857d8a2351",
+    "chapter05_optimization.html": "3f06e019bdf7932d09661c4fbc1952a5c2cfdb7c2176e1a7ea5d9a52f09476e0",
+    "chapter08_exceptional.html": "7b2fc2581526cdd2cfb8cd54a6ee110e234141ad8d031e7d8d4ab9b8dae77f4c",
+    "chapter09_virtual_memory.html": "8b5cc09eaff849778b16e67dae2d8c1aff72863739f7cb319ef027f7d288e23a",
+    "chapter11_network.html": "accfab6b86c5cb39e9c1a5526aee616afeffbc6f58e9bddbb970395a6bae39d0",
+    "chapter12_concurrency.html": "a9e7498b225e3d6ff261b47c64b0f1a6a5bed71b3598b3b4fdfa8e9905c8cc1e",
+    "chapter06_memory.html": "aa335c9232be4be6c3b0516c7a40df688d8bebe6a5dec8fac1b9eb5c57b94f5f"
+  },
+  "browser": "ego-browser; Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+  "coverage": {
+    "pages": [
+      "chapter02_information.html",
+      "chapter03_machine_level.html",
+      "chapter05_optimization.html",
+      "chapter08_exceptional.html",
+      "chapter09_virtual_memory.html",
+      "chapter11_network.html",
+      "chapter12_concurrency.html"
+    ],
+    "viewport_widths": [
+      1440,
+      390
+    ],
+    "layout_combinations": 14,
+    "manually_viewed_screenshots": [
+      "tmp/csapp/review-v2-fixes/browser/ex285-1440.png",
+      "tmp/csapp/review-v2-fixes/browser/ex285-390.png",
+      "tmp/csapp/review-v2-fixes/browser/alias-1440.png",
+      "tmp/csapp/review-v2-fixes/browser/alias-390.png",
+      "tmp/csapp/review-v2-fixes/browser/checks-1440.png",
+      "tmp/csapp/review-v2-fixes/browser/checks-390.png",
+      "tmp/csapp/review-v2-fixes/browser/io-checks-1440.png",
+      "tmp/csapp/review-v2-fixes/browser/io-checks-390.png",
+      "tmp/csapp/review-v2-fixes/browser/space-1440.png",
+      "tmp/csapp/review-v2-fixes/browser/space-390.png",
+      "tmp/csapp/review-v2-fixes/browser/region-1440.png",
+      "tmp/csapp/review-v2-fixes/browser/region-390.png",
+      "tmp/csapp/review-v2-fixes/browser/cgi-1440.png",
+      "tmp/csapp/review-v2-fixes/browser/cgi-390.png",
+      "tmp/csapp/review-v2-fixes/browser/proxy-status-1440.png",
+      "tmp/csapp/review-v2-fixes/browser/proxy-status-390.png",
+      "tmp/csapp/review-v2-fixes/browser/space-table-1440.png",
+      "tmp/csapp/review-v2-fixes/browser/space-table-390.png"
+    ],
+    "manual_reading_targets": [
+      "2.85 exponents",
+      "3.33 alias condition and counterexample",
+      "5.13 explicit checks",
+      "8 Python read checks",
+      "9.20 metric/table",
+      "9.6.3 index/ordinal",
+      "11.8 CGI lifecycle",
+      "12.39 pending browser status"
+    ]
+  },
+  "layout_results": [
+    {
+      "page": "chapter02_information.html",
+      "width": 1440,
+      "overflow": 0,
+      "escaping": [],
+      "svg_text_escaping": [],
+      "broken_images": 0
+    },
+    {
+      "page": "chapter02_information.html",
+      "width": 390,
+      "overflow": 0,
+      "escaping": [],
+      "svg_text_escaping": [],
+      "broken_images": 0
+    },
+    {
+      "page": "chapter03_machine_level.html",
+      "width": 1440,
+      "overflow": 0,
+      "escaping": [],
+      "svg_text_escaping": [],
+      "broken_images": 0
+    },
+    {
+      "page": "chapter03_machine_level.html",
+      "width": 390,
+      "overflow": 0,
+      "escaping": [],
+      "svg_text_escaping": [],
+      "broken_images": 0
+    },
+    {
+      "page": "chapter05_optimization.html",
+      "width": 1440,
+      "overflow": 0,
+      "escaping": [],
+      "svg_text_escaping": [],
+      "broken_images": 0
+    },
+    {
+      "page": "chapter05_optimization.html",
+      "width": 390,
+      "overflow": 0,
+      "escaping": [],
+      "svg_text_escaping": [],
+      "broken_images": 0
+    },
+    {
+      "page": "chapter08_exceptional.html",
+      "width": 1440,
+      "overflow": 0,
+      "escaping": [],
+      "svg_text_escaping": [],
+      "broken_images": 0
+    },
+    {
+      "page": "chapter08_exceptional.html",
+      "width": 390,
+      "overflow": 0,
+      "escaping": [],
+      "svg_text_escaping": [],
+      "broken_images": 0
+    },
+    {
+      "page": "chapter09_virtual_memory.html",
+      "width": 1440,
+      "overflow": 0,
+      "escaping": [],
+      "svg_text_escaping": [],
+      "broken_images": 0
+    },
+    {
+      "page": "chapter09_virtual_memory.html",
+      "width": 390,
+      "overflow": 0,
+      "escaping": [],
+      "svg_text_escaping": [],
+      "broken_images": 0
+    },
+    {
+      "page": "chapter11_network.html",
+      "width": 1440,
+      "overflow": 0,
+      "escaping": [],
+      "svg_text_escaping": [],
+      "broken_images": 0
+    },
+    {
+      "page": "chapter11_network.html",
+      "width": 390,
+      "overflow": 0,
+      "escaping": [],
+      "svg_text_escaping": [],
+      "broken_images": 0
+    },
+    {
+      "page": "chapter12_concurrency.html",
+      "width": 1440,
+      "overflow": 0,
+      "escaping": [],
+      "svg_text_escaping": [],
+      "broken_images": 0
+    },
+    {
+      "page": "chapter12_concurrency.html",
+      "width": 390,
+      "overflow": 0,
+      "escaping": [],
+      "svg_text_escaping": [],
+      "broken_images": 0
+    }
+  ],
+  "interactions": {
+    "deep_link_opens_ancestors": {
+      "spaceOpen": true,
+      "exerciseOpen": true
+    },
+    "source_details_close_reopen": true,
+    "local_code_horizontal_scroll": true,
+    "source_download": {
+      "file": "ch09_space.c",
+      "sha256": "f3798426fb55a624f8aa098f0b50131cf0a5184f7f9180fa7d818e18d3c0ed9d",
+      "equal": true
+    },
+    "mobile_toc_closes_after_navigation": true,
+    "aria_current": "location",
+    "return_to_three_book_shelf": true
+  },
+  "evidence": "tmp/csapp/review-v2-fixes/browser",
+  "qa_release": "20261014T212827",
+  "limitations": [
+    "Visual reading covers the listed changed targets; geometry covers all seven pages.",
+    "This is reader-page acceptance, not the unfinished 12.39 browser-via-proxy experiment.",
+    "Browser.getVersion was unavailable; browser identity uses observed navigator.userAgent.",
+    "Historical 1800/1024px and unmodified-page reviews remain historical."
+  ],
+  "previous_review": {
+    "schema_version": 2,
+    "status": "reviewed_locally",
+    "reviewed_at": "2026-10-14T11:57:09.032789+00:00",
+    "scope": "I008 Chapter11/12 revised paragraphs and four source copies; original page structure/styles retained. Historical other-page acceptance remains in previous_review.",
+    "page_sha256": {
+      "chapter02_information.html": "8099dbba0002bfb3d7b58d888c576502b3533296c43e9218aff0bcf95bbbd6ac",
+      "chapter09_virtual_memory.html": "21d1f4d466c82be050150ad90602a466191dd850a6c47e90c137695cac8408cf",
+      "book_overview.html": "2644b09a826cf4a11999d7b27437dad4b0a0fa6cddfc5d5597a01ba4da099dd2",
+      "chapter12_concurrency.html": "7ac23fb0e0d8418cd69dc616895e9994444abfc967c1f6113d03992f7347da1d",
+      "chapter08_exceptional.html": "a2f913bc1f83d2e89746e3928f245af56eecf595a339f6d48ec7c0af02e2455b",
+      "chapter03_machine_level.html": "893833bdeda3fd325cd55595ac6109c6e0aae62da0fa612f09322a50edfcaa16",
+      "chapter01_tour.html": "02fdb836a9f352c53926e97879c4fa884b6f50992ce9e1df4bd07e2e54dd7fad",
+      "chapter04_architecture.html": "487557ae047d4d8f62d6e7eab3dba894eb075909f36b4a8873d09c0ef3b920ca",
+      "chapter11_network.html": "1cc3175d529620d03b112ee3cae11983ecb1771e8c215cb9a68f759b02faa3a1",
+      "chapter07_linking.html": "e4f84bd481363b070c93772d1c519be4cc3d10fffc9ac06dda957a137ead2b6a",
+      "chapter06_memory.html": "4d2091e128aeca78ab483e9415e558ab8f2058ae3d1520009dc01ba52d3db3dd",
+      "preface.html": "5552a76573e27c1e9cd02e4045101e3aa43990327a7d16e391bf2d6f9930e424",
+      "chapter10_system_io.html": "143d063dbab69cc150c2c6beb64b6e26edfae2718c8a1477048c40a2d7ca61dc",
+      "chapter05_optimization.html": "5ac95eb5cd636bc184179b44434122d779b53267944ca3c5928586b6cf9a668b"
+    },
+    "browser": "ego-browser Chromium, TaskSpace 4; local built package 20261014T195030",
+    "coverage": {
+      "pages": [
+        "chapter11_network.html",
+        "chapter12_concurrency.html"
+      ],
+      "viewport_widths": [
+        1800,
+        1440,
+        1024,
+        390
+      ],
+      "layout_combinations": 8,
+      "manual_reading_targets": [
+        "Expect header-only rejection",
+        "request_ready/request_size code guide",
+        "12.31 timer ownership/cancellation",
+        "acceptance deadline and active-client draining"
+      ],
+      "manually_viewed_screenshots": [
+        "tmp/csapp/review-fixes-part3/browser/expect-1440.png",
+        "tmp/csapp/review-fixes-part3/browser/expect-390.png",
+        "tmp/csapp/review-fixes-part3/browser/http-guide-1440.png",
+        "tmp/csapp/review-fixes-part3/browser/http-guide-390.png",
+        "tmp/csapp/review-fixes-part3/browser/timer-1440.png",
+        "tmp/csapp/review-fixes-part3/browser/timer-390.png",
+        "tmp/csapp/review-fixes-part3/browser/window-1440.png",
+        "tmp/csapp/review-fixes-part3/browser/window-390.png"
+      ]
+    },
+    "layout_results": [
+      {
+        "url": "http://127.0.0.1:59477/csapp/notes/chapter11_network.html",
+        "width": 1800,
+        "clientWidth": 1785,
+        "scrollWidth": 1785,
+        "overflow": 0,
+        "escaping": [],
+        "svgText": [],
+        "expanded": 30,
+        "brokenImages": 0,
+        "mainWidth": 860,
+        "notesEnhanced": true
+      },
+      {
+        "url": "http://127.0.0.1:59477/csapp/notes/chapter11_network.html",
+        "width": 1440,
+        "clientWidth": 1425,
+        "scrollWidth": 1425,
+        "overflow": 0,
+        "escaping": [],
+        "svgText": [],
+        "expanded": 30,
+        "brokenImages": 0,
+        "mainWidth": 793,
+        "notesEnhanced": true
+      },
+      {
+        "url": "http://127.0.0.1:59477/csapp/notes/chapter11_network.html",
+        "width": 1024,
+        "clientWidth": 1009,
+        "scrollWidth": 1009,
+        "overflow": 0,
+        "escaping": [],
+        "svgText": [],
+        "expanded": 30,
+        "brokenImages": 0,
+        "mainWidth": 860,
+        "notesEnhanced": false
+      },
+      {
+        "url": "http://127.0.0.1:59477/csapp/notes/chapter11_network.html",
+        "width": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "overflow": 0,
+        "escaping": [],
+        "svgText": [],
+        "expanded": 30,
+        "brokenImages": 0,
+        "mainWidth": 375,
+        "notesEnhanced": false
+      },
+      {
+        "url": "http://127.0.0.1:59477/csapp/notes/chapter12_concurrency.html",
+        "width": 1800,
+        "clientWidth": 1785,
+        "scrollWidth": 1785,
+        "overflow": 0,
+        "escaping": [],
+        "svgText": [],
+        "expanded": 73,
+        "brokenImages": 0,
+        "mainWidth": 860,
+        "notesEnhanced": true
+      },
+      {
+        "url": "http://127.0.0.1:59477/csapp/notes/chapter12_concurrency.html",
+        "width": 1440,
+        "clientWidth": 1425,
+        "scrollWidth": 1425,
+        "overflow": 0,
+        "escaping": [],
+        "svgText": [],
+        "expanded": 73,
+        "brokenImages": 0,
+        "mainWidth": 793,
+        "notesEnhanced": true
+      },
+      {
+        "url": "http://127.0.0.1:59477/csapp/notes/chapter12_concurrency.html",
+        "width": 1024,
+        "clientWidth": 1009,
+        "scrollWidth": 1009,
+        "overflow": 0,
+        "escaping": [],
+        "svgText": [],
+        "expanded": 73,
+        "brokenImages": 0,
+        "mainWidth": 860,
+        "notesEnhanced": false
+      },
+      {
+        "url": "http://127.0.0.1:59477/csapp/notes/chapter12_concurrency.html",
+        "width": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "overflow": 0,
+        "escaping": [],
+        "svgText": [],
+        "expanded": 73,
+        "brokenImages": 0,
+        "mainWidth": 375,
+        "notesEnhanced": false
+      }
+    ],
+    "interactions": {
+      "serverCode": {
+        "scrollLeft": 627.5,
+        "overflow": 0,
+        "open": true
+      },
+      "exerciseToCode": "http://127.0.0.1:59477/csapp/notes/chapter12_concurrency.html#tfgets-code",
+      "tfgetsCodeOpened": true,
+      "mobileToc": {
+        "url": "http://127.0.0.1:59477/csapp/notes/chapter12_concurrency.html#s12-2",
+        "tocClosed": true,
+        "active": [
+          "#s12-2"
+        ],
+        "chapterLinks": [
+          {
+            "text": "笔记首页",
+            "href": "../../"
+          },
+          {
+            "text": "全书地图",
+            "href": "book_overview.html"
+          },
+          {
+            "text": "← 第11章：网络编程",
+            "href": "chapter11_network.html"
+          },
+          {
+            "text": "回到全书地图 →",
+            "href": "book_overview.html"
+          },
+          {
+            "text": "← 笔记首页",
+            "href": "../../"
+          },
+          {
+            "text": "返回页首 ↑",
+            "href": "#top"
+          },
+          {
+            "text": "全书地图",
+            "href": "book_overview.html"
+          },
+          {
+            "text": "← 第11章：网络编程",
+            "href": "chapter11_network.html"
+          },
+          {
+            "text": "回到全书地图 →",
+            "href": "book_overview.html"
+          }
+        ]
+      },
+      "previousChapter": "http://127.0.0.1:59477/csapp/notes/chapter11_network.html"
+    },
+    "evidence": "tmp/csapp/review-fixes-part3/browser/",
+    "limitations": [
+      "Geometry checks cover two whole pages; manual visual reading is limited to the listed changed paragraphs and code interactions.",
+      "Protocol behavior is established by socket/C tests, separately from reader acceptance."
+    ],
+    "previous_review": {
+      "schema_version": 2,
+      "status": "reviewed_locally",
+      "reviewed_at": "2026-10-14T04:06:11.311864+00:00",
+      "scope": "Part III map and three new chapters, actual Chromium desktop and narrow-width reading; unchanged old pages retain prior review.",
+      "page_sha256": {
+        "chapter02_information.html": "8099dbba0002bfb3d7b58d888c576502b3533296c43e9218aff0bcf95bbbd6ac",
+        "chapter09_virtual_memory.html": "21d1f4d466c82be050150ad90602a466191dd850a6c47e90c137695cac8408cf",
+        "book_overview.html": "2644b09a826cf4a11999d7b27437dad4b0a0fa6cddfc5d5597a01ba4da099dd2",
+        "chapter12_concurrency.html": "52d5fc5c26d4bff651d299a4c78cec838ea594d835c661ec44c541d17a3c388c",
+        "chapter08_exceptional.html": "a2f913bc1f83d2e89746e3928f245af56eecf595a339f6d48ec7c0af02e2455b",
+        "chapter03_machine_level.html": "893833bdeda3fd325cd55595ac6109c6e0aae62da0fa612f09322a50edfcaa16",
+        "chapter01_tour.html": "02fdb836a9f352c53926e97879c4fa884b6f50992ce9e1df4bd07e2e54dd7fad",
+        "chapter04_architecture.html": "487557ae047d4d8f62d6e7eab3dba894eb075909f36b4a8873d09c0ef3b920ca",
+        "chapter11_network.html": "8575612733b6812822223f19b2d36fb363bd51a0d6770abd537f4a5fe9c2aaf1",
+        "chapter07_linking.html": "e4f84bd481363b070c93772d1c519be4cc3d10fffc9ac06dda957a137ead2b6a",
+        "chapter06_memory.html": "4d2091e128aeca78ab483e9415e558ab8f2058ae3d1520009dc01ba52d3db3dd",
+        "preface.html": "5552a76573e27c1e9cd02e4045101e3aa43990327a7d16e391bf2d6f9930e424",
+        "chapter10_system_io.html": "143d063dbab69cc150c2c6beb64b6e26edfae2718c8a1477048c40a2d7ca61dc",
+        "chapter05_optimization.html": "5ac95eb5cd636bc184179b44434122d779b53267944ca3c5928586b6cf9a668b"
+      },
+      "browser": "ego-browser Chromium, one task space; actual native clicks and wheel input",
+      "coverage": {
+        "pages": [
+          "book_overview.html",
+          "chapter10_system_io.html",
+          "chapter11_network.html",
+          "chapter12_concurrency.html"
+        ],
+        "viewport_widths": [
+          1800,
+          1440,
+          1024,
+          390
+        ],
+        "all_main_details_expanded_for_geometry": true,
+        "manually_viewed_screenshots": [
+          "book_overview-1440-top.png",
+          "book_overview-390-top.png",
+          "chapter10_system_io-1440-top.png",
+          "chapter10_system_io-390-top.png",
+          "chapter11_network-1440-top.png",
+          "chapter11_network-390-top.png",
+          "chapter12_concurrency-1440-top.png",
+          "chapter12_concurrency-390-top.png",
+          "book_overview-part-iii-1440.png",
+          "chapter10_system_io-s10-8-390.png",
+          "chapter11_network-http-c-code-1440.png",
+          "chapter12_concurrency-ex-12-28-figure-390.png",
+          "chapter10_system_io-ex-10-8-1440.png",
+          "chapter10_system_io-ex-10-8-390.png",
+          "chapter11_network-ex-11-6-1440.png",
+          "chapter11_network-ex-11-6-390.png",
+          "chapter12_concurrency-ex-12-9-1440.png",
+          "chapter12_concurrency-ex-12-9-390.png",
+          "chapter12_concurrency-ex-12-28-figure-1440.png",
+          "chapter12_concurrency-servers-code-390.png",
+          "code-open-1440.png",
+          "code-open-390.png",
+          "final-http-python-code-1440.png",
+          "final-ex-12-2-1440.png",
+          "final-ex-12-39-390.png"
+        ],
+        "manual_reading_positions": [
+          "PartIII opening/source/request trace",
+          "file-descriptor/open-file relation chart",
+          "full source input and fstat question",
+          "HTTP implementation guide and request-header question",
+          "12.9 invariant and correction",
+          "12.28 reachable progress chart/caption",
+          "server code guide, expanded code and local scrolling"
+        ]
+      },
+      "layout_results": [
+        {
+          "url": "http://127.0.0.1:58690/csapp/notes/book_overview.html",
+          "width": 1800,
+          "clientWidth": 1785,
+          "scrollWidth": 1785,
+          "overflow": 0,
+          "escaping": [],
+          "svgText": [],
+          "expanded": 22,
+          "brokenImages": 0,
+          "mainWidth": 860
+        },
+        {
+          "url": "http://127.0.0.1:58690/csapp/notes/book_overview.html",
+          "width": 1440,
+          "clientWidth": 1425,
+          "scrollWidth": 1425,
+          "overflow": 0,
+          "escaping": [],
+          "svgText": [],
+          "expanded": 22,
+          "brokenImages": 0,
+          "mainWidth": 793
+        },
+        {
+          "url": "http://127.0.0.1:58690/csapp/notes/book_overview.html",
+          "width": 1024,
+          "clientWidth": 1009,
+          "scrollWidth": 1009,
+          "overflow": 0,
+          "escaping": [],
+          "svgText": [],
+          "expanded": 22,
+          "brokenImages": 0,
+          "mainWidth": 860
+        },
+        {
+          "url": "http://127.0.0.1:58690/csapp/notes/book_overview.html",
+          "width": 390,
+          "clientWidth": 375,
+          "scrollWidth": 375,
+          "overflow": 0,
+          "escaping": [],
+          "svgText": [],
+          "expanded": 22,
+          "brokenImages": 0,
+          "mainWidth": 375
+        },
+        {
+          "url": "http://127.0.0.1:58690/csapp/notes/chapter10_system_io.html",
+          "width": 1800,
+          "clientWidth": 1785,
+          "scrollWidth": 1785,
+          "overflow": 0,
+          "escaping": [],
+          "svgText": [],
+          "expanded": 31,
+          "brokenImages": 0,
+          "mainWidth": 860
+        },
+        {
+          "url": "http://127.0.0.1:58690/csapp/notes/chapter10_system_io.html",
+          "width": 1440,
+          "clientWidth": 1425,
+          "scrollWidth": 1425,
+          "overflow": 0,
+          "escaping": [],
+          "svgText": [],
+          "expanded": 31,
+          "brokenImages": 0,
+          "mainWidth": 793
+        },
+        {
+          "url": "http://127.0.0.1:58690/csapp/notes/chapter10_system_io.html",
+          "width": 1024,
+          "clientWidth": 1009,
+          "scrollWidth": 1009,
+          "overflow": 0,
+          "escaping": [],
+          "svgText": [],
+          "expanded": 31,
+          "brokenImages": 0,
+          "mainWidth": 860
+        },
+        {
+          "url": "http://127.0.0.1:58690/csapp/notes/chapter10_system_io.html",
+          "width": 390,
+          "clientWidth": 375,
+          "scrollWidth": 375,
+          "overflow": 0,
+          "escaping": [],
+          "svgText": [],
+          "expanded": 31,
+          "brokenImages": 0,
+          "mainWidth": 375
+        },
+        {
+          "url": "http://127.0.0.1:58690/csapp/notes/chapter11_network.html",
+          "width": 1800,
+          "clientWidth": 1785,
+          "scrollWidth": 1785,
+          "overflow": 0,
+          "escaping": [],
+          "svgText": [],
+          "expanded": 30,
+          "brokenImages": 0,
+          "mainWidth": 860
+        },
+        {
+          "url": "http://127.0.0.1:58690/csapp/notes/chapter11_network.html",
+          "width": 1440,
+          "clientWidth": 1425,
+          "scrollWidth": 1425,
+          "overflow": 0,
+          "escaping": [],
+          "svgText": [],
+          "expanded": 30,
+          "brokenImages": 0,
+          "mainWidth": 793
+        },
+        {
+          "url": "http://127.0.0.1:58690/csapp/notes/chapter11_network.html",
+          "width": 1024,
+          "clientWidth": 1009,
+          "scrollWidth": 1009,
+          "overflow": 0,
+          "escaping": [],
+          "svgText": [],
+          "expanded": 30,
+          "brokenImages": 0,
+          "mainWidth": 860
+        },
+        {
+          "url": "http://127.0.0.1:58690/csapp/notes/chapter11_network.html",
+          "width": 390,
+          "clientWidth": 375,
+          "scrollWidth": 375,
+          "overflow": 0,
+          "escaping": [],
+          "svgText": [],
+          "expanded": 30,
+          "brokenImages": 0,
+          "mainWidth": 375
+        },
+        {
+          "url": "http://127.0.0.1:58690/csapp/notes/chapter12_concurrency.html",
+          "width": 1800,
+          "clientWidth": 1785,
+          "scrollWidth": 1785,
+          "overflow": 0,
+          "escaping": [],
+          "svgText": [],
+          "expanded": 73,
+          "brokenImages": 0,
+          "mainWidth": 860
+        },
+        {
+          "url": "http://127.0.0.1:58690/csapp/notes/chapter12_concurrency.html",
+          "width": 1440,
+          "clientWidth": 1425,
+          "scrollWidth": 1425,
+          "overflow": 0,
+          "escaping": [],
+          "svgText": [],
+          "expanded": 73,
+          "brokenImages": 0,
+          "mainWidth": 793
+        },
+        {
+          "url": "http://127.0.0.1:58690/csapp/notes/chapter12_concurrency.html",
+          "width": 1024,
+          "clientWidth": 1009,
+          "scrollWidth": 1009,
+          "overflow": 0,
+          "escaping": [],
+          "svgText": [],
+          "expanded": 73,
+          "brokenImages": 0,
+          "mainWidth": 860
+        },
+        {
+          "url": "http://127.0.0.1:58690/csapp/notes/chapter12_concurrency.html",
+          "width": 390,
+          "clientWidth": 375,
+          "scrollWidth": 375,
+          "overflow": 0,
+          "escaping": [],
+          "svgText": [],
+          "expanded": 73,
+          "brokenImages": 0,
+          "mainWidth": 375
+        }
+      ],
+      "interactions": [
+        {
+          "width": 390,
+          "action": "map PartIII to Rio",
+          "pass": true
+        },
+        {
+          "width": 390,
+          "action": "chapter10 to 11 to 12",
+          "pass": true
+        },
+        {
+          "width": 390,
+          "action": "TOC current section and responsive collapse",
+          "open": false,
+          "active": "#s12-5",
+          "pass": true
+        },
+        {
+          "width": 390,
+          "action": "exercise to complete source Figure12.25",
+          "pass": true
+        },
+        {
+          "width": 390,
+          "action": "code deep link and local horizontal scroll",
+          "x": 58,
+          "y": 200,
+          "scroll": 17.5,
+          "client": 337,
+          "total": 1536,
+          "pass": true
+        },
+        {
+          "width": 390,
+          "action": "previous chapter and book map return",
+          "pass": true
+        },
+        {
+          "width": 1440,
+          "action": "map PartIII to Rio",
+          "pass": true
+        },
+        {
+          "width": 1440,
+          "action": "chapter10 to 11 to 12",
+          "pass": true
+        },
+        {
+          "width": 1440,
+          "action": "TOC current section and responsive collapse",
+          "open": true,
+          "active": "#s12-5",
+          "pass": true
+        },
+        {
+          "width": 1440,
+          "action": "exercise to complete source Figure12.25",
+          "pass": true
+        },
+        {
+          "width": 1440,
+          "action": "code deep link and local horizontal scroll",
+          "x": 360,
+          "y": 200,
+          "scroll": 17.5,
+          "client": 743,
+          "total": 1536,
+          "pass": true
+        },
+        {
+          "width": 1440,
+          "action": "previous chapter and book map return",
+          "pass": true
+        },
+        {
+          "action": "native horizontal wheel",
+          "x": 58,
+          "y": 200,
+          "before": 0,
+          "after": 270
+        }
+      ],
+      "http_experiments": {
+        "python_tiny": "native GET -4+7=3 and POST12+30=42; saved request GET / HTTP/1.1 and POST Content-Length9",
+        "concurrent_tiny": "process/select/thread/pool each native GET20+22=42 and POST-8+50=42,8 forms",
+        "mpeg": "actual MPEG-1 test pattern requested; current Chromium canPlayType empty,error4,readyState0; playback not observed"
+      },
+      "evidence": {
+        "browser": "tmp/csapp/part3/browser/",
+        "http": "tmp/csapp/part3/http-browser/",
+        "acceptance": "test/T007-csapp-part-three.md"
+      },
+      "boundaries": [
+        "Viewport emulation, not physical mobile hardware.",
+        "Geometry covers all expanded content; manual screenshots cover the positions listed, not every paragraph.",
+        "No new REA or production checks.",
+        "Source corrections and executable models are separate evidence from presentation.",
+        "Proxy protocol/concurrency tested; browser proxy configuration was not changed or exercised."
+      ],
+      "unchanged_reading_pages": {
+        "chapter02_information.html": "8099dbba0002bfb3d7b58d888c576502b3533296c43e9218aff0bcf95bbbd6ac",
+        "chapter08_exceptional.html": "a2f913bc1f83d2e89746e3928f245af56eecf595a339f6d48ec7c0af02e2455b",
+        "chapter03_machine_level.html": "893833bdeda3fd325cd55595ac6109c6e0aae62da0fa612f09322a50edfcaa16",
+        "chapter01_tour.html": "02fdb836a9f352c53926e97879c4fa884b6f50992ce9e1df4bd07e2e54dd7fad",
+        "chapter04_architecture.html": "487557ae047d4d8f62d6e7eab3dba894eb075909f36b4a8873d09c0ef3b920ca",
+        "chapter07_linking.html": "e4f84bd481363b070c93772d1c519be4cc3d10fffc9ac06dda957a137ead2b6a",
+        "chapter06_memory.html": "4d2091e128aeca78ab483e9415e558ab8f2058ae3d1520009dc01ba52d3db3dd",
+        "preface.html": "5552a76573e27c1e9cd02e4045101e3aa43990327a7d16e391bf2d6f9930e424",
+        "chapter05_optimization.html": "5ac95eb5cd636bc184179b44434122d779b53267944ca3c5928586b6cf9a668b"
+      },
+      "previous_review": {
+        "schema_version": 4,
+        "status": "reviewed_locally",
+        "reviewed_at": "2026-10-14T02:51:27.674618+00:00",
+        "scope": "仅第8章本次修改区域在1440/390px实际阅读及全章展开几何检查；其他页面以前次验收和未变哈希衔接。",
+        "page_sha256": {
+          "chapter08_exceptional.html": "a2f913bc1f83d2e89746e3928f245af56eecf595a339f6d48ec7c0af02e2455b"
+        },
+        "browser": {
+          "tool": "ego-browser / Chromium",
+          "task_space": 4,
+          "candidate_release_id": "20261014T104727",
+          "production_deployed": false
+        },
+        "coverage": {
+          "chapter": 8,
+          "viewport_widths": [
+            1440,
+            390
+          ],
+          "all_main_details_expanded_for_geometry": 44,
+          "manually_viewed_screenshots": 8,
+          "reading_scope": [
+            "8.5.7正文、模板与掩码解释",
+            "shell导读与cleanup阅读副本",
+            "8.26答案修订"
+          ]
+        },
+        "layout_results": [
+          {
+            "viewport": 390,
+            "documentClientWidth": 375,
+            "documentScrollWidth": 375,
+            "horizontalOverflow": 0,
+            "expandedDetails": 44,
+            "escapingContainers": [],
+            "tocOpen": false
+          },
+          {
+            "viewport": 1440,
+            "documentClientWidth": 1425,
+            "documentScrollWidth": 1425,
+            "horizontalOverflow": 0,
+            "expandedDetails": 44,
+            "escapingContainers": [],
+            "tocOpen": true
+          }
+        ],
+        "interactions": [
+          {
+            "action": "desktop native TOC click shell-model",
+            "passed": true
+          },
+          {
+            "action": "desktop native code summary expand",
+            "passed": true
+          },
+          {
+            "code": {
+              "hash": "#ch08_shell-c",
+              "detailsOpen": true,
+              "scrollTop": 0
+            },
+            "exercise": {
+              "hash": "#ex-8-26",
+              "opened": true,
+              "text": "解答与推导\n\n完整维护实现与逐字阅读副本见 ch08_shell.c。它采用三状态作业表（前台/后台/停止）、PID/JID 查找、双侧 setpgid、非阻塞 waitpid 排空、SIGINT/SIGTSTP 向 −PGID 转发、sigsuspend 等前台条件，以及 pselect 等待命令输入。所有作业表读写都在 SIGCHLD/INT/TSTP 屏蔽期间发生；处理程序只转发信号，不分配内存或打印。\n\n单个命令最多 127 个词，行最多 1023 字节，同时最多 32 个作业，超界明确拒绝。题目只要求空格分词，因此路径直接交 execve，不加入引号、通配符、管道或 PATH 搜索语法。--interactive 进入命令循环；默认只创建一个 /usr/bin/true 前台孩子，确认正常退出且作业表归零后结束。quit/EOF 对仍登记作业的原进程组及直属 PID 分别发送终止信号，再回收直属孩子；孩子迁到其他进程组也会按 PID 清理，信号或回收失败则以非零状态退出。\n\n这里符合原题的信号转发模型；需要前台程序直接读取真实终端的完整 shell，还应加入 tcsetpgrp、终端属性交接等。Python 同伴只验证状态机转换与模型不变量，实际子进程、信号转发和进程组行为由 C 与 POSIX 运行测试提供证据。"
+            }
+          },
+          {
+            "toc": {
+              "hash": "#s8-5",
+              "tocClosed": true,
+              "current": "8.5 · 把通知与可靠状态分开"
+            },
+            "exercise": {
+              "hash": "#ex-8-26",
+              "opened": true
+            }
+          },
+          {
+            "action": "mobile template local horizontal scroll via DOM",
+            "result": {
+              "scrollLeft": 195,
+              "scrollWidth": 532,
+              "clientWidth": 337,
+              "tabindex": null
+            }
+          },
+          {
+            "action": "browser fetch download and compare displayed code",
+            "result": {
+              "url": "http://127.0.0.1:55324/csapp/code/ch08_shell.c",
+              "status": 200,
+              "contentType": "text/plain",
+              "downloadSha256": "94d6d4984244b9e7b0c791a6df193f8a96106877192ad161c3cfbbcc8aa59487",
+              "readingSha256": "94d6d4984244b9e7b0c791a6df193f8a96106877192ad161c3cfbbcc8aa59487",
+              "matches": true
+            }
+          }
+        ],
+        "evidence": {
+          "screenshots": [
+            "tmp/csapp/part2-review-fixes/browser/desktop-exercise.png",
+            "tmp/csapp/part2-review-fixes/browser/desktop-shell-code.png",
+            "tmp/csapp/part2-review-fixes/browser/desktop-shell-guide.png",
+            "tmp/csapp/part2-review-fixes/browser/desktop-template.png",
+            "tmp/csapp/part2-review-fixes/browser/mobile-exercise.png",
+            "tmp/csapp/part2-review-fixes/browser/mobile-shell-guide.png",
+            "tmp/csapp/part2-review-fixes/browser/mobile-template-mask.png",
+            "tmp/csapp/part2-review-fixes/browser/mobile-template-top.png"
+          ],
+          "manually_viewed_files": [
+            "desktop-exercise.png",
+            "desktop-shell-code.png",
+            "desktop-shell-guide.png",
+            "desktop-template.png",
+            "mobile-exercise.png",
+            "mobile-shell-guide.png",
+            "mobile-template-mask.png",
+            "mobile-template-top.png"
+          ],
+          "geometry": "tmp/csapp/part2-review-fixes/browser/layouts.json",
+          "download": "tmp/csapp/part2-review-fixes/browser/download.json"
+        },
+        "boundaries": [
+          "桌面与窄屏是浏览器模拟视口。",
+          "本轮没有新REA执行或全书逐页源审。",
+          "前次阅读验收保留原哈希与范围，未变页面逐项与本轮起始快照比较。"
+        ],
+        "previous_review": {
+          "schema_version": 3,
+          "status": "reviewed_locally",
+          "reviewed_at": "2026-10-14T01:55:51.767578+00:00",
+          "scope": "Part II三章四宽度几何和重点实际阅读；地图新增PartII入口及第6章下一章路径。原8页历史验收保留，未声称全书本轮逐页重审。",
+          "page_sha256": {
+            "book_overview.html": "2eb878e96d5c256de4344220b51d30f119c75beb190de76a32f2e9bfa86d20a4",
+            "chapter06_memory.html": "4d2091e128aeca78ab483e9415e558ab8f2058ae3d1520009dc01ba52d3db3dd",
+            "chapter07_linking.html": "e4f84bd481363b070c93772d1c519be4cc3d10fffc9ac06dda957a137ead2b6a",
+            "chapter08_exceptional.html": "d49cb73d2268104470393dd67b3f603d55f82c520f62949b3c910865853a4a9c",
+            "chapter09_virtual_memory.html": "14fd1fc70e6bfb683d9c99058dc21ef22dbed6097dc9fda2d9afc5ef4353728d"
+          },
+          "browser": {
+            "tool": "ego-browser / Chromium / native CDP",
+            "task_space": 1,
+            "candidate_release_id": "20261014T095035",
+            "release_page_sha256": {
+              "book_overview.html": "30aeb0a76dcbee3d87345ab4fa498b26ac591c2fc84efbe2ebbf745286ac343a",
+              "chapter06_memory.html": "c1812a98f025bc8fed986faf312f8c8eb5f2e74905f93f494cee25b933f2bb85",
+              "chapter07_linking.html": "c17b364649170a740c52c283b8875619922e2667c725bfcbb11d48ade53c2a45",
+              "chapter08_exceptional.html": "501861cf7b5a4b4fb1659a21ba49eaa0f7bb317a30f0df8e0f8a02f3fa748bcc",
+              "chapter09_virtual_memory.html": "63103b04ad9a5f89ba49e65da15758bf1ad79cf33e91c7bdf3c91881e1e2604e"
+            },
+            "production_deployed": false
+          },
+          "coverage": {
+            "new_pages": 3,
+            "viewport_widths": [
+              1800,
+              1440,
+              1024,
+              390
+            ],
+            "rendered_layouts": 12,
+            "all_main_details_expanded_for_geometry": true,
+            "main_figures": 8,
+            "manually_viewed_screenshots": 30,
+            "native_navigation_states": 13,
+            "code_deep_links": 2
+          },
+          "layout_results": [
+            {
+              "name": "chapter07_linking",
+              "width": 1800,
+              "bodyWidth": 1785,
+              "mainWidth": 860,
+              "mainScrollWidth": 860,
+              "errors": [],
+              "badSvg": [],
+              "badMath": [],
+              "brokenImages": 0,
+              "tocOpen": true,
+              "railHidden": false
+            },
+            {
+              "name": "chapter07_linking",
+              "width": 1440,
+              "bodyWidth": 1425,
+              "mainWidth": 793,
+              "mainScrollWidth": 793,
+              "errors": [],
+              "badSvg": [],
+              "badMath": [],
+              "brokenImages": 0,
+              "tocOpen": true,
+              "railHidden": false
+            },
+            {
+              "name": "chapter07_linking",
+              "width": 1024,
+              "bodyWidth": 1009,
+              "mainWidth": 860,
+              "mainScrollWidth": 860,
+              "errors": [],
+              "badSvg": [],
+              "badMath": [],
+              "brokenImages": 0,
+              "tocOpen": false,
+              "railHidden": true
+            },
+            {
+              "name": "chapter07_linking",
+              "width": 390,
+              "bodyWidth": 375,
+              "mainWidth": 375,
+              "mainScrollWidth": 375,
+              "errors": [],
+              "badSvg": [],
+              "badMath": [],
+              "brokenImages": 0,
+              "tocOpen": false,
+              "railHidden": true
+            },
+            {
+              "name": "chapter08_exceptional",
+              "width": 1800,
+              "bodyWidth": 1785,
+              "mainWidth": 860,
+              "mainScrollWidth": 860,
+              "errors": [],
+              "badSvg": [],
+              "badMath": [],
+              "brokenImages": 0,
+              "tocOpen": true,
+              "railHidden": false
+            },
+            {
+              "name": "chapter08_exceptional",
+              "width": 1440,
+              "bodyWidth": 1425,
+              "mainWidth": 793,
+              "mainScrollWidth": 793,
+              "errors": [],
+              "badSvg": [],
+              "badMath": [],
+              "brokenImages": 0,
+              "tocOpen": true,
+              "railHidden": false
+            },
+            {
+              "name": "chapter08_exceptional",
+              "width": 1024,
+              "bodyWidth": 1009,
+              "mainWidth": 860,
+              "mainScrollWidth": 860,
+              "errors": [],
+              "badSvg": [],
+              "badMath": [],
+              "brokenImages": 0,
+              "tocOpen": false,
+              "railHidden": true
+            },
+            {
+              "name": "chapter08_exceptional",
+              "width": 390,
+              "bodyWidth": 375,
+              "mainWidth": 375,
+              "mainScrollWidth": 375,
+              "errors": [],
+              "badSvg": [],
+              "badMath": [],
+              "brokenImages": 0,
+              "tocOpen": false,
+              "railHidden": true
+            },
+            {
+              "name": "chapter09_virtual_memory",
+              "width": 1800,
+              "bodyWidth": 1785,
+              "mainWidth": 860,
+              "mainScrollWidth": 860,
+              "errors": [],
+              "badSvg": [],
+              "badMath": [],
+              "brokenImages": 0,
+              "tocOpen": true,
+              "railHidden": false
+            },
+            {
+              "name": "chapter09_virtual_memory",
+              "width": 1440,
+              "bodyWidth": 1425,
+              "mainWidth": 793,
+              "mainScrollWidth": 793,
+              "errors": [],
+              "badSvg": [],
+              "badMath": [],
+              "brokenImages": 0,
+              "tocOpen": true,
+              "railHidden": false
+            },
+            {
+              "name": "chapter09_virtual_memory",
+              "width": 1024,
+              "bodyWidth": 1009,
+              "mainWidth": 860,
+              "mainScrollWidth": 860,
+              "errors": [],
+              "badSvg": [],
+              "badMath": [],
+              "brokenImages": 0,
+              "tocOpen": false,
+              "railHidden": true
+            },
+            {
+              "name": "chapter09_virtual_memory",
+              "width": 390,
+              "bodyWidth": 375,
+              "mainWidth": 375,
+              "mainScrollWidth": 375,
+              "errors": [],
+              "badSvg": [],
+              "badMath": [],
+              "brokenImages": 0,
+              "tocOpen": false,
+              "railHidden": true
+            }
+          ],
+          "interactions": [
+            {
+              "name": "chapter6-to-7",
+              "url": "http://127.0.0.1:53081/csapp/notes/chapter07_linking.html",
+              "hash": "",
+              "bodyWidth": 375,
+              "tocOpen": false,
+              "active": [
+                "#s7-1"
+              ],
+              "errors": []
+            },
+            {
+              "name": "mobile-toc-open",
+              "url": "http://127.0.0.1:53081/csapp/notes/chapter07_linking.html",
+              "hash": "",
+              "bodyWidth": 375,
+              "tocOpen": true,
+              "active": [
+                "#s7-1"
+              ],
+              "errors": []
+            },
+            {
+              "name": "mobile-toc-to-relocation",
+              "url": "http://127.0.0.1:53081/csapp/notes/chapter07_linking.html#s7-7",
+              "hash": "#s7-7",
+              "bodyWidth": 375,
+              "tocOpen": false,
+              "active": [
+                "#s7-7"
+              ],
+              "errors": []
+            },
+            {
+              "name": "diagram-keyboard-scroll",
+              "url": "http://127.0.0.1:53081/csapp/notes/chapter07_linking.html#s7-7",
+              "hash": "#s7-7",
+              "bodyWidth": 375,
+              "tocOpen": false,
+              "active": [
+                "#s7-7"
+              ],
+              "errors": [],
+              "scrollLeft": 80,
+              "label": "左右滑动查看完整图表 →",
+              "tabIndex": 0,
+              "input": "native CDP ArrowRight after Page.bringToFront"
+            },
+            {
+              "name": "exercise-deeplink-7",
+              "url": "http://127.0.0.1:53081/csapp/notes/chapter07_linking.html#ex-7-12",
+              "hash": "#ex-7-12",
+              "bodyWidth": 375,
+              "tocOpen": false,
+              "active": [
+                "#exercises"
+              ],
+              "errors": [],
+              "open": true
+            },
+            {
+              "name": "exercise-collapse-7",
+              "url": "http://127.0.0.1:53081/csapp/notes/chapter07_linking.html#ex-7-12",
+              "hash": "#ex-7-12",
+              "bodyWidth": 375,
+              "tocOpen": false,
+              "active": [
+                "#exercises"
+              ],
+              "errors": [],
+              "open": false
+            },
+            {
+              "name": "chapter7-to-8",
+              "url": "http://127.0.0.1:53081/csapp/notes/chapter08_exceptional.html",
+              "hash": "",
+              "bodyWidth": 375,
+              "tocOpen": false,
+              "active": [
+                "#s8-1"
+              ],
+              "errors": []
+            },
+            {
+              "name": "exercise-deeplink-8",
+              "url": "http://127.0.0.1:53081/csapp/notes/chapter08_exceptional.html#ex-8-17",
+              "hash": "#ex-8-17",
+              "bodyWidth": 375,
+              "tocOpen": false,
+              "active": [
+                "#exercises"
+              ],
+              "errors": [],
+              "open": true
+            },
+            {
+              "name": "chapter8-to-9",
+              "url": "http://127.0.0.1:53081/csapp/notes/chapter09_virtual_memory.html",
+              "hash": "",
+              "bodyWidth": 375,
+              "tocOpen": false,
+              "active": [
+                "#top"
+              ],
+              "errors": []
+            },
+            {
+              "name": "source-index-9",
+              "url": "http://127.0.0.1:53081/csapp/notes/chapter09_virtual_memory.html#classic-9-footer",
+              "hash": "#classic-9-footer",
+              "bodyWidth": 375,
+              "tocOpen": false,
+              "active": [
+                "#s9-9"
+              ],
+              "errors": []
+            },
+            {
+              "name": "exercise-deeplink-9",
+              "url": "http://127.0.0.1:53081/csapp/notes/chapter09_virtual_memory.html#ex-9-7",
+              "hash": "#ex-9-7",
+              "bodyWidth": 375,
+              "tocOpen": false,
+              "active": [
+                "#exercises"
+              ],
+              "errors": [],
+              "open": true,
+              "tables": [
+                {
+                  "width": 271,
+                  "container": 271,
+                  "scrollWidth": 271
+                },
+                {
+                  "width": 305,
+                  "container": 305,
+                  "scrollWidth": 305
+                }
+              ]
+            },
+            {
+              "name": "allocator-code-expand",
+              "url": "http://127.0.0.1:53081/csapp/notes/chapter09_virtual_memory.html#allocator-code",
+              "hash": "#allocator-code",
+              "bodyWidth": 375,
+              "tocOpen": false,
+              "active": [
+                "#experiment"
+              ],
+              "errors": [],
+              "open": true,
+              "bytes": 6284
+            },
+            {
+              "name": "home-from-chapter9",
+              "url": "http://127.0.0.1:53081/",
+              "hash": "",
+              "bodyWidth": 375,
+              "active": [],
+              "errors": []
+            }
+          ],
+          "code_deep_links": [
+            {
+              "id": "ch07_relocation-c",
+              "open": true,
+              "width": 319,
+              "scrollWidth": 726,
+              "lines": 63
+            },
+            {
+              "id": "ch08_shell-c",
+              "open": true,
+              "width": 319,
+              "scrollWidth": 1224,
+              "lines": 202
+            }
+          ],
+          "repairs": [
+            "第9章补齐共同导航依赖的toc-panel/chapter-toc，结构变异回归确实检出缺失。",
+            "第9章按独立源审修正9.7隐式空闲链表最小块解释，保留原题及来源范围。",
+            "第8章信号观测增加真实处理次数计数，Python示例改为实际状态转移。",
+            "第7章四张HTML流程图复用滚动提示与焦点；第8/9章16张短表采用既有紧凑表样式。",
+            "第9章补齐4条页首摘录入口和程序说明，目录文字与中文主标题对应。",
+            "第8章8.3/8.26跨页范围修正，8.6补原样例漏字校注。"
+          ],
+          "evidence": {
+            "screenshots": "tmp/csapp/part2/browser/",
+            "manually_viewed_files": [
+              "map-1440.png",
+              "chapter07_linking-390-top.png",
+              "chapter08_exceptional-1440-top.png",
+              "chapter09_virtual_memory-390-top.png",
+              "chapter07_linking_s7-1_figure-390.png",
+              "chapter07_linking_s7-7_figure-390.png",
+              "chapter07_linking_s7-9_figure-390.png",
+              "chapter07_linking_s7-12_figure-390.png",
+              "chapter09_virtual_memory_s9-1_figure-390.png",
+              "chapter09_virtual_memory_s9-3_figure-390.png",
+              "chapter09_virtual_memory_s9-8_figure-390.png",
+              "chapter09_virtual_memory_ss9-6-4-390.png",
+              "chapter07_linking_ex-7-3-390.png",
+              "chapter08_exceptional_ex-8-17-390.png",
+              "chapter09_virtual_memory_ex-9-7-390.png",
+              "chapter09_virtual_memory_allocator-code-390.png",
+              "chapter08_exceptional_s8-1_figure-1440.png",
+              "chapter07_linking_s7-7_figure-1440.png",
+              "chapter07_linking_s7-12_figure-1440.png",
+              "chapter08_exceptional_ex-8-17__answer-1440.png",
+              "chapter08_exceptional_shell-model-1440.png",
+              "chapter09_virtual_memory_s9-8_figure-1440.png",
+              "chapter09_virtual_memory_ex-9-7__answer-1440.png",
+              "fixed-ex9-7-390.png",
+              "fixed-chapter09-header-390.png",
+              "allocator-expanded-390.png",
+              "fixed-diagram-390.png",
+              "final-chapter09-toc-1440.png",
+              "ch07_relocation-c-390.png",
+              "ch08_shell-c-390.png"
+            ],
+            "initial_reading_candidate": "20261014T094001",
+            "intermediate_layout_candidate": "20261014T094731",
+            "final_navigation_candidate": "20261014T095035"
+          },
+          "boundaries": [
+            "桌面与窄屏浏览器模拟视口，不是实体手机。",
+            "几何扫描不替代逐字学术正确性审阅；源文和代码证据见逐章及source_reading_review。",
+            "没有网络生产发布或公网验收。"
+          ],
+          "previous_review": {
+            "schema_version": 2,
+            "status": "reviewed_locally",
+            "reviewed_at": "2026-10-13T16:41:34.904736+00:00",
+            "page_sha256": {
+              "book_overview.html": "512b3e25cabd0da106770d54e8f32cc0466a392768e94e1b7e86ab3a0e320b7f",
+              "preface.html": "5552a76573e27c1e9cd02e4045101e3aa43990327a7d16e391bf2d6f9930e424",
+              "chapter01_tour.html": "02fdb836a9f352c53926e97879c4fa884b6f50992ce9e1df4bd07e2e54dd7fad",
+              "chapter02_information.html": "8099dbba0002bfb3d7b58d888c576502b3533296c43e9218aff0bcf95bbbd6ac",
+              "chapter03_machine_level.html": "893833bdeda3fd325cd55595ac6109c6e0aae62da0fa612f09322a50edfcaa16",
+              "chapter04_architecture.html": "487557ae047d4d8f62d6e7eab3dba894eb075909f36b4a8873d09c0ef3b920ca",
+              "chapter05_optimization.html": "5ac95eb5cd636bc184179b44434122d779b53267944ca3c5928586b6cf9a668b",
+              "chapter06_memory.html": "cea816e6af113b7bfcc0437f2df472fa7cd180e8585572952197e91c040b9455"
+            },
+            "baseline": {
+              "books": [
+                "Durrett",
+                "Weiss"
+              ],
+              "body_font_px": 17,
+              "line_height_px": 32.3,
+              "desktop_main_width_px": 860,
+              "paper": "#fffefa",
+              "reading_layout": "240px chapter navigation, 860px main, 280px annotation when wide"
+            },
+            "browser": {
+              "tool": "Chrome DevTools MCP",
+              "version": "1.10.1",
+              "transport": "Official server stdio MCP initialize/tools/list/tools/call, through a temporary local broker",
+              "browser_release_id": "20261014T003500",
+              "release_page_sha256": {
+                "book_overview.html": "2d359cda141a4e533b4e9e23829dcd654cf6676d91468c9a61ff14af9f19c30c",
+                "chapter01_tour.html": "3ee3fd57b736cc7878dc7b26a31cd9db2fa67a95cf16804e490846c8b123ba9f",
+                "chapter02_information.html": "c93202b941c9988011bd6e80f014723862521b92ab5dd94052a9f4ab35903c1b",
+                "chapter03_machine_level.html": "c00c9197678ec84205d82c41ddb06c42293277702960d2f3853a1c8c91e40650",
+                "chapter04_architecture.html": "bd54998bb765fc408129ad7d4cb2e1ed9c3e304fc5988872d84c56370e314432",
+                "chapter05_optimization.html": "8e34b0e931aacd76b99f73a2218d227f9d248825ab650e86d49c5806a129d204",
+                "chapter06_memory.html": "9d9708d9ffe451402394687f88acbf9cb8420089b06dc2ba22c8fff353f4836e",
+                "preface.html": "2971b6f432fcdea1af159d4be48c0f2394869a131853c61657bd89af3a7cd624"
+              },
+              "production_deployed": false
+            },
+            "coverage": {
+              "pages": 8,
+              "viewport_widths": [
+                1800,
+                1440,
+                1024,
+                390
+              ],
+              "rendered_layouts": 32,
+              "all_main_details_expanded_for_geometry": true,
+              "native_get_css_styles_pages": 8,
+              "svg_geometry": 34,
+              "source_statements": 78,
+              "targeted_formula_table_code_views": 18,
+              "native_click_path_states": 11
+            },
+            "layout_results": {
+              "page_overflow": 0,
+              "prose_overflow": 0,
+              "vertical_math_glyph_clipping": 0,
+              "svg_text_outside_viewbox": 0,
+              "broken_images": 0,
+              "small_tables_made_responsive": 40
+            },
+            "repairs": [
+              "math-block补齐块公式容器样式；上下标、分式和分段表达式用静态MathML，修正实体重复转义。",
+              "地图第三列最小宽度避免单字孤行；来源段落统一小字号；相邻摘录共用分隔线。",
+              "40张短值表使用自然宽度，2.45题干和答案三列在390px完整可见。",
+              "长公式和图表实际溢出时显示横向滚动提示，并可聚焦后用方向键查看右侧内容。"
+            ],
+            "interactions": [
+              {
+                "url": "http://127.0.0.1:49918/csapp/notes/book_overview.html#source-reading",
+                "hash": "#source-reading",
+                "viewport": 390,
+                "documentWidth": 390,
+                "target": {
+                  "id": "source-reading",
+                  "top": 113.6875,
+                  "text": "经典原文与重要原理Source Passages and Principles原文摘录与中文陈述放在相应机制旁边，接着展开条件、公式、例子和推导。第 2 章的 25 条 Principle 按原书英文名称定位，保留作者的陈述与原式；原书公式有编号的，同时注明该编号。其余摘录覆盖全书视角、系统抽象、指令语义、流水线、合法"
+                },
+                "tocOpen": false,
+                "active": [
+                  "#source-reading"
+                ],
+                "ancestorDetails": [],
+                "name": "mobile-index-open"
+              },
+              {
+                "url": "http://127.0.0.1:49918/csapp/notes/chapter02_information.html#principle-2-t2u",
+                "hash": "#principle-2-t2u",
+                "viewport": 390,
+                "documentWidth": 390,
+                "target": {
+                  "id": "principle-2-t2u",
+                  "top": 128.078125,
+                  "text": "\n原理 · 补码到无符号的转换\nConversion from two’s complement to unsignedFor x such that TMinw≤x≤TMaxw:T2Uw(x)={x+2w,x<0x,x≥0\n设 TMinw≤x≤TMaxw。保持 w 位编码而更换解释时：T2Uw(x)={x+2w,x<"
+                },
+                "tocOpen": false,
+                "active": [
+                  "#s2-2"
+                ],
+                "ancestorDetails": [],
+                "name": "mobile-map-to-principle"
+              },
+              {
+                "url": "http://127.0.0.1:49918/csapp/notes/chapter02_information.html#derive-2-2-4",
+                "hash": "#derive-2-2-4",
+                "viewport": 390,
+                "documentWidth": 390,
+                "target": {
+                  "id": "derive-2-2-4",
+                  "top": 127.9375,
+                  "text": "把两个权值式相减，低 w−1 位全部抵消，得到 U−T=bw−12w。于是补码转无符号的位保持模型为：非负时保留 x，负数时取 x+2w；反向在 u≤2w−1−1 时保留 u，否则取 u−2w。这两张映射表是随后所有转换推导的基础。"
+                },
+                "tocOpen": false,
+                "active": [
+                  "#s2-2"
+                ],
+                "ancestorDetails": [],
+                "name": "mobile-principle-to-derivation"
+              },
+              {
+                "url": "http://127.0.0.1:49918/csapp/notes/chapter02_information.html#ex-2-45",
+                "hash": "#ex-2-45",
+                "viewport": 390,
+                "documentWidth": 390,
+                "target": {
+                  "id": "ex-2-45",
+                  "top": 127.703125,
+                  "text": "2.45 · 二进制小数的权值原题（中文翻译）填写表中缺少的分数、二进制小数和十进制表示。分数值二进制十进制1/80.0010.1253/45/1610.10111.0015.8753.1875第三版 Global Edition；印刷 147 页 / PDF 148 页。解答分母为 2k 时，在分子的二进制表示右起第"
+                },
+                "tocOpen": false,
+                "active": [
+                  "#exercises"
+                ],
+                "ancestorDetails": [
+                  {
+                    "id": "ex-2-45",
+                    "open": true
+                  }
+                ],
+                "name": "mobile-exercise-2-45"
+              },
+              {
+                "url": "http://127.0.0.1:49918/csapp/notes/chapter03_machine_level.html",
+                "hash": "",
+                "viewport": 390,
+                "documentWidth": 390,
+                "target": null,
+                "tocOpen": true,
+                "active": [
+                  "#s3-1"
+                ],
+                "ancestorDetails": [],
+                "name": "mobile-toc-open"
+              },
+              {
+                "url": "http://127.0.0.1:49918/csapp/notes/chapter03_machine_level.html#s3-7",
+                "hash": "#s3-7",
+                "viewport": 390,
+                "documentWidth": 390,
+                "target": {
+                  "id": "s3-7",
+                  "top": 127.71875,
+                  "text": "3.7 · 一次调用要同时传控制、传数据和保存状态Procedures来源：印刷274页起 / PDF 275页起3.7.1 · 活动栈帧与生存期The Run-Time Stack\n\n经典表述 · 过程调用的三项责任\nPassing control. The program counter must be set t"
+                },
+                "tocOpen": false,
+                "active": [
+                  "#s3-7"
+                ],
+                "ancestorDetails": [],
+                "name": "mobile-toc-to-calls"
+              },
+              {
+                "url": "http://127.0.0.1:49918/csapp/notes/chapter04_architecture.html#machine-code-guide",
+                "hash": "#machine-code-guide",
+                "viewport": 390,
+                "documentWidth": 390,
+                "target": {
+                  "id": "machine-code-guide",
+                  "top": 128.234375,
+                  "text": "\n读代码 · 从旧状态计算，再提交一条指令\n先看 C 的 Machine 或 Python 的 Machine：4096 字节内存、15 个 64 位寄存器、PC、CC 和 Stat 组成可见机器状态；steps、loads、misses、rets 与 previous_load 是执行统计。程序从地址 0 解释镜像，"
+                },
+                "tocOpen": false,
+                "active": [
+                  "#machine-model"
+                ],
+                "ancestorDetails": [],
+                "name": "mobile-machine-python-step-guide"
+              },
+              {
+                "url": "http://127.0.0.1:49918/csapp/notes/chapter04_architecture.html#ch04-machine-python-step",
+                "hash": "#ch04-machine-python-step",
+                "viewport": 390,
+                "documentWidth": 390,
+                "target": {
+                  "id": "ch04-machine-python-step",
+                  "top": 128.1875,
+                  "text": ""
+                },
+                "tocOpen": false,
+                "active": [
+                  "#machine-model"
+                ],
+                "ancestorDetails": [
+                  {
+                    "id": "",
+                    "open": true
+                  }
+                ],
+                "name": "mobile-machine-python-step"
+              },
+              {
+                "url": "http://127.0.0.1:49918/csapp/notes/chapter06_memory.html#cache-code-guide",
+                "hash": "#cache-code-guide",
+                "viewport": 390,
+                "documentWidth": 390,
+                "target": {
+                  "id": "cache-code-guide",
+                  "top": 128.15625,
+                  "text": "\n读代码 · 一条引用怎样改变缓存状态\n先看 C 的 line / cache 和 Python 的 Cache。一行保存 tag、有效状态、脏位和最近访问顺序；C 用 valid 与时间戳 age，Python 用“行是否在列表中”表示有效，并把每组列表按 LRU→MRU 排列。每组最多容纳 E 个不同 tag，这一"
+                },
+                "tocOpen": false,
+                "active": [
+                  "#models"
+                ],
+                "ancestorDetails": [],
+                "name": "mobile-cache-python-access-guide"
+              },
+              {
+                "url": "http://127.0.0.1:49918/csapp/notes/chapter06_memory.html#ch06-cache-python-access",
+                "hash": "#ch06-cache-python-access",
+                "viewport": 390,
+                "documentWidth": 390,
+                "target": {
+                  "id": "ch06-cache-python-access",
+                  "top": 127.703125,
+                  "text": ""
+                },
+                "tocOpen": false,
+                "active": [
+                  "#models"
+                ],
+                "ancestorDetails": [
+                  {
+                    "id": "",
+                    "open": true
+                  }
+                ],
+                "name": "mobile-cache-python-access"
+              },
+              {
+                "url": "http://127.0.0.1:49918/",
+                "hash": "",
+                "viewport": 390,
+                "documentWidth": 390,
+                "target": null,
+                "active": [],
+                "ancestorDetails": [],
+                "name": "mobile-home"
+              }
+            ],
+            "formula_keyboard_scroll": {
+              "before": {
+                "left": 0,
+                "width": 328,
+                "scrollWidth": 405,
+                "label": "左右滑动查看完整公式 →",
+                "tabIndex": 0
+              },
+              "after": {
+                "left": 77,
+                "documentWidth": 390,
+                "active": true
+              }
+            },
+            "evidence": {
+              "layout": "tmp/csapp/refine/devtools/release-20261014T003500/report.json",
+              "targeted_reading": "tmp/csapp/refine/devtools/release-20261014T003500/targeted-reading.json",
+              "native_calls": "tmp/csapp/refine/devtools/calls.jsonl",
+              "manual_reading": "tmp/csapp/refine/devtools/manual-reading.json",
+              "acceptance": "test/T004-csapp-source-reading.md"
+            },
+            "scope": "几何扫描覆盖八页全部展开状态；目视包含八页入口、原文伴读位置和18个复杂公式/题解/程序位置。每张生成截图不自动等于已目视，所看文件见manual-reading记录。历史34图逐幅与打印样张验收保留在previous_review。",
+            "previous_review": {
+              "schema_version": 1,
+              "status": "reviewed_locally",
+              "reviewed_at": "2026-10-13T15:00:25.777708+00:00",
+              "page_sha256": {
+                "chapter02_information.html": "0bbeed6887d7b5ac6a118a0a2f614dc6b8f8ed6e2519e089b675a354723eea79",
+                "book_overview.html": "b3b646008f8cf696470bef69ccebcd362e76382546a66176fabb7add4d61133c",
+                "chapter03_machine_level.html": "11d6a4d8e52a91497c6cfdbe85e4022f71e90200ec148ded9a6a0a6b3688aa5d",
+                "chapter01_tour.html": "d4b91ad14cea51bfa414f2cc5ba6d599fd657257435e4f748264ba99c586ab92",
+                "chapter04_architecture.html": "815ebf024cd7094c288f6071c12b3f0ec9bd087fab62470fa69f86780cfacfbb",
+                "chapter06_memory.html": "1bd2b176cbe245339269305af14d2cdcdb060802570e869ad8aaeca8895d1e87",
+                "preface.html": "0d89f117364d722c5bab76a5670266070fd000230b4339830760a8bae217eb0c",
+                "chapter05_optimization.html": "bd25fa7bf55f48250d8b7cc8c29e6d4e0da5b8ad0b147e8e06ab656ac782abab"
+              },
+              "baseline": {
+                "books": [
+                  "Durrett",
+                  "Weiss"
+                ],
+                "body_font_px": 17,
+                "line_height_px": 32.3,
+                "desktop_main_width_px": 860,
+                "paper": "#fffefa",
+                "reading_layout": "240px chapter navigation, 860px main, 280px annotation when wide"
+              },
+              "coverage": {
+                "pages": 8,
+                "viewport_widths": [
+                  1800,
+                  1440,
+                  390
+                ],
+                "rendered_layouts": 24,
+                "svg_figures_individually_viewed": 34,
+                "source_figures_rechecked_after_repairs": 3,
+                "print_sample_pages_viewed": 3
+              },
+              "reading_paths": [
+                "map chapter links and relation arrows",
+                "preface learning method and edition context",
+                "1.2 compilation stages and 1.1 Amdahl question",
+                "2.4 binary rounding and 2.45 table",
+                "3.7 call stack and 3.69 recovered structure",
+                "4.5 forwarding, 4.53 control intersections, official simulator experiment",
+                "5.7 dependency chains and 5.19 prefix",
+                "6.4 cache address and 6.18 traces, 6.46 paired blocks"
+              ],
+              "repairs": [
+                {
+                  "issue": "第5章长表达式让390px手机布局扩到566px",
+                  "resolution": "正文允许在长标识符处换行，代码/表格/公式分别在容器内滚动；八页最终宽度均等于390px"
+                },
+                {
+                  "issue": "SVG 中若干标签被公共文字对齐覆盖、图例与数值重叠、关系图部分连接缺少箭头",
+                  "resolution": "保留图内字号和对齐，逐图核对；最后三图重新截图目视"
+                },
+                {
+                  "issue": "跳转后目录偶尔标记前一节，右注解可能停在前一节",
+                  "resolution": "标记阈值匹配固定栏/锚点距离，无注解的实验与题解隐藏侧栏；24个布局路径正确"
+                },
+                {
+                  "issue": "第3章switch分支容易被图中竖直关系误读为落入",
+                  "resolution": "显式标明return与64/65落入路径并重新读图"
+                },
+                {
+                  "issue": "行内长公式边缘略超出段落",
+                  "resolution": "最大宽度扣除外边距，最终八页无段落溢出"
+                }
+              ],
+              "interactions": {
+                "nestedLanguage": {
+                  "open": true,
+                  "top": 128.2109375,
+                  "documentWidth": 390
+                },
+                "mobileNavigation": {
+                  "hash": "#s3-7",
+                  "tocOpen": false,
+                  "top": 128.0859375,
+                  "active": "#s3-7"
+                },
+                "download": {
+                  "filename": "ch05_loops.py",
+                  "sha256": "c17f7789ef0c57b822ee2fa1945d9cf54d37a96a4568a55bf0a3ca0511032495"
+                },
+                "noScript": {
+                  "scriptsDisabled": true,
+                  "exerciseOpen": true,
+                  "htmlAttributes": [
+                    "lang",
+                    "zh-CN"
+                  ]
+                },
+                "beforePrint": {
+                  "open": [
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                  ]
+                },
+                "duringPrint": {
+                  "allOpen": true,
+                  "count": 19
+                },
+                "afterPrint": {
+                  "open": [
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                  ]
+                },
+                "realPrint": {
+                  "pdf": "print-sample.pdf",
+                  "restored": [
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                  ]
+                },
+                "home": {
+                  "url": "http://127.0.0.1:58429/",
+                  "title": "读书笔记 · Durrett、Weiss 与 CS:APP"
+                }
+              },
+              "simulator_download_and_local_scroll": [
+                {
+                  "width": 1800,
+                  "documentWidth": 1800,
+                  "top": 96.03125,
+                  "active": "#simulator-experiment",
+                  "railHidden": true
+                },
+                {
+                  "width": 390,
+                  "documentWidth": 390,
+                  "top": 128.1796875,
+                  "active": "#simulator-experiment",
+                  "railHidden": true
+                },
+                {
+                  "download": "y86-verification-support.tar.gz",
+                  "sha256": "ec9b5927e9427149d6fcf56871140bcd40abbe13af412690fa32bdaa2779e2f3"
+                },
+                {
+                  "viewport": 390,
+                  "documentWidth": 390,
+                  "codeScrollBefore": 0,
+                  "codeScrollAfter": 124,
+                  "codeVisibleWidth": 318,
+                  "codeContentWidth": 442
+                }
+              ],
+              "evidence": {
+                "layout": "tmp/csapp/rework/browser/reading-final.json",
+                "style_comparison": "tmp/csapp/rework/browser/style-comparison.json",
+                "figures": "tmp/csapp/rework/browser/figure-inspection.json",
+                "figure_repairs": "tmp/csapp/rework/browser/figures-final.json",
+                "interactions": "tmp/csapp/rework/browser/interaction-qa.json",
+                "simulator_section": "tmp/csapp/rework/browser/simulator-reading.json",
+                "print_sample": "tmp/csapp/rework/browser/print-sample.pdf"
+              },
+              "scope": "本地源页面与本地构建包的阅读验收；浏览器检查不证明全部算法正确。逐章来源核对、独立数值检查和程序运行分别记录。公开生产站点未部署。"
+            }
+          }
+        },
+        "unchanged_reading_pages": {
+          "chapter02_information.html": "8099dbba0002bfb3d7b58d888c576502b3533296c43e9218aff0bcf95bbbd6ac",
+          "chapter09_virtual_memory.html": "14fd1fc70e6bfb683d9c99058dc21ef22dbed6097dc9fda2d9afc5ef4353728d",
+          "book_overview.html": "2eb878e96d5c256de4344220b51d30f119c75beb190de76a32f2e9bfa86d20a4",
+          "chapter03_machine_level.html": "893833bdeda3fd325cd55595ac6109c6e0aae62da0fa612f09322a50edfcaa16",
+          "chapter01_tour.html": "02fdb836a9f352c53926e97879c4fa884b6f50992ce9e1df4bd07e2e54dd7fad",
+          "chapter04_architecture.html": "487557ae047d4d8f62d6e7eab3dba894eb075909f36b4a8873d09c0ef3b920ca",
+          "chapter07_linking.html": "e4f84bd481363b070c93772d1c519be4cc3d10fffc9ac06dda957a137ead2b6a",
+          "chapter06_memory.html": "4d2091e128aeca78ab483e9415e558ab8f2058ae3d1520009dc01ba52d3db3dd",
+          "preface.html": "5552a76573e27c1e9cd02e4045101e3aa43990327a7d16e391bf2d6f9930e424",
+          "chapter05_optimization.html": "5ac95eb5cd636bc184179b44434122d779b53267944ca3c5928586b6cf9a668b"
+        }
+      }
+    }
+  },
+  "pdf_navigation_revision": {
+    "issue": "I011",
+    "reviewed_at": "2026-10-14T14:17:18.562268+00:00",
+    "status": "verified_locally",
+    "scope": "PDF publication navigation only. The chapter 6 changes are exactly two source-link URLs and displayed start-page values; program/source-excerpt content unchanged. The previous F5 browser-proxy acceptance stays pending.",
+    "page_hash_change": {
+      "page": "chapter06_memory.html",
+      "before": "4d2091e128aeca78ab483e9415e558ab8f2058ae3d1520009dc01ba52d3db3dd",
+      "after": "aa335c9232be4be6c3b0516c7a40df688d8bebe6a5dec8fac1b9eb5c57b94f5f"
+    },
+    "source_pdf_sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+    "changes": [
+      {
+        "section": "6.3",
+        "pdf_before": 647,
+        "pdf_after": 646,
+        "printed_after": 645
+      },
+      {
+        "section": "6.4",
+        "pdf_before": 652,
+        "pdf_after": 651,
+        "printed_after": 650
+      }
+    ],
+    "source_pages_visually_read": [
+      646,
+      651
+    ],
+    "regression": "tools/test_reader_views.py",
+    "static_check": "tmp/project-check/20261014T221214-soi4soo2/report.json",
+    "package_audit": "tmp/csapp/pdf-navigation/package-audit.json",
+    "qa_release": "20261014T221113",
+    "acceptance": "test/T011-csapp-pdf-navigation.md",
+    "browser_review": "tmp/csapp/pdf-navigation/browser-review.json"
+  }
+}

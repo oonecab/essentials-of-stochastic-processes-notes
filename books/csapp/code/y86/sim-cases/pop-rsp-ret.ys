@@ -1,0 +1,9 @@
+irmovq stack,%rsp
+popq %rsp
+ret
+returned: irmovq $19,%rax
+halt
+.pos 0x200
+stack: .quad 0x300
+.pos 0x300
+.quad returned

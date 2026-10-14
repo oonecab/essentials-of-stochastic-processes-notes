@@ -1,0 +1,2469 @@
+{
+  "schema_version": 1,
+  "source_sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+  "edition": "Third Edition, Global Edition",
+  "recorded_at": "2026-10-13T16:09:31.542548+00:00",
+  "scope": {
+    "source_passages": 114,
+    "page_counts": {
+      "book_overview.html": 3,
+      "preface.html": 5,
+      "chapter01_tour.html": 9,
+      "chapter02_information.html": 28,
+      "chapter03_machine_level.html": 16,
+      "chapter04_architecture.html": 6,
+      "chapter05_optimization.html": 6,
+      "chapter06_memory.html": 7,
+      "chapter07_linking.html": 5,
+      "chapter08_exceptional.html": 5,
+      "chapter09_virtual_memory.html": 4,
+      "chapter10_system_io.html": 10,
+      "chapter11_network.html": 6,
+      "chapter12_concurrency.html": 4
+    },
+    "chapter2_principles": 25
+  },
+  "transcription": "English statements follow the local PDF. Typeset math is retained in static MathML; PDF line wrapping and ligatures are normalized. Separate source paragraphs are distinguished in the reading text.",
+  "review_scope": "The source statements, assumptions and translations were read against the identified PDF pages. Existing exercises retain their earlier review scope.",
+  "entries": [
+    {
+      "file": "book_overview.html",
+      "id": "classic-map-part-i",
+      "title": "第一部分为什么按这个顺序展开",
+      "section": "Part I · Program Structure and Execution",
+      "pdf_pages": [
+        66
+      ],
+      "printed_pages": [
+        65
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Our exploration of computer systems starts by studying the computer itself, comprising a processor and a memory subsystem. At the core, we require ways to represent basic data types, such as approximations to integer and real arithmetic. From there, we can consider how machine-level instructions manipulate data and how a compiler translates C programs into these instructions. Next, we study several methods of implementing a processor to gain a better understanding of how hardware resources are used to execute instructions. Once we understand compilers and machine-level code, we can examine how to maximize program performance by writing C programs that, when compiled, achieve the maximum possible performance. We conclude with the design of the memory subsystem, one of the most complex components of a modern computer system.",
+      "english_text_sha256": "7a2a15ac05e7a955bec3ced3acd1a4a07b4361d0c1866be389b2cd19fe7cf71f",
+      "quote_paragraphs": [
+        "Our exploration of computer systems starts by studying the computer itself, comprising a processor and a memory subsystem. At the core, we require ways to represent basic data types, such as approximations to integer and real arithmetic. From there, we can consider how machine-level instructions manipulate data and how a compiler translates C programs into these instructions. Next, we study several methods of implementing a processor to gain a better understanding of how hardware resources are used to execute instructions. Once we understand compilers and machine-level code, we can examine how to maximize program performance by writing C programs that, when compiled, achieve the maximum possible performance. We conclude with the design of the memory subsystem, one of the most complex components of a modern computer system."
+      ]
+    },
+    {
+      "file": "preface.html",
+      "id": "classic-preface-perspective",
+      "title": "以程序员能写出怎样的程序为尺度",
+      "section": "Preface · A Programmer’s Perspective",
+      "pdf_pages": [
+        20
+      ],
+      "printed_pages": [
+        19
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Our aim is to explain the enduring concepts underlying all computer systems, and to show you the concrete ways that these ideas affect the correctness, performance, and utility of your application programs. Many systems books are written from a builder’s perspective, describing how to implement the hardware or the systems software, including the operating system, compiler, and network interface. This book is written from a programmer’s perspective, describing how application programmers can use their knowledge of a system to write better programs.",
+      "english_text_sha256": "5f94badcc6bab7901ce2df97979947c97aa35deb1804e003309f08289f4050c4",
+      "quote_paragraphs": [
+        "Our aim is to explain the enduring concepts underlying all computer systems, and to show you the concrete ways that these ideas affect the correctness, performance, and utility of your application programs. Many systems books are written from a builder’s perspective, describing how to implement the hardware or the systems software, including the operating system, compiler, and network interface. This book is written from a programmer’s perspective, describing how application programmers can use their knowledge of a system to write better programs."
+      ]
+    },
+    {
+      "file": "preface.html",
+      "id": "classic-preface-machine",
+      "title": "例子的机器和软件环境",
+      "section": "Preface · Assumptions about the Reader’s Background",
+      "pdf_pages": [
+        20,
+        21
+      ],
+      "printed_pages": [
+        19,
+        20
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "This book focuses on systems that execute x86-64 machine code.We consider how these machines execute C programs on Linux.The machine-language examples were all generated by the GNU gcc compiler running on x86-64 processors. We do not assume any prior experience with hardware, machine language, or assembly-language programming.",
+      "english_text_sha256": "63b6c5bcb3c5d6e93a3c02d62616376779d1479b74d2340a7d61a9e112ef3d98",
+      "quote_paragraphs": [
+        "This book focuses on systems that execute x86-64 machine code.",
+        "We consider how these machines execute C programs on Linux.",
+        "The machine-language examples were all generated by the GNU gcc compiler running on x86-64 processors. We do not assume any prior experience with hardware, machine language, or assembly-language programming."
+      ]
+    },
+    {
+      "file": "preface.html",
+      "id": "classic-preface-active",
+      "title": "学系统要亲手推演和运行",
+      "section": "Preface · How to Read the Book",
+      "pdf_pages": [
+        21,
+        22
+      ],
+      "printed_pages": [
+        20,
+        21
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Learning how computer systems work from a programmer’s perspective is great fun, mainly because you can do it actively. Whenever you learn something new, you can try it out right away and see the result firsthand. In fact, we believe that the only way to learn systems is to do systems, either working concrete problems or writing and running programs on real systems.When a new concept is introduced, it is followed in the text by one or more practice problems that you should work immediately to test your understanding. Solutions to the practice problems are at the end of each chapter. As you read, try to solve each problem on your own and then check the solution to make sure you are on the right track.",
+      "english_text_sha256": "1a5d35f5bb947831a5a1a439cae4a00124b697b6b43ac0badb02f065f2e34bca",
+      "quote_paragraphs": [
+        "Learning how computer systems work from a programmer’s perspective is great fun, mainly because you can do it actively. Whenever you learn something new, you can try it out right away and see the result firsthand. In fact, we believe that the only way to learn systems is to do systems, either working concrete problems or writing and running programs on real systems.",
+        "When a new concept is introduced, it is followed in the text by one or more practice problems that you should work immediately to test your understanding. Solutions to the practice problems are at the end of each chapter. As you read, try to solve each problem on your own and then check the solution to make sure you are on the right track."
+      ]
+    },
+    {
+      "file": "preface.html",
+      "id": "classic-preface-code",
+      "title": "书中的程序来自实际源文件",
+      "section": "Preface · How to Read the Book",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        21
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Each code example in the text was formatted directly, without any manual intervention, from a C program compiled with gcc and tested on a Linux system. Of course, your system may have a different version of gcc, or a different compiler altogether, so your compiler might generate different machine code; but the overall behavior should be the same.",
+      "english_text_sha256": "c31480e26417e206d800526274132879974215fed19c9b5219d30a26a0e3ab38",
+      "quote_paragraphs": [
+        "Each code example in the text was formatted directly, without any manual intervention, from a C program compiled with gcc and tested on a Linux system. Of course, your system may have a different version of gcc, or a different compiler altogether, so your compiler might generate different machine code; but the overall behavior should be the same."
+      ]
+    },
+    {
+      "file": "preface.html",
+      "id": "classic-preface-cache-lab",
+      "title": "用同一个模型连接分析与优化",
+      "section": "Preface · Lab Exercises · Cache Lab",
+      "pdf_pages": [
+        31
+      ],
+      "printed_pages": [
+        30
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "In this alternative to the performance lab, students write a general-purpose cache simulator, and then optimize a small matrix transpose kernel to minimize the number of misses on a simulated cache. We use the Valgrind tool to generate real address traces for the matrix transpose kernel.",
+      "english_text_sha256": "871a78e2ba4cf43a97b6a1ddb0caf1c9aebe0b5aa9a10e175597501c8ca06066",
+      "quote_paragraphs": [
+        "In this alternative to the performance lab, students write a general-purpose cache simulator, and then optimize a small matrix transpose kernel to minimize the number of misses on a simulated cache. We use the Valgrind tool to generate real address traces for the matrix transpose kernel."
+      ]
+    },
+    {
+      "file": "chapter01_tour.html",
+      "id": "classic-1-bits-context",
+      "title": "位模式的意义取决于解释它的上下文",
+      "section": "§1.1 · Information Is Bits + Context",
+      "pdf_pages": [
+        40
+      ],
+      "printed_pages": [
+        39
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The representation of hello.c illustrates a fundamental idea: All information in a system—including disk files, programs stored in memory, user data stored in memory, and data transferred across a network—is represented as a bunch of bits. The only thing that distinguishes different data objects is the context in which we view them. For example, in different contexts, the same sequence of bytes might represent an integer, floating-point number, character string, or machine instruction.",
+      "english_text_sha256": "1c0e7e64320330aac023efa9947b460fec14f0027e10320618e63e3d468436e3",
+      "quote_paragraphs": [
+        "The representation of hello.c illustrates a fundamental idea: All information in a system—including disk files, programs stored in memory, user data stored in memory, and data transferred across a network—is represented as a bunch of bits. The only thing that distinguishes different data objects is the context in which we view them. For example, in different contexts, the same sequence of bytes might represent an integer, floating-point number, character string, or machine instruction."
+      ]
+    },
+    {
+      "file": "chapter01_tour.html",
+      "id": "classic-1-compilation",
+      "title": "四个阶段共同构成编译系统",
+      "section": "§1.2 · Programs Are Translated by Other Programs into Different Forms",
+      "pdf_pages": [
+        42
+      ],
+      "printed_pages": [
+        41
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Here, the gcc compiler driver reads the source file hello.c and translates it into an executable object file hello. The translation is performed in the sequence of four phases shown in Figure 1.3. The programs that perform the four phases (preprocessor, compiler, assembler, and linker) are known collectively as the compilation system.",
+      "english_text_sha256": "b9fdf907e6ea16d76c07ca974f60308121629aa6f06443b4ccab3681c02359c4",
+      "quote_paragraphs": [
+        "Here, the gcc compiler driver reads the source file hello.c and translates it into an executable object file hello. The translation is performed in the sequence of four phases shown in Figure 1.3. The programs that perform the four phases (preprocessor, compiler, assembler, and linker) are known collectively as the compilation system."
+      ]
+    },
+    {
+      "file": "chapter01_tour.html",
+      "id": "classic-1-locality",
+      "title": "局部性为什么能同时接近大容量与高速度",
+      "section": "§1.5 · Caches Matter",
+      "pdf_pages": [
+        50
+      ],
+      "printed_pages": [
+        49
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The idea behind caching is that a system can get the effect of both a very large memory and a very fast one by exploiting locality, the tendency for programs to access data and code in localized regions. By setting up caches to hold data that are likely to be accessed often, we can perform most memory operations using the fast caches.",
+      "english_text_sha256": "7df655c202278d88e0547fba432f75e0659606918e2c7d30a999fc72b919564d",
+      "quote_paragraphs": [
+        "The idea behind caching is that a system can get the effect of both a very large memory and a very fast one by exploiting locality, the tendency for programs to access data and code in localized regions. By setting up caches to hold data that are likely to be accessed often, we can perform most memory operations using the fast caches."
+      ]
+    },
+    {
+      "file": "chapter01_tour.html",
+      "id": "classic-1-hierarchy",
+      "title": "相邻层次之间的缓存关系",
+      "section": "§1.6 · Storage Devices Form a Hierarchy",
+      "pdf_pages": [
+        51
+      ],
+      "printed_pages": [
+        50
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The main idea of a memory hierarchy is that storage at one level serves as a cache for storage at the next lower level. Thus, the register file is a cache for the L1 cache. Caches L1 and L2 are caches for L2 and L3, respectively. The L3 cache is a cache for the main memory, which is a cache for the disk.",
+      "english_text_sha256": "25b4df2a30566deefb5ca985ebd24f19ae2ada31bf4994e9e1c77ac2d551b37b",
+      "quote_paragraphs": [
+        "The main idea of a memory hierarchy is that storage at one level serves as a cache for storage at the next lower level. Thus, the register file is a cache for the L1 cache. Caches L1 and L2 are caches for L2 and L3, respectively. The L3 cache is a cache for the main memory, which is a cache for the disk."
+      ]
+    },
+    {
+      "file": "chapter01_tour.html",
+      "id": "classic-1-process",
+      "title": "进程把一次运行呈现为独占机器",
+      "section": "§1.7.1 · Processes",
+      "pdf_pages": [
+        52
+      ],
+      "printed_pages": [
+        51
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "A process is the operating system’s abstraction for a running program. Multiple processes can run concurrently on the same system, and each process appears to have exclusive use of the hardware. By concurrently, we mean that the instructions of one process are interleaved with the instructions of another process.",
+      "english_text_sha256": "58e8cce7c44afdd029fdae5c870f6244903e32ffb6f436e71dd0c20d5aa53542",
+      "quote_paragraphs": [
+        "A process is the operating system’s abstraction for a running program. Multiple processes can run concurrently on the same system, and each process appears to have exclusive use of the hardware. By concurrently, we mean that the instructions of one process are interleaved with the instructions of another process."
+      ]
+    },
+    {
+      "file": "chapter01_tour.html",
+      "id": "classic-1-threads",
+      "title": "线程共享进程中的代码和全局数据",
+      "section": "§1.7.2 · Threads",
+      "pdf_pages": [
+        54
+      ],
+      "printed_pages": [
+        53
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Although we normally think of a process as having a single control flow, in modern systems a process can actually consist of multiple execution units, called threads, each running in the context of the process and sharing the same code and global data.",
+      "english_text_sha256": "0c4149659cc2d0e7bf432e2bac95ac155b71191fde20c76bf3cbf3a65bf3d738",
+      "quote_paragraphs": [
+        "Although we normally think of a process as having a single control flow, in modern systems a process can actually consist of multiple execution units, called threads, each running in the context of the process and sharing the same code and global data."
+      ]
+    },
+    {
+      "file": "chapter01_tour.html",
+      "id": "classic-1-amdahl",
+      "title": "Amdahl 定律及其上限",
+      "section": "§1.9.1 · Amdahl’s Law",
+      "pdf_pages": [
+        59,
+        60
+      ],
+      "printed_pages": [
+        58,
+        59
+      ],
+      "category": "law",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [
+        "1.1",
+        "1.2"
+      ],
+      "english_text": "The main idea is that when we speed up one part of a system, the effect on the overall system performance depends on both how significant this part was and how much it sped up.One interesting special case of Amdahl’s law is to consider the effect of setting k to ∞. That is, we are able to take some part of the system and speed it up to the point at which it takes a negligible amount of time.",
+      "english_text_sha256": "dd78fbbb695a3d1942a9ca3f59212c2369708da12d753218e949c820db2c3e48",
+      "quote_paragraphs": [
+        "The main idea is that when we speed up one part of a system, the effect on the overall system performance depends on both how significant this part was and how much it sped up.",
+        "One interesting special case of Amdahl’s law is to consider the effect of setting k to ∞. That is, we are able to take some part of the system and speed it up to the point at which it takes a negligible amount of time."
+      ]
+    },
+    {
+      "file": "chapter01_tour.html",
+      "id": "classic-1-concurrency",
+      "title": "并发和并行在本章中的用法",
+      "section": "§1.9.2 · Concurrency and Parallelism",
+      "pdf_pages": [
+        61
+      ],
+      "printed_pages": [
+        60
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "We use the term concurrency to refer to the general concept of a system with multiple, simultaneous activities, and the term parallelism to refer to the use of concurrency to make a system run faster. Parallelism can be exploited at multiple levels of abstraction in a computer system.",
+      "english_text_sha256": "843bd691e35eccffcb66c8636d7e871bd6faf1b5a53c299aa83378eeae69cc03",
+      "quote_paragraphs": [
+        "We use the term concurrency to refer to the general concept of a system with multiple, simultaneous activities, and the term parallelism to refer to the use of concurrency to make a system run faster. Parallelism can be exploited at multiple levels of abstraction in a computer system."
+      ]
+    },
+    {
+      "file": "chapter01_tour.html",
+      "id": "classic-1-isa",
+      "title": "顺序的指令语义与并行的内部实现",
+      "section": "§1.9.3 · The Importance of Abstractions",
+      "pdf_pages": [
+        64
+      ],
+      "printed_pages": [
+        63
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "With this abstraction, a machine-code program behaves as if it were executed on a processor that performs just one instruction at a time. The underlying hardware is far more elaborate, executing multiple instructions in parallel, but always in a way that is consistent with the simple, sequential model. By keeping the same execution model, different processor implementations can execute the same machine code while offering a range of cost and performance.",
+      "english_text_sha256": "1a3f375d93a8bf3c173154974768a40d60fc93fa77b4f19b01318f002217f913",
+      "quote_paragraphs": [
+        "With this abstraction, a machine-code program behaves as if it were executed on a processor that performs just one instruction at a time. The underlying hardware is far more elaborate, executing multiple instructions in parallel, but always in a way that is consistent with the simple, sequential model. By keeping the same execution model, different processor implementations can execute the same machine code while offering a range of cost and performance."
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-unsigned-encoding",
+      "title": "无符号编码的定义",
+      "section": "2.2.2",
+      "pdf_pages": [
+        100
+      ],
+      "printed_pages": [
+        99
+      ],
+      "category": "原理",
+      "original_title": "Definition of unsigned encoding",
+      "original_number": null,
+      "equation_numbers": [
+        "2.1"
+      ],
+      "english_text": "Definition of unsigned encodingFor vector x→=[xw−1,xw−2,…,x0]:B2Uw(x→)≐∑i=0w−1xi2i",
+      "english_text_sha256": "8232dba3838ea2c0663696403c218ac2f9e6deca0188d261ccfe064e954c1476",
+      "original_statement_tex": "For vector \\(\\vec{x}=[x_{w-1},x_{w-2},\\ldots,x_0]\\):\n\\[\\mathrm{B2U}_w(\\vec{x})\\doteq\\sum_{i=0}^{w-1}x_i2^i\\]",
+      "original_formulas_tex": [
+        "\\mathrm{B2U}_w(\\vec{x})\\doteq\\sum_{i=0}^{w-1}x_i2^i"
+      ],
+      "english_prose_fragments": [
+        "For vector"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-unsigned-unique",
+      "title": "无符号编码的唯一性",
+      "section": "2.2.2",
+      "pdf_pages": [
+        101
+      ],
+      "printed_pages": [
+        100
+      ],
+      "category": "原理",
+      "original_title": "Uniqueness of unsigned encoding",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Uniqueness of unsigned encodingFunction B2Uw is a bijection.",
+      "english_text_sha256": "fa15706a0aacbd26fd01a7d32f3871c192cb9d1e05e408a6a7454c4bb0df7f22",
+      "original_statement_tex": "Function \\(\\mathrm{B2U}_w\\) is a bijection.",
+      "original_formulas_tex": [],
+      "english_prose_fragments": [
+        "Function",
+        "is a bijection."
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-twos-encoding",
+      "title": "补码编码的定义",
+      "section": "2.2.3",
+      "pdf_pages": [
+        101
+      ],
+      "printed_pages": [
+        100
+      ],
+      "category": "原理",
+      "original_title": "Definition of two’s-complement encoding",
+      "original_number": null,
+      "equation_numbers": [
+        "2.3"
+      ],
+      "english_text": "Definition of two’s-complement encodingFor vector x→=[xw−1,xw−2,…,x0]:B2Tw(x→)≐−xw−12w−1+∑i=0w−2xi2i",
+      "english_text_sha256": "9a34b76af56c6db534dd0cc09a1bbbc5663e1a9b65c87ed88fca62305ec3fd36",
+      "original_statement_tex": "For vector \\(\\vec{x}=[x_{w-1},x_{w-2},\\ldots,x_0]\\):\n\\[\\mathrm{B2T}_w(\\vec{x})\\doteq-x_{w-1}2^{w-1}+\\sum_{i=0}^{w-2}x_i2^i\\]",
+      "original_formulas_tex": [
+        "\\mathrm{B2T}_w(\\vec{x})\\doteq-x_{w-1}2^{w-1}+\\sum_{i=0}^{w-2}x_i2^i"
+      ],
+      "english_prose_fragments": [
+        "For vector"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-twos-unique",
+      "title": "补码编码的唯一性",
+      "section": "2.2.3",
+      "pdf_pages": [
+        102
+      ],
+      "printed_pages": [
+        101
+      ],
+      "category": "原理",
+      "original_title": "Uniqueness of two’s-complement encoding",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Uniqueness of two’s-complement encodingFunction B2Tw is a bijection.",
+      "english_text_sha256": "458af17490413439bdd1928a5551295b8534903f4970ebc4db88ce633d36ee5f",
+      "original_statement_tex": "Function \\(\\mathrm{B2T}_w\\) is a bijection.",
+      "original_formulas_tex": [],
+      "english_prose_fragments": [
+        "Function",
+        "is a bijection."
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-t2u",
+      "title": "补码到无符号的转换",
+      "section": "2.2.4",
+      "pdf_pages": [
+        109
+      ],
+      "printed_pages": [
+        108
+      ],
+      "category": "原理",
+      "original_title": "Conversion from two’s complement to unsigned",
+      "original_number": null,
+      "equation_numbers": [
+        "2.5"
+      ],
+      "english_text": "Conversion from two’s complement to unsignedFor x such that TMinw≤x≤TMaxw:T2Uw(x)={x+2w,x<0x,x≥0",
+      "english_text_sha256": "01cedf3c56ce5ad5fd0af57653f8c0e728668560eb497d812c4b1b8830e3a2d3",
+      "original_statement_tex": "For \\(x\\) such that \\(\\mathrm{TMin}_w\\le x\\le\\mathrm{TMax}_w\\):\n\\[\\mathrm{T2U}_w(x)=\\begin{cases}x+2^w,&x<0\\\\x,&x\\ge0\\end{cases}\\]",
+      "original_formulas_tex": [
+        "\\mathrm{T2U}_w(x)=\\begin{cases}x+2^w,&x<0\\\\x,&x\\ge0\\end{cases}"
+      ],
+      "english_prose_fragments": [
+        "For",
+        "such that"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-u2t",
+      "title": "无符号到补码的转换",
+      "section": "2.2.4",
+      "pdf_pages": [
+        110
+      ],
+      "printed_pages": [
+        109
+      ],
+      "category": "原理",
+      "original_title": "Unsigned to two’s-complement conversion",
+      "original_number": null,
+      "equation_numbers": [
+        "2.7"
+      ],
+      "english_text": "Unsigned to two’s-complement conversionFor u such that 0≤u≤UMaxw:U2Tw(u)={u,u≤TMaxwu−2w,u>TMaxw",
+      "english_text_sha256": "414b0d33298ab94cb656a99dddc4b12f2cd9144b778aa1db3f1b94fb77e9f54e",
+      "original_statement_tex": "For \\(u\\) such that \\(0\\le u\\le\\mathrm{UMax}_w\\):\n\\[\\mathrm{U2T}_w(u)=\\begin{cases}u,&u\\le\\mathrm{TMax}_w\\\\u-2^w,&u>\\mathrm{TMax}_w\\end{cases}\\]",
+      "original_formulas_tex": [
+        "\\mathrm{U2T}_w(u)=\\begin{cases}u,&u\\le\\mathrm{TMax}_w\\\\u-2^w,&u>\\mathrm{TMax}_w\\end{cases}"
+      ],
+      "english_prose_fragments": [
+        "For",
+        "such that"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-zero-extension",
+      "title": "无符号数的零扩展",
+      "section": "2.2.6",
+      "pdf_pages": [
+        114
+      ],
+      "printed_pages": [
+        113
+      ],
+      "category": "原理",
+      "original_title": "Expansion of an unsigned number by zero extension",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Expansion of an unsigned number by zero extensionDefine bit vectors u→=[uw−1,uw−2,…,u0] of width w and u→′=[0,…,0,uw−1,uw−2,…,u0] of width w′, where w′>w. Then B2Uw(u→)=B2Uw′(u→′).",
+      "english_text_sha256": "d0718432ddeb747dbcbd5d391247bf6fe7f7f4d782161473c343f71429543188",
+      "original_statement_tex": "Define bit vectors \\(\\vec{u}=[u_{w-1},u_{w-2},\\ldots,u_0]\\) of width \\(w\\) and \\(\\vec{u}'=[0,\\ldots,0,u_{w-1},u_{w-2},\\ldots,u_0]\\) of width \\(w'\\), where \\(w'>w\\). Then \\(\\mathrm{B2U}_w(\\vec{u})=\\mathrm{B2U}_{w'}(\\vec{u}')\\).",
+      "original_formulas_tex": [],
+      "english_prose_fragments": [
+        "Define bit vectors",
+        "of width",
+        "and",
+        "of width",
+        ", where",
+        ". Then"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-sign-extension",
+      "title": "补码数的符号扩展",
+      "section": "2.2.6",
+      "pdf_pages": [
+        114
+      ],
+      "printed_pages": [
+        113
+      ],
+      "category": "原理",
+      "original_title": "Expansion of a two’s-complement number by sign extension",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Expansion of a two’s-complement number by sign extensionDefine bit vectors x→=[xw−1,xw−2,…,x0] of width w and x→′=[xw−1,…,xw−1,xw−1,xw−2,…,x0] of width w′, where w′>w. Then B2Tw(x→)=B2Tw′(x→′).",
+      "english_text_sha256": "f8dee5d640298f5ef11784d5db4c8f1b73dddd107de057c6fba5255851b42e82",
+      "original_statement_tex": "Define bit vectors \\(\\vec{x}=[x_{w-1},x_{w-2},\\ldots,x_0]\\) of width \\(w\\) and \\(\\vec{x}'=[x_{w-1},\\ldots,x_{w-1},x_{w-1},x_{w-2},\\ldots,x_0]\\) of width \\(w'\\), where \\(w'>w\\). Then \\(\\mathrm{B2T}_w(\\vec{x})=\\mathrm{B2T}_{w'}(\\vec{x}')\\).",
+      "original_formulas_tex": [],
+      "english_prose_fragments": [
+        "Define bit vectors",
+        "of width",
+        "and",
+        "of width",
+        ", where",
+        ". Then"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-unsigned-truncate",
+      "title": "无符号数的截断",
+      "section": "2.2.7",
+      "pdf_pages": [
+        118
+      ],
+      "printed_pages": [
+        117
+      ],
+      "category": "原理",
+      "original_title": "Truncation of an unsigned number",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Truncation of an unsigned numberLet x→ be the bit vector [xw−1,xw−2,…,x0], and let x→′ be the result of truncating it to k bits: x→′=[xk−1,xk−2,…,x0]. Let x=B2Uw(x→) and x′=B2Uk(x→′). Then x′=xmod2k.",
+      "english_text_sha256": "6aabeabc2ae753144d96dd67b869a057e247472dbd6c07dfb1629230e78e1209",
+      "original_statement_tex": "Let \\(\\vec{x}\\) be the bit vector \\([x_{w-1},x_{w-2},\\ldots,x_0]\\), and let \\(\\vec{x}'\\) be the result of truncating it to \\(k\\) bits: \\(\\vec{x}'=[x_{k-1},x_{k-2},\\ldots,x_0]\\). Let \\(x=\\mathrm{B2U}_w(\\vec{x})\\) and \\(x'=\\mathrm{B2U}_k(\\vec{x}')\\). Then \\(x'=x\\bmod2^k\\).",
+      "original_formulas_tex": [],
+      "english_prose_fragments": [
+        "Let",
+        "be the bit vector",
+        ", and let",
+        "be the result of truncating it to",
+        "bits:",
+        ". Let",
+        "and",
+        ". Then"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-twos-truncate",
+      "title": "补码数的截断",
+      "section": "2.2.7",
+      "pdf_pages": [
+        119
+      ],
+      "printed_pages": [
+        118
+      ],
+      "category": "原理",
+      "original_title": "Truncation of a two’s-complement number",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Truncation of a two’s-complement numberLet x→ be the bit vector [xw−1,xw−2,…,x0], and let x→′ be the result of truncating it to k bits: x→′=[xk−1,xk−2,…,x0]. Let x=B2Tw(x→) and x′=B2Tk(x→′). Then x′=U2Tk(xmod2k).",
+      "english_text_sha256": "aabe54fa9cf3008a6cbb5250f66059ff39755e53fa117ab4e1ac9c5af60e0008",
+      "original_statement_tex": "Let \\(\\vec{x}\\) be the bit vector \\([x_{w-1},x_{w-2},\\ldots,x_0]\\), and let \\(\\vec{x}'\\) be the result of truncating it to \\(k\\) bits: \\(\\vec{x}'=[x_{k-1},x_{k-2},\\ldots,x_0]\\). Let \\(x=\\mathrm{B2T}_w(\\vec{x})\\) and \\(x'=\\mathrm{B2T}_k(\\vec{x}')\\). Then \\(x'=\\mathrm{U2T}_k(x\\bmod2^k)\\).",
+      "original_formulas_tex": [],
+      "english_prose_fragments": [
+        "Let",
+        "be the bit vector",
+        ", and let",
+        "be the result of truncating it to",
+        "bits:",
+        ". Let",
+        "and",
+        ". Then"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-unsigned-add",
+      "title": "无符号加法",
+      "section": "2.3.1",
+      "pdf_pages": [
+        124
+      ],
+      "printed_pages": [
+        123
+      ],
+      "category": "原理",
+      "original_title": "Unsigned addition",
+      "original_number": null,
+      "equation_numbers": [
+        "2.11"
+      ],
+      "english_text": "Unsigned additionFor x and y such that 0≤x,y<2w:x+wuy={x+y,x+y<2wNormalx+y−2w,2w≤x+y<2w+1Overflow",
+      "english_text_sha256": "89d2ac92651fcff039954d83a1b6d8ab4f65b8db4988f12424ad738f92d0ce62",
+      "original_statement_tex": "For \\(x\\) and \\(y\\) such that \\(0\\le x,y<2^w\\):\n\\[x+_w^u y=\\begin{cases}x+y,&x+y<2^w\\quad\\text{Normal}\\\\x+y-2^w,&2^w\\le x+y<2^{w+1}\\quad\\text{Overflow}\\end{cases}\\]",
+      "original_formulas_tex": [
+        "x+_w^u y=\\begin{cases}x+y,&x+y<2^w\\quad\\text{Normal}\\\\x+y-2^w,&2^w\\le x+y<2^{w+1}\\quad\\text{Overflow}\\end{cases}"
+      ],
+      "english_prose_fragments": [
+        "For",
+        "and",
+        "such that"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-unsigned-overflow",
+      "title": "检测无符号加法溢出",
+      "section": "2.3.1",
+      "pdf_pages": [
+        125
+      ],
+      "printed_pages": [
+        124
+      ],
+      "category": "原理",
+      "original_title": "Detecting overflow of unsigned addition",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Detecting overflow of unsigned additionFor x and y in the range 0≤x,y≤UMaxw, let s≐x+wuy. Then the computation of s overflowed if and only if s<x (or equivalently, s<y).",
+      "english_text_sha256": "ef876e4658cf975aad1954c5aac5adcc6a99252443c523497865ae90031dcb05",
+      "original_statement_tex": "For \\(x\\) and \\(y\\) in the range \\(0\\le x,y\\le\\mathrm{UMax}_w\\), let \\(s\\doteq x+_w^u y\\). Then the computation of \\(s\\) overflowed if and only if \\(s<x\\) (or equivalently, \\(s<y\\)).",
+      "original_formulas_tex": [],
+      "english_prose_fragments": [
+        "For",
+        "and",
+        "in the range",
+        ", let",
+        ". Then the computation of",
+        "overflowed if and only if",
+        "(or equivalently,"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-unsigned-negation",
+      "title": "无符号加法逆元",
+      "section": "2.3.1",
+      "pdf_pages": [
+        126
+      ],
+      "printed_pages": [
+        125
+      ],
+      "category": "原理",
+      "original_title": "Unsigned negation",
+      "original_number": null,
+      "equation_numbers": [
+        "2.12"
+      ],
+      "english_text": "Unsigned negationFor any number x such that 0≤x<2w, its w-bit unsigned negation −wux is given by the following:−wux={x,x=02w−x,x>0",
+      "english_text_sha256": "3e4050113ba1708529a8c5a13797b6e5a6600f25242e2d1d8a07f1603ae95654",
+      "original_statement_tex": "For any number \\(x\\) such that \\(0\\le x<2^w\\), its \\(w\\)-bit unsigned negation \\(-_w^u x\\) is given by the following:\n\\[-_w^u x=\\begin{cases}x,&x=0\\\\2^w-x,&x>0\\end{cases}\\]",
+      "original_formulas_tex": [
+        "-_w^u x=\\begin{cases}x,&x=0\\\\2^w-x,&x>0\\end{cases}"
+      ],
+      "english_prose_fragments": [
+        "For any number",
+        "such that",
+        ", its",
+        "-bit unsigned negation",
+        "is given by the following:"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-twos-add",
+      "title": "补码加法的三种结果",
+      "section": "2.3.2",
+      "pdf_pages": [
+        127
+      ],
+      "printed_pages": [
+        126
+      ],
+      "category": "原理",
+      "original_title": "Two’s-complement addition",
+      "original_number": null,
+      "equation_numbers": [
+        "2.13"
+      ],
+      "english_text": "Two’s-complement additionFor integer values x and y in the range −2w−1≤x,y≤2w−1−1:x+wty={x+y−2w,2w−1≤x+yPositive overflowx+y,−2w−1≤x+y<2w−1Normalx+y+2w,x+y<−2w−1Negative overflow",
+      "english_text_sha256": "e1e89e47785d78a45061a54f216768d30d87df89cd4dce387cba7ddf5165ccd2",
+      "original_statement_tex": "For integer values \\(x\\) and \\(y\\) in the range \\(-2^{w-1}\\le x,y\\le2^{w-1}-1\\):\n\\[x+_w^t y=\\begin{cases}x+y-2^w,&2^{w-1}\\le x+y\\quad\\text{Positive overflow}\\\\x+y,&-2^{w-1}\\le x+y<2^{w-1}\\quad\\text{Normal}\\\\x+y+2^w,&x+y<-2^{w-1}\\quad\\text{Negative overflow}\\end{cases}\\]",
+      "original_formulas_tex": [
+        "x+_w^t y=\\begin{cases}x+y-2^w,&2^{w-1}\\le x+y\\quad\\text{Positive overflow}\\\\x+y,&-2^{w-1}\\le x+y<2^{w-1}\\quad\\text{Normal}\\\\x+y+2^w,&x+y<-2^{w-1}\\quad\\text{Negative overflow}\\end{cases}"
+      ],
+      "english_prose_fragments": [
+        "For integer values",
+        "and",
+        "in the range"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-twos-overflow",
+      "title": "检测补码加法溢出",
+      "section": "2.3.2",
+      "pdf_pages": [
+        129
+      ],
+      "printed_pages": [
+        128
+      ],
+      "category": "原理",
+      "original_title": "Detecting overflow in two’s-complement addition",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Detecting overflow in two’s-complement additionFor x and y in the range TMinw≤x,y≤TMaxw, let s≐x+wty. Then the computation of s has had positive overflow if and only if x>0 and y>0 but s≤0. The computation has had negative overflow if and only if x<0 and y<0 but s≥0.",
+      "english_text_sha256": "038b065bcf1668adc06fe6461236b9d5f32092c861c4c0c9be71a26737ee4f3b",
+      "original_statement_tex": "For \\(x\\) and \\(y\\) in the range \\(\\mathrm{TMin}_w\\le x,y\\le\\mathrm{TMax}_w\\), let \\(s\\doteq x+_w^t y\\). Then the computation of \\(s\\) has had positive overflow if and only if \\(x>0\\) and \\(y>0\\) but \\(s\\le0\\). The computation has had negative overflow if and only if \\(x<0\\) and \\(y<0\\) but \\(s\\ge0\\).",
+      "original_formulas_tex": [],
+      "english_prose_fragments": [
+        "For",
+        "and",
+        "in the range",
+        ", let",
+        ". Then the computation of",
+        "has had positive overflow if and only if",
+        "and",
+        "but",
+        ". The computation has had negative overflow if and only if",
+        "and",
+        "but"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-twos-negation",
+      "title": "补码加法逆元",
+      "section": "2.3.3",
+      "pdf_pages": [
+        132
+      ],
+      "printed_pages": [
+        131
+      ],
+      "category": "原理",
+      "original_title": "Two’s-complement negation",
+      "original_number": null,
+      "equation_numbers": [
+        "2.15"
+      ],
+      "english_text": "Two’s-complement negationFor x in the range TMinw≤x≤TMaxw, its two’s-complement negation −wtx is given by the formula−wtx={TMinw,x=TMinw−x,x>TMinw",
+      "english_text_sha256": "217e62b0ea5b6530e613b881cdd6f3f87b086c9eeb2115924eabab9b22a56a64",
+      "original_statement_tex": "For \\(x\\) in the range \\(\\mathrm{TMin}_w\\le x\\le\\mathrm{TMax}_w\\), its two’s-complement negation \\(-_w^t x\\) is given by the formula\n\\[-_w^t x=\\begin{cases}\\mathrm{TMin}_w,&x=\\mathrm{TMin}_w\\\\-x,&x>\\mathrm{TMin}_w\\end{cases}\\]",
+      "original_formulas_tex": [
+        "-_w^t x=\\begin{cases}\\mathrm{TMin}_w,&x=\\mathrm{TMin}_w\\\\-x,&x>\\mathrm{TMin}_w\\end{cases}"
+      ],
+      "english_prose_fragments": [
+        "For",
+        "in the range",
+        ", its two’s-complement negation",
+        "is given by the formula"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-unsigned-multiply",
+      "title": "无符号乘法",
+      "section": "2.3.4",
+      "pdf_pages": [
+        134
+      ],
+      "printed_pages": [
+        133
+      ],
+      "category": "原理",
+      "original_title": "Unsigned multiplication",
+      "original_number": null,
+      "equation_numbers": [
+        "2.16"
+      ],
+      "english_text": "Unsigned multiplicationFor x and y such that 0≤x,y≤UMaxw:x*wuy=(x·y)mod2w",
+      "english_text_sha256": "30b7614293b69a4846ccd5fd7a32c418a182ccc9e3979c2381e8685065c27eaf",
+      "original_statement_tex": "For \\(x\\) and \\(y\\) such that \\(0\\le x,y\\le\\mathrm{UMax}_w\\):\n\\[x*_w^u y=(x\\cdot y)\\bmod2^w\\]",
+      "original_formulas_tex": [
+        "x*_w^u y=(x\\cdot y)\\bmod2^w"
+      ],
+      "english_prose_fragments": [
+        "For",
+        "and",
+        "such that"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-twos-multiply",
+      "title": "补码乘法",
+      "section": "2.3.5",
+      "pdf_pages": [
+        134
+      ],
+      "printed_pages": [
+        133
+      ],
+      "category": "原理",
+      "original_title": "Two’s-complement multiplication",
+      "original_number": null,
+      "equation_numbers": [
+        "2.17"
+      ],
+      "english_text": "Two’s-complement multiplicationFor x and y such that TMinw≤x,y≤TMaxw:x*wty=U2Tw((x·y)mod2w)",
+      "english_text_sha256": "ff9543a3081175252a07f3feb908f0c74eb2d1f7f784d7138c08944ca9e80da7",
+      "original_statement_tex": "For \\(x\\) and \\(y\\) such that \\(\\mathrm{TMin}_w\\le x,y\\le\\mathrm{TMax}_w\\):\n\\[x*_w^t y=\\mathrm{U2T}_w((x\\cdot y)\\bmod2^w)\\]",
+      "original_formulas_tex": [
+        "x*_w^t y=\\mathrm{U2T}_w((x\\cdot y)\\bmod2^w)"
+      ],
+      "english_prose_fragments": [
+        "For",
+        "and",
+        "such that"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-product-bits",
+      "title": "无符号与补码乘法的低位等价性",
+      "section": "2.3.5",
+      "pdf_pages": [
+        134
+      ],
+      "printed_pages": [
+        133
+      ],
+      "category": "原理",
+      "original_title": "Bit-level equivalence of unsigned and two’s-complement multiplication",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Bit-level equivalence of unsigned and two’s-complement multiplicationLet x→ and y→ be bit vectors of length w. Define integers x and y as the values represented by these bits in two’s-complement form: x=B2Tw(x→) and y=B2Tw(y→). Define nonnegative integers x′ and y′ as the values represented by these bits in unsigned form: x′=B2Uw(x→) and y′=B2Uw(y→). ThenT2Bw(x*wty)=U2Bw(x′*wuy′)",
+      "english_text_sha256": "fb48efe50a86cca9eb4d8cdb58aa829c5c526015e7a4397945471b4d18d0cc29",
+      "original_statement_tex": "Let \\(\\vec{x}\\) and \\(\\vec{y}\\) be bit vectors of length \\(w\\). Define integers \\(x\\) and \\(y\\) as the values represented by these bits in two’s-complement form: \\(x=\\mathrm{B2T}_w(\\vec{x})\\) and \\(y=\\mathrm{B2T}_w(\\vec{y})\\). Define nonnegative integers \\(x'\\) and \\(y'\\) as the values represented by these bits in unsigned form: \\(x'=\\mathrm{B2U}_w(\\vec{x})\\) and \\(y'=\\mathrm{B2U}_w(\\vec{y})\\). Then\n\\[\\mathrm{T2B}_w(x*_w^t y)=\\mathrm{U2B}_w(x' *_w^u y')\\]",
+      "original_formulas_tex": [
+        "\\mathrm{T2B}_w(x*_w^t y)=\\mathrm{U2B}_w(x' *_w^u y')"
+      ],
+      "english_prose_fragments": [
+        "Let",
+        "and",
+        "be bit vectors of length",
+        ". Define integers",
+        "and",
+        "as the values represented by these bits in two’s-complement form:",
+        "and",
+        ". Define nonnegative integers",
+        "and",
+        "as the values represented by these bits in unsigned form:",
+        "and",
+        ". Then"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-power-product",
+      "title": "扩宽位串后乘以二的幂",
+      "section": "2.3.6",
+      "pdf_pages": [
+        138
+      ],
+      "printed_pages": [
+        137
+      ],
+      "category": "原理",
+      "original_title": "Multiplication by a power of 2",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Multiplication by a power of 2Let x be the unsigned integer represented by bit pattern [xw−1,xw−2,…,x0]. Then for any k≥0, the w+k-bit unsigned representation of x2k is given by [xw−1,xw−2,…,x0,0,…,0], where k zeros have been added to the right.",
+      "english_text_sha256": "3875a35c91a3ba3178de837ff205d2d4c0e9cea6d8b3fd8e7cdea7b9687f9042",
+      "original_statement_tex": "Let \\(x\\) be the unsigned integer represented by bit pattern \\([x_{w-1},x_{w-2},\\ldots,x_0]\\). Then for any \\(k\\ge0\\), the \\(w+k\\)-bit unsigned representation of \\(x2^k\\) is given by \\([x_{w-1},x_{w-2},\\ldots,x_0,0,\\ldots,0]\\), where \\(k\\) zeros have been added to the right.",
+      "original_formulas_tex": [],
+      "english_prose_fragments": [
+        "Let",
+        "be the unsigned integer represented by bit pattern",
+        ". Then for any",
+        ", the",
+        "-bit unsigned representation of",
+        "is given by",
+        ", where",
+        "zeros have been added to the right."
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-unsigned-shift",
+      "title": "无符号左移与乘法",
+      "section": "2.3.6",
+      "pdf_pages": [
+        139
+      ],
+      "printed_pages": [
+        138
+      ],
+      "category": "原理",
+      "original_title": "Unsigned multiplication by a power of 2",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Unsigned multiplication by a power of 2For C variables x and k with unsigned values x and k, such that 0≤k<w, the C expression x << k yields the value x*wu2k.",
+      "english_text_sha256": "52adcc69b5523412f451c1baf68cbe4549cf731d803ed058befcac4c6053fcb4",
+      "original_statement_tex": "For C variables <code>x</code> and <code>k</code> with unsigned values \\(x\\) and \\(k\\), such that \\(0\\le k<w\\), the C expression <code>x &lt;&lt; k</code> yields the value \\(x*_w^u2^k\\).",
+      "original_formulas_tex": [],
+      "english_prose_fragments": [
+        "For C variables x and k with unsigned values",
+        "and",
+        ", such that",
+        ", the C expression x << k yields the value"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-twos-shift",
+      "title": "补码左移与乘法",
+      "section": "2.3.6",
+      "pdf_pages": [
+        139
+      ],
+      "printed_pages": [
+        138
+      ],
+      "category": "原理",
+      "original_title": "Two’s-complement multiplication by a power of 2",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Two’s-complement multiplication by a power of 2For C variables x and k with two’s-complement value x and unsigned value k, such that 0≤k<w, the C expression x << k yields the value x*wt2k.",
+      "english_text_sha256": "69191feede099425e47cd53bee09c366de19b85a5fa50803567c471db8fb3cd7",
+      "original_statement_tex": "For C variables <code>x</code> and <code>k</code> with two’s-complement value \\(x\\) and unsigned value \\(k\\), such that \\(0\\le k<w\\), the C expression <code>x &lt;&lt; k</code> yields the value \\(x*_w^t2^k\\).",
+      "original_formulas_tex": [],
+      "english_prose_fragments": [
+        "For C variables x and k with two’s-complement value",
+        "and unsigned value",
+        ", such that",
+        ", the C expression x << k yields the value"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-unsigned-divide",
+      "title": "无符号数除以二的幂",
+      "section": "2.3.7",
+      "pdf_pages": [
+        141
+      ],
+      "printed_pages": [
+        140
+      ],
+      "category": "原理",
+      "original_title": "Unsigned division by a power of 2",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Unsigned division by a power of 2For C variables x and k with unsigned values x and k, such that 0≤k<w, the C expression x >> k yields the value ⌊x2k⌋.",
+      "english_text_sha256": "143dfdca78180a48760e74524a0c4183b8cc5c77ab27321d3a8d51cdbcb1f60f",
+      "original_statement_tex": "For C variables <code>x</code> and <code>k</code> with unsigned values \\(x\\) and \\(k\\), such that \\(0\\le k<w\\), the C expression <code>x &gt;&gt; k</code> yields the value \\(\\lfloor x/2^k\\rfloor\\).",
+      "original_formulas_tex": [],
+      "english_prose_fragments": [
+        "For C variables x and k with unsigned values",
+        "and",
+        ", such that",
+        ", the C expression x >> k yields the value"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-arithmetic-floor",
+      "title": "算术右移向下取整",
+      "section": "2.3.7",
+      "pdf_pages": [
+        142
+      ],
+      "printed_pages": [
+        141
+      ],
+      "category": "原理",
+      "original_title": "Two’s-complement division by a power of 2, rounding down",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Two’s-complement division by a power of 2, rounding downLet C variables x and k have two’s-complement value x and unsigned value k, respectively, such that 0≤k<w. The C expression x >> k, when the shift is performed arithmetically, yields the value ⌊x2k⌋.",
+      "english_text_sha256": "dda9fead72a5f7f866e56ffd2bf47c6a635336b254a6e2b58e95cb972313f1e5",
+      "original_statement_tex": "Let C variables <code>x</code> and <code>k</code> have two’s-complement value \\(x\\) and unsigned value \\(k\\), respectively, such that \\(0\\le k<w\\). The C expression <code>x &gt;&gt; k</code>, when the shift is performed arithmetically, yields the value \\(\\lfloor x/2^k\\rfloor\\).",
+      "original_formulas_tex": [],
+      "english_prose_fragments": [
+        "Let C variables x and k have two’s-complement value",
+        "and unsigned value",
+        ", respectively, such that",
+        ". The C expression x >> k, when the shift is performed arithmetically, yields the value"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "principle-2-arithmetic-ceil",
+      "title": "加偏置后向上取整",
+      "section": "2.3.7",
+      "pdf_pages": [
+        143
+      ],
+      "printed_pages": [
+        142
+      ],
+      "category": "原理",
+      "original_title": "Two’s-complement division by a power of 2, rounding up",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Two’s-complement division by a power of 2, rounding upLet C variables x and k have two’s-complement value x and unsigned value k, respectively, such that 0≤k<w. The C expression (x + (1 << k) - 1) >> k, when the shift is performed arithmetically, yields the value ⌈x2k⌉.",
+      "english_text_sha256": "477e1da05764ef4443c7e24f601a81f20033b69999990116fa3c0fec3ec90471",
+      "original_statement_tex": "Let C variables <code>x</code> and <code>k</code> have two’s-complement value \\(x\\) and unsigned value \\(k\\), respectively, such that \\(0\\le k<w\\). The C expression <code>(x + (1 &lt;&lt; k) - 1) &gt;&gt; k</code>, when the shift is performed arithmetically, yields the value \\(\\lceil x/2^k\\rceil\\).",
+      "original_formulas_tex": [],
+      "english_prose_fragments": [
+        "Let C variables x and k have two’s-complement value",
+        "and unsigned value",
+        ", respectively, such that",
+        ". The C expression (x + (1 << k) - 1) >> k, when the shift is performed arithmetically, yields the value"
+      ]
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "classic-2-byte-memory",
+      "title": "经典表述 · 内存的字节数组视图",
+      "section": "2.1",
+      "pdf_pages": [
+        71
+      ],
+      "printed_pages": [
+        70
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "A machine-level program views memory as a very large array of bytes, referred to as virtual memory.",
+      "english_text_sha256": "6acdb06b3054a8e7b010e204ed9f95930de6c73816b2bab8b37619b1cdeb7bea"
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "classic-2-round-even",
+      "title": "经典表述 · 最接近值与中点取偶",
+      "section": "2.4.4",
+      "pdf_pages": [
+        157
+      ],
+      "printed_pages": [
+        156
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Round-to-even mode adopts the convention that it rounds the number either upward or downward such that the least significant digit of the result is even.",
+      "english_text_sha256": "0248706ed98bf304353d13c1b9b0a85a870cbe07febc19235d790155ba352b72"
+    },
+    {
+      "file": "chapter02_information.html",
+      "id": "classic-2-float-association",
+      "title": "经典表述 · 每一步舍入会破坏结合律",
+      "section": "2.4.5",
+      "pdf_pages": [
+        160
+      ],
+      "printed_pages": [
+        159
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The lack of associativity in floating-point addition is the most important group property that is lacking.",
+      "english_text_sha256": "851f2e40da75929e432fb719caea4a3439cf99813c5bbb49be3fdc07752a7d9f"
+    },
+    {
+      "file": "chapter03_machine_level.html",
+      "id": "classic-3-abstractions",
+      "title": "经典表述 · ISA 与虚拟内存两种抽象",
+      "section": "3.2.1",
+      "pdf_pages": [
+        207,
+        208
+      ],
+      "printed_pages": [
+        206,
+        207
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "First, the format and behavior of a machine-level program is defined by the instruction set architecture, or ISA, defining the processor state, the format of the instructions, and the effect each of these instructions will have on the state.Second, the memory addresses used by a machine-level program are virtual addresses, providing a memory model that appears to be a very large byte array.",
+      "english_text_sha256": "3bed630f117e9a1e08d16570d21bf0a900373a952ae0f97adb605ba544dcb71e",
+      "selection_note": "Two nonadjacent sentences from one paragraph; two intervening sentences omitted, as indicated in the page source line."
+    },
+    {
+      "file": "chapter03_machine_level.html",
+      "id": "classic-3-operands",
+      "title": "经典表述 · 操作数决定取值的路径",
+      "section": "3.4.1",
+      "pdf_pages": [
+        218
+      ],
+      "printed_pages": [
+        217
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Operands can denote immediate (constant) values, register values, or values from memory.",
+      "english_text_sha256": "4c34c5dc923710e18f8970f0fa47d82ba5a64db9dcf3c9d1f42a682fd7cb7620"
+    },
+    {
+      "file": "chapter03_machine_level.html",
+      "id": "classic-3-zero-extension",
+      "title": "经典表述 · 四字节寄存器结果会清零高半部",
+      "section": "3.4.2",
+      "pdf_pages": [
+        222
+      ],
+      "printed_pages": [
+        221
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "This technique takes advantage of the property that an instruction generating a 4-byte value with a register as the destination will fill the upper 4 bytes with zeros.",
+      "english_text_sha256": "259e801b4cccbc0ca2088b735f18b6b7f21e679540b4c344c18487dd7e98c97f"
+    },
+    {
+      "file": "chapter03_machine_level.html",
+      "id": "classic-3-lea",
+      "title": "经典表述 · 有效地址计算也能表达算术",
+      "section": "3.5.1",
+      "pdf_pages": [
+        229
+      ],
+      "printed_pages": [
+        228
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Its first operand appears to be a memory reference, but instead of reading from the designated location, the instruction copies the effective address to the destination.",
+      "english_text_sha256": "f5511bd6345f64c86079fb1cfd649bf44f925304bb7fffbb2340ff5bd0901470"
+    },
+    {
+      "file": "chapter03_machine_level.html",
+      "id": "classic-3-control-dataflow",
+      "title": "经典表述 · 条件可以改变控制流或数据流",
+      "section": "3.6",
+      "pdf_pages": [
+        237
+      ],
+      "printed_pages": [
+        236
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Machine code provides two basic low-level mechanisms for implementing conditional behavior: it tests data values and then alters either the control flow or the data flow based on the results of these tests.",
+      "english_text_sha256": "88fa2f9e2c0bf3aee9057a08abde05c394ddaa2eb808bc327c76e08e9a8b5c12"
+    },
+    {
+      "file": "chapter03_machine_level.html",
+      "id": "classic-3-cmov-boundary",
+      "title": "经典表述 · 条件传送的求值前提",
+      "section": "3.6.6",
+      "pdf_pages": [
+        255
+      ],
+      "printed_pages": [
+        254
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "If one of those two expressions could possibly generate an error condition or a side effect, this could lead to invalid behavior.",
+      "english_text_sha256": "27a2eefb97c357a59a00f7ba17f201e286fc0462a3d64cfc30959b0cca347712"
+    },
+    {
+      "file": "chapter03_machine_level.html",
+      "id": "classic-3-jump-table",
+      "title": "经典表述 · 跳转表把多路选择化为查表",
+      "section": "3.6.8",
+      "pdf_pages": [
+        270
+      ],
+      "printed_pages": [
+        269
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The advantage of using a jump table over a long sequence of if-else statements is that the time taken to perform the switch is independent of the number of switch cases.",
+      "english_text_sha256": "9f1a42291ee470e5fe42f6683ce605227e72bc79cf128fa96a918794ca5cafd9"
+    },
+    {
+      "file": "chapter03_machine_level.html",
+      "id": "classic-3-procedure-mechanisms",
+      "title": "经典表述 · 过程调用的三项责任",
+      "section": "3.7",
+      "pdf_pages": [
+        276
+      ],
+      "printed_pages": [
+        275
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Passing control. The program counter must be set to the starting address of the code for Q upon entry and then set to the instruction in P following the call to Q upon return.Passing data. P must be able to provide one or more parameters to Q, and Q must be able to return a value back to P.Allocating and deallocating memory. Q may need to allocate space for local variables when it begins and then free that storage before it returns.",
+      "english_text_sha256": "ca46f81239cf246b01a570c8740c1be8671e5bd471d5c920bfba150e6d166085"
+    },
+    {
+      "file": "chapter03_machine_level.html",
+      "id": "classic-3-recursion",
+      "title": "经典表述 · 栈为每次递归调用保留私有状态",
+      "section": "3.7.6",
+      "pdf_pages": [
+        291
+      ],
+      "printed_pages": [
+        290
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Our stack discipline provides a mechanism where each invocation of a function has its own private storage for state information (saved values of the return location and callee-saved registers).",
+      "english_text_sha256": "c4726ddb7ba849f284760c5a9d654730c505cc52dd9278497452d8bdb43a817c"
+    },
+    {
+      "file": "chapter03_machine_level.html",
+      "id": "classic-3-row-major",
+      "title": "经典表述 · 二维数组由嵌套数组决定行顺序",
+      "section": "3.8.3",
+      "pdf_pages": [
+        295
+      ],
+      "printed_pages": [
+        294
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [
+        "3.1"
+      ],
+      "english_text": "This ordering is a consequence of our nested declaration.",
+      "english_text_sha256": "8b7f9e3458a0ccba710f0033b44f31fb9870407ca6dc6ae05467a4d90bbd2c43"
+    },
+    {
+      "file": "chapter03_machine_level.html",
+      "id": "classic-3-struct-fields",
+      "title": "经典表述 · 字段选择在编译时化为偏移",
+      "section": "3.9.1",
+      "pdf_pages": [
+        304
+      ],
+      "printed_pages": [
+        303
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "As these examples show, the selection of the different fields of a structure is handled completely at compile time. The machine code contains no information about the field declarations or the names of the fields.",
+      "english_text_sha256": "4feb6910773c11849d04d7462241554f21fc6edcb804d21f5d14355cedf48888"
+    },
+    {
+      "file": "chapter03_machine_level.html",
+      "id": "classic-3-alignment",
+      "title": "经典表述 · 对齐约束落在对象起始地址",
+      "section": "3.9.3",
+      "pdf_pages": [
+        310
+      ],
+      "printed_pages": [
+        309
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Many computer systems place restrictions on the allowable addresses for the primitive data types, requiring that the address for some objects must be a multiple of some value K (typically 2, 4, or 8).",
+      "english_text_sha256": "1c23a52c786a19d2d2ae51de0539d8afc7d4011480524d92dda128c2f1803c57"
+    },
+    {
+      "file": "chapter03_machine_level.html",
+      "id": "classic-3-pointer-types",
+      "title": "经典表述 · 指针类型是 C 提供的抽象",
+      "section": "3.10.1",
+      "pdf_pages": [
+        314
+      ],
+      "printed_pages": [
+        313
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Pointer types are not part of machine code; they are an abstraction provided by C to help programmers avoid addressing errors.",
+      "english_text_sha256": "b423837fa82f27c40f792bbedfc902f29caf78a6c17f87a4513ce57549444e82"
+    },
+    {
+      "file": "chapter03_machine_level.html",
+      "id": "classic-3-bounds-state",
+      "title": "经典表述 · 越界写可能破坏过程状态",
+      "section": "3.10.3",
+      "pdf_pages": [
+        316
+      ],
+      "printed_pages": [
+        315
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "This combination can lead to serious program errors, where the state stored on the stack gets corrupted by a write to an out-of-bounds array element.",
+      "english_text_sha256": "afd8e74c04d98a27d40653fabe7f74ef18782cd87f204eb9e9ce2ce25efde56e"
+    },
+    {
+      "file": "chapter03_machine_level.html",
+      "id": "classic-3-scalar-float",
+      "title": "经典表述 · 标量浮点使用向量寄存器的低部",
+      "section": "3.11",
+      "pdf_pages": [
+        332
+      ],
+      "printed_pages": [
+        331
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "When operating on scalar data, these registers only hold floating-point data, and only the low-order 32 bits (for float) or 64 bits (for double) are used.",
+      "english_text_sha256": "910c29cd16ce297f326ef36f9875faea0c02268d18c3ac2caf99b87995f96f71"
+    },
+    {
+      "file": "chapter03_machine_level.html",
+      "id": "classic-3-float-unordered",
+      "title": "经典表述 · NaN 对应比较的无序结果",
+      "section": "3.11.6",
+      "pdf_pages": [
+        343
+      ],
+      "printed_pages": [
+        342
+      ],
+      "category": "经典表述",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The unordered case occurs when either operand is NaN. This can be detected with the parity flag.",
+      "english_text_sha256": "dda2c52cece10eade5bb015f88f0a8a16d59ea20f88a2419fcbeeafa2fd3e848"
+    },
+    {
+      "file": "chapter04_architecture.html",
+      "id": "principle-4-isa-visible-state",
+      "title": "ISA 约束程序可见的状态",
+      "section": "4.1.1",
+      "pdf_pages": [
+        392
+      ],
+      "printed_pages": [
+        391
+      ],
+      "category": "Statement",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "We will see in our processor implementations that we do not need to represent and organize this state in exactly the manner implied by the ISA, as long as we can make sure that machine-level programs appear to have access to the programmer-visible state.",
+      "english_text_sha256": "3b15a29ad89838e7c7bd18772f57464908acfa0bc0b54679c827d27f80f552ee",
+      "quote": "We will see in our processor implementations that we do not need to represent and organize this state in exactly the manner implied by the ISA, as long as we can make sure that machine-level programs appear to have access to the programmer-visible state."
+    },
+    {
+      "file": "chapter04_architecture.html",
+      "id": "principle-4-no-reading-back",
+      "title": "原书原则 · 无须回读新状态（No reading back）",
+      "section": "4.3.3",
+      "pdf_pages": [
+        438
+      ],
+      "printed_pages": [
+        437
+      ],
+      "category": "Principle",
+      "original_title": "No reading back",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The processor never needs to read back the state updated by an instruction in order to complete the processing of this instruction.",
+      "english_text_sha256": "1016cc62e23c66c4f993e04a125cbe27f3844db848caebbc132e838990140986",
+      "quote": "The processor never needs to read back the state updated by an instruction in order to complete the processing of this instruction."
+    },
+    {
+      "file": "chapter04_architecture.html",
+      "id": "principle-4-pipeline-throughput-latency",
+      "title": "吞吐量与单项延迟",
+      "section": "4.4",
+      "pdf_pages": [
+        449
+      ],
+      "printed_pages": [
+        448
+      ],
+      "category": "Statement",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "A key feature of pipelining is that it increases the throughput of the system (i.e., the number of customers served per unit time), but it may also slightly increase the latency (i.e., the time required to service an individual customer).",
+      "english_text_sha256": "3f1b2c9becb16e3d075db6c235420ad1c287f5532472c71e9096fe9dc9c29de9",
+      "quote": "A key feature of pipelining is that it increases the throughput of the system (i.e., the number of customers served per unit time), but it may also slightly increase the latency (i.e., the time required to service an individual customer)."
+    },
+    {
+      "file": "chapter04_architecture.html",
+      "id": "principle-4-slowest-stage",
+      "title": "最慢阶段决定时钟",
+      "section": "4.4.3",
+      "pdf_pages": [
+        453
+      ],
+      "printed_pages": [
+        452
+      ],
+      "category": "Statement",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "However, the rate at which we can operate the clock is limited by the delay of the slowest stage.",
+      "english_text_sha256": "3b68d6a278088984da8fbb0d9df63781812243126bd8e9ccbeb616e20ed07cef",
+      "quote": "However, the rate at which we can operate the clock is limited by the delay of the slowest stage."
+    },
+    {
+      "file": "chapter04_architecture.html",
+      "id": "principle-4-feedback-dependencies",
+      "title": "反馈决定哪些工作能够重叠",
+      "section": "4.4.4",
+      "pdf_pages": [
+        458
+      ],
+      "printed_pages": [
+        457
+      ],
+      "category": "Statement",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Somehow we must deal with the data and control dependencies between instructions so that the resulting behavior matches the model defined by the ISA.",
+      "english_text_sha256": "b4e0e67a92d5ac0821c51b68873cc84e487a8fca3a410728de96ceafc30112b9",
+      "quote": "Somehow we must deal with the data and control dependencies between instructions so that the resulting behavior matches the model defined by the ISA."
+    },
+    {
+      "file": "chapter04_architecture.html",
+      "id": "principle-4-pipeline-hazards",
+      "title": "依赖何时构成流水冒险",
+      "section": "4.5.5",
+      "pdf_pages": [
+        466
+      ],
+      "printed_pages": [
+        465
+      ],
+      "category": "Definition",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "When such dependencies have the potential to cause an erroneous computation by the pipeline, they are called hazards. Like dependencies, hazards can be classified as either data hazards or control hazards.",
+      "english_text_sha256": "c63891ba99133f489aba06f6e7c3b931ad9c5710b37ce2e8e263549ed7ad06cc",
+      "quote": "When such dependencies have the potential to cause an erroneous computation by the pipeline, they are called hazards. Like dependencies, hazards can be classified as either data hazards or control hazards."
+    },
+    {
+      "file": "chapter05_optimization.html",
+      "id": "classic-5-safe-optimization",
+      "title": "原书原则 · 安全优化的语义边界",
+      "section": "5.1",
+      "pdf_pages": [
+        535
+      ],
+      "printed_pages": [
+        534
+      ],
+      "category": "Principle",
+      "original_title": "Safe optimizations",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Compilers must be careful to apply only safe optimizations to a program, meaning that the resulting program will have the exact same behavior as would an unoptimized version for all possible cases the program may encounter, up to the limits of the guarantees provided by the C language standards.",
+      "english_text_sha256": "dae7580afe97428464c3731d11ea4679938db02537a8c63260c9f9b5dc9b05e1",
+      "quote": "Compilers must be careful to apply only safe optimizations to a program, meaning that the resulting program will have the exact same behavior as would an unoptimized version for all possible cases the program may encounter, up to the limits of the guarantees provided by the C language standards."
+    },
+    {
+      "file": "chapter05_optimization.html",
+      "id": "classic-5-cpe-slope",
+      "title": "原书表述 · CPE 是随元素数增加的斜率",
+      "section": "5.2，图 5.2",
+      "pdf_pages": [
+        540
+      ],
+      "printed_pages": [
+        539
+      ],
+      "category": "Figure caption",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The slope of the lines indicates the number of clock cycles per element (CPE).",
+      "english_text_sha256": "f4806f188ea7ac789eeab0d055a422dd5c4b21aa71a0c9fbeb47b43700df6bac",
+      "quote": "The slope of the lines indicates the number of clock cycles per element (CPE)."
+    },
+    {
+      "file": "chapter05_optimization.html",
+      "id": "classic-5-latency-bound",
+      "title": "顺序依赖给出延迟下界",
+      "section": "5.7.2",
+      "pdf_pages": [
+        561
+      ],
+      "printed_pages": [
+        560
+      ],
+      "category": "Statement",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The latency bound gives a minimum value for the CPE for any function that must perform the combining operation in a strict sequence.",
+      "english_text_sha256": "68829f22dc7a6f5a77978d7d847742d009f4f67d19089ff41b4b30760a2dbb2e",
+      "quote": "The latency bound gives a minimum value for the CPE for any function that must perform the combining operation in a strict sequence."
+    },
+    {
+      "file": "chapter05_optimization.html",
+      "id": "classic-5-throughput-bound",
+      "title": "功能单元给出吞吐下界",
+      "section": "5.7.2",
+      "pdf_pages": [
+        561
+      ],
+      "printed_pages": [
+        560
+      ],
+      "category": "Statement",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The throughput bound gives a minimum bound for the CPE based on the maximum rate at which the functional units can produce results.",
+      "english_text_sha256": "e7dabf6bc152c699d78d413c626fd5af5115b63c44cb1ffbbc1cc57c3bd94c3e",
+      "quote": "The throughput bound gives a minimum bound for the CPE based on the maximum rate at which the functional units can produce results."
+    },
+    {
+      "file": "chapter05_optimization.html",
+      "id": "classic-5-multiple-accumulators",
+      "title": "原书方法 · 用独立累积器拆开依赖链",
+      "section": "5.9.1",
+      "pdf_pages": [
+        573
+      ],
+      "printed_pages": [
+        572
+      ],
+      "category": "Statement",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "For a combining operation that is associative and commutative, such as integer addition or multiplication, we can improve performance by splitting the set of combining operations into two or more parts and combining the results at the end.",
+      "english_text_sha256": "d315aabb4534c6f3d92c317fd7a518bb8d6a66c01448f00f3686ef2d4ddfa60e",
+      "quote": "For a combining operation that is associative and commutative, such as integer addition or multiplication, we can improve performance by splitting the set of combining operations into two or more parts and combining the results at the end."
+    },
+    {
+      "file": "chapter05_optimization.html",
+      "id": "classic-5-floating-associativity",
+      "title": "浮点运算的结合顺序影响结果",
+      "section": "5.9.1",
+      "pdf_pages": [
+        577
+      ],
+      "printed_pages": [
+        576
+      ],
+      "category": "Statement",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "On the other hand, floating-point multiplication and addition are not associative. Thus, combine5 and combine6 could produce different results due to rounding or overflow.",
+      "english_text_sha256": "5de696834121aca1ebe4f6bba165683c9d1d78e805f3e603c390e96de567ec18",
+      "quote": "On the other hand, floating-point multiplication and addition are not associative. Thus, combine5 and combine6 could produce different results due to rounding or overflow."
+    },
+    {
+      "file": "chapter06_memory.html",
+      "id": "principle-6-locality",
+      "title": "局部性描述访问倾向",
+      "section": "6.2",
+      "pdf_pages": [
+        641
+      ],
+      "printed_pages": [
+        640
+      ],
+      "category": "Principle",
+      "original_title": "Principle of locality",
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Well-written computer programs tend to exhibit good locality. That is, they tend to reference data items that are near other recently referenced data items or that were recently referenced themselves.",
+      "english_text_sha256": "e5da90d1ae9172752ae1b86dc5e805996b5e90f4702f3290735e110285a5b6ce",
+      "quote": "Well-written computer programs tend to exhibit good locality. That is, they tend to reference data items that are near other recently referenced data items or that were recently referenced themselves."
+    },
+    {
+      "file": "chapter06_memory.html",
+      "id": "principle-6-hierarchy-caching",
+      "title": "上层保存下层数据的副本",
+      "section": "6.3.1",
+      "pdf_pages": [
+        648
+      ],
+      "printed_pages": [
+        647
+      ],
+      "category": "Statement",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "In other words, each level in the hierarchy caches data objects from the next lower level.",
+      "english_text_sha256": "c7ff5d25b74e74738af24444b2c4b175208db3511a6589728fe2660599a8254d",
+      "quote": "In other words, each level in the hierarchy caches data objects from the next lower level."
+    },
+    {
+      "file": "chapter06_memory.html",
+      "id": "principle-6-block-amortization",
+      "title": "一次搬块由后续访问分摊",
+      "section": "6.3.2",
+      "pdf_pages": [
+        651
+      ],
+      "printed_pages": [
+        650
+      ],
+      "category": "Statement",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Blocks usually contain multiple data objects. Because of spatial locality, we can expect that the cost of copying a block after a miss will be amortized by subsequent references to other objects within that block.",
+      "english_text_sha256": "20de23caf43f653fadd887263cde4306250db46e07972eeb3f04d1ed2c10291a",
+      "quote": "Blocks usually contain multiple data objects. Because of spatial locality, we can expect that the cost of copying a block after a miss will be amortized by subsequent references to other objects within that block."
+    },
+    {
+      "file": "chapter06_memory.html",
+      "id": "classic-6-block-line-set",
+      "title": "块、行与组",
+      "section": "6.5，Aside: Cache lines, sets, and blocks",
+      "pdf_pages": [
+        671
+      ],
+      "printed_pages": [
+        670
+      ],
+      "category": "Definition",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "A line is a container in a cache that stores a block, as well as other information such as the valid bit and the tag bits.",
+      "english_text_sha256": "09ed8df5a74cd8d95508747262a30d0a50bf793b8717a4aca9a18cdeb951b1b5",
+      "quote": "A line is a container in a cache that stores a block, as well as other information such as the valid bit and the tag bits."
+    },
+    {
+      "file": "chapter06_memory.html",
+      "id": "classic-6-write-back",
+      "title": "原书策略 · 写回推迟下层更新",
+      "section": "6.4.5",
+      "pdf_pages": [
+        667
+      ],
+      "printed_pages": [
+        666
+      ],
+      "category": "Statement",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Another approach, known as write-back, defers the update as long as possible by writing the updated block to the next lower level only when it is evicted from the cache by the replacement algorithm.",
+      "english_text_sha256": "c7096bdd8adf730a067419d287aeeb28c586f8655868d6745c4047e58c2d2544",
+      "quote": "Another approach, known as write-back, defers the update as long as possible by writing the updated block to the next lower level only when it is evicted from the cache by the replacement algorithm."
+    },
+    {
+      "file": "chapter06_memory.html",
+      "id": "classic-6-cache-size-hit-time",
+      "title": "原书取舍 · 容量与命中时间",
+      "section": "6.4.7",
+      "pdf_pages": [
+        669
+      ],
+      "printed_pages": [
+        668
+      ],
+      "category": "Statement",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "On the one hand, a larger cache will tend to increase the hit rate. On the other hand, it is always harder to make large memories run faster. As a result, larger caches tend to increase the hit time.",
+      "english_text_sha256": "4b1cb39b8470af0067c85394b1fb4530c957210821ace53128ccd09cc2e54dfd",
+      "quote": "On the one hand, a larger cache will tend to increase the hit rate. On the other hand, it is always harder to make large memories run faster. As a result, larger caches tend to increase the hit time."
+    },
+    {
+      "file": "chapter06_memory.html",
+      "id": "classic-6-cache-friendly-inner-loop",
+      "title": "原书方法 · 先减少热点内循环的 miss",
+      "section": "6.5",
+      "pdf_pages": [
+        671
+      ],
+      "printed_pages": [
+        670
+      ],
+      "category": "Statement",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Minimize the number of cache misses in each inner loop. All other things being equal, such as the total number of loads and stores, loops with better miss rates will run faster.",
+      "english_text_sha256": "9748fb8ae74e39013df6a640864853d5496dab4109b3d42918f8e0e59fcf4e17",
+      "quote": "Minimize the number of cache misses in each inner loop. All other things being equal, such as the total number of loads and stores, loops with better miss rates will run faster."
+    },
+    {
+      "file": "book_overview.html",
+      "id": "classic-map-part-ii",
+      "title": "从硬件转向构建与运行程序的系统软件",
+      "section": "Part II · Running Programs on a System",
+      "pdf_pages": [
+        704
+      ],
+      "printed_pages": [
+        703
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Our exploration of computer systems continues with a closer look at the systems software that builds and runs application programs.",
+      "english_text_sha256": "ead4a0546c61e6b1eec78484f758ef86d66676c8472a8e8dbbbbc5075725a771",
+      "quote_paragraphs": [
+        "Our exploration of computer systems continues with a closer look at the systems software that builds and runs application programs."
+      ]
+    },
+    {
+      "file": "chapter07_linking.html",
+      "id": "classic-7-resolution",
+      "title": "每个引用对应一个定义",
+      "section": "§7.2",
+      "pdf_pages": [
+        710
+      ],
+      "printed_pages": [
+        709
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The purpose of symbol resolution is to associate each symbol reference with exactly one symbol definition.",
+      "english_text_sha256": "60810250bdbc1fc7128fad3f0aa86692ab7ec88b4d26cb477c36aa5a076370b5",
+      "quote_paragraphs": [
+        "The purpose of symbol resolution is to associate each symbol reference with exactly one symbol definition."
+      ]
+    },
+    {
+      "file": "chapter07_linking.html",
+      "id": "classic-7-local-symbols",
+      "title": "链接局部与程序局部不同",
+      "section": "§7.5",
+      "pdf_pages": [
+        713
+      ],
+      "printed_pages": [
+        712
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "It is important to realize that local linker symbols are not the same as local program variables.",
+      "english_text_sha256": "6683ced7ec34770b4a63e2fe63f0be8b9b4b7ae9db810582e97f170c0dff2e70",
+      "quote_paragraphs": [
+        "It is important to realize that local linker symbols are not the same as local program variables."
+      ]
+    },
+    {
+      "file": "chapter07_linking.html",
+      "id": "classic-7-archive",
+      "title": "输入顺序影响归档提取",
+      "section": "§7.6.3",
+      "pdf_pages": [
+        725
+      ],
+      "printed_pages": [
+        724
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Initially, E, U, and D are empty.",
+      "english_text_sha256": "7ff0b43197558e1428d8c96ebc286fbe0d7923511c9032f0133f89063b8cf5e3",
+      "quote_paragraphs": [
+        "Initially, E, U, and D are empty."
+      ]
+    },
+    {
+      "file": "chapter07_linking.html",
+      "id": "classic-7-shared-text",
+      "title": "代码页共享需要避免逐进程改写",
+      "section": "§7.10",
+      "pdf_pages": [
+        736
+      ],
+      "printed_pages": [
+        735
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Second, a single copy of the .text section of a shared library in memory can be shared by different running processes.",
+      "english_text_sha256": "c3227d96209dc586610881eb42ad29d34b2da4aaaae52f95c003ed1fa0f24668",
+      "quote_paragraphs": [
+        "Second, a single copy of the .text section of a shared library in memory can be shared by different running processes."
+      ]
+    },
+    {
+      "file": "chapter07_linking.html",
+      "id": "classic-7-pic",
+      "title": "代码可共享，可写状态仍分开",
+      "section": "§7.12",
+      "pdf_pages": [
+        741
+      ],
+      "printed_pages": [
+        740
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Of course, each process will still get its own copy of the read/write data segment.",
+      "english_text_sha256": "73185db1d4c44d56c75450830cbe122f35e67122a7cef6dac8482ed35ce4cbd8",
+      "quote_paragraphs": [
+        "Of course, each process will still get its own copy of the read/write data segment."
+      ]
+    },
+    {
+      "file": "chapter08_exceptional.html",
+      "id": "classic-8-exception",
+      "title": "异常由事件触发",
+      "section": "8.1",
+      "pdf_pages": [
+        760
+      ],
+      "printed_pages": [
+        759
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "An exception is an abrupt change in the control flow in response to some change in the processor’s state.",
+      "english_text_sha256": "905da858033bfe3595804e8754b6b12f8357193ad5106a4c1fa945a8bbfdb93b",
+      "quote_paragraphs": [
+        "An exception is an abrupt change in the control flow in response to some change in the processor’s state."
+      ]
+    },
+    {
+      "file": "chapter08_exceptional.html",
+      "id": "classic-8-process",
+      "title": "进程的经典定义",
+      "section": "8.2",
+      "pdf_pages": [
+        769
+      ],
+      "printed_pages": [
+        768
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The classic definition of a process is an instance of a program in execution.",
+      "english_text_sha256": "3ff588469553b70fbe92232fae8c3c5097778ccb6924686e914fcc16f7d5d0cf",
+      "quote_paragraphs": [
+        "The classic definition of a process is an instance of a program in execution."
+      ]
+    },
+    {
+      "file": "chapter08_exceptional.html",
+      "id": "classic-8-errors",
+      "title": "先查返回值",
+      "section": "8.3",
+      "pdf_pages": [
+        774
+      ],
+      "printed_pages": [
+        773
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Programmers should always check for errors, but unfortunately, many skip error checking because it bloats the code and makes it harder to read.",
+      "english_text_sha256": "8bfef20abc928bcd8a74adb2ca0b254afcec673dd3e310f6fa27f340c7c1a472",
+      "quote_paragraphs": [
+        "Programmers should always check for errors, but unfortunately, many skip error checking because it bloats the code and makes it harder to read."
+      ]
+    },
+    {
+      "file": "chapter08_exceptional.html",
+      "id": "classic-8-pending",
+      "title": "通知表达至少一次",
+      "section": "8.5.1",
+      "pdf_pages": [
+        807
+      ],
+      "printed_pages": [
+        806
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The key idea is that the existence of a pending signal merely indicates that at least one signal has arrived.",
+      "english_text_sha256": "7f98ddb3584dad272188aa77cdfefb52b440eb1a44ea2909e86198a37f336b0e",
+      "quote_paragraphs": [
+        "The key idea is that the existence of a pending signal merely indicates that at least one signal has arrived."
+      ]
+    },
+    {
+      "file": "chapter08_exceptional.html",
+      "id": "classic-8-nonlocal",
+      "title": "跳向仍在执行的调用环境",
+      "section": "8.6",
+      "pdf_pages": [
+        818
+      ],
+      "printed_pages": [
+        817
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "C provides a form of user-level exceptional control flow, called a nonlocal jump, that transfers control directly from one function to another currently executing function without having to go through the normal call-and-return sequence.",
+      "english_text_sha256": "7ef6f906b6ad6ec108ef8626ac24257c122d94ac514ab283c799711af6d2fe3a",
+      "quote_paragraphs": [
+        "C provides a form of user-level exceptional control flow, called a nonlocal jump, that transfers control directly from one function to another currently executing function without having to go through the normal call-and-return sequence."
+      ]
+    },
+    {
+      "file": "chapter09_virtual_memory.html",
+      "id": "classic-9-address",
+      "title": "翻译是一道运行时映射",
+      "section": "Chapter 9",
+      "pdf_pages": [
+        841
+      ],
+      "printed_pages": [
+        840
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The task of converting a virtual address to a physical one is known as address translation.",
+      "english_text_sha256": "324fd67a5cbb81ee84af2fd7d9e4aa54f990c1aa10ce6ec2a7b889e76105e8c0"
+    },
+    {
+      "file": "chapter09_virtual_memory.html",
+      "id": "classic-9-fault",
+      "title": "缺页的缓存解释",
+      "section": "Chapter 9",
+      "pdf_pages": [
+        845
+      ],
+      "printed_pages": [
+        844
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "In virtual memory parlance, a DRAM cache miss is known as a page fault.",
+      "english_text_sha256": "d3ff9f6281e3bbfa72bc68c52e3516bf7c57b5664dc9d5e80b952f8ded93d774"
+    },
+    {
+      "file": "chapter09_virtual_memory.html",
+      "id": "classic-9-cow",
+      "title": "推迟复制",
+      "section": "Chapter 9",
+      "pdf_pages": [
+        873
+      ],
+      "printed_pages": [
+        872
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "By deferring the copying of the pages in private objects until the last possible moment, copy-on-write makes the most efficient use of scarce physical memory.",
+      "english_text_sha256": "15d33bfd28bd36943caf67da30757ec56b6bb1e094a775b9f42bb2631c42137c"
+    },
+    {
+      "file": "chapter09_virtual_memory.html",
+      "id": "classic-9-footer",
+      "title": "已分配块可以省尾部",
+      "section": "Chapter 9",
+      "pdf_pages": [
+        889
+      ],
+      "printed_pages": [
+        888
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Note, however, that free blocks would still need footers.",
+      "english_text_sha256": "5b659348cc5dd086b630cef1537af3408618da24771d52f4534e9f78ff7070de"
+    },
+    {
+      "file": "book_overview.html",
+      "id": "classic-map-part-iii",
+      "title": "从孤立运行走向与设备和程序交互",
+      "section": "Part III · Interaction and Communication between Programs",
+      "pdf_pages": [
+        924
+      ],
+      "printed_pages": [
+        923
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "However, in the real world, application programs use services provided by the operating system to communicate with I/O devices and with other programs.",
+      "english_text_sha256": "7ea1121e07012bbc4799860827330eb2f96fac4971156556073dccaccdbb16e8",
+      "quote_paragraphs": [
+        "However, in the real world, application programs use services provided by the operating system to communicate with I/O devices and with other programs."
+      ]
+    },
+    {
+      "file": "chapter10_system_io.html",
+      "id": "classic-10-eof",
+      "title": "EOF 是返回状态，不是藏在文件末尾的字符",
+      "section": "§10.1",
+      "pdf_pages": [
+        928
+      ],
+      "printed_pages": [
+        927
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "There is no explicit “EOF character” at the end of a file.",
+      "english_text_sha256": "13a49f7b75c178a986ad4452b1bacf83f35be9956199b61ae5a84f334a33f0b0"
+    },
+    {
+      "file": "chapter10_system_io.html",
+      "id": "classic-10-bytes",
+      "title": "文本与二进制的区别由应用解释",
+      "section": "§10.2",
+      "pdf_pages": [
+        928
+      ],
+      "printed_pages": [
+        927
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "To the kernel there is no difference between text and binary files.",
+      "english_text_sha256": "6d906d07d7741da20b53b1a534c104a2b377c1fb7184c3a4f07eba4faeda9b1e"
+    },
+    {
+      "file": "chapter10_system_io.html",
+      "id": "classic-10-lowest",
+      "title": "描述符使用最小可用编号",
+      "section": "§10.3",
+      "pdf_pages": [
+        930
+      ],
+      "printed_pages": [
+        929
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The descriptor returned is always the smallest descriptor that is not currently open in the process.",
+      "english_text_sha256": "0fee767afecbc8b537e6965b2e7e19dc64f096b4aca7d09755a534675590e7bf"
+    },
+    {
+      "file": "chapter10_system_io.html",
+      "id": "classic-10-short",
+      "title": "短计数本身不是错误",
+      "section": "§10.4",
+      "pdf_pages": [
+        932
+      ],
+      "printed_pages": [
+        931
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Such short counts do not indicate an error.",
+      "english_text_sha256": "a44ccbc0a5157df2104f842f89a283a48c5eee492a882bc6a81495bfde054442"
+    },
+    {
+      "file": "chapter10_system_io.html",
+      "id": "classic-10-readn",
+      "title": "固定长度读遇到 EOF 才成功返回短计数",
+      "section": "§10.5.1",
+      "pdf_pages": [
+        934
+      ],
+      "printed_pages": [
+        933
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The rio_readn function can only return a short count if it encounters EOF.",
+      "english_text_sha256": "ea9498ec914d5648602009801aa45730650cf766861a3fef814c01fe95a12d9b"
+    },
+    {
+      "file": "chapter10_system_io.html",
+      "id": "classic-10-mix",
+      "title": "带缓冲读取必须共享同一套位置状态",
+      "section": "§10.5.2",
+      "pdf_pages": [
+        935
+      ],
+      "printed_pages": [
+        934
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "However, calls to these buffered functions should not be interleaved with calls to the unbuffered rio_readn function.",
+      "english_text_sha256": "df57765212bbea75f1cf857e1c69bbcfc0199b26893245f6783ee1c0bc7b9e43"
+    },
+    {
+      "file": "chapter10_system_io.html",
+      "id": "classic-10-size",
+      "title": "长度以字节为单位",
+      "section": "§10.6",
+      "pdf_pages": [
+        940
+      ],
+      "printed_pages": [
+        939
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The st_size member contains the file size in bytes.",
+      "english_text_sha256": "04788f129f51aecf767296f44495dc7a51321e3155020f00dcc60ac9032ca2d6"
+    },
+    {
+      "file": "chapter10_system_io.html",
+      "id": "classic-10-fork",
+      "title": "fork 复制描述符表，共享打开状态",
+      "section": "§10.8",
+      "pdf_pages": [
+        944
+      ],
+      "printed_pages": [
+        943
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Parent and child share the same set of open file tables and thus share the same file position.",
+      "english_text_sha256": "2d7717f6d992a09c32ed74b39dc2aa88bc4134ac71950e145d3db68b9878556c"
+    },
+    {
+      "file": "chapter10_system_io.html",
+      "id": "classic-10-dup",
+      "title": "复制的是描述符表项",
+      "section": "§10.9",
+      "pdf_pages": [
+        946
+      ],
+      "printed_pages": [
+        945
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "The dup2 function copies descriptor table entry oldfd to descriptor table entry newfd, overwriting the previous contents of descriptor table entry newfd.",
+      "english_text_sha256": "73dd4a47977f36bac6ff7ecbe11c3987312b5aaf5dafc2a3d95675380e80b82a"
+    },
+    {
+      "file": "chapter10_system_io.html",
+      "id": "classic-10-stream",
+      "title": "流把描述符与缓冲连起来",
+      "section": "§10.10",
+      "pdf_pages": [
+        948
+      ],
+      "printed_pages": [
+        947
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "A stream of type FILE is an abstraction for a file descriptor and a stream buffer.",
+      "english_text_sha256": "3a91f08a3c2569684ccdfcd5e921e98819569c0015d1fbd068ed658d749d32be"
+    },
+    {
+      "file": "chapter11_network.html",
+      "id": "classic-11-processes",
+      "title": "角色属于进程",
+      "section": "Chapter 11",
+      "pdf_pages": [
+        956
+      ],
+      "printed_pages": [
+        955
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "It is important to realize that clients and servers are processes and not machines, or hosts as they are often called in this context.",
+      "english_text_sha256": "89819903253514d82023fe616fde86a571b4697dad17965c46e0cc5a82d92505"
+    },
+    {
+      "file": "chapter11_network.html",
+      "id": "classic-11-byteorder",
+      "title": "网络顺序保持大端",
+      "section": "Chapter 11",
+      "pdf_pages": [
+        962
+      ],
+      "printed_pages": [
+        961
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Addresses in IP address structures are always stored in (big-endian) network byte order, even if the host byte order is little-endian.",
+      "english_text_sha256": "30474db6861fae3f06e5ca9c6f9533c327d2c212fb7a66705b20b09dacb6dbc4"
+    },
+    {
+      "file": "chapter11_network.html",
+      "id": "classic-11-descriptor",
+      "title": "端点通过描述符呈现",
+      "section": "Chapter 11",
+      "pdf_pages": [
+        970
+      ],
+      "printed_pages": [
+        969
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "From the perspective of a Linux program, a socket is an open file with a corresponding descriptor.",
+      "english_text_sha256": "165396bc7305f02a79cd007463f897a7aa4c738b3486f60a2b94221ac6a4e5b6"
+    },
+    {
+      "file": "chapter11_network.html",
+      "id": "classic-11-eof",
+      "title": "EOF不是一个特殊字符",
+      "section": "Chapter 11",
+      "pdf_pages": [
+        985
+      ],
+      "printed_pages": [
+        984
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "First, we need to understand that there is no such thing as an EOF character.",
+      "english_text_sha256": "87901cf2c6b0bef2f2da04d442ecad0de5378425867bf5c40639aef08088cd6d"
+    },
+    {
+      "file": "chapter11_network.html",
+      "id": "classic-11-content",
+      "title": "内容的两个部分",
+      "section": "Chapter 11",
+      "pdf_pages": [
+        986
+      ],
+      "printed_pages": [
+        985
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "To Web clients and servers, content is a sequence of bytes with an associated MIME (multipurpose internet mail extensions) type.",
+      "english_text_sha256": "984dbe64d0a464eff8ab653895fca35d60c4ed6edc50983125f11e2809b07712"
+    },
+    {
+      "file": "chapter11_network.html",
+      "id": "classic-11-cgi",
+      "title": "标准输出为何成为网络输出",
+      "section": "Chapter 11",
+      "pdf_pages": [
+        1001
+      ],
+      "printed_pages": [
+        1000
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Thus, everything that the CGI program writes to standard output goes directly to the client process, without any intervention from the parent process.",
+      "english_text_sha256": "9160d06868c83fc48b31132cb7a9106fdaea96254f81ea7a5dda217b8a527fa9"
+    },
+    {
+      "file": "chapter12_concurrency.html",
+      "id": "classic-12-shared",
+      "title": "共享的判据是实例",
+      "section": "Chapter 12",
+      "pdf_pages": [
+        1032
+      ],
+      "printed_pages": [
+        1031
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "We say that a variable v is shared if and only if one of its instances is referenced by more than one thread.",
+      "english_text_sha256": "56c776c4462a0ddc318d71f4250daa061ce647edd58d52fbd8b63ec93f248f0e"
+    },
+    {
+      "file": "chapter12_concurrency.html",
+      "id": "classic-12-speedup",
+      "title": "先定义比较的工作量",
+      "section": "Chapter 12",
+      "pdf_pages": [
+        1056
+      ],
+      "printed_pages": [
+        1055
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Absolute speedup is a truer measure of the benefits of parallelism than relative speedup.",
+      "english_text_sha256": "4938ed85d76f6f8078fa1743818aee5c0bb06bbc40cf6ac90528394b2cb85650"
+    },
+    {
+      "file": "chapter12_concurrency.html",
+      "id": "classic-12-reentrant",
+      "title": "调用者也是条件的一部分",
+      "section": "Chapter 12",
+      "pdf_pages": [
+        1061
+      ],
+      "printed_pages": [
+        1060
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "However, it is important to realize that reentrancy is sometimes a property of both the caller and the callee, and not just the callee alone.",
+      "english_text_sha256": "9d37ee46537723c18bf5c010ecff9dd268a1a8748d664410675b5e05a10af662"
+    },
+    {
+      "file": "chapter12_concurrency.html",
+      "id": "classic-12-lock-order",
+      "title": "锁的统一顺序",
+      "section": "Chapter 12",
+      "pdf_pages": [
+        1066
+      ],
+      "printed_pages": [
+        1065
+      ],
+      "category": "classic-passage",
+      "original_title": null,
+      "original_number": null,
+      "equation_numbers": [],
+      "english_text": "Given a total ordering of all mutexes, a program is deadlock-free if each thread acquires its mutexes in order and releases them in reverse order.",
+      "english_text_sha256": "cbc84beeaa0a25a2a7f8a32e4ccfba8652e5c7e3e3d5e0dfa3ad8cd822e1c4e2"
+    }
+  ],
+  "part_two_revision": {
+    "date": "2026-10-14",
+    "new_passages": 15,
+    "scope": "Part II opening and chapters 7–9; previous excerpts retained with their historical review."
+  },
+  "part_three_revision": {
+    "date": "2026-10-14",
+    "new_passages": 21,
+    "scope": "Part III opening and chapters 10–12; prior excerpts retain their historical review."
+  }
+}

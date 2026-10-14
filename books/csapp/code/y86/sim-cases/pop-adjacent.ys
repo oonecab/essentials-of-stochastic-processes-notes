@@ -1,0 +1,9 @@
+irmovq stack,%rsp
+popq %rax
+popq %rbx
+popq %rcx
+halt
+.pos 0x200
+stack: .quad 11
+.quad 22
+.quad 33

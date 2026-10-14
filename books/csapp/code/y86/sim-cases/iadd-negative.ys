@@ -1,0 +1,3 @@
+irmovq $5,%rax
+iaddq $-7,%rax
+halt

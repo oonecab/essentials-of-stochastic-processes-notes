@@ -1,0 +1,3 @@
+irmovq $0x7fffffffffffffff,%rax
+iaddq $1,%rax
+halt

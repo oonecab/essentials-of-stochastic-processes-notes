@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>序言：从程序员的视角进入系统 · CS:APP 中文伴读</title><style>
+:root{--ink:#252b29;--sub:#58615d;--rule:#d9dfda;--green:#285a4e;--paper:#fffefa;--tint:#f4f6f2}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.9 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}main{max-width:860px;margin:auto;padding:48px 24px 90px}h1{font-size:2.2rem;line-height:1.3;margin:.2rem 0}h2{font-size:1.55rem;margin:3.4rem 0 1.2rem;padding-bottom:.45rem;border-bottom:1px solid var(--rule)}h3{font-size:1.16rem;margin:2rem 0 .6rem}p{margin:.7rem 0 1.1rem}header{padding-bottom:22px;border-bottom:1px solid var(--rule)}.overline,.source,.small,figcaption{color:var(--sub);font-size:.85rem}.intro{font-size:1.08rem}a{color:var(--green);text-underline-offset:3px}nav{border-left:3px solid var(--green);padding:.6rem 1.3rem;margin:2rem 0;background:var(--tint)}nav ul{margin:.3rem 0;padding-left:1.2rem;columns:2}nav li{break-inside:avoid}.passage{border-left:2px solid var(--green);padding:.15rem 0 .15rem 1.2rem;margin:1.5rem 0}.english{font:italic 1.05rem/1.7 Georgia,serif}.passage p{margin:.25rem 0}pre{background:var(--tint);border:1px solid var(--rule);padding:1rem 1.1rem;overflow:auto;font:14px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}code{font:.9em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}pre code{font:inherit}.callout{background:var(--tint);padding:.8rem 1.1rem;margin:1.4rem 0;border-left:2px solid var(--green)}.scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.91rem;margin:1.1rem 0}th,td{padding:.6rem .7rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule)}th{border-top:1px solid var(--rule);background:var(--tint)}.wide{min-width:640px}figure{margin:1.5rem 0}figure .scroll{padding:12px 8px;border:1px solid var(--rule);background:var(--tint)}figcaption{margin-top:.6rem}svg{display:block;width:100%;height:auto;min-width:620px}svg text{font-family:system-ui,-apple-system,"PingFang SC",sans-serif;text-anchor:middle;fill:var(--ink);font-size:16px}svg .n{fill:var(--paper);stroke:var(--green);stroke-width:1.3}svg .e{fill:none;stroke:#7b8f85;stroke-width:1.4}svg .hint{font-size:13px;fill:var(--sub)}ul,ol{padding-left:1.5rem}li{margin:.35rem 0}footer{border-top:1px solid var(--rule);padding-top:1rem;margin-top:4rem;color:var(--sub);font-size:.85rem}@media(max-width:640px){main{padding:30px 18px 60px}h1{font-size:1.75rem}nav ul{columns:1}h2{font-size:1.3rem}}
+.exercise{margin:.8rem 0;border:1px solid var(--rule);padding:.75rem 1rem;scroll-margin-top:16px}.exercise summary{cursor:pointer;color:var(--green);font-weight:600}.exercise summary:focus-visible{outline:2px solid var(--green);outline-offset:4px}.exercise-index{display:flex;flex-wrap:wrap;gap:.4rem 1rem;margin:1rem 0}.exercise .answer{margin-top:1rem}.tree-code{overflow-wrap:anywhere;word-break:break-word}.exercise .scroll table{min-width:620px}
+
+/* Native, static MathML: no network resources or runtime typesetting. */
+math{font-family:"STIX Two Math","Cambria Math",math;font-size:1.04em}
+.math-inline{display:inline-block;max-width:calc(100% - .16em);overflow-x:auto;overflow-y:hidden;vertical-align:middle;margin:0 .08em;padding:0 .02em}
+.equation,.math-block{overflow-x:auto;max-width:100%;padding:.7rem .25rem;margin:1rem 0;text-align:center}
+.equation math,.math-block math{display:block;width:max-content;margin:0 auto;font-size:1.08em}
+.answer h4{margin:1.35rem 0 .5rem;font-size:1rem}
+:not(pre)>code{overflow-wrap:anywhere}
+pre code{overflow-wrap:normal;white-space:pre}
+
+.comparison,.benchmark{min-width:800px}.array-values{min-width:620px}.array-values th,.array-values td{text-align:center;padding:.4rem .55rem}.forest-label{font-weight:600}svg .hint{font-size:12px}.answer pre{font-size:13px}.exercise{scroll-margin-top:20px}
+
+.code-pair{margin:1.2rem 0;border-left:2px solid var(--rule);padding-left:1rem}.code-version{margin:.5rem 0;padding:.35rem 0}.code-version>summary{cursor:pointer;font-weight:600;color:var(--green)}.code-version>summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}.code-version pre{margin:.7rem 0 1rem}.code-reference{font-size:.92rem}.pair-note{font-size:.9rem;color:var(--sub)}.chapter-nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem}.exercise>summary{line-height:1.65}.experiment{margin:1.2rem 0;padding:.7rem 1rem;border-left:2px solid var(--green);background:var(--tint)}
+
+.meta,.caption{color:var(--sub);font-size:.85rem}
+.scroll,.table-scroll,.diagram{max-width:100%;overflow-x:auto}
+main,header,section,.answer,.code-pair,.code-version{min-width:0}
+.math-inline{padding:.20em .05em}
+.chapter-nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem}
+.scroll>table{min-width:620px}
+.puzzle{width:auto;margin:1.2rem auto}
+.scroll>table.puzzle{min-width:0}
+.puzzle th,.puzzle td{text-align:center;min-width:44px}
+.verification-table,.state-table,.benchmark{font-variant-numeric:tabular-nums}
+.diagram{margin:1.2rem 0;padding:1rem 1.1rem;border:1px solid var(--rule);background:var(--tint)}
+.diagram figcaption{margin:0 0 .65rem}
+.chain{display:flex;align-items:center;gap:.55rem;min-width:max-content;font-size:.92rem}
+.diagram>.chain+.chain{margin-top:.7rem}
+.chain .node{border:1px solid #9caaa2;background:var(--paper);padding:.3rem .6rem;white-space:nowrap}
+.chain .edge{color:var(--green);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:nowrap}
+.diagram-notes{margin:.75rem 0 0;padding-left:1.2rem;font-size:.92rem}
+.diagram-notes li{margin:0}
+.step-table th:first-child,.step-table td:first-child{width:5.3rem;white-space:nowrap}
+.step-table th:nth-child(2){width:14rem}
+.step-table code{white-space:nowrap}
+.step-table .chain{gap:.35rem}
+.step-table .node{padding:.1rem .4rem}
+.state-table{table-layout:fixed}
+.state-table th:first-child{width:37%}
+.state-table td:not(:first-child),.state-table th:not(:first-child){text-align:center}
+.state-table td:last-child{white-space:nowrap}
+svg .node{fill:var(--paper);stroke:var(--green);stroke-width:1.3}
+svg .edge{fill:none;stroke:#7b8f85;stroke-width:1.4}
+svg .small{font-size:12px;fill:var(--sub)}
+svg .chapter-link{cursor:pointer}
+svg .chapter-link:hover .node,svg .chapter-link:focus-visible .node{fill:var(--tint);stroke-width:2.5}
+blockquote{margin:1.4rem 0;padding:.5rem 1.2rem;border-left:2px solid var(--green);background:var(--tint)}
+hr{border:0;border-top:1px solid var(--rule);margin:2.6rem 0}
+@media(max-width:640px){.diagram{padding:.8rem}.state-table{table-layout:auto;min-width:570px}}
+
+/* Chinese textbook prompts precede the worked solutions. */
+.exercise-question{margin:1.15rem 0 1.25rem;padding:.85rem 1rem;background:var(--tint);border-left:2px solid var(--green);min-width:0}
+.question-title,.answer-title{margin:.15rem 0 .8rem;font-size:1rem;color:var(--green)}
+.exercise-question>p:last-child{margin-bottom:.2rem}
+.exercise-question ol{margin:.65rem 0 1rem}
+.question-note{font-size:.9rem;color:var(--sub);border-top:1px solid var(--rule);padding-top:.6rem}
+.question-context{font-size:.94rem}
+.exercise-question .source{margin-top:1rem}
+.question-code{font-size:13px}
+svg.question-large-tree{min-width:1120px}
+
+/* Benchmark figures use recorded table data and native view controls. */
+.benchmark-figure{margin:1.8rem 0;padding:1rem;border:1px solid var(--rule);background:#f7f8f4;min-width:0;max-width:100%}
+.benchmark-kicker{font-size:.73rem;letter-spacing:.09em;color:var(--green);font-weight:650;margin-bottom:.25rem}
+.benchmark-figure .benchmark-title{font-size:1.06rem;line-height:1.6;margin:.15rem 0 1rem;color:var(--ink)}
+.benchmark-selector{min-width:0;margin:0;padding:0;border:0;position:relative}
+.benchmark-sr,.benchmark-input{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.benchmark-tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .9rem}
+.benchmark-tabs label{display:inline-block;cursor:pointer;padding:.22rem .7rem;border:1px solid #cbd7ce;border-radius:4px;background:var(--paper);font-size:.82rem;line-height:1.7;color:var(--sub)}
+.benchmark-tabs label:hover{border-color:var(--green);color:var(--green)}
+.benchmark-view{display:none}.benchmark-view:first-child{display:block}
+.benchmark-input~.benchmark-panels>.benchmark-view{display:none}
+.benchmark-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;align-items:start}
+.benchmark-grid:has(>.benchmark-chart:only-child){grid-template-columns:minmax(0,1fr)}
+.benchmark-chart:only-child:not(.benchmark-wide) .benchmark-svg{max-width:560px;margin:0 auto}
+.benchmark-grid[data-layout="wide"]{grid-template-columns:minmax(0,1fr)}
+.benchmark-chart{min-width:0;max-width:100%;padding:.7rem .6rem .3rem;border:1px solid #e1e7e0;background:var(--paper)}
+.benchmark-chart>h4{font-size:.85rem;line-height:1.5;font-weight:600;color:var(--sub);margin:.1rem .2rem .25rem}
+.benchmark-chart>.scroll{padding:0;border:0;background:transparent}
+.benchmark-svg{width:100%;height:auto;min-width:0;display:block}
+.benchmark-wide .benchmark-svg{min-width:720px}
+.benchmark-figure figcaption{font-size:.8rem;line-height:1.85;margin-top:.8rem}
+.benchmark-index ul{columns:2;font-size:.87rem}.benchmark-index li{break-inside:avoid;margin:.45rem 0}
+@media(max-width:640px){.benchmark-figure{padding:.75rem .6rem}.benchmark-grid{grid-template-columns:minmax(0,1fr)}.benchmark-chart{padding:.6rem .35rem .25rem}.benchmark-tabs label{padding:.25rem .55rem}.benchmark-index ul{columns:1}}
+.benchmark-input:nth-of-type(1):checked~.benchmark-panels>.benchmark-view:nth-child(1){display:block}
+.benchmark-input:nth-of-type(1):checked~.benchmark-tabs>label:nth-child(1){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(1):focus-visible~.benchmark-tabs>label:nth-child(1){outline:2px solid var(--green);outline-offset:3px}
+.benchmark-input:nth-of-type(2):checked~.benchmark-panels>.benchmark-view:nth-child(2){display:block}
+.benchmark-input:nth-of-type(2):checked~.benchmark-tabs>label:nth-child(2){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(2):focus-visible~.benchmark-tabs>label:nth-child(2){outline:2px solid var(--green);outline-offset:3px}
+.benchmark-input:nth-of-type(3):checked~.benchmark-panels>.benchmark-view:nth-child(3){display:block}
+.benchmark-input:nth-of-type(3):checked~.benchmark-tabs>label:nth-child(3){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(3):focus-visible~.benchmark-tabs>label:nth-child(3){outline:2px solid var(--green);outline-offset:3px}
+.benchmark-input:nth-of-type(4):checked~.benchmark-panels>.benchmark-view:nth-child(4){display:block}
+.benchmark-input:nth-of-type(4):checked~.benchmark-tabs>label:nth-child(4){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(4):focus-visible~.benchmark-tabs>label:nth-child(4){outline:2px solid var(--green);outline-offset:3px}
+.benchmark-input:nth-of-type(5):checked~.benchmark-panels>.benchmark-view:nth-child(5){display:block}
+.benchmark-input:nth-of-type(5):checked~.benchmark-tabs>label:nth-child(5){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(5):focus-visible~.benchmark-tabs>label:nth-child(5){outline:2px solid var(--green);outline-offset:3px}
+
+/* Reading rail: one table of contents beside the book page. */
+.reading-layout{display:grid;grid-template-columns:240px minmax(0,860px);gap:32px;max-width:1200px;margin:0 auto;padding:0 24px;align-items:start}
+.reading-layout>main{width:100%;min-width:0;margin:0}
+.chapter-sidebar{position:sticky;top:32px;max-height:calc(100dvh - 64px);overflow-y:auto;overscroll-behavior:contain;padding:8px 16px 12px 0;margin-top:40px;border-right:1px solid var(--rule);scrollbar-width:thin}
+.toc-panel>summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;list-style:none;padding:.45rem .55rem;color:var(--green);font-size:.9rem;font-weight:650;cursor:pointer}
+.toc-panel>summary::-webkit-details-marker{display:none}
+.toc-panel>summary::after{content:"+";font-size:1.1rem;font-weight:400}
+.toc-panel[open]>summary::after{content:"−"}
+.toc-panel>summary:focus-visible,.chapter-toc a:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.chapter-toc{border:0;background:transparent;margin:.45rem 0 0;padding:0;font-size:.84rem;line-height:1.65}
+.chapter-toc ul{columns:1;list-style:none;margin:0;padding:0}
+.chapter-toc li{margin:.18rem 0}
+.chapter-toc a{display:block;padding:.5rem .6rem;border-left:2px solid transparent;text-decoration:none;overflow-wrap:anywhere;color:var(--sub)}
+.chapter-toc a:hover{color:var(--green);background:var(--tint)}
+.chapter-toc a[aria-current="location"]{color:var(--green);border-left-color:var(--green);background:var(--tint);font-weight:600}
+.chapter-toc .toc-home{margin-bottom:.55rem;font-size:.8rem;color:var(--green)}
+.skip-link{position:fixed;left:16px;top:-100px;z-index:100;padding:.5rem 1rem;background:var(--paper);border:1px solid var(--green)}
+.skip-link:focus{top:12px}
+main[id],main [id]{scroll-margin-top:24px}
+@media(max-width:1099px){
+ .reading-layout{display:block;padding:0;max-width:860px}
+ .reading-layout>main{margin:auto}
+ .chapter-sidebar{position:static;top:0;z-index:10;margin:0;padding:8px 24px;border-right:0;border-bottom:1px solid var(--rule);background:var(--paper);max-height:none;overflow:visible}
+ .toc-enhanced .chapter-sidebar{position:sticky}
+ .toc-panel>summary{padding:.35rem 0;font-size:.88rem}
+ .chapter-toc{max-height:60dvh;overflow-y:auto;overscroll-behavior:contain;padding-bottom:.4rem}
+ main[id],main [id]{scroll-margin-top:80px}
+}
+@media(max-width:640px){.chapter-sidebar{padding:8px 18px}}
+@media print{.reading-layout{display:block;max-width:860px;padding:0}.chapter-sidebar,.skip-link{display:none}.reading-layout>main{padding:24px}}
+
+.result{font-variant-numeric:tabular-nums}.source-link{white-space:normal}
+.book-card{padding:1rem 0;border-bottom:1px solid var(--rule)}
+.book-card h3{margin:.2rem 0}.book-card p{margin:.4rem 0}
+.chart-svg{min-width:0} .chart-svg text{font-size:13px}
+.exercise-index a{font-variant-numeric:tabular-nums}.solution-link{font-size:.9rem}
+.exercise-question .scroll>table{min-width:480px}
+.question-note strong{color:var(--green)}
+
+/* Supplementary reading notes share the page's type and color palette. */
+.reading-notes{margin:2rem 0 0;padding:0.8rem 1rem;border-left:2px solid var(--green);background:var(--tint);font-size:0.92rem;line-height:1.85}
+.reading-notes>summary{color:var(--green);font-weight:650;cursor:pointer;list-style:none}
+.reading-notes>summary::-webkit-details-marker{display:none}
+.reading-notes>summary::after{content:"＋";float:right;font-weight:400}
+.reading-notes[open]>summary::after{content:"−"}
+.reading-notes>summary:focus-visible,.annotation-context a:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+.annotation-card{min-width:0;margin:1.15rem 0 0;padding:1rem 0 0;border-top:1px solid var(--rule)}
+.annotation-card:first-child{border-top:0;padding-top:0}
+.annotation-kind{display:block;font-size:0.73rem;font-weight:600;letter-spacing:0.05em;color:var(--green);margin-bottom:0.25rem}
+.annotation-card h3{font-size:0.97rem;line-height:1.65;margin:0 0 0.5rem;font-weight:650}
+.annotation-card p{margin:0.4rem 0 0.7rem}
+.annotation-card p:last-child{margin-bottom:0}
+.annotation-card .equation{padding:0.5rem 0;margin:0.65rem 0}
+.annotation-card math{font-size:1em}
+.annotation-sidebar{display:none}
+@media(min-width:1440px){
+ .notes-enhanced .reading-layout{grid-template-columns:240px minmax(0,860px) 280px;max-width:1524px;gap:32px}
+ .notes-enhanced main .reading-notes{display:none}
+ .notes-enhanced .annotation-sidebar:not([hidden]){display:block;position:sticky;top:32px;max-height:calc(100dvh - 64px);overflow-y:auto;overscroll-behavior:contain;min-width:0;margin-top:40px;padding:8px 0 12px 22px;border-left:1px solid var(--rule);font-size:0.9rem;line-height:1.85;scrollbar-width:thin}
+ .annotation-label{color:var(--green);font-size:0.87rem;font-weight:650;margin:0 0 0.75rem}
+ .annotation-context{font-size:0.85rem;line-height:1.65;margin:0 0 1.25rem}
+ .annotation-context a{color:var(--sub);text-decoration:none}
+ .annotation-context a:hover{color:var(--green);text-decoration:underline}
+ .annotation-sidebar .annotation-card{margin-top:1.5rem;padding-top:1.35rem}
+ .annotation-sidebar .annotation-card:first-child{margin-top:0;padding-top:0}
+ .annotation-sidebar .annotation-card h3{font-size:0.95rem}
+}
+@media print{.annotation-sidebar{display:none!important}main .reading-notes{display:block!important;break-inside:avoid}}
+
+/* Source statements, bilingual excerpts and preface share the reading layout. */
+.source-statement{margin:1.35rem 0;padding:.2rem 0 .8rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);min-width:0}
+.source-statement+.source-statement{border-top:0}
+.source-statement>h3,.source-statement>h4{font-size:1.08rem;line-height:1.65;margin:.75rem 0 .6rem}
+.statement-heading>.statement-label{display:block}
+.source-statement>summary{cursor:pointer;color:var(--green);font-weight:650;line-height:1.7;padding:.55rem 0}
+.source-statement>summary:focus-visible,.statement-index>summary:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+.statement-body{padding:.15rem 0 .15rem .8rem;border-left:2px solid var(--green);min-width:0}
+.statement-label{font-size:.8rem;font-weight:650;letter-spacing:.03em;color:var(--green);margin:.7rem 0 .3rem}
+.original-excerpt{font:1rem/1.85 Georgia,"Times New Roman",serif;margin:.5rem 0 1.15rem;padding:.75rem 1rem;overflow-wrap:break-word;min-width:0}
+.original-excerpt p{margin:.25rem 0 .7rem}.original-excerpt p:last-child{margin-bottom:0}
+.original-excerpt .equation,.original-excerpt .math-block{margin:.45rem 0}.original-excerpt math{font-size:1em}
+.statement-index{margin:1.2rem 0;padding:.7rem 1rem;background:var(--tint);border-left:2px solid var(--green)}
+.statement-index>summary{cursor:pointer;color:var(--green);font-weight:600}
+.statement-links{margin:.8rem 0 .4rem;columns:2;column-gap:1.6rem;list-style:none;padding:0;font-size:.88rem}
+.statement-links li{break-inside:avoid;margin:.3rem 0}.statement-index .source{margin:.6rem 0 .2rem}
+.source-chapter-index{margin:.8rem 0;padding:.65rem .9rem;border:1px solid var(--rule)}
+.source-chapter-index>summary{cursor:pointer;color:var(--green);font-weight:600}
+.source-chapter-index>summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.statement-note{font-size:.91rem;color:var(--sub);padding:.7rem .8rem;background:var(--tint);margin:.8rem 0}
+.preface-signature{margin-top:1.5rem;text-align:right;color:var(--sub)}
+@media(max-width:640px){.statement-body{padding-left:.6rem}.original-excerpt{padding:.65rem .75rem;font-size:.95rem}.statement-links{columns:1}.statement-index{padding:.65rem .8rem}}
+@media print{.source-statement,.original-excerpt{break-inside:avoid}}
+
+@media print{.annotation-rail{display:none!important}.reading-notes{display:block!important}main details{break-inside:auto}main details::details-content{content-visibility:visible!important}main details>summary{font-weight:600}.scroll,pre,.equation,.math-block{overflow:visible}pre{white-space:pre-wrap;overflow-wrap:anywhere}}
+
+/* Long expressions wrap in prose; code, equations and tables own their scrolling. */
+.reading-layout>main,.annotation-card{overflow-wrap:anywhere}
+#s1-2 th:first-child,#s1-2 td:first-child{min-width:76px;white-space:nowrap}
+#map th:nth-child(3),#map td:nth-child(3){min-width:9.2em}
+.scroll>table.compact-table{min-width:0}
+@media(max-width:640px){.compact-table th,.compact-table td{padding:.55rem .4rem}}
+[data-horizontal-overflow="true"]::after{content:attr(data-scroll-label);display:block;position:sticky;left:0;width:100%;margin-top:.25rem;color:var(--green);font: .75rem/1.8 system-ui,-apple-system,"PingFang SC",sans-serif;text-align:left}
+[data-horizontal-overflow="true"]:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+@media print{[data-horizontal-overflow="true"]::after{display:none}}
+
+.reading-layout>main>section:not(#exercises):not(#self-check) pre{font-size:14px}
+
+.worked{background:var(--tint);border-left:2px solid var(--green);padding:.8rem 1.1rem;margin:1.5rem 0}.worked h3{margin:.2rem 0 .7rem}.english-title{display:block;color:var(--sub);font-size:.85rem;font-weight:400}.code-download{font-size:.9rem}.code-explanation li{margin:.7rem 0}.flow-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}svg .highlight{fill:#e6eee7;stroke:var(--green)}.solution-steps>li{margin:1rem 0}.question-note strong{color:var(--green)}.experiment-output{font-size:.9rem}main [id]{scroll-margin-top:100px}@media(max-width:1099px){main [id]{scroll-margin-top:132px}}
+</style></head><body><a class="skip-link" href="#top">跳到正文</a><div class="reading-layout"><aside class="chapter-sidebar" aria-label="章节目录"><details class="toc-panel" id="toc-panel" open><summary>本章目录</summary><nav class="chapter-toc" id="chapter-toc" aria-label="本章目录"><a class="toc-home" href="book_overview.html">全书地图</a><a class="toc-home" href="preface.html">序言</a><ul><li><a href="#perspective">一、程序员视角怎样决定全书的选材</a></li><li><a href="#background">二、作者的机器背景也是例子的前提</a></li><li><a href="#method">三、把阅读变成一轮可检验的推演</a></li><li><a href="#overview">四、十二章围绕同一个程序逐渐扩展</a></li><li><a href="#edition-history">五、版次、课程和实验怎样塑造这本书</a></li></ul></nav></details></aside><main id="top" tabindex="-1"><header><p class="overline">CS:APP · 第三版 GLOBAL EDITION · 中文伴读</p><h1>序言：从程序员的视角进入系统</h1><p class="intro">先理解作者为什么这样选材，再把每一次阅读变成可推演、可观察的程序问题。</p><p class="source">原书：<a class="source-pdf" href="../csapp.pdf#page=20">印刷 19—34 页 / PDF 20—35 页</a></p>
+<p class="chapter-nav"><a href="book_overview.html">全书地图</a><a href="book_overview.html#program-guide">程序说明</a><a href="book_overview.html">← 全书地图</a><a href="chapter01_tour.html">第 1 章 →</a></p></header><section id="perspective"><h2>一、程序员视角怎样决定全书的选材<span class="english-title" lang="en">A Programmer’s Perspective</span></h2><details class="statement-index" id="source-index"><summary>本页原书摘录 · 5 处</summary><ul class="statement-links"><li><a href="#classic-preface-perspective">以程序员能写出怎样的程序为尺度</a></li><li><a href="#classic-preface-machine">例子的机器和软件环境</a></li><li><a href="#classic-preface-active">学系统要亲手推演和运行</a></li><li><a href="#classic-preface-code">书中的程序来自实际源文件</a></li><li><a href="#classic-preface-cache-lab">用同一个模型连接分析与优化</a></li></ul></details>
+<p class="source">原书：<a class="source-pdf" href="../csapp.pdf#page=20">印刷 19 页 / PDF 20 页</a></p>
+<div class="source-statement" id="classic-preface-perspective"><h3 class="statement-heading"><span class="statement-label">原书摘录</span>以程序员能写出怎样的程序为尺度</h3><p class="source">Preface · A Programmer’s Perspective · <a class="source-pdf" href="../csapp.pdf#page=20">印刷 19 页 / PDF 20 页</a></p><blockquote class="original-excerpt" lang="en"><p>Our aim is to explain the enduring concepts underlying all computer systems, and to show you the concrete ways that these ideas affect the correctness, performance, and utility of your application programs. Many systems books are written from a builder’s perspective, describing how to implement the hardware or the systems software, including the operating system, compiler, and network interface. This book is written from a programmer’s perspective, describing how application programmers can use their knowledge of a system to write better programs.</p></blockquote><div class="statement-body"><p><strong>译文。</strong>我们的目标，是解释各种计算机系统共同依赖的持久概念，并具体说明这些思想怎样影响应用程序的正确性、性能与用途。许多系统书籍从构建者的视角出发，讲解怎样实现硬件或系统软件，包括操作系统、编译器和网络接口。本书则从程序员的视角出发，讲解应用程序员怎样运用系统知识写出更好的程序。</p><p><strong>接着读：</strong><a href="#overview">同一目标如何贯穿十二章</a> · <a href="chapter01_tour.html#s1-3">理解编译系统能解决什么问题</a></p></div></div>
+
+<p>这三个词给整本书设定了尺度。正确性意味着程序在规定条件下产生应有结果；性能意味着它用多少时间与资源实现结果；用途则关系到它能否利用系统提供的能力，完成文件、网络、并发等现实任务。作者跨越硬件、编译器、操作系统与网络，是因为同一个应用会同时受到这些层次影响。</p>
+<p>以数组求和为例。先要知道元素的整数范围或浮点精度，才谈得上结果是否正确；再要理解编译出的指令依赖和内存访问，才解释得了速度；若数组来自文件或网络，还要处理输入、资源与失败路径。把各层放在一起，问题才能闭合。</p>
+<p>因此本书讲汇编时，经常从C编译结果进入；讲硬件时，关注一条指令怎样获得输入和写出结果；讲操作系统时，沿着应用能调用的接口解释行为。每次学习都可以用一个问题判断理解是否落地：这一机制会怎样改变我写程序、判断结果或定位错误的方式？</p>
+<p>作者还把这种学习定位为进一步构建系统的基础。先明白系统向程序承诺什么，再理解内部如何实现，才能在以后学习编译器、体系结构或操作系统时区分外部契约与内部选择。</p>
+<details class="reading-notes" id="notes-perspective" data-notes-for="perspective" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">理解</span><h3>用程序问题组织知识</h3><p>一个错误比较式可以引出位宽、转换与条件码。先保留具体问题，再沿书中的机制逐层回答。</p>
+</div><div class="annotation-card"><span class="annotation-kind">读法</span><h3>每章都检查三个维度</h3><p>得到什么结果、付出什么代价、能完成什么任务，是比只记术语更稳定的阅读坐标。</p>
+</div></div></details>
+</section><section id="background"><h2>二、作者的机器背景也是例子的前提<span class="english-title" lang="en">Assumptions about the Reader’s Background</span></h2>
+<p class="source">原书：<a class="source-pdf" href="../csapp.pdf#page=20">印刷 19 页 / PDF 20 页</a></p>
+<div class="source-statement" id="classic-preface-machine"><h3 class="statement-heading"><span class="statement-label">原书摘录</span>例子的机器和软件环境</h3><p class="source">Preface · Assumptions about the Reader’s Background · <a class="source-pdf" href="../csapp.pdf#page=20">印刷 19—20 页 / PDF 20—21 页</a></p><blockquote class="original-excerpt" lang="en"><p>This book focuses on systems that execute x86-64 machine code.</p><p>We consider how these machines execute C programs on Linux.</p><p>The machine-language examples were all generated by the GNU gcc compiler running on x86-64 processors. We do not assume any prior experience with hardware, machine language, or assembly-language programming.</p></blockquote><div class="statement-body"><p><strong>译文。</strong>本书集中讨论执行 x86-64 机器代码的系统，并考察这些机器怎样在 Linux 上执行 C 程序。机器语言例子均由运行在 x86-64 处理器上的 GNU gcc 编译器生成。作者不假定读者已经具有硬件、机器语言或汇编语言的经验。</p><p>以上三段分别摘自该节的相关说明。它们把“可观察的具体实现”和“无需预先掌握汇编”放在一起：学习入口可以低，但结论的环境不能省略。下面按语言、编译器与机器三层拆开这些条件。</p><p><strong>接着读：</strong><a href="chapter03_machine_level.html#s3-2">程序编码与编译环境</a> · <a href="book_overview.html#program-guide">本机实验的条件</a></p></div></div>
+
+<p>序言明确选用在Linux上执行C程序的x86-64系统。这个选择把讨论固定到可以编译、运行和观察的对象：整数尺寸、寄存器名字、调用约定、目标文件和系统调用都有具体含义。作者不假定读者已学过汇编或硬件，但假定能进行基本编程并使用终端与文件。</p>
+<p>对从Java或Python进入的读者，真正需要补上的常常不是循环语法，而是C如何表达对象和存储：指针保存地址，数组访问依赖类型与步长，动态分配需要管理寿命，格式化I/O依赖参数类型。变量看起来相同，语言为溢出、别名和对象生命周期规定的行为可能不同。</p>
+<div class="scroll"><table><thead><tr><th scope="col">遇到的结论</th><th scope="col">需要确认的前提</th><th scope="col">在笔记中怎样使用</th></tr></thead><tbody><tr><td>整数加法只留下低位</td><td>明示位宽的机器模型或无符号C运算</td><td>与C有符号溢出的语言规则分别解释</td></tr><tr><td>long和指针均为8字节</td><td>书中的x86-64/Linux LP64环境</td><td>用sizeof观察宿主，不当成所有平台定律</td></tr><tr><td>前六个整数参数放寄存器</td><td>相应System V ABI及参数类别</td><td>用调用实例追踪；聚合与浮点按各自规则</td></tr><tr><td>某段代码的CPE是3</td><td>原书参考机器、运算和编译条件</td><td>作为历史测量解释依赖关系，实测另记环境</td></tr></tbody></table></div>
+<p>这里尤其要分清“源语言规则”“编译器输出”“机器执行”三层。C程序可由不同编译器变成不同指令，某份汇编也可能只在指定ABI下成立。自己的机器输出不同，不一定是原理失效；先核对输入、类型、编译选项与目标机器，再寻找不一致。</p>
+<p>书中例子具有明确时代背景。读者今天使用其他处理器时，可以先在本机运行可移植C/Python模型，再用明确目标的工具观察x86-64汇编；只有实际执行了目标指令，才据此描述目标运行行为。</p>
+<details class="reading-notes" id="notes-background" data-notes-for="background" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">理解</span><h3>可复现需要连同条件一起保存</h3><p>输入和源码之外，编译器选项、目标体系结构与数据类型同样影响观察结果。</p>
+</div><div class="annotation-card"><span class="annotation-kind">边界</span><h3>语言相似不代表算术相同</h3><p>Python整数可增长；C无符号整数按位宽取模；C有符号溢出另有规则。跨语言验证必须先对齐模型。</p>
+</div></div></details>
+</section><section id="method"><h2>三、把阅读变成一轮可检验的推演<span class="english-title" lang="en">How to Read the Book</span></h2>
+<p class="source">原书：<a class="source-pdf" href="../csapp.pdf#page=21">印刷 20 页 / PDF 21 页</a></p>
+<div class="source-statement" id="classic-preface-active"><h3 class="statement-heading"><span class="statement-label">原书摘录</span>学系统要亲手推演和运行</h3><p class="source">Preface · How to Read the Book · <a class="source-pdf" href="../csapp.pdf#page=21">印刷 20—21 页 / PDF 21—22 页</a></p><blockquote class="original-excerpt" lang="en"><p>Learning how computer systems work from a programmer’s perspective is great fun, mainly because you can do it actively. Whenever you learn something new, you can try it out right away and see the result firsthand. In fact, we believe that the only way to learn systems is to do systems, either working concrete problems or writing and running programs on real systems.</p><p>When a new concept is introduced, it is followed in the text by one or more practice problems that you should work immediately to test your understanding. Solutions to the practice problems are at the end of each chapter. As you read, try to solve each problem on your own and then check the solution to make sure you are on the right track.</p></blockquote><div class="statement-body"><p><strong>译文。</strong>从程序员的视角学习计算机系统很有趣，主要原因是你可以主动参与：每学到一点新东西，就能立即尝试，亲眼观察结果。作者认为，学会系统的途径就是亲手做系统相关的工作，包括解具体问题，以及在真实系统上编写、运行程序。正文介绍新概念后，会安排一道或多道随文练习，应当立即动手以检验理解；答案在章末。阅读时先独立解题，再核对答案，确认思路是否正确。</p><p>这里摘录同节的两段相关文字，中间的过渡句省略。作者把“试出来”与“自己先解”同时作为学习动作。读者先留下预测，才有机会根据实际差异修正理解。</p><p><strong>接着读：</strong><a href="chapter01_tour.html#exercises">从 Amdahl 定律的两道原题开始</a> · <a href="book_overview.html#reading-path">各章可留下什么推演结果</a></p></div></div>
+
+<p>序言的建议并不是读完一章再顺手运行程序，而是在新概念出现时立即做一道practice problem。先自己写下状态或结果，再读章末解答。这样才能发现自己究竟遗漏了一个条件、一个中间值，还是对整个机制理解错误。看懂别人已经写好的终点，和能够独立走到终点，是两种不同活动。</p>
+<p>可以把一次练习分成四个连贯动作。先固定条件，例如“8位补码”“数组按行存放”“缓存初始为空”；接着画出中间状态或列出方程；然后运行模型或核对题解；最后解释差异来自哪一步，并用一个边界输入重试。关键是保持预测记录，否则运行结果很容易被误当成自己早已理解的结论。</p>
+<div class="scroll"><table><thead><tr><th scope="col">材料</th><th scope="col">作者安排的用途</th><th scope="col">阅读时的动作</th></tr></thead><tbody><tr><td>随文练习 practice problem</td><td>刚学一个机制就测试理解</td><td>先解，再与章末答案比较条件与每一步</td></tr><tr><td>章后作业 homework</td><td>组合多个知识点，难度按◆标记</td><td>保留全部小问和输入，完成推导或程序</td></tr><tr><td>正文程序及文件路径</td><td>可实际编译运行的具体材料</td><td>追踪数据与控制，记录本机与书例的差异</td></tr><tr><td>旁注 aside</td><td>历史、易混概念、真实案例</td><td>在当前问题需要时吸收，再回到主线</td></tr><tr><td>Web aside</td><td>补充更深或更专门的内容</td><td>理解正文后按明确问题延伸</td></tr></tbody></table></div>
+<p>书中一到四个◆大致表示从几分钟题目到完整实验的工作量，它不是知识点的重要性等级。一个短小的指针题也可能暴露关键误解。遇到长题，可以拆分验证局部不变量，但最后仍要把各部分重新连成完整解法。</p>
+
+<div class="source-statement" id="classic-preface-code"><h3 class="statement-heading"><span class="statement-label">原书摘录</span>书中的程序来自实际源文件</h3><p class="source">Preface · How to Read the Book · <a class="source-pdf" href="../csapp.pdf#page=22">印刷 21 页 / PDF 22 页</a></p><blockquote class="original-excerpt" lang="en"><p>Each code example in the text was formatted directly, without any manual intervention, from a C program compiled with gcc and tested on a Linux system. Of course, your system may have a different version of gcc, or a different compiler altogether, so your compiler might generate different machine code; but the overall behavior should be the same.</p></blockquote><div class="statement-body"><p><strong>译文。</strong>正文中的每个代码例子，都直接从经过 gcc 编译、在 Linux 系统上测试的 C 程序排版而来，中间没有手工改写。读者的系统可能使用另一个版本的 gcc，甚至完全不同的编译器，因此生成的机器代码可能不同，但整体行为应当一致。</p><p>“整体行为一致”以同一个定义良好的程序、有效输入和相应环境为前提。它不保证两次编译的寄存器分配、指令数或执行时间相同。读第 3 章时，应先追踪参数、内存与返回值，再比较指令选择；读第 5 章时，才进一步分析这些选择的成本。</p><p><strong>接着读：</strong><a href="chapter03_machine_level.html#s3-2">从 C 到机器代码</a> · <a href="book_overview.html#program-guide">源码、阅读副本与运行方式</a></p></div></div>
+<p>序言还说明正文代码从实际编译并测试过的源文件自动排版而来。这一点说明代码与文字应保持联系：读代码要知道输入是什么、哪一行维护哪个不变量、输出怎样核对。编译器版本变化可以改变具体指令选择，原题或书后答案也仍可能有笔误，因而最终依据应包括明确的语义推导与可重复观察。</p>
+<details class="reading-notes" id="notes-method" data-notes-for="method" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">方法</span><h3>预测要具体到可判定的状态</h3><p>“会变快”过于模糊；写出哪条依赖链缩短、哪次访问从失效变命中，才能用观察纠正理解。</p>
+</div><div class="annotation-card"><span class="annotation-kind">边界</span><h3>运行成功只核对一个范围</h3><p>一个程序输出正确，并不自动覆盖溢出、空输入、非法移位、别名或所有舍入情形；结论需带验证范围。</p>
+</div></div></details>
+</section><section id="overview"><h2>四、十二章围绕同一个程序逐渐扩展<span class="english-title" lang="en">Book Overview</span></h2>
+<p class="source">原书：<a class="source-pdf" href="../csapp.pdf#page=23">印刷 22 页 / PDF 23 页</a></p>
+<p>第1章先让hello走一遍系统，后面的三部分分别放大程序内部、它所在的运行环境、以及它与别的程序之间的关系。这个顺序先建立一个可以追踪的对象，再逐步增加约束，避免一开始同时面对所有复杂性。</p>
+<h3>第一部分：从值的含义走到执行的代价</h3>
+<p>第2章解释有限位串为何不同于数学中的无限整数和实数；第3章把C的条件、循环、过程和数据结构翻成机器状态变化；第4章用较简单的Y86-64构造能执行这些状态变化的硬件；第5章以依赖、吞吐和编译器障碍解释优化；第6章再引入分层存储与局部性。性能问题由此分成“工作怎样组织”和“数据怎样到达”两个互相连接的方面。</p>
+<h3>第二部分：让一个程序进入操作系统</h3>
+<p>第7章把分离的目标文件组合成能够装入的程序，回答名字和地址怎样相接；第8章让控制流面对异常、进程、信号和切换；第9章解释虚拟地址如何支持缓存、保护、共享与动态存储。这里把第1章的进程、地址空间等抽象展开为机制。</p>
+<h3>第三部分：从单次执行走到交互与协作</h3>
+<p>第10章建立可靠的文件读写与缓冲，第11章将字节流延伸到网络并构造Web服务，第12章允许多个活动同时推进，同时处理共享状态、线程安全和同步。一个网络服务既需要前面的小整数和地址计算，也需要后面的I/O与并发约定。附录A把失败返回与错误处理方式集中起来。</p>
+<p>这条顺序并不意味着每个后续主题只有一个前置章节。虚拟内存同时联系第3章的地址、第6章的缓存和第8章的异常；网络程序会再次用到第2章的字节序、第10章的短读写与第12章的并发。全书地图用关系图把这些回路保留下来。</p>
+<details class="reading-notes" id="notes-overview" data-notes-for="overview" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">理解</span><h3>跨章联系通常来自同一个对象</h3><p>第3章计算出的地址，到第6章变成缓存查找输入，到第9章又参与地址翻译。对象连续，观察角度变化。</p>
+</div><div class="annotation-card"><span class="annotation-kind">读法</span><h3>在新章节回看旧问题</h3><p>遇到缓存局部性时，重新推演数组下标对应的字节地址；遇到信号时，重新区分普通调用和异常控制流。</p>
+</div></div></details>
+</section><section id="edition-history"><h2>五、版次、课程和实验怎样塑造这本书<span class="english-title" lang="en">New to This Edition · Origins · Courses · Labs · Acknowledgments</span></h2>
+<p class="source">原书：<a class="source-pdf" href="../csapp.pdf#page=27">印刷 26 页 / PDF 27 页</a></p>
+<h3>第三版的变化应如何影响阅读</h3>
+<p>序言列出的最大调整是从IA32与x86-64并讲转到以x86-64为主，第4章也相应采用64位Y86模型。第3章新增浮点机器代码，性能章节更新了参考处理器与更充分的指令级并行。第2章加强数学段落的引导，允许先建立直觉，再回来补完整推导。</p>
+<p>后半书更新包括位置无关代码与库打桩、信号处理的严格约束、协议无关且线程安全的名字/地址接口，以及多核上的线程级并行。这些变化说明版本一致性不仅是页码问题：寄存器宽度、代码模式、接口和题目都会变。本文依据本地第三版Global Edition；题号和输入以该PDF为准。</p>
+<h3>课程来源解释了实践主线</h3>
+<p>本书源于作者在1998年秋于Carnegie Mellon开设的15-213系统导论课。出发点是多数学生日常都要使用和编程计算机，课程因此从应用程序员可见的问题组织系统知识。经历课堂、实验、批改和读者反馈之后，这些材料形成了书。这里叙述的是序言记录的历史，而非当前课程安排。</p>
+<p>序言给出ORG、ORG+、ICS、ICS+、SP五种课程组合。ORG侧重组织与硬件，ORG+加入优化与更多存储知识，ICS强调运行环境，ICS+再扩展I/O、网络和并发，SP侧重系统编程。组合表的作用是帮助分配学习重心：可以按目标调整阅读路径，但每一条路径仍要完成所依赖机制的理解。</p>
+<div class="scroll"><table><thead><tr><th scope="col">实验</th><th scope="col">在书中对应的能力</th><th scope="col">做完应能解释</th></tr></thead><tbody><tr><td>Data Lab</td><td>位级表示与运算</td><td>一个位表达式为何对所有规定输入成立</td></tr><tr><td>Binary Bomb / Buffer Overflow Lab</td><td>汇编、调试、调用栈与边界</td><td>输入怎样影响控制流，哪种访问破坏对象范围</td></tr><tr><td>Architecture Lab</td><td>Y86、HCL与流水控制</td><td>修改一条指令或控制策略会影响哪些阶段</td></tr><tr><td>Performance / Cache Lab</td><td>依赖、局部性和存储代价</td><td>变换为何保留结果，又减少了哪种成本</td></tr><tr><td>Shell / Malloc Lab</td><td>进程信号、存储布局与资源</td><td>状态怎样变化，边界和回收由谁负责</td></tr><tr><td>Proxy Lab</td><td>I/O、网络、并发的组合</td><td>一个请求怎样贯穿系统并与其他请求协作</td></tr></tbody></table></div>
+
+<div class="source-statement" id="classic-preface-cache-lab"><h3 class="statement-heading"><span class="statement-label">原书摘录</span>用同一个模型连接分析与优化</h3><p class="source">Preface · Lab Exercises · Cache Lab · <a class="source-pdf" href="../csapp.pdf#page=31">印刷 30 页 / PDF 31 页</a></p><blockquote class="original-excerpt" lang="en"><p>In this alternative to the performance lab, students write a general-purpose cache simulator, and then optimize a small matrix transpose kernel to minimize the number of misses on a simulated cache. We use the Valgrind tool to generate real address traces for the matrix transpose kernel.</p></blockquote><div class="statement-body"><p><strong>译文。</strong>作为性能实验的另一种选择，学生先编写通用缓存模拟器，再优化一个小型矩阵转置核心，使它在模拟缓存上的失效次数尽可能少。作者使用 Valgrind，为矩阵转置核心生成真实的地址轨迹。</p><p>这项实验把三件事连成闭环：程序产生地址，模型把地址变成命中或失效，代码变换再改变地址次序。它同时检验第 3 章的地址计算、第 5 章的合法程序变换和第 6 章的缓存机制。比较优化前后，应保持缓存参数、输入与初始状态一致；只改变代码的访问次序，才便于判断收益来自哪里。</p><p><strong>接着读：</strong><a href="chapter06_memory.html#s6-4">地址怎样进入组相联缓存</a> · <a href="chapter06_memory.html#s6-5">用访问次序改善局部性</a></p></div></div>
+<p>实验是知识的交汇点。例如矩阵转置既要从第3章得到地址公式，又要用第6章分析缓存映射，还可能受第5章的循环组织影响。笔记中的小程序将这些机制缩小到可手算的输入；完整实验则需要把它们重新组合成较大的可运行系统。</p>
+<h3>致谢所呈现的知识形成过程</h3>
+<p>序言末尾保留三版的致谢，涵盖授课教师、学生、实验贡献者、勘误读者、技术讨论者与制作团队；Global Edition另列本版审阅者。它提醒读者，这本书的稳定性来自不断用具体问题、真实程序和课堂反馈校正说明。对有疑问的公式或答案，沿原条件复核并留下依据，也延续了这种工作方式。</p>
+<details class="reading-notes" id="notes-edition-history" data-notes-for="edition-history" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">读法</span><h3>实验名称只是入口，机制才是目标</h3><p>完成一个实验后，应能用一份小输入说明为什么正确、为什么快，以及什么条件下结论不再成立。</p>
+</div><div class="annotation-card"><span class="annotation-kind">来源</span><h3>Global Edition逐题核对</h3><p>本版题目与其他版本不同；正文引用同时给印刷页和PDF页，校注保留题面和修正依据。</p>
+</div></div></details>
+</section><footer><p>依据 Bryant / O’Hallaron《Computer Systems: A Programmer’s Perspective》第三版 Global Edition（Pearson 2016）。模型条件随例子说明，程序说明与来源集中于全书地图。</p><p class="chapter-nav"><a href="#top">返回页首 ↑</a><a href="book_overview.html">全书地图</a><a href="book_overview.html#program-guide">程序说明</a><a href="book_overview.html">← 全书地图</a><a href="chapter01_tour.html">第 1 章 →</a></p></footer></main><aside class="annotation-sidebar" id="annotation-rail" aria-label="阅读注解" hidden><p class="annotation-label">阅读注解</p><p class="annotation-context"><a id="annotation-context-link" href="#top"></a></p><div id="annotation-content"></div></aside></div><script>
+(() => {
+  document.documentElement.classList.add('toc-enhanced');
+  const panel = document.getElementById('toc-panel');
+  const nav = document.getElementById('chapter-toc');
+  const wide = matchMedia('(min-width:1100px)');
+  const links = Array.from(nav.querySelectorAll('li a[href^="#"]'));
+  const entries = links.map(link => ({link, section: document.getElementById(link.hash.slice(1))})).filter(item => item.section);
+  let current = null, scheduled = false;
+  const fit = () => { panel.open = wide.matches; };
+  fit();
+  wide.addEventListener('change', fit);
+  const reveal = () => {
+    let target;
+    try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch { return; }
+    for (let node = target; node; node = node.parentElement) {
+      if (node.tagName === 'DETAILS') node.open = true;
+    }
+  };
+  const mark = () => {
+    scheduled = false;
+    let next = entries[0];
+    for (const entry of entries) {
+      if (entry.section.getBoundingClientRect().top <= (wide.matches ? 110 : 144)) next = entry;
+    }
+    if (window.scrollY + innerHeight >= document.documentElement.scrollHeight - 2) next = entries[entries.length - 1];
+    if (next && next.link !== current) {
+      if (current) current.removeAttribute('aria-current');
+      current = next.link; current.setAttribute('aria-current', 'location');
+    }
+  };
+  const schedule = () => { if (!scheduled) { scheduled = true; requestAnimationFrame(mark); } };
+  nav.addEventListener('click', event => {
+    if (event.target.closest('a[href^="#"]') && !wide.matches) panel.open = false;
+  });
+  addEventListener('scroll', schedule, {passive:true});
+  addEventListener('resize', schedule);
+  addEventListener('hashchange', () => { reveal(); schedule(); });
+  document.addEventListener('toggle', schedule, true);
+  reveal(); mark();
+})();
+
+
+(() => {
+  const rail = document.getElementById('annotation-rail');
+  const content = document.getElementById('annotation-content');
+  const context = document.getElementById('annotation-context-link');
+  const groups = Array.from(document.querySelectorAll('main .reading-notes')).map(notes => ({
+    notes, section: document.getElementById(notes.dataset.notesFor)
+  })).filter(item => item.section);
+  if (!rail || !content || !context || !groups.length) return;
+  const wide = matchMedia('(min-width:1440px)');
+  let current = null, scheduled = false;
+  const update = () => {
+    scheduled = false;
+    if (!wide.matches) return;
+    const sections = Array.from(document.querySelectorAll('main > section'));
+    let active = sections[0];
+    for (const section of sections) if (section.getBoundingClientRect().top <= 110) active = section;
+    const relevant = groups.find(item => item.section === active);
+    rail.hidden = !relevant;
+    if (!relevant) { current = null; return; }
+    let next = groups[0];
+    for (const item of groups) {
+      if (item.section.getBoundingClientRect().top <= 110) next = item;
+    }
+    if (scrollY + innerHeight >= document.documentElement.scrollHeight - 2) next = groups[groups.length - 1];
+    if (current === next) return;
+    const body = next.notes.querySelector('.reading-notes-body');
+    const heading = next.section.querySelector('h2');
+    if (!body || !heading) return;
+    content.replaceChildren(...Array.from(body.children, node => node.cloneNode(true)));
+    const label = heading.cloneNode(true);
+    label.querySelectorAll('.english-title').forEach(node => node.remove());
+    context.textContent = label.textContent;
+    context.href = '#' + next.section.id;
+    rail.dataset.activeSection = next.section.id;
+    rail.scrollTop = 0;
+    current = next;
+  };
+  const schedule = () => {
+    if (!scheduled) { scheduled = true; requestAnimationFrame(update); }
+  };
+  const fit = () => {
+    rail.hidden = !wide.matches;
+    current = null;
+    if (wide.matches) {
+      document.documentElement.classList.add('notes-enhanced');
+      update();
+    } else {
+      document.documentElement.classList.remove('notes-enhanced');
+    }
+  };
+  wide.addEventListener('change', fit);
+  addEventListener('scroll', schedule, {passive:true});
+  addEventListener('resize', schedule);
+  addEventListener('hashchange', schedule);
+  document.addEventListener('toggle', schedule, true);
+  fit();
+})();
+
+
+(() => {
+  let saved=[];
+  addEventListener('beforeprint',()=>{
+    if(saved.length)return;
+    saved=[...document.querySelectorAll('main details')].map(node=>[node,node.open]);
+    saved.forEach(([node])=>{node.open=true;});
+  });
+  addEventListener('afterprint',()=>{
+    saved.forEach(([node,open])=>{node.open=open;});saved=[];
+  });
+})();
+
+(() => {
+  const containers = Array.from(document.querySelectorAll('main .equation, main .math-block, main .scroll'));
+  let pending = false;
+  const update = () => {
+    pending = false;
+    for (const node of containers) {
+      const overflow = node.clientWidth > 0 && node.scrollWidth > node.clientWidth + 2;
+      node.dataset.horizontalOverflow = String(overflow);
+      if (overflow) {
+        const label = node.matches('.equation,.math-block') ? '左右滑动查看完整公式 →' : '左右滑动查看完整图表 →';
+        node.dataset.scrollLabel = label;
+        if (!node.hasAttribute('tabindex')) {
+          node.tabIndex = 0;
+          node.dataset.scrollFocusable = 'true';
+        }
+      } else if (node.dataset.scrollFocusable === 'true') {
+        node.removeAttribute('tabindex');
+        delete node.dataset.scrollFocusable;
+      }
+    }
+  };
+  const schedule = () => {
+    if (!pending) { pending = true; requestAnimationFrame(update); }
+  };
+  addEventListener('resize', schedule);
+  document.addEventListener('toggle', schedule, true);
+  document.fonts.ready.then(schedule);
+  update();
+})();
+</script></body></html>

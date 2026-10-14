@@ -1,0 +1,42 @@
+irmovq $0xf00,%rsp
+irmovq data,%rdi
+irmovq $3,%rsi
+call rproduct
+halt
+rproduct:
+    irmovq $1,%rax
+    rrmovq %rsi,%rdx
+    subq %rax,%rdx
+    jle rp_done
+    pushq %rbx
+    mrmovq 0(%rdi),%rbx
+    irmovq $8,%r10
+    addq %r10,%rdi
+    irmovq $1,%r10
+    subq %r10,%rsi
+    call rproduct
+    rrmovq %rax,%rsi
+    rrmovq %rbx,%rdi
+    call mul64
+    popq %rbx
+rp_done:
+    ret
+# %rdi * %rsi mod 2^64 -> %rax; 64 bit positions.
+mul64:
+    xorq %rax,%rax
+    irmovq $1,%rcx
+mul_loop:
+    rrmovq %rsi,%rdx
+    andq %rcx,%rdx
+    je mul_skip
+    addq %rdi,%rax
+mul_skip:
+    addq %rdi,%rdi
+    addq %rcx,%rcx
+    jne mul_loop
+    ret
+.pos 0x400
+data:
+ .quad 0x0000000000000002
+ .quad 0x0000000000000003
+ .quad 0x0000000000000004

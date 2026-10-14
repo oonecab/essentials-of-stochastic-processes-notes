@@ -82,13 +82,20 @@ def main():
         assert request(path, method='POST')[0] == 403, path
         redirect_results.append({'path': path, 'target': target, 'status': 301,
                                  'query_preserved': True, 'head': 301, 'post': 403})
-    pdf = 'stochastic/assets/essentials-of-stochastic-processes.pdf'
-    status, headers, blob = request('/' + pdf, headers={'Range': 'bytes=32-63'})
-    assert status == 206 and len(blob) == 32
-    assert headers['content-range'].startswith('bytes 32-63/')
+    pdf_results = []
     import tarfile
     with tarfile.open(args.release_dir / 'site.tar.gz') as archive:
-        assert blob == archive.extractfile(pdf).read()[32:64]
+        for row in metadata['files']:
+            pdf = row['path']
+            if not pdf.endswith('.pdf'):
+                continue
+            status, headers, blob = request('/' + pdf, headers={'Range': 'bytes=32-63'})
+            assert status == 206 and len(blob) == 32, pdf
+            assert headers['content-range'] == f"bytes 32-63/{row['bytes']}", pdf
+            assert blob == archive.extractfile(pdf).read()[32:64], pdf
+            pdf_results.append({'path': pdf, 'status': status, 'range': headers['content-range'],
+                                'bytes_match': True})
+    assert pdf_results, 'Expected at least one published source PDF'
     for path, method, expected in [('/.git/config', 'GET', 404), ('/absent.html', 'GET', 404),
                                    ('/index.html', 'POST', 403), ('/SHA256SUMS', 'GET', 404)]:
         assert request(path, method=method)[0] == expected, (path, method)
@@ -96,7 +103,8 @@ def main():
               'connect_ip': args.connect_ip, 'started_at': started,
               'finished_at': datetime.now(ZoneInfo('Asia/Shanghai')).isoformat(),
               'files_checked': len(results), 'files': results, 'entry_redirects': redirect_results,
-              'pdf_range': '206; bytes 32-63 agree with release', 'route_checks': 'pass'}
+              'pdf_range': '206; bytes 32-63 agree with release', 'pdf_ranges': pdf_results,
+              'route_checks': 'pass'}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({**{k: result[k] for k in ['status', 'release_id', 'files_checked', 'pdf_range', 'route_checks']},

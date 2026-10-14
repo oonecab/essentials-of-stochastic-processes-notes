@@ -1,0 +1,3174 @@
+{
+  "source_sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+  "chapters": [
+    {
+      "chapter": 1,
+      "exercises": [
+        {
+          "number": "1.1",
+          "kind": "practice",
+          "pdf_start": 59,
+          "printed_start": 58,
+          "anchor": "ex-1-1"
+        },
+        {
+          "number": "1.2",
+          "kind": "practice",
+          "pdf_start": 60,
+          "printed_start": 59,
+          "anchor": "ex-1-2"
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "exercises": [
+        {
+          "number": "2.1",
+          "kind": "practice",
+          "pdf_start": 74,
+          "printed_start": 73,
+          "anchor": "ex-2-1"
+        },
+        {
+          "number": "2.2",
+          "kind": "practice",
+          "pdf_start": 74,
+          "printed_start": 73,
+          "anchor": "ex-2-2"
+        },
+        {
+          "number": "2.3",
+          "kind": "practice",
+          "pdf_start": 75,
+          "printed_start": 74,
+          "anchor": "ex-2-3"
+        },
+        {
+          "number": "2.4",
+          "kind": "practice",
+          "pdf_start": 76,
+          "printed_start": 75,
+          "anchor": "ex-2-4"
+        },
+        {
+          "number": "2.5",
+          "kind": "practice",
+          "pdf_start": 85,
+          "printed_start": 84,
+          "anchor": "ex-2-5"
+        },
+        {
+          "number": "2.6",
+          "kind": "practice",
+          "pdf_start": 86,
+          "printed_start": 85,
+          "anchor": "ex-2-6"
+        },
+        {
+          "number": "2.7",
+          "kind": "practice",
+          "pdf_start": 86,
+          "printed_start": 85,
+          "anchor": "ex-2-7"
+        },
+        {
+          "number": "2.8",
+          "kind": "practice",
+          "pdf_start": 88,
+          "printed_start": 87,
+          "anchor": "ex-2-8"
+        },
+        {
+          "number": "2.9",
+          "kind": "practice",
+          "pdf_start": 90,
+          "printed_start": 89,
+          "anchor": "ex-2-9"
+        },
+        {
+          "number": "2.10",
+          "kind": "practice",
+          "pdf_start": 91,
+          "printed_start": 90,
+          "anchor": "ex-2-10"
+        },
+        {
+          "number": "2.11",
+          "kind": "practice",
+          "pdf_start": 92,
+          "printed_start": 91,
+          "anchor": "ex-2-11"
+        },
+        {
+          "number": "2.12",
+          "kind": "practice",
+          "pdf_start": 92,
+          "printed_start": 91,
+          "anchor": "ex-2-12"
+        },
+        {
+          "number": "2.13",
+          "kind": "practice",
+          "pdf_start": 93,
+          "printed_start": 92,
+          "anchor": "ex-2-13"
+        },
+        {
+          "number": "2.14",
+          "kind": "practice",
+          "pdf_start": 94,
+          "printed_start": 93,
+          "anchor": "ex-2-14"
+        },
+        {
+          "number": "2.15",
+          "kind": "practice",
+          "pdf_start": 94,
+          "printed_start": 93,
+          "anchor": "ex-2-15"
+        },
+        {
+          "number": "2.16",
+          "kind": "practice",
+          "pdf_start": 95,
+          "printed_start": 94,
+          "anchor": "ex-2-16"
+        },
+        {
+          "number": "2.17",
+          "kind": "practice",
+          "pdf_start": 102,
+          "printed_start": 101,
+          "anchor": "ex-2-17"
+        },
+        {
+          "number": "2.18",
+          "kind": "practice",
+          "pdf_start": 106,
+          "printed_start": 105,
+          "anchor": "ex-2-18"
+        },
+        {
+          "number": "2.19",
+          "kind": "practice",
+          "pdf_start": 108,
+          "printed_start": 107,
+          "anchor": "ex-2-19"
+        },
+        {
+          "number": "2.20",
+          "kind": "practice",
+          "pdf_start": 110,
+          "printed_start": 109,
+          "anchor": "ex-2-20"
+        },
+        {
+          "number": "2.21",
+          "kind": "practice",
+          "pdf_start": 113,
+          "printed_start": 112,
+          "anchor": "ex-2-21"
+        },
+        {
+          "number": "2.22",
+          "kind": "practice",
+          "pdf_start": 116,
+          "printed_start": 115,
+          "anchor": "ex-2-22"
+        },
+        {
+          "number": "2.23",
+          "kind": "practice",
+          "pdf_start": 117,
+          "printed_start": 116,
+          "anchor": "ex-2-23"
+        },
+        {
+          "number": "2.24",
+          "kind": "practice",
+          "pdf_start": 119,
+          "printed_start": 118,
+          "anchor": "ex-2-24"
+        },
+        {
+          "number": "2.25",
+          "kind": "practice",
+          "pdf_start": 120,
+          "printed_start": 119,
+          "anchor": "ex-2-25"
+        },
+        {
+          "number": "2.26",
+          "kind": "practice",
+          "pdf_start": 120,
+          "printed_start": 119,
+          "anchor": "ex-2-26"
+        },
+        {
+          "number": "2.27",
+          "kind": "practice",
+          "pdf_start": 126,
+          "printed_start": 125,
+          "anchor": "ex-2-27"
+        },
+        {
+          "number": "2.28",
+          "kind": "practice",
+          "pdf_start": 126,
+          "printed_start": 125,
+          "anchor": "ex-2-28"
+        },
+        {
+          "number": "2.29",
+          "kind": "practice",
+          "pdf_start": 130,
+          "printed_start": 129,
+          "anchor": "ex-2-29"
+        },
+        {
+          "number": "2.30",
+          "kind": "practice",
+          "pdf_start": 131,
+          "printed_start": 130,
+          "anchor": "ex-2-30"
+        },
+        {
+          "number": "2.31",
+          "kind": "practice",
+          "pdf_start": 131,
+          "printed_start": 130,
+          "anchor": "ex-2-31"
+        },
+        {
+          "number": "2.32",
+          "kind": "practice",
+          "pdf_start": 131,
+          "printed_start": 130,
+          "anchor": "ex-2-32"
+        },
+        {
+          "number": "2.33",
+          "kind": "practice",
+          "pdf_start": 132,
+          "printed_start": 131,
+          "anchor": "ex-2-33"
+        },
+        {
+          "number": "2.34",
+          "kind": "practice",
+          "pdf_start": 135,
+          "printed_start": 134,
+          "anchor": "ex-2-34"
+        },
+        {
+          "number": "2.35",
+          "kind": "practice",
+          "pdf_start": 136,
+          "printed_start": 135,
+          "anchor": "ex-2-35"
+        },
+        {
+          "number": "2.36",
+          "kind": "practice",
+          "pdf_start": 136,
+          "printed_start": 135,
+          "anchor": "ex-2-36"
+        },
+        {
+          "number": "2.37",
+          "kind": "practice",
+          "pdf_start": 136,
+          "printed_start": 135,
+          "anchor": "ex-2-37"
+        },
+        {
+          "number": "2.38",
+          "kind": "practice",
+          "pdf_start": 139,
+          "printed_start": 138,
+          "anchor": "ex-2-38"
+        },
+        {
+          "number": "2.39",
+          "kind": "practice",
+          "pdf_start": 140,
+          "printed_start": 139,
+          "anchor": "ex-2-39"
+        },
+        {
+          "number": "2.40",
+          "kind": "practice",
+          "pdf_start": 140,
+          "printed_start": 139,
+          "anchor": "ex-2-40"
+        },
+        {
+          "number": "2.41",
+          "kind": "practice",
+          "pdf_start": 140,
+          "printed_start": 139,
+          "anchor": "ex-2-41"
+        },
+        {
+          "number": "2.42",
+          "kind": "practice",
+          "pdf_start": 144,
+          "printed_start": 143,
+          "anchor": "ex-2-42"
+        },
+        {
+          "number": "2.43",
+          "kind": "practice",
+          "pdf_start": 144,
+          "printed_start": 143,
+          "anchor": "ex-2-43"
+        },
+        {
+          "number": "2.44",
+          "kind": "practice",
+          "pdf_start": 145,
+          "printed_start": 144,
+          "anchor": "ex-2-44"
+        },
+        {
+          "number": "2.45",
+          "kind": "practice",
+          "pdf_start": 148,
+          "printed_start": 147,
+          "anchor": "ex-2-45"
+        },
+        {
+          "number": "2.46",
+          "kind": "practice",
+          "pdf_start": 148,
+          "printed_start": 147,
+          "anchor": "ex-2-46"
+        },
+        {
+          "number": "2.47",
+          "kind": "practice",
+          "pdf_start": 154,
+          "printed_start": 153,
+          "anchor": "ex-2-47"
+        },
+        {
+          "number": "2.48",
+          "kind": "practice",
+          "pdf_start": 156,
+          "printed_start": 155,
+          "anchor": "ex-2-48"
+        },
+        {
+          "number": "2.49",
+          "kind": "practice",
+          "pdf_start": 157,
+          "printed_start": 156,
+          "anchor": "ex-2-49"
+        },
+        {
+          "number": "2.50",
+          "kind": "practice",
+          "pdf_start": 158,
+          "printed_start": 157,
+          "anchor": "ex-2-50"
+        },
+        {
+          "number": "2.51",
+          "kind": "practice",
+          "pdf_start": 159,
+          "printed_start": 158,
+          "anchor": "ex-2-51"
+        },
+        {
+          "number": "2.52",
+          "kind": "practice",
+          "pdf_start": 159,
+          "printed_start": 158,
+          "anchor": "ex-2-52"
+        },
+        {
+          "number": "2.53",
+          "kind": "practice",
+          "pdf_start": 162,
+          "printed_start": 161,
+          "anchor": "ex-2-53"
+        },
+        {
+          "number": "2.54",
+          "kind": "practice",
+          "pdf_start": 162,
+          "printed_start": 161,
+          "anchor": "ex-2-54"
+        },
+        {
+          "number": "2.55",
+          "kind": "homework",
+          "pdf_start": 165,
+          "printed_start": 164,
+          "anchor": "ex-2-55"
+        },
+        {
+          "number": "2.56",
+          "kind": "homework",
+          "pdf_start": 165,
+          "printed_start": 164,
+          "anchor": "ex-2-56"
+        },
+        {
+          "number": "2.57",
+          "kind": "homework",
+          "pdf_start": 165,
+          "printed_start": 164,
+          "anchor": "ex-2-57"
+        },
+        {
+          "number": "2.58",
+          "kind": "homework",
+          "pdf_start": 165,
+          "printed_start": 164,
+          "anchor": "ex-2-58"
+        },
+        {
+          "number": "2.59",
+          "kind": "homework",
+          "pdf_start": 165,
+          "printed_start": 164,
+          "anchor": "ex-2-59"
+        },
+        {
+          "number": "2.60",
+          "kind": "homework",
+          "pdf_start": 165,
+          "printed_start": 164,
+          "anchor": "ex-2-60"
+        },
+        {
+          "number": "2.61",
+          "kind": "homework",
+          "pdf_start": 166,
+          "printed_start": 165,
+          "anchor": "ex-2-61"
+        },
+        {
+          "number": "2.62",
+          "kind": "homework",
+          "pdf_start": 167,
+          "printed_start": 166,
+          "anchor": "ex-2-62"
+        },
+        {
+          "number": "2.63",
+          "kind": "homework",
+          "pdf_start": 167,
+          "printed_start": 166,
+          "anchor": "ex-2-63"
+        },
+        {
+          "number": "2.64",
+          "kind": "homework",
+          "pdf_start": 167,
+          "printed_start": 166,
+          "anchor": "ex-2-64"
+        },
+        {
+          "number": "2.65",
+          "kind": "homework",
+          "pdf_start": 168,
+          "printed_start": 167,
+          "anchor": "ex-2-65"
+        },
+        {
+          "number": "2.66",
+          "kind": "homework",
+          "pdf_start": 168,
+          "printed_start": 167,
+          "anchor": "ex-2-66"
+        },
+        {
+          "number": "2.67",
+          "kind": "homework",
+          "pdf_start": 168,
+          "printed_start": 167,
+          "anchor": "ex-2-67"
+        },
+        {
+          "number": "2.68",
+          "kind": "homework",
+          "pdf_start": 169,
+          "printed_start": 168,
+          "anchor": "ex-2-68"
+        },
+        {
+          "number": "2.69",
+          "kind": "homework",
+          "pdf_start": 169,
+          "printed_start": 168,
+          "anchor": "ex-2-69"
+        },
+        {
+          "number": "2.70",
+          "kind": "homework",
+          "pdf_start": 169,
+          "printed_start": 168,
+          "anchor": "ex-2-70"
+        },
+        {
+          "number": "2.71",
+          "kind": "homework",
+          "pdf_start": 169,
+          "printed_start": 168,
+          "anchor": "ex-2-71"
+        },
+        {
+          "number": "2.72",
+          "kind": "homework",
+          "pdf_start": 170,
+          "printed_start": 169,
+          "anchor": "ex-2-72"
+        },
+        {
+          "number": "2.73",
+          "kind": "homework",
+          "pdf_start": 171,
+          "printed_start": 170,
+          "anchor": "ex-2-73"
+        },
+        {
+          "number": "2.74",
+          "kind": "homework",
+          "pdf_start": 171,
+          "printed_start": 170,
+          "anchor": "ex-2-74"
+        },
+        {
+          "number": "2.75",
+          "kind": "homework",
+          "pdf_start": 171,
+          "printed_start": 170,
+          "anchor": "ex-2-75"
+        },
+        {
+          "number": "2.76",
+          "kind": "homework",
+          "pdf_start": 171,
+          "printed_start": 170,
+          "anchor": "ex-2-76"
+        },
+        {
+          "number": "2.77",
+          "kind": "homework",
+          "pdf_start": 172,
+          "printed_start": 171,
+          "anchor": "ex-2-77"
+        },
+        {
+          "number": "2.78",
+          "kind": "homework",
+          "pdf_start": 172,
+          "printed_start": 171,
+          "anchor": "ex-2-78"
+        },
+        {
+          "number": "2.79",
+          "kind": "homework",
+          "pdf_start": 172,
+          "printed_start": 171,
+          "anchor": "ex-2-79"
+        },
+        {
+          "number": "2.80",
+          "kind": "homework",
+          "pdf_start": 172,
+          "printed_start": 171,
+          "anchor": "ex-2-80"
+        },
+        {
+          "number": "2.81",
+          "kind": "homework",
+          "pdf_start": 172,
+          "printed_start": 171,
+          "anchor": "ex-2-81"
+        },
+        {
+          "number": "2.82",
+          "kind": "homework",
+          "pdf_start": 172,
+          "printed_start": 171,
+          "anchor": "ex-2-82"
+        },
+        {
+          "number": "2.83",
+          "kind": "homework",
+          "pdf_start": 173,
+          "printed_start": 172,
+          "anchor": "ex-2-83"
+        },
+        {
+          "number": "2.84",
+          "kind": "homework",
+          "pdf_start": 173,
+          "printed_start": 172,
+          "anchor": "ex-2-84"
+        },
+        {
+          "number": "2.85",
+          "kind": "homework",
+          "pdf_start": 174,
+          "printed_start": 173,
+          "anchor": "ex-2-85"
+        },
+        {
+          "number": "2.86",
+          "kind": "homework",
+          "pdf_start": 174,
+          "printed_start": 173,
+          "anchor": "ex-2-86"
+        },
+        {
+          "number": "2.87",
+          "kind": "homework",
+          "pdf_start": 174,
+          "printed_start": 173,
+          "anchor": "ex-2-87"
+        },
+        {
+          "number": "2.88",
+          "kind": "homework",
+          "pdf_start": 175,
+          "printed_start": 174,
+          "anchor": "ex-2-88"
+        },
+        {
+          "number": "2.89",
+          "kind": "homework",
+          "pdf_start": 176,
+          "printed_start": 175,
+          "anchor": "ex-2-89"
+        },
+        {
+          "number": "2.90",
+          "kind": "homework",
+          "pdf_start": 176,
+          "printed_start": 175,
+          "anchor": "ex-2-90"
+        },
+        {
+          "number": "2.91",
+          "kind": "homework",
+          "pdf_start": 177,
+          "printed_start": 176,
+          "anchor": "ex-2-91"
+        },
+        {
+          "number": "2.92",
+          "kind": "homework",
+          "pdf_start": 178,
+          "printed_start": 177,
+          "anchor": "ex-2-92"
+        },
+        {
+          "number": "2.93",
+          "kind": "homework",
+          "pdf_start": 179,
+          "printed_start": 178,
+          "anchor": "ex-2-93"
+        },
+        {
+          "number": "2.94",
+          "kind": "homework",
+          "pdf_start": 179,
+          "printed_start": 178,
+          "anchor": "ex-2-94"
+        },
+        {
+          "number": "2.95",
+          "kind": "homework",
+          "pdf_start": 179,
+          "printed_start": 178,
+          "anchor": "ex-2-95"
+        },
+        {
+          "number": "2.96",
+          "kind": "homework",
+          "pdf_start": 179,
+          "printed_start": 178,
+          "anchor": "ex-2-96"
+        },
+        {
+          "number": "2.97",
+          "kind": "homework",
+          "pdf_start": 180,
+          "printed_start": 179,
+          "anchor": "ex-2-97"
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "exercises": [
+        {
+          "number": "3.1",
+          "kind": "practice",
+          "pdf_start": 219,
+          "printed_start": 218,
+          "anchor": "ex-3-1"
+        },
+        {
+          "number": "3.2",
+          "kind": "practice",
+          "pdf_start": 222,
+          "printed_start": 221,
+          "anchor": "ex-3-2"
+        },
+        {
+          "number": "3.3",
+          "kind": "practice",
+          "pdf_start": 223,
+          "printed_start": 222,
+          "anchor": "ex-3-3"
+        },
+        {
+          "number": "3.4",
+          "kind": "practice",
+          "pdf_start": 224,
+          "printed_start": 223,
+          "anchor": "ex-3-4"
+        },
+        {
+          "number": "3.5",
+          "kind": "practice",
+          "pdf_start": 226,
+          "printed_start": 225,
+          "anchor": "ex-3-5"
+        },
+        {
+          "number": "3.6",
+          "kind": "practice",
+          "pdf_start": 229,
+          "printed_start": 228,
+          "anchor": "ex-3-6"
+        },
+        {
+          "number": "3.7",
+          "kind": "practice",
+          "pdf_start": 230,
+          "printed_start": 229,
+          "anchor": "ex-3-7"
+        },
+        {
+          "number": "3.8",
+          "kind": "practice",
+          "pdf_start": 231,
+          "printed_start": 230,
+          "anchor": "ex-3-8"
+        },
+        {
+          "number": "3.9",
+          "kind": "practice",
+          "pdf_start": 232,
+          "printed_start": 231,
+          "anchor": "ex-3-9"
+        },
+        {
+          "number": "3.10",
+          "kind": "practice",
+          "pdf_start": 233,
+          "printed_start": 232,
+          "anchor": "ex-3-10"
+        },
+        {
+          "number": "3.11",
+          "kind": "practice",
+          "pdf_start": 234,
+          "printed_start": 233,
+          "anchor": "ex-3-11"
+        },
+        {
+          "number": "3.12",
+          "kind": "practice",
+          "pdf_start": 237,
+          "printed_start": 236,
+          "anchor": "ex-3-12"
+        },
+        {
+          "number": "3.13",
+          "kind": "practice",
+          "pdf_start": 241,
+          "printed_start": 240,
+          "anchor": "ex-3-13"
+        },
+        {
+          "number": "3.14",
+          "kind": "practice",
+          "pdf_start": 242,
+          "printed_start": 241,
+          "anchor": "ex-3-14"
+        },
+        {
+          "number": "3.15",
+          "kind": "practice",
+          "pdf_start": 246,
+          "printed_start": 245,
+          "anchor": "ex-3-15"
+        },
+        {
+          "number": "3.16",
+          "kind": "practice",
+          "pdf_start": 249,
+          "printed_start": 248,
+          "anchor": "ex-3-16"
+        },
+        {
+          "number": "3.17",
+          "kind": "practice",
+          "pdf_start": 249,
+          "printed_start": 248,
+          "anchor": "ex-3-17"
+        },
+        {
+          "number": "3.18",
+          "kind": "practice",
+          "pdf_start": 250,
+          "printed_start": 249,
+          "anchor": "ex-3-18"
+        },
+        {
+          "number": "3.19",
+          "kind": "practice",
+          "pdf_start": 253,
+          "printed_start": 252,
+          "anchor": "ex-3-19"
+        },
+        {
+          "number": "3.20",
+          "kind": "practice",
+          "pdf_start": 256,
+          "printed_start": 255,
+          "anchor": "ex-3-20"
+        },
+        {
+          "number": "3.21",
+          "kind": "practice",
+          "pdf_start": 256,
+          "printed_start": 255,
+          "anchor": "ex-3-21"
+        },
+        {
+          "number": "3.22",
+          "kind": "practice",
+          "pdf_start": 258,
+          "printed_start": 257,
+          "anchor": "ex-3-22"
+        },
+        {
+          "number": "3.23",
+          "kind": "practice",
+          "pdf_start": 259,
+          "printed_start": 258,
+          "anchor": "ex-3-23"
+        },
+        {
+          "number": "3.24",
+          "kind": "practice",
+          "pdf_start": 261,
+          "printed_start": 260,
+          "anchor": "ex-3-24"
+        },
+        {
+          "number": "3.25",
+          "kind": "practice",
+          "pdf_start": 263,
+          "printed_start": 262,
+          "anchor": "ex-3-25"
+        },
+        {
+          "number": "3.26",
+          "kind": "practice",
+          "pdf_start": 265,
+          "printed_start": 264,
+          "anchor": "ex-3-26"
+        },
+        {
+          "number": "3.27",
+          "kind": "practice",
+          "pdf_start": 268,
+          "printed_start": 267,
+          "anchor": "ex-3-27"
+        },
+        {
+          "number": "3.28",
+          "kind": "practice",
+          "pdf_start": 268,
+          "printed_start": 267,
+          "anchor": "ex-3-28"
+        },
+        {
+          "number": "3.29",
+          "kind": "practice",
+          "pdf_start": 269,
+          "printed_start": 268,
+          "anchor": "ex-3-29"
+        },
+        {
+          "number": "3.30",
+          "kind": "practice",
+          "pdf_start": 273,
+          "printed_start": 272,
+          "anchor": "ex-3-30"
+        },
+        {
+          "number": "3.31",
+          "kind": "practice",
+          "pdf_start": 274,
+          "printed_start": 273,
+          "anchor": "ex-3-31"
+        },
+        {
+          "number": "3.32",
+          "kind": "practice",
+          "pdf_start": 281,
+          "printed_start": 280,
+          "anchor": "ex-3-32"
+        },
+        {
+          "number": "3.33",
+          "kind": "practice",
+          "pdf_start": 283,
+          "printed_start": 282,
+          "anchor": "ex-3-33"
+        },
+        {
+          "number": "3.34",
+          "kind": "practice",
+          "pdf_start": 289,
+          "printed_start": 288,
+          "anchor": "ex-3-34"
+        },
+        {
+          "number": "3.35",
+          "kind": "practice",
+          "pdf_start": 291,
+          "printed_start": 290,
+          "anchor": "ex-3-35"
+        },
+        {
+          "number": "3.36",
+          "kind": "practice",
+          "pdf_start": 293,
+          "printed_start": 292,
+          "anchor": "ex-3-36"
+        },
+        {
+          "number": "3.37",
+          "kind": "practice",
+          "pdf_start": 295,
+          "printed_start": 294,
+          "anchor": "ex-3-37"
+        },
+        {
+          "number": "3.38",
+          "kind": "practice",
+          "pdf_start": 296,
+          "printed_start": 295,
+          "anchor": "ex-3-38"
+        },
+        {
+          "number": "3.39",
+          "kind": "practice",
+          "pdf_start": 299,
+          "printed_start": 298,
+          "anchor": "ex-3-39"
+        },
+        {
+          "number": "3.40",
+          "kind": "practice",
+          "pdf_start": 299,
+          "printed_start": 298,
+          "anchor": "ex-3-40"
+        },
+        {
+          "number": "3.41",
+          "kind": "practice",
+          "pdf_start": 305,
+          "printed_start": 304,
+          "anchor": "ex-3-41"
+        },
+        {
+          "number": "3.42",
+          "kind": "practice",
+          "pdf_start": 306,
+          "printed_start": 305,
+          "anchor": "ex-3-42"
+        },
+        {
+          "number": "3.43",
+          "kind": "practice",
+          "pdf_start": 309,
+          "printed_start": 308,
+          "anchor": "ex-3-43"
+        },
+        {
+          "number": "3.44",
+          "kind": "practice",
+          "pdf_start": 312,
+          "printed_start": 311,
+          "anchor": "ex-3-44"
+        },
+        {
+          "number": "3.45",
+          "kind": "practice",
+          "pdf_start": 312,
+          "printed_start": 311,
+          "anchor": "ex-3-45"
+        },
+        {
+          "number": "3.46",
+          "kind": "practice",
+          "pdf_start": 319,
+          "printed_start": 318,
+          "anchor": "ex-3-46"
+        },
+        {
+          "number": "3.47",
+          "kind": "practice",
+          "pdf_start": 323,
+          "printed_start": 322,
+          "anchor": "ex-3-47"
+        },
+        {
+          "number": "3.48",
+          "kind": "practice",
+          "pdf_start": 325,
+          "printed_start": 324,
+          "anchor": "ex-3-48"
+        },
+        {
+          "number": "3.49",
+          "kind": "practice",
+          "pdf_start": 330,
+          "printed_start": 329,
+          "anchor": "ex-3-49"
+        },
+        {
+          "number": "3.50",
+          "kind": "practice",
+          "pdf_start": 337,
+          "printed_start": 336,
+          "anchor": "ex-3-50"
+        },
+        {
+          "number": "3.51",
+          "kind": "practice",
+          "pdf_start": 337,
+          "printed_start": 336,
+          "anchor": "ex-3-51"
+        },
+        {
+          "number": "3.52",
+          "kind": "practice",
+          "pdf_start": 338,
+          "printed_start": 337,
+          "anchor": "ex-3-52"
+        },
+        {
+          "number": "3.53",
+          "kind": "practice",
+          "pdf_start": 340,
+          "printed_start": 339,
+          "anchor": "ex-3-53"
+        },
+        {
+          "number": "3.54",
+          "kind": "practice",
+          "pdf_start": 340,
+          "printed_start": 339,
+          "anchor": "ex-3-54"
+        },
+        {
+          "number": "3.55",
+          "kind": "practice",
+          "pdf_start": 342,
+          "printed_start": 341,
+          "anchor": "ex-3-55"
+        },
+        {
+          "number": "3.56",
+          "kind": "practice",
+          "pdf_start": 342,
+          "printed_start": 341,
+          "anchor": "ex-3-56"
+        },
+        {
+          "number": "3.57",
+          "kind": "practice",
+          "pdf_start": 345,
+          "printed_start": 344,
+          "anchor": "ex-3-57"
+        },
+        {
+          "number": "3.58",
+          "kind": "homework",
+          "pdf_start": 348,
+          "printed_start": 347,
+          "anchor": "ex-3-58"
+        },
+        {
+          "number": "3.59",
+          "kind": "homework",
+          "pdf_start": 348,
+          "printed_start": 347,
+          "anchor": "ex-3-59"
+        },
+        {
+          "number": "3.60",
+          "kind": "homework",
+          "pdf_start": 349,
+          "printed_start": 348,
+          "anchor": "ex-3-60"
+        },
+        {
+          "number": "3.61",
+          "kind": "homework",
+          "pdf_start": 350,
+          "printed_start": 349,
+          "anchor": "ex-3-61"
+        },
+        {
+          "number": "3.62",
+          "kind": "homework",
+          "pdf_start": 350,
+          "printed_start": 349,
+          "anchor": "ex-3-62"
+        },
+        {
+          "number": "3.63",
+          "kind": "homework",
+          "pdf_start": 351,
+          "printed_start": 350,
+          "anchor": "ex-3-63"
+        },
+        {
+          "number": "3.64",
+          "kind": "homework",
+          "pdf_start": 353,
+          "printed_start": 352,
+          "anchor": "ex-3-64"
+        },
+        {
+          "number": "3.65",
+          "kind": "homework",
+          "pdf_start": 354,
+          "printed_start": 353,
+          "anchor": "ex-3-65"
+        },
+        {
+          "number": "3.66",
+          "kind": "homework",
+          "pdf_start": 354,
+          "printed_start": 353,
+          "anchor": "ex-3-66"
+        },
+        {
+          "number": "3.67",
+          "kind": "homework",
+          "pdf_start": 355,
+          "printed_start": 354,
+          "anchor": "ex-3-67"
+        },
+        {
+          "number": "3.68",
+          "kind": "homework",
+          "pdf_start": 357,
+          "printed_start": 356,
+          "anchor": "ex-3-68"
+        },
+        {
+          "number": "3.69",
+          "kind": "homework",
+          "pdf_start": 358,
+          "printed_start": 357,
+          "anchor": "ex-3-69"
+        },
+        {
+          "number": "3.70",
+          "kind": "homework",
+          "pdf_start": 359,
+          "printed_start": 358,
+          "anchor": "ex-3-70"
+        },
+        {
+          "number": "3.71",
+          "kind": "homework",
+          "pdf_start": 360,
+          "printed_start": 359,
+          "anchor": "ex-3-71"
+        },
+        {
+          "number": "3.72",
+          "kind": "homework",
+          "pdf_start": 360,
+          "printed_start": 359,
+          "anchor": "ex-3-72"
+        },
+        {
+          "number": "3.73",
+          "kind": "homework",
+          "pdf_start": 361,
+          "printed_start": 360,
+          "anchor": "ex-3-73"
+        },
+        {
+          "number": "3.74",
+          "kind": "homework",
+          "pdf_start": 361,
+          "printed_start": 360,
+          "anchor": "ex-3-74"
+        },
+        {
+          "number": "3.75",
+          "kind": "homework",
+          "pdf_start": 361,
+          "printed_start": 360,
+          "anchor": "ex-3-75"
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "exercises": [
+        {
+          "number": "4.1",
+          "kind": "practice",
+          "pdf_start": 397,
+          "printed_start": 396,
+          "anchor": "ex-4-1"
+        },
+        {
+          "number": "4.2",
+          "kind": "practice",
+          "pdf_start": 397,
+          "printed_start": 396,
+          "anchor": "ex-4-2"
+        },
+        {
+          "number": "4.3",
+          "kind": "practice",
+          "pdf_start": 406,
+          "printed_start": 405,
+          "anchor": "ex-4-3"
+        },
+        {
+          "number": "4.4",
+          "kind": "practice",
+          "pdf_start": 407,
+          "printed_start": 406,
+          "anchor": "ex-4-4"
+        },
+        {
+          "number": "4.5",
+          "kind": "practice",
+          "pdf_start": 407,
+          "printed_start": 406,
+          "anchor": "ex-4-5"
+        },
+        {
+          "number": "4.6",
+          "kind": "practice",
+          "pdf_start": 407,
+          "printed_start": 406,
+          "anchor": "ex-4-6"
+        },
+        {
+          "number": "4.7",
+          "kind": "practice",
+          "pdf_start": 407,
+          "printed_start": 406,
+          "anchor": "ex-4-7"
+        },
+        {
+          "number": "4.8",
+          "kind": "practice",
+          "pdf_start": 408,
+          "printed_start": 407,
+          "anchor": "ex-4-8"
+        },
+        {
+          "number": "4.9",
+          "kind": "practice",
+          "pdf_start": 411,
+          "printed_start": 410,
+          "anchor": "ex-4-9"
+        },
+        {
+          "number": "4.10",
+          "kind": "practice",
+          "pdf_start": 414,
+          "printed_start": 413,
+          "anchor": "ex-4-10"
+        },
+        {
+          "number": "4.11",
+          "kind": "practice",
+          "pdf_start": 416,
+          "printed_start": 415,
+          "anchor": "ex-4-11"
+        },
+        {
+          "number": "4.12",
+          "kind": "practice",
+          "pdf_start": 417,
+          "printed_start": 416,
+          "anchor": "ex-4-12"
+        },
+        {
+          "number": "4.13",
+          "kind": "practice",
+          "pdf_start": 424,
+          "printed_start": 423,
+          "anchor": "ex-4-13"
+        },
+        {
+          "number": "4.14",
+          "kind": "practice",
+          "pdf_start": 427,
+          "printed_start": 426,
+          "anchor": "ex-4-14"
+        },
+        {
+          "number": "4.15",
+          "kind": "practice",
+          "pdf_start": 428,
+          "printed_start": 427,
+          "anchor": "ex-4-15"
+        },
+        {
+          "number": "4.16",
+          "kind": "practice",
+          "pdf_start": 429,
+          "printed_start": 428,
+          "anchor": "ex-4-16"
+        },
+        {
+          "number": "4.17",
+          "kind": "practice",
+          "pdf_start": 430,
+          "printed_start": 429,
+          "anchor": "ex-4-17"
+        },
+        {
+          "number": "4.18",
+          "kind": "practice",
+          "pdf_start": 431,
+          "printed_start": 430,
+          "anchor": "ex-4-18"
+        },
+        {
+          "number": "4.19",
+          "kind": "practice",
+          "pdf_start": 443,
+          "printed_start": 442,
+          "anchor": "ex-4-19"
+        },
+        {
+          "number": "4.20",
+          "kind": "practice",
+          "pdf_start": 444,
+          "printed_start": 443,
+          "anchor": "ex-4-20"
+        },
+        {
+          "number": "4.21",
+          "kind": "practice",
+          "pdf_start": 445,
+          "printed_start": 444,
+          "anchor": "ex-4-21"
+        },
+        {
+          "number": "4.22",
+          "kind": "practice",
+          "pdf_start": 445,
+          "printed_start": 444,
+          "anchor": "ex-4-22"
+        },
+        {
+          "number": "4.23",
+          "kind": "practice",
+          "pdf_start": 446,
+          "printed_start": 445,
+          "anchor": "ex-4-23"
+        },
+        {
+          "number": "4.24",
+          "kind": "practice",
+          "pdf_start": 446,
+          "printed_start": 445,
+          "anchor": "ex-4-24"
+        },
+        {
+          "number": "4.25",
+          "kind": "practice",
+          "pdf_start": 447,
+          "printed_start": 446,
+          "anchor": "ex-4-25"
+        },
+        {
+          "number": "4.26",
+          "kind": "practice",
+          "pdf_start": 447,
+          "printed_start": 446,
+          "anchor": "ex-4-26"
+        },
+        {
+          "number": "4.27",
+          "kind": "practice",
+          "pdf_start": 448,
+          "printed_start": 447,
+          "anchor": "ex-4-27"
+        },
+        {
+          "number": "4.28",
+          "kind": "practice",
+          "pdf_start": 454,
+          "printed_start": 453,
+          "anchor": "ex-4-28"
+        },
+        {
+          "number": "4.29",
+          "kind": "practice",
+          "pdf_start": 455,
+          "printed_start": 454,
+          "anchor": "ex-4-29"
+        },
+        {
+          "number": "4.30",
+          "kind": "practice",
+          "pdf_start": 486,
+          "printed_start": 485,
+          "anchor": "ex-4-30"
+        },
+        {
+          "number": "4.31",
+          "kind": "practice",
+          "pdf_start": 486,
+          "printed_start": 485,
+          "anchor": "ex-4-31"
+        },
+        {
+          "number": "4.32",
+          "kind": "practice",
+          "pdf_start": 489,
+          "printed_start": 488,
+          "anchor": "ex-4-32"
+        },
+        {
+          "number": "4.33",
+          "kind": "practice",
+          "pdf_start": 489,
+          "printed_start": 488,
+          "anchor": "ex-4-33"
+        },
+        {
+          "number": "4.34",
+          "kind": "practice",
+          "pdf_start": 490,
+          "printed_start": 489,
+          "anchor": "ex-4-34"
+        },
+        {
+          "number": "4.35",
+          "kind": "practice",
+          "pdf_start": 491,
+          "printed_start": 490,
+          "anchor": "ex-4-35"
+        },
+        {
+          "number": "4.36",
+          "kind": "practice",
+          "pdf_start": 492,
+          "printed_start": 491,
+          "anchor": "ex-4-36"
+        },
+        {
+          "number": "4.37",
+          "kind": "practice",
+          "pdf_start": 498,
+          "printed_start": 497,
+          "anchor": "ex-4-37"
+        },
+        {
+          "number": "4.38",
+          "kind": "practice",
+          "pdf_start": 499,
+          "printed_start": 498,
+          "anchor": "ex-4-38"
+        },
+        {
+          "number": "4.39",
+          "kind": "practice",
+          "pdf_start": 500,
+          "printed_start": 499,
+          "anchor": "ex-4-39"
+        },
+        {
+          "number": "4.40",
+          "kind": "practice",
+          "pdf_start": 501,
+          "printed_start": 500,
+          "anchor": "ex-4-40"
+        },
+        {
+          "number": "4.41",
+          "kind": "practice",
+          "pdf_start": 501,
+          "printed_start": 500,
+          "anchor": "ex-4-41"
+        },
+        {
+          "number": "4.42",
+          "kind": "practice",
+          "pdf_start": 501,
+          "printed_start": 500,
+          "anchor": "ex-4-42"
+        },
+        {
+          "number": "4.43",
+          "kind": "practice",
+          "pdf_start": 505,
+          "printed_start": 504,
+          "anchor": "ex-4-43"
+        },
+        {
+          "number": "4.44",
+          "kind": "practice",
+          "pdf_start": 505,
+          "printed_start": 504,
+          "anchor": "ex-4-44"
+        },
+        {
+          "number": "4.45",
+          "kind": "homework",
+          "pdf_start": 510,
+          "printed_start": 509,
+          "anchor": "ex-4-45"
+        },
+        {
+          "number": "4.46",
+          "kind": "homework",
+          "pdf_start": 510,
+          "printed_start": 509,
+          "anchor": "ex-4-46"
+        },
+        {
+          "number": "4.47",
+          "kind": "homework",
+          "pdf_start": 511,
+          "printed_start": 510,
+          "anchor": "ex-4-47"
+        },
+        {
+          "number": "4.48",
+          "kind": "homework",
+          "pdf_start": 511,
+          "printed_start": 510,
+          "anchor": "ex-4-48"
+        },
+        {
+          "number": "4.49",
+          "kind": "homework",
+          "pdf_start": 511,
+          "printed_start": 510,
+          "anchor": "ex-4-49"
+        },
+        {
+          "number": "4.50",
+          "kind": "homework",
+          "pdf_start": 511,
+          "printed_start": 510,
+          "anchor": "ex-4-50"
+        },
+        {
+          "number": "4.51",
+          "kind": "homework",
+          "pdf_start": 513,
+          "printed_start": 512,
+          "anchor": "ex-4-51"
+        },
+        {
+          "number": "4.52",
+          "kind": "homework",
+          "pdf_start": 513,
+          "printed_start": 512,
+          "anchor": "ex-4-52"
+        },
+        {
+          "number": "4.53",
+          "kind": "homework",
+          "pdf_start": 513,
+          "printed_start": 512,
+          "anchor": "ex-4-53"
+        },
+        {
+          "number": "4.54",
+          "kind": "homework",
+          "pdf_start": 513,
+          "printed_start": 512,
+          "anchor": "ex-4-54"
+        },
+        {
+          "number": "4.55",
+          "kind": "homework",
+          "pdf_start": 514,
+          "printed_start": 513,
+          "anchor": "ex-4-55"
+        },
+        {
+          "number": "4.56",
+          "kind": "homework",
+          "pdf_start": 514,
+          "printed_start": 513,
+          "anchor": "ex-4-56"
+        },
+        {
+          "number": "4.57",
+          "kind": "homework",
+          "pdf_start": 514,
+          "printed_start": 513,
+          "anchor": "ex-4-57"
+        },
+        {
+          "number": "4.58",
+          "kind": "homework",
+          "pdf_start": 516,
+          "printed_start": 515,
+          "anchor": "ex-4-58"
+        },
+        {
+          "number": "4.59",
+          "kind": "homework",
+          "pdf_start": 517,
+          "printed_start": 516,
+          "anchor": "ex-4-59"
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "exercises": [
+        {
+          "number": "5.1",
+          "kind": "practice",
+          "pdf_start": 537,
+          "printed_start": 536,
+          "anchor": "ex-5-1"
+        },
+        {
+          "number": "5.2",
+          "kind": "practice",
+          "pdf_start": 541,
+          "printed_start": 540,
+          "anchor": "ex-5-2"
+        },
+        {
+          "number": "5.3",
+          "kind": "practice",
+          "pdf_start": 549,
+          "printed_start": 548,
+          "anchor": "ex-5-3"
+        },
+        {
+          "number": "5.4",
+          "kind": "practice",
+          "pdf_start": 553,
+          "printed_start": 552,
+          "anchor": "ex-5-4"
+        },
+        {
+          "number": "5.5",
+          "kind": "practice",
+          "pdf_start": 567,
+          "printed_start": 566,
+          "anchor": "ex-5-5"
+        },
+        {
+          "number": "5.6",
+          "kind": "practice",
+          "pdf_start": 567,
+          "printed_start": 566,
+          "anchor": "ex-5-6"
+        },
+        {
+          "number": "5.7",
+          "kind": "practice",
+          "pdf_start": 569,
+          "printed_start": 568,
+          "anchor": "ex-5-7"
+        },
+        {
+          "number": "5.8",
+          "kind": "practice",
+          "pdf_start": 582,
+          "printed_start": 581,
+          "anchor": "ex-5-8"
+        },
+        {
+          "number": "5.9",
+          "kind": "practice",
+          "pdf_start": 590,
+          "printed_start": 589,
+          "anchor": "ex-5-9"
+        },
+        {
+          "number": "5.10",
+          "kind": "practice",
+          "pdf_start": 596,
+          "printed_start": 595,
+          "anchor": "ex-5-10"
+        },
+        {
+          "number": "5.11",
+          "kind": "practice",
+          "pdf_start": 598,
+          "printed_start": 597,
+          "anchor": "ex-5-11"
+        },
+        {
+          "number": "5.12",
+          "kind": "practice",
+          "pdf_start": 598,
+          "printed_start": 597,
+          "anchor": "ex-5-12"
+        },
+        {
+          "number": "5.13",
+          "kind": "homework",
+          "pdf_start": 607,
+          "printed_start": 606,
+          "anchor": "ex-5-13"
+        },
+        {
+          "number": "5.14",
+          "kind": "homework",
+          "pdf_start": 608,
+          "printed_start": 607,
+          "anchor": "ex-5-14"
+        },
+        {
+          "number": "5.15",
+          "kind": "homework",
+          "pdf_start": 608,
+          "printed_start": 607,
+          "anchor": "ex-5-15"
+        },
+        {
+          "number": "5.16",
+          "kind": "homework",
+          "pdf_start": 608,
+          "printed_start": 607,
+          "anchor": "ex-5-16"
+        },
+        {
+          "number": "5.17",
+          "kind": "homework",
+          "pdf_start": 608,
+          "printed_start": 607,
+          "anchor": "ex-5-17"
+        },
+        {
+          "number": "5.18",
+          "kind": "homework",
+          "pdf_start": 609,
+          "printed_start": 608,
+          "anchor": "ex-5-18"
+        },
+        {
+          "number": "5.19",
+          "kind": "homework",
+          "pdf_start": 610,
+          "printed_start": 609,
+          "anchor": "ex-5-19"
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "exercises": [
+        {
+          "number": "6.1",
+          "kind": "practice",
+          "pdf_start": 621,
+          "printed_start": 620,
+          "anchor": "ex-6-1"
+        },
+        {
+          "number": "6.2",
+          "kind": "practice",
+          "pdf_start": 629,
+          "printed_start": 628,
+          "anchor": "ex-6-2"
+        },
+        {
+          "number": "6.3",
+          "kind": "practice",
+          "pdf_start": 632,
+          "printed_start": 631,
+          "anchor": "ex-6-3"
+        },
+        {
+          "number": "6.4",
+          "kind": "practice",
+          "pdf_start": 632,
+          "printed_start": 631,
+          "anchor": "ex-6-4"
+        },
+        {
+          "number": "6.5",
+          "kind": "practice",
+          "pdf_start": 638,
+          "printed_start": 637,
+          "anchor": "ex-6-5"
+        },
+        {
+          "number": "6.6",
+          "kind": "practice",
+          "pdf_start": 641,
+          "printed_start": 640,
+          "anchor": "ex-6-6"
+        },
+        {
+          "number": "6.7",
+          "kind": "practice",
+          "pdf_start": 645,
+          "printed_start": 644,
+          "anchor": "ex-6-7"
+        },
+        {
+          "number": "6.8",
+          "kind": "practice",
+          "pdf_start": 646,
+          "printed_start": 645,
+          "anchor": "ex-6-8"
+        },
+        {
+          "number": "6.9",
+          "kind": "practice",
+          "pdf_start": 653,
+          "printed_start": 652,
+          "anchor": "ex-6-9"
+        },
+        {
+          "number": "6.10",
+          "kind": "practice",
+          "pdf_start": 661,
+          "printed_start": 660,
+          "anchor": "ex-6-10"
+        },
+        {
+          "number": "6.11",
+          "kind": "practice",
+          "pdf_start": 661,
+          "printed_start": 660,
+          "anchor": "ex-6-11"
+        },
+        {
+          "number": "6.12",
+          "kind": "practice",
+          "pdf_start": 665,
+          "printed_start": 664,
+          "anchor": "ex-6-12"
+        },
+        {
+          "number": "6.13",
+          "kind": "practice",
+          "pdf_start": 665,
+          "printed_start": 664,
+          "anchor": "ex-6-13"
+        },
+        {
+          "number": "6.14",
+          "kind": "practice",
+          "pdf_start": 666,
+          "printed_start": 665,
+          "anchor": "ex-6-14"
+        },
+        {
+          "number": "6.15",
+          "kind": "practice",
+          "pdf_start": 666,
+          "printed_start": 665,
+          "anchor": "ex-6-15"
+        },
+        {
+          "number": "6.16",
+          "kind": "practice",
+          "pdf_start": 667,
+          "printed_start": 666,
+          "anchor": "ex-6-16"
+        },
+        {
+          "number": "6.17",
+          "kind": "practice",
+          "pdf_start": 673,
+          "printed_start": 672,
+          "anchor": "ex-6-17"
+        },
+        {
+          "number": "6.18",
+          "kind": "practice",
+          "pdf_start": 674,
+          "printed_start": 673,
+          "anchor": "ex-6-18"
+        },
+        {
+          "number": "6.19",
+          "kind": "practice",
+          "pdf_start": 675,
+          "printed_start": 674,
+          "anchor": "ex-6-19"
+        },
+        {
+          "number": "6.20",
+          "kind": "practice",
+          "pdf_start": 675,
+          "printed_start": 674,
+          "anchor": "ex-6-20"
+        },
+        {
+          "number": "6.21",
+          "kind": "practice",
+          "pdf_start": 680,
+          "printed_start": 679,
+          "anchor": "ex-6-21"
+        },
+        {
+          "number": "6.22",
+          "kind": "homework",
+          "pdf_start": 686,
+          "printed_start": 685,
+          "anchor": "ex-6-22"
+        },
+        {
+          "number": "6.23",
+          "kind": "homework",
+          "pdf_start": 686,
+          "printed_start": 685,
+          "anchor": "ex-6-23"
+        },
+        {
+          "number": "6.24",
+          "kind": "homework",
+          "pdf_start": 686,
+          "printed_start": 685,
+          "anchor": "ex-6-24"
+        },
+        {
+          "number": "6.25",
+          "kind": "homework",
+          "pdf_start": 687,
+          "printed_start": 686,
+          "anchor": "ex-6-25"
+        },
+        {
+          "number": "6.26",
+          "kind": "homework",
+          "pdf_start": 687,
+          "printed_start": 686,
+          "anchor": "ex-6-26"
+        },
+        {
+          "number": "6.27",
+          "kind": "homework",
+          "pdf_start": 687,
+          "printed_start": 686,
+          "anchor": "ex-6-27"
+        },
+        {
+          "number": "6.28",
+          "kind": "homework",
+          "pdf_start": 687,
+          "printed_start": 686,
+          "anchor": "ex-6-28"
+        },
+        {
+          "number": "6.29",
+          "kind": "homework",
+          "pdf_start": 688,
+          "printed_start": 687,
+          "anchor": "ex-6-29"
+        },
+        {
+          "number": "6.30",
+          "kind": "homework",
+          "pdf_start": 689,
+          "printed_start": 688,
+          "anchor": "ex-6-30"
+        },
+        {
+          "number": "6.31",
+          "kind": "homework",
+          "pdf_start": 689,
+          "printed_start": 688,
+          "anchor": "ex-6-31"
+        },
+        {
+          "number": "6.32",
+          "kind": "homework",
+          "pdf_start": 690,
+          "printed_start": 689,
+          "anchor": "ex-6-32"
+        },
+        {
+          "number": "6.33",
+          "kind": "homework",
+          "pdf_start": 690,
+          "printed_start": 689,
+          "anchor": "ex-6-33"
+        },
+        {
+          "number": "6.34",
+          "kind": "homework",
+          "pdf_start": 690,
+          "printed_start": 689,
+          "anchor": "ex-6-34"
+        },
+        {
+          "number": "6.35",
+          "kind": "homework",
+          "pdf_start": 691,
+          "printed_start": 690,
+          "anchor": "ex-6-35"
+        },
+        {
+          "number": "6.36",
+          "kind": "homework",
+          "pdf_start": 691,
+          "printed_start": 690,
+          "anchor": "ex-6-36"
+        },
+        {
+          "number": "6.37",
+          "kind": "homework",
+          "pdf_start": 692,
+          "printed_start": 691,
+          "anchor": "ex-6-37"
+        },
+        {
+          "number": "6.38",
+          "kind": "homework",
+          "pdf_start": 693,
+          "printed_start": 692,
+          "anchor": "ex-6-38"
+        },
+        {
+          "number": "6.39",
+          "kind": "homework",
+          "pdf_start": 694,
+          "printed_start": 693,
+          "anchor": "ex-6-39"
+        },
+        {
+          "number": "6.40",
+          "kind": "homework",
+          "pdf_start": 695,
+          "printed_start": 694,
+          "anchor": "ex-6-40"
+        },
+        {
+          "number": "6.41",
+          "kind": "homework",
+          "pdf_start": 695,
+          "printed_start": 694,
+          "anchor": "ex-6-41"
+        },
+        {
+          "number": "6.42",
+          "kind": "homework",
+          "pdf_start": 696,
+          "printed_start": 695,
+          "anchor": "ex-6-42"
+        },
+        {
+          "number": "6.43",
+          "kind": "homework",
+          "pdf_start": 696,
+          "printed_start": 695,
+          "anchor": "ex-6-43"
+        },
+        {
+          "number": "6.44",
+          "kind": "homework",
+          "pdf_start": 696,
+          "printed_start": 695,
+          "anchor": "ex-6-44"
+        },
+        {
+          "number": "6.45",
+          "kind": "homework",
+          "pdf_start": 696,
+          "printed_start": 695,
+          "anchor": "ex-6-45"
+        },
+        {
+          "number": "6.46",
+          "kind": "homework",
+          "pdf_start": 697,
+          "printed_start": 696,
+          "anchor": "ex-6-46"
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "exercises": [
+        {
+          "number": "7.1",
+          "kind": "practice",
+          "pdf_start": 715,
+          "printed_start": 714,
+          "anchor": "ex-7-1"
+        },
+        {
+          "number": "7.2",
+          "kind": "practice",
+          "pdf_start": 721,
+          "printed_start": 720,
+          "anchor": "ex-7-2"
+        },
+        {
+          "number": "7.3",
+          "kind": "practice",
+          "pdf_start": 726,
+          "printed_start": 725,
+          "anchor": "ex-7-3"
+        },
+        {
+          "number": "7.4",
+          "kind": "practice",
+          "pdf_start": 731,
+          "printed_start": 730,
+          "anchor": "ex-7-4"
+        },
+        {
+          "number": "7.5",
+          "kind": "practice",
+          "pdf_start": 732,
+          "printed_start": 731,
+          "anchor": "ex-7-5"
+        },
+        {
+          "number": "7.6",
+          "kind": "homework",
+          "pdf_start": 751,
+          "printed_start": 750,
+          "anchor": "ex-7-6"
+        },
+        {
+          "number": "7.7",
+          "kind": "homework",
+          "pdf_start": 752,
+          "printed_start": 751,
+          "anchor": "ex-7-7"
+        },
+        {
+          "number": "7.8",
+          "kind": "homework",
+          "pdf_start": 752,
+          "printed_start": 751,
+          "anchor": "ex-7-8"
+        },
+        {
+          "number": "7.9",
+          "kind": "homework",
+          "pdf_start": 753,
+          "printed_start": 752,
+          "anchor": "ex-7-9"
+        },
+        {
+          "number": "7.10",
+          "kind": "homework",
+          "pdf_start": 753,
+          "printed_start": 752,
+          "anchor": "ex-7-10"
+        },
+        {
+          "number": "7.11",
+          "kind": "homework",
+          "pdf_start": 754,
+          "printed_start": 753,
+          "anchor": "ex-7-11"
+        },
+        {
+          "number": "7.12",
+          "kind": "homework",
+          "pdf_start": 754,
+          "printed_start": 753,
+          "anchor": "ex-7-12"
+        },
+        {
+          "number": "7.13",
+          "kind": "homework",
+          "pdf_start": 754,
+          "printed_start": 753,
+          "anchor": "ex-7-13"
+        }
+      ]
+    },
+    {
+      "chapter": 8,
+      "exercises": [
+        {
+          "number": "8.1",
+          "kind": "practice",
+          "pdf_start": 771,
+          "printed_start": 770,
+          "anchor": "ex-8-1",
+          "pdf_pages": [
+            771
+          ],
+          "printed_pages": [
+            770
+          ]
+        },
+        {
+          "number": "8.2",
+          "kind": "practice",
+          "pdf_start": 780,
+          "printed_start": 779,
+          "anchor": "ex-8-2",
+          "pdf_pages": [
+            780
+          ],
+          "printed_pages": [
+            779
+          ]
+        },
+        {
+          "number": "8.3",
+          "kind": "practice",
+          "pdf_start": 782,
+          "printed_start": 781,
+          "anchor": "ex-8-3",
+          "pdf_pages": [
+            782,
+            783
+          ],
+          "printed_pages": [
+            781,
+            782
+          ]
+        },
+        {
+          "number": "8.4",
+          "kind": "practice",
+          "pdf_start": 785,
+          "printed_start": 784,
+          "anchor": "ex-8-4",
+          "pdf_pages": [
+            785
+          ],
+          "printed_pages": [
+            784
+          ]
+        },
+        {
+          "number": "8.5",
+          "kind": "practice",
+          "pdf_start": 787,
+          "printed_start": 786,
+          "anchor": "ex-8-5",
+          "pdf_pages": [
+            787
+          ],
+          "printed_pages": [
+            786
+          ]
+        },
+        {
+          "number": "8.6",
+          "kind": "practice",
+          "pdf_start": 789,
+          "printed_start": 788,
+          "anchor": "ex-8-6",
+          "pdf_pages": [
+            789,
+            790
+          ],
+          "printed_pages": [
+            788,
+            789
+          ]
+        },
+        {
+          "number": "8.7",
+          "kind": "practice",
+          "pdf_start": 801,
+          "printed_start": 800,
+          "anchor": "ex-8-7",
+          "pdf_pages": [
+            801
+          ],
+          "printed_pages": [
+            800
+          ]
+        },
+        {
+          "number": "8.8",
+          "kind": "practice",
+          "pdf_start": 810,
+          "printed_start": 809,
+          "anchor": "ex-8-8",
+          "pdf_pages": [
+            810,
+            811
+          ],
+          "printed_pages": [
+            809,
+            810
+          ]
+        },
+        {
+          "number": "8.9",
+          "kind": "homework",
+          "pdf_start": 825,
+          "printed_start": 824,
+          "anchor": "ex-8-9",
+          "pdf_pages": [
+            825
+          ],
+          "printed_pages": [
+            824
+          ]
+        },
+        {
+          "number": "8.10",
+          "kind": "homework",
+          "pdf_start": 825,
+          "printed_start": 824,
+          "anchor": "ex-8-10",
+          "pdf_pages": [
+            825
+          ],
+          "printed_pages": [
+            824
+          ]
+        },
+        {
+          "number": "8.11",
+          "kind": "homework",
+          "pdf_start": 825,
+          "printed_start": 824,
+          "anchor": "ex-8-11",
+          "pdf_pages": [
+            825
+          ],
+          "printed_pages": [
+            824
+          ]
+        },
+        {
+          "number": "8.12",
+          "kind": "homework",
+          "pdf_start": 826,
+          "printed_start": 825,
+          "anchor": "ex-8-12",
+          "pdf_pages": [
+            826
+          ],
+          "printed_pages": [
+            825
+          ]
+        },
+        {
+          "number": "8.13",
+          "kind": "homework",
+          "pdf_start": 826,
+          "printed_start": 825,
+          "anchor": "ex-8-13",
+          "pdf_pages": [
+            826
+          ],
+          "printed_pages": [
+            825
+          ]
+        },
+        {
+          "number": "8.14",
+          "kind": "homework",
+          "pdf_start": 826,
+          "printed_start": 825,
+          "anchor": "ex-8-14",
+          "pdf_pages": [
+            826,
+            827
+          ],
+          "printed_pages": [
+            825,
+            826
+          ]
+        },
+        {
+          "number": "8.15",
+          "kind": "homework",
+          "pdf_start": 827,
+          "printed_start": 826,
+          "anchor": "ex-8-15",
+          "pdf_pages": [
+            827
+          ],
+          "printed_pages": [
+            826
+          ]
+        },
+        {
+          "number": "8.16",
+          "kind": "homework",
+          "pdf_start": 827,
+          "printed_start": 826,
+          "anchor": "ex-8-16",
+          "pdf_pages": [
+            827,
+            828
+          ],
+          "printed_pages": [
+            826,
+            827
+          ]
+        },
+        {
+          "number": "8.17",
+          "kind": "homework",
+          "pdf_start": 828,
+          "printed_start": 827,
+          "anchor": "ex-8-17",
+          "pdf_pages": [
+            828
+          ],
+          "printed_pages": [
+            827
+          ]
+        },
+        {
+          "number": "8.18",
+          "kind": "homework",
+          "pdf_start": 828,
+          "printed_start": 827,
+          "anchor": "ex-8-18",
+          "pdf_pages": [
+            828,
+            829
+          ],
+          "printed_pages": [
+            827,
+            828
+          ]
+        },
+        {
+          "number": "8.19",
+          "kind": "homework",
+          "pdf_start": 829,
+          "printed_start": 828,
+          "anchor": "ex-8-19",
+          "pdf_pages": [
+            829
+          ],
+          "printed_pages": [
+            828
+          ]
+        },
+        {
+          "number": "8.20",
+          "kind": "homework",
+          "pdf_start": 829,
+          "printed_start": 828,
+          "anchor": "ex-8-20",
+          "pdf_pages": [
+            829
+          ],
+          "printed_pages": [
+            828
+          ]
+        },
+        {
+          "number": "8.21",
+          "kind": "homework",
+          "pdf_start": 829,
+          "printed_start": 828,
+          "anchor": "ex-8-21",
+          "pdf_pages": [
+            829,
+            830
+          ],
+          "printed_pages": [
+            828,
+            829
+          ]
+        },
+        {
+          "number": "8.22",
+          "kind": "homework",
+          "pdf_start": 830,
+          "printed_start": 829,
+          "anchor": "ex-8-22",
+          "pdf_pages": [
+            830
+          ],
+          "printed_pages": [
+            829
+          ]
+        },
+        {
+          "number": "8.23",
+          "kind": "homework",
+          "pdf_start": 830,
+          "printed_start": 829,
+          "anchor": "ex-8-23",
+          "pdf_pages": [
+            830,
+            831
+          ],
+          "printed_pages": [
+            829,
+            830
+          ]
+        },
+        {
+          "number": "8.24",
+          "kind": "homework",
+          "pdf_start": 830,
+          "printed_start": 829,
+          "anchor": "ex-8-24",
+          "pdf_pages": [
+            830
+          ],
+          "printed_pages": [
+            829
+          ]
+        },
+        {
+          "number": "8.25",
+          "kind": "homework",
+          "pdf_start": 831,
+          "printed_start": 830,
+          "anchor": "ex-8-25",
+          "pdf_pages": [
+            831
+          ],
+          "printed_pages": [
+            830
+          ]
+        },
+        {
+          "number": "8.26",
+          "kind": "homework",
+          "pdf_start": 831,
+          "printed_start": 830,
+          "anchor": "ex-8-26",
+          "pdf_pages": [
+            831,
+            832,
+            833
+          ],
+          "printed_pages": [
+            830,
+            831,
+            832
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 9,
+      "exercises": [
+        {
+          "number": "9.1",
+          "kind": "practice",
+          "pdf_start": 842,
+          "printed_start": 841,
+          "anchor": "ex-9-1"
+        },
+        {
+          "number": "9.2",
+          "kind": "practice",
+          "pdf_start": 844,
+          "printed_start": 843,
+          "anchor": "ex-9-2"
+        },
+        {
+          "number": "9.3",
+          "kind": "practice",
+          "pdf_start": 853,
+          "printed_start": 852,
+          "anchor": "ex-9-3"
+        },
+        {
+          "number": "9.4",
+          "kind": "practice",
+          "pdf_start": 861,
+          "printed_start": 860,
+          "anchor": "ex-9-4"
+        },
+        {
+          "number": "9.5",
+          "kind": "practice",
+          "pdf_start": 876,
+          "printed_start": 875,
+          "anchor": "ex-9-5"
+        },
+        {
+          "number": "9.6",
+          "kind": "practice",
+          "pdf_start": 886,
+          "printed_start": 885,
+          "anchor": "ex-9-6"
+        },
+        {
+          "number": "9.7",
+          "kind": "practice",
+          "pdf_start": 889,
+          "printed_start": 888,
+          "anchor": "ex-9-7"
+        },
+        {
+          "number": "9.8",
+          "kind": "practice",
+          "pdf_start": 898,
+          "printed_start": 897,
+          "anchor": "ex-9-8"
+        },
+        {
+          "number": "9.9",
+          "kind": "practice",
+          "pdf_start": 898,
+          "printed_start": 897,
+          "anchor": "ex-9-9"
+        },
+        {
+          "number": "9.10",
+          "kind": "practice",
+          "pdf_start": 901,
+          "printed_start": 900,
+          "anchor": "ex-9-10"
+        },
+        {
+          "number": "9.11",
+          "kind": "homework",
+          "pdf_start": 913,
+          "printed_start": 912,
+          "anchor": "ex-9-11"
+        },
+        {
+          "number": "9.12",
+          "kind": "homework",
+          "pdf_start": 914,
+          "printed_start": 913,
+          "anchor": "ex-9-12"
+        },
+        {
+          "number": "9.13",
+          "kind": "homework",
+          "pdf_start": 915,
+          "printed_start": 914,
+          "anchor": "ex-9-13"
+        },
+        {
+          "number": "9.14",
+          "kind": "homework",
+          "pdf_start": 916,
+          "printed_start": 915,
+          "anchor": "ex-9-14"
+        },
+        {
+          "number": "9.15",
+          "kind": "homework",
+          "pdf_start": 916,
+          "printed_start": 915,
+          "anchor": "ex-9-15"
+        },
+        {
+          "number": "9.16",
+          "kind": "homework",
+          "pdf_start": 916,
+          "printed_start": 915,
+          "anchor": "ex-9-16"
+        },
+        {
+          "number": "9.17",
+          "kind": "homework",
+          "pdf_start": 916,
+          "printed_start": 915,
+          "anchor": "ex-9-17"
+        },
+        {
+          "number": "9.18",
+          "kind": "homework",
+          "pdf_start": 916,
+          "printed_start": 915,
+          "anchor": "ex-9-18"
+        },
+        {
+          "number": "9.19",
+          "kind": "homework",
+          "pdf_start": 917,
+          "printed_start": 916,
+          "anchor": "ex-9-19"
+        },
+        {
+          "number": "9.20",
+          "kind": "homework",
+          "pdf_start": 917,
+          "printed_start": 916,
+          "anchor": "ex-9-20"
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "exercises": [
+        {
+          "number": "10.1",
+          "kind": "practice",
+          "pdf_start": 932,
+          "printed_start": 931,
+          "anchor": "ex-10-1"
+        },
+        {
+          "number": "10.2",
+          "kind": "practice",
+          "pdf_start": 945,
+          "printed_start": 944,
+          "anchor": "ex-10-2"
+        },
+        {
+          "number": "10.3",
+          "kind": "practice",
+          "pdf_start": 945,
+          "printed_start": 944,
+          "anchor": "ex-10-3"
+        },
+        {
+          "number": "10.4",
+          "kind": "practice",
+          "pdf_start": 946,
+          "printed_start": 945,
+          "anchor": "ex-10-4"
+        },
+        {
+          "number": "10.5",
+          "kind": "practice",
+          "pdf_start": 947,
+          "printed_start": 946,
+          "anchor": "ex-10-5"
+        },
+        {
+          "number": "10.6",
+          "kind": "homework",
+          "pdf_start": 951,
+          "printed_start": 950,
+          "anchor": "ex-10-6"
+        },
+        {
+          "number": "10.7",
+          "kind": "homework",
+          "pdf_start": 951,
+          "printed_start": 950,
+          "anchor": "ex-10-7"
+        },
+        {
+          "number": "10.8",
+          "kind": "homework",
+          "pdf_start": 951,
+          "printed_start": 950,
+          "anchor": "ex-10-8"
+        },
+        {
+          "number": "10.9",
+          "kind": "homework",
+          "pdf_start": 951,
+          "printed_start": 950,
+          "anchor": "ex-10-9"
+        },
+        {
+          "number": "10.10",
+          "kind": "homework",
+          "pdf_start": 952,
+          "printed_start": 951,
+          "anchor": "ex-10-10"
+        }
+      ]
+    },
+    {
+      "chapter": 11,
+      "exercises": [
+        {
+          "number": "11.1",
+          "kind": "practice",
+          "pdf_start": 964,
+          "printed_start": 963,
+          "anchor": "ex-11-1"
+        },
+        {
+          "number": "11.2",
+          "kind": "practice",
+          "pdf_start": 964,
+          "printed_start": 963,
+          "anchor": "ex-11-2"
+        },
+        {
+          "number": "11.3",
+          "kind": "practice",
+          "pdf_start": 964,
+          "printed_start": 963,
+          "anchor": "ex-11-3"
+        },
+        {
+          "number": "11.4",
+          "kind": "practice",
+          "pdf_start": 979,
+          "printed_start": 978,
+          "anchor": "ex-11-4"
+        },
+        {
+          "number": "11.5",
+          "kind": "practice",
+          "pdf_start": 991,
+          "printed_start": 990,
+          "anchor": "ex-11-5"
+        },
+        {
+          "number": "11.6",
+          "kind": "homework",
+          "pdf_start": 1002,
+          "printed_start": 1001,
+          "anchor": "ex-11-6"
+        },
+        {
+          "number": "11.7",
+          "kind": "homework",
+          "pdf_start": 1003,
+          "printed_start": 1002,
+          "anchor": "ex-11-7"
+        },
+        {
+          "number": "11.8",
+          "kind": "homework",
+          "pdf_start": 1003,
+          "printed_start": 1002,
+          "anchor": "ex-11-8"
+        },
+        {
+          "number": "11.9",
+          "kind": "homework",
+          "pdf_start": 1003,
+          "printed_start": 1002,
+          "anchor": "ex-11-9"
+        },
+        {
+          "number": "11.10",
+          "kind": "homework",
+          "pdf_start": 1003,
+          "printed_start": 1002,
+          "anchor": "ex-11-10"
+        },
+        {
+          "number": "11.11",
+          "kind": "homework",
+          "pdf_start": 1003,
+          "printed_start": 1002,
+          "anchor": "ex-11-11"
+        },
+        {
+          "number": "11.12",
+          "kind": "homework",
+          "pdf_start": 1003,
+          "printed_start": 1002,
+          "anchor": "ex-11-12"
+        },
+        {
+          "number": "11.13",
+          "kind": "homework",
+          "pdf_start": 1003,
+          "printed_start": 1002,
+          "anchor": "ex-11-13"
+        }
+      ]
+    },
+    {
+      "chapter": 12,
+      "exercises": [
+        {
+          "number": "12.1",
+          "kind": "practice",
+          "pdf_start": 1012,
+          "printed_start": 1011,
+          "anchor": "ex-12-1"
+        },
+        {
+          "number": "12.2",
+          "kind": "practice",
+          "pdf_start": 1012,
+          "printed_start": 1011,
+          "anchor": "ex-12-2"
+        },
+        {
+          "number": "12.3",
+          "kind": "practice",
+          "pdf_start": 1017,
+          "printed_start": 1016,
+          "anchor": "ex-12-3"
+        },
+        {
+          "number": "12.4",
+          "kind": "practice",
+          "pdf_start": 1021,
+          "printed_start": 1020,
+          "anchor": "ex-12-4"
+        },
+        {
+          "number": "12.5",
+          "kind": "practice",
+          "pdf_start": 1029,
+          "printed_start": 1028,
+          "anchor": "ex-12-5"
+        },
+        {
+          "number": "12.6",
+          "kind": "practice",
+          "pdf_start": 1032,
+          "printed_start": 1031,
+          "anchor": "ex-12-6"
+        },
+        {
+          "number": "12.7",
+          "kind": "practice",
+          "pdf_start": 1035,
+          "printed_start": 1034,
+          "anchor": "ex-12-7"
+        },
+        {
+          "number": "12.8",
+          "kind": "practice",
+          "pdf_start": 1038,
+          "printed_start": 1037,
+          "anchor": "ex-12-8"
+        },
+        {
+          "number": "12.9",
+          "kind": "practice",
+          "pdf_start": 1043,
+          "printed_start": 1042,
+          "anchor": "ex-12-9"
+        },
+        {
+          "number": "12.10",
+          "kind": "practice",
+          "pdf_start": 1045,
+          "printed_start": 1044,
+          "anchor": "ex-12-10"
+        },
+        {
+          "number": "12.11",
+          "kind": "practice",
+          "pdf_start": 1057,
+          "printed_start": 1056,
+          "anchor": "ex-12-11"
+        },
+        {
+          "number": "12.12",
+          "kind": "practice",
+          "pdf_start": 1061,
+          "printed_start": 1060,
+          "anchor": "ex-12-12"
+        },
+        {
+          "number": "12.13",
+          "kind": "practice",
+          "pdf_start": 1063,
+          "printed_start": 1062,
+          "anchor": "ex-12-13"
+        },
+        {
+          "number": "12.14",
+          "kind": "practice",
+          "pdf_start": 1063,
+          "printed_start": 1062,
+          "anchor": "ex-12-14"
+        },
+        {
+          "number": "12.15",
+          "kind": "practice",
+          "pdf_start": 1066,
+          "printed_start": 1065,
+          "anchor": "ex-12-15"
+        },
+        {
+          "number": "12.16",
+          "kind": "homework",
+          "pdf_start": 1068,
+          "printed_start": 1067,
+          "anchor": "ex-12-16"
+        },
+        {
+          "number": "12.17",
+          "kind": "homework",
+          "pdf_start": 1068,
+          "printed_start": 1067,
+          "anchor": "ex-12-17"
+        },
+        {
+          "number": "12.18",
+          "kind": "homework",
+          "pdf_start": 1069,
+          "printed_start": 1068,
+          "anchor": "ex-12-18"
+        },
+        {
+          "number": "12.19",
+          "kind": "homework",
+          "pdf_start": 1069,
+          "printed_start": 1068,
+          "anchor": "ex-12-19"
+        },
+        {
+          "number": "12.20",
+          "kind": "homework",
+          "pdf_start": 1069,
+          "printed_start": 1068,
+          "anchor": "ex-12-20"
+        },
+        {
+          "number": "12.21",
+          "kind": "homework",
+          "pdf_start": 1069,
+          "printed_start": 1068,
+          "anchor": "ex-12-21"
+        },
+        {
+          "number": "12.22",
+          "kind": "homework",
+          "pdf_start": 1069,
+          "printed_start": 1068,
+          "anchor": "ex-12-22"
+        },
+        {
+          "number": "12.23",
+          "kind": "homework",
+          "pdf_start": 1069,
+          "printed_start": 1068,
+          "anchor": "ex-12-23"
+        },
+        {
+          "number": "12.24",
+          "kind": "homework",
+          "pdf_start": 1069,
+          "printed_start": 1068,
+          "anchor": "ex-12-24"
+        },
+        {
+          "number": "12.25",
+          "kind": "homework",
+          "pdf_start": 1069,
+          "printed_start": 1068,
+          "anchor": "ex-12-25"
+        },
+        {
+          "number": "12.26",
+          "kind": "homework",
+          "pdf_start": 1070,
+          "printed_start": 1069,
+          "anchor": "ex-12-26"
+        },
+        {
+          "number": "12.27",
+          "kind": "homework",
+          "pdf_start": 1070,
+          "printed_start": 1069,
+          "anchor": "ex-12-27"
+        },
+        {
+          "number": "12.28",
+          "kind": "homework",
+          "pdf_start": 1070,
+          "printed_start": 1069,
+          "anchor": "ex-12-28"
+        },
+        {
+          "number": "12.29",
+          "kind": "homework",
+          "pdf_start": 1070,
+          "printed_start": 1069,
+          "anchor": "ex-12-29"
+        },
+        {
+          "number": "12.30",
+          "kind": "homework",
+          "pdf_start": 1071,
+          "printed_start": 1070,
+          "anchor": "ex-12-30"
+        },
+        {
+          "number": "12.31",
+          "kind": "homework",
+          "pdf_start": 1071,
+          "printed_start": 1070,
+          "anchor": "ex-12-31"
+        },
+        {
+          "number": "12.32",
+          "kind": "homework",
+          "pdf_start": 1072,
+          "printed_start": 1071,
+          "anchor": "ex-12-32"
+        },
+        {
+          "number": "12.33",
+          "kind": "homework",
+          "pdf_start": 1072,
+          "printed_start": 1071,
+          "anchor": "ex-12-33"
+        },
+        {
+          "number": "12.34",
+          "kind": "homework",
+          "pdf_start": 1072,
+          "printed_start": 1071,
+          "anchor": "ex-12-34"
+        },
+        {
+          "number": "12.35",
+          "kind": "homework",
+          "pdf_start": 1072,
+          "printed_start": 1071,
+          "anchor": "ex-12-35"
+        },
+        {
+          "number": "12.36",
+          "kind": "homework",
+          "pdf_start": 1072,
+          "printed_start": 1071,
+          "anchor": "ex-12-36"
+        },
+        {
+          "number": "12.37",
+          "kind": "homework",
+          "pdf_start": 1072,
+          "printed_start": 1071,
+          "anchor": "ex-12-37"
+        },
+        {
+          "number": "12.38",
+          "kind": "homework",
+          "pdf_start": 1072,
+          "printed_start": 1071,
+          "anchor": "ex-12-38"
+        },
+        {
+          "number": "12.39",
+          "kind": "homework",
+          "pdf_start": 1072,
+          "printed_start": 1071,
+          "anchor": "ex-12-39"
+        }
+      ]
+    }
+  ]
+}

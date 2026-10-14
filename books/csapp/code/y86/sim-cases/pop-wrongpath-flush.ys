@@ -1,0 +1,9 @@
+irmovq stack,%rsp
+xorq %rax,%rax
+jne wrong
+irmovq $19,%rbx
+halt
+wrong: popq %rax
+halt
+.pos 0x200
+stack: .quad 5

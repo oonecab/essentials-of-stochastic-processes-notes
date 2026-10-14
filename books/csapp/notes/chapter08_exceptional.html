@@ -1,0 +1,1305 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第 8 章：异常控制流 · CS:APP 中文伴读</title><style>
+:root{--ink:#252b29;--sub:#58615d;--rule:#d9dfda;--green:#285a4e;--paper:#fffefa;--tint:#f4f6f2}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.9 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}main{max-width:860px;margin:auto;padding:48px 24px 90px}h1{font-size:2.2rem;line-height:1.3;margin:.2rem 0}h2{font-size:1.55rem;margin:3.4rem 0 1.2rem;padding-bottom:.45rem;border-bottom:1px solid var(--rule)}h3{font-size:1.16rem;margin:2rem 0 .6rem}p{margin:.7rem 0 1.1rem}header{padding-bottom:22px;border-bottom:1px solid var(--rule)}.overline,.source,.small,figcaption{color:var(--sub);font-size:.85rem}.intro{font-size:1.08rem}a{color:var(--green);text-underline-offset:3px}nav{border-left:3px solid var(--green);padding:.6rem 1.3rem;margin:2rem 0;background:var(--tint)}nav ul{margin:.3rem 0;padding-left:1.2rem;columns:2}nav li{break-inside:avoid}.passage{border-left:2px solid var(--green);padding:.15rem 0 .15rem 1.2rem;margin:1.5rem 0}.english{font:italic 1.05rem/1.7 Georgia,serif}.passage p{margin:.25rem 0}pre{background:var(--tint);border:1px solid var(--rule);padding:1rem 1.1rem;overflow:auto;font:14px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}code{font:.9em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}pre code{font:inherit}.callout{background:var(--tint);padding:.8rem 1.1rem;margin:1.4rem 0;border-left:2px solid var(--green)}.scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.91rem;margin:1.1rem 0}th,td{padding:.6rem .7rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule)}th{border-top:1px solid var(--rule);background:var(--tint)}.wide{min-width:640px}figure{margin:1.5rem 0}figure .scroll{padding:12px 8px;border:1px solid var(--rule);background:var(--tint)}figcaption{margin-top:.6rem}svg{display:block;width:100%;height:auto;min-width:620px}svg text{font-family:system-ui,-apple-system,"PingFang SC",sans-serif;text-anchor:middle;fill:var(--ink);font-size:16px}svg .n{fill:var(--paper);stroke:var(--green);stroke-width:1.3}svg .e{fill:none;stroke:#7b8f85;stroke-width:1.4}svg .hint{font-size:13px;fill:var(--sub)}ul,ol{padding-left:1.5rem}li{margin:.35rem 0}footer{border-top:1px solid var(--rule);padding-top:1rem;margin-top:4rem;color:var(--sub);font-size:.85rem}@media(max-width:640px){main{padding:30px 18px 60px}h1{font-size:1.75rem}nav ul{columns:1}h2{font-size:1.3rem}}
+.exercise{margin:.8rem 0;border:1px solid var(--rule);padding:.75rem 1rem;scroll-margin-top:16px}.exercise summary{cursor:pointer;color:var(--green);font-weight:600}.exercise summary:focus-visible{outline:2px solid var(--green);outline-offset:4px}.exercise-index{display:flex;flex-wrap:wrap;gap:.4rem 1rem;margin:1rem 0}.exercise .answer{margin-top:1rem}.tree-code{overflow-wrap:anywhere;word-break:break-word}.exercise .scroll table{min-width:620px}
+
+/* Native, static MathML: no network resources or runtime typesetting. */
+math{font-family:"STIX Two Math","Cambria Math",math;font-size:1.04em}
+.math-inline{display:inline-block;max-width:calc(100% - .16em);overflow-x:auto;overflow-y:hidden;vertical-align:middle;margin:0 .08em;padding:0 .02em}
+.equation,.math-block{overflow-x:auto;max-width:100%;padding:.7rem .25rem;margin:1rem 0;text-align:center}
+.equation math,.math-block math{display:block;width:max-content;margin:0 auto;font-size:1.08em}
+.answer h4{margin:1.35rem 0 .5rem;font-size:1rem}
+:not(pre)>code{overflow-wrap:anywhere}
+pre code{overflow-wrap:normal;white-space:pre}
+
+.comparison,.benchmark{min-width:800px}.array-values{min-width:620px}.array-values th,.array-values td{text-align:center;padding:.4rem .55rem}.forest-label{font-weight:600}svg .hint{font-size:12px}.answer pre{font-size:13px}.exercise{scroll-margin-top:20px}
+
+.code-pair{margin:1.2rem 0;border-left:2px solid var(--rule);padding-left:1rem}.code-version{margin:.5rem 0;padding:.35rem 0}.code-version>summary{cursor:pointer;font-weight:600;color:var(--green)}.code-version>summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}.code-version pre{margin:.7rem 0 1rem}.code-reference{font-size:.92rem}.pair-note{font-size:.9rem;color:var(--sub)}.chapter-nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem}.exercise>summary{line-height:1.65}.experiment{margin:1.2rem 0;padding:.7rem 1rem;border-left:2px solid var(--green);background:var(--tint)}
+
+.meta,.caption{color:var(--sub);font-size:.85rem}
+.scroll,.table-scroll,.diagram{max-width:100%;overflow-x:auto}
+main,header,section,.answer,.code-pair,.code-version{min-width:0}
+.math-inline{padding:.20em .05em}
+.chapter-nav{display:flex;flex-wrap:wrap;gap:.4rem 1rem}
+.scroll>table{min-width:620px}
+.puzzle{width:auto;margin:1.2rem auto}
+.scroll>table.puzzle{min-width:0}
+.puzzle th,.puzzle td{text-align:center;min-width:44px}
+.verification-table,.state-table,.benchmark{font-variant-numeric:tabular-nums}
+.diagram{margin:1.2rem 0;padding:1rem 1.1rem;border:1px solid var(--rule);background:var(--tint)}
+.diagram figcaption{margin:0 0 .65rem}
+.chain{display:flex;align-items:center;gap:.55rem;min-width:max-content;font-size:.92rem}
+.diagram>.chain+.chain{margin-top:.7rem}
+.chain .node{border:1px solid #9caaa2;background:var(--paper);padding:.3rem .6rem;white-space:nowrap}
+.chain .edge{color:var(--green);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:nowrap}
+.diagram-notes{margin:.75rem 0 0;padding-left:1.2rem;font-size:.92rem}
+.diagram-notes li{margin:0}
+.step-table th:first-child,.step-table td:first-child{width:5.3rem;white-space:nowrap}
+.step-table th:nth-child(2){width:14rem}
+.step-table code{white-space:nowrap}
+.step-table .chain{gap:.35rem}
+.step-table .node{padding:.1rem .4rem}
+.state-table{table-layout:fixed}
+.state-table th:first-child{width:37%}
+.state-table td:not(:first-child),.state-table th:not(:first-child){text-align:center}
+.state-table td:last-child{white-space:nowrap}
+svg .node{fill:var(--paper);stroke:var(--green);stroke-width:1.3}
+svg .edge{fill:none;stroke:#7b8f85;stroke-width:1.4}
+svg .small{font-size:12px;fill:var(--sub)}
+svg .chapter-link{cursor:pointer}
+svg .chapter-link:hover .node,svg .chapter-link:focus-visible .node{fill:var(--tint);stroke-width:2.5}
+blockquote{margin:1.4rem 0;padding:.5rem 1.2rem;border-left:2px solid var(--green);background:var(--tint)}
+hr{border:0;border-top:1px solid var(--rule);margin:2.6rem 0}
+@media(max-width:640px){.diagram{padding:.8rem}.state-table{table-layout:auto;min-width:570px}}
+
+/* Chinese textbook prompts precede the worked solutions. */
+.exercise-question{margin:1.15rem 0 1.25rem;padding:.85rem 1rem;background:var(--tint);border-left:2px solid var(--green);min-width:0}
+.question-title,.answer-title{margin:.15rem 0 .8rem;font-size:1rem;color:var(--green)}
+.exercise-question>p:last-child{margin-bottom:.2rem}
+.exercise-question ol{margin:.65rem 0 1rem}
+.question-note{font-size:.9rem;color:var(--sub);border-top:1px solid var(--rule);padding-top:.6rem}
+.question-context{font-size:.94rem}
+.exercise-question .source{margin-top:1rem}
+.question-code{font-size:13px}
+svg.question-large-tree{min-width:1120px}
+
+/* Benchmark figures use recorded table data and native view controls. */
+.benchmark-figure{margin:1.8rem 0;padding:1rem;border:1px solid var(--rule);background:#f7f8f4;min-width:0;max-width:100%}
+.benchmark-kicker{font-size:.73rem;letter-spacing:.09em;color:var(--green);font-weight:650;margin-bottom:.25rem}
+.benchmark-figure .benchmark-title{font-size:1.06rem;line-height:1.6;margin:.15rem 0 1rem;color:var(--ink)}
+.benchmark-selector{min-width:0;margin:0;padding:0;border:0;position:relative}
+.benchmark-sr,.benchmark-input{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.benchmark-tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .9rem}
+.benchmark-tabs label{display:inline-block;cursor:pointer;padding:.22rem .7rem;border:1px solid #cbd7ce;border-radius:4px;background:var(--paper);font-size:.82rem;line-height:1.7;color:var(--sub)}
+.benchmark-tabs label:hover{border-color:var(--green);color:var(--green)}
+.benchmark-view{display:none}.benchmark-view:first-child{display:block}
+.benchmark-input~.benchmark-panels>.benchmark-view{display:none}
+.benchmark-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;align-items:start}
+.benchmark-grid:has(>.benchmark-chart:only-child){grid-template-columns:minmax(0,1fr)}
+.benchmark-chart:only-child:not(.benchmark-wide) .benchmark-svg{max-width:560px;margin:0 auto}
+.benchmark-grid[data-layout="wide"]{grid-template-columns:minmax(0,1fr)}
+.benchmark-chart{min-width:0;max-width:100%;padding:.7rem .6rem .3rem;border:1px solid #e1e7e0;background:var(--paper)}
+.benchmark-chart>h4{font-size:.85rem;line-height:1.5;font-weight:600;color:var(--sub);margin:.1rem .2rem .25rem}
+.benchmark-chart>.scroll{padding:0;border:0;background:transparent}
+.benchmark-svg{width:100%;height:auto;min-width:0;display:block}
+.benchmark-wide .benchmark-svg{min-width:720px}
+.benchmark-figure figcaption{font-size:.8rem;line-height:1.85;margin-top:.8rem}
+.benchmark-index ul{columns:2;font-size:.87rem}.benchmark-index li{break-inside:avoid;margin:.45rem 0}
+@media(max-width:640px){.benchmark-figure{padding:.75rem .6rem}.benchmark-grid{grid-template-columns:minmax(0,1fr)}.benchmark-chart{padding:.6rem .35rem .25rem}.benchmark-tabs label{padding:.25rem .55rem}.benchmark-index ul{columns:1}}
+.benchmark-input:nth-of-type(1):checked~.benchmark-panels>.benchmark-view:nth-child(1){display:block}
+.benchmark-input:nth-of-type(1):checked~.benchmark-tabs>label:nth-child(1){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(1):focus-visible~.benchmark-tabs>label:nth-child(1){outline:2px solid var(--green);outline-offset:3px}
+.benchmark-input:nth-of-type(2):checked~.benchmark-panels>.benchmark-view:nth-child(2){display:block}
+.benchmark-input:nth-of-type(2):checked~.benchmark-tabs>label:nth-child(2){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(2):focus-visible~.benchmark-tabs>label:nth-child(2){outline:2px solid var(--green);outline-offset:3px}
+.benchmark-input:nth-of-type(3):checked~.benchmark-panels>.benchmark-view:nth-child(3){display:block}
+.benchmark-input:nth-of-type(3):checked~.benchmark-tabs>label:nth-child(3){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(3):focus-visible~.benchmark-tabs>label:nth-child(3){outline:2px solid var(--green);outline-offset:3px}
+.benchmark-input:nth-of-type(4):checked~.benchmark-panels>.benchmark-view:nth-child(4){display:block}
+.benchmark-input:nth-of-type(4):checked~.benchmark-tabs>label:nth-child(4){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(4):focus-visible~.benchmark-tabs>label:nth-child(4){outline:2px solid var(--green);outline-offset:3px}
+.benchmark-input:nth-of-type(5):checked~.benchmark-panels>.benchmark-view:nth-child(5){display:block}
+.benchmark-input:nth-of-type(5):checked~.benchmark-tabs>label:nth-child(5){background:var(--green);border-color:var(--green);color:var(--paper)}
+.benchmark-input:nth-of-type(5):focus-visible~.benchmark-tabs>label:nth-child(5){outline:2px solid var(--green);outline-offset:3px}
+
+/* Reading rail: one table of contents beside the book page. */
+.reading-layout{display:grid;grid-template-columns:240px minmax(0,860px);gap:32px;max-width:1200px;margin:0 auto;padding:0 24px;align-items:start}
+.reading-layout>main{width:100%;min-width:0;margin:0}
+.chapter-sidebar{position:sticky;top:32px;max-height:calc(100dvh - 64px);overflow-y:auto;overscroll-behavior:contain;padding:8px 16px 12px 0;margin-top:40px;border-right:1px solid var(--rule);scrollbar-width:thin}
+.toc-panel>summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;list-style:none;padding:.45rem .55rem;color:var(--green);font-size:.9rem;font-weight:650;cursor:pointer}
+.toc-panel>summary::-webkit-details-marker{display:none}
+.toc-panel>summary::after{content:"+";font-size:1.1rem;font-weight:400}
+.toc-panel[open]>summary::after{content:"−"}
+.toc-panel>summary:focus-visible,.chapter-toc a:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.chapter-toc{border:0;background:transparent;margin:.45rem 0 0;padding:0;font-size:.84rem;line-height:1.65}
+.chapter-toc ul{columns:1;list-style:none;margin:0;padding:0}
+.chapter-toc li{margin:.18rem 0}
+.chapter-toc a{display:block;padding:.5rem .6rem;border-left:2px solid transparent;text-decoration:none;overflow-wrap:anywhere;color:var(--sub)}
+.chapter-toc a:hover{color:var(--green);background:var(--tint)}
+.chapter-toc a[aria-current="location"]{color:var(--green);border-left-color:var(--green);background:var(--tint);font-weight:600}
+.chapter-toc .toc-home{margin-bottom:.55rem;font-size:.8rem;color:var(--green)}
+.skip-link{position:fixed;left:16px;top:-100px;z-index:100;padding:.5rem 1rem;background:var(--paper);border:1px solid var(--green)}
+.skip-link:focus{top:12px}
+main[id],main [id]{scroll-margin-top:24px}
+@media(max-width:1099px){
+ .reading-layout{display:block;padding:0;max-width:860px}
+ .reading-layout>main{margin:auto}
+ .chapter-sidebar{position:static;top:0;z-index:10;margin:0;padding:8px 24px;border-right:0;border-bottom:1px solid var(--rule);background:var(--paper);max-height:none;overflow:visible}
+ .toc-enhanced .chapter-sidebar{position:sticky}
+ .toc-panel>summary{padding:.35rem 0;font-size:.88rem}
+ .chapter-toc{max-height:60dvh;overflow-y:auto;overscroll-behavior:contain;padding-bottom:.4rem}
+ main[id],main [id]{scroll-margin-top:80px}
+}
+@media(max-width:640px){.chapter-sidebar{padding:8px 18px}}
+@media print{.reading-layout{display:block;max-width:860px;padding:0}.chapter-sidebar,.skip-link{display:none}.reading-layout>main{padding:24px}}
+
+.result{font-variant-numeric:tabular-nums}.source-link{white-space:normal}
+.book-card{padding:1rem 0;border-bottom:1px solid var(--rule)}
+.book-card h3{margin:.2rem 0}.book-card p{margin:.4rem 0}
+.chart-svg{min-width:0} .chart-svg text{font-size:13px}
+.exercise-index a{font-variant-numeric:tabular-nums}.solution-link{font-size:.9rem}
+.exercise-question .scroll>table{min-width:480px}
+.question-note strong{color:var(--green)}
+
+/* Supplementary reading notes share the page's type and color palette. */
+.reading-notes{margin:2rem 0 0;padding:0.8rem 1rem;border-left:2px solid var(--green);background:var(--tint);font-size:0.92rem;line-height:1.85}
+.reading-notes>summary{color:var(--green);font-weight:650;cursor:pointer;list-style:none}
+.reading-notes>summary::-webkit-details-marker{display:none}
+.reading-notes>summary::after{content:"＋";float:right;font-weight:400}
+.reading-notes[open]>summary::after{content:"−"}
+.reading-notes>summary:focus-visible,.annotation-context a:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+.annotation-card{min-width:0;margin:1.15rem 0 0;padding:1rem 0 0;border-top:1px solid var(--rule)}
+.annotation-card:first-child{border-top:0;padding-top:0}
+.annotation-kind{display:block;font-size:0.73rem;font-weight:600;letter-spacing:0.05em;color:var(--green);margin-bottom:0.25rem}
+.annotation-card h3{font-size:0.97rem;line-height:1.65;margin:0 0 0.5rem;font-weight:650}
+.annotation-card p{margin:0.4rem 0 0.7rem}
+.annotation-card p:last-child{margin-bottom:0}
+.annotation-card .equation{padding:0.5rem 0;margin:0.65rem 0}
+.annotation-card math{font-size:1em}
+.annotation-sidebar{display:none}
+@media(min-width:1440px){
+ .notes-enhanced .reading-layout{grid-template-columns:240px minmax(0,860px) 280px;max-width:1524px;gap:32px}
+ .notes-enhanced main .reading-notes{display:none}
+ .notes-enhanced .annotation-sidebar:not([hidden]){display:block;position:sticky;top:32px;max-height:calc(100dvh - 64px);overflow-y:auto;overscroll-behavior:contain;min-width:0;margin-top:40px;padding:8px 0 12px 22px;border-left:1px solid var(--rule);font-size:0.9rem;line-height:1.85;scrollbar-width:thin}
+ .annotation-label{color:var(--green);font-size:0.87rem;font-weight:650;margin:0 0 0.75rem}
+ .annotation-context{font-size:0.85rem;line-height:1.65;margin:0 0 1.25rem}
+ .annotation-context a{color:var(--sub);text-decoration:none}
+ .annotation-context a:hover{color:var(--green);text-decoration:underline}
+ .annotation-sidebar .annotation-card{margin-top:1.5rem;padding-top:1.35rem}
+ .annotation-sidebar .annotation-card:first-child{margin-top:0;padding-top:0}
+ .annotation-sidebar .annotation-card h3{font-size:0.95rem}
+}
+@media print{.annotation-sidebar{display:none!important}main .reading-notes{display:block!important;break-inside:avoid}}
+
+/* Source statements, bilingual excerpts and preface share the reading layout. */
+.source-statement{margin:1.35rem 0;padding:.2rem 0 .8rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);min-width:0}
+.source-statement+.source-statement{border-top:0}
+.source-statement>h3,.source-statement>h4{font-size:1.08rem;line-height:1.65;margin:.75rem 0 .6rem}
+.statement-heading>.statement-label{display:block}
+.source-statement>summary{cursor:pointer;color:var(--green);font-weight:650;line-height:1.7;padding:.55rem 0}
+.source-statement>summary:focus-visible,.statement-index>summary:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+.statement-body{padding:.15rem 0 .15rem .8rem;border-left:2px solid var(--green);min-width:0}
+.statement-label{font-size:.8rem;font-weight:650;letter-spacing:.03em;color:var(--green);margin:.7rem 0 .3rem}
+.original-excerpt{font:1rem/1.85 Georgia,"Times New Roman",serif;margin:.5rem 0 1.15rem;padding:.75rem 1rem;overflow-wrap:break-word;min-width:0}
+.original-excerpt p{margin:.25rem 0 .7rem}.original-excerpt p:last-child{margin-bottom:0}
+.original-excerpt .equation,.original-excerpt .math-block{margin:.45rem 0}.original-excerpt math{font-size:1em}
+.statement-index{margin:1.2rem 0;padding:.7rem 1rem;background:var(--tint);border-left:2px solid var(--green)}
+.statement-index>summary{cursor:pointer;color:var(--green);font-weight:600}
+.statement-links{margin:.8rem 0 .4rem;columns:2;column-gap:1.6rem;list-style:none;padding:0;font-size:.88rem}
+.statement-links li{break-inside:avoid;margin:.3rem 0}.statement-index .source{margin:.6rem 0 .2rem}
+.source-chapter-index{margin:.8rem 0;padding:.65rem .9rem;border:1px solid var(--rule)}
+.source-chapter-index>summary{cursor:pointer;color:var(--green);font-weight:600}
+.source-chapter-index>summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.statement-note{font-size:.91rem;color:var(--sub);padding:.7rem .8rem;background:var(--tint);margin:.8rem 0}
+.preface-signature{margin-top:1.5rem;text-align:right;color:var(--sub)}
+@media(max-width:640px){.statement-body{padding-left:.6rem}.original-excerpt{padding:.65rem .75rem;font-size:.95rem}.statement-links{columns:1}.statement-index{padding:.65rem .8rem}}
+@media print{.source-statement,.original-excerpt{break-inside:avoid}}
+
+@media print{.annotation-rail{display:none!important}.reading-notes{display:block!important}main details{break-inside:auto}main details::details-content{content-visibility:visible!important}main details>summary{font-weight:600}.scroll,pre,.equation,.math-block{overflow:visible}pre{white-space:pre-wrap;overflow-wrap:anywhere}}
+
+/* Long expressions wrap in prose; code, equations and tables own their scrolling. */
+.reading-layout>main,.annotation-card{overflow-wrap:anywhere}
+#s1-2 th:first-child,#s1-2 td:first-child{min-width:76px;white-space:nowrap}
+#map th:nth-child(3),#map td:nth-child(3){min-width:9.2em}
+.scroll>table.compact-table{min-width:0}
+@media(max-width:640px){.compact-table th,.compact-table td{padding:.55rem .4rem}}
+[data-horizontal-overflow="true"]::after{content:attr(data-scroll-label);display:block;position:sticky;left:0;width:100%;margin-top:.25rem;color:var(--green);font: .75rem/1.8 system-ui,-apple-system,"PingFang SC",sans-serif;text-align:left}
+[data-horizontal-overflow="true"]:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+@media print{[data-horizontal-overflow="true"]::after{display:none}}
+
+.reading-layout>main>section:not(#exercises):not(#self-check) pre{font-size:14px}
+
+.worked{background:var(--tint);border-left:2px solid var(--green);padding:.8rem 1.1rem;margin:1.5rem 0}.worked h3{margin:.2rem 0 .7rem}.english-title{display:block;color:var(--sub);font-size:.85rem;font-weight:400}.code-download{font-size:.9rem}.code-explanation li{margin:.7rem 0}.flow-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}svg .highlight{fill:#e6eee7;stroke:var(--green)}.solution-steps>li{margin:1rem 0}.question-note strong{color:var(--green)}.experiment-output{font-size:.9rem}main [id]{scroll-margin-top:100px}@media(max-width:1099px){main [id]{scroll-margin-top:132px}}
+</style></head><body><a class="skip-link" href="#top">跳到正文</a><div class="reading-layout"><aside class="chapter-sidebar" aria-label="章节目录"><details class="toc-panel" id="toc-panel" open><summary>本章目录</summary><nav class="chapter-toc" id="chapter-toc" aria-label="本章目录"><a class="toc-home" href="book_overview.html">全书地图</a><a class="toc-home" href="preface.html">序言</a><ul><li><a href="#s8-1">8.1 · 先确定事件、入口和返回位置</a></li><li><a href="#s8-2">8.2 · 用上下文维持独立执行的表象</a></li><li><a href="#s8-3">8.3 · 让返回值决定后续路径</a></li><li><a href="#s8-4">8.4 · 从复制进程到运行另一份程序</a></li><li><a href="#s8-5">8.5 · 把通知与可靠状态分开</a></li><li><a href="#s8-6">8.6 · 绕过返回链也会绕过清理</a></li><li><a href="#s8-7">8.7 · 用工具核对状态，不用样本代替证明</a></li><li><a href="#s8-8">8.8 · 把控制流与状态约束一起读</a></li><li><a href="#models">可运行机制与实现</a></li><li><a href="#experiment">进程与信号实验</a></li><li><a href="#io-model">I/O 与命令执行</a></li><li><a href="#shell-model">作业控制 shell</a></li><li><a href="#self-check">原创自测</a></li><li><a href="#exercises">本版原书习题</a></li></ul></nav></details></aside><main id="top" tabindex="-1"><header><p class="overline">CS:APP · 第三版 GLOBAL EDITION · 中文伴读</p><h1>第 8 章：异常控制流</h1><p class="intro">当事件打断指令、孩子先于父进程结束、信号落在条件检查与睡眠之间，靠什么让程序仍然正确？从异常返回位置走到进程生命周期，再把信号通知与可靠状态接起来。</p><p class="source"><a class="source-pdf" href="../csapp.pdf#page=758">来源：印刷 757—835 页 / PDF 758—836 页</a></p><p class="chapter-nav"><a href="book_overview.html">全书地图</a><a href="book_overview.html#program-guide">程序说明</a><a href="chapter07_linking.html">← 第 7 章</a><a href="chapter09_virtual_memory.html">第 9 章 →</a></p></header><details class="statement-index" id="source-index"><summary>本页原书摘录 · 5 处</summary><ul class="statement-links"><li><a href="#classic-8-exception">异常由事件触发</a></li><li><a href="#classic-8-process">进程的经典定义</a></li><li><a href="#classic-8-errors">先查返回值</a></li><li><a href="#classic-8-pending">通知表达至少一次</a></li><li><a href="#classic-8-nonlocal">跳向仍在执行的调用环境</a></li></ul></details><section id="s8-1"><h2>8.1 · 先确定事件、入口和返回位置<span class="english-title" lang="en">Exceptions</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=760">来源：印刷 759—767 页 / PDF 760—768 页</a></p><div class="source-statement" id="classic-8-exception"><p class="statement-label">原书摘录 · 异常由事件触发</p><blockquote class="original-excerpt" lang="en"><p>An exception is an abrupt change in the control flow in response to some change in the processor’s state.</p></blockquote><p class="statement-body"><strong>中文释义：</strong>处理器状态中的事件使控制流突然改变。这里的 exception 包含硬件中断，不等同于 C++ 的 throw。</p><p class="source"><a class="source-pdf" href="../csapp.pdf#page=760">来源：印刷 759 页 / PDF 760 页</a></p></div><p>前几章把程序看作按跳转、调用和返回前进的指令序列。现在设想一条读内存指令遇到不在物理内存中的页：它不能靠普通分支预先检查所有可能事件。硬件必须把控制交给内核，内核补齐页，再让原指令重试。这个“离开—处理—恢复”的路径，就是本章和下一章的连接点。</p><h3 id="ss8-1-1">8.1.1 · 硬件入口与软件处理如何分工<span class="english-title" lang="en">Exception Handling</span></h3><p>启动时内核建立异常入口，硬件检测事件并取得异常号，保存足以恢复执行的状态，切换到受保护的入口。处理程序识别原因、改变内核状态，再通过专门的异常返回机制恢复程序。保存的不只是普通函数调用的返回地址，还包括状态寄存器、权限及必要的栈信息；来自用户态的异常不能信任用户自己提供的内核栈。</p><p>原书图 8.2—8.3 用“基址 + 异常号 × 8”说明地址表索引，是概念模型。真实 x86-64 IDT 使用描述符，syscall 还有专用的入口寄存器机制，不能把每种硬件入口都实现成一本书画的普通函数指针数组。</p><h3 id="ss8-1-2">8.1.2 · 最关键的问题是返回哪条指令<span class="english-title" lang="en">Classes of Exceptions</span></h3><div class="scroll"><table><thead><tr><th>类别</th><th>触发关系</th><th>例子</th><th>处理后控制流</th></tr></thead><tbody><tr><td>interrupt 中断</td><td>异步于当前指令</td><td>设备完成、时钟</td><td>恢复中断边界后的指令</td></tr><tr><td>trap 陷阱</td><td>指令有意触发</td><td>系统调用</td><td>通常下一条；退出类调用不返回</td></tr><tr><td>fault 故障</td><td>当前指令触发，可修复</td><td>缺页</td><td>修复后重试当前指令；否则终止</td></tr><tr><td>abort 终止类异常</td><td>不可恢复</td><td>硬件一致性错误</td><td>不恢复应用执行</td></tr></tbody></table></div><p>为什么缺页不能直接跳到下一条？假设 <code>movq (%rdi),%rax</code> 还没有取得数据就缺页，跳过它会让后续指令使用旧的 %rax。修复页表后重新执行同一条指令，才能让“程序看起来只执行了一次成功的 load”成立。相反，write 系统调用已经完成服务，返回时继续下一条，才不会重复写出内容。</p><figure><div class="scroll"><svg viewBox="0 0 760 210" role="img" aria-label="异常处理的三种返回路径"><rect class="n" x="20" y="70" width="170" height="60" rx="5"/><text x="105" y="106">当前指令 Icurr</text><rect class="n" x="290" y="70" width="180" height="60" rx="5"/><text x="380" y="106">内核异常处理</text><path class="e" d="M190 100 H290 M380 70 V30 H105 V70 M470 100 H550 M380 130 V175 H550"/><text class="hint" x="225" y="88">事件 →</text><text class="hint" x="245" y="24">fault 修复后重试</text><rect class="n" x="550" y="70" width="180" height="60"/><text x="640" y="106">下一条 Inext</text><text x="630" y="181">终止应用</text></svg></div><figcaption>原创机制图：返回地址表达语义。一次进入内核是否引发进程切换，是另一个决定。</figcaption></figure><h3 id="ss8-1-3">8.1.3 · 区分 ISA 故障、内核策略和系统调用 ABI<span class="english-title" lang="en">Exceptions in Linux/x86-64 Systems</span></h3><p>x86-64 的除法错误向量是 0、一般保护是 13、缺页是 14、机器检查是 18。内核如何把它们变成用户可见结果属于另一层：例如整数除零也可能表现为 SIGFPE，名称中的“浮点”不代表只发生于浮点。写只读页或访问未映射地址常由页故障路径最终生成 SIGSEGV；原书把这类访问笼统列入一般保护故障，不能据 SIGSEGV 倒推出一定发生向量 13。</p><p>Linux x86-64 原始 syscall 用 %rax 放调用号，前六个参数依次放 %rdi、%rsi、%rdx、%r10、%r8、%r9，返回值在 %rax，%rcx 和 %r11 被破坏。它与普通 System V 函数调用的第四参数寄存器 %rcx 不同。write=1、exit=60 是这个 ABI 的编号；macOS ARM64 不使用这套编号。libc 包装器通常把原始负错误码转换成返回 −1 并设置 errno。</p><pre><code>/* Linux x86-64 原始入口示意；不是本机可移植 C 接口。 */
+movq $1, %rax      # write
+movq $1, %rdi      # stdout
+leaq message(%rip), %rsi
+movq $13, %rdx     # &quot;hello, world\n&quot; 共 13 字节
+syscall
+</code></pre><p>原书的字符串 hello, world 后接换行，共 13 字节，不含结尾 NUL。图 8.11 用 string_end−string 求实际长度，避免手工计数；write 不会自行查找 NUL。</p><details class="reading-notes" id="notes-s8-1" data-notes-for="s8-1"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">推理</span><h3>重试并非重复完成</h3><p>缺页指令尚未完成目标内存访问；修复后重试保持程序语义。</p></div><div class="annotation-card"><span class="annotation-kind">边界</span><h3>异常进入不等于调度切换</h3><p>一次系统调用可以在同一进程上下文完成后直接返回，也可以阻塞并切换。</p></div></div></details></section><section id="s8-2"><h2>8.2 · 用上下文维持独立执行的表象<span class="english-title" lang="en">Processes</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=769">来源：印刷 768—773 页 / PDF 769—774 页</a></p><div class="source-statement" id="classic-8-process"><p class="statement-label">原书摘录 · 进程的经典定义</p><blockquote class="original-excerpt" lang="en"><p>The classic definition of a process is an instance of a program in execution.</p></blockquote><p class="statement-body"><strong>中文释义：</strong>进程是程序的一次执行实例；可执行文件是程序，执行中的上下文才是进程。</p><p class="source"><a class="source-pdf" href="../csapp.pdf#page=769">来源：印刷 768 页 / PDF 769 页</a></p></div><h3 id="ss8-2-1">8.2.1 · 把自己的 PC 序列从全机执行中抽出来<span class="english-title" lang="en">Logical Control Flow</span></h3><p>单核依次执行 A 的一段、B 的一段，再恢复 A。A 能继续，是因为内核保存了寄存器、PC、栈等上下文，恢复时这些值接上原来的序列。A 的逻辑控制流可以忽略“中间 B 做了什么”，但墙上时钟会体现 A 被抢占的时间。此抽象并不承诺指令耗时固定。</p><h3 id="ss8-2-2">8.2.2 · 时间重叠是并发，同时用核才是并行<span class="english-title" lang="en">Concurrent Flows</span></h3><p>A 在 1—3 运行、B 在 2—5 运行、C 在 4—6 运行：A/B 与 B/C 的生命周期重叠，A/C 不重叠。单核交替执行也满足并发；只有不同执行资源上同时运行才叫并行。由此也能看出“与同一个进程并发”不是传递关系。区间端点仅相接时，不把零长度交点视为一段重叠执行。</p><h3 id="ss8-2-3">8.2.3 · 相同虚拟地址不必指向同一字节<span class="english-title" lang="en">Private Address Space</span></h3><p>父进程 fork 后的 x 和子进程的 x 可以有相同虚拟地址及初值，却属于两个私有地址空间。操作系统可用写时复制延迟真实拷贝，但对程序暴露的私有写入语义不变。显式共享映射和共享的内核打开文件描述是例外，不能从“地址空间私有”推出所有资源都隔离。</p><p>图 8.13 的 0x400000 是书中非 PIE 可执行文件布局实例；启用 PIE/ASLR 后代码起址可变。图示 2<sup>48</sup> 和标注 %esp 也不能当作所有 x86-64 进程的固定上界与栈寄存器；此处讨论 64 位栈时应看 %rsp。具体地址与隔离策略由 ABI 和当前内核实现决定。</p><h3 id="ss8-2-4">8.2.4 · 权限限制使地址空间承诺可信<span class="english-title" lang="en">User and Kernel Modes</span></h3><p>普通应用不能改页表、任意停止处理器或直接读内核敏感状态。系统调用通过预先受控的入口进入内核，内核校验参数后执行服务；并不是应用把一个普通变量置为“内核模式”。Linux 的 /proc 导出的是内核主动提供的接口，也不能据此任意绕过权限。</p><h3 id="ss8-2-5">8.2.5 · 先换执行模式，再可能换进程<span class="english-title" lang="en">Context Switches</span></h3><div class="scroll"><table><thead><tr><th>时刻</th><th>CPU 正在替谁做什么</th><th>发生的改变</th></tr></thead><tbody><tr><td>t0</td><td>A 用户代码调用 read</td><td>A → A 的内核路径</td></tr><tr><td>t1</td><td>A 的数据尚未就绪</td><td>保存 A；恢复 B 的上下文</td></tr><tr><td>t2</td><td>B 用户代码运行</td><td>同一物理 CPU 执行 B 的逻辑流</td></tr><tr><td>t3</td><td>设备完成，进入内核</td><td>更新等待状态，A 变为可运行</td></tr><tr><td>t4</td><td>调度选择 A</td><td>恢复 A，从 read 返回继续</td></tr></tbody></table></div><p>设备完成不意味着 CPU 必须立刻恢复 A；调度器还要决定何时运行它。原书 p773 有“内核代表 A 执行用户态指令”的措辞，准确的分层是应用代码在用户态执行、内核代码在内核态代表当前进程执行。系统调用期间仍然有当前进程，不能另造一个“所有系统调用共享的内核进程”来解释。</p><details class="reading-notes" id="notes-s8-2" data-notes-for="s8-2"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">概念</span><h3>并发不要求两颗核</h3><p>判断生命周期是否重叠，再判断是否有真正同时执行的资源。</p></div><div class="annotation-card"><span class="annotation-kind">连接</span><h3>fork 的私有内存与共享文件</h3><p>局部变量写入不跨进程可见；继承的描述符却可指向同一个打开文件描述。</p></div></div></details></section><section id="s8-3"><h2>8.3 · 让返回值决定后续路径<span class="english-title" lang="en">System Call Error Handling</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=774">来源：印刷 773—774 页 / PDF 774—775 页</a></p><p>系统级编程的难点常在失败分支。fork 可能因资源限制返回 −1，此时没有子进程；把 −1 当“父进程路径”继续 wait 或 kill，会改变程序含义。waitpid 返回 −1 且 errno=EINTR 表示等待被打断，通常应继续等同一个目标；errno=ECHILD 则表示不存在可等待的匹配子进程，不能一律重试。</p><div class="source-statement" id="classic-8-errors"><p class="statement-label">原书摘录 · 先查返回值</p><blockquote class="original-excerpt" lang="en"><p>Programmers should always check for errors, but unfortunately, many skip error checking because it bloats the code and makes it harder to read.</p></blockquote><p class="statement-body"><strong>中文释义：</strong>应检查系统接口的失败结果；封装应帮助保持可读性，而不是掩盖失败。</p><p class="source"><a class="source-pdf" href="../csapp.pdf#page=774">来源：印刷 773 页 / PDF 774 页</a></p></div><pre><code>pid_t r;
+int status;
+do {
+    r = waitpid(child, &amp;status, 0);
+} while (r &lt; 0 &amp;&amp; errno == EINTR);
+if (r &lt; 0) { /* 这里才报告真正的等待失败 */
+    perror(&quot;waitpid&quot;);
+    return 1;
+}
+</code></pre><p>errno 只有在返回值指出失败时才解释；一次成功调用不保证把旧 errno 清零。书中 Fork、Waitpid 等首字母大写名称是作者的错误包装器，不是 POSIX 函数。包装器若选择终止程序，应使用失败退出码；原书示例 unix_error 调 exit(0) 会把错误报告为成功，本页可运行程序改为非零。能够恢复的错误不能被一个“遇错退出”包装器统一吞掉。</p><details class="reading-notes" id="notes-s8-3" data-notes-for="s8-3"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">实践</span><h3>先保住错误码</h3><p>信号处理程序调用可能改 errno 的函数时，入口保存、返回前恢复。</p></div><div class="annotation-card"><span class="annotation-kind">语义</span><h3>重试有条件</h3><p>EINTR 常可重试；坏描述符、无子进程、参数错误需要不同处理。</p></div></div></details></section><section id="s8-4"><h2>8.4 · 从复制进程到运行另一份程序<span class="english-title" lang="en">Process Control</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=775">来源：印刷 774—792 页 / PDF 775—793 页</a></p><h3 id="ss8-4-1">8.4.1 · PID 标识一次正在管理的执行<span class="english-title" lang="en">Obtaining Process IDs</span></h3><p>getpid 取得当前进程 ID，getppid 取得当前父进程 ID。父亲退出后父关系可能变化，PID 在旧进程彻底退出后还可能重用，因此缓存一个 PID 不构成永久身份认证。页面的实验只对自己刚创建且尚未回收的子进程发信号。</p><h3 id="ss8-4-2">8.4.2 · fork 在两个地址空间各继续一次<span class="english-title" lang="en">Creating and Terminating Processes</span></h3><p>设 x=9，执行 pid=fork()。父返回子 PID，子返回 0；两边都从 fork 后一条语句继续，且各有 x=9。子做 x-- 只把自己的副本变成 8；父的 x 仍为 9。一次源码调用可以有两次返回，但失败时仅在父返回 −1。</p><div class="scroll"><table><thead><tr><th>接口</th><th>上下文结果</th><th>返回行为</th></tr></thead><tbody><tr><td>fork</td><td>产生新的子进程，程序映像初始相同</td><td>父得 PID，子得 0，失败得 −1</td></tr><tr><td>execve</td><td>替换当前进程的程序映像，PID 保留</td><td>成功不回到旧程序；失败 −1</td></tr><tr><td>exit / 从 main 返回</td><td>执行正常结束处理，刷新 stdio</td><td>不返回</td></tr><tr><td>_exit / _Exit</td><td>直接结束进程，不刷新用户态 stdio</td><td>不返回</td></tr></tbody></table></div><p>运行、停止、终止是本章的用户视角：运行包括等待 CPU，停止要经 SIGCONT 才能恢复，终止不能恢复。等待 I/O 的阻塞状态与作业控制的停止状态不要混用。fork 前 stdio 未刷新的输出缓冲也会被复制；若父子随后都 exit，一份已经缓冲的文本可被刷两次。为了让题目中的 printf 顶点代表一次可见输出，下文输出排序采用原书的终端行缓冲或显式 fflush 假设。</p><h3 id="ss8-4-3">8.4.3 · 退出状态是一份必须领取的记录<span class="english-title" lang="en">Reaping Child Processes</span></h3><p>子进程结束后内核保留 PID、退出原因等信息，等待父进程 waitpid 领取；这段时期是僵尸状态。waitpid(p,&s,0) 精确等待 p，waitpid(-1,&s,0) 等任意子进程。领取退出状态才完成回收；父先调用 wait 并不要求子先结束，内核会让父等待。孤儿由系统指定的收养者处理，Linux 也可能由 subreaper 收养，不能把现代所有情况都固定为 PID 1。</p><div class="scroll"><table><thead><tr><th>检查宏</th><th>何时解释</th><th>含义</th></tr></thead><tbody><tr><td>WIFEXITED(s)</td><td>waitpid 返回已结束子进程</td><td>正常返回或 exit</td></tr><tr><td>WEXITSTATUS(s)</td><td>仅当 WIFEXITED 真</td><td>退出码低 8 位</td></tr><tr><td>WIFSIGNALED / WTERMSIG</td><td>信号终止时</td><td>结束原因的信号编号</td></tr><tr><td>WIFSTOPPED / WSTOPSIG</td><td>WUNTRACED 报告停止时</td><td>进程仍存在，可继续</td></tr><tr><td>WIFCONTINUED</td><td>WCONTINUED 报告继续时</td><td>停止进程已恢复</td></tr></tbody></table></div><p>WNOHANG 返回 0 表示当前没有符合条件的状态变化；它不是 PID 0，也不表示所有子进程都没了。回收多个已退出子进程必须循环。若要依创建次序等待，使用有界 for(i=0;i&lt;N;i++)；原书图 8.19 的 while(waitpid(pid[i++],...)) 在最后一个孩子之后仍读 pid[N]，越界，不能照抄。</p><h3 id="ss8-4-4">8.4.4 · 等待时间与等待条件分开<span class="english-title" lang="en">Putting Processes to Sleep</span></h3><p>sleep(secs) 完整睡完返回 0，被信号打断时返回尚未睡完的秒数。secs−remaining 是整数秒接口所表达的时长，不能精确代表纳秒墙钟时间。pause 只等待下一个可处理信号，不检测业务条件；若条件已经成立后才 pause，就会丢掉唤醒机会。这个缺口将在 8.5.7 用原子换掩码并睡眠解决。</p><h3 id="ss8-4-5">8.4.5 · execve 替换内容，保留进程身份<span class="english-title" lang="en">Loading and Running Programs</span></h3><p>execve(path,argv,envp) 要求 argv 和 envp 都是以空指针结束的指针数组，每个非空元素指向以 NUL 结束的字符串。argv[0] 按惯例是程序名，环境字符串形如 NAME=value。成功后旧的栈、堆、数据和代码映像被新程序替代，入口启动代码建立新环境后进入 main。</p><pre><code>char *const argv[] = {&quot;sh&quot;, &quot;-c&quot;, &quot;exit 7&quot;, NULL};
+char *const envp[] = {&quot;PATH=/usr/bin:/bin&quot;, NULL};
+execve(&quot;/bin/sh&quot;, argv, envp);
+/* 只有失败才到这里；在 fork 的子分支中不要返回 shell 主循环。 */
+_exit(127);
+</code></pre><p>execve 不会按 PATH 查找文件；需要搜索时才选择 execvp 一类接口。未设置 close-on-exec 的描述符可继续存在；已捕获信号的处理动作在 exec 后重置，信号掩码却会继承。getenv 返回 value 指针或 NULL；setenv 与现代 POSIX unsetenv 都以 0/−1 返回成功/失败，原书 p788 的 void unsetenv 是旧式原型。</p><h3 id="ss8-4-6">8.4.6 · shell 负责创建、登记、等待与回收<span class="english-title" lang="en">Using fork and execve to Run Programs</span></h3><p>shell 读一行，区分内建命令与可执行文件。内建 cd 一类操作必须影响 shell 自身；普通命令则 fork，在子进程 exec。父进程保留自己的命令循环，前台时等待，后台时继续读输入。先 fork 再 exec 也为子进程在装入前设置进程组、重定向描述符提供机会。</p><p>原书的第一版 shell 故意没有回收后台孩子，因此长期运行会积累僵尸。完整实现还要保证“登记作业”先于“回收后删除作业”，并把 Ctrl+C/ Ctrl+Z 转发给前台作业的整个进程组。本页 <a href="#shell-model">作业控制程序</a>采用题目给出的简化终端模型，并在退出时回收自己创建的作业。</p><details class="reading-notes" id="notes-s8-4" data-notes-for="s8-4"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">推导</span><h3>用偏序代替猜运行顺序</h3><p>同一进程语句和 wait 的依赖构成有向边；合法输出是这些边允许的线性排列。</p></div><div class="annotation-card"><span class="annotation-kind">校注</span><h3>行数要交代缓冲条件</h3><p>终端换行会刷新行缓冲；重定向后全缓冲可能在后续 fork 中复制旧文本。</p></div></div></details></section><section id="s8-5"><h2>8.5 · 把通知与可靠状态分开<span class="english-title" lang="en">Signals</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=793">来源：印刷 792—817 页 / PDF 793—818 页</a></p><p>信号把内核或别的进程检测到的事件带到用户级。它与异常处理的关系是“异常先进入内核，内核可能决定通知用户进程”，不是硬件直接执行用户提供的 handler。SIGCHLD 尤其适合通知“孩子状态值得检查了”，但不携带“这次恰好死了几个孩子”的可靠计数。</p><h3 id="ss8-5-1">8.5.1 · 发送、待处理、接收是三个阶段<span class="english-title" lang="en">Signal Terminology</span></h3><p>发送把通知记入目标的待处理状态；接收才使进程执行默认动作或处理程序。blocked 表示暂时不能接收的类型，pending 表示已经到达但尚未处理的类型。书中把普通信号画成位向量：<code>ready = pending &amp; ~blocked</code>。信号被阻塞仍可变为 pending，解除阻塞也不是“再发送一次”。</p><div class="source-statement" id="classic-8-pending"><p class="statement-label">原书摘录 · 通知表达至少一次</p><blockquote class="original-excerpt" lang="en"><p>The key idea is that the existence of a pending signal merely indicates that at least one signal has arrived.</p></blockquote><p class="statement-body"><strong>中文释义：</strong>一个待处理普通信号只说明至少发生过一次，不能据此恢复次数。</p><p class="source"><a class="source-pdf" href="../csapp.pdf#page=807">来源：印刷 806 页 / PDF 807 页</a></p></div><p>本章的单个 pending 位模型适用于所讨论的普通信号；实时信号及排队接口需要另论。即便在普通信号平台上观察到五次发送被合并成一次处理，也只是该实现与这段受控时序的观察。健壮程序从 waitpid 或自己的队列读取工作，而不是依赖“发送数 = handler 次数”。</p><h3 id="ss8-5-2">8.5.2 · 进程组才是一个作业的信号边界<span class="english-title" lang="en">Sending Signals</span></h3><p>每个进程属于一个进程组。fork 默认继承组，setpgid(0,0) 让自己成为新组的组长。kill(p,sig) 的 p&gt;0 针对一个 PID，p=0 针对调用者的组，p&lt;−1 针对组 −p；p=−1 有特别的广泛发送语义，不能概括成“组 1”。</p><p>一个前台管道可能有多个成员，Ctrl+C 要影响整个前台作业，所以 shell 不能只杀一个 PID。真实终端把键盘信号直接送给终端前台进程组；本章作业控制题采用 shell 收到后再转发的教学模型。alarm(secs) 则安排给自己发送 SIGALRM；同一进程的新 alarm 会替换旧计时，库函数不可随意占用调用者已有的计时器。</p><h3 id="ss8-5-3">8.5.3 · 默认动作与自定义动作不是同一层<span class="english-title" lang="en">Receiving Signals</span></h3><p>常见动作是终止、终止并可能生成 core、停止、忽略。SIGKILL 与 SIGSTOP 不能捕获、忽略或屏蔽。handler 在本进程的用户态运行，共享本进程全局变量；另一个未被阻塞的信号可以嵌套打断它。默认忽略 SIGCHLD 不表示不需要 wait；显式设置 SIG_IGN 或 SA_NOCLDWAIT 在 POSIX 语义下会改变僵尸处理，不应与默认动作混为一谈。</p><p>本页使用 sigaction 明确设置处理函数、处理期间额外掩码和标志。SA_RESTART 只对规定可重启的阻塞操作有效；sleep、sigsuspend 等仍有自己的中断契约，因此错误处理不能靠设置一个标志后全部省略。</p><h3 id="ss8-5-4">8.5.4 · 恢复旧掩码才能组合成可靠组件<span class="english-title" lang="en">Blocking and Unblocking Signals</span></h3><div class="scroll"><table><thead><tr><th>操作</th><th>集合变化</th><th>典型用途</th></tr></thead><tbody><tr><td>SIG_BLOCK</td><td>blocked ∪ set</td><td>进入临界区，加上要保护的类型</td></tr><tr><td>SIG_UNBLOCK</td><td>blocked − set</td><td>明确撤销这些类型的阻塞</td></tr><tr><td>SIG_SETMASK</td><td>blocked = set</td><td>恢复进入之前的完整状态</td></tr></tbody></table></div><p>临界区保存 prev，结束用 SIG_SETMASK 恢复 prev。如果简单 SIG_UNBLOCK，就可能意外解除调用者原本已经设置的屏蔽。fork 子进程继承掩码，所以 exec 前也要恢复。多线程程序里掩码是线程维度，应使用对应线程接口和更完整的信号分派设计；本章实验限定单线程。</p><h3 id="ss8-5-5">8.5.5 · 安全、完整、可移植要同时满足<span class="english-title" lang="en">Writing Signal Handlers</span></h3><p>最易推理的 handler 只写一个 <code>volatile sig_atomic_t</code> 标志。volatile 使异步改变对当前执行流可见，sig_atomic_t 保证单次访问的适当原子性；它们不把 <code>x++</code> 变成多线程原子操作，也不保护整个数据结构。一份链表若在“已更新前指针、未更新后指针”时被 handler 遍历，单个字段再原子也没有用。</p><p>printf、malloc、exit 等函数维护内部共享状态，若主程序正执行它们又被 handler 再入，可能死锁或破坏状态。处理程序中只调用明确异步信号安全的接口，简单输出可用 write，立即终止用 _exit。可能改 errno 的处理函数先存旧值再恢复；打印、分配和作业表修改尽量留给正常主流程。</p><pre><code>static volatile sig_atomic_t changed;
+static void on_child(int sig) {
+    int olderrno = errno;
+    (void)sig;
+    changed = 1;
+    errno = olderrno;
+}
+/* 主流程在屏蔽 SIGCHLD 时检查状态；真实记录由 waitpid 提供。 */
+</code></pre><p>若选择在 handler 回收，应循环 waitpid(-1,&s,WNOHANG)，直到 0 或 ECHILD，并处理 EINTR。书中图 8.37 虽循环回收却使用 options=0：若还有活孩子，这个 handler 会阻塞等待它们，主程序无法继续做其他事。改为非阻塞排空才符合“只处理已经发生的事件”。本页 shell 直接让 handler 只通知，通过 pselect/sigsuspend 唤醒后在主流程排空，因而可以安全地 printf。</p><h3 id="ss8-5-6">8.5.6 · 先登记再允许删除<span class="english-title" lang="en">Synchronizing Flows to Avoid Nasty Concurrency Bugs</span></h3><div class="scroll"><table><thead><tr><th>顺序</th><th>没有保护的执行</th><th>结果</th></tr></thead><tbody><tr><td>1</td><td>父 fork，子立即获得 CPU</td><td>父尚未 addjob</td></tr><tr><td>2</td><td>子退出，SIGCHLD 待处理</td><td>已存在可回收状态</td></tr><tr><td>3</td><td>父先进入 handler，waitpid+deletejob</td><td>表里还没有该 PID</td></tr><tr><td>4</td><td>父从 fork 继续并 addjob</td><td>永久遗留不存在的作业</td></tr></tbody></table></div><p>只在 addjob 周围屏蔽还太晚：竞态窗口从 fork 开始。正确范围是先屏蔽 SIGCHLD → fork → 父登记作业 → 恢复旧掩码。子分支恢复旧掩码后 exec。于是孩子即使先结束，删除动作也必须等待登记完成；这靠约束所有合法调度保证，不靠“多跑几次似乎没错”。</p><h3 id="ss8-5-7">8.5.7 · 检查条件与睡眠必须接成原子边界<span class="english-title" lang="en">Explicitly Waiting for Signals</span></h3><p>设 done 初值 0。错误写法 <code>while(!done) pause()</code> 可能先读到 0，随即 handler 把 done 改成 1，再执行 pause；已经没有新信号，程序永睡。换成短 sleep 只让错误变成延迟轮询，并未建立可靠的同步边。</p><p>下面以单线程中等待一次 SIGCHLD 通知为例：先安装 handler，并由它把 <code>volatile sig_atomic_t done</code> 置为 1；done 在受保护的准备阶段开始前为 0。SIGCHLD 只通知状态可能改变，孩子是否退出及其状态仍需用 waitpid 读取。示意代码突出掩码关系，完整程序另检查各接口的失败路径。</p><pre><code id="sigsuspend-wait-template" data-language="c" class="language-c">sigset_t block, old, waiting;
+sigemptyset(&amp;block);
+sigaddset(&amp;block, SIGCHLD);
+sigprocmask(SIG_BLOCK, &amp;block, &amp;old);
+waiting = old;
+sigdelset(&amp;waiting, SIGCHLD);
+/* fork/register 或其他准备；done 只由已安装的 handler 更新。 */
+while (!done)
+    sigsuspend(&amp;waiting);
+/* handler 返回后恢复含 SIGCHLD 的保护掩码，再检查 done。 */
+sigprocmask(SIG_SETMASK, &amp;old, NULL);
+</code></pre><p><code>old</code> 保存调用者原来的掩码；<code>waiting</code> 从 old 复制，再显式删除 SIGCHLD。即使调用者进来时已屏蔽 SIGCHLD，等待期间也能递交该通知，而调用者原先对其他信号的屏蔽保持不变。handler 返回后，恢复的是进入 sigsuspend 前的保护掩码，即 <code>old ∪ {SIGCHLD}</code>；因此检查 done 时仍受保护。循环结束后再恢复 old，把控制权和原来的信号环境一起还给调用者。</p><p>sigsuspend 原子地用参数<strong>替换</strong>当前掩码并挂起；待处理通知会在这个边界得到处理，handler 返回后恢复调用前掩码。循环仍必要，因为唤醒可能来自别的信号。原书 p817 的等价伪码把第一步写成 SIG_BLOCK，若原先已阻塞 SIGCHLD 就无法解除它，正确概念应是 SIG_SETMASK；三条独立调用也不具备 sigsuspend 的原子性。<a href="https://pubs.opengroup.org/onlinepubs/9799919799/functions/sigsuspend.html">POSIX 的 sigsuspend 定义</a>明确规定替换与恢复。</p><details class="reading-notes" id="notes-s8-5" data-notes-for="s8-5"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">不变量</span><h3>表里先有，处理后才删</h3><p>屏蔽从 fork 之前开始，登记结束后再允许 SIGCHLD 处理。</p></div><div class="annotation-card"><span class="annotation-kind">等待</span><h3>唤醒不是条件本身</h3><p>收到信号只表示值得重新检查；循环读取实际状态，避免漏工作和假完成。</p></div></div></details></section><section id="s8-6"><h2>8.6 · 绕过返回链也会绕过清理<span class="english-title" lang="en">Nonlocal Jumps</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=818">来源：印刷 817—822 页 / PDF 818—823 页</a></p><div class="source-statement" id="classic-8-nonlocal"><p class="statement-label">原书摘录 · 跳向仍在执行的调用环境</p><blockquote class="original-excerpt" lang="en"><p>C provides a form of user-level exceptional control flow, called a nonlocal jump, that transfers control directly from one function to another currently executing function without having to go through the normal call-and-return sequence.</p></blockquote><p class="statement-body"><strong>中文释义：</strong>非局部跳转能跨过中间调用，回到尚未结束的较外层调用环境。</p><p class="source"><a class="source-pdf" href="../csapp.pdf#page=818">来源：印刷 817 页 / PDF 818 页</a></p></div><p>main 调 setjmp 保存环境，第一次返回 0，于是调用 outer，再由 outer 调 inner。inner 检测错误后 longjmp(env,2)，outer 和 inner 都不正常返回，执行直接恢复到原先 setjmp 的分支位置，这次观察到 2。longjmp 自身没有正常返回；若传 0，setjmp 一侧得到的是 1。它不是重新从 main 第一条指令运行，也不是倒转内存里所有修改。</p><pre><code>switch (setjmp(env)) {
+case 0: outer(); break;
+case 2: /* inner 使用 longjmp(env, 2) 到这里 */ break;
+default: /* 其他错误 */ break;
+}
+</code></pre><p>C 对 setjmp 的出现位置有特别限制；把它用于 switch 的控制表达式或指定的 if/循环条件形式是惯用安全写法，不要随意写成赋值子表达式。保存环境的函数已经返回后，jmp_buf 即使还在堆里也不能作为返回目标。发生跳转后，保存环境的函数中那些在 setjmp 后改变、且未声明 volatile 的自动局部变量值可能不确定；不要把它们当错误现场快照。</p><p>跨过的函数不会替你 close、free 或释放锁。C++ 异常的析构和栈展开具有额外语言规则，不能把 longjmp 当作同等资源管理工具。教学程序的跳转路径没有持有待释放资源，因此可以直观观察控制转移。生产接口更适合把错误和清理责任一起设计。</p><p>sigsetjmp(env,1) 额外保存当前信号掩码，siglongjmp 可恢复它；它<strong>不保存或恢复待处理信号队列</strong>，原书 p821 把 pending 与 blocked 都列入信号上下文并不准确。若从 handler 跳走，仍须考虑被打断的非安全函数是否留下内部状态：回到主循环再调用这些函数也未必安全。保存环境和安装处理函数的先后、掩码恢复以及可到达代码都须一起证明。<a href="https://pubs.opengroup.org/onlinepubs/9799919799/functions/sigsetjmp.html">POSIX 的 sigsetjmp 定义</a>限定保存对象为 calling environment 与可选 current signal mask。</p><details class="reading-notes" id="notes-s8-6" data-notes-for="s8-6"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">生命周期</span><h3>目标栈帧必须仍然活着</h3><p>把 jmp_buf 复制或移到堆上，不能复活已经返回的函数。</p></div><div class="annotation-card"><span class="annotation-kind">资源</span><h3>跳转不是状态回滚</h3><p>文件、堆对象、锁和此前的外部写入都需要另有明确的清理策略。</p></div></div></details></section><section id="s8-7"><h2>8.7 · 用工具核对状态，不用样本代替证明<span class="english-title" lang="en">Tools for Manipulating Processes</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=823">来源：印刷 822—823 页 / PDF 823—824 页</a></p><p>先明确想观察哪一层。ps 适合看 PID、PPID、PGID、状态；Linux strace 能看进程的 fork/exec/wait 与信号事件；/proc/PID/maps 和 pmap 适合看地址空间。工具输出是某一时刻的样本：没看到僵尸不证明从来不会积累，看到一种输出顺序也不证明没有其他偏序排列。</p><pre><code># Linux 示例；只跟踪本次自己启动的演示程序
+strace -f -e trace=process,signal ./ch08_ecf
+ps -o pid,ppid,pgid,state,command -p CHILD_PID
+cat /proc/CHILD_PID/maps
+</code></pre><p>macOS 没有 Linux /proc 和相同的 strace 接口。本页 C 例验证 POSIX 行为，运行记录不据此宣称执行过 Linux 系统调用号、x86-64 异常向量或 Linux 页故障路径。用调试器单步可能改变调度概率；要证明同步，仍应回到程序中的屏蔽与等待关系。</p><details class="reading-notes" id="notes-s8-7" data-notes-for="s8-7"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">观察</span><h3>带上进程关系</h3><p>只看一个 PID 容易错过组内其他成员，核对 PPID 与 PGID。</p></div><div class="annotation-card"><span class="annotation-kind">实验</span><h3>有界地结束自己创建的进程</h3><p>只对已登记的孩子发信号，结束后 wait，测试超时也走清理路径。</p></div></div></details></section><section id="s8-8"><h2>8.8 · 把控制流与状态约束一起读<span class="english-title" lang="en">Summary</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=824">来源：印刷 823 页 / PDF 824 页</a></p><p>从硬件异常到用户信号，这一章始终在问：谁检测到事件，谁暂时取得控制，恢复时哪些状态必须成立？进程上下文让多条逻辑流各自连贯；fork/exec/wait 建立它们的生命周期；信号只负责引起注意，屏蔽和原子等待负责防止关键状态之间被插入错误时序。</p><p>下一章把 fault 的一个重要实例展开：虚拟地址翻译失败时如何定位页、建立映射，再重试原来的访存指令。前面“私有地址空间”的承诺，也将由页表、共享对象和写时复制落实。</p><details class="reading-notes" id="notes-s8-8" data-notes-for="s8-8"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">贯通</span><h3>同一线程也可能有并发干扰</h3><p>信号 handler 与主流程共享状态，单核或单线程并不自动消除竞态。</p></div><div class="annotation-card"><span class="annotation-kind">练习</span><h3>先画边，再列所有排列</h3><p>fork 产生分支，wait 添加结束到后续语句的边，输出顺序由这些约束决定。</p></div></div></details></section><section id="models"><h2>可运行机制与实现</h2><p>从仓库根目录运行下列命令，所有二进制放在忽略的 tmp 目录。C 源使用 C11 语法和 POSIX 接口，默认模式都有限结束；Python 明确模拟相应逻辑或状态契约。默认输出相同用于核对教学结果，不代表 Python 执行过内核信号或 C 的栈恢复。</p><pre><code>mkdir -p tmp/csapp/demo
+clang -std=c11 -Wall -Wextra -Werror -pedantic -O1 \
+  -fsanitize=address,undefined books/csapp/code/ch08_ecf.c -o tmp/csapp/demo/ch08_ecf
+tmp/csapp/demo/ch08_ecf
+python3 books/csapp/code/ch08_ecf.py
+</code></pre><section id="experiment"><h3>进程、信号与非局部跳转</h3><p>C 先创建一个孩子检查私有 x 与退出码，再 exec /bin/sh；把 SIGUSR1 屏蔽后给自己发五次，实际数 handler 次数；最后屏蔽 SIGCHLD、登记、sigsuspend 等通知并回收。等待带 3 秒 alarm 上限，超时只终止自己保存的孩子。Python 的 pending 集合展示合并，状态机列出孩子在登记前、登记后和挂起后退出的三种时序，并保留 unblock+pause 的丢失唤醒反例。默认信号计数是当前 POSIX 宿主普通信号的观察。</p><div class="scroll"><table><thead><tr><th>读代码的位置</th><th>状态与责任</th></tr></thead><tbody><tr><td>handler / install</td><td>handler 保存 errno，只写标志和同类自动屏蔽保护的计数；sigaction 明确处理行为。</td></tr><tr><td>reap</td><td>只等待传入的孩子，EINTR 重试；调用者用 WIFEXITED 再解码。</td></tr><tr><td>main 的前三段</td><td>fork 私有副本、exec 替换、普通信号 pending 是三个独立实验，逐段检查实际观察再打印。</td></tr><tr><td>main 的等待段</td><td>先屏蔽并 fork，再登记；sigsuspend 暂时开放 CHLD/ALRM，超时有具体子 PID 可清理。</td></tr><tr><td>outer / inner / setjmp</td><td>inner 跳到仍在 main 中活着的保存点；没有跨过待释放资源。</td></tr></tbody></table></div><div class="code-pair"><details class="code-version"><summary>C11 / POSIX · ch08_ecf</summary><p class="code-reference"><a href="../code/ch08_ecf.c" download>下载完整源码</a></p><pre><code id="ch08_ecf-c" data-language="c">#define _POSIX_C_SOURCE 200809L
+#include &lt;errno.h&gt;
+#include &lt;setjmp.h&gt;
+#include &lt;signal.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/wait.h&gt;
+#include &lt;unistd.h&gt;
+
+/* Single-threaded POSIX experiment. No handler prints or edits a job table. */
+static volatile sig_atomic_t noticed;
+static volatile sig_atomic_t usr1_count;
+static volatile sig_atomic_t expired;
+static jmp_buf escape;
+static void handler(int sig) {
+    int saved = errno;
+    if (sig == SIGALRM) expired = 1;
+    else {
+        noticed = 1;
+        if (sig == SIGUSR1) ++usr1_count; /* Same signal is blocked in its handler. */
+    }
+    errno = saved;
+}
+static void die(const char *s) { perror(s); exit(1); }
+static int reap(pid_t p) {
+    int status;
+    while (waitpid(p, &amp;status, 0) &lt; 0) {
+        if (errno != EINTR) die(&quot;waitpid&quot;);
+    }
+    return status;
+}
+static void install(int sig) {
+    struct sigaction sa;
+    memset(&amp;sa, 0, sizeof sa);
+    sa.sa_handler = handler;
+    if (sigemptyset(&amp;sa.sa_mask) || sigaction(sig, &amp;sa, NULL)) die(&quot;sigaction&quot;);
+}
+static void inner(void) { longjmp(escape, 2); }
+static void outer(void) { inner(); }
+int main(void) {
+    int x = 9, status;
+    pid_t pid = fork();
+    if (pid &lt; 0) die(&quot;fork&quot;);
+    if (pid == 0) { --x; _exit(x); }
+    status = reap(pid);
+    if (!WIFEXITED(status) || WEXITSTATUS(status) != 8 || x != 9) return 1;
+    puts(&quot;private-copy parent=9 child=8&quot;);
+
+    /* exec runs /bin/sh in the same child. The exit status is the observation. */
+    fflush(stdout);
+    pid = fork();
+    if (pid &lt; 0) die(&quot;fork&quot;);
+    if (pid == 0) {
+        char *const args[] = {&quot;sh&quot;, &quot;-c&quot;, &quot;exit 7&quot;, NULL};
+        char *const env[] = {&quot;PATH=/usr/bin:/bin&quot;, NULL};
+        execve(&quot;/bin/sh&quot;, args, env);
+        _exit(127);
+    }
+    status = reap(pid);
+    if (!WIFEXITED(status) || WEXITSTATUS(status) != 7) return 1;
+    puts(&quot;exec-status=7&quot;);
+
+    install(SIGUSR1); install(SIGCHLD); install(SIGALRM);
+    sigset_t block, before, pending, waiting;
+    if (sigemptyset(&amp;block) || sigaddset(&amp;block, SIGUSR1) ||
+        sigprocmask(SIG_BLOCK, &amp;block, &amp;before)) die(&quot;mask&quot;);
+    for (int i = 0; i &lt; 5; ++i) if (kill(getpid(), SIGUSR1)) die(&quot;kill&quot;);
+    if (sigpending(&amp;pending)) die(&quot;sigpending&quot;);
+    if (sigismember(&amp;pending, SIGUSR1) != 1 || noticed) return 1;
+    waiting = before;
+    if (sigdelset(&amp;waiting, SIGUSR1) || sigdelset(&amp;waiting, SIGALRM)) die(&quot;sigdelset&quot;);
+    alarm(3);
+    while (!noticed &amp;&amp; !expired) sigsuspend(&amp;waiting);
+    alarm(0);
+    if (expired || usr1_count != 1) return 1;
+    if (sigprocmask(SIG_SETMASK, &amp;before, NULL)) die(&quot;restore&quot;);
+    puts(&quot;standard-signals sent=5 pending=1 handled=1&quot;);
+
+    noticed = 0; expired = 0;
+    if (sigemptyset(&amp;block) || sigaddset(&amp;block, SIGCHLD) ||
+        sigaddset(&amp;block, SIGALRM) || sigprocmask(SIG_BLOCK, &amp;block, &amp;before)) die(&quot;mask&quot;);
+    fflush(stdout);
+    pid = fork();
+    if (pid &lt; 0) die(&quot;fork&quot;);
+    if (pid == 0) {
+        if (sigprocmask(SIG_SETMASK, &amp;before, NULL)) _exit(126);
+        _exit(23);
+    }
+    /* The registration happens while SIGCHLD is blocked. */
+    int registered = 1;
+    waiting = before;
+    if (sigdelset(&amp;waiting, SIGCHLD) || sigdelset(&amp;waiting, SIGALRM)) die(&quot;sigdelset&quot;);
+    alarm(3);
+    while (!noticed &amp;&amp; !expired) sigsuspend(&amp;waiting);
+    alarm(0);
+    if (expired &amp;&amp; kill(pid, SIGKILL) &lt; 0 &amp;&amp; errno != ESRCH) die(&quot;kill timeout&quot;);
+    status = reap(pid);
+    if (sigprocmask(SIG_SETMASK, &amp;before, NULL)) die(&quot;restore&quot;);
+    if (expired || !registered || !WIFEXITED(status) || WEXITSTATUS(status) != 23) return 1;
+    puts(&quot;mask-register-suspend reaped=1 status=23&quot;);
+    switch (setjmp(escape)) {
+    case 0: outer(); return 1;
+    case 2: puts(&quot;nonlocal-jump=2&quot;); break;
+    default: return 1;
+    }
+    return 0;
+}
+</code></pre></details><details class="code-version"><summary>Python 逻辑模型 · ch08_ecf</summary><p class="code-reference"><a href="../code/ch08_ecf.py" download>下载完整源码</a></p><pre><code id="ch08_ecf-python" data-language="python">#!/usr/bin/env python3
+"""Logic model, not POSIX execution or an ABI/signal-handler implementation."""
+from itertools import permutations
+
+
+def require(condition, message):
+    if not condition:
+        raise RuntimeError("ECF model check failed: " + message)
+
+
+def outputs(labels, edges):
+    result = set()
+    for order in permutations(labels):
+        pos = {event: i for i, event in enumerate(order)}
+        if all(pos[a] &lt; pos[b] for a, b in edges):
+            result.add("".join(labels[event] for event in order))
+    return sorted(result)
+
+
+def main():
+    parent = {"x": 9}
+    child = dict(parent)
+    child["x"] -= 1
+    require((parent["x"], child["x"]) == (9, 8), "private copy")
+    print("private-copy parent=9 child=8")
+    process = {"pid": 10, "image": "parent", "argv": []}
+    old_pid = process["pid"]
+    process.update(image="/bin/sh", argv=["sh", "-c", "exit 7"])
+    shell_exit = int(process["argv"][2].split()[1])
+    require(process["pid"] == old_pid and process["image"] == "/bin/sh", "exec identity")
+    require(shell_exit == 7, "shell exit status")
+    print("exec-status=7")
+    pending, handled = set(), 0
+    for _ in range(5):
+        pending.add("USR1")
+    require(len(pending) == 1, "coalesced pending signal")
+    pending.remove("USR1")
+    handled += 1
+    require(handled == 1 and not pending, "pending signal handled")
+    print("standard-signals sent=5 pending=1 handled=1")
+    class SignalState:
+        def __init__(self):
+            self.blocked = True
+            self.pending = self.registered = self.done = self.sleeping = False
+        def child_exit(self):
+            self.pending = True
+            self.deliver()
+        def deliver(self):
+            if self.pending and not self.blocked:
+                require(self.registered, "handler must observe a registered child")
+                self.pending = False
+                self.done = True
+                self.sleeping = False
+        def suspend(self):
+            # Atomic: install mask and sleep, then allow signal delivery.
+            self.sleeping = True
+            self.blocked = False
+            self.deliver()
+    for timing in ("before-register", "after-register", "after-suspend"):
+        st = SignalState()
+        if timing == "before-register": st.child_exit()
+        st.registered = True
+        if timing == "after-register": st.child_exit()
+        st.suspend()
+        if timing == "after-suspend": st.child_exit()
+        require(st.done and not st.sleeping and not st.pending, "atomic suspend: " + timing)
+    # Mutant: test false, unblock, handler finishes, then pause sleeps forever.
+    bad = SignalState()
+    bad.registered = True
+    require(not bad.done, "pause race starts before delivery")
+    bad.blocked = False
+    bad.child_exit()
+    bad.sleeping = True
+    require(bad.done and bad.sleeping and not bad.pending, "pause race remains asleep")
+    print("mask-register-suspend reaped=1 status=23")
+    class Jump(Exception):
+        pass
+    try:
+        raise Jump(2)
+    except Jump as exc:
+        require(exc.args == (2,), "nonlocal jump value")
+        print("nonlocal-jump=2")
+    # Independent permutation oracle for the extra Global Edition 8.3 order.
+    labels = {"a": "9", "b": "3", "c": "6", "d": "0", "e": "3", "f": "6"}
+    edges = [("a", "b"), ("b", "c"), ("d", "e"), ("c", "e"), ("e", "f")]
+    actual = outputs(labels, edges)
+    require(actual == ["093636", "903636", "930636", "936036"], "output partial order")
+
+
+if __name__ == "__main__":
+    main()
+</code></pre></details></div></section><section id="io-model"><h3>参数、执行与超时读取</h3><p>C 包含 8.5、8.6、8.7、8.20、8.22、8.24、8.25 的完整实现。默认仅执行 exit 8/exit 0 和临时文件读取，显式 --myecho 会打印环境，--myls 运行 /bin/ls，--snooze 等待用户中断，--tfgets 最长等五秒。--text-fault 仅用于单独 Linux 未插桩保护实验。Python 默认检查读行边界和退出码契约。</p><div class="scroll"><table><thead><tr><th>读代码的位置</th><th>状态与责任</th></tr></thead><tbody><tr><td>tfgets</td><td>n/指针检查后保存文件标志；单调时钟只设一次起点，缓冲优先读取，恢复路径统一还原标志。</td></tr><tr><td>mysystem</td><td>fork 失败返回 −1；子 exec 失败用 _exit；父解码题定返回协议。</td></tr><tr><td>wakeup / catch_int</td><td>处理函数只返回；主流程按剩余秒数输出时长，打印不在 handler 内进行。</td></tr><tr><td>main 各模式</td><td>显式参数选择外部命令或等待；默认仅有界的退出码和临时流契约测试。</td></tr></tbody></table></div><div class="code-pair"><details class="code-version"><summary>C11 / POSIX · ch08_io</summary><p class="code-reference"><a href="../code/ch08_io.c" download>下载完整源码</a></p><pre><code id="ch08_io-c" data-language="c">#define _POSIX_C_SOURCE 200809L
+#include &lt;errno.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;limits.h&gt;
+#include &lt;poll.h&gt;
+#include &lt;signal.h&gt;
+#include &lt;stdint.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/wait.h&gt;
+#include &lt;time.h&gt;
+#include &lt;unistd.h&gt;
+extern char **environ;
+
+/* This teaching function requires exclusive use of the stream and its fd. */
+char *tfgets(char *s, int n, FILE *stream) {
+    if (!s || !stream || n &lt;= 0) { errno = EINVAL; return NULL; }
+    if (n == 1) { s[0] = &#x27;\0&#x27;; return s; }
+    int fd = fileno(stream), flags = fcntl(fd, F_GETFL);
+    if (flags &lt; 0 || fcntl(fd, F_SETFL, flags | O_NONBLOCK) &lt; 0) return NULL;
+    struct timespec start, now;
+    int used = 0, ok = 0, err = 0;
+    if (clock_gettime(CLOCK_MONOTONIC, &amp;start)) goto restore;
+    for (;;) {
+        if (clock_gettime(CLOCK_MONOTONIC, &amp;now)) break;
+        double left = 5.0 - ((double)(now.tv_sec - start.tv_sec) +
+                            (double)(now.tv_nsec - start.tv_nsec) / 1e9);
+        if (left &lt;= 0) { errno = ETIMEDOUT; break; }
+        errno = 0;
+        int ch = fgetc(stream); /* Checks stdio&#x27;s existing buffer first. */
+        if (ch != EOF) {
+            s[used++] = (char)ch;
+            if (ch == &#x27;\n&#x27; || used == n - 1) { ok = 1; break; }
+            continue;
+        }
+        if (feof(stream)) { ok = used != 0; break; }
+        if (errno != EAGAIN &amp;&amp; errno != EWOULDBLOCK &amp;&amp; errno != EINTR) break;
+        clearerr(stream);
+        struct pollfd p = {fd, POLLIN, 0};
+        int rc = poll(&amp;p, 1, (int)(left * 1000.0 + 1.0));
+        if (rc &lt; 0 &amp;&amp; errno != EINTR) break;
+    }
+restore:
+    err = errno;
+    s[used] = &#x27;\0&#x27;;
+    if (fcntl(fd, F_SETFL, flags) &lt; 0) return NULL;
+    errno = err;
+    return ok ? s : NULL;
+}
+int mysystem(char *command) {
+    if (!command) { errno = EINVAL; return -1; }
+    pid_t p = fork();
+    if (p &lt; 0) return -1;
+    if (p == 0) {
+        char *const av[] = {&quot;sh&quot;, &quot;-c&quot;, command, NULL};
+        execve(&quot;/bin/sh&quot;, av, environ);
+        _exit(127);
+    }
+    int status;
+    while (waitpid(p, &amp;status, 0) &lt; 0) if (errno != EINTR) return -1;
+    return WIFEXITED(status) ? WEXITSTATUS(status) : status;
+}
+static void catch_int(int sig) { (void)sig; }
+unsigned int wakeup(unsigned int secs) {
+    unsigned int remaining = sleep(secs);
+    printf(&quot;Woke up at %u secs.\n&quot;, secs - remaining);
+    return remaining;
+}
+int main(int argc, char **argv) {
+    if (argc == 2 &amp;&amp; !strcmp(argv[1], &quot;--text-fault&quot;)) {
+#ifdef __linux__
+        /* Intentional Linux text-write fault: run only without sanitizers. */
+        pid_t children[2]; int made = 0;
+        for (int i = 0; i &lt; 2; ++i) {
+            pid_t p = fork();
+            if (p &lt; 0) break;
+            if (p == 0) {
+                volatile unsigned char *text = (volatile unsigned char *)(uintptr_t)&amp;main;
+                *text = 0; /* Outside defined ISO C; expected Linux protection fault. */
+                _exit(99);
+            }
+            children[made++] = p;
+        }
+        int failed = made != 2;
+        for (int i = 0; i &lt; made; ++i) {
+            int status; pid_t r;
+            do { r = waitpid(children[i], &amp;status, 0); } while (r &lt; 0 &amp;&amp; errno == EINTR);
+            if (r &lt; 0 || !WIFSIGNALED(status)) { failed = 1; continue; }
+            int sig = WTERMSIG(status);
+            fprintf(stderr, &quot;child %ld terminated by signal %d: %s\n&quot;,
+                    (long)r, sig, strsignal(sig));
+            if (sig != SIGSEGV) failed = 1;
+        }
+        return failed;
+#else
+        fputs(&quot;--text-fault requires the documented Linux experiment\n&quot;, stderr);
+        return 2;
+#endif
+    }
+    if (argc &gt; 1 &amp;&amp; !strcmp(argv[1], &quot;--myecho&quot;)) {
+        puts(&quot;Command-line arguments:&quot;);
+        for (int i = 1; i &lt; argc; ++i) printf(&quot;argv[%d]: %s\n&quot;, i - 1, argv[i]);
+        puts(&quot;Environment variables:&quot;);
+        for (size_t i = 0; environ[i]; ++i) printf(&quot;envp[%zu]: %s\n&quot;, i, environ[i]);
+        return 0;
+    }
+    if (argc &gt; 1 &amp;&amp; !strcmp(argv[1], &quot;--myls&quot;)) {
+        argv[1] = (char *)&quot;ls&quot;;
+        execve(&quot;/bin/ls&quot;, argv + 1, environ);
+        perror(&quot;execve /bin/ls&quot;); return 127;
+    }
+    if (argc == 2 &amp;&amp; !strcmp(argv[1], &quot;--tfgets&quot;)) {
+        char s[256];
+        if (tfgets(s, (int)sizeof s, stdin)) { fputs(s, stdout); return 0; }
+        return errno == ETIMEDOUT ? 3 : 1;
+    }
+    if (argc == 3 &amp;&amp; !strcmp(argv[1], &quot;--snooze&quot;)) {
+        char *end; errno = 0; unsigned long value = strtoul(argv[2], &amp;end, 10);
+        if (errno || argv[2][0] == &#x27;-&#x27; || !argv[2][0] || *end || value &gt; 3600) return 2;
+        struct sigaction sa; memset(&amp;sa, 0, sizeof sa);
+        sa.sa_handler = catch_int;
+        if (sigemptyset(&amp;sa.sa_mask) || sigaction(SIGINT, &amp;sa, NULL)) return 1;
+        unsigned int secs = (unsigned int)value, remaining = sleep(secs);
+        printf(&quot;Slept for %u of %u secs.\n&quot;, secs - remaining, secs);
+        return 0;
+    }
+    if (argc != 1) return 2;
+    int a = mysystem(&quot;exit 8&quot;), b = mysystem(&quot;exit 0&quot;);
+    if (a != 8 || b != 0) return 1;
+    puts(&quot;mysystem exit8=8 exit0=0&quot;);
+    FILE *f = tmpfile(); char s[8];
+    if (!f) return 1;
+    fputs(&quot;abc\ndef&quot;, f); rewind(f);
+    if (!tfgets(s, 8, f) || strcmp(s, &quot;abc\n&quot;)) return 1;
+    if (!tfgets(s, 8, f) || strcmp(s, &quot;def&quot;)) return 1;
+    if (tfgets(s, 8, f)) return 1;
+    fclose(f);
+    puts(&quot;tfgets line=abc partial=def eof=null&quot;);
+    return 0;
+}
+</code></pre></details><details class="code-version"><summary>Python 逻辑模型 · ch08_io</summary><p class="code-reference"><a href="../code/ch08_io.py" download>下载完整源码</a></p><pre><code id="ch08_io-python" data-language="python">#!/usr/bin/env python3
+"""Sequential contract model; C companion runs real POSIX fork/exec and stream I/O."""
+from io import StringIO
+
+
+def model_tfgets(stream, n):
+    if n &lt;= 0:
+        raise ValueError("positive size required")
+    if n == 1:
+        return ""
+    result = stream.readline(n - 1)
+    return result or None
+
+
+def main():
+    # An exit-status contract, not execution of a shell.
+    status = {"exit 8": 8, "exit 0": 0}
+    if status["exit 8"] != 8 or status["exit 0"] != 0:
+        raise RuntimeError("exit-status contract failed")
+    print("mysystem exit8=8 exit0=0")
+    stream = StringIO("abc\ndef")
+    line = model_tfgets(stream, 8)
+    partial = model_tfgets(stream, 8)
+    eof = model_tfgets(stream, 8)
+    if (line, partial, eof) != ("abc\n", "def", None):
+        raise RuntimeError(f"tfgets contract failed: {(line, partial, eof)!r}")
+    print("tfgets line=abc partial=def eof=null")
+
+
+if __name__ == "__main__":
+    main()
+</code></pre></details></div></section><section id="shell-model"><h3>作业控制的完整 C shell 与状态模型</h3><p>从 launch 看生命周期：在屏蔽期间创建并登记，子恢复处理动作和掩码后 exec，父只在等待边界开放信号。reap 一次排空全部可见变化，停止状态保留表项，结束状态删去表项。evaluate 负责 JID/PID 和内建命令，输入用 pselect 原子释放掩码并等待，闲置时后台孩子也能及时回收。默认验证一个真实前台作业，--interactive 才进入题 8.26 的 shell。Python 保留停止→后台→前台→回收的模型。</p><div class="scroll"><table><thead><tr><th>读代码的位置</th><th>状态与责任</th></tr></thead><tbody><tr><td>job / by_pid / lookup</td><td>表项绑定 PID、单调 JID、状态和命令；%前缀决定按JID还是PID查找。</td></tr><tr><td>handler</td><td>只读 foreground 并 kill 整组，保存恢复 errno；不接触复杂作业表。</td></tr><tr><td>reap / wait_foreground</td><td>排空退出/停止/继续状态；前台尚活才原子挂起，醒后重新排空。</td></tr><tr><td>launch</td><td>屏蔽区内 fork、双侧设组并登记；孩子重置动作与掩码；父按bg/fg分支继续。</td></tr><tr><td>evaluate / pselect 输入循环</td><td>在主流程执行内建命令；输入按字节读，pselect 同时解决输入等待与后台回收。</td></tr><tr><td>cleanup</td><td>EOF/quit先向全部仍登记作业的原进程组和直属PID分别发送SIGKILL，再逐PID回收；报告信号错误，向直属PID发送失败时采用非阻塞回收。</td></tr></tbody></table></div><p>清理时要同时保留两种身份：进程组用于结束作业成员，PID 用于精确结束直属孩子。孩子可以改变所属进程组，此时原组可能消失，也可能仍有其他成员；因此组信号成功后仍要单独向直属 PID 发信号。作业表持有尚未回收的孩子，先完成所有信号发送，再逐个 waitpid，避免先释放 PID 再用旧编号发信号。如果无法向直属孩子发送终止信号，只做非阻塞回收并报告失败，不能继续无条件阻塞等待。该责任覆盖退出时仍登记的作业；已经回收并移除的历史作业不再由这张表跟踪。</p><div class="code-pair"><details class="code-version"><summary>C11 / POSIX · ch08_shell</summary><p class="code-reference"><a href="../code/ch08_shell.c" download>下载完整源码</a></p><pre><code id="ch08_shell-c" data-language="c">#define _POSIX_C_SOURCE 200809L
+#include &lt;errno.h&gt;
+#include &lt;limits.h&gt;
+#include &lt;signal.h&gt;
+#include &lt;stdint.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/select.h&gt;
+#include &lt;sys/wait.h&gt;
+#include &lt;unistd.h&gt;
+extern char **environ;
+#define JOBS 32
+#define LINE 1024
+#define ARGS 128
+enum state { UNUSED, BACKGROUND, FOREGROUND, STOPPED };
+struct job { pid_t pid; int jid; enum state state; char command[LINE]; };
+static struct job jobs[JOBS];
+static int next_jid = 1;
+static volatile sig_atomic_t foreground;
+static sigset_t original, waiting;
+static int quiet;
+static int foreground_status;
+
+/* All job-table access is in main with CHLD/INT/TSTP blocked. */
+static void handler(int sig) {
+    int saved = errno;
+    if ((sig == SIGINT || sig == SIGTSTP) &amp;&amp; foreground &gt; 0)
+        (void)kill(-(pid_t)foreground, sig);
+    errno = saved;
+}
+static struct job *by_pid(pid_t pid) {
+    for (int i = 0; i &lt; JOBS; ++i) if (jobs[i].state &amp;&amp; jobs[i].pid == pid) return jobs + i;
+    return NULL;
+}
+static struct job *slot(void) {
+    for (int i = 0; i &lt; JOBS; ++i) if (!jobs[i].state) return jobs + i;
+    return NULL;
+}
+static void reap(void) {
+    int status; pid_t p;
+    for (;;) {
+        p = waitpid(-1, &amp;status, WNOHANG | WUNTRACED | WCONTINUED);
+        if (p == 0 || (p &lt; 0 &amp;&amp; errno == ECHILD)) return;
+        if (p &lt; 0) { if (errno == EINTR) continue; perror(&quot;waitpid&quot;); return; }
+        struct job *j = by_pid(p);
+        if (!j) continue;
+        if (WIFSTOPPED(status)) {
+            j-&gt;state = STOPPED;
+            if (foreground == p) foreground = 0;
+            if (!quiet) printf(&quot;Job [%d] %ld stopped by signal %d: %s\n&quot;, j-&gt;jid,
+                (long)p, WSTOPSIG(status), strsignal(WSTOPSIG(status)));
+        } else if (WIFCONTINUED(status)) {
+            if (j-&gt;state == STOPPED) j-&gt;state = BACKGROUND;
+        } else {
+            if (WIFSIGNALED(status) &amp;&amp; !quiet)
+                printf(&quot;Job %ld terminated by signal %d: %s\n&quot;, (long)p,
+                       WTERMSIG(status), strsignal(WTERMSIG(status)));
+            if (foreground == p) { foreground = 0; foreground_status = status; }
+            j-&gt;state = UNUSED;
+        }
+    }
+}
+static void wait_foreground(void) {
+    for (;;) {
+        reap();
+        if (!foreground) return;
+        sigsuspend(&amp;waiting);
+    }
+}
+static int launch(char **av, int bg, const char *line) {
+    struct job *j = slot();
+    if (!j) { fputs(&quot;job table full\n&quot;, stderr); return -1; }
+    if (next_jid == INT_MAX) { fputs(&quot;job ID range exhausted\n&quot;, stderr); return -1; }
+    fflush(NULL);
+    pid_t p = fork();
+    if (p &lt; 0) { perror(&quot;fork&quot;); return -1; }
+    if (p == 0) {
+        struct sigaction sa; memset(&amp;sa, 0, sizeof sa);
+        sa.sa_handler = SIG_DFL; sigemptyset(&amp;sa.sa_mask);
+        if (setpgid(0, 0) || sigaction(SIGINT, &amp;sa, NULL) ||
+            sigaction(SIGTSTP, &amp;sa, NULL) || sigaction(SIGCHLD, &amp;sa, NULL) ||
+            sigprocmask(SIG_SETMASK, &amp;original, NULL)) _exit(126);
+        execve(av[0], av, environ);
+        static const char error[] = &quot;Command not found or not executable.\n&quot;;
+        (void)write(STDERR_FILENO, error, sizeof error - 1);
+        _exit(127);
+    }
+    /* Both sides setpgid: the child can reach exec before the parent runs. */
+    if (setpgid(p, p) &lt; 0 &amp;&amp; errno != EACCES &amp;&amp; errno != ESRCH) {
+        perror(&quot;setpgid&quot;); (void)kill(p, SIGKILL);
+        while (waitpid(p, NULL, 0) &lt; 0 &amp;&amp; errno == EINTR) {}
+        return -1;
+    }
+    if ((long)p &gt; SIG_ATOMIC_MAX) {
+        (void)kill(-p, SIGKILL);
+        while (waitpid(p, NULL, 0) &lt; 0 &amp;&amp; errno == EINTR) {}
+        return -1;
+    }
+    j-&gt;pid = p; j-&gt;jid = next_jid++; j-&gt;state = bg ? BACKGROUND : FOREGROUND;
+    snprintf(j-&gt;command, sizeof j-&gt;command, &quot;%s&quot;, line);
+    if (bg) { if (!quiet) printf(&quot;[%d] %ld %s\n&quot;, j-&gt;jid, (long)p, line); }
+    else { foreground = (sig_atomic_t)p; wait_foreground(); }
+    return 0;
+}
+static struct job *lookup(const char *arg) {
+    int jid = arg[0] == &#x27;%&#x27;; const char *digits = arg + jid;
+    if (!*digits) return NULL;
+    for (const char *s = digits; *s; ++s) if (*s &lt; &#x27;0&#x27; || *s &gt; &#x27;9&#x27;) return NULL;
+    char *end; errno = 0; long id = strtol(digits, &amp;end, 10);
+    if (errno || *end || id &lt;= 0) return NULL;
+    for (int i = 0; i &lt; JOBS; ++i)
+        if (jobs[i].state &amp;&amp; (jid ? jobs[i].jid == id : (long)jobs[i].pid == id)) return jobs + i;
+    return NULL;
+}
+static int evaluate(char *line) {
+    char saved[LINE]; snprintf(saved, sizeof saved, &quot;%s&quot;, line);
+    char *av[ARGS], *context; int count = 0;
+    for (char *s = strtok_r(line, &quot; \t\r\n&quot;, &amp;context); s;
+         s = strtok_r(NULL, &quot; \t\r\n&quot;, &amp;context)) {
+        if (count == ARGS - 1) { fputs(&quot;too many arguments\n&quot;, stderr); return 0; }
+        av[count++] = s;
+    }
+    av[count] = NULL;
+    if (!count) return 0;
+    int bg = !strcmp(av[count - 1], &quot;&amp;&quot;);
+    if (bg) av[--count] = NULL;
+    if (!count) return 0;
+    if (!strcmp(av[0], &quot;quit&quot;)) return 1;
+    if (!strcmp(av[0], &quot;jobs&quot;)) {
+        reap();
+        for (int i = 0; i &lt; JOBS; ++i) if (jobs[i].state &amp;&amp; jobs[i].state != FOREGROUND)
+            printf(&quot;[%d] %ld %s %s\n&quot;, jobs[i].jid, (long)jobs[i].pid,
+                   jobs[i].state == STOPPED ? &quot;Stopped&quot; : &quot;Running&quot;, jobs[i].command);
+        return 0;
+    }
+    if (!strcmp(av[0], &quot;bg&quot;) || !strcmp(av[0], &quot;fg&quot;)) {
+        struct job *j = count == 2 ? lookup(av[1]) : NULL;
+        if (!j) { fputs(&quot;No such process or invalid job argument\n&quot;, stderr); return 0; }
+        int fg = !strcmp(av[0], &quot;fg&quot;);
+        if (kill(-j-&gt;pid, SIGCONT) &lt; 0) { perror(&quot;SIGCONT&quot;); reap(); return 0; }
+        j-&gt;state = fg ? FOREGROUND : BACKGROUND;
+        if (fg) { foreground = (sig_atomic_t)j-&gt;pid; wait_foreground(); }
+        else printf(&quot;[%d] %ld %s\n&quot;, j-&gt;jid, (long)j-&gt;pid, j-&gt;command);
+        return 0;
+    }
+    (void)launch(av, bg, saved);
+    return 0;
+}
+/* Keep each recorded PID reserved until waitpid: a live child may leave its
+ * original group. Signal that group and the direct PID independently. */
+static int cleanup(void) {
+    int failed = 0, waitable[JOBS] = {0};
+    for (int i = 0; i &lt; JOBS; ++i) if (jobs[i].state) {
+        if (kill(-jobs[i].pid, SIGKILL) &lt; 0 &amp;&amp; errno != ESRCH) {
+            perror(&quot;cleanup group&quot;); failed = 1;
+        }
+        if (kill(jobs[i].pid, SIGKILL) == 0 || errno == ESRCH) {
+            waitable[i] = 1;
+        } else {
+            perror(&quot;cleanup child&quot;); failed = 1;
+        }
+    }
+    for (int i = 0; i &lt; JOBS; ++i) if (jobs[i].state) {
+        pid_t result;
+        do { result = waitpid(jobs[i].pid, NULL, waitable[i] ? 0 : WNOHANG); }
+        while (result &lt; 0 &amp;&amp; errno == EINTR);
+        if (result &gt; 0 || (result &lt; 0 &amp;&amp; errno == ECHILD)) {
+            jobs[i].state = UNUSED;
+        } else {
+            if (result &lt; 0) perror(&quot;cleanup waitpid&quot;);
+            else fputs(&quot;cleanup: child remains alive after signal failure\n&quot;, stderr);
+            failed = 1;
+        }
+    }
+    if (sigprocmask(SIG_SETMASK, &amp;original, NULL) &lt; 0) {
+        perror(&quot;cleanup mask&quot;); failed = 1;
+    }
+    return failed;
+}
+
+int main(int argc, char **argv) {
+    if (argc &gt; 2 || (argc == 2 &amp;&amp; strcmp(argv[1], &quot;--interactive&quot;))) return 2;
+    quiet = argc == 1;
+    sigset_t block; sigemptyset(&amp;block);
+    sigaddset(&amp;block, SIGCHLD); sigaddset(&amp;block, SIGINT); sigaddset(&amp;block, SIGTSTP);
+    if (sigprocmask(SIG_BLOCK, &amp;block, &amp;original)) return 1;
+    waiting = original;
+    sigdelset(&amp;waiting, SIGCHLD); sigdelset(&amp;waiting, SIGINT); sigdelset(&amp;waiting, SIGTSTP);
+    struct sigaction sa; memset(&amp;sa, 0, sizeof sa);
+    sa.sa_handler = handler; sa.sa_mask = block;
+    if (sigaction(SIGCHLD, &amp;sa, NULL) || sigaction(SIGINT, &amp;sa, NULL) ||
+        sigaction(SIGTSTP, &amp;sa, NULL)) { cleanup(); return 1; }
+    if (quiet) {
+        char *av[] = {&quot;/usr/bin/true&quot;, NULL};
+        int rc = launch(av, 0, &quot;/usr/bin/true&quot;);
+        if (rc || foreground || !WIFEXITED(foreground_status) || WEXITSTATUS(foreground_status) || by_pid(getpid())) { cleanup(); return 1; }
+        for (int i = 0; i &lt; JOBS; ++i) if (jobs[i].state) { cleanup(); return 1; }
+        puts(&quot;shell foreground-completed jobs=0&quot;);
+        return cleanup();
+    }
+    char line[LINE]; size_t used = 0; int overflow = 0, prompt = 1;
+    for (;;) {
+        reap();
+        if (prompt &amp;&amp; isatty(STDIN_FILENO)) { fputs(&quot;&gt; &quot;, stdout); fflush(stdout); }
+        prompt = 0;
+        fd_set ready; FD_ZERO(&amp;ready); FD_SET(STDIN_FILENO, &amp;ready);
+        int rc = pselect(STDIN_FILENO + 1, &amp;ready, NULL, NULL, NULL, &amp;waiting);
+        if (rc &lt; 0) { if (errno == EINTR) continue; perror(&quot;pselect&quot;); break; }
+        char c; ssize_t got = read(STDIN_FILENO, &amp;c, 1);
+        if (got &lt; 0 &amp;&amp; errno == EINTR) continue;
+        if (got &lt;= 0) { if (used &amp;&amp; !overflow) { line[used] = &#x27;\0&#x27;; (void)evaluate(line); } break; }
+        if (c == &#x27;\n&#x27;) {
+            line[used] = &#x27;\0&#x27;;
+            if (overflow) fputs(&quot;line too long\n&quot;, stderr);
+            else if (evaluate(line)) break;
+            used = 0; overflow = 0; prompt = 1;
+        } else if (used &lt; sizeof line - 1) line[used++] = c;
+        else overflow = 1;
+    }
+    return cleanup();
+}
+</code></pre></details><details class="code-version"><summary>Python 逻辑模型 · ch08_shell</summary><p class="code-reference"><a href="../code/ch08_shell.py" download>下载完整源码</a></p><pre><code id="ch08_shell-python" data-language="python">#!/usr/bin/env python3
+"""Job-state reference model. The C companion supplies the actual POSIX shell."""
+from dataclasses import dataclass
+
+
+@dataclass
+class Job:
+    pid: int
+    jid: int
+    state: str
+
+
+def transition(job, event):
+    if event == "stop":
+        job.state = "stopped"
+    elif event == "bg":
+        job.state = "background"
+    elif event == "fg":
+        job.state = "foreground"
+    elif event in ("exit", "signal"):
+        job.state = "reaped"
+    else:
+        raise ValueError("unknown job event")
+
+
+def main():
+    job = Job(100, 1, "foreground")
+    for event, state in [("stop", "stopped"), ("bg", "background"),
+                         ("fg", "foreground"), ("exit", "reaped")]:
+        transition(job, event)
+        if job.state != state:
+            raise RuntimeError(f"job transition failed: {event} -&gt; {job.state}")
+    jobs = {job.jid: job}
+    del jobs[job.jid]
+    if jobs:
+        raise RuntimeError("reaped job remains registered")
+    print("shell foreground-completed jobs=0")
+
+
+if __name__ == "__main__":
+    main()
+</code></pre></details></div></section></section><section id="self-check"><h2>原创自测</h2><p>先画状态变化，再展开答案。这三题为伴读自测，单独编号，不冒充原书题。</p><details class="exercise" id="q8-1"><summary>自测 1 · 一次通知可以对应几个孩子</summary><div class="exercise-question"><p>三个子进程都已结束，SIGCHLD 只待处理一次。handler 仅调用一次 waitpid 后返回，结果如何？</p></div><div class="answer"><p>只回收一个，另两个可能永久留成僵尸。一次唤醒后在主流程或安全处理函数中循环 waitpid(-1,&s,WNOHANG)，直到没有可领取记录；退出状态才是权威工作队列。</p></div></details><details class="exercise" id="q8-2"><summary>自测 2 · 父打印了内容，子为什么也打印</summary><div class="exercise-question"><p>父 printf("ready") 后未刷新就 fork，父子都 exit。为什么文件里可能出现 readyready？</p></div><div class="answer"><p>stdio 缓冲在用户内存里，fork 把它复制成两份，两个 exit 各刷新一次。fork 前 fflush 或子 exec 失败用 _exit 能分别控制这个问题；这不是内核把同一次 write 重复执行。</p></div></details><details class="exercise" id="q8-3"><summary>自测 3 · volatile 能保证永不丢唤醒吗</summary><div class="exercise-question"><p>把 done 声明成 volatile sig_atomic_t 后，while(!done) pause() 是否正确？</p></div><div class="answer"><p>仍有“读到0→handler写1→pause”窗口。类型保证单次访问性质，不能把检查和睡眠合为原子操作。先屏蔽信号检查，再由 sigsuspend 原子换掩码并挂起。</p></div></details></section><section id="exercises"><h2>本版原书习题 · 8.1—8.26</h2><p>8.1—8.8 为随文练习，8.9—8.26 为章末题。以下保留 Global Edition 的题值和程序。假设 fork 成功；输出排序采用原书终端行缓冲或显式刷新条件。题目中的原书代码片段保留其接口写法，完整维护代码另列并说明平台。</p><div class="exercise-index"><a href="#ex-8-1">8.1</a><a href="#ex-8-2">8.2</a><a href="#ex-8-3">8.3</a><a href="#ex-8-4">8.4</a><a href="#ex-8-5">8.5</a><a href="#ex-8-6">8.6</a><a href="#ex-8-7">8.7</a><a href="#ex-8-8">8.8</a><a href="#ex-8-9">8.9</a><a href="#ex-8-10">8.10</a><a href="#ex-8-11">8.11</a><a href="#ex-8-12">8.12</a><a href="#ex-8-13">8.13</a><a href="#ex-8-14">8.14</a><a href="#ex-8-15">8.15</a><a href="#ex-8-16">8.16</a><a href="#ex-8-17">8.17</a><a href="#ex-8-18">8.18</a><a href="#ex-8-19">8.19</a><a href="#ex-8-20">8.20</a><a href="#ex-8-21">8.21</a><a href="#ex-8-22">8.22</a><a href="#ex-8-23">8.23</a><a href="#ex-8-24">8.24</a><a href="#ex-8-25">8.25</a><a href="#ex-8-26">8.26</a></div><details class="exercise" id="ex-8-1" data-kind="practice" data-source-pages="771"><summary>8.1 · 并发区间</summary><div class="exercise-question" data-original-exercise="8.1" data-source-pdf-pages="771"><h4 class="question-title">题目（中文）</h4><p>三个进程的起止时刻如下。对 AB、AC、BC 各填 Y（并发）或 N（不并发）。</p><div class="scroll"><table class="compact-table"><thead><tr><th>进程</th><th>开始</th><th>结束</th></tr></thead><tbody><tr><td>A</td><td>1</td><td>3</td></tr><tr><td>B</td><td>2</td><td>5</td></tr><tr><td>C</td><td>4</td><td>6</td></tr></tbody></table></div><p class="source"><a class="source-pdf" href="../csapp.pdf#page=771">来源：印刷 770 页 / PDF 771 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>AB=Y，重叠于 2—3；AC=N，A 在 C 开始前结束；BC=Y，重叠于 4—5。并发看生命周期重叠，题目不要求两条流同时占用 CPU。</p></div></details><details class="exercise" id="ex-8-2" data-kind="practice" data-source-pages="780"><summary>8.2 · fork 与后缀自增减</summary><div class="exercise-question" data-original-exercise="8.2" data-source-pdf-pages="780"><h4 class="question-title">题目（中文）</h4><p>阅读下列程序。A. 子进程输出什么？B. 父进程输出什么？</p><pre><code>int main() {
+    int a = 9;
+    if (Fork() == 0)
+        printf(&quot;p1: a=%d\n&quot;, a--);
+    printf(&quot;p2: a=%d\n&quot;, a++);
+    exit(0);
+}
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=780">来源：印刷 779 页 / PDF 780 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>A. 子进程先输出 <code>p1: a=9</code>，后缀 -- 在取值后把自己的 a 改为 8；随后输出 <code>p2: a=8</code>，再把 a 改回 9。B. 父进程跳过第一个 printf，输出 <code>p2: a=9</code>，随后自己的 a 变为 10。父行可以插入子两行前、中、后。</p><div class="callout"><strong>本版校注：</strong>书末 p832 的 8、9、10 把后缀运算当成先缀；父行还误印成 p1。这里按题干 C 表达式的取值规则计算，保留题干不改。</div></div></details><details class="exercise" id="ex-8-3" data-kind="practice" data-source-pages="782"><summary>8.3 · 等待增加偏序约束</summary><div class="exercise-question" data-original-exercise="8.3" data-source-pdf-pages="782,783"><h4 class="question-title">题目（中文）</h4><p>列出以下程序所有可能的输出序列。</p><pre><code>int main() {
+    if (Fork() == 0) {
+        printf(&quot;9&quot;); fflush(stdout);
+    } else {
+        printf(&quot;0&quot;); fflush(stdout);
+        waitpid(-1, NULL, 0);
+    }
+    printf(&quot;3&quot;); fflush(stdout);
+    printf(&quot;6&quot;); exit(0);
+}
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=782">来源：印刷 781—782 页 / PDF 782—783 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>子进程顺序为 9→3→6→退出，父进程为 0→等待结束→3→6。把父的 0 插入子序列 936 的四个间隙，之后接父的 36，得到 <strong>093636、903636、930636、936036</strong>。例如 930636 对应子先输出 93，父输出 0 后阻塞，子输出 6 并退出，父再输出 36。</p><div class="callout"><strong>本版校注：</strong>书末 p833 只列三种，遗漏 930636。每个字符都按题干的 fflush 或 exit 刷新，故这个排列有合法实现。</div></div></details><details class="exercise" id="ex-8-4" data-kind="practice" data-source-pages="785"><summary>8.4 · 七行输出来自哪些进程</summary><div class="exercise-question" data-original-exercise="8.4" data-source-pdf-pages="785"><h4 class="question-title">题目（中文）</h4><p>阅读程序。A. 输出多少行？B. 给出一种可能的输出行顺序。</p><pre><code>int main() {
+    int status;
+    pid_t pid;
+    printf(&quot;Start\n&quot;);
+    pid = Fork();
+    printf(&quot;%d\n&quot;, !pid);
+    if (pid == 0) {
+        printf(&quot;Child\n&quot;);
+    } else if ((waitpid(-1, &amp;status, 0) &gt; 0) &amp;&amp; (WIFEXITED(status) != 0)) {
+        printf(&quot;%d\n&quot;, WEXITSTATUS(status));
+    }
+    printf(&quot;Stop\n&quot;);
+    exit(2);
+}
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=785">来源：印刷 784 页 / PDF 785 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>在原书采用的终端行缓冲条件下有 7 行。Start 在 fork 前打印一次。父的 !pid=0，子的 !pid=1；子打印 1、Child、Stop 并 exit(2)，父等到子退出后打印 2、Stop。一种顺序是 <code>Start, 0, 1, Child, Stop, 2, Stop</code>。</p><p>若 stdout 是全缓冲文件，Start 在 fork 前没有 fflush，则缓冲区被复制，物理输出可多一行 Start；这不改变源码 printf 的调用次数。需要强制本题行模型时，在 fork 前 fflush(stdout)，并使每行输出刷新。</p><div class="callout"><strong>本版校注：</strong>图 8.49 将父子 !pid 标签颠倒；题干程序与所给一种顺序可以正确解释为父 0、子 1。</div></div></details><details class="exercise" id="ex-8-5" data-kind="practice" data-source-pages="787"><summary>8.5 · 带提示的 sleep 包装</summary><div class="exercise-question" data-original-exercise="8.5" data-source-pdf-pages="787"><h4 class="question-title">题目（中文）</h4><p>编写 <code>unsigned int wakeup(unsigned int secs);</code>，行为与 sleep 相同，但打印实际醒来时刻，例如 <code>Woke up at 4 secs.</code>。</p><p class="source"><a class="source-pdf" href="../csapp.pdf#page=787">来源：印刷 786 页 / PDF 787 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><pre><code>unsigned int wakeup(unsigned int secs) {
+    unsigned int remaining = sleep(secs);
+    printf(&quot;Woke up at %u secs.\n&quot;, secs - remaining);
+    return remaining;
+}
+</code></pre><p>返回值仍是剩余秒数，打印采用请求秒数减剩余秒数。对应维护实现见 <a href="#io-model">I/O 与命令执行程序</a>。整数秒接口本身有舍入边界；要测精确耗时应额外取单调时钟，而不能凭空加 1。</p><div class="callout"><strong>本版校注：</strong>书末 p833 使用 secs−rc+1，完整 sleep(4) 会打印 5，sleep(0) 也会打印 1，均不符合题意；无符号量格式应使用 %u。</div></div></details><details class="exercise" id="ex-8-6" data-kind="practice" data-source-pages="789"><summary>8.6 · 打印参数与环境</summary><div class="exercise-question" data-original-exercise="8.6" data-source-pdf-pages="789,790"><h4 class="question-title">题目（中文）</h4><p>编写 myecho 打印所有命令行参数和环境变量。示例执行 <code>./myecho arg1 arg2</code>，先列 Command-line arguments 下的 argv[0]=myecho、argv[1]=arg1、argv[2]=arg2，再列 Environment variables 下的 envp[i]。原书示例以 PWD、TERM 开始，中间略去若干项，以 USER、SHELL、HOME 结束；应遍历实际环境直到空指针，不能把示例项数 28 写死。原样例的标题 Command-ine arguments 漏印字母 l，此处校正为 Command-line arguments。</p><pre><code>Command-line arguments:
+    argv[ 0]: myecho
+    argv[ 1]: arg1
+    argv[ 2]: arg2
+Environment variables:
+    envp[ 0]: PWD=/usr0/droh/ics/code/ecf
+    envp[ 1]: TERM=emacs
+    .
+    .
+    .
+    envp[25]: USER=droh
+    envp[26]: SHELL=/usr/local/bin/tcsh
+    envp[27]: HOME=/usr0/droh
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=789">来源：印刷 788—789 页 / PDF 789—790 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><pre><code>#include &lt;stdio.h&gt;
+extern char **environ;
+int main(int argc, char **argv) {
+    puts(&quot;Command-line arguments:&quot;);
+    for (int i = 0; i &lt; argc; ++i)
+        printf(&quot;    argv[%2d]: %s\n&quot;, i, argv[i]);
+    puts(&quot;Environment variables:&quot;);
+    for (size_t i = 0; environ[i]; ++i)
+        printf(&quot;    envp[%2zu]: %s\n&quot;, i, environ[i]);
+    return 0;
+}
+</code></pre><p>可运行多模式版本用 <code>ch08_io --myecho arg1 arg2</code>；该模式把 --myecho 视为显示参数表的第零项，其余参数原样传入。环境来自当前进程，而不是固定课本环境。</p></div></details><details class="exercise" id="ex-8-7" data-kind="practice" data-source-pages="801"><summary>8.7 · 用 Ctrl+C 提前唤醒</summary><div class="exercise-question" data-original-exercise="8.7" data-source-pdf-pages="801"><h4 class="question-title">题目（中文）</h4><p>写 snooze 程序，接受一个命令行参数，用它调用题 8.5 的 snooze 函数后退出；用户 Ctrl+C 可以中断。例如 <code>./snooze 5</code>，3 秒后按 Ctrl+C，打印 <code>Slept for 3 of 5 secs.</code>。</p><p class="source"><a class="source-pdf" href="../csapp.pdf#page=801">来源：印刷 800 页 / PDF 801 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>先用 sigaction 安装一个只返回的 SIGINT handler，使默认“终止进程”动作变成捕获后继续。解析秒数，调用 sleep，再按 secs−remaining 输出。完整 <a href="#ch08_io-c">ch08_io.c</a> 的 <code>--snooze 5</code> 模式提供参数检查（0—3600 秒）、处理函数及执行路径。sleep 被捕获信号打断即返回，不能为追求睡满时间而无条件循环重试。</p><div class="callout"><strong>本版校注：</strong>题 8.5 实际把接口命名为 wakeup，8.7 却称 snooze；本题保留示例所要求的显示文本，底层计算采用 8.5 的纠正公式。</div></div></details><details class="exercise" id="ex-8-8" data-kind="practice" data-source-pages="810"><summary>8.8 · 信号和私有计数器</summary><div class="exercise-question" data-original-exercise="8.8" data-source-pdf-pages="810,811"><h4 class="question-title">题目（中文）</h4><p>以下程序输出什么？大写接口为原书的错误包装器，Sio_putl 为信号安全输出函数。</p><pre><code>volatile long counter = 2;
+void handler1(int sig) {
+    sigset_t mask, prev_mask;
+    Sigfillset(&amp;mask);
+    Sigprocmask(SIG_BLOCK, &amp;mask, &amp;prev_mask);
+    Sio_putl(--counter);
+    Sigprocmask(SIG_SETMASK, &amp;prev_mask, NULL);
+    _exit(0);
+}
+int main() {
+    pid_t pid;
+    sigset_t mask, prev_mask;
+    printf(&quot;%ld&quot;, counter); fflush(stdout);
+    signal(SIGUSR1, handler1);
+    if ((pid = Fork()) == 0) { while (1) {} }
+    Kill(pid, SIGUSR1);
+    Waitpid(-1, NULL, 0);
+    Sigfillset(&amp;mask);
+    Sigprocmask(SIG_BLOCK, &amp;mask, &amp;prev_mask);
+    printf(&quot;%ld&quot;, ++counter);
+    Sigprocmask(SIG_SETMASK, &amp;prev_mask, NULL);
+    exit(0);
+}
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=810">来源：印刷 809—810 页 / PDF 810—811 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>输出 <strong>213</strong>。父在 fork 前输出并刷新 2；子继承 counter=2，收到信号后减成 1、输出并退出；父 wait 返回后自己的 counter 仍为 2，加一输出 3。等待建立 1→3 的先后边。代码按原书 POSIX 模型分析；实际维护示例用 sig_atomic_t 标志和有界等待来避免把 volatile long 的读改写当通用 ISO C 信号共享契约。</p></div></details><details class="exercise" id="ex-8-9" data-kind="homework" data-source-pages="825"><summary>8.9 · 四进程并发关系</summary><div class="exercise-question" data-original-exercise="8.9" data-source-pdf-pages="825"><h4 class="question-title">题目（中文）</h4><p>四个进程的起止时刻如下。为 AB、AC、AD、BC、BD、CD 填 Y 或 N 表示是否并发。</p><div class="scroll"><table class="compact-table"><thead><tr><th>进程</th><th>开始</th><th>结束</th></tr></thead><tbody><tr><td>A</td><td>6</td><td>8</td></tr><tr><td>B</td><td>3</td><td>5</td></tr><tr><td>C</td><td>4</td><td>7</td></tr><tr><td>D</td><td>2</td><td>9</td></tr></tbody></table></div><p class="source"><a class="source-pdf" href="../csapp.pdf#page=825">来源：印刷 824 页 / PDF 825 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><div class="scroll"><table class="compact-table"><thead><tr><th>进程对</th><th>并发</th><th>重叠区间</th></tr></thead><tbody><tr><td>AB</td><td>N</td><td>无</td></tr><tr><td>AC</td><td>Y</td><td>6—7</td></tr><tr><td>AD</td><td>Y</td><td>6—8</td></tr><tr><td>BC</td><td>Y</td><td>4—5</td></tr><tr><td>BD</td><td>Y</td><td>3—5</td></tr><tr><td>CD</td><td>Y</td><td>4—7</td></tr></tbody></table></div><p>逐对计算 max(start) 是否小于 min(end)。D 覆盖其余三者；A 与 B 中间有 5—6 的间隔。</p></div></details><details class="exercise" id="ex-8-10" data-kind="homework" data-source-pages="825"><summary>8.10 · 调用与返回的匹配题</summary><div class="exercise-question" data-original-exercise="8.10" data-source-pdf-pages="825"><h4 class="question-title">题目（中文）</h4><p>把 getenv、setenv、unsetenv、execve 分别匹配下列行为：A. 调用一次，只有出错才返回；B. 调用一次，不返回任何值；C. 调用一次，返回指针或 NULL。</p><p class="source"><a class="source-pdf" href="../csapp.pdf#page=825">来源：印刷 824 页 / PDF 825 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>execve→A，getenv→C。若严格沿原书 p788 的 void unsetenv 原型，unsetenv→B；但现代 POSIX unsetenv 与 setenv 都返回 int，成功 0、失败 −1，三项中没有适用选项。setenv 即使按本版前文也无法匹配。</p><p>“返回 void”表示控制仍返回调用者，只是不带值；“不返回控制”才是 exec 成功或 exit 的行为。这两个含义不能为了填表而混用。</p><div class="callout"><strong>本版校注：</strong>题目选项不足；不能把 setenv 硬配 B。正文已标出旧 unsetenv 原型，接口应按实际 POSIX 声明使用。</div></div></details><details class="exercise" id="ex-8-11" data-kind="homework" data-source-pages="825"><summary>8.11 · 连续三轮 fork</summary><div class="exercise-question" data-original-exercise="8.11" data-source-pdf-pages="825"><h4 class="question-title">题目（中文）</h4><p>程序打印多少行 Example？</p><pre><code>#include &quot;csapp.h&quot;
+int main() {
+    int i;
+    for (i = 3; i &gt; 0; i--) Fork();
+    printf(&quot;Example\n&quot;);
+    exit(0);
+}
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=825">来源：印刷 824 页 / PDF 825 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>每一轮所有存活进程都 fork，数量依次 1→2→4→8。只有循环结束后打印，所以 <strong>8 行</strong>。没有在打印后再 fork，故这题也不会把已有 Example 缓冲复制到新进程。</p></div></details><details class="exercise" id="ex-8-12" data-kind="homework" data-source-pages="826"><summary>8.12 · 函数返回继续发生分叉</summary><div class="exercise-question" data-original-exercise="8.12" data-source-pdf-pages="826"><h4 class="question-title">题目（中文）</h4><p>下列程序打印多少行 Example？</p><pre><code>#include &quot;csapp.h&quot;
+void try() {
+    Fork(); printf(&quot;Example\n&quot;);
+    Fork(); return;
+}
+int main() {
+    try(); Fork();
+    printf(&quot;Example\n&quot;); exit(0);
+}
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=826">来源：印刷 825 页 / PDF 826 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>终端行缓冲模型下 try 的第一次 fork 产生 2 个打印者；第二次 fork 后 4 个进程从 try 返回；main 再 fork 后 8 个进程各打印一次，总共 <strong>2+8=10 行</strong>。若改为全缓冲输出且未刷新，最早的 2 次 printf 各随两轮 fork 复制四份，最后可见 8+8=16 行；因此题目的常用答案依赖原书终端输出假设。</p></div></details><details class="exercise" id="ex-8-13" data-kind="homework" data-source-pages="826"><summary>8.13 · 先缀运算和父子路径</summary><div class="exercise-question" data-original-exercise="8.13" data-source-pdf-pages="826"><h4 class="question-title">题目（中文）</h4><p>给出程序的一种可能输出。</p><pre><code>#include &quot;csapp.h&quot;
+int main() {
+    int a = 5;
+    if (Fork() != 0) printf(&quot;a=%d\n&quot;, --a);
+    printf(&quot;a=%d\n&quot;, ++a);
+    exit(0);
+}
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=826">来源：印刷 825 页 / PDF 826 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>父先 --a 得 4，打印 a=4；之后 ++a 得 5，打印 a=5。子跳过父分支，把自己 a 从 5 加到 6，打印 a=6。一种输出是 <code>a=4, a=5, a=6</code>，每项单独一行。父两行的顺序固定，子行可以在它们前、中、后出现。</p></div></details><details class="exercise" id="ex-8-14" data-kind="homework" data-source-pages="826"><summary>8.14 · exit 阻断后续分叉</summary><div class="exercise-question" data-original-exercise="8.14" data-source-pdf-pages="826,827"><h4 class="question-title">题目（中文）</h4><p>程序打印多少行 Example？</p><pre><code>#include &quot;csapp.h&quot;
+void try() {
+    if (Fork() != 0) {
+        Fork(); printf(&quot;Example\n&quot;); exit(0);
+    }
+    return;
+}
+int main() {
+    try();
+    fork(); printf(&quot;Example\n&quot;); exit(0);
+}
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=826">来源：印刷 825—826 页 / PDF 826—827 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>try 中第一次 fork 的父分支再次分叉成两个，两者各打印一次并 exit，不能继续到 main 的 fork。第一次 fork 的子分支返回 main，再 fork 成两个，各打印一次。因此是 <strong>2+2=4 行</strong>。把 exit 当成普通 return 会错误地多算进程。</p></div></details><details class="exercise" id="ex-8-15" data-kind="homework" data-source-pages="827"><summary>8.15 · return 保留后续打印</summary><div class="exercise-question" data-original-exercise="8.15" data-source-pdf-pages="827"><h4 class="question-title">题目（中文）</h4><p>程序打印多少行 Example？</p><pre><code>#include &quot;csapp.h&quot;
+void try() {
+    if (Fork() == 0) {
+        Fork(); Fork();
+        printf(&quot;Example\n&quot;); return;
+    }
+    return;
+}
+int main() {
+    try(); printf(&quot;Example\n&quot;); exit(0);
+}
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=827">来源：印刷 826 页 / PDF 827 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>第一次 fork 的子分支经两次 fork 变成 4 个进程，各在 try 打印一次；它们都 return 到 main，再各打印一次。原父进程在 try 不打印，只在 main 打印一次，故 <strong>4+4+1=9 行</strong>。这里第一次打印后再没有 fork，缓冲不会再次复制。</p></div></details><details class="exercise" id="ex-8-16" data-kind="homework" data-source-pages="827"><summary>8.16 · 等待不合并地址空间</summary><div class="exercise-question" data-original-exercise="8.16" data-source-pdf-pages="827,828"><h4 class="question-title">题目（中文）</h4><p>程序输出什么？</p><pre><code>#include &quot;csapp.h&quot;
+int counter = 1;
+int main() {
+    if (fork() == 0) { counter++; exit(0); }
+    else {
+        Wait(NULL);
+        counter++; printf(&quot;counter = %d\n&quot;, counter);
+    }
+    exit(0);
+}
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=827">来源：印刷 826—827 页 / PDF 827—828 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>输出 <code>counter = 2</code>。子把自己的 1 改为 2，然后退出；wait 让父领取退出状态，并不把子内存复制回父。父仍从 1 加到 2，只有父打印。</p></div></details><details class="exercise" id="ex-8-17" data-kind="homework" data-source-pages="828"><summary>8.17 · 列尽七行的合法排列</summary><div class="exercise-question" data-original-exercise="8.17" data-source-pdf-pages="828"><h4 class="question-title">题目（中文）</h4><p>列出练习 8.4 程序的全部可能输出。完整程序如下：</p><pre><code>int main() {
+    int status;
+    pid_t pid;
+    printf(&quot;Start\n&quot;);
+    pid = Fork();
+    printf(&quot;%d\n&quot;, !pid);
+    if (pid == 0) {
+        printf(&quot;Child\n&quot;);
+    } else if ((waitpid(-1, &amp;status, 0) &gt; 0) &amp;&amp; (WIFEXITED(status) != 0)) {
+        printf(&quot;%d\n&quot;, WEXITSTATUS(status));
+    }
+    printf(&quot;Stop\n&quot;);
+    exit(2);
+}
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=828">来源：印刷 827 页 / PDF 828 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>采用 8.4 的终端行模型，Start 固定最先，子链固定 1→Child→Stop，父的 0 必须在父等待返回以前，父末尾固定 2→Stop。把 0 插入子链四个间隙，恰有以下四种。</p><div class="scroll"><table><thead><tr><th>序号</th><th>输出（逗号表示换行）</th></tr></thead><tbody><tr><td>1</td><td>Start, 0, 1, Child, Stop, 2, Stop</td></tr><tr><td>2</td><td>Start, 1, 0, Child, Stop, 2, Stop</td></tr><tr><td>3</td><td>Start, 1, Child, 0, Stop, 2, Stop</td></tr><tr><td>4</td><td>Start, 1, Child, Stop, 0, 2, Stop</td></tr></tbody></table></div><p>两个 Stop 文字相同但对应不同进程；第一个一定来自子进程，因为父必须在子 exit 后才打印自己的 2 和 Stop。</p></div></details><details class="exercise" id="ex-8-18" data-kind="homework" data-source-pages="828"><summary>8.18 · atexit 随 fork 继承</summary><div class="exercise-question" data-original-exercise="8.18" data-source-pdf-pages="828,829"><h4 class="question-title">题目（中文）</h4><p>程序如下。atexit 把函数指针加入起初为空的退出回调列表，exit 时调用这些函数。判断 A.112002、B.211020、C.102120、D.122001、E.100212 哪些可能出现。</p><pre><code>#include &quot;csapp.h&quot;
+void end(void) { printf(&quot;2&quot;); fflush(stdout); }
+int main() {
+    if (Fork() == 0) atexit(end);
+    if (Fork() == 0) { printf(&quot;0&quot;); fflush(stdout); }
+    else { printf(&quot;1&quot;); fflush(stdout); }
+    exit(0);
+}
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=828">来源：印刷 827—828 页 / PDF 828—829 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>四个进程分别贡献独立链 <code>1</code>、<code>0</code>、<code>1→2</code>、<code>0→2</code>。后两条来自第一次 fork 的子分支及它再生出的孩子，都继承 end 回调。</p><div class="scroll"><table><thead><tr><th>选项</th><th>可行</th><th>理由</th></tr></thead><tbody><tr><td>A 112002</td><td>是</td><td>可分解成单独1、链12、单独0、链02的交错</td></tr><tr><td>B 211020</td><td>否</td><td>2 不能在所有 0/1 之前</td></tr><tr><td>C 102120</td><td>是</td><td>链12和02的前件都可以先完成</td></tr><tr><td>D 122001</td><td>否</td><td>第二个2之前没有任何0，无法满足链0→2</td></tr><tr><td>E 100212</td><td>是</td><td>先1、0、0，再02的2，再12</td></tr></tbody></table></div><p>Python 枚举带身份的六个事件并检查两条先后边，可得 A、C、E 可行；字符相同不消除其所属进程约束。</p></div></details><details class="exercise" id="ex-8-19" data-kind="homework" data-source-pages="829"><summary>8.19 · 步长为二的 fork 循环</summary><div class="exercise-question" data-original-exercise="8.19" data-source-pdf-pages="829"><h4 class="question-title">题目（中文）</h4><p>用户输入 n=6，以下函数打印多少行？</p><pre><code>void foo(int n) {
+    int i;
+    for (i = n - 1; i &gt;= 0; i -= 2) Fork();
+    printf(&quot;hello\n&quot;); exit(0);
+}
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=829">来源：印刷 828 页 / PDF 829 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>i 取 5、3、1，共三轮。所有进程都继续循环，每轮数量翻倍，打印 2³=<strong>8 行</strong>。不能把 n=6 直接当作 fork 次数；非负 n 的一般轮数是 ceil(n/2)。</p></div></details><details class="exercise" id="ex-8-20" data-kind="homework" data-source-pages="829"><summary>8.20 · 把参数和环境交给 ls</summary><div class="exercise-question" data-original-exercise="8.20" data-source-pdf-pages="829"><h4 class="question-title">题目（中文）</h4><p>使用 execve 编写 myls，接受与 /bin/ls 相同的命令行参数、环境变量并生成相同输出。原题称 ls 从 COLUMNS 获取屏幕宽度，未设置时用 80；以 <code>setenv COLUMNS 40; ./myls</code> 和取消 COLUMNS 后再次运行比较列宽。</p><p class="source"><a class="source-pdf" href="../csapp.pdf#page=829">来源：印刷 828 页 / PDF 829 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><pre><code>#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+extern char **environ;
+int main(int argc, char **argv) {
+    (void)argc;
+    argv[0] = &quot;ls&quot;;
+    execve(&quot;/bin/ls&quot;, argv, environ);
+    perror(&quot;execve&quot;);
+    return 127;
+}
+</code></pre><p>参数数组原样沿用，只把 argv[0] 换成 ls；环境传 environ，因此无需自己读取或解释 COLUMNS。成功后本程序不再存在于该进程中。可运行对应模式为 <code>ch08_io --myls -l</code>。题目示例的 setenv 是 csh 风格；sh/zsh 可用 <code>COLUMNS=40 ./myls</code>。实际列宽还受 ls 实现、是否终端和选项影响，本题的“80”是原题观察前提，不是所有系统的固定保证。</p></div></details><details class="exercise" id="ex-8-21" data-kind="homework" data-source-pages="829"><summary>8.21 · 子进程不能等待自己的父进程</summary><div class="exercise-question" data-original-exercise="8.21" data-source-pdf-pages="829,830"><h4 class="question-title">题目（中文）</h4><p>列出程序所有可能输出序列。</p><pre><code>int main() {
+    printf(&quot;p&quot;); fflush(stdout);
+    if (fork() != 0) {
+        printf(&quot;q&quot;); fflush(stdout); return 0;
+    } else {
+        printf(&quot;r&quot;); fflush(stdout);
+        waitpid(-1, NULL, 0);
+    }
+    return 0;
+}
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=829">来源：印刷 828—829 页 / PDF 829—830 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>只有 <strong>pqr</strong> 和 <strong>prq</strong>。p 在 fork 前已刷新，必然最先；q 与 r 无约束。子进程没有自己的孩子，它的 waitpid(-1,...) 返回 −1/ECHILD，不会等待父进程。因此它没有为 q→r 或 r→q 建立顺序。</p></div></details><details class="exercise" id="ex-8-22" data-kind="homework" data-source-pages="830"><summary>8.22 · 实现 mysystem 的题定返回协议</summary><div class="exercise-question" data-original-exercise="8.22" data-source-pdf-pages="830"><h4 class="question-title">题目（中文）</h4><p>实现 <code>int mysystem(char *command);</code>：调用 <code>/bin/sh -c command</code>，等待命令结束；正常退出返回命令退出码，例如 exit(8) 返回 8；异常结束时返回 shell 的状态。</p><p class="source"><a class="source-pdf" href="../csapp.pdf#page=830">来源：印刷 829 页 / PDF 830 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>完整实现位于 <a href="#ch08_io-c">ch08_io.c 的 mysystem</a>：fork，子传 {"sh","-c",command,NULL} 与 environ 给 execve，失败用 _exit(127)；父对指定 PID 重试 EINTR，正常退出用 WEXITSTATUS，信号终止则返回原始 wait 状态。</p><pre><code>int status;
+while (waitpid(p, &amp;status, 0) &lt; 0)
+    if (errno != EINTR) return -1;
+return WIFEXITED(status) ? WEXITSTATUS(status) : status;
+</code></pre><p>必须区分“shell 自己被信号终止”和“shell 运行的命令被信号终止后 shell 正常返回一个编码”：后者按 shell 正常退出处理，编码由 shell 决定，不能再强行把它当 WTERMSIG 解码。这个函数遵循题目规定，和标准 system 返回原始 wait 状态的接口不同；NULL、SIGINT/SIGQUIT 的特殊处理等完整 system 契约没有由题目要求，这里 NULL 明确报 EINVAL。</p></div></details><details class="exercise" id="ex-8-23" data-kind="homework" data-source-pages="830"><summary>8.23 · 五次发送为什么只观察到两次</summary><div class="exercise-question" data-original-exercise="8.23" data-source-pdf-pages="830,831"><h4 class="question-title">题目（中文）</h4><p>同事用子进程发送信号通知父进程计数，每次父 handler 把全局 counter 加一。图 8.45 如下。在他的机器上子发送五次，但父最后总打印 counter=2。请解释这个 bug。</p><pre><code>#include &quot;csapp.h&quot;
+int counter = 0;
+void handler(int sig) {
+    counter++;
+    sleep(1);
+    return;
+}
+int main() {
+    int i;
+    Signal(SIGUSR2, handler);
+    if (Fork() == 0) {
+        for (i = 0; i &lt; 5; i++) {
+            Kill(getppid(), SIGUSR2);
+            printf(&quot;sent SIGUSR2 to parent\n&quot;);
+        }
+        exit(0);
+    }
+    Wait(NULL);
+    printf(&quot;counter=%d\n&quot;, counter);
+    exit(0);
+}
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=830">来源：印刷 829—830 页 / PDF 830—831 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>一种可行时间线：第一信号被捕获，counter=1，handler 睡 1 秒；同类信号在 handler 期间自动阻塞。第二信号置 pending=1，第三、四、五次在已有 pending 时合并。handler 返回后再处理那一个 pending，counter=2。信息已在通知层丢失，多调用 wait 或给 counter 加锁都恢复不了次数。</p><p>“总是 2”是题目那台机器的观察，换调度可得到其他次数。可靠计数应把事件写到管道或共享队列，信号只通知读取；若使用合适的实时排队信号，还需处理队列容量和发送失败。原程序 counter 也没有满足保守的信号共享类型约定；改成 sig_atomic_t 只处理访问问题，仍不能让普通信号成为计数队列。</p></div></details><details class="exercise" id="ex-8-24" data-kind="homework" data-source-pages="830"><summary>8.24 · 观察只读代码页保护</summary><div class="exercise-question" data-original-exercise="8.24" data-source-pdf-pages="830"><h4 class="question-title">题目（中文）</h4><p>修改图 8.18 的原程序（如下），满足：① 每个子进程尝试写只读文本段后异常终止；② 父输出除 PID 外与下面相同的内容。提示：阅读 psignal(3)。</p><pre><code>#include &quot;csapp.h&quot;
+#define N 2
+int main() {
+    int status, i;
+    pid_t pid;
+    for (i = 0; i &lt; N; i++)
+        if ((pid = Fork()) == 0) exit(100+i);
+    while ((pid = waitpid(-1, &amp;status, 0)) &gt; 0) {
+        if (WIFEXITED(status))
+            printf(&quot;child %d terminated normally with exit status=%d\n&quot;,
+                   pid, WEXITSTATUS(status));
+        else printf(&quot;child %d terminated abnormally\n&quot;, pid);
+    }
+    if (errno != ECHILD) unix_error(&quot;waitpid error&quot;);
+    exit(0);
+}
+</code></pre><pre><code>child 12255 terminated by signal 11: Segmentation fault
+child 12254 terminated by signal 11: Segmentation fault
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=830">来源：印刷 829 页 / PDF 830 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>可执行实现见 <a href="#ch08_io-c">ch08_io.c 的 --text-fault 分支</a>：只在 Linux 编译这一明确有意故障的实验。父创建至多两个子进程并记录 PID；子把 main 地址按该平台指针表示转为字节地址，尝试写入。父对每个已创建子进程 waitpid，只有 WIFSIGNALED 为真才读取 WTERMSIG，并用 strsignal 生成说明；psignal 也可把前缀和说明写到 stderr。</p><p>这个操作位于 ISO C 定义行为之外，实验期待的是 Linux 可执行代码页保护结果，不是“合法 C 的一次正常存储”。在单独 Linux 环境中以未插桩构建运行 <code>./ch08_io --text-fault</code>；ASan 可能接管故障并改变结束方式，不能把插桩结果当原题硬件路径。本机默认测试仅验证正常流程，不执行该特意崩溃分支。SIGSEGV 数值和说明文字也有平台、locale 边界。</p></div></details><details class="exercise" id="ex-8-25" data-kind="homework" data-source-pages="831"><summary>8.25 · 五秒超时读取一行</summary><div class="exercise-question" data-original-exercise="8.25" data-source-pdf-pages="831"><h4 class="question-title">题目（中文）</h4><p>实现 <code>char *tfgets(char *s, int size, FILE *stream);</code>，参数与 fgets 相同。用户在 5 秒内没有输入一行则返回 NULL，否则返回该行的指针。</p><p class="source"><a class="source-pdf" href="../csapp.pdf#page=831">来源：印刷 830 页 / PDF 831 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>完整实现在 <a href="#ch08_io-c">ch08_io.c 的 tfgets</a>。用 CLOCK_MONOTONIC 建立一次 5 秒总期限；把底层描述符暂置 O_NONBLOCK，先用 fgetc 读已有 stdio 缓冲；遇到 EAGAIN 才 clearerr 并 poll 等待剩余时间。每次重试重新计算剩余时间，EINTR 不重置 5 秒。读到换行或 size−1 个字节即按 fgets 容量规则成功；EOF 时已有字符则返回部分行，无字符则 NULL。</p><p>超时返回 NULL 且 errno=ETIMEDOUT，已经消费的部分字符保留在 s 中但不算成功；最后恢复原文件状态标志。size=1 返回空串，非法大小返回 EINVAL。这种实现要求单线程且独占该 stream 及共享打开文件描述，因 O_NONBLOCK 会影响共享描述符；对仅内存流而无 fileno 的 FILE 不适用。这个边界比从 SIGALRM handler longjmp 跨出 fgets 更容易维护：后者会跳过 stdio 的内部状态清理。</p><p>运行 <code>ch08_io --tfgets</code> 可交互观察；管道输入 <code>abc
+</code> 立即成功，保持写端开着而不输入会约 5 秒返回状态 3，EOF 则立即按规则返回。</p></div></details><details class="exercise" id="ex-8-26" data-kind="homework" data-source-pages="831"><summary>8.26 · 完整的作业控制 shell</summary><div class="exercise-question" data-original-exercise="8.26" data-source-pdf-pages="831,832,833"><h4 class="question-title">题目（中文）</h4><p>以图 8.23 的 read/evaluate shell 循环为起点，实现有作业控制的 shell。原起始循环如下；eval 分词后执行内建命令，或 fork/exec 可执行文件。</p><pre><code>int main() {
+    char cmdline[MAXLINE];
+    while (1) {
+        printf(&quot;&gt; &quot;);
+        Fgets(cmdline, MAXLINE, stdin);
+        if (feof(stdin)) exit(0);
+        eval(cmdline);
+    }
+}
+</code></pre><p>要求如下：</p><ol><li>命令是名字及零个或多个以一个或多个空格分隔的参数；内建命令立即执行，其他名字作为可执行文件运行于新子进程，作业 PGID 等于初始子 PID。</li><li>每个作业可用 PID 或 shell 分配的正整数 JID 标识；%5 指 JID 5，5 指 PID 5。</li><li>行末 &amp; 表示后台，否则前台。</li><li>Ctrl+C/ Ctrl+Z 使内核向 shell 发送 SIGINT/SIGTSTP，再由 shell 转发到整个前台进程组。</li><li>jobs 列出全部后台作业。</li><li>bg job 对指定 PID 或 %JID 发 SIGCONT，并转后台。</li><li>fg job 发 SIGCONT，并转前台等待。</li><li>回收所有僵尸；作业被未捕获信号终止时，打印 PID 及信号描述。</li></ol><p>原书脚注说明上述转发是教学简化；真实 shell 用 tcsetpgrp 管理终端前台组，键盘信号由内核直接发给该组。示例会话如下，PID 仅示意：</p><pre><code>&gt;bogus
+bogus: Command not found.
+&gt;foo 10
+Job 5035 terminated by signal: Interrupt
+&gt;foo 100 &amp;
+[1] 5036 foo 100 &amp;
+&gt;foo 200 &amp;
+[2] 5037 foo 200 &amp;
+&gt;jobs
+[1] 5036 Running foo 100 &amp;
+[2] 5037 Running foo 200 &amp;
+&gt;fg %1
+Job [1] 5036 stopped by signal: Stopped
+&gt;jobs
+[1] 5036 Stopped foo 100 &amp;
+[2] 5037 Running foo 200 &amp;
+&gt;bg 5035
+5035: No such process
+&gt;bg 5036
+[1] 5036 foo 100 &amp;
+&gt;/bin/kill 5036
+Job 5036 terminated by signal: Terminated
+&gt;fg %2
+&gt;quit
+</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=831">来源：印刷 830—832 页 / PDF 831—833 页</a></p></div><div class="answer"><h4 class="answer-title">解答与推导</h4><p>完整维护实现与逐字阅读副本见 <a href="#shell-model">ch08_shell.c</a>。它采用三状态作业表（前台/后台/停止）、PID/JID 查找、双侧 setpgid、非阻塞 waitpid 排空、SIGINT/SIGTSTP 向 −PGID 转发、sigsuspend 等前台条件，以及 pselect 等待命令输入。所有作业表读写都在 SIGCHLD/INT/TSTP 屏蔽期间发生；处理程序只转发信号，不分配内存或打印。</p><p>单个命令最多 127 个词，行最多 1023 字节，同时最多 32 个作业，超界明确拒绝。题目只要求空格分词，因此路径直接交 execve，不加入引号、通配符、管道或 PATH 搜索语法。<code>--interactive</code> 进入命令循环；默认只创建一个 /usr/bin/true 前台孩子，确认正常退出且作业表归零后结束。quit/EOF 对仍登记作业的原进程组及直属 PID 分别发送终止信号，再回收直属孩子；孩子迁到其他进程组也会按 PID 清理，信号或回收失败则以非零状态退出。</p><p>这里符合原题的信号转发模型；需要前台程序直接读取真实终端的完整 shell，还应加入 tcsetpgrp、终端属性交接等。Python 同伴只验证状态机转换与模型不变量，实际子进程、信号转发和进程组行为由 C 与 POSIX 运行测试提供证据。</p></div></details></section><footer><p>依据 Bryant / O’Hallaron《Computer Systems: A Programmer’s Perspective》第三版 Global Edition（Pearson 2016）。本章覆盖原书全部大节、二级节及 26 道题；程序的平台边界与原书校注随相关机制说明。</p><p class="chapter-nav"><a href="book_overview.html">全书地图</a><a href="book_overview.html#program-guide">程序说明</a><a href="chapter07_linking.html">← 第 7 章</a><a href="chapter09_virtual_memory.html">第 9 章 →</a></p></footer></main><aside class="annotation-sidebar" id="annotation-rail" aria-label="阅读注解" hidden><p class="annotation-label">阅读注解</p><p class="annotation-context"><a id="annotation-context-link" href="#top"></a></p><div id="annotation-content"></div></aside></div><script>
+(() => {
+  document.documentElement.classList.add('toc-enhanced');
+  const panel = document.getElementById('toc-panel');
+  const nav = document.getElementById('chapter-toc');
+  const wide = matchMedia('(min-width:1100px)');
+  const links = Array.from(nav.querySelectorAll('li a[href^="#"]'));
+  const entries = links.map(link => ({link, section: document.getElementById(link.hash.slice(1))})).filter(item => item.section);
+  let current = null, scheduled = false;
+  const fit = () => { panel.open = wide.matches; };
+  fit();
+  wide.addEventListener('change', fit);
+  const reveal = () => {
+    let target;
+    try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch { return; }
+    for (let node = target; node; node = node.parentElement) {
+      if (node.tagName === 'DETAILS') node.open = true;
+    }
+  };
+  const mark = () => {
+    scheduled = false;
+    let next = entries[0];
+    for (const entry of entries) {
+      if (entry.section.getBoundingClientRect().top <= (wide.matches ? 110 : 144)) next = entry;
+    }
+    if (window.scrollY + innerHeight >= document.documentElement.scrollHeight - 2) next = entries[entries.length - 1];
+    if (next && next.link !== current) {
+      if (current) current.removeAttribute('aria-current');
+      current = next.link; current.setAttribute('aria-current', 'location');
+    }
+  };
+  const schedule = () => { if (!scheduled) { scheduled = true; requestAnimationFrame(mark); } };
+  nav.addEventListener('click', event => {
+    if (event.target.closest('a[href^="#"]') && !wide.matches) panel.open = false;
+  });
+  addEventListener('scroll', schedule, {passive:true});
+  addEventListener('resize', schedule);
+  addEventListener('hashchange', () => { reveal(); schedule(); });
+  document.addEventListener('toggle', schedule, true);
+  reveal(); mark();
+})();
+
+
+(() => {
+  const rail = document.getElementById('annotation-rail');
+  const content = document.getElementById('annotation-content');
+  const context = document.getElementById('annotation-context-link');
+  const groups = Array.from(document.querySelectorAll('main .reading-notes')).map(notes => ({
+    notes, section: document.getElementById(notes.dataset.notesFor)
+  })).filter(item => item.section);
+  if (!rail || !content || !context || !groups.length) return;
+  const wide = matchMedia('(min-width:1440px)');
+  let current = null, scheduled = false;
+  const update = () => {
+    scheduled = false;
+    if (!wide.matches) return;
+    const sections = Array.from(document.querySelectorAll('main > section'));
+    let active = sections[0];
+    for (const section of sections) if (section.getBoundingClientRect().top <= 110) active = section;
+    const relevant = groups.find(item => item.section === active);
+    rail.hidden = !relevant;
+    if (!relevant) { current = null; return; }
+    let next = groups[0];
+    for (const item of groups) {
+      if (item.section.getBoundingClientRect().top <= 110) next = item;
+    }
+    if (scrollY + innerHeight >= document.documentElement.scrollHeight - 2) next = groups[groups.length - 1];
+    if (current === next) return;
+    const body = next.notes.querySelector('.reading-notes-body');
+    const heading = next.section.querySelector('h2');
+    if (!body || !heading) return;
+    content.replaceChildren(...Array.from(body.children, node => node.cloneNode(true)));
+    const label = heading.cloneNode(true);
+    label.querySelectorAll('.english-title').forEach(node => node.remove());
+    context.textContent = label.textContent;
+    context.href = '#' + next.section.id;
+    rail.dataset.activeSection = next.section.id;
+    rail.scrollTop = 0;
+    current = next;
+  };
+  const schedule = () => {
+    if (!scheduled) { scheduled = true; requestAnimationFrame(update); }
+  };
+  const fit = () => {
+    rail.hidden = !wide.matches;
+    current = null;
+    if (wide.matches) {
+      document.documentElement.classList.add('notes-enhanced');
+      update();
+    } else {
+      document.documentElement.classList.remove('notes-enhanced');
+    }
+  };
+  wide.addEventListener('change', fit);
+  addEventListener('scroll', schedule, {passive:true});
+  addEventListener('resize', schedule);
+  addEventListener('hashchange', schedule);
+  document.addEventListener('toggle', schedule, true);
+  fit();
+})();
+
+
+(() => {
+  let saved=[];
+  addEventListener('beforeprint',()=>{
+    if(saved.length)return;
+    saved=[...document.querySelectorAll('main details')].map(node=>[node,node.open]);
+    saved.forEach(([node])=>{node.open=true;});
+  });
+  addEventListener('afterprint',()=>{
+    saved.forEach(([node,open])=>{node.open=open;});saved=[];
+  });
+})();
+
+(() => {
+  const containers = Array.from(document.querySelectorAll('main .equation, main .math-block, main .scroll'));
+  let pending = false;
+  const update = () => {
+    pending = false;
+    for (const node of containers) {
+      const overflow = node.clientWidth > 0 && node.scrollWidth > node.clientWidth + 2;
+      node.dataset.horizontalOverflow = String(overflow);
+      if (overflow) {
+        const label = node.matches('.equation,.math-block') ? '左右滑动查看完整公式 →' : '左右滑动查看完整图表 →';
+        node.dataset.scrollLabel = label;
+        if (!node.hasAttribute('tabindex')) {
+          node.tabIndex = 0;
+          node.dataset.scrollFocusable = 'true';
+        }
+      } else if (node.dataset.scrollFocusable === 'true') {
+        node.removeAttribute('tabindex');
+        delete node.dataset.scrollFocusable;
+      }
+    }
+  };
+  const schedule = () => {
+    if (!pending) { pending = true; requestAnimationFrame(update); }
+  };
+  addEventListener('resize', schedule);
+  document.addEventListener('toggle', schedule, true);
+  document.fonts.ready.then(schedule);
+  update();
+})();
+</script></body></html>

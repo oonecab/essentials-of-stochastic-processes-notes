@@ -1,0 +1,311 @@
+{
+  "chapter": 10,
+  "edition": "Computer Systems: A Programmer’s Perspective, Third Global Edition",
+  "source": {
+    "path": "books/csapp/csapp.pdf",
+    "sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+    "printed_pages": [
+      925,
+      952
+    ],
+    "pdf_pages": [
+      926,
+      953
+    ],
+    "entire_chapter_and_practice_solutions_read": true,
+    "source_visual_review": [
+      "tmp/csapp/part3/ch10/open-0930.png",
+      "tmp/csapp/part3/ch10/rio-0934.png",
+      "tmp/csapp/part3/ch10/sharing-0945.png",
+      "tmp/csapp/part3/ch10/sharing-0946.png",
+      "tmp/csapp/part3/ch10/exercise-0951.png",
+      "tmp/csapp/part3/ch10/exercise-0952.png",
+      "tmp/csapp/part3/ch10/dup-0947.png",
+      "tmp/csapp/part3/ch10/bytes-0928.png",
+      "tmp/csapp/part3/ch10/stdio-0948.png",
+      "tmp/csapp/part3/ch10/buffer-0936.png",
+      "tmp/csapp/part3/ch10/buffer-0937.png",
+      "tmp/csapp/part3/ch10/buffer-0938.png",
+      "tmp/csapp/part3/ch10/mixed-0935.png",
+      "tmp/csapp/part3/ch10/metadata-0940.png",
+      "tmp/csapp/part3/ch10/open-tables-0944.png",
+      "tmp/csapp/part3/ch10/open-0932.png"
+    ]
+  },
+  "page": "books/csapp/notes/chapter10_system_io.html",
+  "page_sha256": "143d063dbab69cc150c2c6beb64b6e26edfae2718c8a1477048c40a2d7ca61dc",
+  "scope": {
+    "main_sections": [
+      "s10-1",
+      "s10-2",
+      "s10-3",
+      "s10-4",
+      "s10-5",
+      "s10-6",
+      "s10-7",
+      "s10-8",
+      "s10-9",
+      "s10-10",
+      "s10-11",
+      "s10-12"
+    ],
+    "subsections": [
+      "ss10-5-1",
+      "ss10-5-2"
+    ],
+    "original_exercises": 10,
+    "practice": 5,
+    "homework": 5,
+    "reading_notes": 12,
+    "annotation_cards": 24,
+    "supplementary_self_checks": [
+      "q10-1",
+      "q10-2",
+      "q10-3"
+    ],
+    "source_excerpts": 10
+  },
+  "exercises": [
+    {
+      "number": "10.1",
+      "kind": "practice",
+      "anchor": "ex-10-1",
+      "pdf_pages": [
+        932
+      ],
+      "printed_pages": [
+        931
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "lowest-free descriptor under stated inherited-fd assumptions",
+      "source_correction": null
+    },
+    {
+      "number": "10.2",
+      "kind": "practice",
+      "anchor": "ex-10-2",
+      "pdf_pages": [
+        945
+      ],
+      "printed_pages": [
+        944
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "independent open descriptions both begin at zero; real-host and model f",
+      "source_correction": null
+    },
+    {
+      "number": "10.3",
+      "kind": "practice",
+      "anchor": "ex-10-3",
+      "pdf_pages": [
+        945,
+        946
+      ],
+      "printed_pages": [
+        944,
+        945
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "wait establishes child first; shared offset but private char storage",
+      "source_correction": null
+    },
+    {
+      "number": "10.4",
+      "kind": "practice",
+      "anchor": "ex-10-4",
+      "pdf_pages": [
+        946
+      ],
+      "printed_pages": [
+        945
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "dup2 source 5 destination 0",
+      "source_correction": null
+    },
+    {
+      "number": "10.5",
+      "kind": "practice",
+      "anchor": "ex-10-5",
+      "pdf_pages": [
+        947
+      ],
+      "printed_pages": [
+        946
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "dup2 shares offset; close one leaves the other live",
+      "source_correction": null
+    },
+    {
+      "number": "10.6",
+      "kind": "homework",
+      "anchor": "ex-10-6",
+      "pdf_pages": [
+        951
+      ],
+      "printed_pages": [
+        950
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "fd3 remains occupied; fd4 reused",
+      "source_correction": null
+    },
+    {
+      "number": "10.7",
+      "kind": "homework",
+      "anchor": "ex-10-7",
+      "pdf_pages": [
+        951
+      ],
+      "printed_pages": [
+        950
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "readnb and returned byte count preserve final partial block and binary NUL",
+      "source_correction": null
+    },
+    {
+      "number": "10.8",
+      "kind": "homework",
+      "anchor": "ex-10-8",
+      "pdf_pages": [
+        951
+      ],
+      "printed_pages": [
+        950
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "strict descriptor parse, fstat inherited fd, owner read bit semantics",
+      "source_correction": null
+    },
+    {
+      "number": "10.9",
+      "kind": "homework",
+      "anchor": "ex-10-9",
+      "pdf_pages": [
+        951,
+        952
+      ],
+      "printed_pages": [
+        950,
+        951
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "stdin is fd0; temporary fd3 closes; behavior underdetermines exact shell implementation",
+      "source_correction": null
+    },
+    {
+      "number": "10.10",
+      "kind": "homework",
+      "anchor": "ex-10-10",
+      "pdf_pages": [
+        952
+      ],
+      "printed_pages": [
+        951
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "substantive_check": "insert-only redirection before unchanged three-line loop; fd0 edge verified",
+      "source_correction": null
+    }
+  ],
+  "source_corrections": [
+    {
+      "printed_page": 929,
+      "original": "../home/droh/hello.c from /home/bryant",
+      "correction": "../droh/hello.c",
+      "basis": "resolve components against Figure 10.1"
+    },
+    {
+      "printed_page": 932,
+      "original": "ordinary disk files do not short-write in practice",
+      "correction": "do not treat the observation as read/write API guarantee",
+      "basis": "Linux man-pages read(2), write(2)"
+    },
+    {
+      "printed_page": 933,
+      "original": "buffered Rio is thread-safe",
+      "qualification": "no shared static buffer; shared rio_t or same open description still requires ownership and synchronization"
+    },
+    {
+      "printed_page": 941,
+      "original": "d_name[256] and inode as file location",
+      "qualification": "do not assume fixed d_name extent; inode number is not physical byte address",
+      "basis": "Linux man-pages readdir(3)"
+    }
+  ],
+  "program_verification": {
+    "host": "macOS 15.8.1 arm64; strict C11 plus explicit POSIX.1-2008; ASan/UBSan",
+    "models": "scripted short reads/writes, EINTR, EOF, EIO, EAGAIN, zero-progress write; shared-buffer mixed binary/text; open-description model",
+    "native": "pipe binary transfer/EOF; independent open, dup2, fork/wait, close lifetime, fstat, directory read, stdin redirection",
+    "cli_cases": 65,
+    "records": [
+      "tmp/csapp/part3/ch10/model-results.json",
+      "tmp/csapp/part3/ch10/cli-verification.json"
+    ]
+  },
+  "review_status": "author_and_independent_source_reviewed_locally",
+  "limitations": [
+    "No claim of Linux runtime execution",
+    "EINTR is deterministically injected, not a host signal delivery observation",
+    "Blocking descriptors and caller-owned valid buffers; no protocol timeout, nonblocking event loop or rollback",
+    "Directory order is not fixed; st_mode owner-read bit is not effective-access authorization",
+    "Python descriptor model does not execute fork/dup2; its pipe check does execute POSIX pipe I/O"
+  ],
+  "independent_reviews": [
+    {
+      "status": "reviewed_locally",
+      "reviewer": "parent independent review",
+      "source_pdf_pages_text_read": [
+        932,
+        945,
+        946,
+        947,
+        951,
+        952,
+        953
+      ],
+      "source_pdf_pages_visually_read": [
+        944
+      ],
+      "scope": [
+        "10.1–10.10 complete question data, program statements and solutions compared to same-edition source text",
+        "All 10 excerpt texts normalized against declared source pages",
+        "Sections 10.1–10.12 mechanism prose and code reviewed; source figure 10.12–10.13 visually inspected",
+        "C Rio/files/fstat/cpfile source inspected; independent maintained regressions cover byte prefixes, output copies, descriptors and EINTR mutation"
+      ],
+      "findings": [],
+      "boundaries": [
+        "Source text was independently read for all 10 exercises; not all source pages were visually re-rendered by this reviewer.",
+        "Author separately records 16 visual source pages; this record does not relabel them as independent viewing."
+      ],
+      "page_sha256": "143d063dbab69cc150c2c6beb64b6e26edfae2718c8a1477048c40a2d7ca61dc",
+      "evidence": "books/csapp/tools/part_three_regressions.py"
+    }
+  ],
+  "integrated_at": "2026-10-14T04:06:11.311864+00:00",
+  "integration_scope": "Same-edition source questions, solutions and listed code mechanisms reviewed; final presentation hash bound here. Reviewer snapshot hashes retained in individual records.",
+  "open_findings": 0
+}

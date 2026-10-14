@@ -53,3 +53,5 @@
 ## 项目专属质量门禁
 
 具体命令、证据目录与验证边界见 [根 README](../../README.md)，本次迁移场景见 [T001](../../test/T001-project-merge.md)。构建检查与完整程序检查分别执行；发布前补充本地 HTTPS 和公网浏览器验收。
+
+读书笔记的来源/内容、静态结构、程序/计算、真实阅读、本地集成和线上发布分层要求统一见 [RN-001](../reading-notes-standard.md)。逐章记录可使用[审阅模板](../templates/reading-notes/chapter-review.md.template)；未执行项保持待验收，变更绑定以实际读回和复测为依据。

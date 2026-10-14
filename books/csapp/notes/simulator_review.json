@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "status": "PASS_WITH_DOCUMENTED_OFFICIAL_BASELINE_DIFFERENCES",
+  "source": "https://csapp.cs.cmu.edu/3e/archlab-handout.tar",
+  "archive_sha256": "586fc3347214ccd90e1c7cbfa74560c59584f8cf452d81c653acfd73344797d4",
+  "official_isa_comparisons": 7117,
+  "page_program_comparisons": 24,
+  "comparable_custom_cases": 29,
+  "original_programs": {
+    "passed": 40,
+    "total": 42,
+    "known_failures": "prog10 on unmodified SEQ and PIPE"
+  },
+  "known_baseline_differences": [
+    {
+      "code": "OFFICIAL_ISA_INVALID_STACK_PARTIAL_WRITE",
+      "severity": "P2-baseline-limitation",
+      "affected_logs": [
+        "official-prog10-seq.log",
+        "official-prog10-pipe.log",
+        "pop-invalid-address-yis.log",
+        "pop-invalid-address-seq.log",
+        "pop-invalid-address-pipe.log",
+        "pop-invalid-address-ex4-58.log"
+      ],
+      "facts": "Official isa.c:875 and 898 update RSP before checking push/pop memory success. Original SEQ/PIPE and exercise 4.58 stop on ADR with old RSP. The mismatch predates and is independent of the HCL patch. The reviewed page explicitly selects failed access without register commit. No source workaround was applied."
+    }
+  ],
+  "timing_definition": {
+    "official_psim": "psim.c:732-739 starts counting at first nonbubble W and excludes I_POP2 from instruction count; startup cycles before first W are omitted.",
+    "page": "N+4+L+2B+3R includes four initial fill cycles for these finite, terminating baseline PIPE programs.",
+    "observed_sorted_branch_sort": {
+      "instructions": 175,
+      "psim_cycles": 192,
+      "including_fill_cycles": 196
+    },
+    "observed_mixed_branch_sort": {
+      "instructions": 189,
+      "psim_cycles": 220,
+      "including_fill_cycles": 224
+    },
+    "all_nine_sort_rows_agree_after_adding_fill": true
+  },
+  "execution_limits": [
+    "Architectural-state comparison, specific hazard traces and cycle comparisons were performed. This does not exhaust every program or malformed instruction encoding.",
+    "High-bit-crossing branch addresses were checked in the earlier independent signed-address model; these are outside the allocated low-address memory of the official TTY simulator.",
+    "The pop second-step uses the distributed runtime enum I_POP2=0xD rather than replacing its literal definition with the Global Edition's 0xE.",
+    "The original full-program results include 40 successful ISA checks and two prog10 baseline mismatches; custom results include 29 matches and three repeated invalid-pop baseline mismatches."
+  ],
+  "host": "Darwin arm64",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.6.3.2)",
+  "support_files": {
+    "code/y86/Y86_REPRODUCE.md": "3fefa4e1eb9d97f527e7e90d71530c5d692ff72fd1fa34c07f5d2b3772354ca8",
+    "code/y86/build_y86_variants.sh": "128f985044405caf6e539c2f5b76e30280122a71f5bf0c7418382f5bc692deae",
+    "code/y86/csapp-ex4-52-58.patch": "72b62d714a134da150ac26a181607f30ed12a84de0354e5e5a7e5ce00873dbfb",
+    "code/y86/sim-cases/branch-equal-taken.ys": "7b1a9679b65a83c86eac8f8e4fc84b00d1c1f4e138cb054afb306342919e5786",
+    "code/y86/sim-cases/branch-equal-untaken.ys": "2ef6bb1e06e2246f6e7688b329fcc71b0126d7333fab0e8efdcc3b843f6572bb",
+    "code/y86/sim-cases/branch-loop-ret.ys": "21697ccd1b80a6a6cb8482c75da7cc5868652e2016c04e3971c94fcc8433e0de",
+    "code/y86/sim-cases/branch-unconditional-target-once.ys": "01883d8182408683ff6b5facaae952eaab0a9d0f5c4d90369ef5f3322a34420c",
+    "code/y86/sim-cases/iadd-load-forward-cc.ys": "154a0757b3b3c21c63fdc62dd8bed8d78d609eda9b7a7c4791508a678d7174c5",
+    "code/y86/sim-cases/iadd-negative.ys": "f8b7d32755604a6705b2773e58dcc0ee111916ec52e2e504e28222db16ac9342",
+    "code/y86/sim-cases/iadd-old-memory-error.ys": "13cd3f79e71e2a0640c64b1a16eefdbfb6c11ce6fc8b82427fa5faddcb5e08ab",
+    "code/y86/sim-cases/iadd-overflow.ys": "42271546e2cbf288454161d46b0d16d3677631ef5b7d14fbdf28fcb55cc1484e",
+    "code/y86/sim-cases/lf-load-push-data.ys": "7ab53e7a316895212b41d17c92943f5540b1800753fe10f3117827d6a8007d68",
+    "code/y86/sim-cases/lf-load-rsp-push.ys": "5f4a229506f3770ccd71a95ed1765f90084093533092753ea621a0ab99bbfa13",
+    "code/y86/sim-cases/lf-load-store-address.ys": "53c9bc0111775468cfa99a9d04cd2cdeb04c73b19df605bcda8a2015a6c7c07e",
+    "code/y86/sim-cases/noforward-h-b-r.ys": "4631d2e664f376a046112eb2b4d702bc66bfd5373e315c341a144e20b070db19",
+    "code/y86/sim-cases/noforward-h-b.ys": "d6448faf44e82d233e316b5c5571ddf96d3ea5a76b3f7d85dd4b8bcc50c807bf",
+    "code/y86/sim-cases/page-4-4-representative.ys": "cd562e60a46c348dc72590626933b04ad4a085a99ca6e5d24428d71da56ce3c4",
+    "code/y86/sim-cases/page-4-47-mixed.ys": "f66b733e94868b62cfb68c216ec97fb1263467aacbc16f3cd5a6935389180494",
+    "code/y86/sim-cases/page-4-47-reverse.ys": "a2be3e78ebc0fcd9a3aa48e63a54c264ef388e1d5c2b175912fecec77db69e52",
+    "code/y86/sim-cases/page-4-47-sorted.ys": "3960392fa4e53cce36d7150c2ea4fbef05ca6ae484f4ff1bbe94746789a2dfed",
+    "code/y86/sim-cases/page-4-48-mixed.ys": "4566f419ca05e0e2e9991d91c910084994849fe0dfe22b0d5fe4f1b13c12250f",
+    "code/y86/sim-cases/page-4-48-reverse.ys": "0457e29c9c4161c1a9243d32b7bb78ddfaa7ceb356f39dbc3311b68c0c60208b",
+    "code/y86/sim-cases/page-4-48-sorted.ys": "4935ef45c6ff969ad3254ace25f1e5c4486f4b22dcfd799b8646d65ee01f03d6",
+    "code/y86/sim-cases/page-4-49-mixed.ys": "4b9ed355637f2c759ea24eead68f2781ff01751c0b99efc6e0c6813dd8294026",
+    "code/y86/sim-cases/page-4-49-reverse.ys": "7cc9ceaeb8dc6f7de3b94607d0a16d6a29e2b3b32943695375869e77a991600d",
+    "code/y86/sim-cases/page-4-49-sorted.ys": "4cd8f918b77a14de14ad8b456b796906b43d5654202ee0ca0afd6eb2773b94a4",
+    "code/y86/sim-cases/page-4-5-representative.ys": "6f7a5b94997827e47144c282e064491075fae9f628375ce5fe38712e569fee6e",
+    "code/y86/sim-cases/page-4-6-representative.ys": "5ca209ade50d4b0f012f746cd38f9090d11249041b229e96420b485c3e3ff061",
+    "code/y86/sim-cases/pop-adjacent.ys": "ed9b5eddfeee80c29136b59ebbc534bd048a8777879cc4493b3f558383bacc87",
+    "code/y86/sim-cases/pop-invalid-address.ys": "b5904011f5f8eb75d9a43410eceb420bfda6a7bf31f8746eb59c8a30597ab284",
+    "code/y86/sim-cases/pop-load-rsp-refetch.ys": "078866ad847db1fff336c3d7ae46c1f768b638ab6dfd04aa0a46210b2c896d84",
+    "code/y86/sim-cases/pop-preserve-cc.ys": "4f06242614e1b4980dd110f5c71328dfbe0c9177ff4a1444a7f2cbd0ed47de59",
+    "code/y86/sim-cases/pop-rsp-ret.ys": "380ae6dbc9c4520a54158dc5687911967ecd1e4390a6c63c23f9539cd9d99e9c",
+    "code/y86/sim-cases/pop-wrongpath-flush.ys": "69e00092ce25cf14ceb017a884772d14c0934b2a37d5f2803fb5ce7ea10aee4c"
+  },
+  "support_archive_sha256": "ec9b5927e9427149d6fcf56871140bcd40abbe13af412690fa32bdaa2779e2f3",
+  "chapter_page_sha256": "815ebf024cd7094c288f6071c12b3f0ec9bd087fab62470fa69f86780cfacfbb",
+  "evidence": "tmp/csapp/rework/mechanism-review/simulator_execution_review.json",
+  "integration_evidence": "tmp/csapp/rework/mechanism-review/integration_confirmation.json",
+  "reproduce": "code/y86/Y86_REPRODUCE.md"
+}

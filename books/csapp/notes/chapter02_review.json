@@ -1,0 +1,4060 @@
+{
+  "schema_version": 1,
+  "chapter": 2,
+  "note_file": "books/csapp/notes/chapter02_information.html",
+  "review_status": "content_programs_and_local_reading_verified",
+  "source": {
+    "path": "books/csapp/csapp.pdf",
+    "edition": "Third Edition, Global Edition, Pearson 2016",
+    "sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+    "pdf_pages": 1122,
+    "chapter_pdf_range": [
+      68,
+      198
+    ],
+    "mapping": "PDF page = printed page + 1",
+    "practice_question_range": [
+      "2.1",
+      "2.54"
+    ],
+    "homework_question_range": [
+      "2.55",
+      "2.97"
+    ],
+    "source_text_read_pages": [
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198
+    ],
+    "rendered_pages_inspected": [
+      74,
+      86,
+      109,
+      148,
+      175,
+      176,
+      180,
+      182,
+      185,
+      188,
+      190,
+      194
+    ],
+    "inspection_focus": "核对表格与上下标、跨页题面、原书答案相冲突处；页图只用于本地核对"
+  },
+  "scope": {
+    "major_anchors": [
+      "s2-1",
+      "s2-2",
+      "s2-3",
+      "s2-4",
+      "s2-5"
+    ],
+    "subsection_anchors": [
+      "s2-1-1",
+      "s2-1-2",
+      "s2-1-3",
+      "s2-1-4",
+      "s2-1-5",
+      "s2-1-6",
+      "s2-1-7",
+      "s2-1-8",
+      "s2-1-9",
+      "s2-2-1",
+      "s2-2-2",
+      "s2-2-3",
+      "s2-2-4",
+      "s2-2-5",
+      "s2-2-6",
+      "s2-2-7",
+      "s2-2-8",
+      "s2-3-1",
+      "s2-3-2",
+      "s2-3-3",
+      "s2-3-4",
+      "s2-3-5",
+      "s2-3-6",
+      "s2-3-7",
+      "s2-3-8",
+      "s2-4-1",
+      "s2-4-2",
+      "s2-4-3",
+      "s2-4-4",
+      "s2-4-5",
+      "s2-4-6"
+    ],
+    "original_exercise_anchors": [
+      "ex-2-1",
+      "ex-2-2",
+      "ex-2-3",
+      "ex-2-4",
+      "ex-2-5",
+      "ex-2-6",
+      "ex-2-7",
+      "ex-2-8",
+      "ex-2-9",
+      "ex-2-10",
+      "ex-2-11",
+      "ex-2-12",
+      "ex-2-13",
+      "ex-2-14",
+      "ex-2-15",
+      "ex-2-16",
+      "ex-2-17",
+      "ex-2-18",
+      "ex-2-19",
+      "ex-2-20",
+      "ex-2-21",
+      "ex-2-22",
+      "ex-2-23",
+      "ex-2-24",
+      "ex-2-25",
+      "ex-2-26",
+      "ex-2-27",
+      "ex-2-28",
+      "ex-2-29",
+      "ex-2-30",
+      "ex-2-31",
+      "ex-2-32",
+      "ex-2-33",
+      "ex-2-34",
+      "ex-2-35",
+      "ex-2-36",
+      "ex-2-37",
+      "ex-2-38",
+      "ex-2-39",
+      "ex-2-40",
+      "ex-2-41",
+      "ex-2-42",
+      "ex-2-43",
+      "ex-2-44",
+      "ex-2-45",
+      "ex-2-46",
+      "ex-2-47",
+      "ex-2-48",
+      "ex-2-49",
+      "ex-2-50",
+      "ex-2-51",
+      "ex-2-52",
+      "ex-2-53",
+      "ex-2-54",
+      "ex-2-55",
+      "ex-2-56",
+      "ex-2-57",
+      "ex-2-58",
+      "ex-2-59",
+      "ex-2-60",
+      "ex-2-61",
+      "ex-2-62",
+      "ex-2-63",
+      "ex-2-64",
+      "ex-2-65",
+      "ex-2-66",
+      "ex-2-67",
+      "ex-2-68",
+      "ex-2-69",
+      "ex-2-70",
+      "ex-2-71",
+      "ex-2-72",
+      "ex-2-73",
+      "ex-2-74",
+      "ex-2-75",
+      "ex-2-76",
+      "ex-2-77",
+      "ex-2-78",
+      "ex-2-79",
+      "ex-2-80",
+      "ex-2-81",
+      "ex-2-82",
+      "ex-2-83",
+      "ex-2-84",
+      "ex-2-85",
+      "ex-2-86",
+      "ex-2-87",
+      "ex-2-88",
+      "ex-2-89",
+      "ex-2-90",
+      "ex-2-91",
+      "ex-2-92",
+      "ex-2-93",
+      "ex-2-94",
+      "ex-2-95",
+      "ex-2-96",
+      "ex-2-97"
+    ],
+    "original_self_checks": [
+      "q2-1",
+      "q2-2",
+      "q2-3"
+    ],
+    "reading_note_anchors": [
+      "notes-s2-1",
+      "notes-s2-2",
+      "notes-s2-3",
+      "notes-s2-4",
+      "notes-s2-5"
+    ]
+  },
+  "exercises": [
+    {
+      "number": "2.1",
+      "kind": "practice",
+      "source_pdf_pages": [
+        74
+      ],
+      "source_printed_pages": [
+        73
+      ],
+      "anchor": "ex-2-1",
+      "title": "十六进制与二进制互换",
+      "checked": [
+        "题干PDF74与答案PDF180逐项对照",
+        "四位分组独立反算"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 74,
+      "source_pdf_end": 74,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "e60834aab0796a9e1ac16e825505d817734f2a0f0499c1154adf733d80bc80f1"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "PDF180: B的四位码错为1101且小问B采用另一输入"
+    },
+    {
+      "number": "2.2",
+      "kind": "practice",
+      "source_pdf_pages": [
+        74,
+        75
+      ],
+      "source_printed_pages": [
+        73,
+        74
+      ],
+      "anchor": "ex-2-2",
+      "title": "二的幂的三种写法",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 74,
+      "source_pdf_end": 75,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "bbaf7ea90fb7ce0fe6083c0028f78750e1aa4501d04e29c5a24995e0b7718f6d"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.3",
+      "kind": "practice",
+      "source_pdf_pages": [
+        75,
+        76
+      ],
+      "source_printed_pages": [
+        74,
+        75
+      ],
+      "anchor": "ex-2-3",
+      "title": "单字节转换",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 75,
+      "source_pdf_end": 76,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "a314ffa69a7005605252a6d7e8d82487ff32014040e13517f9f654b31749d92f"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.4",
+      "kind": "practice",
+      "source_pdf_pages": [
+        76
+      ],
+      "source_printed_pages": [
+        75
+      ],
+      "anchor": "ex-2-4",
+      "title": "直接做十六进制加减",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 76,
+      "source_pdf_end": 76,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "c3c5cc2f6d6cd499b42f60841d1824bfba3104ad0cf035382ff4bd3e39dec108"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "PDF181:借位后高位应为E"
+    },
+    {
+      "number": "2.5",
+      "kind": "practice",
+      "source_pdf_pages": [
+        85
+      ],
+      "source_printed_pages": [
+        84
+      ],
+      "anchor": "ex-2-5",
+      "title": "字节显示顺序",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 85,
+      "source_pdf_end": 85,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B",
+          "C"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "3bcf3994055098bf3649fe029576c2f2ee4a219690bd8b28f3d1ca2631f6ae9c"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.6",
+      "kind": "practice",
+      "source_pdf_pages": [
+        86
+      ],
+      "source_printed_pages": [
+        85
+      ],
+      "anchor": "ex-2-6",
+      "title": "整数与浮点编码对齐",
+      "checked": [
+        "PDF86题干与PDF182答案图像核对",
+        "struct解码0x4A1F23E0=2607352.0",
+        "枚举全部相对位移核对最长连续公共21位"
+      ],
+      "source_correction": "本页同时写 3510593.0 和 0x4A1F23E0，两者不对应。后者实际表示 2607352.0；本解答保留给定两段位串完成 A—C，再单独指出十进制数应如何修正。原答案关于“最高有效位为 0”的文字也应为 1。",
+      "source_pdf_start": 86,
+      "source_pdf_end": 86,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B",
+          "C"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "77e22cbee3f580f4f03ed486613c5985b11f53a79285e6c585c13e5fed6eaf75"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "PDF86:3510593.0与0x4A1F23E0不一致；PDF182最高有效位应为1"
+    },
+    {
+      "number": "2.7",
+      "kind": "practice",
+      "source_pdf_pages": [
+        86
+      ],
+      "source_printed_pages": [
+        85
+      ],
+      "anchor": "ex-2-7",
+      "title": "ASCII 字节",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 86,
+      "source_pdf_end": 86,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "2f80f6621680fec52b5a2ab91b3dcca5449237c527a2c6eaa8fc7a13b40940df"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.8",
+      "kind": "practice",
+      "source_pdf_pages": [
+        88,
+        89
+      ],
+      "source_printed_pages": [
+        87,
+        88
+      ],
+      "anchor": "ex-2-8",
+      "title": "位向量布尔运算",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 88,
+      "source_pdf_end": 89,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "8680605f42801834d7f2d21cfc7fe5b690946b241e71fc33780837e7cadb4dfc"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.9",
+      "kind": "practice",
+      "source_pdf_pages": [
+        90
+      ],
+      "source_printed_pages": [
+        89
+      ],
+      "anchor": "ex-2-9",
+      "title": "用 RGB 位表示颜色",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 90,
+      "source_pdf_end": 90,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B"
+        ],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "51ab292b4ca71b23751d80f4ffa66bed1aaa10e2e855b623fc5fbadffdbf8140"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.10",
+      "kind": "practice",
+      "source_pdf_pages": [
+        91
+      ],
+      "source_printed_pages": [
+        90
+      ],
+      "anchor": "ex-2-10",
+      "title": "异或交换的状态表",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 91,
+      "source_pdf_end": 91,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 1,
+        "question_html_sha256": "7ae9d310b2fb60c0395465507b161edd647a05f22c7917af4be10a5734caf22c"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.11",
+      "kind": "practice",
+      "source_pdf_pages": [
+        92
+      ],
+      "source_printed_pages": [
+        91
+      ],
+      "anchor": "ex-2-11",
+      "title": "反转数组时的别名问题",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 92,
+      "source_pdf_end": 92,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B",
+          "C"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "58667654a273c4f13b002e7a506733744521eeb29e80d3d811c39dceb3d518f5"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.12",
+      "kind": "practice",
+      "source_pdf_pages": [
+        92,
+        93
+      ],
+      "source_printed_pages": [
+        91,
+        92
+      ],
+      "anchor": "ex-2-12",
+      "title": "构造字节掩码",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 92,
+      "source_pdf_end": 93,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B",
+          "C"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "156224f5b459456d7cbd7694d24a6cabdb1778e2873d621c8a8c1ef3ca226b31"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.13",
+      "kind": "practice",
+      "source_pdf_pages": [
+        93
+      ],
+      "source_printed_pages": [
+        92
+      ],
+      "anchor": "ex-2-13",
+      "title": "仅用 bis 与 bic 实现 OR、XOR",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 93,
+      "source_pdf_end": 93,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "9ce42082e64b0887d0fa2e7197f7f97cc2bd8c9415e8ffd2911a8879a0bb139e"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.14",
+      "kind": "practice",
+      "source_pdf_pages": [
+        94
+      ],
+      "source_printed_pages": [
+        93
+      ],
+      "anchor": "ex-2-14",
+      "title": "位运算与逻辑运算",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 94,
+      "source_pdf_end": 94,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "2b9eacd993cea9db1948443eed189a9c1a0f4eb9012c9e7f59868c7bb00061f8"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.15",
+      "kind": "practice",
+      "source_pdf_pages": [
+        94
+      ],
+      "source_printed_pages": [
+        93
+      ],
+      "anchor": "ex-2-15",
+      "title": "用位与逻辑运算判相等",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 94,
+      "source_pdf_end": 94,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "1b293cce86790974ee3b96f3ad355029fd44c023b2bdc1744d51d8c0f7f88a7e"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.16",
+      "kind": "practice",
+      "source_pdf_pages": [
+        95
+      ],
+      "source_printed_pages": [
+        94
+      ],
+      "anchor": "ex-2-16",
+      "title": "单字节移位表",
+      "checked": [
+        "PDF95题表与PDF185答案渲染核对",
+        "按8位枚举/掩码独立验证"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 95,
+      "source_pdf_end": 95,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "768d19399f66cb5bbe7f7eb005fab31344d8c70f3940812690a68966438b7230"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "PDF185:0x64和0x44的算术右移答案错误"
+    },
+    {
+      "number": "2.17",
+      "kind": "practice",
+      "source_pdf_pages": [
+        102,
+        103
+      ],
+      "source_printed_pages": [
+        101,
+        102
+      ],
+      "anchor": "ex-2-17",
+      "title": "四位编码的权值",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 102,
+      "source_pdf_end": 103,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "d9e128832ff78236d7d39dfdec9fe6d3c487df7d6fb1abf2be248afee8a287e4"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "PDF185:A行负权展开中2²应为2¹"
+    },
+    {
+      "number": "2.18",
+      "kind": "practice",
+      "source_pdf_pages": [
+        106,
+        107
+      ],
+      "source_printed_pages": [
+        105,
+        106
+      ],
+      "anchor": "ex-2-18",
+      "title": "读反汇编中的十六进制量",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 106,
+      "source_pdf_end": 107,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "049ddad03e30f2aae7852b3eb64b787bf9701d6f13a18f560dfffbe6d7728466"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.19",
+      "kind": "practice",
+      "source_pdf_pages": [
+        108,
+        109
+      ],
+      "source_printed_pages": [
+        107,
+        108
+      ],
+      "anchor": "ex-2-19",
+      "title": "四位补码转无符号",
+      "checked": [
+        "PDF109图像核对8",
+        "按T2U定义域逐项验证"
+      ],
+      "source_correction": "原题最后一行确实印为 8，原答案也保留 8；四位补码只能表示 −8—7。下面先标明该行未定义，再给出“输入改为 −8”或“位宽改为 5”两种有效解释。",
+      "source_pdf_start": 108,
+      "source_pdf_end": 109,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "f528dbb1253191871a3d3b94b204deb6f3dd92faec1fdfaf6c26197c40c90bbb"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "PDF109:四位T2U输入+8越界"
+    },
+    {
+      "number": "2.20",
+      "kind": "practice",
+      "source_pdf_pages": [
+        110
+      ],
+      "source_printed_pages": [
+        109
+      ],
+      "anchor": "ex-2-20",
+      "title": "解释补码转换公式",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": "本题继承 2.19 的定义域冲突；原答案称最后两行都是合法非负输入，没有处理 +8 超出四位补码范围的问题。",
+      "source_pdf_start": 110,
+      "source_pdf_end": 110,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "184bd085251d03e7909f787ed7fa8366c6fec93f0289f72951abe8e68a402739"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "继承2.19的定义域冲突"
+    },
+    {
+      "number": "2.21",
+      "kind": "practice",
+      "source_pdf_pages": [
+        113
+      ],
+      "source_printed_pages": [
+        112
+      ],
+      "anchor": "ex-2-21",
+      "title": "比较前的类型转换",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 113,
+      "source_pdf_end": 113,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "f11e226a213a806a6d5845cc6ab8528149c8d3a1257eceaf3a8d6e3cd991c2a2"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.22",
+      "kind": "practice",
+      "source_pdf_pages": [
+        116
+      ],
+      "source_printed_pages": [
+        115
+      ],
+      "anchor": "ex-2-22",
+      "title": "符号扩展的直接验算",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 116,
+      "source_pdf_end": 116,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B",
+          "C"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "9ac742784c8813b63b198b08ec9a797d7faa29eda23fe264271aa7021af7bc51"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.23",
+      "kind": "practice",
+      "source_pdf_pages": [
+        117
+      ],
+      "source_printed_pages": [
+        116
+      ],
+      "anchor": "ex-2-23",
+      "title": "先转换还是先移位",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 117,
+      "source_pdf_end": 117,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B"
+        ],
+        "question_tables": 1,
+        "given_program_blocks": 1,
+        "question_html_sha256": "47973849150712fd2f3bd1933b97995fc6d8a488d45111ecd8e485a2a2b8a7b9"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "原fun2的signed左移只适合作为机器位模型"
+    },
+    {
+      "number": "2.24",
+      "kind": "practice",
+      "source_pdf_pages": [
+        119
+      ],
+      "source_printed_pages": [
+        118
+      ],
+      "anchor": "ex-2-24",
+      "title": "从四位截到三位",
+      "checked": [
+        "PDF119题表与PDF188答案渲染核对",
+        "穷举全部16个四位值的截断参考"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 119,
+      "source_pdf_end": 119,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "26868b037484559f514462926006ddbbfd2a8eff7abba5e2f00161244de23dd0"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "PDF188:三位signed输出误按unsigned写成5/4/6"
+    },
+    {
+      "number": "2.25",
+      "kind": "practice",
+      "source_pdf_pages": [
+        120
+      ],
+      "source_printed_pages": [
+        119
+      ],
+      "anchor": "ex-2-25",
+      "title": "空数组与无符号下溢",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 120,
+      "source_pdf_end": 120,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "71669f17c774b463979b4f07d17dcd3ae8aee7b46a7314919970974704506854"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.26",
+      "kind": "practice",
+      "source_pdf_pages": [
+        120,
+        121
+      ],
+      "source_printed_pages": [
+        119,
+        120
+      ],
+      "anchor": "ex-2-26",
+      "title": "字符串长度不应先相减",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 120,
+      "source_pdf_end": 121,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B",
+          "C"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "1aec5f825d3a1fdfe4fecb52b22f6819263da81eb90d16d9dcf9b959b579bcb4"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.27",
+      "kind": "practice",
+      "source_pdf_pages": [
+        126
+      ],
+      "source_printed_pages": [
+        125
+      ],
+      "anchor": "ex-2-27",
+      "title": "检测无符号加法溢出",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 126,
+      "source_pdf_end": 126,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "950db4d7a1c301952538b47e3d16292f0d31b6b1e71f96932e6fd4bdb741eff6"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.28",
+      "kind": "practice",
+      "source_pdf_pages": [
+        126,
+        127
+      ],
+      "source_printed_pages": [
+        125,
+        126
+      ],
+      "anchor": "ex-2-28",
+      "title": "四位无符号加法逆元",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 126,
+      "source_pdf_end": 127,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "2ec22968185cc75c265594ce9fe72cf5a74215819a16f3b98ccaf5415a052c93"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.29",
+      "kind": "practice",
+      "source_pdf_pages": [
+        130,
+        131
+      ],
+      "source_printed_pages": [
+        129,
+        130
+      ],
+      "anchor": "ex-2-29",
+      "title": "五位补码加法",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 130,
+      "source_pdf_end": 131,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "9e6fb6f0ebd6b521f0a69ffa4340ce77c61e22ab5d8ff929d0c034355d09b834"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.30",
+      "kind": "practice",
+      "source_pdf_pages": [
+        131
+      ],
+      "source_printed_pages": [
+        130
+      ],
+      "anchor": "ex-2-30",
+      "title": "安全检测有符号加法溢出",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 131,
+      "source_pdf_end": 131,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "6822f8d78fa730863c094a6f1d2dee5afcfdc1860401fb410b3d4f950e9af43f"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      },
+      "source_or_language_note": "先进行signed加法的原答案不构成可移植C11检查"
+    },
+    {
+      "number": "2.31",
+      "kind": "practice",
+      "source_pdf_pages": [
+        131
+      ],
+      "source_printed_pages": [
+        130
+      ],
+      "anchor": "ex-2-31",
+      "title": "为什么加后减回不能查溢出",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 131,
+      "source_pdf_end": 131,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "4c5d8fe00cc5118b695290afdec739f84e3422b02e70cc39e6ae75959596a93e"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.32",
+      "kind": "practice",
+      "source_pdf_pages": [
+        131,
+        132
+      ],
+      "source_printed_pages": [
+        130,
+        131
+      ],
+      "anchor": "ex-2-32",
+      "title": "减法转加法遇到最小值",
+      "checked": [
+        "PDF190答案图像核对",
+        "边界反例TMin−TMin与0−TMin独立验算"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 131,
+      "source_pdf_end": 132,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "2eda318c5e3e9b9db0b24b7f63c78650711143c862c501d983c86aa4639653fc"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "PDF190:末句把真实减法的返回标记反写"
+    },
+    {
+      "number": "2.33",
+      "kind": "practice",
+      "source_pdf_pages": [
+        132
+      ],
+      "source_printed_pages": [
+        131
+      ],
+      "anchor": "ex-2-33",
+      "title": "四位补码取负",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 132,
+      "source_pdf_end": 132,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "1207836af9d88463b753af69c6e3c25cae50196912d30c6ca03b0ce0bf847adb"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "PDF190:四位hex9误列为−9，应为−7"
+    },
+    {
+      "number": "2.34",
+      "kind": "practice",
+      "source_pdf_pages": [
+        135,
+        136
+      ],
+      "source_printed_pages": [
+        134,
+        135
+      ],
+      "anchor": "ex-2-34",
+      "title": "三位乘法的完整积与低位",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 135,
+      "source_pdf_end": 136,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "f3b402008ea54edf2c934899f9a01e0ce30ed77e38494d62858883135097cb93"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.35",
+      "kind": "practice",
+      "source_pdf_pages": [
+        136
+      ],
+      "source_printed_pages": [
+        135
+      ],
+      "anchor": "ex-2-35",
+      "title": "用除法检测乘法的证明",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 136,
+      "source_pdf_end": 136,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "a2ddef50f826769659b4d3648bb5a1432fc1cebfe66b404b432e4bb53c823dc2"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 7,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "原C先乘再除有signed溢出和INT_MIN/−1边界"
+    },
+    {
+      "number": "2.36",
+      "kind": "practice",
+      "source_pdf_pages": [
+        136
+      ],
+      "source_printed_pages": [
+        135
+      ],
+      "anchor": "ex-2-36",
+      "title": "用 64 位中间积查溢出",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 136,
+      "source_pdf_end": 136,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "9d7df2911b705f0bdd413a5394df20e4798a20132a8273ad25c833276135a1eb"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.37",
+      "kind": "practice",
+      "source_pdf_pages": [
+        136,
+        137,
+        138
+      ],
+      "source_printed_pages": [
+        135,
+        136,
+        137
+      ],
+      "anchor": "ex-2-37",
+      "title": "扩宽积仍可能在接口处截断",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 136,
+      "source_pdf_end": 138,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "6e988ec9f56a0e464d4933fcfb769e02bfa920c8fa9998dedc6fe38c3b9db4b2"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.38",
+      "kind": "practice",
+      "source_pdf_pages": [
+        139
+      ],
+      "source_printed_pages": [
+        138
+      ],
+      "anchor": "ex-2-38",
+      "title": "一条 lea 可计算的倍数",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 139,
+      "source_pdf_end": 139,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "06a11589f25a48879b0f753f90494e906f3c4f09e4f246ebfd8e601f466443f3"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.39",
+      "kind": "practice",
+      "source_pdf_pages": [
+        140
+      ],
+      "source_printed_pages": [
+        139
+      ],
+      "anchor": "ex-2-39",
+      "title": "最高位连续 1 的乘法",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 140,
+      "source_pdf_end": 140,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "794e8cdfdccc670fc2b348ee73c9391d5a1adfbe134c17cae3c4de60e93d7993"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "原答案把移位w位视为零，仅能作模代数，不能直接作C11"
+    },
+    {
+      "number": "2.40",
+      "kind": "practice",
+      "source_pdf_pages": [
+        140
+      ],
+      "source_printed_pages": [
+        139
+      ],
+      "anchor": "ex-2-40",
+      "title": "按操作数预算分解常数",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 140,
+      "source_pdf_end": 140,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "a65fba9b39339602cd861e47dc0446e867533a1ffeeb17921c33fda32a680844"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "PDF192:55的二进制说明漏一位"
+    },
+    {
+      "number": "2.41",
+      "kind": "practice",
+      "source_pdf_pages": [
+        140
+      ],
+      "source_printed_pages": [
+        139
+      ],
+      "anchor": "ex-2-41",
+      "title": "形式 A 与 B 的选择",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 140,
+      "source_pdf_end": 140,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "a3667da06e93bb733314ebfc909a5f652be1d18b7476b37e047c15733a908409"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.42",
+      "kind": "practice",
+      "source_pdf_pages": [
+        144
+      ],
+      "source_printed_pages": [
+        143
+      ],
+      "anchor": "ex-2-42",
+      "title": "无分支地除以 16",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 144,
+      "source_pdf_end": 144,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "82d49e6fc1a26952dbb584e6f96517cab67867e057a013bbdba28246592c3e34"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.43",
+      "kind": "practice",
+      "source_pdf_pages": [
+        144
+      ],
+      "source_printed_pages": [
+        143
+      ],
+      "anchor": "ex-2-43",
+      "title": "从优化后的算式恢复常数",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 144,
+      "source_pdf_end": 144,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "4b5209afc706f95a1be6c88a90dd58d1fe85a31f76e910d9805544d27a34ac6c"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.44",
+      "kind": "practice",
+      "source_pdf_pages": [
+        145
+      ],
+      "source_printed_pages": [
+        144
+      ],
+      "anchor": "ex-2-44",
+      "title": "整数恒等式与反例",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 145,
+      "source_pdf_end": 145,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "fc3e9c9e28aced554e4e38bc5747b4555c1b9be21d92942dc8db5e38626e2939"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.45",
+      "kind": "practice",
+      "source_pdf_pages": [
+        148
+      ],
+      "source_printed_pages": [
+        147
+      ],
+      "anchor": "ex-2-45",
+      "title": "二进制小数的权值",
+      "checked": [
+        "PDF148题干与PDF194答案图像核对5/16",
+        "Fraction精确权值复算"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 148,
+      "source_pdf_end": 148,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "ede9ede2bd435355c78da5f7d45bbcf2c4e6a58b7a05d01a582cff32e7f5ecf0"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "PDF148题干5/16，PDF194答案用25/16"
+    },
+    {
+      "number": "2.46",
+      "kind": "practice",
+      "source_pdf_pages": [
+        148,
+        149
+      ],
+      "source_printed_pages": [
+        147,
+        148
+      ],
+      "anchor": "ex-2-46",
+      "title": "计时器截断误差",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 148,
+      "source_pdf_end": 149,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "3162105644141ff6a2e0aeb050251ea6b4f91fc8888d70bb09eea8d21e0f6065"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.47",
+      "kind": "practice",
+      "source_pdf_pages": [
+        154,
+        155
+      ],
+      "source_printed_pages": [
+        153,
+        154
+      ],
+      "anchor": "ex-2-47",
+      "title": "五位浮点格式的全部非负编码",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 154,
+      "source_pdf_end": 155,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "eeeeea8e0f2c9d8b98d3d5cf46eeb52c77b82c39df680719d2c169245c13692f"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.48",
+      "kind": "practice",
+      "source_pdf_pages": [
+        156
+      ],
+      "source_printed_pages": [
+        155
+      ],
+      "anchor": "ex-2-48",
+      "title": "把 3510593 编为 binary32",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": "本题的两种表示彼此一致；与 2.6 的文字回指不一致，2.6 的题给位模式实际上属于 2607352。这里独立按本题给出的 3510593 推导。",
+      "source_pdf_start": 156,
+      "source_pdf_end": 156,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "f2502635f93ccc646121d78e5f499e4e1ddb8cbf919d24b5697288db09517542"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "题给3510593编码正确，与2.6的回指内容不一致"
+    },
+    {
+      "number": "2.49",
+      "kind": "practice",
+      "source_pdf_pages": [
+        157
+      ],
+      "source_printed_pages": [
+        156
+      ],
+      "anchor": "ex-2-49",
+      "title": "首个无法精确表示的正整数",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 157,
+      "source_pdf_end": 157,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "78eabaaa170e9fa41567579eb47d82699a09ccf885802d2d43aed215d3f5b590"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.50",
+      "kind": "practice",
+      "source_pdf_pages": [
+        158
+      ],
+      "source_printed_pages": [
+        157
+      ],
+      "anchor": "ex-2-50",
+      "title": "舍入到半整数",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 158,
+      "source_pdf_end": 158,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "062e878c019856df7e0a29c2d0edaa64e0fd42051957acc8fac7fd6bb174621c"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.51",
+      "kind": "practice",
+      "source_pdf_pages": [
+        159
+      ],
+      "source_printed_pages": [
+        158
+      ],
+      "anchor": "ex-2-51",
+      "title": "计时器改用最近偶数",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 159,
+      "source_pdf_end": 159,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "1ab5a265d28bcccca3101d38a0fcb6ca2d522de3850e6d67c97312b803fcefdb"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.52",
+      "kind": "practice",
+      "source_pdf_pages": [
+        159
+      ],
+      "source_printed_pages": [
+        158
+      ],
+      "anchor": "ex-2-52",
+      "title": "在两种七位浮点格式间转换",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 159,
+      "source_pdf_end": 159,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "ec04d82142a084b954dd9c76ae7fcd00a6e55076d0d3c1101ad0feea81a47434"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.53",
+      "kind": "practice",
+      "source_pdf_pages": [
+        162
+      ],
+      "source_printed_pages": [
+        161
+      ],
+      "anchor": "ex-2-53",
+      "title": "构造特殊双精度值",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 162,
+      "source_pdf_end": 162,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "2501ab648832bf97197eb06f22db2a391b41ff0d3a50215665eddd7b6b0aacfa"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.54",
+      "kind": "practice",
+      "source_pdf_pages": [
+        162,
+        163
+      ],
+      "source_printed_pages": [
+        161,
+        162
+      ],
+      "anchor": "ex-2-54",
+      "title": "浮点转换与恒等式",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 162,
+      "source_pdf_end": 163,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "fa26eafa1146dbf64ae494cca63ecbf5504fa3fc38d9de905e0d189f818995c1"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 4,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "原答案INT_MAX反例会越界转回int，改用16777217"
+    },
+    {
+      "number": "2.55",
+      "kind": "homework",
+      "source_pdf_pages": [
+        165
+      ],
+      "source_printed_pages": [
+        164
+      ],
+      "anchor": "ex-2-55",
+      "title": "观察可用机器的字节序",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 165,
+      "source_pdf_end": 165,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "c50053179ac8d97fa585ff3c3f8420d4fa919c40bf93e63269fcc3ca022cc7cb"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.56",
+      "kind": "homework",
+      "source_pdf_pages": [
+        165
+      ],
+      "source_printed_pages": [
+        164
+      ],
+      "anchor": "ex-2-56",
+      "title": "换样本观察字节",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 165,
+      "source_pdf_end": 165,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "3a26b3ae35c3cafdd01ae3fa9a5fca82d9bd91824e7c18db9023152430cdd748"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.57",
+      "kind": "homework",
+      "source_pdf_pages": [
+        165
+      ],
+      "source_printed_pages": [
+        164
+      ],
+      "anchor": "ex-2-57",
+      "title": "显示 short、long、double",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 165,
+      "source_pdf_end": 165,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "3b6e2bda6cd6652dc9cc25dea5dc508340d9415dee7b66f7ecc4504dda706cae"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.58",
+      "kind": "homework",
+      "source_pdf_pages": [
+        165
+      ],
+      "source_printed_pages": [
+        164
+      ],
+      "anchor": "ex-2-58",
+      "title": "检测小端",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 165,
+      "source_pdf_end": 165,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "b428db4e449b508527f6c7052ad6d43f45ca159439fb7240438e1a9aa5bd60e6"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.59",
+      "kind": "homework",
+      "source_pdf_pages": [
+        165
+      ],
+      "source_printed_pages": [
+        164
+      ],
+      "anchor": "ex-2-59",
+      "title": "组合 x 的低字节和 y 的其余字节",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 165,
+      "source_pdf_end": 165,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "25bed6e00dd6baf61e65f067dbfcb357647eac9d9e25e6015bee105e84c4a3e1"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.60",
+      "kind": "homework",
+      "source_pdf_pages": [
+        165
+      ],
+      "source_printed_pages": [
+        164
+      ],
+      "anchor": "ex-2-60",
+      "title": "替换指定字节",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 165,
+      "source_pdf_end": 165,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "f5b86cfd0df2d8e19476b056e476e925182f0235cfa04d9aa9512254ebc1c14d"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.61",
+      "kind": "homework",
+      "source_pdf_pages": [
+        166,
+        167
+      ],
+      "source_printed_pages": [
+        165,
+        166
+      ],
+      "anchor": "ex-2-61",
+      "title": "把位条件规范为 0 或 1",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 166,
+      "source_pdf_end": 167,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "383f0c582c287b6ab2abe6557aeabbfe138bc5b567d4bb4e48f1560fe5f541f9"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.62",
+      "kind": "homework",
+      "source_pdf_pages": [
+        167
+      ],
+      "source_printed_pages": [
+        166
+      ],
+      "anchor": "ex-2-62",
+      "title": "检测有符号右移规则",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 167,
+      "source_pdf_end": 167,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "4129a9d29632e89ead1ad245cfd04b8e9c0d4dba4e84372687eba4fd7a05e2b9"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.63",
+      "kind": "homework",
+      "source_pdf_pages": [
+        167
+      ],
+      "source_printed_pages": [
+        166
+      ],
+      "anchor": "ex-2-63",
+      "title": "由一种右移实现另一种",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 167,
+      "source_pdf_end": 167,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "1e2a2cbe7416391e4e70d9341aeb7f78227aacfdc1f6fe4f1ab5c026b97cd2e6"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.64",
+      "kind": "homework",
+      "source_pdf_pages": [
+        167
+      ],
+      "source_printed_pages": [
+        166
+      ],
+      "anchor": "ex-2-64",
+      "title": "奇数位是否有 1",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 167,
+      "source_pdf_end": 167,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "12ed653a3df55a918a0b0921cb70f0730cecd22d2d813a9d962adc586cf34013"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.65",
+      "kind": "homework",
+      "source_pdf_pages": [
+        168
+      ],
+      "source_printed_pages": [
+        167
+      ],
+      "anchor": "ex-2-65",
+      "title": "奇数个 1 的奇偶校验",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 168,
+      "source_pdf_end": 168,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "390bbe40112833d4436fba2783c52afa822620bf0a6ebdcfe11907d4b5bc631a"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.66",
+      "kind": "homework",
+      "source_pdf_pages": [
+        168
+      ],
+      "source_printed_pages": [
+        167
+      ],
+      "anchor": "ex-2-66",
+      "title": "只保留最左边的 1",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 168,
+      "source_pdf_end": 168,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "d88bd68080c170d92be5ce9603173a50fcd6493e2da5912242984e67692492d8"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.67",
+      "kind": "homework",
+      "source_pdf_pages": [
+        168,
+        169
+      ],
+      "source_printed_pages": [
+        167,
+        168
+      ],
+      "anchor": "ex-2-67",
+      "title": "不用 sizeof 测量 int 是否 32 位",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 168,
+      "source_pdf_end": 169,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B",
+          "C"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "8f0aa93587befdb9c964fc6af4e453f31d5eb3c2ffaf2f870bc1a99fb21771ad"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.68",
+      "kind": "homework",
+      "source_pdf_pages": [
+        169
+      ],
+      "source_printed_pages": [
+        168
+      ],
+      "anchor": "ex-2-68",
+      "title": "低 n 位全 1 掩码",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 169,
+      "source_pdf_end": 169,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "d8a947256c7cbcf903e45ddc25920f796b2d613a599e17faadeb81f35385b758"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.69",
+      "kind": "homework",
+      "source_pdf_pages": [
+        169
+      ],
+      "source_printed_pages": [
+        168
+      ],
+      "anchor": "ex-2-69",
+      "title": "循环左移",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 169,
+      "source_pdf_end": 169,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "3eb4ae96e02ec0f3f9d30552f73ba95707b0ab405189e2ab8dd54a188c81470f"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.70",
+      "kind": "homework",
+      "source_pdf_pages": [
+        169
+      ],
+      "source_printed_pages": [
+        168
+      ],
+      "anchor": "ex-2-70",
+      "title": "判断能否装入 n 位补码",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 169,
+      "source_pdf_end": 169,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "210d8a66ac5b4fc5a97a349d317dcd53a7130dc5f14153018a5dbbd9d56539c9"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.71",
+      "kind": "homework",
+      "source_pdf_pages": [
+        169,
+        170
+      ],
+      "source_printed_pages": [
+        168,
+        169
+      ],
+      "anchor": "ex-2-71",
+      "title": "提取打包的有符号字节",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 169,
+      "source_pdf_end": 170,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "9c66c76b6f44ca3a5b487e667270af3cd77e99c671b5753cc6f2558b34a4e440"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.72",
+      "kind": "homework",
+      "source_pdf_pages": [
+        170
+      ],
+      "source_printed_pages": [
+        169
+      ],
+      "anchor": "ex-2-72",
+      "title": "缓冲区长度检查的转换陷阱",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 170,
+      "source_pdf_end": 170,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "9761bc506279cae654b599516faceba468bdac9a613f9e10912fc766704fe969"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.73",
+      "kind": "homework",
+      "source_pdf_pages": [
+        171
+      ],
+      "source_printed_pages": [
+        170
+      ],
+      "anchor": "ex-2-73",
+      "title": "饱和加法",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 171,
+      "source_pdf_end": 171,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "05d88de275d20cf0bd7f1358749fd1b8062f7d968308e478048035d8bfd4efe1"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.74",
+      "kind": "homework",
+      "source_pdf_pages": [
+        171
+      ],
+      "source_printed_pages": [
+        170
+      ],
+      "anchor": "ex-2-74",
+      "title": "减法溢出判断",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 171,
+      "source_pdf_end": 171,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "b2df4b42e5b12b4dfd48f08e1ea298ca935ee8b1a4151677db93320e282fbc3d"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.75",
+      "kind": "homework",
+      "source_pdf_pages": [
+        171
+      ],
+      "source_printed_pages": [
+        170
+      ],
+      "anchor": "ex-2-75",
+      "title": "由有符号高位积得到无符号高位积",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 171,
+      "source_pdf_end": 171,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "5943a7a1a045d221396681417b74c2306316e8510ebca0bb942227f264feaffe"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.76",
+      "kind": "homework",
+      "source_pdf_pages": [
+        171,
+        172
+      ],
+      "source_printed_pages": [
+        170,
+        171
+      ],
+      "anchor": "ex-2-76",
+      "title": "不会长度溢出的 calloc",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 171,
+      "source_pdf_end": 172,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "522ab589aa05a8175b0a66270c6439e783dea4cc412e9b34dbc8cb681a45b5ca"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.77",
+      "kind": "homework",
+      "source_pdf_pages": [
+        172
+      ],
+      "source_printed_pages": [
+        171
+      ],
+      "anchor": "ex-2-77",
+      "title": "最多三次运算的常数乘法",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 172,
+      "source_pdf_end": 172,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "ac7bdd98aa326c17c0a6fdcdff55d00b6ccbf040e049e710a77a283f3bdeb8fe"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.78",
+      "kind": "homework",
+      "source_pdf_pages": [
+        172
+      ],
+      "source_printed_pages": [
+        171
+      ],
+      "anchor": "ex-2-78",
+      "title": "除以任意合法二的幂",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 172,
+      "source_pdf_end": 172,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "c9bf4b743663278ae278cee7d35bd4aeb4d88e6020614e0ce486cc389f9e2954"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.79",
+      "kind": "homework",
+      "source_pdf_pages": [
+        172
+      ],
+      "source_printed_pages": [
+        171
+      ],
+      "anchor": "ex-2-79",
+      "title": "先回绕再除以四",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 172,
+      "source_pdf_end": 172,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "8d1ca55bf413e69e4ae7aac63d5b40188bbda170f34dcc6073ce438464ffa9d9"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.80",
+      "kind": "homework",
+      "source_pdf_pages": [
+        172
+      ],
+      "source_printed_pages": [
+        171
+      ],
+      "anchor": "ex-2-80",
+      "title": "避免溢出的四分之三",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 172,
+      "source_pdf_end": 172,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "86339b45fde30a25f498bbd3231b7128f80690cb2ed67ab58d6ef223b7d8fa18"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.81",
+      "kind": "homework",
+      "source_pdf_pages": [
+        172
+      ],
+      "source_printed_pages": [
+        171
+      ],
+      "anchor": "ex-2-81",
+      "title": "连续零与连续一的掩码",
+      "checked": [
+        "对所有w=8,16,32的合法j,k穷举核验",
+        "所有单次移位计数均小于w"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 172,
+      "source_pdf_end": 172,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "02536051651167b7f8bd09508bdd6a0a7faf6bba4ff0e08e8713b2d19ad2ddd3"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.82",
+      "kind": "homework",
+      "source_pdf_pages": [
+        172,
+        173
+      ],
+      "source_printed_pages": [
+        171,
+        172
+      ],
+      "anchor": "ex-2-82",
+      "title": "补码代数判断",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 172,
+      "source_pdf_end": 173,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 1,
+        "question_html_sha256": "0cc024bd87577903fa8558201c97a36e879de82279b47b590aaf3156fa6e9fe5"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 4,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.83",
+      "kind": "homework",
+      "source_pdf_pages": [
+        173
+      ],
+      "source_printed_pages": [
+        172
+      ],
+      "anchor": "ex-2-83",
+      "title": "无限循环二进制小数",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 173,
+      "source_pdf_end": 173,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "e37322939986063d0d1c8b8df9ec0f8e3960717fd209d65385e5de2cd862029d"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.84",
+      "kind": "homework",
+      "source_pdf_pages": [
+        173,
+        174
+      ],
+      "source_printed_pages": [
+        172,
+        173
+      ],
+      "anchor": "ex-2-84",
+      "title": "只比较浮点位模式",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 173,
+      "source_pdf_end": 174,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "ca162b441a5e36da1f8d39bb997b6edab8ddc15a6710e117df804baf6668b9e8"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.85",
+      "kind": "homework",
+      "source_pdf_pages": [
+        174
+      ],
+      "source_printed_pages": [
+        173
+      ],
+      "anchor": "ex-2-85",
+      "title": "用字段宽度写出特殊值",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 174,
+      "source_pdf_end": 174,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B",
+          "C"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "a498b3af580a400c7df3c6f2a3b11aab9502a7a137f1cd7dd03119e0d532604e"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      },
+      "source_or_language_note": "补充7可精确表示和指数范围条件，最大奇整数采用min(n,B)的一般式",
+      "review_v2": {
+        "issue": "I010",
+        "status": "fixed_verified",
+        "summary": "Complete negative-t MathML checked structurally and visually at 1440/390px."
+      },
+      "acceptance_status": "fixed_verified"
+    },
+    {
+      "number": "2.86",
+      "kind": "homework",
+      "source_pdf_pages": [
+        174
+      ],
+      "source_printed_pages": [
+        173
+      ],
+      "anchor": "ex-2-86",
+      "title": "80 位扩展精度的边界",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 174,
+      "source_pdf_end": 174,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "6a52797c0920b9124174cd26e85256178577c47f29bbd2e7ae9df1a2aa0b63c9"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.87",
+      "kind": "homework",
+      "source_pdf_pages": [
+        174,
+        175
+      ],
+      "source_printed_pages": [
+        173,
+        174
+      ],
+      "anchor": "ex-2-87",
+      "title": "半精度字段表",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 174,
+      "source_pdf_end": 175,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "dc3381dc9e4b0029181a94e5d818b063522bdd05c30dcc3a58c8952278d38c25"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.88",
+      "kind": "homework",
+      "source_pdf_pages": [
+        175,
+        176
+      ],
+      "source_printed_pages": [
+        174,
+        175
+      ],
+      "anchor": "ex-2-88",
+      "title": "按正无穷方向转换九位浮点",
+      "checked": [
+        "PDF175–176图像核对全部两格式字段及表行",
+        "以Fraction枚举格式B全部有限值独立选择上邻点"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 175,
+      "source_pdf_end": 176,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 0,
+        "question_html_sha256": "9d5fcb41f886ba0d7a7f942bbb9f21b067bf2893d9534bd17ae562a959968e9e"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.89",
+      "kind": "homework",
+      "source_pdf_pages": [
+        176
+      ],
+      "source_printed_pages": [
+        175
+      ],
+      "anchor": "ex-2-89",
+      "title": "由整数转换而来的双精度运算",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 176,
+      "source_pdf_end": 176,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 1,
+        "given_program_blocks": 1,
+        "question_html_sha256": "d68b3edf37d04089e9d69899ac0cd6a5a2eb5f194d323e27c0326fb177b75dbb"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 5,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.90",
+      "kind": "homework",
+      "source_pdf_pages": [
+        176,
+        177
+      ],
+      "source_printed_pages": [
+        175,
+        176
+      ],
+      "anchor": "ex-2-90",
+      "title": "直接构造二的幂",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 176,
+      "source_pdf_end": 177,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "34b707435227eb1f41c477286c3561a3a81802aa3100f2e69887e0959beab73c"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.91",
+      "kind": "homework",
+      "source_pdf_pages": [
+        177
+      ],
+      "source_printed_pages": [
+        176
+      ],
+      "anchor": "ex-2-91",
+      "title": "圆周率的二进制近似",
+      "checked": [
+        "逐页核对本版题干、小问与给定输入",
+        "按本章明确机器/语言模型独立推导"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 177,
+      "source_pdf_end": 177,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [
+          "A",
+          "B",
+          "C"
+        ],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "22dbc917a3004355e3e4930cc336457f0e74095e517a5d601db90e6fbc294a62"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 0
+      }
+    },
+    {
+      "number": "2.92",
+      "kind": "homework",
+      "source_pdf_pages": [
+        178
+      ],
+      "source_printed_pages": [
+        177
+      ],
+      "anchor": "ex-2-92",
+      "title": "浮点取负",
+      "checked": [
+        "C全部2^32输入通过本机IEEE/题定NaN契约参考",
+        "C/Python106144个相同边界和伪随机样本输出一致"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 178,
+      "source_pdf_end": 178,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "f13efd1f06fc6619d16eeec403394d9b1cbf2679da7bbe9b126569e08c32dfd8"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.93",
+      "kind": "homework",
+      "source_pdf_pages": [
+        179
+      ],
+      "source_printed_pages": [
+        178
+      ],
+      "anchor": "ex-2-93",
+      "title": "浮点绝对值",
+      "checked": [
+        "C全部2^32输入通过",
+        "负零、无穷与NaN载荷单独覆盖"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 179,
+      "source_pdf_end": 179,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "9cbf95c1baef9f9748fb95afd1c7a8b3301b7d109f24992eea86c02072e15c81"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.94",
+      "kind": "homework",
+      "source_pdf_pages": [
+        179
+      ],
+      "source_printed_pages": [
+        178
+      ],
+      "anchor": "ex-2-94",
+      "title": "浮点乘以二",
+      "checked": [
+        "C全部2^32输入通过",
+        "非正规转正规和最大指数溢出分支覆盖"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 179,
+      "source_pdf_end": 179,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "34f10c85e26ef54973e98d64f45f389e52a2063a1180e197eaa03d9a46b5a168"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.95",
+      "kind": "homework",
+      "source_pdf_pages": [
+        179
+      ],
+      "source_printed_pages": [
+        178
+      ],
+      "anchor": "ex-2-95",
+      "title": "浮点除以二与最近偶数",
+      "checked": [
+        "C全部2^32输入通过",
+        "01/11中点与正规非正规边界均覆盖"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 179,
+      "source_pdf_end": 179,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "1fb20c52d1bc692d4575b59c2c17ac09d177af6763da6ce73d5c312f00e3f1c3"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 3,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.96",
+      "kind": "homework",
+      "source_pdf_pages": [
+        179,
+        180
+      ],
+      "source_printed_pages": [
+        178,
+        179
+      ],
+      "anchor": "ex-2-96",
+      "title": "单精度到有符号整数",
+      "checked": [
+        "C全部2^32输入通过",
+        "参考转换先做范围检查避免C11未定义行为"
+      ],
+      "source_correction": null,
+      "source_pdf_start": 179,
+      "source_pdf_end": 180,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 1,
+        "question_html_sha256": "93fe494e84d053bf09f6d50443017b3b4787cf0846e88177b02740b994c0c040"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 4,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      }
+    },
+    {
+      "number": "2.97",
+      "kind": "homework",
+      "source_pdf_pages": [
+        180
+      ],
+      "source_printed_pages": [
+        179
+      ],
+      "anchor": "ex-2-97",
+      "title": "整数到单精度与进位",
+      "checked": [
+        "C全部2^32个int值通过本机(float)i参考",
+        "覆盖INT_MIN、INT_MAX和24位边界的两种中点进位"
+      ],
+      "source_correction": "原题测试句把实参误写为 f，函数原型和正文均为 i。本解按全部 32 位 int 输入 i 解释这一要求。",
+      "source_pdf_start": 180,
+      "source_pdf_end": 180,
+      "question_evidence": {
+        "source_heading_found_on_start_page": true,
+        "explicit_lettered_subparts": [],
+        "question_tables": 0,
+        "given_program_blocks": 0,
+        "question_html_sha256": "9391661fdb71c03e7a5a4979abde574cba1cee5585dae48e79317f956213cc95"
+      },
+      "answer_evidence": {
+        "reasoning_steps": 4,
+        "contains_answer": true,
+        "paired_program_fragments": 1
+      },
+      "source_or_language_note": "测试句写f，实际输入应为i"
+    }
+  ],
+  "programs": [
+    {
+      "id": "ch02_integer",
+      "files": [
+        {
+          "path": "books/csapp/code/ch02_integer.c",
+          "sha256": "24aeb4813ea080e5a6882faf37095aa9081a39000b04e94688edcac8946fedac",
+          "page_code_id": "ch02-integer-source-c"
+        },
+        {
+          "path": "books/csapp/code/ch02_integer.py",
+          "sha256": "bdf9b77ff6d0675aa783b2e998d47a595b99b2b4c9b3489ad58625930389e81f",
+          "page_code_id": "ch02-integer-source-python"
+        }
+      ],
+      "page_anchor": "ch02-integer",
+      "interface": "no arguments",
+      "default_output": "integer_cases=100169 shifts=3200000 widths=3200000 status=ok\nendian=little int=4 long=8 double=8\nshort12345=39 30\nlong12345=39 30 00 00 00 00 00 00\ndouble1=00 00 00 00 00 00 f0 3f\nreverse=5,4,3,2,1 replace=12ab5678 xbyte=-128 threefourths(-7)=-5\n",
+      "validation": "C11 strict warnings + ASan + UBSan; Python execution; exact stdout match",
+      "assumptions": "8-bit bytes, 32-bit two-complement int, arithmetic right shift; IEEE binary32 for floating point; default round-to-nearest-even"
+    },
+    {
+      "id": "ch02_float",
+      "files": [
+        {
+          "path": "books/csapp/code/ch02_float.c",
+          "sha256": "0880ff583f42bccd123d8a1711a3e987545f030d60c753242b284a709b81f526",
+          "page_code_id": "ch02-float-source-c"
+        },
+        {
+          "path": "books/csapp/code/ch02_float.py",
+          "sha256": "a404d1d2d0d3f0578a07ee0e26e20819ed839715db3226b560d44214ec5a50ef",
+          "page_code_id": "ch02-float-source-python"
+        }
+      ],
+      "page_anchor": "ch02-float",
+      "interface": "no arguments; --exhaustive additionally supported",
+      "default_output": "float_cases=106144 operations=6 comparison_pairs=64 status=ok\nbits=00000000 twice=00000000 half=00000000 int=0\nbits=00000001 twice=00000002 half=00000000 int=0\nbits=00000003 twice=00000006 half=00000002 int=0\nbits=007fffff twice=00fffffe half=00400000 int=0\nbits=00800000 twice=01000000 half=00400000 int=0\nbits=3f800000 twice=40000000 half=3f000000 int=1\nbits=7f7fffff twice=7f800000 half=7effffff int=-2147483648\nbits=7f800000 twice=7f800000 half=7f800000 int=-2147483648\nbits=7fc12345 twice=7fc12345 half=7fc12345 int=-2147483648\npowers=00000000,00000001,00800000,7f800000\n",
+      "validation": "C11 strict warnings + ASan + UBSan; Python execution; exact stdout match",
+      "assumptions": "8-bit bytes, 32-bit two-complement int, arithmetic right shift; IEEE binary32 for floating point; default round-to-nearest-even"
+    }
+  ],
+  "executions": [
+    {
+      "label": "integer strict C11 ASan UBSan compile",
+      "command": [
+        "clang",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-pedantic",
+        "-O1",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-ffp-contract=off",
+        "books/csapp/code/ch02_integer.c",
+        "-o",
+        "tmp/csapp/rework/ch02/integer_san"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "elapsed_seconds": 0.209
+    },
+    {
+      "label": "integer c execution",
+      "command": [
+        "tmp/csapp/rework/ch02/integer_san"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "elapsed_seconds": 0.511,
+      "stdout": "integer_cases=100169 shifts=3200000 widths=3200000 status=ok\nendian=little int=4 long=8 double=8\nshort12345=39 30\nlong12345=39 30 00 00 00 00 00 00\ndouble1=00 00 00 00 00 00 f0 3f\nreverse=5,4,3,2,1 replace=12ab5678 xbyte=-128 threefourths(-7)=-5\n"
+    },
+    {
+      "label": "integer py execution",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "books/csapp/code/ch02_integer.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "elapsed_seconds": 5.335,
+      "stdout": "integer_cases=100169 shifts=3200000 widths=3200000 status=ok\nendian=little int=4 long=8 double=8\nshort12345=39 30\nlong12345=39 30 00 00 00 00 00 00\ndouble1=00 00 00 00 00 00 f0 3f\nreverse=5,4,3,2,1 replace=12ab5678 xbyte=-128 threefourths(-7)=-5\n"
+    },
+    {
+      "label": "integer exact C Python stdout comparison",
+      "status": "passed"
+    },
+    {
+      "label": "float strict C11 ASan UBSan compile",
+      "command": [
+        "clang",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-pedantic",
+        "-O1",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-ffp-contract=off",
+        "books/csapp/code/ch02_float.c",
+        "-o",
+        "tmp/csapp/rework/ch02/float_san"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "elapsed_seconds": 0.076
+    },
+    {
+      "label": "float c execution",
+      "command": [
+        "tmp/csapp/rework/ch02/float_san"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "elapsed_seconds": 0.442,
+      "stdout": "float_cases=106144 operations=6 comparison_pairs=64 status=ok\nbits=00000000 twice=00000000 half=00000000 int=0\nbits=00000001 twice=00000002 half=00000000 int=0\nbits=00000003 twice=00000006 half=00000002 int=0\nbits=007fffff twice=00fffffe half=00400000 int=0\nbits=00800000 twice=01000000 half=00400000 int=0\nbits=3f800000 twice=40000000 half=3f000000 int=1\nbits=7f7fffff twice=7f800000 half=7effffff int=-2147483648\nbits=7f800000 twice=7f800000 half=7f800000 int=-2147483648\nbits=7fc12345 twice=7fc12345 half=7fc12345 int=-2147483648\npowers=00000000,00000001,00800000,7f800000\n"
+    },
+    {
+      "label": "float py execution",
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "books/csapp/code/ch02_float.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "elapsed_seconds": 0.263,
+      "stdout": "float_cases=106144 operations=6 comparison_pairs=64 status=ok\nbits=00000000 twice=00000000 half=00000000 int=0\nbits=00000001 twice=00000002 half=00000000 int=0\nbits=00000003 twice=00000006 half=00000002 int=0\nbits=007fffff twice=00fffffe half=00400000 int=0\nbits=00800000 twice=01000000 half=00400000 int=0\nbits=3f800000 twice=40000000 half=3f000000 int=1\nbits=7f7fffff twice=7f800000 half=7effffff int=-2147483648\nbits=7f800000 twice=7f800000 half=7f800000 int=-2147483648\nbits=7fc12345 twice=7fc12345 half=7fc12345 int=-2147483648\npowers=00000000,00000001,00800000,7f800000\n"
+    },
+    {
+      "label": "float exact C Python stdout comparison",
+      "status": "passed"
+    }
+  ],
+  "exhaustive_float_validation": {
+    "language": "C11",
+    "compiler_flags": "-std=c11 -Wall -Wextra -Werror -pedantic -O3 -ffp-contract=off",
+    "command": "tmp/csapp/rework/ch02/ch02_float --exhaustive",
+    "input_count": 4294967296,
+    "operation_count_per_input": 6,
+    "operation_names": [
+      "float_negate",
+      "float_absval",
+      "float_twice",
+      "float_half",
+      "float_f2i",
+      "float_i2f"
+    ],
+    "exit_code": 0,
+    "stdout": "float_cases=4294967296 operations=6 comparison_pairs=64 status=ok\nbits=00000000 twice=00000000 half=00000000 int=0\nbits=00000001 twice=00000002 half=00000000 int=0\nbits=00000003 twice=00000006 half=00000002 int=0\nbits=007fffff twice=00fffffe half=00400000 int=0\nbits=00800000 twice=01000000 half=00400000 int=0\nbits=3f800000 twice=40000000 half=3f000000 int=1\nbits=7f7fffff twice=7f800000 half=7effffff int=-2147483648\nbits=7f800000 twice=7f800000 half=7f800000 int=-2147483648\nbits=7fc12345 twice=7fc12345 half=7fc12345 int=-2147483648\npowers=00000000,00000001,00800000,7f800000\n",
+    "reference": "native IEEE float operations, guarded in-range float-to-int cast; NaN/overflow use the problem contract",
+    "python_exhaustive_run": false
+  },
+  "independent_numerical_checks": [
+    {
+      "check": "2.1 hexadecimal grouping",
+      "status": "passed",
+      "evidence": {
+        "B": "0xAE49",
+        "D": "0x322D96"
+      }
+    },
+    {
+      "check": "2.6 aligned bit strings",
+      "status": "passed",
+      "evidence": {
+        "longest_run": 21,
+        "float_offset": 2,
+        "matching_overlap_positions": 26,
+        "overlap_length": 30,
+        "decoded_float": 2607352.0
+      }
+    },
+    {
+      "check": "2.16-2.34 small-width representation enumeration",
+      "status": "passed",
+      "evidence": {
+        "widths": [
+          4,
+          5,
+          8
+        ],
+        "checked": [
+          "unsigned/twos-complement mapping",
+          "truncation at all widths"
+        ]
+      }
+    },
+    {
+      "check": "2.46 and 2.51 exact timer error",
+      "status": "passed",
+      "evidence": {
+        "truncation_error": "1/10485760",
+        "truncation_seconds": "5625/16384",
+        "truncation_meters": "703125/1024",
+        "rounded_error": "1/41943040",
+        "rounded_seconds": "5625/65536",
+        "rounded_meters": "703125/4096"
+      }
+    },
+    {
+      "check": "2.52 exhaustive destination-grid nearest-even conversion",
+      "status": "passed",
+      "evidence": [
+        {
+          "A": "0110000",
+          "A_value": "1",
+          "B": "0111000",
+          "B_value": "1"
+        },
+        {
+          "A": "1011110",
+          "A_value": "15/2",
+          "B": "1001111",
+          "B_value": "15/2"
+        },
+        {
+          "A": "0101001",
+          "A_value": "25/32",
+          "B": "0110100",
+          "B_value": "3/4"
+        },
+        {
+          "A": "1101111",
+          "A_value": "31/2",
+          "B": "1011000",
+          "B_value": "16"
+        },
+        {
+          "A": "0000001",
+          "A_value": "1/64",
+          "B": "0001000",
+          "B_value": "1/64"
+        }
+      ]
+    },
+    {
+      "check": "2.81 masks including zero/full width",
+      "status": "passed",
+      "evidence": {
+        "widths": [
+          8,
+          16,
+          32
+        ],
+        "legal_j_k_pairs": 759,
+        "shift_count_bounds": "all individual counts in [0,w-1]"
+      }
+    },
+    {
+      "check": "2.83 periodic binary fractions",
+      "status": "passed",
+      "evidence": [
+        "5/7",
+        "2/5",
+        "19/63"
+      ]
+    },
+    {
+      "check": "2.86 decimal scientific values",
+      "status": "passed",
+      "evidence": [
+        "3.6451995318824746025284059336194198E-4951",
+        "3.3621031431120935062626778173217526E-4932",
+        "1.1897314953572317650212638530309702E+4932"
+      ]
+    },
+    {
+      "check": "2.87 half precision table using rational and native struct e",
+      "status": "passed",
+      "evidence": [
+        {
+          "hex": "8000",
+          "value": "0",
+          "printf_f": "-0.000000"
+        },
+        {
+          "hex": "4001",
+          "value": "1025/512",
+          "printf_f": "2.001953"
+        },
+        {
+          "hex": "6000",
+          "value": "512",
+          "printf_f": "512.000000"
+        },
+        {
+          "hex": "03FF",
+          "value": "1023/16777216",
+          "printf_f": "0.000061"
+        },
+        {
+          "hex": "3BB0",
+          "value": "123/128",
+          "printf_f": "0.960938"
+        }
+      ]
+    },
+    {
+      "check": "2.88 exhaustive destination-grid rounding toward positive infinity",
+      "status": "passed",
+      "evidence": [
+        {
+          "A": "101111001",
+          "A_value": "-9/8",
+          "B": "101110010",
+          "B_value": "-9/8"
+        },
+        {
+          "A": "010110011",
+          "A_value": "176",
+          "B": "011100110",
+          "B_value": "176"
+        },
+        {
+          "A": "100111010",
+          "A_value": "-5/1024",
+          "B": "100000101",
+          "B_value": "-5/1024"
+        },
+        {
+          "A": "000000111",
+          "A_value": "7/131072",
+          "B": "000000001",
+          "B_value": "1/1024"
+        },
+        {
+          "A": "111100000",
+          "A_value": "-8192",
+          "B": "111101111",
+          "B_value": "-248"
+        },
+        {
+          "A": "010111100",
+          "A_value": "384",
+          "B": "011110000",
+          "B_value": "inf"
+        }
+      ]
+    },
+    {
+      "check": "2.89 multiplication associativity with rational rounding oracle",
+      "status": "passed",
+      "evidence": {
+        "x": 1073741825,
+        "y": 1073741825,
+        "z": 123456789,
+        "left_hex": "0x1.d6f3454eb79a3p+86",
+        "right_hex": "0x1.d6f3454eb79a2p+86",
+        "difference": "17179869184"
+      }
+    },
+    {
+      "check": "2.91 pi approximation fractional expansion",
+      "status": "passed",
+      "evidence": {
+        "float_fraction": "13176795/4194304",
+        "float_binary": "11.0010010000111111011011",
+        "22_over_7_binary": "11.0010010010010010010010",
+        "first_different_fractional_bit": 9
+      }
+    }
+  ],
+  "environment": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "python": "3.14.6",
+    "compiler": "Apple clang version 17.0.0 (clang-1700.6.3.2)"
+  },
+  "limits": [
+    "字节序与ABI在当前宿主实测。",
+    "C浮点核心执行全2^32输入；Python默认106144输入，未运行Python全量模式。"
+  ],
+  "document_impact": "本文件记录章节来源、题号和计算验证；全书来源清单、程序登记、治理变更由父任务在整合时联动。",
+  "page_structure_verification": {
+    "status": "passed",
+    "original_exercises": 97,
+    "numbered_subsections": 31,
+    "reading_notes": 5,
+    "original_self_checks": 3,
+    "unique_ids": 242,
+    "paired_fragment_code_blocks": 84,
+    "full_source_copies": [
+      {
+        "id": "representation-c",
+        "source": "books/csapp/code/representation.c",
+        "sha256": "36651d07fee7431b9e86e285e89aa458ae81b7fd60ed490dcd3fb7c813fb1fe4"
+      },
+      {
+        "id": "representation-python",
+        "source": "books/csapp/code/representation.py",
+        "sha256": "4825d2d9b206c902d47c880ac64748fcc2d728e26ed3738088f96e040c0724da"
+      },
+      {
+        "id": "ch02-integer-source-c",
+        "source": "books/csapp/code/ch02_integer.c",
+        "sha256": "24aeb4813ea080e5a6882faf37095aa9081a39000b04e94688edcac8946fedac"
+      },
+      {
+        "id": "ch02-integer-source-python",
+        "source": "books/csapp/code/ch02_integer.py",
+        "sha256": "bdf9b77ff6d0675aa783b2e998d47a595b99b2b4c9b3489ad58625930389e81f"
+      },
+      {
+        "id": "ch02-float-source-c",
+        "source": "books/csapp/code/ch02_float.c",
+        "sha256": "0880ff583f42bccd123d8a1711a3e987545f030d60c753242b284a709b81f526"
+      },
+      {
+        "id": "ch02-float-source-python",
+        "source": "books/csapp/code/ch02_float.py",
+        "sha256": "a404d1d2d0d3f0578a07ee0e26e20819ed839715db3226b560d44214ec5a50ef"
+      }
+    ],
+    "mathml_nodes": 130,
+    "inline_svg_figures": 7,
+    "checks": [
+      "balanced HTML tree",
+      "local files and same-page fragments",
+      "question precedes answer",
+      "source page attributes",
+      "required original anchors",
+      "full source byte equality",
+      "fragment source equality",
+      "MathML TeX input has no escaped control characters"
+    ]
+  },
+  "registered_quick_check": {
+    "command": "python3 tools/project.py check --book csapp --quick",
+    "exit_code": 1,
+    "report": "tmp/project-check/20261013T220541-auw1qwcb/report.json",
+    "passed": [
+      "tools/check_structure.py",
+      "tools/test_release_support.py"
+    ],
+    "integration_failure": "chapter02_information.html: missing reading-position marker",
+    "resolution_owner": "parent integration; common template and checker are outside this chapter producer scope"
+  },
+  "page_sha256": "4080270fb0beb7cd0b77815af29817646cce78048ff1288eade3585b59a17c4b",
+  "integrated_reading_review": "notes/reading_review.json",
+  "integrated_check": "tmp/project-check/20261013T225356-n4s1jvtm/csapp/report.json",
+  "independent_review": {
+    "status": "PASS",
+    "scope": {
+      "main_body": "Read all 23 major sections and their 107 numbered secondary subsections in chapters 2-4; substantively reviewed two-complement/conversion/truncation/rounding, instruction state/control/call/stack/array/layout, Y86 ISA/SEQ/PIPE/forwarding/hazards/exceptions.",
+      "priority_original_exercises": [
+        "2.19",
+        "2.24",
+        "2.45",
+        "2.54",
+        "2.89",
+        "2.90",
+        "2.91",
+        "2.92",
+        "2.93",
+        "2.94",
+        "2.95",
+        "2.96",
+        "2.97",
+        "3.10",
+        "3.26",
+        "3.28",
+        "3.39",
+        "3.49",
+        "3.63",
+        "3.66",
+        "3.69",
+        "3.73",
+        "3.74",
+        "4.4",
+        "4.17",
+        "4.26",
+        "4.44",
+        "4.52",
+        "4.53",
+        "4.54",
+        "4.55",
+        "4.56",
+        "4.57",
+        "4.58",
+        "4.59"
+      ],
+      "additional_original_exercises": [
+        "4.5",
+        "4.6",
+        "4.47",
+        "4.48",
+        "4.49"
+      ],
+      "source_checked_figures": [
+        "3.37",
+        "3.43",
+        "3.44",
+        "3.53"
+      ],
+      "baseline": "Read current stochastic and Weiss note conventions and representative formal chapter-2 prose.",
+      "independent_math_evidence": "tmp/csapp/rework/mechanism-review/independent_math_result.json",
+      "independent_y86_text_evidence": "tmp/csapp/rework/mechanism-review/y86_text_result.json",
+      "readback": "tmp/csapp/rework/mechanism-review/readback.json"
+    },
+    "limits": [
+      "The other 191 original exercise answers were not individually source-checked in this independent review.",
+      "SVG captions, values and mechanism relationships were read from source; browser pixels/layout and source PDF raster images were not inspected.",
+      "Full 2^32 float and x86 classification execution was not repeated; existing records were read separately.",
+      "Original checkpoint simulator limit has been closed by the separate bounded execution follow-up. See simulator_execution_review.json for official baseline differences and remaining execution scope."
+    ],
+    "evidence": "tmp/csapp/rework/mechanism-review/mechanism_review.json"
+  },
+  "source_reading_revision": {
+    "reviewed_at": "2026-10-13T16:41:34.904736+00:00",
+    "page_sha256": "8099dbba0002bfb3d7b58d888c576502b3533296c43e9218aff0bcf95bbbd6ac",
+    "source_passages": 28,
+    "record": "source_reading_review.json",
+    "reading": "reading_review.json",
+    "binding_note": "本对象绑定I004新增原文、关联解释和最终呈现；顶层旧审阅哈希与逐题结论保留I003的历史范围。"
+  },
+  "review_v2_revision": {
+    "issue": "I010",
+    "reviewed_at": "2026-10-14T13:44:25.640972+00:00",
+    "scope": "Only this chapter's listed REA v2 findings and affected source copies; prior reviews retain their scope.",
+    "previous_current_fields": {
+      "review_status": "content_programs_and_local_reading_verified",
+      "page_sha256": "0bbeed6887d7b5ac6a118a0a2f614dc6b8f8ed6e2519e089b675a354723eea79"
+    },
+    "page_hash_change": {
+      "before": "8099dbba0002bfb3d7b58d888c576502b3533296c43e9218aff0bcf95bbbd6ac",
+      "after": "4080270fb0beb7cd0b77815af29817646cce78048ff1288eade3585b59a17c4b"
+    },
+    "findings": [
+      {
+        "id": "F7",
+        "priority": "P3",
+        "status": "fixed_verified",
+        "chapters": [
+          2
+        ],
+        "summary": "Both negative-t powers in 2.85 have complete MathML and data-tex; missing-exponent variant is rejected and desktop/mobile rendering read.",
+        "evidence": "tmp/csapp/review-v2-fixes/browser/reading-targets.json"
+      }
+    ],
+    "full_program_report": "tmp/project-check/20261014T213638-7e7waj6i/csapp/report.json",
+    "reading_review": "notes/reading_review.json",
+    "acceptance": "test/T010-csapp-review-v2-fixes.md"
+  },
+  "open_findings": 0
+}

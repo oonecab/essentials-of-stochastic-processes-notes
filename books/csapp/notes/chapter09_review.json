@@ -1,0 +1,831 @@
+{
+  "chapter": 9,
+  "edition": "Computer Systems: A Programmer’s Perspective, Third Global Edition",
+  "source": {
+    "path": "books/csapp/csapp.pdf",
+    "sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+    "printed_pages": [
+      837,
+      921
+    ],
+    "pdf_pages": [
+      838,
+      922
+    ],
+    "entire_chapter_and_practice_solutions_read": true,
+    "source_visual_review": [
+      "tmp/csapp/part2/ch09/source-859.png",
+      "tmp/csapp/part2/ch09/source-863.png",
+      "tmp/csapp/part2/ch09/source-889.png",
+      "tmp/csapp/part2/ch09/source-916.png",
+      "tmp/csapp/part2/ch09/source-918.png"
+    ]
+  },
+  "page": "books/csapp/notes/chapter09_virtual_memory.html",
+  "scope": {
+    "main_sections": [
+      "s9-1",
+      "s9-2",
+      "s9-3",
+      "s9-4",
+      "s9-5",
+      "s9-6",
+      "s9-7",
+      "s9-8",
+      "s9-9",
+      "s9-10",
+      "s9-11",
+      "s9-12"
+    ],
+    "subsections": [
+      "ss9-3-1",
+      "ss9-3-2",
+      "ss9-3-3",
+      "ss9-3-4",
+      "ss9-3-5",
+      "ss9-3-6",
+      "ss9-6-1",
+      "ss9-6-2",
+      "ss9-6-3",
+      "ss9-6-4",
+      "ss9-7-1",
+      "ss9-7-2",
+      "ss9-8-1",
+      "ss9-8-2",
+      "ss9-8-3",
+      "ss9-8-4",
+      "ss9-9-1",
+      "ss9-9-2",
+      "ss9-9-3",
+      "ss9-9-4",
+      "ss9-9-5",
+      "ss9-9-6",
+      "ss9-9-7",
+      "ss9-9-8",
+      "ss9-9-9",
+      "ss9-9-10",
+      "ss9-9-11",
+      "ss9-9-12",
+      "ss9-9-13",
+      "ss9-9-14",
+      "ss9-10-1",
+      "ss9-10-2",
+      "ss9-10-3",
+      "ss9-11-1",
+      "ss9-11-2",
+      "ss9-11-3",
+      "ss9-11-4",
+      "ss9-11-5",
+      "ss9-11-6",
+      "ss9-11-7",
+      "ss9-11-8",
+      "ss9-11-9",
+      "ss9-11-10"
+    ],
+    "original_exercises": 20,
+    "practice": 10,
+    "homework": 10,
+    "reading_notes": 12,
+    "annotation_cards": 24,
+    "original_self_checks_retained": [
+      "q9-1",
+      "q9-2",
+      "q9-3"
+    ]
+  },
+  "exercises": [
+    {
+      "number": "9.1",
+      "kind": "practice",
+      "pdf_start": 842,
+      "printed_start": 841,
+      "anchor": "ex-9-1",
+      "pdf_pages": [
+        842
+      ],
+      "printed_pages": [
+        841
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "地址位数、地址数量与最大地址",
+      "source_correction": null
+    },
+    {
+      "number": "9.2",
+      "kind": "practice",
+      "pdf_start": 844,
+      "printed_start": 843,
+      "anchor": "ex-9-2",
+      "pdf_pages": [
+        844,
+        845
+      ],
+      "printed_pages": [
+        843,
+        844
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "每个虚拟页需要一项PTE",
+      "source_correction": null
+    },
+    {
+      "number": "9.3",
+      "kind": "practice",
+      "pdf_start": 853,
+      "printed_start": 852,
+      "anchor": "ex-9-3",
+      "pdf_pages": [
+        853
+      ],
+      "printed_pages": [
+        852
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "VPN、VPO、PPN、PPO位宽",
+      "source_correction": null
+    },
+    {
+      "number": "9.4",
+      "kind": "practice",
+      "pdf_start": 861,
+      "printed_start": 860,
+      "anchor": "ex-9-4",
+      "pdf_pages": [
+        861,
+        862
+      ],
+      "printed_pages": [
+        860,
+        861
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "TLB与cache都命中的完整读取",
+      "source_correction": null
+    },
+    {
+      "number": "9.5",
+      "kind": "practice",
+      "pdf_start": 876,
+      "printed_start": 875,
+      "anchor": "ex-9-5",
+      "pdf_pages": [
+        876
+      ],
+      "printed_pages": [
+        875
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "用mmap把文件复制到stdout",
+      "source_correction": null
+    },
+    {
+      "number": "9.6",
+      "kind": "practice",
+      "pdf_start": 886,
+      "printed_start": 885,
+      "anchor": "ex-9-6",
+      "pdf_pages": [
+        886
+      ],
+      "printed_pages": [
+        885
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "图9.35只有头部时的块大小",
+      "source_correction": null
+    },
+    {
+      "number": "9.7",
+      "kind": "practice",
+      "pdf_start": 889,
+      "printed_start": 888,
+      "anchor": "ex-9-7",
+      "pdf_pages": [
+        889,
+        890,
+        891
+      ],
+      "printed_pages": [
+        888,
+        889,
+        890
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "最小块同时满足已分配与空闲状态",
+      "source_correction": null
+    },
+    {
+      "number": "9.8",
+      "kind": "practice",
+      "pdf_start": 898,
+      "printed_start": 897,
+      "anchor": "ex-9-8",
+      "pdf_pages": [
+        898
+      ],
+      "printed_pages": [
+        897
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "完成first-fit搜索",
+      "source_correction": "原书print920 find_fit答案有未配对#endif；按独立函数移除并说明。"
+    },
+    {
+      "number": "9.9",
+      "kind": "practice",
+      "pdf_start": 898,
+      "printed_start": 897,
+      "anchor": "ex-9-9",
+      "pdf_pages": [
+        898,
+        899
+      ],
+      "printed_pages": [
+        897,
+        898
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "place只产生合法剩余块",
+      "source_correction": null
+    },
+    {
+      "number": "9.10",
+      "kind": "practice",
+      "pdf_start": 901,
+      "printed_start": 900,
+      "anchor": "ex-9-10",
+      "pdf_pages": [
+        901
+      ],
+      "printed_pages": [
+        900
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "简单分离存储的外部碎片轨迹",
+      "source_correction": null
+    },
+    {
+      "number": "9.11",
+      "kind": "homework",
+      "pdf_start": 913,
+      "printed_start": 912,
+      "anchor": "ex-9-11",
+      "pdf_pages": [
+        913,
+        914
+      ],
+      "printed_pages": [
+        912,
+        913
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "TLB未命中、页命中、cache未命中",
+      "source_correction": null
+    },
+    {
+      "number": "9.12",
+      "kind": "homework",
+      "pdf_start": 914,
+      "printed_start": 913,
+      "anchor": "ex-9-12",
+      "pdf_pages": [
+        914,
+        915
+      ],
+      "printed_pages": [
+        913,
+        914
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "有效cache项也可能tag不匹配",
+      "source_correction": null
+    },
+    {
+      "number": "9.13",
+      "kind": "homework",
+      "pdf_start": 915,
+      "printed_start": 914,
+      "anchor": "ex-9-13",
+      "pdf_pages": [
+        915,
+        916
+      ],
+      "printed_pages": [
+        914,
+        915
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "缺页时不能继续计算物理cache",
+      "source_correction": null
+    },
+    {
+      "number": "9.14",
+      "kind": "homework",
+      "pdf_start": 916,
+      "printed_start": 915,
+      "anchor": "ex-9-14",
+      "pdf_pages": [
+        916
+      ],
+      "printed_pages": [
+        915
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "把共享映射的修改写回文件",
+      "source_correction": null
+    },
+    {
+      "number": "9.15",
+      "kind": "homework",
+      "pdf_start": 916,
+      "printed_start": 915,
+      "anchor": "ex-9-15",
+      "pdf_pages": [
+        916
+      ],
+      "printed_pages": [
+        915
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "图9.35只有头部时的块大小",
+      "source_correction": null
+    },
+    {
+      "number": "9.16",
+      "kind": "homework",
+      "pdf_start": 916,
+      "printed_start": 915,
+      "anchor": "ex-9-16",
+      "pdf_pages": [
+        916
+      ],
+      "printed_pages": [
+        915
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "最小块同时满足已分配与空闲状态",
+      "source_correction": null
+    },
+    {
+      "number": "9.17",
+      "kind": "homework",
+      "pdf_start": 916,
+      "printed_start": 915,
+      "anchor": "ex-9-17",
+      "pdf_pages": [
+        916
+      ],
+      "printed_pages": [
+        915
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "next-fit完整实现与游标修复",
+      "source_correction": null
+    },
+    {
+      "number": "9.18",
+      "kind": "homework",
+      "pdf_start": 916,
+      "printed_start": 915,
+      "anchor": "ex-9-18",
+      "pdf_pages": [
+        916
+      ],
+      "printed_pages": [
+        915
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "仅空闲块保留尾部",
+      "source_correction": null
+    },
+    {
+      "number": "9.19",
+      "kind": "homework",
+      "pdf_start": 917,
+      "printed_start": 916,
+      "anchor": "ex-9-19",
+      "pdf_pages": [
+        917
+      ],
+      "printed_pages": [
+        916
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "分配与保守回收三组选项",
+      "source_correction": null
+    },
+    {
+      "number": "9.20",
+      "kind": "homework",
+      "pdf_start": 917,
+      "printed_start": 916,
+      "anchor": "ex-9-20",
+      "pdf_pages": [
+        917
+      ],
+      "printed_pages": [
+        916
+      ],
+      "complete_question_and_subparts": true,
+      "input_tables_programs_present": true,
+      "answer_present": true,
+      "manifest_match": true,
+      "substantive_check": "实现malloc/free并做有边界的对照",
+      "source_correction": null,
+      "review_v2": {
+        "issue": "I010",
+        "status": "fixed_verified_with_platform_scope",
+        "summary": "Same trace and reserved block-region denominator compared; three repeats, Darwin private scalable zone; throughput kept separate."
+      },
+      "acceptance_status": "fixed_verified_with_platform_scope"
+    }
+  ],
+  "source_corrections": [
+    "x86 page-permission fault terminology",
+    "IA-32e page sizes versus original 4 MB wording",
+    "postfix decrement precedence explanation",
+    "unmatched endif in printed first-fit answer"
+  ],
+  "review_status": "content_programs_and_local_reading_verified",
+  "page_sha256": "8b5cc09eaff849778b16e67dae2d8c1aff72863739f7cb319ef027f7d288e23a",
+  "limitations": [
+    "The executable VM code reads a fixed snapshot; it does not emulate OS fault servicing or actual hardware.",
+    "The byte-arena allocator offers 8-byte teaching alignment and finite capacity; it is not a libc replacement.",
+    "Allocator timing is one bounded host observation; libc usable-block space is not whole-heap utilization.",
+    "No browser acceptance or independent reviewer approval claimed by this author record."
+  ],
+  "page_revision_history": [
+    {
+      "change": "Added existing source-excerpt index and header program-guide link to match chapter 8 template; no chapter content or topology change.",
+      "previous_sha256": "980cfe8fb7c391de4782c02a4889f5f8221ed54f453ea6bfcbcab15a9baec227",
+      "current_sha256": "bff4ed3bc4ccae431389fc23dfc8be0e27779339479b0f88e4bd1147bfabf909"
+    }
+  ],
+  "integrated_verification": {
+    "status": "passed_locally",
+    "recorded_at": "2026-10-14T01:55:51.767578+00:00",
+    "author_page_sha256": "bff4ed3bc4ccae431389fc23dfc8be0e27779339479b0f88e4bd1147bfabf909",
+    "current_page_sha256": "14fd1fc70e6bfb683d9c99058dc21ef22dbed6097dc9fda2d9afc5ef4353728d",
+    "independent_review": {
+      "reviewer": "chapter08 agent, independent of chapter09 author",
+      "chapter": 9,
+      "page_sha256": "95cd55152bed71a3d012cd3ea19d5df4867622756eebf79199e2c991cec34400",
+      "source_visual": "tmp/csapp/part2/ch09/source-859.png",
+      "source_read": "PDF913-918 homework plus rendered Figure9.20 snapshot",
+      "scope": [
+        "HTML sections9.6,9.8,9.9,9.11",
+        "all 20 exercise questions and answers read",
+        "C and Python VM input snapshot checked against PDF859",
+        "allocator C/Python placement, all four coalescing cases, next-fit rover, footer-elision invariants",
+        "homework9.16-9.20 and 8-byte teaching alignment versus libc constraints",
+        "mmap full C source read"
+      ],
+      "findings": [
+        {
+          "id": "C09-9.7-IMPLICIT-LIST-CONTEXT",
+          "priority": 2,
+          "status": "closed",
+          "initial": "Implicit-list 9.7 answer falsely referred to 4-byte link pointers from explicit-list 9.16.",
+          "fix_verified": "Final9.7 explains allocated payload >=1, free boundary tags8B, max across states and alignment; extraneous links removed."
+        }
+      ],
+      "execution": {
+        "allocator": "tmp/csapp/part2/ch08/review_ch09_allocator.c; strict C11 ASan/UBSan; first/next x full/free-only footers: leftover8 absorbed and leftover16 split; all4 modes passed",
+        "vm": "4 manually derived expected output rows match sanitized C; unknown PTE1000 and5 other invalid inputs return2",
+        "source_snapshot": "all valid TLB tag/PPN, PTE valid/PPN and cache tag/data match PDF859; invalid residual data ignored"
+      },
+      "limits": [
+        "No browser rendering review performed by this reviewer.",
+        "No Linux hardware page-fault execution claimed.",
+        "No repeated timing benchmark; metric formulas and published sample bounds reviewed."
+      ],
+      "open_findings": [],
+      "status": "passed_scoped_independent_review"
+    },
+    "full_check": "tmp/project-check/20261014T093905-tss_fd89/report.json",
+    "final_static_check": "tmp/project-check/20261014T095134-wubdivie/report.json",
+    "browser_review": "notes/reading_review.json",
+    "presentation_changes_after_peer_review": "13张短表增加compact-table；摘录索引、程序入口、导航ID和中文目录统一",
+    "boundary": "作者逐题源审、第二人复核、执行和浏览器验收分别记录；旧hash保持其原审阅时点。"
+  },
+  "author_status_before_integration": {
+    "review_status": "author source/model readback; independent review and rendered browser acceptance are separately recorded"
+  },
+  "status": "content_programs_and_local_reading_verified",
+  "assessment_revision": {
+    "recorded_at": "2026-10-14T02:51:27.674618+00:00",
+    "status": "passed_locally",
+    "assessment": {
+      "thread_title": "rea-评估-v-1",
+      "thread_id": "01a135dd-ac7b-7091-b444-2a06be2b49b3",
+      "report": "tmp/csapp/rea-review-part2/review.json"
+    },
+    "evidence": {
+      "old_shell": "tmp/csapp/part2-review-fixes/independent-shell-red.json",
+      "old_template": "tmp/csapp/part2-review-fixes/template-red.json",
+      "independent_review": "tmp/csapp/part2-review-fixes/independent-review.json",
+      "full_check": "tmp/project-check/20261014T104957-jd33ad7l/report.json",
+      "csapp_report": "tmp/project-check/20261014T104957-jd33ad7l/csapp/report.json",
+      "quick_check": "tmp/project-check/20261014T104958-p7j9y0_i/report.json",
+      "browser": "notes/reading_review.json",
+      "test_design": "test/T006-csapp-part-two-review-fixes.md"
+    },
+    "boundaries": [
+      "本轮复验使用真实本机POSIX进程、严格C11、ASan/UBSan及ego-browser；引用REA原评估，未新增REA运行。",
+      "仍登记作业的直属PID及原进程组属于本shell清理范围；已经回收移除的历史作业不再跟踪。",
+      "原逐章源审保留原时点；未重复全书逐题源审或生产部署。"
+    ],
+    "scope": "新增正式allocator独立回归与变异检出；第9章HTML及C/Python维护源未改。",
+    "current_page_sha256": "14fd1fc70e6bfb683d9c99058dc21ef22dbed6097dc9fda2d9afc5ef4353728d",
+    "program_checks": {
+      "relocation_integer_reference_cases": 262,
+      "allocator_live_interval_operations": 24490,
+      "allocator_conditions": "first/next fit x full/free-only footers; live-interval complement and cursor reference; C payload and failure arena/control preservation; -DNDEBUG ASan/UBSan",
+      "allocator_modes": [
+        {
+          "policy": "first-fit",
+          "footers": "full",
+          "seed": 937713,
+          "random_operations": 6000,
+          "operations": 6122,
+          "allocation_attempts": 4033,
+          "successful_allocations": 2039,
+          "frees": 2039,
+          "null_frees": 50,
+          "failed_allocations": {
+            "zero": 258,
+            "overlarge": 1515,
+            "exhaustion": 221
+          },
+          "next_fit_wraps": 0,
+          "different_from_first_fit": 0,
+          "cursor_repairs": 1155,
+          "coalescing_cases": [
+            574,
+            1044,
+            101,
+            320
+          ],
+          "directed_scenarios": [
+            "coalescing-0",
+            "coalescing-1",
+            "coalescing-2",
+            "coalescing-3",
+            "policy-selection",
+            "wrap-to-low-hole",
+            "cursor-right-then-both-merge",
+            "failure-state-preservation"
+          ]
+        },
+        {
+          "policy": "next-fit",
+          "footers": "full",
+          "seed": 937714,
+          "random_operations": 6000,
+          "operations": 6123,
+          "allocation_attempts": 4011,
+          "successful_allocations": 2062,
+          "frees": 2062,
+          "null_frees": 50,
+          "failed_allocations": {
+            "zero": 267,
+            "overlarge": 1466,
+            "exhaustion": 216
+          },
+          "next_fit_wraps": 1,
+          "different_from_first_fit": 379,
+          "cursor_repairs": 1248,
+          "coalescing_cases": [
+            485,
+            1031,
+            177,
+            369
+          ],
+          "directed_scenarios": [
+            "coalescing-0",
+            "coalescing-1",
+            "coalescing-2",
+            "coalescing-3",
+            "policy-selection",
+            "wrap-to-low-hole",
+            "cursor-right-then-both-merge",
+            "failure-state-preservation"
+          ]
+        },
+        {
+          "policy": "first-fit",
+          "footers": "free-only",
+          "seed": 937715,
+          "random_operations": 6000,
+          "operations": 6122,
+          "allocation_attempts": 3955,
+          "successful_allocations": 2117,
+          "frees": 2117,
+          "null_frees": 50,
+          "failed_allocations": {
+            "zero": 264,
+            "overlarge": 957,
+            "exhaustion": 617
+          },
+          "next_fit_wraps": 0,
+          "different_from_first_fit": 0,
+          "cursor_repairs": 1083,
+          "coalescing_cases": [
+            756,
+            987,
+            84,
+            290
+          ],
+          "directed_scenarios": [
+            "coalescing-0",
+            "coalescing-1",
+            "coalescing-2",
+            "coalescing-3",
+            "policy-selection",
+            "wrap-to-low-hole",
+            "cursor-right-then-both-merge",
+            "failure-state-preservation"
+          ]
+        },
+        {
+          "policy": "next-fit",
+          "footers": "free-only",
+          "seed": 937716,
+          "random_operations": 6000,
+          "operations": 6123,
+          "allocation_attempts": 3949,
+          "successful_allocations": 2124,
+          "frees": 2124,
+          "null_frees": 50,
+          "failed_allocations": {
+            "zero": 253,
+            "overlarge": 971,
+            "exhaustion": 601
+          },
+          "next_fit_wraps": 1,
+          "different_from_first_fit": 575,
+          "cursor_repairs": 1055,
+          "coalescing_cases": [
+            630,
+            871,
+            227,
+            396
+          ],
+          "directed_scenarios": [
+            "coalescing-0",
+            "coalescing-1",
+            "coalescing-2",
+            "coalescing-3",
+            "policy-selection",
+            "wrap-to-low-hole",
+            "cursor-right-then-both-merge",
+            "failure-state-preservation"
+          ]
+        }
+      ],
+      "allocator_trace_steps": 24562,
+      "allocator_mutation_results": [
+        {
+          "mutation": "missing backward coalescing",
+          "exit_code": 1,
+          "stderr": "step=8 mode=0 op=F allocator invariant"
+        },
+        {
+          "mutation": "next-fit replaced by first-fit",
+          "exit_code": 1,
+          "stderr": "step=6193 mode=1 op=A address differs from live-interval reference"
+        },
+        {
+          "mutation": "next-fit cursor not repaired after free",
+          "exit_code": 1,
+          "stderr": "step=6150 mode=1 op=F cursor differs from independent reference"
+        }
+      ],
+      "vm_hand_derived_cases": 5,
+      "vm_invalid_inputs_per_language": 10,
+      "detected_mutations": [
+        "wrong PC-relative place sign",
+        "missing backward coalescing",
+        "next-fit replaced by first-fit",
+        "next-fit cursor not repaired after free"
+      ],
+      "native_linker_probe": "separate compile, archive, rejected unresolved symbol, dynamic loading and failures",
+      "native_mmap_cases": 6,
+      "native_shell_pty": "background, stop, jobs, bg, fg, SIGINT forwarding, reap, invalid job, quit"
+    }
+  },
+  "review_v2_revision": {
+    "issue": "I010",
+    "reviewed_at": "2026-10-14T13:44:25.640972+00:00",
+    "scope": "Only this chapter's listed REA v2 findings and affected source copies; prior reviews retain their scope.",
+    "previous_current_fields": {
+      "status": "content_source_program_and_reading_verified_locally",
+      "review_status": {
+        "author_source_review": true,
+        "independent_review": "completed_with_scope_in_integrated_verification",
+        "browser_reading": "passed_locally"
+      },
+      "page_sha256": "14fd1fc70e6bfb683d9c99058dc21ef22dbed6097dc9fda2d9afc5ef4353728d"
+    },
+    "page_hash_change": {
+      "before": "21d1f4d466c82be050150ad90602a466191dd850a6c47e90c137695cac8408cf",
+      "after": "8b5cc09eaff849778b16e67dae2d8c1aff72863739f7cb319ef027f7d288e23a"
+    },
+    "findings": [
+      {
+        "id": "F2",
+        "priority": "P2",
+        "status": "fixed_verified",
+        "chapters": [
+          5,
+          8,
+          9,
+          12
+        ],
+        "summary": "Necessary computations and self-checks execute independently of assert; 24 ordinary/disabled-assertion runs pass and 42 wrong variants fail as intended.",
+        "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/assertion-regressions/report.json"
+      },
+      {
+        "id": "F6",
+        "priority": "P3",
+        "status": "fixed_verified",
+        "chapters": [
+          9
+        ],
+        "summary": "9.20 compares the same two allocation traces with peak payload / maximum reserved block-storage regions, three repeats. Darwin private scalable zone only; not RSS or total allocator cost.",
+        "evidence": "tmp/project-check/20261014T213638-7e7waj6i/csapp/content-review/report.json"
+      },
+      {
+        "id": "F8",
+        "priority": "P3",
+        "status": "fixed_verified",
+        "chapters": [
+          9
+        ],
+        "summary": "9.6.3 distinguishes index 8 from the ninth region; 9215 = 8*1024+1023, with the 16 KiB total unchanged.",
+        "evidence": "tmp/csapp/review-v2-fixes/content/source-readback.json"
+      }
+    ],
+    "full_program_report": "tmp/project-check/20261014T213638-7e7waj6i/csapp/report.json",
+    "reading_review": "notes/reading_review.json",
+    "acceptance": "test/T010-csapp-review-v2-fixes.md"
+  },
+  "open_findings": 0
+}

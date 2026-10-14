@@ -1,0 +1,6 @@
+irmovq $1,%rcx
+xorq %rax,%rax
+jmp next
+irmovq $99,%rbx
+next: addq %rcx,%rax
+halt

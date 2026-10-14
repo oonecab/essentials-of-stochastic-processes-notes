@@ -1,0 +1,7 @@
+irmovq $19,%rax
+irmovq data,%rcx
+mrmovq 0(%rcx),%rdx
+rmmovq %rax,0(%rdx)
+halt
+.pos 0x200
+data: .quad 0x300

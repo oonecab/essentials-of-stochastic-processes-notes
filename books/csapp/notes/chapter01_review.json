@@ -1,0 +1,68 @@
+{
+  "chapter": 1,
+  "source_pdf_pages": [
+    38,
+    65
+  ],
+  "subsections": [
+    "1.4.1",
+    "1.4.2",
+    "1.7.1",
+    "1.7.2",
+    "1.7.3",
+    "1.7.4",
+    "1.9.1",
+    "1.9.2",
+    "1.9.3"
+  ],
+  "exercises": [
+    {
+      "number": "1.1",
+      "pdf_pages": [
+        59,
+        60
+      ],
+      "anchor": "ex-1-1",
+      "review": "Exact 1.67 and rounded 5/3 targets distinguished."
+    },
+    {
+      "number": "1.2",
+      "pdf_pages": [
+        60,
+        65
+      ],
+      "anchor": "ex-1-2",
+      "review": "Corrected missing denominator parentheses; k=6 by time partition."
+    }
+  ],
+  "new_programs": [
+    {
+      "id": "ch01-amdahl",
+      "files": {
+        "c": "code/ch01_amdahl.c",
+        "python": "code/ch01_amdahl.py"
+      },
+      "page": "notes/chapter01_tour.html",
+      "purpose": "Amdahl fractions, finite target and upper limit"
+    }
+  ],
+  "content_review": [
+    "ASCII source escapes versus runtime bytes",
+    "compiler stages and symbol resolution",
+    "system calls versus context switches",
+    "virtual address regions and object lifetime",
+    "latency versus throughput"
+  ],
+  "execution": "pending integrated verification",
+  "page_sha256": "d4b91ad14cea51bfa414f2cc5ba6d599fd657257435e4f748264ba99c586ab92",
+  "integrated_reading_review": "notes/reading_review.json",
+  "integrated_check": "tmp/project-check/20261013T225356-n4s1jvtm/csapp/report.json",
+  "source_reading_revision": {
+    "reviewed_at": "2026-10-13T16:41:34.904736+00:00",
+    "page_sha256": "02fdb836a9f352c53926e97879c4fa884b6f50992ce9e1df4bd07e2e54dd7fad",
+    "source_passages": 9,
+    "record": "source_reading_review.json",
+    "reading": "reading_review.json",
+    "binding_note": "本对象绑定I004新增原文、关联解释和最终呈现；顶层旧审阅哈希与逐题结论保留I003的历史范围。"
+  }
+}

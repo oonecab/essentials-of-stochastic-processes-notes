@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "issue": "I014",
+  "status": "deployed_and_verified",
+  "accepted_at": "2026-10-15T00:06:02.141212+08:00",
+  "source_commit": "e3d17674737500b7c84addcb96c054851def3cbe",
+  "source_tree": "a1d8e3c046b160b72dc7a2d34c48066152687257",
+  "remote": "oonecab/reading-notes",
+  "branch": "main",
+  "site": "https://notes.zzzping.top/",
+  "release": {
+    "id": "20261014T231909",
+    "files": 233,
+    "html_pages": 52,
+    "reading_pages": 36,
+    "archive_sha256": "2b8e88d3060e90f8f20cba531f5fff4348c3fb9858027769eded4c660435a8da",
+    "source_bindings_checked": 217,
+    "local_references_checked": 5159
+  },
+  "validation": {
+    "governance": "passed; manual README and gitignore preservation warnings reviewed",
+    "full_program_checks": "tmp/project-check/20261014T222450-eotudk06/report.json",
+    "full_check_reuse_basis": "Current source bindings and exact Git export build match the accepted package; subsequent edits concern documentation.",
+    "git_export_quick_check": "tmp/site-publication-20261014/run-git-ah6w_644/source-ready/tmp/project-check/20261014T231753-4xmgq8tv/report.json",
+    "secrets_source_findings": 0,
+    "secrets_prior_history_findings": 0,
+    "origin_files_checked": 230,
+    "public_files_checked": 230,
+    "entry_redirects": 9,
+    "pdf_ranges": [
+      {
+        "path": "csapp/csapp.pdf",
+        "status": 206,
+        "range": "bytes 32-63/6765790",
+        "bytes_match": true
+      },
+      {
+        "path": "stochastic/assets/essentials-of-stochastic-processes.pdf",
+        "status": 206,
+        "range": "bytes 32-63/2579008",
+        "bytes_match": true
+      }
+    ],
+    "inline_script_csp_sources": 9
+  },
+  "browser": {
+    "engine": "ego-browser Chromium",
+    "widths": [
+      1440,
+      390
+    ],
+    "requested_addresses": 52,
+    "layout_views": 104,
+    "whole_page_overflow_failures": 0,
+    "homepage_entries_and_returns": [
+      "stochastic",
+      "weiss",
+      "csapp"
+    ],
+    "desktop_reading_path": [
+      "homepage CSAPP button",
+      "overview chapter12 link",
+      "chapter source PDF link to page1008",
+      "native PDF toolbar 1008/1122",
+      "history back to chapter",
+      "reading-bar home link"
+    ],
+    "pdf_visual_confirmation": {
+      "pdfPage": 1008,
+      "printedPage": 1007,
+      "title": "Chapter 12 Concurrent Programming",
+      "screenshotViewed": true
+    },
+    "narrow_interactions": [
+      {
+        "name": "narrow TOC activation",
+        "closed": true,
+        "active": "location",
+        "top": 127.8203125,
+        "hash": "#s12-4"
+      },
+      {
+        "name": "exercise deep link",
+        "open": true,
+        "top": 127.75,
+        "hash": "#ex-12-1"
+      },
+      {
+        "name": "Python code expansion",
+        "open": true,
+        "summary": "PYTHON · 完整维护源"
+      },
+      {
+        "name": "actual C source download",
+        "filename": "ch12_models.c",
+        "bytes": 2618,
+        "sha256": "b3741101b62bf31e3c9f54f4c23f54e26033f14e0ed2d230e77aa2bfc37a1b15",
+        "matchesRelease": true
+      }
+    ],
+    "screenshots_viewed": [
+      "home-desktop.png",
+      "csapp-ch12-desktop.png",
+      "csapp-pdf-page1008.png",
+      "csapp-ch12-mobile.png",
+      "csapp-toc-mobile.png",
+      "csapp-exercise-mobile.png",
+      "csapp-code-mobile.png"
+    ],
+    "scope": "Public response identity, layout geometry and listed user paths; existing book-content reviews and experiment statuses retain their own scope."
+  },
+  "rollback": {
+    "previous_release": "20261012T010730",
+    "previous_current": "releases/20261012T010730",
+    "configuration_backup": "/var/lib/notes-deploy/20261014T231909/previous-nginx.conf",
+    "old_files_retained": true,
+    "rollback_executed": false
+  },
+  "isolation": {
+    "other_site_configs_and_current_links": "unchanged",
+    "certificate_changed": false
+  },
+  "evidence_directory": "deploy/reports/20261014T231909/",
+  "browser_task_finished": true
+}

@@ -1,5 +1,7 @@
 # M014：三书笔记线上交付
 
-日期：2026-10-14。状态：执行中。关联 [I014](../issues/I014-three-book-publication.md)、[计划](../plan/P014-three-book-publication.md)与[测试设计](../test/T014-three-book-publication.md)。
+日期：2026-10-14。状态：已完成，2026-10-15 完成线上验收。关联 [I014](../issues/I014-three-book-publication.md)、[计划](../plan/P014-three-book-publication.md)与[测试设计](../test/T014-three-book-publication.md)。
 
 完成条件：本次维护源已推送到远端，网站实际提供对应的三书发布包；源站/公网响应及桌面/390px 阅读路径通过，实际版本、恢复点、证据与验证边界已登记。完成结论以实际执行结果为准。
+
+版本 `20261014T231909` 已上线：233 个文件、52 个 HTML、36 个阅读页。源站/公网哈希、路由、CSP、PDF Range，以及 104 次布局和列明阅读交互均通过；恢复点 `20261012T010730` 保留，其他站点配置和版本链接保持。实际源提交与范围见 [上线验收](../docs/acceptance/three-book-publication-20261014.json)。

@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "issue": "I018",
+  "status": "deployed_and_verified",
+  "accepted_at": "2026-10-16T20:48:32.860882+08:00",
+  "source_commit": "db42601dfcac1fb7a93ee9a673e86d18789cea2e",
+  "source_tree": "b8943a84d9a1c05f0559e5d171393e10ac9b8f59",
+  "remote": "oonecab/reading-notes",
+  "branch": "main",
+  "site": "https://notes.zzzping.top/",
+  "authorization": "Project owner requested commit, push and server deployment in the current task.",
+  "content_scope": {
+    "book": "Durrett, Essentials of Stochastic Processes, Third Edition",
+    "chapters": "1–6 and Appendix A",
+    "reviewed_items": 513,
+    "examples": 162,
+    "theorems_and_lemmas": 115,
+    "exercises": 236,
+    "content_review_records": [
+      "books/stochastic/notes/chapter01_explanation_review.json",
+      "books/stochastic/notes/remaining_explanation_review.json"
+    ]
+  },
+  "release": {
+    "id": "20261016T202557",
+    "files": 237,
+    "html_pages": 52,
+    "reading_pages": 36,
+    "archive_sha256": "6c9f069cbd60ebef097164508e811c10b454eca45653ea5e8bc40ed1ad8cacb8",
+    "local_references_checked": 5780,
+    "navigation_links": 5771
+  },
+  "validation": {
+    "full_program_checks": "tmp/project-check/20261016T202350-hmif_5t_/report.json",
+    "full_program_checks_status": "passed",
+    "full_check_reuse_basis": "Final follow-up changes contain publication documentation only; all build inputs remain identical to the pushed source tree.",
+    "source_export_matches": true,
+    "secrets_source_findings": 0,
+    "secrets_prior_history_findings": 0,
+    "local_https_status": "pass",
+    "origin_files_checked": 234,
+    "public_files_checked": 234,
+    "entry_redirects": 9,
+    "pdf_ranges": [
+      {
+        "path": "csapp/csapp.pdf",
+        "status": 206,
+        "range": "bytes 32-63/6765790",
+        "bytes_match": true
+      },
+      {
+        "path": "stochastic/assets/essentials-of-stochastic-processes.pdf",
+        "status": 206,
+        "range": "bytes 32-63/2579008",
+        "bytes_match": true
+      }
+    ],
+    "inline_script_csp_sources": 9
+  },
+  "browser": {
+    "engine": "ego-browser Chromium",
+    "widths": [
+      1440,
+      390
+    ],
+    "chapter_layout_views": 14,
+    "whole_page_overflow_failures": 0,
+    "mathml_error_nodes": 0,
+    "proof_links_activated": 115,
+    "exercise_details_opened": 236,
+    "inventory_action": "DOM click on every proof link and exercise summary",
+    "home_and_map_paths": [
+      {
+        "name": "overview-mobile-toc",
+        "hash": "#map",
+        "closed": true,
+        "active": "location"
+      },
+      {
+        "name": "overview-to-chapter2",
+        "url": "https://notes.zzzping.top/stochastic/notes/chapter02_poisson_processes.html"
+      },
+      {
+        "book": "stochastic",
+        "entered": "https://notes.zzzping.top/stochastic/notes/book_overview.html",
+        "returned": "https://notes.zzzping.top/"
+      },
+      {
+        "book": "weiss",
+        "entered": "https://notes.zzzping.top/weiss/notes/book_overview.html",
+        "returned": "https://notes.zzzping.top/"
+      },
+      {
+        "book": "csapp",
+        "entered": "https://notes.zzzping.top/csapp/notes/book_overview.html",
+        "returned": "https://notes.zzzping.top/"
+      }
+    ],
+    "representative_interactions": [
+      {
+        "name": "Python expansion",
+        "open": true
+      },
+      {
+        "name": "source download",
+        "url": "https://notes.zzzping.top/stochastic/code/chapter02_poisson_processes/poisson.py",
+        "filename": "poisson.py",
+        "bytes": 729,
+        "sha256": "b55dfcba3aceb4214db7e3a989d10a0fa54c25c2ff38a814830ef04678980e9f",
+        "matches_release": true
+      },
+      {
+        "name": "complete proof",
+        "hash": "#theorem-2-1-proof",
+        "target": "Theorem:2.1",
+        "top": 128.0078125
+      },
+      {
+        "name": "exercise deep link",
+        "hash": "#ex-2-1",
+        "open": true,
+        "top": 128.171875
+      }
+    ],
+    "program_guide": {
+      "name": "program guide",
+      "url": "https://notes.zzzping.top/stochastic/code/index.html",
+      "heading": "示例程序与运行说明",
+      "viewport": 375,
+      "scrollWidth": 375
+    },
+    "pdf_visual_confirmation": {
+      "pdf_page": 125,
+      "total_pages": 282,
+      "printed_page": 116,
+      "exercise": "2.1",
+      "screenshot_viewed": true
+    },
+    "public_screenshots_viewed": [
+      "public-ch1-1440.png",
+      "public-ch1-390.png",
+      "public-ch2-1440.png",
+      "public-ch2-390.png",
+      "public-ch3-1440.png",
+      "public-ch3-390.png",
+      "public-ch4-1440.png",
+      "public-ch4-390.png",
+      "public-ch5-1440.png",
+      "public-ch5-390.png",
+      "public-ch6-1440.png",
+      "public-ch6-390.png",
+      "public-chA-1440.png",
+      "public-chA-390.png",
+      "public-code-390.png",
+      "public-exercise-390.png",
+      "public-home-1440.png",
+      "public-home-390.png",
+      "public-pdf-page125.png",
+      "public-program-guide-390.png",
+      "public-proof-390.png"
+    ],
+    "local_screenshots_viewed": [
+      "local-ch1-1440.png",
+      "local-ch1-390.png",
+      "local-ch2-1440.png",
+      "local-ch2-390.png",
+      "local-ch3-1440.png",
+      "local-ch3-390.png",
+      "local-ch4-1440.png",
+      "local-ch4-390.png",
+      "local-ch5-1440.png",
+      "local-ch5-390.png",
+      "local-ch6-1440.png",
+      "local-ch6-390.png",
+      "local-chA-1440.png",
+      "local-chA-390.png"
+    ],
+    "page_exception_and_csp_errors": 0,
+    "scope": "Deployment response identity and listed reading paths. Mathematical content review and finite regression evidence retain their own scope in the book review records.",
+    "task_finished": true
+  },
+  "rollback": {
+    "previous_release": "20261014T231909",
+    "previous_current": "releases/20261014T231909",
+    "configuration_backup": "/var/lib/notes-deploy/20261016T202557/previous-nginx.conf",
+    "old_files_retained": true,
+    "rollback_executed": false
+  },
+  "isolation": {
+    "other_site_configs_and_current_links": "unchanged",
+    "certificate_changed": false
+  },
+  "evidence_directory": "deploy/reports/20261016T202557/"
+}

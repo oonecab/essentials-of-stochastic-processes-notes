@@ -1,6 +1,6 @@
 # I018：随机过程全书解释修订的提交与发布
 
-创建日期：2026-10-16。状态：in_progress。执行人：本任务 Codex；范围和生产生效确认人：项目所有者。
+创建日期：2026-10-16。状态：done。执行人：本任务 Codex；范围和生产生效确认人：项目所有者。
 
 授权依据：用户在本次对话明确要求“提交推送到远端，同时部署到服务器”。范围为 I015— I017 的随机过程全书解释、证明入口、逐项审阅及回归检查，提交到 `oonecab/reading-notes` 的 `main`，再通过现有统一发布流程部署到 `https://notes.zzzping.top/`。
 
@@ -9,3 +9,5 @@
 文档影响：内容标准、计算规则与技术事实已经在 I015— I017 同步；本次增加发布工作记录及最终机器摘要。技术栈、长期环境、域名和发布机制保持现有约定，无新增迁移或 ADR。书级审阅记录保留各轮实际时间及验证范围，发布事实单独记录。
 
 关联：[P018](../plan/P018-stochastic-publication.md)、[T018](../test/T018-stochastic-publication.md)、[M018](../milestone/M018-stochastic-publication.md)。执行材料保存在忽略的 `tmp/stochastic-publication-20261016/` 与 `deploy/reports/<release-id>/`。
+
+完成结果：源码提交 `db42601dfcac1fb7a93ee9a673e86d18789cea2e` 已推送到 `main`，统一版本 `20261016T202557` 已部署到现有站点。全仓库登记检查、发布包本地 HTTPS、源站与公网逐文件响应及实际浏览器阅读验收通过；回退版本为 `20261014T231909`。完整结果见[发布验收记录](../docs/acceptance/stochastic-publication-20261016.json)。后续结果文档提交与发布源码提交分别记录，网页内容对应上述源码版本。

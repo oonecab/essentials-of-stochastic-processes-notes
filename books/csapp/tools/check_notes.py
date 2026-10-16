@@ -24,6 +24,8 @@ from part_three_http_review_regressions import check_http_review
 from part_three_cgi_regressions import check_cgi_review
 from assertion_regressions import check_assertions
 from content_review_regressions import check_content_review
+from explanation_regressions import check_explanations
+from reader_navigation_checks import check_reader_navigation, check_navigation_mutations
 
 
 def sha(path):
@@ -296,6 +298,7 @@ def run_programs(run, programs):
     cgi_review = check_cgi_review(BASE, run / 'part-three-cgi-review', compiler)
     assertions = check_assertions(BASE, run / 'assertion-regressions', compiler)
     content_review = check_content_review(BASE, run / 'content-review', compiler)
+    explanations = check_explanations(BASE, run / 'explanations', compiler)
     return {'program_groups':len(programs),
             'program_pairs':sum({'c','python'} <= p['files'].keys() for p in programs),
             'standalone_c_programs':sum(set(p['files']) == {'c'} for p in programs),
@@ -309,6 +312,7 @@ def run_programs(run, programs):
             'part_two_regressions':part_two, 'part_two_signal_regressions':signal_regressions,
             'part_three_regressions':part_three, 'part_three_http_review':http_review,
             'part_three_cgi_review':cgi_review, 'content_review_regressions':content_review,
+            'explanation_regressions':explanations,
             'assertion_regressions':{'status':'passed', 'normal_and_disabled_runs':len(assertions['normal_runs']),
                                     'wrong_variant_runs':len(assertions['mutations']),
                                     'report':str((run/'assertion-regressions/report.json').resolve().relative_to(ROOT))}}
@@ -337,6 +341,8 @@ def main():
         raise ValueError('Original PDF page count differs')
     pages = {p.name:p.read_text() for p in (BASE/'notes').glob('*.html')}
     structural = validate_pages(pages,manifest,programs)
+    reader_navigation = check_reader_navigation(pages,manifest)
+    navigation_mutations = check_navigation_mutations(pages,manifest)
     excerpts = validate_source_excerpts(pages, source['sha256'])
     # Mutation checks operate only on in-memory copies of the authored pages.
     mutations = [dict(pages) for _ in range(6)]
@@ -417,6 +423,7 @@ def main():
             raise ValueError('Local path in maintained documentation')
     report = {'status':'passed','checked_at':datetime.now(timezone.utc).isoformat(),'quick':args.quick,
               'source_sha256':source['sha256'],'structure':structural,'mutation_checks':7,
+              'reader_navigation':reader_navigation,'reader_navigation_mutations':navigation_mutations,
               'source_excerpts':excerpts,
               'source_exercise_page_checks':sum(len(c['exercises']) for c in exercise_manifest['chapters']),
               'source_subsection_checks':subsection_checks,

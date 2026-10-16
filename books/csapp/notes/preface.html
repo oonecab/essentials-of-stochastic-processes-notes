@@ -231,6 +231,8 @@ main[id],main [id]{scroll-margin-top:24px}
 <div class="scroll"><table><thead><tr><th scope="col">遇到的结论</th><th scope="col">需要确认的前提</th><th scope="col">在笔记中怎样使用</th></tr></thead><tbody><tr><td>整数加法只留下低位</td><td>明示位宽的机器模型或无符号C运算</td><td>与C有符号溢出的语言规则分别解释</td></tr><tr><td>long和指针均为8字节</td><td>书中的x86-64/Linux LP64环境</td><td>用sizeof观察宿主，不当成所有平台定律</td></tr><tr><td>前六个整数参数放寄存器</td><td>相应System V ABI及参数类别</td><td>用调用实例追踪；聚合与浮点按各自规则</td></tr><tr><td>某段代码的CPE是3</td><td>原书参考机器、运算和编译条件</td><td>作为历史测量解释依赖关系，实测另记环境</td></tr></tbody></table></div>
 <p>这里尤其要分清“源语言规则”“编译器输出”“机器执行”三层。C程序可由不同编译器变成不同指令，某份汇编也可能只在指定ABI下成立。自己的机器输出不同，不一定是原理失效；先核对输入、类型、编译选项与目标机器，再寻找不一致。</p>
 <p>书中例子具有明确时代背景。读者今天使用其他处理器时，可以先在本机运行可移植C/Python模型，再用明确目标的工具观察x86-64汇编；只有实际执行了目标指令，才据此描述目标运行行为。</p>
+
+<div class="explanation" id="explain-background"><p>例如 <code>long x=2; long *p=&amp;x;</code> 中，x 是存放数值 2 的对象，p 存放的是 x 的地址；<code>*p=5</code> 沿这个地址把 x 改成 5。复制 p 只是多得到一条访问 x 的途径，不会自动复制一个新的 x。以后看到“别名”“共享”“间接寻址”，都可以先把名字画到具体对象上。<a href="chapter05_optimization.html#s5-1">第 5 章的逐句推演</a>会说明这个区分为何直接限制编译器优化。</p></div>
 <details class="reading-notes" id="notes-background" data-notes-for="background" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">理解</span><h3>可复现需要连同条件一起保存</h3><p>输入和源码之外，编译器选项、目标体系结构与数据类型同样影响观察结果。</p>
 </div><div class="annotation-card"><span class="annotation-kind">边界</span><h3>语言相似不代表算术相同</h3><p>Python整数可增长；C无符号整数按位宽取模；C有符号溢出另有规则。跨语言验证必须先对齐模型。</p>
 </div></div></details>
@@ -257,7 +259,7 @@ main[id],main [id]{scroll-margin-top:24px}
 <p>第7章把分离的目标文件组合成能够装入的程序，回答名字和地址怎样相接；第8章让控制流面对异常、进程、信号和切换；第9章解释虚拟地址如何支持缓存、保护、共享与动态存储。这里把第1章的进程、地址空间等抽象展开为机制。</p>
 <h3>第三部分：从单次执行走到交互与协作</h3>
 <p>第10章建立可靠的文件读写与缓冲，第11章将字节流延伸到网络并构造Web服务，第12章允许多个活动同时推进，同时处理共享状态、线程安全和同步。一个网络服务既需要前面的小整数和地址计算，也需要后面的I/O与并发约定。附录A把失败返回与错误处理方式集中起来。</p>
-<p>这条顺序并不意味着每个后续主题只有一个前置章节。虚拟内存同时联系第3章的地址、第6章的缓存和第8章的异常；网络程序会再次用到第2章的字节序、第10章的短读写与第12章的并发。全书地图用关系图把这些回路保留下来。</p>
+<p>这条顺序并不意味着每个后续主题只有一个前置章节。虚拟内存同时联系第3章的地址、第6章的缓存和第8章的异常；网络程序会再次用到第2章的字节序、第10章的短读写与第12章的并发。<a href="book_overview.html#whole-book-map">全书地图</a>按原书三部分给出阅读顺序，图后的说明再展开这些跨章联系。</p>
 <details class="reading-notes" id="notes-overview" data-notes-for="overview" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">理解</span><h3>跨章联系通常来自同一个对象</h3><p>第3章计算出的地址，到第6章变成缓存查找输入，到第9章又参与地址翻译。对象连续，观察角度变化。</p>
 </div><div class="annotation-card"><span class="annotation-kind">读法</span><h3>在新章节回看旧问题</h3><p>遇到缓存局部性时，重新推演数组下标对应的字节地址；遇到信号时，重新区分普通调用和异常控制流。</p>
 </div></div></details>

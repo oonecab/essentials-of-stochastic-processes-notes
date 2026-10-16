@@ -89,6 +89,10 @@ CS:APP 第三部分增加可靠读写、描述符共享、回环网络和 HTTP�
 
 CS:APP 第二轮严格评估修订见 [I010](issues/I010-csapp-review-v2-fixes.md) / [T010](test/T010-csapp-review-v2-fixes.md)，继续使用现有 C11/POSIX、Python 和静态页面流程。必要自测在关闭断言时仍执行；原题实验按逐项证据标记，12.39 的代理浏览器验收当前待完成。
 
+CS:APP 全书解释补充见 [I018](issues/I018-csapp-explanations.md) / [T018](test/T018-csapp-explanations.md)。十四页正文与题解的审阅范围、具体补充位置和当前页面哈希保存在 `books/csapp/notes/explanation_review.json`。`tools/explanation_regressions.py` 由书级检查器调用，直接提取页面别名函数，在不同优化级别和 ASan/UBSan 下检验同址、异址及函数副作用，并拒绝错误合并与经 const 指针写入。继续使用既有标准库、C11 和页面组件。
+
+CS:APP 图表与导航复核见 [I019](issues/I019-csapp-visual-navigation.md) / [T019](test/T019-csapp-visual-navigation.md)。`tools/reader_navigation_checks.py` 由书级检查器的快速及完整模式共同调用，按原书章节清单核对前后章、全书图及逐章推演入口，检查章节标签与目标、图注和 SVG 可访问名称，并以缺项、错链等内存变异验证检查能力。它不判断箭头含义或代替浏览器目视阅读；逐项内容与当前版本绑定另存 `notes/visual_navigation_review.json`。技术栈、运行方式和发布流程沿用原约定。
+
 ## 技术栈变更索引（只追加）
 
 “技术栈变更”至少包括语言、运行时、框架、核心库、构建工具、数据库或中间件的新增、移除、替换、主版本升级，以及兼容基线变化。普通补丁升级仅在影响行为、兼容性或安全基线时记录。

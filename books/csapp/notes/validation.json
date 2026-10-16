@@ -3987,5 +3987,78 @@
       "deploy/reader_views.py": "6fb257ff56477a5b7aa437ce7be33b1c047013665f1b4a86e0ab5db01b1db8a2",
       "deploy/verify_portal.py": "4c72f35540d2f2f523210d0bf8a5721f133ca86d89152c12e0fa8633a2bbaf91"
     }
+  },
+  "explanation_revision": {
+    "issue": "I018",
+    "record": "notes/explanation_review.json",
+    "reviewed_at": "2026-10-16T14:00:19.365805+00:00",
+    "scope": {
+      "reading_pages": 14,
+      "major_sections": 117,
+      "original_subsections": 261,
+      "original_exercises": 419,
+      "self_checks": 36,
+      "added_explanation_blocks": 109,
+      "rewritten_alias_section": 1,
+      "reviewed_items": 630
+    },
+    "page_sha256": {
+      "book_overview.html": "310b2f00bed96926d6ce2387ba87cb9cf698639a79dbaa6779b6adccca5c627e",
+      "chapter01_tour.html": "6bee649520a78ef788fc135e75bef318b4e69358f885a04e071b94f645bd5241",
+      "chapter02_information.html": "8c45e5730f6c6e985e0463f9aec882ce078ca2e4514bd6f31fdcdec0d99362a4",
+      "chapter03_machine_level.html": "ac840fb8cf74fa81b88f81ac3568da82831d05e20b9b0ab19e0245863977c73d",
+      "chapter04_architecture.html": "649933bbb7440800c497af32ef0f951998161bffc264b8282da44f02bddd08ce",
+      "chapter05_optimization.html": "07a06b92a72fc0466cde3324a5669183d9aed8aa39335bd2d706ee66d1d3bda9",
+      "chapter06_memory.html": "37d27c919ba6082e2782e71b7093137341d0a9152236fbb8b62287b374108ffd",
+      "chapter07_linking.html": "c8e12a0d44d570b29d9733dedbc93f3bf790eb60ca19d868b3261e3373a3003b",
+      "chapter08_exceptional.html": "5730180d9c132786a01ed886af852d0a02a28b17e8d866f5b4931e4891af7d08",
+      "chapter09_virtual_memory.html": "21de72da73d29badb8980d4ad62d988f3e0d57ba2a1598845fc5d1bca33cd106",
+      "chapter10_system_io.html": "7ece9df347cf0ba77ed139cd739ae43843b89351256e673a429684c94c5cedd9",
+      "chapter11_network.html": "b402990d1a6346f05838f17f2a1abdaeec30f04ca3e6ecb52c1cdebe13617dca",
+      "chapter12_concurrency.html": "7e87f33ef61d4ebd591552ec73fa4b5176d10a4fb105b8d4f93588f81d901385",
+      "preface.html": "33f4257764e21d5c19210ce68046b8c5b67be63f5680637d8e105f7fd6bc2abf"
+    },
+    "full_check": "tmp/project-check/20261016T215106-j30s1o70/report.json",
+    "acceptance": "test/T018-csapp-explanations.md",
+    "previous_reviews": "此前记录保留原时间、原哈希及实际范围。",
+    "open_experiment": "12.39 browser through proxy remains pending"
+  },
+  "whole_book_map_revision": {
+    "issue": "I018",
+    "record": "notes/explanation_review.json",
+    "record_revision": "whole-book-map",
+    "reviewed_at": "2026-10-16T14:20:25.751566+00:00",
+    "page_sha256": {
+      "book_overview.html": "f06b4c5ce6f1b0a48ddfb47b462f29d71e28412c0bf48f4c62cde608f35d3726"
+    },
+    "quick_check": "tmp/project-check/20261016T221931-770okvll/report.json",
+    "acceptance": "test/T018-csapp-explanations.md",
+    "previous_reviews": "旧记录保留原时间、哈希和范围；当前全书图的增量绑定在此列出。"
+  },
+  "visual_navigation_revision": {
+    "issue": "I019",
+    "record": "notes/visual_navigation_review.json",
+    "reviewed_at": "2026-10-16T15:04:15.686030+00:00",
+    "page_sha256": {
+      "chapter02_information.html": "8c45e5730f6c6e985e0463f9aec882ce078ca2e4514bd6f31fdcdec0d99362a4",
+      "chapter09_virtual_memory.html": "43a342f6d35e3466001e5872f2ce0d77425a99f24ae5dd24126f7f683a87f9ad",
+      "book_overview.html": "4d2e6495e2caba77b6321b12b5eef854eafa6f1477926ae88ef38e370c87c50d",
+      "chapter12_concurrency.html": "bc85d93c6859d8981a6e9668b7f1a4e4779397cdcbf13e4461c94eb91dc24e14",
+      "chapter08_exceptional.html": "5c73e2644b34d07f4483664a1d10a657e10917675e264f6b5f130b28030f8083",
+      "chapter03_machine_level.html": "ac840fb8cf74fa81b88f81ac3568da82831d05e20b9b0ab19e0245863977c73d",
+      "chapter01_tour.html": "05f2121c0f6c2ca0e8e177252855f508eca9f0c21ab7b2d5cb123fb88dce276e",
+      "chapter04_architecture.html": "602f162d79e0fea454916f45817181113108e84bc1fbc22acc87ce44d74dec66",
+      "chapter11_network.html": "53c0efb1485c8d7d47ea9b8303f32facf3bc56c90b308a1f189ad0985040bccb",
+      "chapter07_linking.html": "c8e12a0d44d570b29d9733dedbc93f3bf790eb60ca19d868b3261e3373a3003b",
+      "chapter06_memory.html": "a396a64df9c0731b3debd690cd179cb25ca39d829c76a279b5685ba5cff301d3",
+      "preface.html": "6ac27be90cd0d914a57b48734422ef3df1a8cfbb363b99fccd575be798efc977",
+      "chapter10_system_io.html": "c2a4e6c9921aa9ef5443304c924d04d5973dfcb0fa2aa638cfa0fbde4d443f42",
+      "chapter05_optimization.html": "611f7c57d8b01b73cd892d0e38ef1c5d176adc0da5a2383798d1bebf46ad523b"
+    },
+    "source_check": "tmp/project-check/20261016T230024-tfqp8gi0/csapp/report.json",
+    "program_check": "tmp/project-check/20261016T225152-mu2t2cey/csapp/report.json",
+    "code_unchanged": true,
+    "acceptance": "test/T019-csapp-visual-navigation.md",
+    "historical_records": "Previous review timestamps, hashes and scope are preserved; this revision binds the current visual/navigation changes."
   }
 }

@@ -221,6 +221,8 @@ main[id],main [id]{scroll-margin-top:24px}
 <p>原书图 1.2 把 hello.c 展开为 ASCII 字节：开头的 <code>#</code> 为 35，换行为 10。源码里写下的反斜杠与字母 n 是两个源文件字符；编译器识别字符串转义 <code>
 </code> 后，运行时字符串里才出现换行字节。这正是一次解释把一种表示转换成另一种表示。</p>
 <p>后续所有章节都在扩大这个问题：第 2 章给位串指定整数或浮点解释，第 3 章给字节串指定指令解释，第 6 章将地址拆成标记、组索引与块内偏移。读例子时先写出位宽、编码和观察层次，往往就能避免看似神秘的错误。</p>
+
+<div class="explanation" id="explain-s1-1"><p>为什么两个字符“10”还需要解析？按十进制位值规则，解析程序先把字符编码 0x31 识别为数字 1，把 0x30 识别为数字 0，再算 1×10+0=10。内存里的两个字节没有自行完成这次乘加；是读取它们的程序选择了十进制规则。这也解释了为什么同一份字节必须连同编码一起理解。</p></div>
 <details class="reading-notes" id="notes-s1-1" data-notes-for="s1-1" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">理解</span><h3>相同的位可以承载不同对象</h3><p>内存不因为程序声明了 int 就只存整数；类型约束、编码规则和执行的指令共同决定如何读写这些字节。</p>
 </div><div class="annotation-card"><span class="annotation-kind">边界</span><h3>字节和字符不是同一个计量单位</h3><p>本例只用ASCII字符，一字符一字节。中文等Unicode字符经UTF-8编码通常需要多个字节，字节长度不能直接当作字符个数。</p>
 </div></div></details>
@@ -253,7 +255,7 @@ cc hello.o -o hello</code></pre>
 <p class="source">原书：<a class="source-pdf" href="../csapp.pdf#page=44">印刷 43 页 / PDF 44 页</a></p>
 <h3>1.4.1 硬件组织：每个部件在搬什么</h3>
 <p>总线在部件之间搬运信息；主存保存正在使用的程序与数据；处理器解释指令；I/O 设备把字节带进和带出系统。处理器内部还要分清三种角色：PC 给出将要取指的位置，寄存器文件保存少量操作数，ALU 做算术与逻辑计算。一次机器指令可以从内存取数、进行计算、写回结果，也可以改变下一条指令的位置。</p>
-<figure id="machine-flow"><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 165" role="img" aria-labelledby="machine-flow-title"><title id="machine-flow-title">处理器、主存与输入输出之间的数据通路</title><defs><marker id="machine-flow-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#7b8f85"/></marker></defs><rect class="node" x="30" y="25" width="200" height="75" rx="3"/><text x="130.0" y="62.5">处理器</text><text class="hint" x="130.0" y="84.5">PC、寄存器、ALU</text><rect class="node" x="305" y="25" width="150" height="75" rx="3"/><text x="380.0" y="62.5">主存</text><text class="hint" x="380.0" y="84.5">指令与数据</text><rect class="node" x="530" y="25" width="200" height="75" rx="3"/><text x="630.0" y="62.5">I/O桥与控制器</text><text class="hint" x="630.0" y="84.5">键盘、显示、磁盘、网络</text><line x1="230" y1="62" x2="305" y2="62" stroke="#7b8f85" stroke-width="1.6" marker-end="url(#machine-flow-arrow)"/><line x1="455" y1="62" x2="530" y2="62" stroke="#7b8f85" stroke-width="1.6" marker-end="url(#machine-flow-arrow)"/><line x1="530" y1="85" x2="455" y2="85" stroke="#7b8f85" stroke-width="1.6" marker-end="url(#machine-flow-arrow)"/><line x1="305" y1="85" x2="230" y2="85" stroke="#7b8f85" stroke-width="1.6" marker-end="url(#machine-flow-arrow)"/><text x="265" y="135" class="hint">系统/内存总线</text><text x="590" y="135" class="hint">不同设备通过接口传输字节</text></svg></div><figcaption>对应原书图1.4的简化重绘。箭头强调传输关系，未画出所有总线细节。</figcaption></figure>
+<figure id="machine-flow"><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 310" role="img" aria-labelledby="machine-flow-title" style="min-width:680px;width:100%;height:auto"><title id="machine-flow-title">处理器、I/O 桥、主存与设备的连接关系</title><defs><marker id="machine-flow-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 Z" fill="#7b8f85"/></marker></defs><rect x="20" y="45" width="205" height="80" rx="4" fill="#fffefa" stroke="#285a4e" stroke-width="1.3"/><text x="122.5" y="81.0" style="text-anchor:middle;font-size:16px">处理器</text><text x="122.5" y="104.0" style="text-anchor:middle;font-size:14px">PC、寄存器、ALU</text><rect x="300" y="45" width="160" height="80" rx="4" fill="#fffefa" stroke="#285a4e" stroke-width="1.3"/><text x="380.0" y="90.0" style="text-anchor:middle;font-size:16px">I/O 桥</text><rect x="555" y="45" width="185" height="80" rx="4" fill="#fffefa" stroke="#285a4e" stroke-width="1.3"/><text x="647.5" y="81.0" style="text-anchor:middle;font-size:16px">主存</text><text x="647.5" y="104.0" style="text-anchor:middle;font-size:14px">指令与数据</text><path d="M225 85 H300" fill="none" stroke="#7b8f85" stroke-width="1.6" marker-end="url(#machine-flow-arrow)" marker-start="url(#machine-flow-arrow)"/><text x="262" y="32" style="text-anchor:middle;font-size:14px">系统总线</text><path d="M460 85 H555" fill="none" stroke="#7b8f85" stroke-width="1.6" marker-end="url(#machine-flow-arrow)" marker-start="url(#machine-flow-arrow)"/><text x="507" y="32" style="text-anchor:middle;font-size:14px">内存总线</text><path d="M380 125 V210" fill="none" stroke="#7b8f85" stroke-width="1.6" marker-end="url(#machine-flow-arrow)" marker-start="url(#machine-flow-arrow)"/><text x="438" y="174" style="text-anchor:middle;font-size:14px">I/O 总线</text><rect x="160" y="210" width="440" height="75" rx="4" fill="#fffefa" stroke="#285a4e" stroke-width="1.3"/><text x="380.0" y="243.5" style="text-anchor:middle;font-size:16px">设备控制器与适配器</text><text x="380.0" y="266.5" style="text-anchor:middle;font-size:14px">键盘、显示、磁盘、网络</text></svg></div><figcaption>据原书图 1.4（印刷 44 页 / <a class="source-pdf" href="../csapp.pdf#page=45">PDF 45 页</a>）简化重绘。双向箭头表示部件间可传输信息；I/O 桥分别连接处理器、主存和 I/O 总线。图描述原书的硬件组织模型，具体机器的总线与控制器集成方式可以不同。</figcaption></figure>
 <p>把“处理器读指令”和“程序读数据”分开看很有帮助。例如加法指令的编码本身需要从内存取来，它指定的操作数又可能需要另一次内存访问。位串一样要经过接口移动，最终解释则取决于它是被当成指令还是操作数。</p>
 <h3>1.4.2 hello的一次运行：四个可追踪时刻</h3>
 <div class="scroll"><table><thead><tr><th scope="col">时刻</th><th scope="col">发生的工作</th><th scope="col">主要字节流</th></tr></thead><tbody><tr><td>输入命令</td><td>shell读取键盘输入并识别要运行的文件</td><td>键盘控制器 → 内存中的命令字符</td></tr><tr><td>准备执行</td><td>shell请求操作系统建立执行环境并装入程序</td><td>可执行文件的代码/数据 → 进程地址空间</td></tr><tr><td>执行指令</td><td>处理器取指、读取参数、执行库调用与输出操作</td><td>主存/缓存 ↔ 寄存器；字符串按输出接口传递</td></tr><tr><td>显示与结束</td><td>输出送到终端；程序返回，shell继续等待命令</td><td>程序输出 → 操作系统/终端；控制回到shell</td></tr></tbody></table></div>
@@ -270,6 +272,8 @@ cc hello.o -o hello</code></pre>
 <p>缓存把最近或附近会使用的数据副本放在较快的层级。时间局部性指刚访问过的对象可能再次访问；空间局部性指附近地址可能随后访问。循环反复使用同一计数器表现出前者，顺序扫描数组表现出后者。空间局部性解释了为什么搬运通常以一块连续字节为单位，而不只拿一个刚请求的字节。</p>
 <div class="scroll"><table><thead><tr><th scope="col">访问序列</th><th scope="col">可以利用什么</th><th scope="col">判断时还缺什么</th></tr></thead><tbody><tr><td>a[0],a[1],a[2],a[3]</td><td>相邻元素可能落在同一缓存块</td><td>元素大小、块大小、对齐</td></tr><tr><td>a[0],a[0],a[0]</td><td>同一位置的重复使用</td><td>副本是否仍在缓存、是否发生替换</td></tr><tr><td>a[0],a[1024],a[2048]</td><td>空间邻近性较弱</td><td>步长、映射组、容量；不能只据下标断言全部失效</td></tr></tbody></table></div>
 <p>可以先做一个带条件的估计：若快层命中花1单位，未命中额外花100单位，命中率99%，平均代价为1+0.01×100=2单位。虽然只有1%的访问失效，它已把平均时间从1翻倍。这个例子说明高命中率为什么重要，也提醒我们比较百分比时要带上失效的代价。第6章再给出真正的组、行、标记和替换过程。</p>
+
+<div class="explanation" id="explain-s1-5"><p>上面的平均代价可换成 100 次访问来算：100 次都要先花 1 单位尝试快层，共 100；其中平均 1 次未命中，再多花 100，共 200。除以 100 次，得到每次 2 单位。所以式中的 0.01 是未命中比例，乘的 100 是在已经尝试快层以后额外付出的时间；若给的是一次未命中的总时间，则不能再次重复计入快层成本。</p></div>
 <details class="reading-notes" id="notes-s1-5" data-notes-for="s1-5" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">推导</span><h3>平均代价的口径要一致</h3><p>这里100是未命中的额外代价，所以写1+失效率×100。如果100已经包含查找时间，必须改用命中/未命中的加权平均。</p>
 </div><div class="annotation-card"><span class="annotation-kind">理解</span><h3>缓存存的是副本</h3><p>上层只保留部分下层数据；有限容量与映射冲突决定一个副本能留多久。</p>
 </div></div></details>
@@ -288,7 +292,7 @@ cc hello.o -o hello</code></pre>
 <p class="source">原书：<a class="source-pdf" href="../csapp.pdf#page=51">印刷 50 页 / PDF 51 页</a></p>
 <p>hello不会直接操纵每个设备寄存器，也不自行仲裁所有程序对内存的访问。操作系统在应用与硬件之间提供受控接口，管理资源并保护程序之间的边界。作者在这里引入进程、线程、虚拟内存和文件，后续章节再把实现补全。</p>
 <h3>1.7.1 进程：正在执行的程序及其状态</h3>
-<div class="source-statement" id="classic-1-process"><h3 class="statement-heading"><span class="statement-label">原书摘录</span>进程把一次运行呈现为独占机器</h3><p class="source">§1.7.1 · Processes · <a class="source-pdf" href="../csapp.pdf#page=52">印刷 51 页 / PDF 52 页</a></p><blockquote class="original-excerpt" lang="en"><p>A process is the operating system’s abstraction for a running program. Multiple processes can run concurrently on the same system, and each process appears to have exclusive use of the hardware. By concurrently, we mean that the instructions of one process are interleaved with the instructions of another process.</p></blockquote><div class="statement-body"><p><strong>译文。</strong>进程是操作系统对正在运行的程序提供的抽象。同一系统上可以并发运行多个进程，而每个进程看起来都独占硬件。这里的并发，指一个进程的指令与另一个进程的指令交错执行。</p><p>原书此处先用单 CPU 的切换模型建立直觉。独占是受操作系统和硬件共同支持的运行视图；执行位置与寄存器需要保存、恢复，地址空间也需要隔离。程序文件本身不包含某次运行已打开的文件和当下执行位置，因此“文件存在”和“进程正在运行”是两个不同状态。</p><p><strong>接着读：</strong><a href="#s1-9">并发与并行的联系</a> · <a href="book_overview.html#map">第 8、9 章怎样展开运行环境</a></p></div></div>
+<div class="source-statement" id="classic-1-process"><h3 class="statement-heading"><span class="statement-label">原书摘录</span>进程把一次运行呈现为独占机器</h3><p class="source">§1.7.1 · Processes · <a class="source-pdf" href="../csapp.pdf#page=52">印刷 51 页 / PDF 52 页</a></p><blockquote class="original-excerpt" lang="en"><p>A process is the operating system’s abstraction for a running program. Multiple processes can run concurrently on the same system, and each process appears to have exclusive use of the hardware. By concurrently, we mean that the instructions of one process are interleaved with the instructions of another process.</p></blockquote><div class="statement-body"><p><strong>译文。</strong>进程是操作系统对正在运行的程序提供的抽象。同一系统上可以并发运行多个进程，而每个进程看起来都独占硬件。这里的并发，指一个进程的指令与另一个进程的指令交错执行。</p><p>原书此处先用单 CPU 的切换模型建立直觉。独占是受操作系统和硬件共同支持的运行视图；执行位置与寄存器需要保存、恢复，地址空间也需要隔离。程序文件本身不包含某次运行已打开的文件和当下执行位置，因此“文件存在”和“进程正在运行”是两个不同状态。</p><p><strong>接着读：</strong><a href="#s1-9">并发与并行的联系</a> · <a href="chapter08_exceptional.html#s8-2">第 8 章：进程与执行环境</a> · <a href="chapter09_virtual_memory.html#s9-1">第 9 章：虚拟内存与地址翻译</a></p></div></div>
 
 <p>一个可执行文件可以先后运行多次，每次形成不同的进程。进程需要的不只是代码字节，还包括执行位置、寄存器、地址空间和已打开的资源。操作系统切换进程时保存必要上下文，之后恢复，程序才能从此前的位置继续。程序是可保存的描述，进程是这份描述的一次活动执行。</p>
 <div class="scroll"><table><thead><tr><th scope="col">时间片</th><th scope="col">活动主体</th><th scope="col">状态关系</th></tr></thead><tbody><tr><td>① shell等待命令</td><td>shell/内核</td><td>shell有自己的执行上下文</td></tr><tr><td>②请求运行hello</td><td>内核</td><td>安排新执行环境，选择接下来运行的上下文</td></tr><tr><td>③hello输出</td><td>hello/内核</td><td>hello在自己的地址空间执行并请求I/O</td></tr><tr><td>④hello结束</td><td>内核/shell</td><td>shell得到继续执行的机会，重新显示提示符</td></tr></tbody></table></div>
@@ -303,6 +307,8 @@ cc hello.o -o hello</code></pre>
 <p>虚拟地址空间大，并不等于所有地址都已获得物理内存。保护、共享、按需调页和存储分配共同支撑这个抽象。这里先建立用途，第9章再逐步解释页表、缺页和地址翻译。</p>
 <h3>1.7.4 文件：统一的字节输入输出接口</h3>
 <p>Unix把很多设备和数据来源放进文件描述符的读写接口。普通磁盘文件、终端和网络连接可以共享一部分操作方式，但具体能力仍不同：例如可定位的普通文件与连续到来的网络字节流不能按同一随机访问假设使用。统一接口降低了应用面对设备细节的负担，错误、短读写和阻塞则仍需程序正确处理。</p>
+
+<div class="explanation" id="explain-s1-7"><p>例如两个进程都使用数值为 0x1000 的虚拟地址，并不表示它们访问同一个物理对象：翻译时还要看“当前属于哪个进程的页表”。可以把地址理解为“本进程地址空间中的第几个字节”。相反，同一进程的两个线程通常按同一套映射访问地址；它们若都指向一个计数器，修改的就是同一个对象。这把进程隔离、线程共享和虚拟地址三个概念接到了同一次读取上。</p></div>
 <details class="reading-notes" id="notes-s1-7" data-notes-for="s1-7" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">理解</span><h3>抽象简化使用，也保留边界</h3><p>统一的文件接口让相同读写代码服务多个设备；它没有承诺所有设备都能定位、永不阻塞或一次完成全部请求。</p>
 </div><div class="annotation-card"><span class="annotation-kind">边界</span><h3>系统调用与进程切换要分别追踪</h3><p>前者转移到内核处理服务，后者更换运行上下文。用两个术语描述两种事件，可以避免读调度图时混淆。</p>
 </div></div></details>
@@ -336,6 +342,8 @@ cc hello.o -o hello</code></pre>
 <div class="source-statement" id="classic-1-isa"><h3 class="statement-heading"><span class="statement-label">原书摘录</span>顺序的指令语义与并行的内部实现</h3><p class="source">§1.9.3 · The Importance of Abstractions · <a class="source-pdf" href="../csapp.pdf#page=64">印刷 63 页 / PDF 64 页</a></p><blockquote class="original-excerpt" lang="en"><p>With this abstraction, a machine-code program behaves as if it were executed on a processor that performs just one instruction at a time. The underlying hardware is far more elaborate, executing multiple instructions in parallel, but always in a way that is consistent with the simple, sequential model. By keeping the same execution model, different processor implementations can execute the same machine code while offering a range of cost and performance.</p></blockquote><div class="statement-body"><p><strong>译文。</strong>在指令集体系结构这一抽象下，机器代码程序的行为就像由一个每次只执行一条指令的处理器执行。底层硬件复杂得多，会并行执行多条指令，但仍须与这个简单的顺序模型保持一致。保持同一种执行模型，使不同处理器实现能够执行相同机器代码，同时提供不同的成本与性能。</p><p>这里讨论的是单个程序的指令语义视图。硬件可以改变内部完成工作的次序，却不能任意改变程序可观察到的结果。第 4 章用转发、停顿与气泡维护这一要求，第 5 章再从依赖链分析还能有多少重叠空间。多线程对共享内存的观察还需要额外的内存模型与同步规则。</p><p><strong>接着读：</strong><a href="chapter04_architecture.html#s4-5">流水实现怎样保存指令语义</a> · <a href="chapter05_optimization.html#s5-7">依赖与现代处理器模型</a></p></div></div>
 
 <p>文件统一I/O，虚拟内存统一地址视图，指令集描述处理器能做的状态变换。好的抽象让程序员暂时省略实现细节；本书训练的是当正确性或性能需要时，能够沿接口往下展开。例如 C 数组语法隐藏了地址运算，缓存又使相同语法的不同访问顺序具有不同代价。第3章和第6章分别解释这两层。</p>
+
+<div class="explanation" id="explain-s1-9"><p>并发可以先看一颗核心上的两个任务：A 发出磁盘读取后等待，核心转去执行 B，数据到达后再回来执行 A。两件事都在推进，但任何瞬间核心只执行一条指令流。若两颗核心分别执行 A、B 的计算，才有同时执行的并行。这里争取的收益不同：前者利用等待时间，后者让计算工作重叠；都要按最终总耗时判断效果。</p></div>
 <details class="reading-notes" id="notes-s1-9" data-notes-for="s1-9" open><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">推导</span><h3>α必须来自改进前的时间</h3><p>加速后该部分占新总时间的比例会变小；若把新比例代回旧公式，会把收益算错。</p>
 </div><div class="annotation-card"><span class="annotation-kind">理解</span><h3>延迟和产出率是两件事</h3><p>流水线可提高连续指令的完成速率，而单条指令经过各阶段的时间可能更长；第4章会用时序图算清。</p>
 </div></div></details>
@@ -405,13 +413,17 @@ required-k=6.000000</code></pre>
 </li><li><p>A：新时间为1500/150+10=20 h，加速比25/20=1.25。也可代入k=150/100=1.5，得到1/(0.4+0.6/1.5)=1.25。</p>
 </li><li><p>B：按题面的1.67为精确值，新总时间为25/1.67≈14.97006 h，Montana允许时间约4.97006 h，因此速度1500/4.97006≈301.20482 km/h。</p>
 </li><li><p>原书解答把1.67近似为5/3，取总时间15 h，得速度300 km/h。300对应的实际加速比是25/15=1.666…，四舍五入为1.67；精确目标和近似目标的区别应保留。</p>
-</li></ol></div></details>
+</li></ol>
+<div class="explanation" id="explain-ex-1-1"><p>A 中的 10 h 为什么保留？全程还有 2500−1500=1000 km 不在可提速路段，仍按 100 km/h 行驶，所以这段的 1000/100=10 h 没有改变。B 则倒着算：整体加速比是“旧时间÷新时间”，因此先用 25/1.67 求新的总时间，再扣除不可改变的 10 h，剩下的才是 Montana 路段可用的时间。</p></div>
+</div></details>
 <details class="exercise" id="ex-1-2"><summary>1.2 · 由整体目标反解局部改进</summary><div class="exercise-question" data-original-exercise="1.2" data-source-pdf-pages="60"><h3 class="question-title">原题（中文翻译）</h3><p>一家汽车制造商承诺下一版发动机性能提高到原来的4倍。你判断只有90%的部分能改进；在本题使用的Amdahl耗时模型下，这部分必须提高多少倍k才能实现整体目标？</p>
 <p class="source">原书：<a class="source-pdf" href="../csapp.pdf#page=60">印刷 59 页 / PDF 60 页</a></p>
 </div><div class="answer"><h3 class="answer-title">解答</h3><ol class="solution-steps"><li><p>把可改进的90%解释为原始耗时比例α=0.9。新总时间相对旧时间为0.1+0.9/k；整体四倍要求它等于1/4。</p>
 </li><li><div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mn>0.1</mn><mo>+</mo><mfrac><mrow><mn>0.9</mn></mrow><mrow><mi>k</mi></mrow></mfrac><mo>=</mo><mn>0.25</mn><mo>⇒</mo><mi>k</mi><mo>=</mo><mfrac><mrow><mn>0.9</mn></mrow><mrow><mn>0.15</mn></mrow></mfrac><mo>=</mo><mn>6</mn></mrow></math></div>
 </li><li><p>代回：未改进部分0.1，加速后的部分0.15，总计0.25，整体恰为4倍；上限为1/0.1=10倍，所以该目标可达。</p>
 </li></ol><p>题干校注：原书书后首行将4=1/[(1−0.9)+0.9/k]排成缺少分母整体括号的形式；后续计算与k=6对应上述完整分母。这里保留其正确耗时模型。</p>
+
+<div class="explanation" id="explain-ex-1-2"><p>取原来总共 100 分钟更直观：其中 10 分钟不能改，90 分钟可以改。整体快四倍意味着只允许花 25 分钟；先预留固定的 10 分钟，可改部分只剩 15 分钟。原来 90 分钟的工作压到 15 分钟，所以局部必须快 90/15=6 倍。这里的 0.15 来自“目标总时间扣除固定时间”，不是题目直接给出的比例。</p></div>
 </div></details>
 </section><section id="self-check"><h2>补充自测与解答</h2><p>以下为根据本章机制独立编写的自测。先在纸上写出判断、计算或理由，再展开解答。</p>
 <details class="exercise" id="q1-1"><summary>自测 1-1 · 位模式的解释</summary><div class="exercise-question"><h3>问题</h3>
@@ -423,6 +435,8 @@ required-k=6.000000</code></pre>
 <p>占原总时间 80% 的工作加速 4 倍，总加速比是多少？</p>
 </div><div class="answer"><h3>解答</h3>
 <p>新相对时间为 0.2+0.8/4=0.4，总加速比 2.5。把这部分完全消掉后的上限是 5；不能把局部 4 倍直接当作全程序 4 倍。</p>
+
+<div class="explanation" id="explain-q1-2"><p>按原耗时 100 单位计，20 单位保持，80 单位变成 80/4=20，新总耗时 40，故 100/40=2.5。即使那 80 单位工作瞬间完成，仍留下 20，所以最大也只有 100/20=5 倍。</p></div>
 </div></details>
 <details class="exercise" id="q1-3"><summary>自测 1-3 · 目标文件与可执行文件</summary><div class="exercise-question"><h3>问题</h3>
 <p>已经有机器码的 hello.o 为什么还要链接？</p>

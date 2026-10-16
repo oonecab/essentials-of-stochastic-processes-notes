@@ -42,3 +42,5 @@
 第三部分修订的 HTTP 首部提前拒绝、接入窗口与活动连接处理、计时子进程取消规则见 [I008](../../issues/I008-csapp-part-three-review-fixes.md) / [T008](../../test/T008-csapp-part-three-review-fixes.md)，权威正文与程序约定仍在第 11/12 章及源码说明中。
 
 第二轮严格评估中的 HTTP 字段空白/Host 先后规则、断言关闭后的必要自测、3.33 别名条件、CGI 子进程所有权与分配器空间统计口径见 [I010](../../issues/I010-csapp-review-v2-fixes.md) / [T010](../../test/T010-csapp-review-v2-fixes.md)。权威定义仍在相应正式正文与源码说明；12.39 的代理浏览器实验按逐题状态保留待验收。
+
+CS:APP 全书解释复核见 [I018](../../issues/I018-csapp-explanations.md) / [T018](../../test/T018-csapp-explanations.md)。[第 5 章 §5.1](../../books/csapp/notes/chapter05_optimization.html#s5-1)逐句说明同址读写与 const 访问限制；其他补充位置由[逐项审阅记录](../../books/csapp/notes/explanation_review.json)链接回正式正文。本轮细化既有语义与计算条件，补充明确输入的推演；原题条件、维护程序的接口和计算口径沿用现有定义。

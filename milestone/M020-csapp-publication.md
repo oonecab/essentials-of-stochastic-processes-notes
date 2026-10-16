@@ -1,5 +1,7 @@
 # M020：CS:APP 修订上线
 
-日期：2026-10-16。状态：in_progress。关联 [I020](../issues/I020-csapp-publication.md)。
+日期：2026-10-16。状态：completed。关联 [I020](../issues/I020-csapp-publication.md)。
 
 完成条件：候选差异复核与登记检查通过；源码提交推送；本地 HTTPS 包验收；新版本部署及源站/公网/浏览器验收；旧版本与配置可恢复；发布结果记录同步到远端，最终工作区清洁。
+
+结果：源码提交 `f3b167f8bd8b43fd70ebc3ce3eb841589b42c2ae` 已推送 `main`；生产当前版本为 `20261016T232016`。源站、公网逐文件与真实浏览器阅读验收通过，保留 `20261016T202557` 及原配置作为回退点。详细结果见 [发布验收记录](../docs/acceptance/csapp-publication-20261016.json)。

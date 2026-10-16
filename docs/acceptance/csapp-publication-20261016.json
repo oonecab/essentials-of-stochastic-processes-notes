@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "issue": "I020",
+  "status": "deployed_and_verified",
+  "accepted_at": "2026-10-16T23:41:35.448449+08:00",
+  "source_commit": "f3b167f8bd8b43fd70ebc3ce3eb841589b42c2ae",
+  "source_tree": "e34b0c8c9295e4b4c499816b455d793869f733ae",
+  "remote": "oonecab/reading-notes",
+  "branch": "main",
+  "site": "https://notes.zzzping.top/",
+  "authorization": "Project owner requested inspection, commit, push and production deployment in the current task.",
+  "content_scope": {
+    "book": "CS:APP Third Edition, Global Edition",
+    "reading_pages": 14,
+    "explanation_additions": 109,
+    "additional_rewritten_example": "Chapter 5 pointer aliasing",
+    "figures_and_captions_reviewed": 58,
+    "svg_figures": 50,
+    "tables_reviewed": 363,
+    "visual_navigation_findings_fixed": 14,
+    "content_review_records": [
+      "books/csapp/notes/explanation_review.json",
+      "books/csapp/notes/visual_navigation_review.json"
+    ],
+    "existing_questions_excerpts_and_anchors": "preserved",
+    "maintained_program_sources": 74
+  },
+  "release": {
+    "id": "20261016T232016",
+    "files": 239,
+    "html_pages": 52,
+    "reading_pages": 36,
+    "total_bytes": 30511053,
+    "archive_sha256": "09f73e09a1d77c8dc61aa8a218f3098eaaff908a96838fc87a1613ae1fde49e5",
+    "local_references_checked": 5807,
+    "navigation_links": 5798,
+    "identical_site_files_to_local_reviewed_release": "20261016T230701"
+  },
+  "validation": {
+    "doctor": "passed",
+    "full_program_checks": "tmp/project-check/20261016T231851-0fjbvmrs/report.json",
+    "full_program_checks_status": "passed",
+    "full_checks": 11,
+    "quick_checks_report": "tmp/project-check/20261016T232123-rwyr0vcx/report.json",
+    "quick_checks": 8,
+    "quick_checks_status": "passed",
+    "csapp_program_groups": 42,
+    "csapp_c_python_pairs": 32,
+    "csapp_standalone_c": 8,
+    "csapp_standalone_python": 2,
+    "alias_execution": "O0, O3 and ASan/UBSan passed",
+    "navigation_mutation_regressions": 8,
+    "independent_read_only_review": "PASS; 421 figure/table fragments, 110 explanation bindings, original questions/excerpts/anchors and 74 maintained sources verified",
+    "source_files_verified_against_pushed_commit": 223,
+    "secrets_scanner": "Gitleaks 8.30.1",
+    "secrets_source_findings": 0,
+    "secrets_prior_history_findings": 0,
+    "secrets_staged_findings": 0,
+    "local_https_report": "tmp/release-check/20261016T232016-yutlt26k/https-verification.json",
+    "local_https_status": "pass",
+    "origin_files_checked": 236,
+    "origin_status": "pass",
+    "public_files_checked": 236,
+    "public_status": "pass",
+    "public_finished_at": "2026-10-16T23:28:18.634496+08:00",
+    "entry_redirects": 9,
+    "pdf_ranges": [
+      {
+        "path": "csapp/csapp.pdf",
+        "status": 206,
+        "range": "bytes 32-63/6765790",
+        "bytes_match": true
+      },
+      {
+        "path": "stochastic/assets/essentials-of-stochastic-processes.pdf",
+        "status": 206,
+        "range": "bytes 32-63/2579008",
+        "bytes_match": true
+      }
+    ],
+    "inline_script_csp_sources": 9,
+    "followup_validation_basis": "Publication records only; source checks remain bound to the deployed source tree. The final documentation commit is checked separately for structure, secrets and unchanged build inputs."
+  },
+  "browser": {
+    "engine": "ego-browser Chromium",
+    "widths": [
+      1440,
+      390
+    ],
+    "reading_pages": 14,
+    "layout_views": 28,
+    "whole_page_overflow_failures": 0,
+    "mathml_error_nodes": 0,
+    "native_navigation_actions": 43,
+    "navigation_action_kinds": {
+      "footer-previous": 3,
+      "header-next": 14,
+      "map-chapter": 12,
+      "reading-task": 12,
+      "repaired-bridge": 2
+    },
+    "reader_interaction_records": 13,
+    "horizontal_scroll_containers_tested_with_mouse_and_keyboard": 5,
+    "home_and_map_paths": [
+      {
+        "book": "stochastic",
+        "entered": "https://notes.zzzping.top/stochastic/notes/book_overview.html",
+        "returned": "https://notes.zzzping.top/"
+      },
+      {
+        "book": "weiss",
+        "entered": "https://notes.zzzping.top/weiss/notes/book_overview.html",
+        "returned": "https://notes.zzzping.top/"
+      },
+      {
+        "book": "csapp",
+        "entered": "https://notes.zzzping.top/csapp/notes/book_overview.html",
+        "returned": "https://notes.zzzping.top/"
+      }
+    ],
+    "representative_exercise": {
+      "id": "ex-5-2",
+      "deep_link_open": true,
+      "native_close_reopen": true
+    },
+    "source_download": {
+      "filename": "reductions.c",
+      "bytes": 954,
+      "sha256": "b0e0af03241e5347677dc398f8d9d9db192326b393807c1698c7301386eba4e3",
+      "matches_release": true
+    },
+    "code_expansion": {
+      "name": "Python code expansion",
+      "input": "focus and Enter",
+      "open": true,
+      "url": "https://notes.zzzping.top/csapp/notes/chapter05_optimization.html#s5-1",
+      "scrollWidth": 375,
+      "viewport": 375
+    },
+    "program_guide": {
+      "url": "https://notes.zzzping.top/csapp/code/index.html",
+      "title": "教学程序与运行说明 · 读书笔记",
+      "viewport": 375,
+      "scrollWidth": 375
+    },
+    "pdf_visual_confirmation": {
+      "pdf_page": 536,
+      "total_pages": 1122,
+      "printed_page": 535,
+      "topic": "Section 5.1 twiddle1/twiddle2 pointer aliasing",
+      "screenshot_viewed": true
+    },
+    "public_screenshots_viewed": [
+      "book_overview-1440.png",
+      "book_overview-390.png",
+      "preface-1440.png",
+      "preface-390.png",
+      "chapter01_tour-1440.png",
+      "chapter01_tour-390.png",
+      "chapter02_information-1440.png",
+      "chapter02_information-390.png",
+      "chapter03_machine_level-1440.png",
+      "chapter03_machine_level-390.png",
+      "chapter04_architecture-1440.png",
+      "chapter04_architecture-390.png",
+      "chapter05_optimization-1440.png",
+      "chapter05_optimization-390.png",
+      "chapter06_memory-1440.png",
+      "chapter06_memory-390.png",
+      "chapter07_linking-1440.png",
+      "chapter07_linking-390.png",
+      "chapter08_exceptional-1440.png",
+      "chapter08_exceptional-390.png",
+      "chapter09_virtual_memory-1440.png",
+      "chapter09_virtual_memory-390.png",
+      "chapter10_system_io-1440.png",
+      "chapter10_system_io-390.png",
+      "chapter11_network-1440.png",
+      "chapter11_network-390.png",
+      "chapter12_concurrency-1440.png",
+      "chapter12_concurrency-390.png",
+      "map-mobile-right.png",
+      "mountain-mobile-right.png",
+      "socket-mobile-right.png",
+      "event-loop-mobile-right.png",
+      "cpi-table.png",
+      "functional-units-table.png",
+      "timing-units-table.png",
+      "reading-tasks-table.png",
+      "reading-table-mobile-right.png",
+      "public-home-desktop.png",
+      "public-home-mobile.png",
+      "public-exercise-mobile.png",
+      "public-program-guide-mobile.png",
+      "public-pdf-page536.png",
+      "public-code-mobile.png"
+    ],
+    "local_screenshots_viewed": [
+      "local-map.png",
+      "local-alias-mobile.png"
+    ],
+    "layout_record_page_exceptions_and_log_errors": 0,
+    "scope": "All 14 CSAPP pages at both widths; representative figure/table viewport screenshots were visually inspected. Native chapter navigation, scroll, disclosures, source download and PDF page were exercised. Content review and executable-example evidence remain in their own records.",
+    "task_finished": true
+  },
+  "rollback": {
+    "previous_release": "20261016T202557",
+    "previous_current": "releases/20261016T202557",
+    "configuration_backup": "/var/lib/notes-deploy/20261016T232016/previous-nginx.conf",
+    "previous_config_sha256": "ee4c5a362bcc3ae17ddbf2d40f78afc923eced078b941db18809d286570a4387",
+    "old_files_retained": true,
+    "previous_files": 237,
+    "rollback_executed": false
+  },
+  "isolation": {
+    "other_site_configs_and_current_links": "unchanged",
+    "certificate_changed": false
+  },
+  "remaining_experiment_boundary": "Exercise 12.39 retains its existing pending browser-through-proxy experiment; deployment reading checks do not change that status.",
+  "evidence_directory": "deploy/reports/20261016T232016/"
+}

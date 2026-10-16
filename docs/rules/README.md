@@ -31,6 +31,10 @@
 
 跨书共有的规则登记方式遵循本目录规范；发生公式、精度、单位或边界变更时，在此链接受影响的权威条目、问题单和测试，正文保留原结论与修正依据，不另抄一份算法或定理。
 
+随机过程第一章的吸收计时约定由[习题 1.66](../../books/stochastic/notes/chapter01_markov_chains.html#ex-1-66)说明：按原书区分从第 1 步开始找吸收与允许时刻零已吸收的剩余等待，首步方程和最终边界答案分别使用对应定义。2026-10-16 的原书核对、解释修订与有理数回归见 [I016](../../issues/I016-stochastic-chapter1-explanations.md) / [T016](../../test/T016-stochastic-chapter1-explanations.md)。
+
+后续章节的模型与计算边界仍以正式正文为准：[定理 3.7](../../books/stochastic/notes/chapter03_renewal_processes.html#theorem-3-7-proof)区分服务开始链的返回次数和真实时间空闲比例；[例 4.17](../../books/stochastic/notes/chapter04_continuous_time_markov_chains.html#example-4-17)按无限服务台逐个累加离开速率；[例 6.9](../../books/stochastic/notes/chapter06_mathematical_finance.html#example-6-9)保留历史报价，以完整精度计算折现后再舍入显示；[定理 6.9](../../books/stochastic/notes/chapter06_mathematical_finance.html#theorem-6-9-proof)说明极限与停止所需的一致可积条件；[定理 A.8](../../books/stochastic/notes/appendix_a_probability_review.html#theorem-a-8-proof)明确变量变换使用的局部绝对连续条件。原书说法、修正理由和各题输入在对应正文维护，逐项审阅及独立回归见 [I017](../../issues/I017-stochastic-remaining-explanations.md) / [T017](../../test/T017-stochastic-remaining-explanations.md)。
+
 第二部分修订的信号临时等待掩码、作业清理与分配搜索游标契约见 [I006](../../issues/I006-csapp-part-two-review-fixes.md) / [T006](../../test/T006-csapp-part-two-review-fixes.md)，权威正文和维护程序仍在上述章节及程序约定中。
 
 第三部分可靠 I/O 与文件共享、地址和协议边界、并发与同步的契约分别由[第 10 章](../../books/csapp/notes/chapter10_system_io.html)、[第 11 章](../../books/csapp/notes/chapter11_network.html)、[第 12 章](../../books/csapp/notes/chapter12_concurrency.html)定义，执行与校注范围见 [I007](../../issues/I007-csapp-part-three.md) / [T007](../../test/T007-csapp-part-three.md)。

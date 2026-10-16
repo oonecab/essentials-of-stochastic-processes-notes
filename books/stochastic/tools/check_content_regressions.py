@@ -28,18 +28,44 @@ def main():
     assert (a1,a2,rho1,rho2)==(F(12,7),F(20,7),F(3,7),F(40,49))
     W = (rho1/(1-rho1)+rho2/(1-rho2))/3
     tex = '\n'.join(n.attrs['data-tex'] for n in traffic.walk('math'))
-    assert r'\alpha_1=1+5/7=12/7' in tex and r'187/108' in tex and W==F(187,108)
+    # The explanation names total traffic r_i. Bind both input equations and
+    # the displayed substitution, rather than the previous alpha spelling.
+    assert 'r_1=1+r_2/4' in tex and 'r_2=2+r_1/2' in tex
+    text = re.sub(r'\s+', '', traffic.text().translate(str.maketrans('₁₂', '12')))
+    substitution = re.search(r'r1=1\+([0-9]+/[0-9]+)=([0-9]+/[0-9]+)', text)
+    assert substitution is not None
+    feedback, displayed_a1 = map(F, substitution.groups())
+    assert feedback == a2/4 and displayed_a1 == 1+feedback == a1
+    assert r'\rho_1=(12/7)/4=3/7' in tex and r'\rho_2=(20/7)/(7/2)=40/49' in tex
+    assert 'W=(187/36)/3=187/108' in tex and W==F(187,108)
     parity = block('chapter06_mathematical_finance.html','derive-c6-parity-knockout')
-    assert '144.72' not in parity.text() and '414.72/49' in parity.text()
     call = F(6,7)**2*F(9,25)*32
     put = F(6,7)**2*(2*F(6,25)*13+F(4,25)*33)
     assert call==put==F(10368,1225)
+    tex = '\n'.join(n.attrs['data-tex'] for n in parity.walk('math'))
+    # The exact fraction replaces the equivalent 414.72/49 decimal ratio.
+    # Bind the separate source-text (S0=32) and figure (S0=36) cases as well.
+    assert '10368/1225' in tex and '144.72' not in parity.text()
+    assert '49/(7/6)^2=36' in tex
+    assert 'C=(6/7)^2(9/25)23=7452/1225' in tex and 'P=C-32+36=12352/1225' in tex
+    assert F(6,7)**2*F(9,25)*23==F(7452,1225)
+    assert F(7452,1225)-32+36==F(12352,1225)
     ex20 = block('chapter06_mathematical_finance.html','ex-6-20')
     rows = finance_reference({'input':'3 4 2 0.5 0.25 4 0 1 0'})
     assert rows[0]['v']==float(F(64,25))
     tex = [n.attrs.get('data-tex','') for n in ex20.walk('math')]
     assert r'\frac{64}{25}=2.56' in tex and '2.208' not in ex20.text()
-    print(json.dumps({'status':'pass','checks':['1.11 detailed balance','4.29 traffic/utilization/Little','6.4 source attribution/parity','6.20 literal payoff']},ensure_ascii=False))
+    # The current main solution follows the source's average-price definition;
+    # the conflicting S_n wording remains a separately computed alternative.
+    def asian(history):
+        immediate=max(sum(history)/len(history)-4, F(0))
+        if len(history)==4:return immediate
+        continuation=(asian(history+[history[-1]*2])+asian(history+[history[-1]/2]))*F(2,5)
+        return max(immediate, continuation)
+    assert asian([F(4)])==F(476,375)
+    assert asian([F(4),F(8),F(4)])==F(4,3)
+    assert '(A_n-4)^+' in tex and any(t.startswith(r'V_0=\frac{476}{375}') for t in tex)
+    print(json.dumps({'status':'pass','checks':['1.11 detailed balance','4.29 traffic/utilization/Little','6.4 both source initial prices/parity','6.20 average-price payoff and literal alternative']},ensure_ascii=False))
 
 
 if __name__=='__main__':main()

@@ -1,0 +1,5296 @@
+{
+  "schema_version": 1,
+  "status": "chapter_1_locally_reviewed",
+  "reviewed_at_utc": "2026-10-15T17:04:02.097274+00:00",
+  "scope": "I016: Chapter 1 only; read all 56 examples, 31 numbered proofs and 77 exercises, preserve reader-approved example 1.4 and explain the other 163 items. Explain 293 row operations in 35 systems; clarify exercise 1.66 positive-time absorption and original approximation in 1.68.",
+  "counts": {
+    "examples": 56,
+    "theorems": 18,
+    "lemmas": 13,
+    "exercises": 77,
+    "reviewed_items": 164,
+    "expanded_items": 163,
+    "retained_approved_items": 1,
+    "linear_systems": 35,
+    "row_operations": 293
+  },
+  "reader_standard": "Explain the target and model, why the decomposition or proof is chosen, where numbers and conditions come from, why each transformation is valid, and what the result means.",
+  "reader_acceptance": {
+    "example_1_4": "User confirmed the explanatory style before this revision. Its HTML remains byte-identical.",
+    "remaining_chapter_1": "Author readback completed; later reader feedback may identify further gaps. Structural gates alone do not certify comprehension."
+  },
+  "items": [
+    {
+      "kind": "Example",
+      "number": "1.1",
+      "id": "example-1-1",
+      "finding": "财富作为状态、两种增量及期望的权重需连接到游戏规则。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "before_canonical_sha256": "e35ad79124497489048223dbf1a28cf022886f3d023b814a178cc0392652ff14",
+      "after_canonical_sha256": "37d89c69daf0abaaad9a451de7634eb6941ec3f65f3674618314cc9e9208dbb7",
+      "reviewed_at_utc": "2026-10-15T15:57:46.014071+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        10,
+        11
+      ],
+      "current_mathml_count": 26
+    },
+    {
+      "kind": "Example",
+      "number": "1.2",
+      "id": "example-1-2",
+      "finding": "计数分母、当前状态足够性及漂移正负的来源需展开。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "1ef0fe65dd6d170df8cdf088238d5de458da7a643157248fb0551f4f7e4fad33",
+      "after_canonical_sha256": "99091551756f63427d4e390b39040b58823556c787ba7dcbe63e2306c4b03979",
+      "reviewed_at_utc": "2026-10-15T15:57:46.015687+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        12
+      ],
+      "current_mathml_count": 22
+    },
+    {
+      "kind": "Example",
+      "number": "1.3",
+      "id": "example-1-3",
+      "finding": "两步式虽列路径，尚缺每个因子的条件对象与相加依据。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "before_canonical_sha256": "a01c3e3162007d0e88a2b7c30393e2f16b92dc9ac43fdab1d636476a6e21ada0",
+      "after_canonical_sha256": "79b5792d4e415ee96da65ea9c699cdc3d4fe818a70462e05b38e8769de0ef27d",
+      "reviewed_at_utc": "2026-10-15T15:57:46.016498+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        12,
+        13
+      ],
+      "current_mathml_count": 16
+    },
+    {
+      "kind": "Example",
+      "number": "1.4",
+      "id": "example-1-4",
+      "finding": "逐段读回用户认可的父代—子代—孙代解释：所求条件、三路径、条件比例、全概率和矩阵含义均明确；原样保留。",
+      "decision": "retained_after_readback",
+      "intro_added": false,
+      "steps_explained": [],
+      "before_canonical_sha256": "abe6faa0460a17d0f6ee3e73ed8f1401ffe56ac56e303cb279399e1ce5763e75",
+      "after_canonical_sha256": "abe6faa0460a17d0f6ee3e73ed8f1401ffe56ac56e303cb279399e1ce5763e75",
+      "reviewed_at_utc": "2026-10-15T15:57:46.018742+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        13
+      ],
+      "current_mathml_count": 37
+    },
+    {
+      "kind": "Example",
+      "number": "1.5",
+      "id": "example-1-5",
+      "finding": "剩余概率除以二的事件层次及矩阵行的含义需展开。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "5ca85781f89543b99ca8120537b13ff7b4bb8e91dc77a2af6a90b945a3d0e5fe",
+      "after_canonical_sha256": "2c913cfb2c0b79168d0bca6c3926b814f12046a0b3ec22a22c9df70853853e3f",
+      "reviewed_at_utc": "2026-10-15T15:57:46.019829+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        13
+      ],
+      "current_mathml_count": 15
+    },
+    {
+      "kind": "Example",
+      "number": "1.6",
+      "id": "example-1-6",
+      "finding": "补货时序、需求合并和矩阵列中数字的逆序来源需解释。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "before_canonical_sha256": "a6fd3c2a2330c69cee746306a2a1746cecc2d1edbef3b2e8b3248a8ccc14276a",
+      "after_canonical_sha256": "127ffa2da05f8519f4da3039d6dc7fef406a171879098f6440050ec839823422",
+      "reviewed_at_utc": "2026-10-15T15:57:46.022043+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        13,
+        14
+      ],
+      "current_mathml_count": 31
+    },
+    {
+      "kind": "Example",
+      "number": "1.7",
+      "id": "example-1-7",
+      "finding": "集合状态、故障事件互斥与自环余量尚需逐行因果解释。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "ad8eda52d848efcb7431dbc14f0f424ec4ca187761de02fab3af9c57278ac537",
+      "after_canonical_sha256": "3e396c2b5a8ba7e03897079990d5c00d51689092bb72937a947958a7a9236007",
+      "reviewed_at_utc": "2026-10-15T15:57:46.023371+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        14,
+        15
+      ],
+      "current_mathml_count": 15
+    },
+    {
+      "kind": "Example",
+      "number": "1.8",
+      "id": "example-1-8",
+      "finding": "卷积系数、生成函数指数及均值递推存在解释跳步。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "245f0e1ab153d92279ad345fdcefb46f9afbf3916aafa7f2a2bda720ff217761",
+      "after_canonical_sha256": "3ccb9cfcaf41848d2fd6ba7926896506d4c4d4efcdeeaa046ce97954c577ac5c",
+      "reviewed_at_utc": "2026-10-15T15:57:46.026630+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        15
+      ],
+      "current_mathml_count": 42
+    },
+    {
+      "kind": "Example",
+      "number": "1.9",
+      "id": "example-1-9",
+      "finding": "二项系数和幂的来源、方差累加需解释到抽样位置。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "f0f9f98dba9bad28dd5de0df00a356675fcaa629d10ad4c0a55983645a3fc516",
+      "after_canonical_sha256": "7f98dd21041170a619364c603300482b7fb9b1cbfb0b55f19d81cb0ad3e98c80",
+      "reviewed_at_utc": "2026-10-15T15:57:46.028628+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        15,
+        16
+      ],
+      "current_mathml_count": 26
+    },
+    {
+      "kind": "Example",
+      "number": "1.10",
+      "id": "example-1-10",
+      "finding": "状态窗口与分数如何落入矩阵需在已有描述上进一步对应。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "before_canonical_sha256": "3de82c47843e9b6558592480ab5e7e068a3ab3192ed42a899eaaa44ccc608b24",
+      "after_canonical_sha256": "c28e374e031da0f4725e80b10190e3310c21e8298710fa27634f12b2e2b716d3",
+      "reviewed_at_utc": "2026-10-15T15:57:46.030227+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        16,
+        17
+      ],
+      "current_mathml_count": 25
+    },
+    {
+      "kind": "Example",
+      "number": "1.11",
+      "id": "example-1-11",
+      "finding": "两步求和、边界因子一与系数二的来源需解释。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "before_canonical_sha256": "5241a934bb5c249221a611cc815384fa450a151afec58bc572dea5e8e8aea6d0",
+      "after_canonical_sha256": "4c9e99cc2bf6dd1ed1f3dcd4c12af1adf67d9bb5704f1dbb2650d31f8e4af837",
+      "reviewed_at_utc": "2026-10-15T15:57:46.032053+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        21,
+        22
+      ],
+      "current_mathml_count": 26
+    },
+    {
+      "kind": "Example",
+      "number": "1.12",
+      "id": "example-1-12",
+      "finding": "为何一个正概率逃逸路径就足以判暂态需补明。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "before_canonical_sha256": "005a6a3579f764c919905c12fdb4db7a55c549ab49e417a4b8e6c9cebae1388d",
+      "after_canonical_sha256": "3cded716efa54a6c060289ddbb49de43d4f669d6bec7e73b8626f9d19133051b",
+      "reviewed_at_utc": "2026-10-15T15:57:46.032887+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        24
+      ],
+      "current_mathml_count": 13
+    },
+    {
+      "kind": "Example",
+      "number": "1.13",
+      "id": "example-1-13",
+      "finding": "列最小值为何取、几何尾界为何无需独立与尾和均值需展开。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "008b48d209b3eb7981520b47049fdf7191497b12d9d5816944d754d91019505b",
+      "after_canonical_sha256": "314fbd76d56b7716dcbd4d2c653a4f8cb3a20f5b3e51a079070ed0cda4c6d6b4",
+      "reviewed_at_utc": "2026-10-15T15:57:46.034487+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        25,
+        26
+      ],
+      "current_mathml_count": 19
+    },
+    {
+      "kind": "Example",
+      "number": "1.14",
+      "id": "example-1-14",
+      "finding": "闭类识别到常返与暂态结论的逻辑需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2
+      ],
+      "before_canonical_sha256": "28fd85f0d3d35dfb08f46a6090bc15325fbf1cfcd91d6a85528d87db3b05eb51",
+      "after_canonical_sha256": "9ed414ba05f4f218f0cc3a181870283ad11936365ac3ea123331f116d5983ca4",
+      "reviewed_at_utc": "2026-10-15T15:57:46.035298+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        26,
+        27,
+        28,
+        29
+      ],
+      "current_mathml_count": 12
+    },
+    {
+      "kind": "Example",
+      "number": "1.15",
+      "id": "example-1-15",
+      "finding": "初始概率与转移概率的不同条件对象、权重为何乘加需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "before_canonical_sha256": "a755a9c3b8c04f03321ffffe7acde786ab3b62793823186d5cae17db853fdfe7",
+      "after_canonical_sha256": "30a732f04d7a716b6248c1c6d34e7595db7622d50809c5c4fad0c2eddccc3507",
+      "reviewed_at_utc": "2026-10-15T15:57:46.036173+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        30
+      ],
+      "current_mathml_count": 14
+    },
+    {
+      "kind": "Example",
+      "number": "1.16",
+      "id": "example-1-16",
+      "finding": "同一数字来源于初始分布还是转移条件未充分分清。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "fa1b1dd1f563df321509de4b63143ea9475007a47f49f8101c9db78969b0fe58",
+      "after_canonical_sha256": "ce768bbdc5074d274e529f394b4238ed4e6bcb2a5062b64296e89c18c02cbd9d",
+      "reviewed_at_utc": "2026-10-15T15:57:46.037253+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        30,
+        31
+      ],
+      "current_mathml_count": 13
+    },
+    {
+      "kind": "Example",
+      "number": "1.17",
+      "id": "example-1-17",
+      "finding": "平稳方程、冗余方程与归一化的动机需解释。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "10aed4b9ffc1aef1dfb960fece0b48c2885ff83a4c4d3d950c64bce8d3f9f329",
+      "after_canonical_sha256": "e015919e10d54cffe03391c0fe9090691589563cb56cb19a2306048c48b24608",
+      "reviewed_at_utc": "2026-10-15T15:57:46.038922+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        31,
+        32
+      ],
+      "current_mathml_count": 26
+    },
+    {
+      "kind": "Example",
+      "number": "1.18",
+      "id": "example-1-18",
+      "finding": "流入系数、消元选择与缩放常数的由来需逐步解释。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "4fd0aded30c458a9c07dca897c61ddfcf62509f1d37ca71c37009d01a7791d25",
+      "after_canonical_sha256": "c091e4fca7f0da77d18271b2d08b16c7d2cd3b3216f3e3f09c45f9182c36f488",
+      "reviewed_at_utc": "2026-10-15T16:02:14.834557+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        32,
+        33,
+        34
+      ],
+      "current_mathml_count": 38
+    },
+    {
+      "kind": "Example",
+      "number": "1.19",
+      "id": "example-1-19",
+      "finding": "为何尝试细致平衡、比例尺度和第三对检验的作用需解释。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "b9432e09c0e424b5e0e081081bdb43636fc8018a9f02260521499c1356ef93d1",
+      "after_canonical_sha256": "088e75fbd95691898724aa7ce23586e79750beaf186022fdb3b24bc170dac76a",
+      "reviewed_at_utc": "2026-10-15T16:02:14.836273+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        34,
+        35
+      ],
+      "current_mathml_count": 21
+    },
+    {
+      "kind": "Example",
+      "number": "1.20",
+      "id": "example-1-20",
+      "finding": "状态列流入与长期命中率两种算法的概率含义需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "8849a1b5face0156d85a10e8e3e0c282cb691dead19230f6b3e2a9531f958188",
+      "after_canonical_sha256": "f24a373f50eeb446819b455593bc6f1bb822ae7655b76365b91e4453f27d0273",
+      "reviewed_at_utc": "2026-10-15T16:02:14.838408+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        35
+      ],
+      "current_mathml_count": 27
+    },
+    {
+      "kind": "Example",
+      "number": "1.21",
+      "id": "example-1-21",
+      "finding": "均匀候选为何由列和支持、反射边界和返回倒数需说明。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "before_canonical_sha256": "7d1cd63ccf4d6139d0e4b913271609446c9aff345d2632e3c8f86fc8a9e949f5",
+      "after_canonical_sha256": "3154dea039d3a09db295fe916fd6c268d38e47278466147463d49b22a06cec44",
+      "reviewed_at_utc": "2026-10-15T16:02:14.839735+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        36
+      ],
+      "current_mathml_count": 25
+    },
+    {
+      "kind": "Example",
+      "number": "1.22",
+      "id": "example-1-22",
+      "finding": "循环列和、模运算路径覆盖与收敛条件需连接。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "ad123a8c5fc4795410ffd2cb734b79885b74b48b9c7421f041a5ceb70a31aea2",
+      "after_canonical_sha256": "feb7ff59f52f00bbe82c2a9b3ab550bb0ccf1cd1fa19d4d25f2dd170f7f5e91e",
+      "reviewed_at_utc": "2026-10-15T16:02:14.841108+00:00",
+      "first_pass_after_canonical_sha256": "a3df8cafdf5fa4137d979bf15bdd0bf63b6ff1ac45a2e01f552b303e0d621a76",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        36
+      ],
+      "current_mathml_count": 20
+    },
+    {
+      "kind": "Example",
+      "number": "1.23",
+      "id": "example-1-23",
+      "finding": "骰子配对数、固定目标来源与全正多步核的理由需展开。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "914ebeaf10070e23006b89b9f6415492bb2cbd1cfccdf582b4141450e7492c76",
+      "after_canonical_sha256": "274da4cac390e1d199ab477c7d69330bedf237ffa300088c6f7a496e092d1753",
+      "reviewed_at_utc": "2026-10-15T16:02:14.842544+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        36,
+        37
+      ],
+      "current_mathml_count": 17
+    },
+    {
+      "kind": "Example",
+      "number": "1.24",
+      "id": "example-1-24",
+      "finding": "扩展状态必要性、尾和均值与聚合概率分母需补解释。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "4648de6cc30e3ce1639e729de7593b5f76b1a112307b2e7d4dcf344326933cfc",
+      "after_canonical_sha256": "5f4642ee5c26ca0b7d57d9e11085dd84109fc11b48657832e17bcd8375e34277",
+      "reviewed_at_utc": "2026-10-15T16:02:14.843940+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        37
+      ],
+      "current_mathml_count": 19
+    },
+    {
+      "kind": "Example",
+      "number": "1.25",
+      "id": "example-1-25",
+      "finding": "平稳与可逆的不同要求、单边反例及唯一性推理需解释。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "348dc14cc9958174fa1e00f1f8b81ea11708fb2cbc76fe3d7abfee3fdca92764",
+      "after_canonical_sha256": "eae0db9fd35c7ac0c6e91e5d255d986ecd55cb61b42c95f9bc25ff8ee2c8374f",
+      "reviewed_at_utc": "2026-10-15T16:02:14.845204+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        38
+      ],
+      "current_mathml_count": 13
+    },
+    {
+      "kind": "Example",
+      "number": "1.26",
+      "id": "example-1-26",
+      "finding": "相邻比率构造的动机、分母索引与归一化理由需讲明。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "43e4685ee34243eded86f30aa179ccd23d54916b75d167f884bad2b2a1d41296",
+      "after_canonical_sha256": "13692c1591a17173f3f40ccdded86c1235ed40f7c67b284a1cec25108e1b31d7",
+      "reviewed_at_utc": "2026-10-15T16:02:14.847626+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        39
+      ],
+      "current_mathml_count": 24
+    },
+    {
+      "kind": "Example",
+      "number": "1.27",
+      "id": "example-1-27",
+      "finding": "二项系数、2的N次方与具体权重的来源需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "5b41eed7a9fbc34a1bd5e42ee992cbb68b2d9f0e216d0b4ca3f01e1d867059b0",
+      "after_canonical_sha256": "54ec601ae774df32e9e0c59e2a212438e96a95610e37032d063b968391686ed4",
+      "reviewed_at_utc": "2026-10-15T16:02:14.850171+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        39,
+        40
+      ],
+      "current_mathml_count": 31
+    },
+    {
+      "kind": "Example",
+      "number": "1.28",
+      "id": "example-1-28",
+      "finding": "矩阵数值不是原始输入，必须从每日故障和维修成功规则推导。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "1aa39afde8357dc8a78375a34320e0dde5c83f887f58016bd6a2c682875298fc",
+      "after_canonical_sha256": "42df004813178977bd24f25f32aabe6dd512d4eb9a6b941754dad53de3574c94",
+      "reviewed_at_utc": "2026-10-15T16:02:14.852868+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        40,
+        41
+      ],
+      "current_mathml_count": 31
+    },
+    {
+      "kind": "Example",
+      "number": "1.29",
+      "id": "example-1-29",
+      "finding": "按度数猜权重的原因及总度数两倍边数需说明。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "bdfbac32126191cbca0f46531e3cab599505cd25514185d7efc359296a9b766d",
+      "after_canonical_sha256": "0e20e67f23da636542d20065a9d4c07143880135025a0e4449a736c22767d198",
+      "reviewed_at_utc": "2026-10-15T16:02:14.854507+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        41,
+        42
+      ],
+      "current_mathml_count": 17
+    },
+    {
+      "kind": "Example",
+      "number": "1.30",
+      "id": "example-1-30",
+      "finding": "棋盘度数计数、加权总和和返回时间解释需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "1812bb23142efaddef837cb3230d5880b12194d9d60a60aa91a64cc1e5d53cd7",
+      "after_canonical_sha256": "e361d21df53b9b976717b158aec634ee2f1285861f09bdc595f272ff4fdd003b",
+      "reviewed_at_utc": "2026-10-15T16:02:14.856230+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        42,
+        43
+      ],
+      "current_mathml_count": 18
+    },
+    {
+      "kind": "Example",
+      "number": "1.31",
+      "id": "example-1-31",
+      "finding": "提议和接受的两层概率、自环质量及几何比来源需解释。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "8ce323bdfe368de3e11c1d7f58a77e96180b2fa520f100a92637b221c35d3b59",
+      "after_canonical_sha256": "44f59e8604f77ebb1ca225be0350dbabda879de3e3787076b447378920165b31",
+      "reviewed_at_utc": "2026-10-15T16:02:14.857927+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        45
+      ],
+      "current_mathml_count": 23
+    },
+    {
+      "kind": "Example",
+      "number": "1.32",
+      "id": "example-1-32",
+      "finding": "二项比约分与两种接受分母承担的任务需讲明。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "d44dd99d38e4b84d961b6666d6553b7e9d059e8ed6d06d2c17a0a78a309ae602",
+      "after_canonical_sha256": "6c957a0e51f9659dee8ba98f696a88ab86eaba102bc73bfa6650386bfb6776db",
+      "reviewed_at_utc": "2026-10-15T16:02:14.860732+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        45
+      ],
+      "current_mathml_count": 30
+    },
+    {
+      "kind": "Example",
+      "number": "1.33",
+      "id": "example-1-33",
+      "finding": "模型能量、局部差分选择与同异号计数需补动机。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "147771af87a65753970015eeb7f176af2e3285d67d79e5489071dca25f50769e",
+      "after_canonical_sha256": "9212b74af9ea5c1f3b3e95b6fb939f1483d0f23c0c9d3cc86333f86ca1335ab5",
+      "reviewed_at_utc": "2026-10-15T16:02:14.863481+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        46,
+        47
+      ],
+      "current_mathml_count": 34
+    },
+    {
+      "kind": "Example",
+      "number": "1.34",
+      "id": "example-1-34",
+      "finding": "目标权重与接受概率、负差全收和退火的作用需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "b7ba3c0d364f0040aec88782e0d11b6e8e0025ec0c9c0f007825f9dd9397f8fa",
+      "after_canonical_sha256": "97e4cd8c2dd86fe8c4bc5147ed69632eba14b40786c7ab1b23d3304c5206df66",
+      "reviewed_at_utc": "2026-10-15T16:02:14.864912+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        47
+      ],
+      "current_mathml_count": 18
+    },
+    {
+      "kind": "Example",
+      "number": "1.35",
+      "id": "example-1-35",
+      "finding": "沿边构造与闭环一致性产生乘积条件的原因需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "5d5aada10a9e27f6ac4141f159596dc0d6a3febb2b6fa54999522d41eddacaa9",
+      "after_canonical_sha256": "adc210e16fa1695faf6765ce68c33188456eee61e87578a604994f360b8d29a2",
+      "reviewed_at_utc": "2026-10-15T16:02:14.866869+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        47,
+        48,
+        49
+      ],
+      "current_mathml_count": 33
+    },
+    {
+      "kind": "Example",
+      "number": "1.36",
+      "id": "example-1-36",
+      "finding": "返回周期的公约数定义与奇偶障碍的关系需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "c9f8ce8da5300204efb33c1a912fc4222639fb3c005762430c984639e9b6dfaf",
+      "after_canonical_sha256": "a99fb4438aaa6628c8e7f37ff20c8da5369cfec89c1db14886f3fe800d26d433",
+      "reviewed_at_utc": "2026-10-15T16:07:36.636209+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        50
+      ],
+      "current_mathml_count": 14
+    },
+    {
+      "kind": "Example",
+      "number": "1.37",
+      "id": "example-1-37",
+      "finding": "为何选k到k减一、和集合公约数与非周期需解释。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "093a48da8427795942725a281c31e5ed6c375c008ca264074b5678444527c401",
+      "after_canonical_sha256": "9aa9a45816df8e0e9b083146b07d22e9310b082d29028b2a0b1f7f32d2ff7aab",
+      "reviewed_at_utc": "2026-10-15T16:07:36.637364+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        50
+      ],
+      "current_mathml_count": 14
+    },
+    {
+      "kind": "Example",
+      "number": "1.38",
+      "id": "example-1-38",
+      "finding": "平稳单坏件方程、双坏件来源与零件需求奖励的意义需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "before_canonical_sha256": "6d06c7b815eb9df06bf8f8e3ae66f20f68bd7d575f23e507ad583b823d892ad0",
+      "after_canonical_sha256": "5eb3b3e8f920e855b8402436956f1fa02c364e5ead21eed7b132cd6a74e224c7",
+      "reviewed_at_utc": "2026-10-15T16:07:36.639923+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        53,
+        54
+      ],
+      "current_mathml_count": 31
+    },
+    {
+      "kind": "Example",
+      "number": "1.39",
+      "id": "example-1-39",
+      "finding": "合并A的动机、0.7来源和利润每项的模型含义需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "before_canonical_sha256": "aedbd1cb69d565e60fdc02add1800e676f77ff8077c6110f00a80c1bcbe10743",
+      "after_canonical_sha256": "e23e93d4859b26a827c8278b1084d7a0e8ccf365bd55b38879296892841ff99e",
+      "reviewed_at_utc": "2026-10-15T16:07:36.643008+00:00",
+      "first_pass_after_canonical_sha256": "b22999be0d138099f1c3a4df6a7c3564f507f953594f0f0d2d59d7579da29239",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        54,
+        55
+      ],
+      "current_mathml_count": 39
+    },
+    {
+      "kind": "Example",
+      "number": "1.40",
+      "id": "example-1-40",
+      "finding": "毕业概率未知量与自引用留级项、边界0和1需解释。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "0405f18c7131cd5b911477659dfc8e69f17f10fcfb5fa24e8483e087dc3cd17c",
+      "after_canonical_sha256": "399770adf14c28f18e7bff0027c1b06567e86b77afd247e98b294e079294d676",
+      "reviewed_at_utc": "2026-10-15T16:07:36.644486+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        62,
+        63
+      ],
+      "current_mathml_count": 24
+    },
+    {
+      "kind": "Example",
+      "number": "1.41",
+      "id": "example-1-41",
+      "finding": "选择两分分组与重启项、不同领先状态的方程原因需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "1bcd56f07f94c33ea81b35c931cd60a9245963debded60598668b0f5ccf88cfe",
+      "after_canonical_sha256": "ae6b72e8551b26de73ed65287ccd3111412ab76bb83982463b1d0f9d3d67c675",
+      "reviewed_at_utc": "2026-10-15T16:07:36.646479+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        63,
+        64,
+        65
+      ],
+      "current_mathml_count": 28
+    },
+    {
+      "kind": "Example",
+      "number": "1.42",
+      "id": "example-1-42",
+      "finding": "调和方程与改写相邻差的策略、起始资金影响需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "7b0f372f972046dc94495b98236dbf1c3aac74226b3bccac64e707f5041b15e2",
+      "after_canonical_sha256": "2c2e6d38153c9a7567bcd7ede0e29cc5c32dd3eeb1caae5041eff921cbf0e8c9",
+      "reviewed_at_utc": "2026-10-15T16:07:36.647525+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        65,
+        66
+      ],
+      "current_mathml_count": 14
+    },
+    {
+      "kind": "Example",
+      "number": "1.43",
+      "id": "example-1-43",
+      "finding": "为何猜线性固定概率及均值到命中概率之间的唯一性需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "3881878c8152b748a9e8f665792a77a566ea29a9bee4c47ed7f8bb9af1c3a026",
+      "after_canonical_sha256": "65ebce19ec5fa9c16715a50855229d7b5a314338c96dc760dd9c5f116b810ab4",
+      "reviewed_at_utc": "2026-10-15T16:07:36.648825+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        66
+      ],
+      "current_mathml_count": 20
+    },
+    {
+      "kind": "Example",
+      "number": "1.44",
+      "id": "example-1-44",
+      "finding": "差分替换的动机、边界定尺度和等比求和需解释。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "6a86503abf01a106030527c22df45fd87a017ce3695e789df2036cf24e7c788a",
+      "after_canonical_sha256": "7916170d2b33023a09422224a5ada65862fb341deec1bc91a730972700fe67e6",
+      "reviewed_at_utc": "2026-10-15T16:07:36.651870+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        66,
+        67,
+        68
+      ],
+      "current_mathml_count": 33
+    },
+    {
+      "kind": "Example",
+      "number": "1.45",
+      "id": "example-1-45",
+      "finding": "轮盘输赢计数、财富单位与赌徒模型代入的对应需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "023eee7dffae25a6ba348641992b980c7b7fcc0484aa9af96b21b5a12378f6b4",
+      "after_canonical_sha256": "9f9875331e1dfe7d0bbb0322a745e820d29fe17201ecf980280637071b091d19",
+      "reviewed_at_utc": "2026-10-15T16:07:36.653375+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        68
+      ],
+      "current_mathml_count": 18
+    },
+    {
+      "kind": "Example",
+      "number": "1.46",
+      "id": "example-1-46",
+      "finding": "类内比例与进入类概率的两层含义、各方程常数来源需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "before_canonical_sha256": "e8db4926d12b70b2e2dbd88a29c8c9a4b272d2f1300738922d90634645f65130",
+      "after_canonical_sha256": "cfbc3a2ea584f2f19049d2e43f009419d8753ef00f6c8aa82693b8c0a2725f9b",
+      "reviewed_at_utc": "2026-10-15T16:07:36.656337+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        69
+      ],
+      "current_mathml_count": 53
+    },
+    {
+      "kind": "Example",
+      "number": "1.47",
+      "id": "example-1-47",
+      "finding": "时间方程常数一、剩余时间及先解二年级的理由需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "d6c936be96c6f0fb592570eed007511283cd07af4c5e9c945d0a5269d6161bf2",
+      "after_canonical_sha256": "01d2782cff6395c1969aacadd0413e2f88504a4e5bb2847eac7e930a92a6ea9b",
+      "reviewed_at_utc": "2026-10-15T16:07:36.657672+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        70
+      ],
+      "current_mathml_count": 16
+    },
+    {
+      "kind": "Example",
+      "number": "1.48",
+      "id": "example-1-48",
+      "finding": "剩余分数方程和两分重启结构的常数二需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "233c4c4b220c0018e24be9ef597473c7062f0a26ff4401718366ecb4277bda09",
+      "after_canonical_sha256": "44db1d381e5da8c3b868f2bba06dd1c191d24b32e8bf37c67b044d1ee833c3ff",
+      "reviewed_at_utc": "2026-10-15T16:07:36.659299+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        70,
+        71,
+        72
+      ],
+      "current_mathml_count": 20
+    },
+    {
+      "kind": "Example",
+      "number": "1.49",
+      "id": "example-1-49",
+      "finding": "为何记后缀、遇H清空与首次和重复等待的区别需展开。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "f955ffa8fbd946c0b80144862332c5a96ee18c9fc69e34070350f58d72509bb8",
+      "after_canonical_sha256": "a7c657cbf4cbe546dff0302eaff7e6c3f240c46b275cb0130802f208ab2700ab",
+      "reviewed_at_utc": "2026-10-15T16:07:36.660179+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        72
+      ],
+      "current_mathml_count": 11
+    },
+    {
+      "kind": "Example",
+      "number": "1.50",
+      "id": "example-1-50",
+      "finding": "H后H为什么保持匹配、等待方程中的自环与不同初态需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "6b9ec4099837ce9a7450b3f4cd3a2bb5225025816b44e7fbf2368d64dc38ac89",
+      "after_canonical_sha256": "049084ec115fc2510f4acbafddcd2f734f9f50e4b5ff42180f7862b599acabf4",
+      "reviewed_at_utc": "2026-10-15T16:07:36.661260+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        72,
+        73,
+        74
+      ],
+      "current_mathml_count": 14
+    },
+    {
+      "kind": "Example",
+      "number": "1.51",
+      "id": "example-1-51",
+      "finding": "最长互异后缀的具体转移、乘六与差分消元动机需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "before_canonical_sha256": "a1b5d8b17e8a8286639d8d5ac02eaf890c94c681174689f9fc1eb8b1897a1565",
+      "after_canonical_sha256": "290b1681da885554306760ccc09e3c3b48328ce0fc32986ed65f2a672dcac4fe",
+      "reviewed_at_utc": "2026-10-15T16:07:36.664462+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        74,
+        75
+      ],
+      "current_mathml_count": 40
+    },
+    {
+      "kind": "Example",
+      "number": "1.52",
+      "id": "example-1-52",
+      "finding": "常数负二、差分求和与双边界确定尺度需解释。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "f971891b1a99bf238c65aa7cab20842026d746806e7c571246d4781eb961bb5a",
+      "after_canonical_sha256": "d5639b6070797be1d37a5caaab380a5e225f5a6bdad50877127106af9575ce4a",
+      "reviewed_at_utc": "2026-10-15T16:07:36.666941+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        75,
+        76
+      ],
+      "current_mathml_count": 22
+    },
+    {
+      "kind": "Example",
+      "number": "1.53",
+      "id": "example-1-53",
+      "finding": "构造x减Nh不是自然可猜，需说明修正漂移与边界的动机。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "35b7a10cd893db0cf173360a5af5511be4f7b3ac924c55d3528e8d4adef0d315",
+      "after_canonical_sha256": "e863a697b82c212fb0a01f84f62ac458d1f3b62a962f127b575dff368e01f25c",
+      "reviewed_at_utc": "2026-10-15T16:07:36.669740+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        76,
+        77
+      ],
+      "current_mathml_count": 33
+    },
+    {
+      "kind": "Example",
+      "number": "1.54",
+      "id": "example-1-54",
+      "finding": "无穷状态的归一化、有限区间极限与返回概率分解需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "before_canonical_sha256": "96ee3ca07951865d0b23c79fcfdd8b50611aa010d42c69c383ec96aaeee75d9d",
+      "after_canonical_sha256": "9c56b3791a10382cbd6795cd6405822ab54269eb08f1f36615fd0da9f9aff9a0",
+      "reviewed_at_utc": "2026-10-15T16:07:36.672117+00:00",
+      "first_pass_after_canonical_sha256": "bfcdc316ac079833d253acd43a150cda7cd4666b949c8514f26bc3379c1b9976",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        77,
+        78,
+        79
+      ],
+      "current_mathml_count": 37
+    },
+    {
+      "kind": "Example",
+      "number": "1.55",
+      "id": "example-1-55",
+      "finding": "灭绝递推的条件分解、临界导数与最小根的概率含义需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "before_canonical_sha256": "6b3fe6f80876e7ba9ce0136c5c10d42781ca8d619650762517e2a0ecab0e7d14",
+      "after_canonical_sha256": "fd6ca20ae5ad6fe6731eca5623126a992c2160f19a6e5dda05f4cf2069c92f45",
+      "reviewed_at_utc": "2026-10-15T16:07:36.675409+00:00",
+      "first_pass_after_canonical_sha256": "057bedee278776c16a705ee3221bc8b6138b9d792729f467270852af7fdef357",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        79,
+        80,
+        81
+      ],
+      "current_mathml_count": 46
+    },
+    {
+      "kind": "Example",
+      "number": "1.56",
+      "id": "example-1-56",
+      "finding": "选区间最小根、临界倒数差和尾和发散的推理动机需补。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "before_canonical_sha256": "2067e0bce11549d7c45d7dfe384816e3cf21669fd002ad033941e76168e2d525",
+      "after_canonical_sha256": "2873c86cc05bc41466d7c8cb1bb4c7a8f80001df7440f020603215401def7deb",
+      "reviewed_at_utc": "2026-10-15T16:07:36.679135+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        81,
+        82,
+        83
+      ],
+      "current_mathml_count": 46
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.1",
+      "id": "theorem-1-1-proof",
+      "finding": "补出为何按中间状态分组、条件乘法的两个阶段，以及矩阵乘法来自路径求和。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "8a8ee739805b23dac60ebd2d9885bc9b0343cd7ef12dacad1977d48cde5d90c7",
+      "after_canonical_sha256": "eda4490e0ff45a88b7b4092ffd5129be26dd5fbabe13406621e0e57fa573fc57",
+      "reviewed_at_utc": "2026-10-15T16:18:28.209366+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        20
+      ],
+      "current_mathml_count": 30
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.2",
+      "id": "theorem-1-2-proof",
+      "finding": "解释停时条件为何允许把随机时刻拆成确定时刻，及条件期望与独立游程之间的联系。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "f3a7ac10ad6df646e5d33605895c4b874b9695322b9a51b6ed567382e8e51253",
+      "after_canonical_sha256": "aefa67823a39fb3a7cc31d787d180aa6337acc970ef11e674302146dbff2a016",
+      "reviewed_at_utc": "2026-10-15T16:18:28.211619+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        22,
+        23
+      ],
+      "current_mathml_count": 31
+    },
+    {
+      "kind": "Lemma",
+      "number": "1.3",
+      "id": "lemma-1-3-proof",
+      "finding": "说明分块的目的、统一下界如何替代独立性，以及期望上界中 k 的来源。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "52f0ab739efdd62dc3b49453b923d7eaf39d8921e8c0c3e734aa46db1e12f15d",
+      "after_canonical_sha256": "425472dd3138a881309c40caf5f6f7529458d99caf922ed8aab458fc8b4d3e55",
+      "reviewed_at_utc": "2026-10-15T16:18:28.214045+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        25
+      ],
+      "current_mathml_count": 27
+    },
+    {
+      "kind": "Lemma",
+      "number": "1.4",
+      "id": "lemma-1-4-proof",
+      "finding": "解释正概率可达如何落到一个确定时刻以及为何只需保留求和中的一项。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "b3fcae788645789486b8bb18e81b33cdce1f2bfe5f51d2a65ea00f7001ac7fe2",
+      "after_canonical_sha256": "89a9250a6faecdd84a32ab93169aa97cc60bd07d492741e7dfdd5dd80f10cef3",
+      "reviewed_at_utc": "2026-10-15T16:18:28.215598+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        25
+      ],
+      "current_mathml_count": 23
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.5",
+      "id": "theorem-1-5-proof",
+      "finding": "说明为何选不提前返回的最短路径，及乘积下界证明暂态的机制。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "e9cbf18b4203ffe00636445e58021a64cc223214ca5c5400d1f30c122a06cee4",
+      "after_canonical_sha256": "55d55b1f99b262ef9d502be327e0a331d928be11fe0366b1666668bd93176ca6",
+      "reviewed_at_utc": "2026-10-15T16:18:28.217596+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        25,
+        26
+      ],
+      "current_mathml_count": 37
+    },
+    {
+      "kind": "Lemma",
+      "number": "1.6",
+      "id": "lemma-1-6-proof",
+      "finding": "把反证法的选择与常返的定义连接，说明结论为何是概率一而非仅正概率。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "before_canonical_sha256": "e7139a1a5e624b16f5a428c3340c031c6a1fcb4ce33673694dbdf9034f96bbd3",
+      "after_canonical_sha256": "c39ed6f04013772de73a2b468bd86fb4afae912058f52303c1bb96512db79a6e",
+      "reviewed_at_utc": "2026-10-15T16:18:28.219070+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        26
+      ],
+      "current_mathml_count": 30
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.7",
+      "id": "theorem-1-7-proof",
+      "finding": "逐项解释有限、闭、不可约如何制造可反复使用的统一到达概率。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "7d8ff3152503ae3feee0739c739cb353205ed3bc41b6701e79db2ead5e155327",
+      "after_canonical_sha256": "d9439f4dc2fd1a1298170e3ee67ff899ecd62961c9f49961c5e5be9f36c23ae3",
+      "reviewed_at_utc": "2026-10-15T16:18:28.220253+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        27
+      ],
+      "current_mathml_count": 21
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.8",
+      "id": "theorem-1-8-proof",
+      "finding": "用类间图解释为何分类只剩闭常返类和暂态点，以及有限性的作用位置。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "268b91f1ddaa50d666bb82469b29191621258d4c99f0848f91a3586a3ece0dc9",
+      "after_canonical_sha256": "7a7b49d355c7960f3eaff590bf6426ccc373ed84fdf2ee31cbed4db7a88a5f5f",
+      "reviewed_at_utc": "2026-10-15T16:18:28.220797+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        27
+      ],
+      "current_mathml_count": 10
+    },
+    {
+      "kind": "Lemma",
+      "number": "1.9",
+      "id": "lemma-1-9-proof",
+      "finding": "解释三段路径比较的构造目的、常数 c 来源和级数发散的传递。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "ba37a98a15e4fa9dd518872aa3ed35f479c546c995ff5bdf9fe35acce54d7ded",
+      "after_canonical_sha256": "eaf853906ea50f93d2c9e9411e37633b3c6810b4cd4505cb68062c6674669f6d",
+      "reviewed_at_utc": "2026-10-15T16:18:28.222773+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        27,
+        29,
+        30
+      ],
+      "current_mathml_count": 44
+    },
+    {
+      "kind": "Lemma",
+      "number": "1.10",
+      "id": "lemma-1-10-proof",
+      "finding": "解释访问次数计数法如何把有限闭集中的无限时间与全部暂态假设冲突起来。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "a7fa7db91c77ca42bdf60e242ba86b5b01060781d86ba05ffa89a361614e4c16",
+      "after_canonical_sha256": "7247bbb7a2f823e772c60ddfab58d023283dd4390dbde0627486e164c805083a",
+      "reviewed_at_utc": "2026-10-15T16:18:28.223862+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        27,
+        30
+      ],
+      "current_mathml_count": 13
+    },
+    {
+      "kind": "Lemma",
+      "number": "1.11",
+      "id": "lemma-1-11-proof",
+      "finding": "解释第 k 次访问为什么对应一个首次到达和 k-1 次返回，以及尾和如何数次数。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "565d0db9b9cf8e37c1c34b2d490b0ee3df48935cbeaf2e29477f48f2597bcca3",
+      "after_canonical_sha256": "2539ba65913bd86cda86dadb81d87c82468df3ca264b74e5f99d19895cb190e4",
+      "reviewed_at_utc": "2026-10-15T16:18:28.226423+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        28
+      ],
+      "current_mathml_count": 30
+    },
+    {
+      "kind": "Lemma",
+      "number": "1.12",
+      "id": "lemma-1-12-proof",
+      "finding": "说明线性期望不要求时刻间独立以及为何先截断再取极限。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "8337a371e3ad8efdd5d770a32af633b9c874d57429eb2cd65eea924f009d2784",
+      "after_canonical_sha256": "195d3ce1d0d9f8dbab40841beb99e77baaccfd4ce25bb57aec8219d91e31fc0a",
+      "reviewed_at_utc": "2026-10-15T16:18:28.227728+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        28,
+        29
+      ],
+      "current_mathml_count": 16
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.13",
+      "id": "body-review-s13",
+      "finding": "连接按返回次数与按时间两种计数，区分常返和平均返回时间。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "before_canonical_sha256": "67ca2c7eca068e0c7a918f70498757c5560c4c5efcf24dabdd6dbf3db3d7dfe1",
+      "after_canonical_sha256": "d706f90aaf7ad9680fb9ee26a8e56bfe37ec5232a5b810b1e6202afdcb672a44",
+      "reviewed_at_utc": "2026-10-15T16:18:28.228831+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        29
+      ],
+      "current_mathml_count": 17
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.14",
+      "id": "theorem-1-14-proof",
+      "finding": "解释为什么猜均匀分布、流入使用列和，以及行列和的不同职责。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "before_canonical_sha256": "5adb25bdd54218dcc9d063ab5c5ebbac6ea4eb71a3fc46b66018005ac74d3fe4",
+      "after_canonical_sha256": "cf3a636cb1b892f8b44595de84bb12279c1ce9fdd868180ab532126e99b90713",
+      "reviewed_at_utc": "2026-10-15T16:18:28.230034+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        35
+      ],
+      "current_mathml_count": 15
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.15",
+      "id": "theorem-1-15-proof",
+      "finding": "解释反向核分子分母的事件含义及为何一步条件概率还不够证明反向马尔可夫性。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "before_canonical_sha256": "f11ab197a9abe04fa7e6a715889a9616212cba0b84c0f7ee876033abc58f457f",
+      "after_canonical_sha256": "352629a237c1bf50f9473958e1e79e8f71f87897c64944d2a9dfbbd333fc7277",
+      "reviewed_at_utc": "2026-10-15T16:18:28.232773+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        43,
+        44
+      ],
+      "current_mathml_count": 34
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.16",
+      "id": "theorem-1-16-proof",
+      "finding": "说明环路条件为何能构造一致权重、支持对称与有限归一化分别用在哪里。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "before_canonical_sha256": "76b765bbbcfe24e124dfade56a27d0a5dea88a06e96624d4e5bd1882502dd41d",
+      "after_canonical_sha256": "87133c73fa3f5dc77799a53935359eb97b219b88092b2e4c73f219922e84d7b9",
+      "reviewed_at_utc": "2026-10-15T16:18:28.234628+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        48,
+        49
+      ],
+      "current_mathml_count": 22
+    },
+    {
+      "kind": "Lemma",
+      "number": "1.17",
+      "id": "lemma-1-17-proof",
+      "finding": "解释比较返回长度之差的目的，以及为何 gcd 整除能传播周期。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "before_canonical_sha256": "d93770abae5788616df5512dc8f7a9486edcb408899261f6f68dd568d6142ed6",
+      "after_canonical_sha256": "dbd34f828db4a14e2322b3548adb611550b57335dc0a5852e06061cd53800c6d",
+      "reviewed_at_utc": "2026-10-15T16:18:28.236024+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        51,
+        52
+      ],
+      "current_mathml_count": 24
+    },
+    {
+      "kind": "Lemma",
+      "number": "1.18",
+      "id": "lemma-1-18-proof",
+      "finding": "解释自环使周期为一的原因，避免把非周期与每点有自环混同。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "before_canonical_sha256": "6bab4cc078e81fcf5b944dcf818db8585442da854590113c46799dfbe6e4fe75",
+      "after_canonical_sha256": "3287d7ace171134ad2c1377979fe2e000a90a726e62bef9df1ad971fc7baa247",
+      "reviewed_at_utc": "2026-10-15T16:18:28.236613+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        52
+      ],
+      "current_mathml_count": 9
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.19",
+      "id": "body-review-s18",
+      "finding": "补出耦合的目的、公共概率质量的来源、乘积链为何相遇及概率差为何受未相遇概率控制。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "before_canonical_sha256": "189f7d03815ed0c78bef4781d56b13122f7cc5330d659e8932f7d472445a6f01",
+      "after_canonical_sha256": "a846a03c02e39949f3cfa527ed331cf4c11e23d78056275ad24604a50165e020",
+      "reviewed_at_utc": "2026-10-15T16:21:57.930046+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        52,
+        59,
+        60,
+        61,
+        62
+      ],
+      "current_mathml_count": 65
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.20",
+      "id": "theorem-1-20-proof",
+      "finding": "解释从返回间隔到单位时间访问频率的反演，及无穷均值为何要截断。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "a404eaea79c282901d04f92b08a46492946a0ac7cd874b0e182de4433950a34d",
+      "after_canonical_sha256": "dd7a826c4025fdc9db9e816e077fed76f03a7d58fc35b12e53fe9d04c7058a75",
+      "reviewed_at_utc": "2026-10-15T16:21:57.932337+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        52,
+        55,
+        56
+      ],
+      "current_mathml_count": 39
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.21",
+      "id": "theorem-1-21-proof",
+      "finding": "说明为何选择平稳初态来识别路径频率，以及有界收敛保证平均和极限可以交换。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "4560ed3d2c6d6220601fbde3bc0fcc583331cd57b1665cb808885ee566a99214",
+      "after_canonical_sha256": "191b80488e446d9d9e164e3d9b35d2ac02a292658784d20a5c363ef87a55df8f",
+      "reviewed_at_utc": "2026-10-15T16:21:57.933662+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        53,
+        56,
+        57
+      ],
+      "current_mathml_count": 16
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.22",
+      "id": "theorem-1-22-proof",
+      "finding": "解释周期奖励的拆分、绝对可积条件、完成周期乘积与末尾误差控制。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "before_canonical_sha256": "e9f927117b0139d2ea26e7d54b7acb3eef0351d4222bf6cc77b0d1cabcbac037",
+      "after_canonical_sha256": "6fd7dee09c07f7ce56f81c6ef2e0ba5b5ce8c37b76529e3ec2995a746ac71ecb",
+      "reviewed_at_utc": "2026-10-15T16:21:57.937559+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        53,
+        58,
+        59
+      ],
+      "current_mathml_count": 48
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.23",
+      "id": "theorem-1-23-proof",
+      "finding": "解释用指示奖励把路径频率转成转移概率平均，及周期振荡如何被平均处理。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        3
+      ],
+      "before_canonical_sha256": "74183e8b2cd2b90fa7c48cc44c3a92190366c6894f9c6dc288aa5081a809eeee",
+      "after_canonical_sha256": "960aa2bfca9aefee166a58b1bb0bd4d81290bbba60e9929a480672b851dbf2ce",
+      "reviewed_at_utc": "2026-10-15T16:21:57.938952+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        53,
+        61
+      ],
+      "current_mathml_count": 17
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.24",
+      "id": "body-review-s17",
+      "finding": "解释返回周期为何给平稳测度、截断时刻端点处理以及逐点有限和总质量有限的区别。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "before_canonical_sha256": "a931edf8948b401c373c6af93de7238fad36c522d369e4819f26dc1e18358aea",
+      "after_canonical_sha256": "28c1b553fb67785d25899d23e99d533c3ef5f382cffb26089f9fd68f6c4a8a12",
+      "reviewed_at_utc": "2026-10-15T16:21:57.942963+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        57,
+        58
+      ],
+      "current_mathml_count": 56
+    },
+    {
+      "kind": "Lemma",
+      "number": "1.25",
+      "id": "lemma-1-25-proof",
+      "finding": "解释平稳启动下正质量状态的无限期望访问如何与暂态统一上界矛盾。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "86cadea0407cf1c8b34552fe8887e1a17a7f87e141414e1cb6e268ea986f3cd1",
+      "after_canonical_sha256": "fc381d40ce126adb13bdc9fc8d1f757e144efd59c89a172e3b27e6adde0ffa3f",
+      "reviewed_at_utc": "2026-10-15T16:21:57.944698+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        59,
+        60
+      ],
+      "current_mathml_count": 20
+    },
+    {
+      "kind": "Lemma",
+      "number": "1.26",
+      "id": "lemma-1-26-proof",
+      "finding": "补出数论构造为何先找相邻返回长度，再利用重叠区间覆盖所有充分大整数。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "before_canonical_sha256": "f976926c132a38c8bc97c1310825a2c95b2552b231501f1b6165c076d5e55ab3",
+      "after_canonical_sha256": "737bbd736fbc4e4a1e0cfa8b4403bd2c8988934ed7545c70c201cebf29a73661",
+      "reviewed_at_utc": "2026-10-15T16:21:57.946833+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        60,
+        61
+      ],
+      "current_mathml_count": 35
+    },
+    {
+      "kind": "Lemma",
+      "number": "1.27",
+      "id": "lemma-1-27-proof",
+      "finding": "解释返回路线拼接的条件概率含义以及与首次返回的区别。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "before_canonical_sha256": "4ee19ca1f14054f9665c061feae5d3a7970cd9b007cf58452914de757d93993f",
+      "after_canonical_sha256": "082048a291855f2e1e87d2b6ed34b8b83c51cf1fba83935b1de56c791ac3fcaa",
+      "reviewed_at_utc": "2026-10-15T16:21:57.948180+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        60
+      ],
+      "current_mathml_count": 23
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.28",
+      "id": "body-review-s19",
+      "finding": "说明边界值、调和方程、有限退出条件及解差随生存概率消失的因果链。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "before_canonical_sha256": "1a25b5c90aff38ae89c14afe7afab7874c54d6bec5184cc752df3647f740d3a1",
+      "after_canonical_sha256": "45b324c704000c25a177169602f78441d260bbfb2aee0af7ed9bf17762b02a58",
+      "reviewed_at_utc": "2026-10-15T16:21:57.951011+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        64,
+        65
+      ],
+      "current_mathml_count": 34
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.29",
+      "id": "theorem-1-29-proof",
+      "finding": "解释等待时间方程中常数一来自当下这一步，以及展开后的尾和和剩余项。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "b7d6f973966cfd66ef5cffb6dd1bdf65e240005f998fc7cc5d31b9833f30a22c",
+      "after_canonical_sha256": "d979a1ad704c36e23e180b96cc985fda93ab1d7f4ee3183433ffc6f832089b77",
+      "reviewed_at_utc": "2026-10-15T16:21:57.952845+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        71,
+        72
+      ],
+      "current_mathml_count": 20
+    },
+    {
+      "kind": "Theorem",
+      "number": "1.30",
+      "id": "theorem-1-30-proof",
+      "finding": "说明正再生与概率归一化之间的桥梁，并把三个方向串成完整等价关系。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "1eb08a742d5dec241e5cef20e5d469f306dd216fc0594e9a06c225b55b61d2da",
+      "after_canonical_sha256": "43e493869f2ee355655dbae57043b8a4b6b8e46187ac55906c7b828eb4e1ab81",
+      "reviewed_at_utc": "2026-10-15T16:21:57.953588+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        79
+      ],
+      "current_mathml_count": 8
+    },
+    {
+      "kind": "Lemma",
+      "number": "1.31",
+      "id": "lemma-1-31-proof",
+      "finding": "解释第一代分组、家族独立带来的幂、极限为何是最小不动点及条件边界。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "before_canonical_sha256": "69d015c2d0099dccbfdfe8506d0ae9dae5fea32efcf114a11ba08cf9f45b13af",
+      "after_canonical_sha256": "2dc21b16f691bc5f28772c1faac705fdd320c884892e0303619e537e56d52da3",
+      "reviewed_at_utc": "2026-10-15T16:21:57.955987+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        80,
+        81
+      ],
+      "current_mathml_count": 42
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.1",
+      "id": "ex-1-1",
+      "finding": "解释选取相同当前和的两段历史为何能检验马尔可夫性，以及条件概率 1/4 和 1/2 的来源。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "33327556525b53fdf171d5de51b2e9f7007a18cbdef522969ada36f3057462b6",
+      "after_canonical_sha256": "48e124794467787f3a7e2fc076bf4c8e0eb282be5f04698100c4fbeed242d0b6",
+      "reviewed_at_utc": "2026-10-15T16:26:18.280068+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        87
+      ],
+      "current_mathml_count": 33
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.2",
+      "id": "ex-1-2",
+      "finding": "说明交换事件如何决定增减、为什么出现平方以及两种同色事件为何相加。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "e40409ea1724a7ba934f65a4ac63baabc0b96f10e5c8433a5167c6f7fd0b4abf",
+      "after_canonical_sha256": "ef2d92bf3cc942b53205287ead2d10adeaf0d82805cf8ed6e22123b154b79d3c",
+      "reviewed_at_utc": "2026-10-15T16:26:18.281608+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        87
+      ],
+      "current_mathml_count": 12
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.3",
+      "id": "ex-1-3",
+      "finding": "解释有序骰子样本空间、取模合并互斥事件及矩阵平移的理由。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "025a5f2b2c7cc33c8830530a3d14658c5a0564aea4d4079ae0efb1c83b76ad88",
+      "after_canonical_sha256": "608b3dced10f297ef7d166569480e846b8f6b0b26071c8a9eb84e7bd72897b0c",
+      "reviewed_at_utc": "2026-10-15T16:26:18.283510+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        87
+      ],
+      "current_mathml_count": 17
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.4",
+      "id": "ex-1-4",
+      "finding": "将住房比例更新拆成两类人群及各自条件转移，说明每个比例和乘积的含义。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "261f4bffb7bfd1daa605fd87361e18fa15de2e2bd0196d928aa785e02a3a85a6",
+      "after_canonical_sha256": "16107d35f2718c3c989882fd681a2310172abe969cb43cffcc02ae5b8aab7619",
+      "reviewed_at_utc": "2026-10-15T16:26:18.285149+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        87
+      ],
+      "current_mathml_count": 18
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.5",
+      "id": "ex-1-5",
+      "finding": "解释吸收后概率因子为一、终点分类互斥及三步路径的完整性。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "5275a7694eccbd4901b9b7cc2d2735a64cad27b80bd0b7d0521e2efe10ea0885",
+      "after_canonical_sha256": "356f1e32c1443f6b22d2196cdb4e172124e29eefc1acebc5af7457aaf152717a",
+      "reviewed_at_utc": "2026-10-15T16:26:18.286230+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        87
+      ],
+      "current_mathml_count": 15
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.6",
+      "id": "ex-1-6",
+      "finding": "解释两程及三程公式中每个权重对应的中间地点与条件概率。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "0613dacc580826e3be620e035672fe041adfb5b7605db42b244ebc72a0a11da9",
+      "after_canonical_sha256": "c48f2b08eacc59417042a97cc5bbd5d947e0cc7c63035e0087562c4c63a592f5",
+      "reviewed_at_utc": "2026-10-15T16:26:18.288792+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        87
+      ],
+      "current_mathml_count": 23
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.7",
+      "id": "ex-1-7",
+      "finding": "解释两日窗口滑动限制、两步矩阵的路径意义及目标雨事件包含哪些状态。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "27d58c79972565aeeee08183032af42ecf83fb3d702c46083ccdbbd16e5f66c1",
+      "after_canonical_sha256": "f3b9471750c7f6b936360a16da14d64b5b097d73b584eb28e6c2beb9367a8fc9",
+      "reviewed_at_utc": "2026-10-15T16:26:18.291862+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        87
+      ],
+      "current_mathml_count": 23
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.8",
+      "id": "ex-1-8",
+      "finding": "给出每个闭类互通的具体路径及暂态判断使用的不可返回条件。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "ab20179d177fc8c459e93db36415bf01e2957e819976968fcc7203757714df14",
+      "after_canonical_sha256": "3e0b1232540c2003bdbf024b70a8624b16c7b46dc01f549f0e12e50b488062bd",
+      "reviewed_at_utc": "2026-10-15T16:26:18.296536+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        88
+      ],
+      "current_mathml_count": 26
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.9",
+      "id": "ex-1-9",
+      "finding": "为三个小问分别解释流入方程系数、归一化和原题缺失概率造成的矛盾。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "additional_sequences_explained": [
+        2,
+        3
+      ],
+      "before_canonical_sha256": "7a89bd1fe22c3f12481ca6d2cdf765a9927ee9675b57d5ccf1842c0713b1a8f7",
+      "after_canonical_sha256": "025f745527ec4e7194502a0011f3b2ec03bf41e5a0bbb6025ca0e8b20be9fe6f",
+      "reviewed_at_utc": "2026-10-15T16:26:18.305270+00:00",
+      "first_pass_after_canonical_sha256": "f393253eae80c2f033bcbf5b35dfd51280ca424b2810630fbf69c2352b90117e",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        88
+      ],
+      "current_mathml_count": 62
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.10",
+      "id": "ex-1-10",
+      "finding": "逐个矩阵解释列平衡来源，补出可直接利用的比例与双随机检查。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "additional_sequences_explained": [
+        2,
+        3
+      ],
+      "before_canonical_sha256": "4000210b23cb49ab08e9aa4f2e3ae5ab02fa99923512d75790574a0ceb55a540",
+      "after_canonical_sha256": "b2d6cd0905f5d403e2b7fe474f96011526f4dfc1bb6867d7003ef4eaec3d420e",
+      "reviewed_at_utc": "2026-10-15T16:26:18.333361+00:00",
+      "first_pass_after_canonical_sha256": "e587bd5c38f0ec16421e00471face607161701d799a173e96de40138cb701ebe",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        88
+      ],
+      "current_mathml_count": 98
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.11",
+      "id": "ex-1-11",
+      "finding": "解释平稳方程的具体流入来源以及每对质量乘积为什么表示细致平衡。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "additional_sequences_explained": [
+        2
+      ],
+      "before_canonical_sha256": "4735c69d953c4462b701d35e5a53ef88258a8bacc33401b3d6e6778c548e6909",
+      "after_canonical_sha256": "dba59db3f5fc634973005a0c1dc8e446f13c6cb92e657e7f3ed37b44a9e3203e",
+      "reviewed_at_utc": "2026-10-15T16:26:18.339367+00:00",
+      "first_pass_after_canonical_sha256": "d71329da67e597d2d20095b52ba49cd12e48e33d0df747a2118ca7a92dec8198",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        89
+      ],
+      "current_mathml_count": 39
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.12",
+      "id": "ex-1-12",
+      "finding": "说明组合权重、循环均匀分布和天气流入方程各自使用的模型结构。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "fc52384f44fe3c1896d73e810860eefe456755925ef81e62f38bd60c7e3dad2c",
+      "after_canonical_sha256": "bb9ad47c56d47aa372a21c123772c0c2e69c7f483570d2c208bc4cc9763b9b51",
+      "reviewed_at_utc": "2026-10-15T16:26:18.342238+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        89
+      ],
+      "current_mathml_count": 26
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.13",
+      "id": "ex-1-13",
+      "finding": "解释平方链拆成两块、组质量为何各半、归一化因子二和偶数步极限的适用范围。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "83e5887a51c4c0cbb0ca3e1ccdd10bb19929e4af73e7bf4d5716279d4b48efe4",
+      "after_canonical_sha256": "3c188d45a10a8e7dac986b040fe29a1c0df204d38e6e6855c13a112ccc5534ae",
+      "reviewed_at_utc": "2026-10-15T16:26:18.346719+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        89
+      ],
+      "current_mathml_count": 43
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.14",
+      "id": "ex-1-14",
+      "finding": "补出不可约性的实际路线，区分周期的整除下界和实际短回路给出的上界。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "7bd38c136901dac15d8812d287c5d420adceb8d6991307b89f1c9be53395c0d8",
+      "after_canonical_sha256": "a666195b7f900e8b6ea7204f86e42c697cb1eaaf7ee047fe75e54aad1d053f41",
+      "reviewed_at_utc": "2026-10-15T16:29:41.946725+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        89
+      ],
+      "current_mathml_count": 18
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.15",
+      "id": "ex-1-15",
+      "finding": "逐闭类补出所有命中和平稳方程的系数来源，以及最终类条件分解为何相乘。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        3
+      ],
+      "additional_sequences_explained": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "before_canonical_sha256": "5445f0306665546a622838d1274cd8e98abe8743e6439ceb4d3f4eaf399f37ad",
+      "after_canonical_sha256": "3242073cadf9ba0bc76e2fad879576d4dd680d926624768257af31d3cde35f41",
+      "reviewed_at_utc": "2026-10-15T16:29:41.984669+00:00",
+      "first_pass_after_canonical_sha256": "de15ab5b281afc8e4dcee3c140277d7950d47f23b99aff6499cca44dd72c6874",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        89
+      ],
+      "current_mathml_count": 181
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.16",
+      "id": "ex-1-16",
+      "finding": "解释两类用户的条件加权、五年间隔和固定点收敛。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "d551a55e1452ff276780e719fe75f7c008bc1304afc40922136838aafedfc4c9",
+      "after_canonical_sha256": "7510022ffc228f2ec540e1a72cc29802bfb36bbbeb4a0f869587c14be9a9d4d1",
+      "reviewed_at_utc": "2026-10-15T16:29:41.986485+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        90
+      ],
+      "current_mathml_count": 19
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.17",
+      "id": "ex-1-17",
+      "finding": "说明就业比例乘积的人群含义、逐期权重变化及预测与观测的比较口径。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "53ebdd61aced3cad8927f38cea1a8b134e24e3631742690ff2a5ff59d26c339e",
+      "after_canonical_sha256": "4175835eca9dd52c032a4a848ee96b0352367df2364086eedd8eca4cc0ebc70f",
+      "reviewed_at_utc": "2026-10-15T16:29:41.987990+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        90
+      ],
+      "current_mathml_count": 20
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.18",
+      "id": "ex-1-18",
+      "finding": "解释三步条件矩阵与初始人口混合的区别、月数及长期跨状态流量。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "8ae0cb907c6da8c5abe2e932abaf7e9c17dc97764d96be16e92fc9810b16afa2",
+      "after_canonical_sha256": "a216fae31c5ca0d69971d87d5c08b06a7fc381040512d373bdc68f20b1202932",
+      "reviewed_at_utc": "2026-10-15T16:29:41.990527+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        90
+      ],
+      "current_mathml_count": 22
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.19",
+      "id": "ex-1-19",
+      "finding": "解释持续吸烟与复吸两路径、固定点相减为何导出通项及年份指数。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "6594f7c969801849c401b4ad62caf392fdd5bce0bc14e0cc76e82013986fb136",
+      "after_canonical_sha256": "d526585e8784e45eafde657d8afbe9877708f0423efb8d0ba938580dcbd689b9",
+      "reviewed_at_utc": "2026-10-15T16:29:41.992705+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        90
+      ],
+      "current_mathml_count": 26
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.20",
+      "id": "ex-1-20",
+      "finding": "解释沿车序建链与两状态流量相等的依据。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "b0855d09d3a636c5d1e0666c880a7276a1ed0eb55c6a4303d2165e90f50f48c6",
+      "after_canonical_sha256": "73e45d8bdb65d1fbf62daf0399c147adac2d774f1106b4d365932074267b9a69",
+      "reviewed_at_utc": "2026-10-15T16:29:41.994503+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        90
+      ],
+      "current_mathml_count": 20
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.21",
+      "id": "ex-1-21",
+      "finding": "说明题序条件概率、切换平衡与百题近似期望的边界。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "9ad7047c893db71493c99ccf1afaa51d2f599243694790088cb754d6e8b01d4e",
+      "after_canonical_sha256": "7559d6015301082cf7d7ad87ec1829092715233417412e3cb8ab7e39e929329b",
+      "reviewed_at_utc": "2026-10-15T16:29:41.997031+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        90
+      ],
+      "current_mathml_count": 27
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.22",
+      "id": "ex-1-22",
+      "finding": "解释支付比例流量平衡以及 0.1、0.4 和 0.5 的来源。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "26c6ba8f51dab5d39a0bca7ab491d3c3d90410e6c82ea9681c9ad23eb0086b1e",
+      "after_canonical_sha256": "1e0098e614590bf64d42bd65c3e2e003c532a0ae15f8b454c92e15ea46b12a85",
+      "reviewed_at_utc": "2026-10-15T16:29:41.998287+00:00",
+      "first_pass_after_canonical_sha256": "51d7fabce21444b0d0c2cace63bae23fd94afbb2f329724e1772a3f11b3539fe",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        90
+      ],
+      "current_mathml_count": 19
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.23",
+      "id": "ex-1-23",
+      "finding": "补出代际加权的条件意义以及固定点确为长期比例的依据。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "c519eb22f4824ca0bb0ff1dd44821fe09730db956d5931919651910ba75c0d32",
+      "after_canonical_sha256": "059408001dd40144bbcb504f703b23c5e446551a23497538238b9b3d8f93e5e6",
+      "reviewed_at_utc": "2026-10-15T16:29:41.999500+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        90
+      ],
+      "current_mathml_count": 16
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.24",
+      "id": "ex-1-24",
+      "finding": "解释上一球条件概率、总体命中率以及跨状态平衡的推导。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "1d06bc0ba8240533c302c662fe9c7b29c3b5c2a3603fbf070de0574e8ee93e8d",
+      "after_canonical_sha256": "991be905b35ed0277cce71f7a2efeba7a1e48597180d4dbbf88746de021411cb",
+      "reviewed_at_utc": "2026-10-15T16:29:42.000691+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        90
+      ],
+      "current_mathml_count": 18
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.25",
+      "id": "ex-1-25",
+      "finding": "说明未知条件概率为何不能由长期比例直接代入，以及流出与流入相等的来源。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "9b86287d4870cf6f1efbcc9f1bbcb225cd40ecef9d1681cc03a3112ecbadfa46",
+      "after_canonical_sha256": "caaac7e67fab24b074983b8d717210a72c85a5cf04843c6d4b0954534aea2b9e",
+      "reviewed_at_utc": "2026-10-15T16:29:42.002569+00:00",
+      "first_pass_after_canonical_sha256": "38079a4da0a71a41f2c67babd5d0a731ab077313285088edfb37dc4506e7b2a3",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        91
+      ],
+      "current_mathml_count": 20
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.26",
+      "id": "ex-1-26",
+      "finding": "解释离开率的补概率、均分去向的乘法以及倒数权重的由来。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "2e14b372ad46d1729bd516f0b1df4196f12a7c0722a20e17fd72005a4214bc9c",
+      "after_canonical_sha256": "23b942c0e904e225a88dacd154bca48495922f96a2d2c19cc6792f8fb61d859b",
+      "reviewed_at_utc": "2026-10-15T16:29:42.004722+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        91
+      ],
+      "current_mathml_count": 22
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.27",
+      "id": "ex-1-27",
+      "finding": "解释有限年混合权重与长期未知量的区别，并逐列给平稳系数来源。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "additional_sequences_explained": [
+        2
+      ],
+      "before_canonical_sha256": "e485e83b87dd2f7f832bde5041be74f0fca2a3b9a6286ff734ea640119d8eb47",
+      "after_canonical_sha256": "e6325ea426219be39a8f6b56b3da47b8921eb9bfd971e2018372701f52c1cd75",
+      "reviewed_at_utc": "2026-10-15T16:32:40.507568+00:00",
+      "first_pass_after_canonical_sha256": "178e09d8f0f72cf2a0db26d9bf8d5842bfd7ee4e6375ff901f69f9fb3b5a5ec5",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        91
+      ],
+      "current_mathml_count": 40
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.28",
+      "id": "ex-1-28",
+      "finding": "解释午餐路径的条件加权、四次日转移和长期矩阵系数。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2
+      ],
+      "additional_sequences_explained": [
+        2
+      ],
+      "before_canonical_sha256": "d9ab2f94725662a73a8a10a33009ca0bfd0ff0f7f04589c18a2f93e34f77aa2a",
+      "after_canonical_sha256": "7193751d24e7ba61bad416ae3e0e1ae112b56a8e97bc7d81e1bab9fa57f78eb9",
+      "reviewed_at_utc": "2026-10-15T16:32:40.515858+00:00",
+      "first_pass_after_canonical_sha256": "2c2432516416d876ab22f8b78cdc2a21dbebe96ca7cd5fdbadad7a1944cd2922",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        91
+      ],
+      "current_mathml_count": 42
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.29",
+      "id": "ex-1-29",
+      "finding": "解释自行车迁移时样本与来源权重，及两个日期和长期方程的系数来源。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [
+        2
+      ],
+      "before_canonical_sha256": "4482f47475ec0580b9de3f16d65ec291b4b9e59dd43c32b1848bf03e3f2b4b6d",
+      "after_canonical_sha256": "ab9c24f217d7b58c657e4ffaa30931f70af64ef5b6d15382eb137a66c926693d",
+      "reviewed_at_utc": "2026-10-15T16:32:40.524054+00:00",
+      "first_pass_after_canonical_sha256": "76274f36833ec94abc76065ceb82be8d25396329e661249325482f4100b810b8",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        91
+      ],
+      "current_mathml_count": 49
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.30",
+      "id": "ex-1-30",
+      "finding": "从亲本传递等位基因解释矩阵概率，再解释各花色平稳方程。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "0ccfa64044baa72db8893e864aa543862a04e94b6750e54971cda2974a8b7ee3",
+      "after_canonical_sha256": "37e2fab67ae971714542fba177d34f3f13001478af0c1842840a3f01869ed41b",
+      "reviewed_at_utc": "2026-10-15T16:32:40.540553+00:00",
+      "first_pass_after_canonical_sha256": "98e77b3de38bf2f95efc1ff8413b96b5a460b828e722f5d3e0899032257a8f00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        92
+      ],
+      "current_mathml_count": 26
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.31",
+      "id": "ex-1-31",
+      "finding": "解释天气列流入、雨云对称性及晴天质量的归一化。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "b5c39653fa804f352110e8db6b5ca610896286907d862b698e57c1e2a2608f4e",
+      "after_canonical_sha256": "b937166422abb4ae62f450119768d6b58ccf7fd9d7a1a8f2a670422b6f08d675",
+      "reviewed_at_utc": "2026-10-15T16:32:40.544722+00:00",
+      "first_pass_after_canonical_sha256": "79dcb7a20775102b192770af2334f4181d56fa31887192a78663b384ef4aea94",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        92
+      ],
+      "current_mathml_count": 27
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.32",
+      "id": "ex-1-32",
+      "finding": "解释居住区域平稳系数的来源与 61、94、128 的消元比例。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "1ddab38397062b00c535f5ecf1956f75324be056bae7aa6ef64bcace6ea338bb",
+      "after_canonical_sha256": "7862c1646d3ed4d1ca13f190b40c441ec87a6179f72eb8fd2aa1234a3488c1e8",
+      "reviewed_at_utc": "2026-10-15T16:32:40.548627+00:00",
+      "first_pass_after_canonical_sha256": "3c2d55238d310a52882f81276208737e4a0a12e11c02416294ca4184675d3619",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        92
+      ],
+      "current_mathml_count": 24
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.33",
+      "id": "ex-1-33",
+      "finding": "解释通勤方式平衡矩阵各系数，并用质量守恒展示解的比例来源。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "89fe4c9f2139f66e7b2abcc49c05d21e5f89a58267139ae00e105beec1805943",
+      "after_canonical_sha256": "26e5f781425e7c261ac46ee569f2f5fe870f4b241cf71a5072fb836c6795a462",
+      "reviewed_at_utc": "2026-10-15T16:32:40.553289+00:00",
+      "first_pass_after_canonical_sha256": "e184a42afcb1cec073b18d968f75d07c0929f2ae756810bd36c9d4ffeae1b2a3",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        92
+      ],
+      "current_mathml_count": 30
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.34",
+      "id": "ex-1-34",
+      "finding": "解释电话公司份额的流入条件概率与整数权重的产生。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "997a22480675cd24f114a3763b46b7db2e503bf48bc2bb586f7f93309ec60879",
+      "after_canonical_sha256": "a1c9bc575d6e5db7a19b7d980da4861777a61ac33cfa74fa7605df7bf9c34a93",
+      "reviewed_at_utc": "2026-10-15T16:32:40.557292+00:00",
+      "first_pass_after_canonical_sha256": "4bfb6671508011e8a3838ff54929eee4a2f83dd5813f8acf5ee9a7e82cd1959a",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        93
+      ],
+      "current_mathml_count": 25
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.35",
+      "id": "ex-1-35",
+      "finding": "解释没有直接转移仍可互通、列平衡与相邻流量两种求比方法。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "02b63832dba43481a077782a289e12b98a59697ecbbcb83e76c64216e890d213",
+      "after_canonical_sha256": "1330d2610725821c7468abfa33c95c108524005ffc62f06a3769a490473afc97",
+      "reviewed_at_utc": "2026-10-15T16:32:40.561538+00:00",
+      "first_pass_after_canonical_sha256": "4fba2c3936d19cc471b3d95df746a65f5bf2afcf5223bc8c215836779fdaf561",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        93
+      ],
+      "current_mathml_count": 27
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.36",
+      "id": "ex-1-36",
+      "finding": "解释保险评级的跨级限制、平稳流入系数与 1:4:6 的来源。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "a769e9cf0f888efa882f68b0160a2f82e0615b985de31dd4226b4fe5d0f7b67e",
+      "after_canonical_sha256": "9104580c37d4d296e94020964192422754ae578e1e7c4efd27708ab0b687544e",
+      "reviewed_at_utc": "2026-10-15T16:32:40.565285+00:00",
+      "first_pass_after_canonical_sha256": "32369daf21ba22e91978e306f8d1d6407c0621ac8c42be74d13d54dda42fd49f",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        93
+      ],
+      "current_mathml_count": 24
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.37",
+      "id": "ex-1-37",
+      "finding": "解释几何阶段时长计数、零灯更换日及时间比例为什么是平均奖励除以平均周期。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "e5912fd9e98b81b9e10e1f584dc43f4b5ee95f6c2f2b2780834f7a9961144e84",
+      "after_canonical_sha256": "7303b51a5196500ab4434934ef8fdf939b20cb5bffd3d0576e2ab16739de3ad6",
+      "reviewed_at_utc": "2026-10-15T16:32:40.566455+00:00",
+      "first_pass_after_canonical_sha256": "60afbae52b25a6e962c356aa1ccaddbc1af3b3801e0b96332cc7a24581f432c4",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        93
+      ],
+      "current_mathml_count": 13
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.38",
+      "id": "ex-1-38",
+      "finding": "解释当前出发地随旅程改变、各伞数转移与淋雨事件的条件乘法。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "5f712f03c425376aa36b84101e60de75ec4d758c0cb2f8493847ef90fa55faf8",
+      "after_canonical_sha256": "9560e2bcf12429e99e84986d83b7a7ed363d08f391cf56fe5b95c0b98e5f15c5",
+      "reviewed_at_utc": "2026-10-15T16:32:40.568929+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        94
+      ],
+      "current_mathml_count": 26
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.39",
+      "id": "ex-1-39",
+      "finding": "解释日初状态重置、单一入边的递推以及刮胡子事件为何等同下一日状态一。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "bd4c30b4d228136728e20c68196541a0fee6eb6344c206856910679c08ea2cfb",
+      "after_canonical_sha256": "f65a5b55666b23d754832200468882ab113173fd2a6406b86f24c3e08b97245b",
+      "reviewed_at_utc": "2026-10-15T16:32:40.571082+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        94
+      ],
+      "current_mathml_count": 16
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.40",
+      "id": "ex-1-40",
+      "finding": "解释反射边界规则与相邻流量比为何构造平稳分布。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "3c2cd804f81c57450bfe16ceff5f3a1b08ba85c1968b9dd2715bd76a548b8984",
+      "after_canonical_sha256": "3e7f76743f6e4b244937b49087f0e35d63d4d3de105576664b5d9c22c7d4e20e",
+      "reviewed_at_utc": "2026-10-15T16:32:40.572785+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        94
+      ],
+      "current_mathml_count": 14
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.41",
+      "id": "ex-1-41",
+      "finding": "澄清原状态 0 至 3 与未知量 1 至 4 的对应，解释逾期流入与平稳比例。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "936bc0b3e0c99f49d5e860bae1a1fcea3c3775b2afad7d41381c4d15384d2aa3",
+      "after_canonical_sha256": "996608ece05b535dfd946b894a958f29e66b433d006926a00d76fab066981582",
+      "reviewed_at_utc": "2026-10-15T16:36:25.294181+00:00",
+      "first_pass_after_canonical_sha256": "9726bcc9730ca0096fc922f5e3723ca2f6313f4401725ef64366f3a31218a322",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        94
+      ],
+      "current_mathml_count": 35
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.42",
+      "id": "ex-1-42",
+      "finding": "澄清维修周期起止与自环返回不同，解释几何时长和两策略工作奖励范围。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "0334a515e5492588752072fa72d19439d48f81e37308322a07dc72f74ebb52d3",
+      "after_canonical_sha256": "13b8d32505412597f8b487638341c43def554e5019ed7ab5d9c42de06804d78c",
+      "reviewed_at_utc": "2026-10-15T16:36:25.296377+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        95
+      ],
+      "current_mathml_count": 15
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.43",
+      "id": "ex-1-43",
+      "finding": "解释土地比例流入方程及 1:4:3:2 权重，与原状态下标对应。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "4ef88e1ab54547c862854903cfc15db52585e22baa9e38e1e40da1c5a6caebe5",
+      "after_canonical_sha256": "8282f75aa0353add41ff823dd256c243d3dc297f02a5601a98f9c8b3ea168342",
+      "reviewed_at_utc": "2026-10-15T16:36:25.302086+00:00",
+      "first_pass_after_canonical_sha256": "4b6c86570ad8342237474b40b70876546d9d824294b75d93c2be4d6f052c1a6f",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        95
+      ],
+      "current_mathml_count": 37
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.44",
+      "id": "ex-1-44",
+      "finding": "解释工序自环、报废成功边界、方程常数项和重做后的重新起步。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "30f571c623fdc4f50d2146e8f13db375975875b1066e35f0eda256c182213ca0",
+      "after_canonical_sha256": "af1e3ad403b241bd1a20cd8e843c218cc8ad663fd40856ee4bd8c625a8e31781",
+      "reviewed_at_utc": "2026-10-15T16:36:25.304356+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        96
+      ],
+      "current_mathml_count": 24
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.45",
+      "id": "ex-1-45",
+      "finding": "说明还清概率的条件分解、零边界与自环项，以及先消去一个未知量的目的。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "07ead636df9890d62b166099e63b1248f66fbd186caaa80fffd81f1b51c05284",
+      "after_canonical_sha256": "3d78e5ceb6a0ca9d6db5f21e6cfe4611e04a7469636752e6b109ef1ef340e554",
+      "reviewed_at_utc": "2026-10-15T16:36:25.306049+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        96
+      ],
+      "current_mathml_count": 15
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.46",
+      "id": "ex-1-46",
+      "finding": "解释先满概率的边界、第一步加权与相邻差把二阶关系化为一阶的原因。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "322223e4f2fc46e2add3693ebee02f169b5e67509e80823867087d9cdb756315",
+      "after_canonical_sha256": "6856e540a3cacbe4a01823fad3cca6d5c6b179a6fcc4460db0ad62e65ccead45",
+      "reviewed_at_utc": "2026-10-15T16:36:25.308841+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        96
+      ],
+      "current_mathml_count": 28
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.47",
+      "id": "ex-1-47",
+      "finding": "解释吸收时间和截球概率使用相同转移但不同常数与边界，澄清首回合计数。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "ad4621a6902ed92dee566cb492f18c00f7e046e3bf08dc0aa653258ceada2e72",
+      "after_canonical_sha256": "2c4a6e9f51f8f8eeb6e0d0d7ebb5772cd0b0121d54d4e2a85e4afcf116586871",
+      "reviewed_at_utc": "2026-10-15T16:36:25.311078+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        96
+      ],
+      "current_mathml_count": 25
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.48",
+      "id": "ex-1-48",
+      "finding": "解释各等可能去向与吸收边界，证明 D/S 对称可用于消元。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "2558f470a75cf4036a1cc9fdecc1b58f3969b2bcfa8b3acf2772d34b5a1b0d31",
+      "after_canonical_sha256": "0ed4ef98747d3f9bc99ed14ee7ebbf645332b9cb033f27817a107d001f5c4a83",
+      "reviewed_at_utc": "2026-10-15T16:36:25.313994+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        97
+      ],
+      "current_mathml_count": 19
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.49",
+      "id": "ex-1-49",
+      "finding": "解释连续正面状态、等待方程常数及八状态返回时间与空起点等待的差异。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "c398f6778728330bef2bc3a5e13d35964e08e636f024acabd59b3a7180d853ef",
+      "after_canonical_sha256": "22968524608ae922ec58d1dcac99b78aa9e3411b9d5cdf91cd84a55e4308b092",
+      "reviewed_at_utc": "2026-10-15T16:36:25.330274+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        97
+      ],
+      "current_mathml_count": 28
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.50",
+      "id": "ex-1-50",
+      "finding": "逐模式解释保留最长可用后缀与方程分支，并解释无自重叠时返回和首次等待相同。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "7f146509503038be6c8ac4fada9bd68edbd1f3ad103b4e18068db3e1846dbe6f",
+      "after_canonical_sha256": "5088d1133115d3933a4a1edfca331d7e8a21cc900119b87356e26df4f3a9c7dd",
+      "reviewed_at_utc": "2026-10-15T16:36:25.333528+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        97
+      ],
+      "current_mathml_count": 29
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.51",
+      "id": "ex-1-51",
+      "finding": "逐组解释模式后继状态、成功失败边界与概率平均式的来源。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "6ce31c212e864464c7182a2e4b3c3e4148ce6647a8b0c3076c4dc96949b50ae6",
+      "after_canonical_sha256": "3443ca8b5595c479c7c66afdecbc886dc6a9dd432c7356940b76b16d81f9be92",
+      "reviewed_at_utc": "2026-10-15T16:36:25.336330+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        97
+      ],
+      "current_mathml_count": 30
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.52",
+      "id": "ex-1-52",
+      "finding": "解释同一游戏的成功概率与等待时间为何有不同边界和常数。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "b5f229d923c2eafb17e856e7f0892262a0f8f0e71b1f54b596351670bf95b7a0",
+      "after_canonical_sha256": "841b8059c7f74dc67acc143e775db909d636a255842f3ff696d39bee63662691",
+      "reviewed_at_utc": "2026-10-15T16:36:25.337806+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        98
+      ],
+      "current_mathml_count": 18
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.53",
+      "id": "ex-1-53",
+      "finding": "说明剩余工作时间按职级递推，经理时间为何先求及各系数来源。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "0013e7f0772e36b489b180d7949ca5f0728b5e5349be7544cb21be6add1e5597",
+      "after_canonical_sha256": "c6c3be2b492ad92066fb7f98f0fc2d290915ff875b3ed05eef83e9db35ba78be",
+      "reviewed_at_utc": "2026-10-15T16:36:25.338943+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        98
+      ],
+      "current_mathml_count": 16
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.54",
+      "id": "ex-1-54",
+      "finding": "解释晋级边界、直接成功常数、等待时间常数及半年单位转换。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "ab857f57392f032750b37c9c9c06f19c21906ad8c17d82befff9790d225c8570",
+      "after_canonical_sha256": "64bc66841d146d6528ce6893eb17277e2b0724ccdbb7aabbdab76c9cfa8da041",
+      "reviewed_at_utc": "2026-10-15T16:36:25.341431+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        98
+      ],
+      "current_mathml_count": 26
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.55",
+      "id": "ex-1-55",
+      "finding": "说明技师先求、晋升概率的常数与停时方程的区别，并保留题给时间单位。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "93eed0a47867c9d150e8a709f8493f75e1e7098c221e52a318b5b52b005d88bd",
+      "after_canonical_sha256": "e38a16a83ad6fa82dc2c205c75b0cf05e9db610433f40a07f25420a91f94cd7d",
+      "reviewed_at_utc": "2026-10-15T16:36:25.343442+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        98
+      ],
+      "current_mathml_count": 19
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.56",
+      "id": "ex-1-56",
+      "finding": "逐贷款类型解释时间与还清概率的首步方程、左右端放大系数及终点条件。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [
+        2
+      ],
+      "before_canonical_sha256": "d969323e576818a4393580116e2c414bd9c30ca600db5552145afec15cb36f2c",
+      "after_canonical_sha256": "f9397f65dbd2ccbbd235703b68eed3fdcaa185a7eea5ba8233915ff524e2f7e7",
+      "reviewed_at_utc": "2026-10-15T16:39:30.313688+00:00",
+      "first_pass_after_canonical_sha256": "97bd056f18fc9f12c9bacd0c064ff38970bf310ff82a9d0302bcff17b2fe8209",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        99
+      ],
+      "current_mathml_count": 40
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.57",
+      "id": "ex-1-57",
+      "finding": "解释同一顾客链在平稳、先到零、到边界时间三个问题中各自边界与系数。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        2,
+        3
+      ],
+      "additional_sequences_explained": [
+        2,
+        3
+      ],
+      "before_canonical_sha256": "5813214a9d3c32b65b064d67d23d0d8532459dee526ea25ceac80e347c9388ea",
+      "after_canonical_sha256": "23e8e61d5e0c8079595c2230f85f07714e178b5e083630d2886ba3435148d2de",
+      "reviewed_at_utc": "2026-10-15T16:39:30.340611+00:00",
+      "first_pass_after_canonical_sha256": "e177127e9556ad99883b93f0847244a313284c5b6bd496152ae5be70a37767e7",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        99
+      ],
+      "current_mathml_count": 88
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.58",
+      "id": "ex-1-58",
+      "finding": "解释一般两状态递推的条件分组、固定点相减和边界参数的实际链行为。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "23dd52b2a9aad0a73cc53c59b445cb628026ceeb7dbeda84129809cae2410265",
+      "after_canonical_sha256": "8809aa9566741158eae147bab0f4f7ba0456cdaadd33d833eacfe7e58217b15a",
+      "reviewed_at_utc": "2026-10-15T16:39:30.343298+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        99
+      ],
+      "current_mathml_count": 24
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.59",
+      "id": "ex-1-59",
+      "finding": "解释合法状态约束、交换联合概率、相邻组合比与均匀微观状态。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "85f6954d9df2588dc50dff43e8e03422f678d124f5f4c87bf0a81e852efcb5da",
+      "after_canonical_sha256": "7f3249c52171e1ea0d48d25e247e613447075d55cf98a27f0ad467bf9df69e9d",
+      "reviewed_at_utc": "2026-10-15T16:39:30.346396+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        100
+      ],
+      "current_mathml_count": 33
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.60",
+      "id": "ex-1-60",
+      "finding": "解释倒查最近不同请求为何等于书架顺序、分母的条件筛选和时间平移不变性。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "9acb756726f902cbfce13238dfddbae5772e44ead8bbfc19b6f9e28f0cfb54f9",
+      "after_canonical_sha256": "406e4a59ed1984a5b87f5da3fcae8339273e85b152d0e23ca4051e15968d13e1",
+      "reviewed_at_utc": "2026-10-15T16:39:30.348981+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        100
+      ],
+      "current_mathml_count": 27
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.61",
+      "id": "ex-1-61",
+      "finding": "解释环切开后的成功边界为何是 11、方向条件平均及周期性对返回均值无碍。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "71f316da10c8deb5646b4c76304359e1dafaa962fe2e61471c98b04ab418b845",
+      "after_canonical_sha256": "c126b947a661f1936224edaeeff6a1f8872faa4f6eb3dc0fd9a39351eb0eb4f2",
+      "reviewed_at_utc": "2026-10-15T16:39:30.350403+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        100
+      ],
+      "current_mathml_count": 15
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.62",
+      "id": "ex-1-62",
+      "finding": "解释为什么度数加权而非格子均匀、各类邻格计数及返回分母。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "cb8ec10085d012e1258b015e3e53476b9ff3341bee7f3720a4a89ef3fff3de07",
+      "after_canonical_sha256": "a90d805abb830f97042671b1b6bcaab53ccc6999d4bb2259ba4e32a9e0fe0145",
+      "reviewed_at_utc": "2026-10-15T16:39:30.351766+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        100
+      ],
+      "current_mathml_count": 16
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.63",
+      "id": "ex-1-63",
+      "finding": "解释各方向合法目标格计数、斜线有向移动与度数平稳质量。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "5289cbc08a11341ee8476f7e40a17b3fbd742006af8f42d9602125e674b1ac8c",
+      "after_canonical_sha256": "fa665d027908988eb73d29ad7d2029f1950d5d127af46034f1de1d32c48b3c9e",
+      "reviewed_at_utc": "2026-10-15T16:39:30.353960+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        101
+      ],
+      "current_mathml_count": 24
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.64",
+      "id": "ex-1-64",
+      "finding": "解释突变后成功概率的两条来源、二项均值和参数条件在收敛中的作用。",
+      "decision": "expanded",
+      "intro_added": true,
+      "steps_explained": [
+        1,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "4a48170e8a06b69dfe1670c06b191dbae4426e6b77e1b2f0043fabbea8117422",
+      "after_canonical_sha256": "45ad5e6388152fafe2cd03ee82ed4a770f5f3d6e0ce5955fc29c6d7a5d0fe24f",
+      "reviewed_at_utc": "2026-10-15T16:39:30.357133+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        101
+      ],
+      "current_mathml_count": 40
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.65",
+      "id": "ex-1-65",
+      "finding": "解释带符号一步增量、条件期望平均与均值收敛不控制奇偶分布。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "d6fd4b21f3d0610075bacf396467066eb14ccfbc3bb68ec3b0c99034971b15d8",
+      "after_canonical_sha256": "88bd9b00ca1b30719705980891f2f70c1110f2deb17dd54b7651d8683a79d1de",
+      "reviewed_at_utc": "2026-10-15T16:39:30.359538+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        101
+      ],
+      "current_mathml_count": 28
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.66",
+      "id": "ex-1-66",
+      "finding": "解释配子与两子代概率、等位基因期望守恒如何推出吸收概率，以及时间矩阵每行来源。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [
+        2
+      ],
+      "before_canonical_sha256": "2d52d3eab00c0ebb0de2548b8c175ef7e0ab71f9459191e539643456bac0df38",
+      "after_canonical_sha256": "fc968b08400dc453720d27264716eb5179f7cc8762fe80b9121383723ee1248c",
+      "reviewed_at_utc": "2026-10-15T16:39:30.366608+00:00",
+      "first_pass_after_canonical_sha256": "abca94550b419f54d7e2533bd7203e71e7b242432c5cdea585d454c3a5b24399",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        101
+      ],
+      "current_mathml_count": 58,
+      "source_correction": {
+        "pdf_page": 101,
+        "original": "T is defined for n > 0",
+        "previous_companion": "Boundary coordinates were zero without distinguishing a time-zero remaining wait.",
+        "correction": "Retain the time-zero remaining-wait vector for the first-step derivation; explicitly return boundary means one under the original positive-time definition. Interior means are unchanged."
+      }
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.67",
+      "id": "ex-1-67",
+      "finding": "解释为何只记已见种类数足够、几何阶段成功率及期望求和。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "242efa0a85eb4e02a8a16d809ff5a4a27597b5d48d3205ec36f01c2470d20ada",
+      "after_canonical_sha256": "e70c83628a390bc9915a180895924263dd3496b30b0af686964d8b1725188b43",
+      "reviewed_at_utc": "2026-10-15T16:42:25.274557+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        101
+      ],
+      "current_mathml_count": 14
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.68",
+      "id": "ex-1-68",
+      "finding": "解释随机阶段独立性、几何均值方差来源与精确求和到渐近的转换。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "e9e677293d4abbb560a3ff3aec6e045d8e0fd5ab16731b07991a61ae69435257",
+      "after_canonical_sha256": "2d8356dd94a22eb103af3e9a0a574f24062df04aaf3d78a7f001a4dfd3be94c9",
+      "reviewed_at_utc": "2026-10-15T16:42:25.279147+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        101
+      ],
+      "current_mathml_count": 50,
+      "source_correction": {
+        "pdf_page": 102,
+        "original": "The book explicitly uses approximate signs for the large-N estimates.",
+        "correction": "Label the note as an explanation of the original approximation, not a correction of an alleged exact equality."
+      },
+      "first_pass_after_canonical_sha256": "9948e10a53a2cd47c5203d93d93fc3d9d3d088b7d2e4ec5130b447838794c507"
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.69",
+      "id": "ex-1-69",
+      "finding": "解释相邻递推消和、已知高位访问后均匀最后跳与独立指标结论。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "4757f1ced7a37fd726814546dab0d82faa13ac5c118e16ae901008244dfb47e3",
+      "after_canonical_sha256": "027e3081adc81b66b437dc8e4c9f48c8a91f25a936ab54731d2c484226a08624",
+      "reviewed_at_utc": "2026-10-15T16:42:25.282824+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        102
+      ],
+      "current_mathml_count": 46
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.70",
+      "id": "ex-1-70",
+      "finding": "解释尺度差分、自环消去、无穷边界事件和状态零常返的关系。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "490df5875731719262470f001db1952c55857a4616ee52ca0fe012e3c1287e80",
+      "after_canonical_sha256": "e0840473ab334880514a85f8d42d12b6908658f137f4d220231f361092d4819a",
+      "reviewed_at_utc": "2026-10-15T16:42:25.286149+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        102
+      ],
+      "current_mathml_count": 34
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.71",
+      "id": "ex-1-71",
+      "finding": "解释比率乘积化指数、两层级数分别判断以及临界阈值和参数边界。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "fc7b5f73f481535232cdb59662b03e41c1da1e98509982c1f3a748efa2841e1c",
+      "after_canonical_sha256": "05ed64f1b1e79dd8f89640cb2bfd42ef11c396fdda2d7c5b9cbb55e757704749",
+      "reviewed_at_utc": "2026-10-15T16:42:25.289415+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        102
+      ],
+      "current_mathml_count": 38
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.72",
+      "id": "ex-1-72",
+      "finding": "解释反向边下标、连乘抵消和归一化望远镜边界项。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "cd6991df011595fefe935f0ee69b4c8e82c0016ef0fc71a2c79cc694dfb1710e",
+      "after_canonical_sha256": "e53d5ef00ea66543d880e09a8ca7987006e3d4d2aaf39b6255b9172ddf619b8a",
+      "reviewed_at_utc": "2026-10-15T16:42:25.293997+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        103
+      ],
+      "current_mathml_count": 29
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.73",
+      "id": "ex-1-73",
+      "finding": "解释前缀质量守恒迫使逐边平衡以及权重发散为何排除所有平稳概率。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "6e16af2053ecfc21cb6bac24533c944d4f0c8e860bc577fa1f3b90d699c6d611",
+      "after_canonical_sha256": "a1ec77c42f710a950ab7039f326c03392062e28ed110bac66b5c9856e4d412c2",
+      "reviewed_at_utc": "2026-10-15T16:42:25.295793+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        103
+      ],
+      "current_mathml_count": 21
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.74",
+      "id": "ex-1-74",
+      "finding": "解释年龄存活乘积与返回尾概率、周期访问质量以及重置流的望远镜和。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "2ae674070414cc9bee05720825841bf4e7ce329dc5798d8de46b665cc2325665",
+      "after_canonical_sha256": "3b98aa4cf7e142ae6a766a6f79d85b20d6f76d2057b5cb1b0bf1f063b68c15d5",
+      "reviewed_at_utc": "2026-10-15T16:42:25.298187+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        103
+      ],
+      "current_mathml_count": 32
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.75",
+      "id": "ex-1-75",
+      "finding": "解释倒计时的初次跳跃也计时、常返与均值有限的区别及平稳尾权重。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "f3b45ec84eb429ccc8f4a9df67c5a61e9b4852092e27f0a55f4d91a6b0bf3b89",
+      "after_canonical_sha256": "39969396d2c50a8259b18568b7d206d451ffc510a16dce12920fc534de67733b",
+      "reviewed_at_utc": "2026-10-15T16:42:25.300332+00:00",
+      "first_pass_after_canonical_sha256": "c4a5de6aa9fe32aa8468827a79516afa1eec95ca0ba01677ada3e1b2f01cc94b",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        103
+      ],
+      "current_mathml_count": 24
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.76",
+      "id": "ex-1-76",
+      "finding": "解释女儿数生成函数的每个系数、家族独立灭绝递推及根的选择。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "c1204c91cb752f94d4af62dfb82ad490da6e5a3339289d90e4f63f846095895d",
+      "after_canonical_sha256": "7d10d3bb53c73ad4df2546a8802f7f0e488a53855da8e305663f56b0333169d9",
+      "reviewed_at_utc": "2026-10-15T16:42:25.315263+00:00",
+      "first_pass_after_canonical_sha256": "21bc0ab6f79c5e1a9f24392f9c66532372df02291e69581becc4904fedd723d1",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        103
+      ],
+      "current_mathml_count": 25
+    },
+    {
+      "kind": "Exercise",
+      "number": "1.77",
+      "id": "ex-1-77",
+      "finding": "解释几何后代的计数约定、生成函数级数和不同参数下根的概率范围。",
+      "decision": "expanded",
+      "intro_added": false,
+      "steps_explained": [
+        1,
+        2,
+        3
+      ],
+      "additional_sequences_explained": [],
+      "before_canonical_sha256": "9b073a7dfac305febc9285c8a4c0e34d6e334ad253acf46da6baaac6eaedbbf8",
+      "after_canonical_sha256": "758d9d321abd15110ca33eb6c59b9c58b9b8c1d634aa98dd0ad5d9c4572cc8f6",
+      "reviewed_at_utc": "2026-10-15T16:42:25.317571+00:00",
+      "final_readback_at_utc": "2026-10-15T16:59:13.453560+00:00",
+      "source_pdf_pages": [
+        103
+      ],
+      "current_mathml_count": 24
+    }
+  ],
+  "preservation": {
+    "status": "passed",
+    "checked_at_utc": "2026-10-15T16:59:13.453560+00:00",
+    "page_sha256": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e",
+    "before_page_sha256": "fa7e23298784f25ab60945cbfd0c8deffad782faa44122d1bf96583019db1c5c",
+    "item_counts": {
+      "Example": 56,
+      "Theorem": 18,
+      "Lemma": 13,
+      "Exercise": 77
+    },
+    "reviewed": 164,
+    "expanded": 163,
+    "retained_example": "1.4",
+    "anchors_preserved": 262,
+    "outside_item_html_byte_identical": true,
+    "styles_scripts_program_blocks_unchanged": true,
+    "other_pages_unchanged": [
+      {
+        "page": "chapter03_renewal_processes.html",
+        "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa"
+      },
+      {
+        "page": "book_overview.html",
+        "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0"
+      },
+      {
+        "page": "appendix_a_probability_review.html",
+        "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a"
+      },
+      {
+        "page": "chapter06_mathematical_finance.html",
+        "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17"
+      },
+      {
+        "page": "preface.html",
+        "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba"
+      },
+      {
+        "page": "chapter02_poisson_processes.html",
+        "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b"
+      },
+      {
+        "page": "chapter04_continuous_time_markov_chains.html",
+        "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3"
+      },
+      {
+        "page": "chapter05_martingales.html",
+        "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c"
+      }
+    ],
+    "exact_checks": [
+      "machine coefficients from failure and repair events",
+      "weather intermediate-day routes",
+      "housing two-period weighting",
+      "inventory merging high demand into zero stock",
+      "clock two conditional directions",
+      "health plan explanatory ratios",
+      "lunch explanatory ratios",
+      "bicycles explanatory ratios",
+      "residence explanatory ratios",
+      "commuting explanatory ratios",
+      "phone company explanatory ratios",
+      "party explanatory ratios",
+      "insurance explanatory ratios",
+      "loan grades explanatory ratios",
+      "maintenance strategy occupancy weights",
+      "preventive maintenance occupancy weights",
+      "two-lamp occupancy weights",
+      "geometric moment recursion 1/6",
+      "geometric moment recursion 1/2",
+      "geometric moment recursion 1",
+      "true-answer finite-sum formula n=2 initial=0",
+      "true-answer finite-sum formula n=2 initial=1/3",
+      "true-answer finite-sum formula n=2 initial=1",
+      "true-answer finite-sum formula n=4 initial=0",
+      "true-answer finite-sum formula n=4 initial=1/3",
+      "true-answer finite-sum formula n=4 initial=1",
+      "true-answer finite-sum formula n=8 initial=0",
+      "true-answer finite-sum formula n=8 initial=1/3",
+      "true-answer finite-sum formula n=8 initial=1",
+      "true-answer finite-sum formula n=12 initial=0",
+      "true-answer finite-sum formula n=12 initial=1/3",
+      "true-answer finite-sum formula n=12 initial=1",
+      "summable birth-death edge 0",
+      "summable birth-death edge 1",
+      "summable birth-death edge 2",
+      "summable birth-death edge 3",
+      "summable birth-death edge 4",
+      "summable birth-death edge 5",
+      "summable birth-death edge 6",
+      "summable birth-death edge 7",
+      "summable birth-death edge 8",
+      "summable birth-death edge 9",
+      "summable birth-death edge 10",
+      "summable birth-death edge 11",
+      "summable birth-death edge 12",
+      "summable birth-death edge 13",
+      "summable birth-death edge 14",
+      "summable birth-death edge 15",
+      "summable birth-death edge 16",
+      "summable birth-death edge 17",
+      "summable birth-death edge 18",
+      "summable birth-death edge 19",
+      "summable birth-death edge 20",
+      "summable birth-death edge 21",
+      "summable birth-death edge 22",
+      "summable birth-death edge 23",
+      "summable birth-death edge 24",
+      "summable birth-death edge 25",
+      "summable birth-death edge 26",
+      "summable birth-death edge 27",
+      "summable birth-death edge 28",
+      "summable birth-death edge 29",
+      "telescoping normalization partial sum 0",
+      "telescoping normalization partial sum 1",
+      "telescoping normalization partial sum 5",
+      "telescoping normalization partial sum 40"
+    ],
+    "row_systems": 35,
+    "row_operations_explained": 293,
+    "question_wording_clarifications": [
+      "1.66",
+      "1.68",
+      "1.70",
+      "1.74",
+      "1.75"
+    ],
+    "source_pdf_sha256": "2232660e1909b42c6df8b5aca8eba12cdb383bf3741ecb53add49f6c26c6a0e7"
+  },
+  "source_review": {
+    "pdf": "assets/essentials-of-stochastic-processes.pdf",
+    "sha256": "2232660e1909b42c6df8b5aca8eba12cdb383bf3741ecb53add49f6c26c6a0e7",
+    "chapter_pdf_pages": [
+      10,
+      103
+    ],
+    "method": "Read the current item text against the extracted original chapter. Additional original-page images read for machine, maintenance, umbrella, genetics and branching boundaries. Source numbering/page checks are recorded separately.",
+    "additional_page_images": [
+      {
+        "pdf_page": 101,
+        "path": "tmp/stochastic-explanations/source-images/pdf-101.png",
+        "bytes": 319120,
+        "sha256": "466779c963bb83d825804bf7a411902e5035a501479b25cf9074895c1d1ec38b"
+      },
+      {
+        "pdf_page": 102,
+        "path": "tmp/stochastic-explanations/source-images/pdf-102.png",
+        "bytes": 233357,
+        "sha256": "0066906e0951ba57b8bcb3150b09971f01bc927b8c4e371670af31270a89ea29"
+      },
+      {
+        "pdf_page": 103,
+        "path": "tmp/stochastic-explanations/source-images/pdf-103.png",
+        "bytes": 216275,
+        "sha256": "44f4b888036aa2e759e506ef18bd57a0a31939768c23e2f9f37caf8e5891d7dc"
+      },
+      {
+        "pdf_page": 40,
+        "path": "tmp/stochastic-explanations/source-images/pdf-40.png",
+        "bytes": 194294,
+        "sha256": "02cfe340fe3879ab2afa1a358e432c9cf4cba58498dec85cc491fa7d620d30c2"
+      },
+      {
+        "pdf_page": 41,
+        "path": "tmp/stochastic-explanations/source-images/pdf-41.png",
+        "bytes": 198127,
+        "sha256": "75b56dbbf63e23c484d08d3ed905be5185a8104300f6562947f62af7fe0c8807"
+      },
+      {
+        "pdf_page": 93,
+        "path": "tmp/stochastic-explanations/source-images/pdf-93.png",
+        "bytes": 182234,
+        "sha256": "c66d33511476e8f56b2e9496ab12a856cb3d65b699533fecd2c598841a4b7abf"
+      },
+      {
+        "pdf_page": 94,
+        "path": "tmp/stochastic-explanations/source-images/pdf-94.png",
+        "bytes": 261322,
+        "sha256": "71d1806ab16baea0be7bb1acc8c98447c51f4903fcb7fa07ee629163613bde1d"
+      },
+      {
+        "pdf_page": 95,
+        "path": "tmp/stochastic-explanations/source-images/pdf-95.png",
+        "bytes": 171267,
+        "sha256": "b041a57a8a684a3dee7c604c3c00ae188f72be8ae4deb92c98b3915c88fa965c"
+      }
+    ],
+    "corrections": [
+      {
+        "kind": "Exercise",
+        "number": "1.66",
+        "pdf_page": 101,
+        "original": "T is defined for n > 0",
+        "previous_companion": "Boundary coordinates were zero without distinguishing a time-zero remaining wait.",
+        "correction": "Retain the time-zero remaining-wait vector for the first-step derivation; explicitly return boundary means one under the original positive-time definition. Interior means are unchanged."
+      },
+      {
+        "kind": "Exercise",
+        "number": "1.68",
+        "pdf_page": 102,
+        "original": "The book explicitly uses approximate signs for the large-N estimates.",
+        "correction": "Label the note as an explanation of the original approximation, not a correction of an alleged exact equality."
+      }
+    ]
+  },
+  "mathematical_checks": {
+    "exact_checks": [
+      "machine coefficients from failure and repair events",
+      "weather intermediate-day routes",
+      "housing two-period weighting",
+      "inventory merging high demand into zero stock",
+      "clock two conditional directions",
+      "health plan explanatory ratios",
+      "lunch explanatory ratios",
+      "bicycles explanatory ratios",
+      "residence explanatory ratios",
+      "commuting explanatory ratios",
+      "phone company explanatory ratios",
+      "party explanatory ratios",
+      "insurance explanatory ratios",
+      "loan grades explanatory ratios",
+      "maintenance strategy occupancy weights",
+      "preventive maintenance occupancy weights",
+      "two-lamp occupancy weights",
+      "geometric moment recursion 1/6",
+      "geometric moment recursion 1/2",
+      "geometric moment recursion 1",
+      "true-answer finite-sum formula n=2 initial=0",
+      "true-answer finite-sum formula n=2 initial=1/3",
+      "true-answer finite-sum formula n=2 initial=1",
+      "true-answer finite-sum formula n=4 initial=0",
+      "true-answer finite-sum formula n=4 initial=1/3",
+      "true-answer finite-sum formula n=4 initial=1",
+      "true-answer finite-sum formula n=8 initial=0",
+      "true-answer finite-sum formula n=8 initial=1/3",
+      "true-answer finite-sum formula n=8 initial=1",
+      "true-answer finite-sum formula n=12 initial=0",
+      "true-answer finite-sum formula n=12 initial=1/3",
+      "true-answer finite-sum formula n=12 initial=1",
+      "summable birth-death edge 0",
+      "summable birth-death edge 1",
+      "summable birth-death edge 2",
+      "summable birth-death edge 3",
+      "summable birth-death edge 4",
+      "summable birth-death edge 5",
+      "summable birth-death edge 6",
+      "summable birth-death edge 7",
+      "summable birth-death edge 8",
+      "summable birth-death edge 9",
+      "summable birth-death edge 10",
+      "summable birth-death edge 11",
+      "summable birth-death edge 12",
+      "summable birth-death edge 13",
+      "summable birth-death edge 14",
+      "summable birth-death edge 15",
+      "summable birth-death edge 16",
+      "summable birth-death edge 17",
+      "summable birth-death edge 18",
+      "summable birth-death edge 19",
+      "summable birth-death edge 20",
+      "summable birth-death edge 21",
+      "summable birth-death edge 22",
+      "summable birth-death edge 23",
+      "summable birth-death edge 24",
+      "summable birth-death edge 25",
+      "summable birth-death edge 26",
+      "summable birth-death edge 27",
+      "summable birth-death edge 28",
+      "summable birth-death edge 29",
+      "telescoping normalization partial sum 0",
+      "telescoping normalization partial sum 1",
+      "telescoping normalization partial sum 5",
+      "telescoping normalization partial sum 40"
+    ],
+    "linear_systems": "All 35 displayed systems and 293 row transformations executed with exact rational arithmetic by the maintained regression test.",
+    "additional_boundary_regression": "test_inbreeding_original_positive_time_boundary distinguishes original positive-time answers from remaining waits after a step.",
+    "readback_notes": [
+      {
+        "id": "example-1-54",
+        "reason": "先在有限区间里问"
+      },
+      {
+        "id": "example-1-39",
+        "reason": "最后两列分别对应"
+      },
+      {
+        "id": "example-1-22",
+        "reason": "三步转移全正既提供"
+      },
+      {
+        "id": "ex-1-37",
+        "reason": "distinguish replacement cycle from first return with a self-loop"
+      },
+      {
+        "reason": "render derivative prime as a superscript",
+        "tex": "\\phi^{\\prime}(s)=\\sum_{k\\ge1}kp_ks^{k-1}<m=1"
+      },
+      {
+        "reason": "render derivative prime as a superscript",
+        "tex": "\\phi(s)=1-\\int_s^1\\phi^{\\prime}(t)dt>s"
+      },
+      {
+        "reason": "render derivative prime as a superscript",
+        "tex": "\\phi^{\\prime}(s)"
+      }
+    ]
+  },
+  "browser_review": {
+    "engine": "ego-browser",
+    "page_sha256": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e",
+    "started_at_utc": "2026-10-15T16:57:31.038Z",
+    "finished_at_utc": "2026-10-15T17:03:16.013Z",
+    "layouts": [
+      {
+        "file": "chapter01_markov_chains.html",
+        "sha256": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e",
+        "scope": "Chapter 1, all exercise bodies open for formula/overflow checks; screenshot reads example 1.28",
+        "width": 1800,
+        "started_at_utc": "2026-10-15T16:57:31.114Z",
+        "finished_at_utc": "2026-10-15T17:01:06.695Z",
+        "root": 1785,
+        "scrollWidth": 1785,
+        "hash": "#lemma-1-31-proof",
+        "targetHeading": "例 1.28：三机器一维修员的逐项权重",
+        "math": 5160,
+        "visibleMath": 5121,
+        "badMath": 0,
+        "merror": 0,
+        "steps": 3,
+        "errors": [],
+        "screenshot": "tmp/stochastic-explanations/layout-1800.png",
+        "screenshot_sha256": "747c3c2d1eebf6cccc319998a9155f3df0034dc57ed3736d5ee7382c273c6e0d",
+        "target_top": 108.7578125
+      },
+      {
+        "file": "chapter01_markov_chains.html",
+        "sha256": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e",
+        "scope": "Chapter 1, all exercise bodies open for formula/overflow checks; screenshot reads example 1.28",
+        "width": 1440,
+        "started_at_utc": "2026-10-15T16:57:35.148Z",
+        "finished_at_utc": "2026-10-15T16:57:36.327Z",
+        "root": 1425,
+        "scrollWidth": 1425,
+        "hash": "#lemma-1-31-proof",
+        "targetHeading": "例 1.28：三机器一维修员的逐项权重",
+        "math": 5160,
+        "visibleMath": 5121,
+        "badMath": 0,
+        "merror": 0,
+        "steps": 3,
+        "errors": [],
+        "screenshot": "tmp/stochastic-explanations/layout-1440.png",
+        "screenshot_sha256": "4e032a679e252013bc128eacac6e783facb1008f9f113f8ecc360ba10f241d69"
+      },
+      {
+        "file": "chapter01_markov_chains.html",
+        "sha256": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e",
+        "scope": "Chapter 1, all exercise bodies open for formula/overflow checks; screenshot reads example 1.28",
+        "width": 1024,
+        "started_at_utc": "2026-10-15T16:57:36.327Z",
+        "finished_at_utc": "2026-10-15T16:57:36.792Z",
+        "root": 1009,
+        "scrollWidth": 1009,
+        "hash": "#lemma-1-31-proof",
+        "targetHeading": "例 1.28：三机器一维修员的逐项权重",
+        "math": 5160,
+        "visibleMath": 5159,
+        "badMath": 0,
+        "merror": 0,
+        "steps": 3,
+        "errors": [],
+        "screenshot": "tmp/stochastic-explanations/layout-1024.png",
+        "screenshot_sha256": "7cc71c1660c52c175bb2001afee06ea53a668436d59bae713495cab64e6cf767"
+      },
+      {
+        "file": "chapter01_markov_chains.html",
+        "sha256": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e",
+        "scope": "Chapter 1, all exercise bodies open for formula/overflow checks; screenshot reads example 1.28",
+        "width": 390,
+        "started_at_utc": "2026-10-15T16:57:36.793Z",
+        "finished_at_utc": "2026-10-15T16:57:36.997Z",
+        "root": 375,
+        "scrollWidth": 375,
+        "hash": "#lemma-1-31-proof",
+        "targetHeading": "例 1.28：三机器一维修员的逐项权重",
+        "math": 5160,
+        "visibleMath": 5159,
+        "badMath": 0,
+        "merror": 0,
+        "steps": 3,
+        "errors": [],
+        "screenshot": "tmp/stochastic-explanations/layout-390.png",
+        "screenshot_sha256": "54d8668ebcc64da139265af7311f79fe47f3a550b53ef5dfd66dca3ad9171dea"
+      }
+    ],
+    "interactions": {
+      "method": "DOM activation of each actual anchor and summary, followed by observed hash/open state",
+      "proof_links": [
+        {
+          "source": "theorem-1-1",
+          "expected": "#theorem-1-1-proof",
+          "actual": "#theorem-1-1-proof",
+          "proof_for": "Theorem:1.1",
+          "heading": "定理 1.1：多步转移与矩阵幂的完整证明",
+          "passed": true
+        },
+        {
+          "source": "theorem-1-2",
+          "expected": "#theorem-1-2-proof",
+          "actual": "#theorem-1-2-proof",
+          "proof_for": "Theorem:1.2",
+          "heading": "定理 1.2：停时后的重新起步的完整证明",
+          "passed": true
+        },
+        {
+          "source": "lemma-1-3",
+          "expected": "#lemma-1-3-proof",
+          "actual": "#lemma-1-3-proof",
+          "proof_for": "Lemma:1.3",
+          "heading": "引理 1.3：统一到达概率与几何尾界的完整证明",
+          "passed": true
+        },
+        {
+          "source": "lemma-1-4",
+          "expected": "#lemma-1-4-proof",
+          "actual": "#lemma-1-4-proof",
+          "proof_for": "Lemma:1.4",
+          "heading": "引理 1.4：可达关系的传递性的完整证明",
+          "passed": true
+        },
+        {
+          "source": "theorem-1-5",
+          "expected": "#theorem-1-5-proof",
+          "actual": "#theorem-1-5-proof",
+          "proof_for": "Theorem:1.5",
+          "heading": "定理 1.5：离开后可能不返回便暂态的完整证明",
+          "passed": true
+        },
+        {
+          "source": "lemma-1-6",
+          "expected": "#lemma-1-6-proof",
+          "actual": "#lemma-1-6-proof",
+          "proof_for": "Lemma:1.6",
+          "heading": "引理 1.6：常返起点的可达状态必能返回的完整证明",
+          "passed": true
+        },
+        {
+          "source": "theorem-1-7",
+          "expected": "#theorem-1-7-proof",
+          "actual": "#theorem-1-7-proof",
+          "proof_for": "Theorem:1.7",
+          "heading": "定理 1.7：有限闭不可约类的常返性的完整证明",
+          "passed": true
+        },
+        {
+          "source": "theorem-1-8",
+          "expected": "#theorem-1-8-proof",
+          "actual": "#theorem-1-8-proof",
+          "proof_for": "Theorem:1.8",
+          "heading": "定理 1.8：有限链的分类分解的完整证明",
+          "passed": true
+        },
+        {
+          "source": "lemma-1-9",
+          "expected": "#lemma-1-9-proof",
+          "actual": "#lemma-1-9-proof",
+          "proof_for": "Lemma:1.9",
+          "heading": "引理 1.9：常返性沿可达关系传递的完整证明",
+          "passed": true
+        },
+        {
+          "source": "lemma-1-10",
+          "expected": "#lemma-1-10-proof",
+          "actual": "#lemma-1-10-proof",
+          "proof_for": "Lemma:1.10",
+          "heading": "引理 1.10：有限闭集内至少一个常返点的完整证明",
+          "passed": true
+        },
+        {
+          "source": "lemma-1-11",
+          "expected": "#lemma-1-11-proof",
+          "actual": "#lemma-1-11-proof",
+          "proof_for": "Lemma:1.11",
+          "heading": "引理 1.11：访问次数的几何级数的完整证明",
+          "passed": true
+        },
+        {
+          "source": "lemma-1-12",
+          "expected": "#lemma-1-12-proof",
+          "actual": "#lemma-1-12-proof",
+          "proof_for": "Lemma:1.12",
+          "heading": "引理 1.12：逐时刻概率计算访问次数的完整证明",
+          "passed": true
+        },
+        {
+          "source": "theorem-1-13",
+          "expected": "#body-review-s13",
+          "actual": "#body-review-s13",
+          "proof_for": "Theorem:1.13",
+          "heading": "定理 1.13：返回概率级数判定常返的完整证明",
+          "passed": true
+        },
+        {
+          "source": "theorem-1-14",
+          "expected": "#theorem-1-14-proof",
+          "actual": "#theorem-1-14-proof",
+          "proof_for": "Theorem:1.14",
+          "heading": "定理 1.14：双随机矩阵的均匀平稳分布的完整证明",
+          "passed": true
+        },
+        {
+          "source": "theorem-1-15",
+          "expected": "#theorem-1-15-proof",
+          "actual": "#theorem-1-15-proof",
+          "proof_for": "Theorem:1.15",
+          "heading": "定理 1.15：平稳链的时间反演的完整证明",
+          "passed": true
+        },
+        {
+          "source": "theorem-1-16",
+          "expected": "#theorem-1-16-proof",
+          "actual": "#theorem-1-16-proof",
+          "proof_for": "Theorem:1.16",
+          "heading": "定理 1.16：环路判据的完整证明",
+          "passed": true
+        },
+        {
+          "source": "lemma-1-17",
+          "expected": "#lemma-1-17-proof",
+          "actual": "#lemma-1-17-proof",
+          "proof_for": "Lemma:1.17",
+          "heading": "引理 1.17：互通状态有同一周期的完整证明",
+          "passed": true
+        },
+        {
+          "source": "lemma-1-18",
+          "expected": "#lemma-1-18-proof",
+          "actual": "#lemma-1-18-proof",
+          "proof_for": "Lemma:1.18",
+          "heading": "引理 1.18：自环保证非周期的完整证明",
+          "passed": true
+        },
+        {
+          "source": "theorem-1-19",
+          "expected": "#body-review-s18",
+          "actual": "#body-review-s18",
+          "proof_for": "Theorem:1.19",
+          "heading": "定理 1.19：有限链与可数链的耦合收敛的完整证明",
+          "passed": true
+        },
+        {
+          "source": "theorem-1-20",
+          "expected": "#theorem-1-20-proof",
+          "actual": "#theorem-1-20-proof",
+          "proof_for": "Theorem:1.20",
+          "heading": "定理 1.20：返回次数的大数律反演的完整证明",
+          "passed": true
+        },
+        {
+          "source": "theorem-1-21",
+          "expected": "#theorem-1-21-proof",
+          "actual": "#theorem-1-21-proof",
+          "proof_for": "Theorem:1.21",
+          "heading": "定理 1.21：平稳概率等于平均返回时间的倒数的完整证明",
+          "passed": true
+        },
+        {
+          "source": "theorem-1-22",
+          "expected": "#theorem-1-22-proof",
+          "actual": "#theorem-1-22-proof",
+          "proof_for": "Theorem:1.22",
+          "heading": "定理 1.22：时间平均与周期奖励的完整证明",
+          "passed": true
+        },
+        {
+          "source": "theorem-1-23",
+          "expected": "#theorem-1-23-proof",
+          "actual": "#theorem-1-23-proof",
+          "proof_for": "Theorem:1.23",
+          "heading": "定理 1.23：周期链的 Cesàro 平均极限的完整证明",
+          "passed": true
+        },
+        {
+          "source": "theorem-1-24",
+          "expected": "#body-review-s17",
+          "actual": "#body-review-s17",
+          "proof_for": "Theorem:1.24",
+          "heading": "定理 1.24：返回周期构造平稳测度的完整证明",
+          "passed": true
+        },
+        {
+          "source": "lemma-1-25",
+          "expected": "#lemma-1-25-proof",
+          "actual": "#lemma-1-25-proof",
+          "proof_for": "Lemma:1.25",
+          "heading": "引理 1.25：正平稳质量迫使常返的完整证明",
+          "passed": true
+        },
+        {
+          "source": "lemma-1-26",
+          "expected": "#lemma-1-26-proof",
+          "actual": "#lemma-1-26-proof",
+          "proof_for": "Lemma:1.26",
+          "heading": "引理 1.26：充分大整数都是返回长度的完整证明",
+          "passed": true
+        },
+        {
+          "source": "lemma-1-27",
+          "expected": "#lemma-1-27-proof",
+          "actual": "#lemma-1-27-proof",
+          "proof_for": "Lemma:1.27",
+          "heading": "引理 1.27：返回长度对加法封闭的完整证明",
+          "passed": true
+        },
+        {
+          "source": "theorem-1-28",
+          "expected": "#body-review-s19",
+          "actual": "#body-review-s19",
+          "proof_for": "Theorem:1.28",
+          "heading": "定理 1.28：退出概率及解的唯一性的完整证明",
+          "passed": true
+        },
+        {
+          "source": "theorem-1-29",
+          "expected": "#theorem-1-29-proof",
+          "actual": "#theorem-1-29-proof",
+          "proof_for": "Theorem:1.29",
+          "heading": "定理 1.29：退出时间方程及有限性的完整证明",
+          "passed": true
+        },
+        {
+          "source": "theorem-1-30",
+          "expected": "#theorem-1-30-proof",
+          "actual": "#theorem-1-30-proof",
+          "proof_for": "Theorem:1.30",
+          "heading": "定理 1.30：正再生与平稳概率的等价的完整证明",
+          "passed": true
+        },
+        {
+          "source": "lemma-1-31",
+          "expected": "#lemma-1-31-proof",
+          "actual": "#lemma-1-31-proof",
+          "proof_for": "Lemma:1.31",
+          "heading": "引理 1.31：灭绝概率的最小不动点的完整证明",
+          "passed": true
+        }
+      ],
+      "exercises": [
+        {
+          "id": "ex-1-1",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-2",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-3",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-4",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-5",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-6",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-7",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-8",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-9",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-10",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-11",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-12",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-13",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-14",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-15",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-16",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-17",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-18",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-19",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-20",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-21",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-22",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-23",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-24",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-25",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-26",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-27",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-28",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-29",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-30",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-31",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-32",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-33",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-34",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-35",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-36",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-37",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-38",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-39",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-40",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-41",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-42",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-43",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-44",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-45",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-46",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-47",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-48",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-49",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-50",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-51",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-52",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-53",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-54",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-55",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-56",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-57",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-58",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-59",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-60",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-61",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-62",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-63",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-64",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-65",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-66",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-67",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-68",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-69",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-70",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-71",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-72",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-73",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-74",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-75",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-76",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        },
+        {
+          "id": "ex-1-77",
+          "opened": true,
+          "closed": true,
+          "reopened": true
+        }
+      ]
+    },
+    "screenshots": [
+      {
+        "file": "chapter01_markov_chains.html",
+        "sha256": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e",
+        "scope": "Chapter 1, all exercise bodies open for formula/overflow checks; screenshot reads example 1.28",
+        "width": 1800,
+        "started_at_utc": "2026-10-15T16:57:31.114Z",
+        "finished_at_utc": "2026-10-15T17:01:06.695Z",
+        "root": 1785,
+        "scrollWidth": 1785,
+        "hash": "#lemma-1-31-proof",
+        "targetHeading": "例 1.28：三机器一维修员的逐项权重",
+        "math": 5160,
+        "visibleMath": 5121,
+        "badMath": 0,
+        "merror": 0,
+        "steps": 3,
+        "errors": [],
+        "screenshot": "tmp/stochastic-explanations/layout-1800.png",
+        "screenshot_sha256": "747c3c2d1eebf6cccc319998a9155f3df0034dc57ed3736d5ee7382c273c6e0d",
+        "target_top": 108.7578125,
+        "target": "example-1-28"
+      },
+      {
+        "width": 1440,
+        "target": "example-1-28",
+        "file": "chapter01_markov_chains.html",
+        "sha256": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e",
+        "scope": "Chapter 1, all exercise bodies open for formula/overflow checks; screenshot reads example 1.28",
+        "started_at_utc": "2026-10-15T16:57:35.148Z",
+        "finished_at_utc": "2026-10-15T16:57:36.327Z",
+        "root": 1425,
+        "scrollWidth": 1425,
+        "hash": "#lemma-1-31-proof",
+        "targetHeading": "例 1.28：三机器一维修员的逐项权重",
+        "math": 5160,
+        "visibleMath": 5121,
+        "badMath": 0,
+        "merror": 0,
+        "steps": 3,
+        "errors": [],
+        "screenshot": "tmp/stochastic-explanations/layout-1440.png",
+        "screenshot_sha256": "4e032a679e252013bc128eacac6e783facb1008f9f113f8ecc360ba10f241d69"
+      },
+      {
+        "width": 1024,
+        "target": "example-1-28",
+        "file": "chapter01_markov_chains.html",
+        "sha256": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e",
+        "scope": "Chapter 1, all exercise bodies open for formula/overflow checks; screenshot reads example 1.28",
+        "started_at_utc": "2026-10-15T16:57:36.327Z",
+        "finished_at_utc": "2026-10-15T16:57:36.792Z",
+        "root": 1009,
+        "scrollWidth": 1009,
+        "hash": "#lemma-1-31-proof",
+        "targetHeading": "例 1.28：三机器一维修员的逐项权重",
+        "math": 5160,
+        "visibleMath": 5159,
+        "badMath": 0,
+        "merror": 0,
+        "steps": 3,
+        "errors": [],
+        "screenshot": "tmp/stochastic-explanations/layout-1024.png",
+        "screenshot_sha256": "7cc71c1660c52c175bb2001afee06ea53a668436d59bae713495cab64e6cf767"
+      },
+      {
+        "width": 390,
+        "target": "example-1-28",
+        "file": "chapter01_markov_chains.html",
+        "sha256": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e",
+        "scope": "Chapter 1, all exercise bodies open for formula/overflow checks; screenshot reads example 1.28",
+        "started_at_utc": "2026-10-15T16:57:36.793Z",
+        "finished_at_utc": "2026-10-15T16:57:36.997Z",
+        "root": 375,
+        "scrollWidth": 375,
+        "hash": "#lemma-1-31-proof",
+        "targetHeading": "例 1.28：三机器一维修员的逐项权重",
+        "math": 5160,
+        "visibleMath": 5159,
+        "badMath": 0,
+        "merror": 0,
+        "steps": 3,
+        "errors": [],
+        "screenshot": "tmp/stochastic-explanations/layout-390.png",
+        "screenshot_sha256": "54d8668ebcc64da139265af7311f79fe47f3a550b53ef5dfd66dca3ad9171dea"
+      },
+      {
+        "width": 1425,
+        "target": "example-1-4",
+        "heading": "例 1.4：两代社会流动的概率怎样得到",
+        "top": 23.796875,
+        "scrollWidth": 1425,
+        "path": "tmp/stochastic-explanations/example-1-4.png",
+        "sha256": "dc99071fbd95424993ce6160314e12cd07a6e44b509168050d3cd6424d190226"
+      },
+      {
+        "width": 1425,
+        "target": "example-1-39",
+        "heading": "例 1.39：库存平稳方程与每日利润",
+        "top": 23.90625,
+        "scrollWidth": 1425,
+        "path": "tmp/stochastic-explanations/example-1-39.png",
+        "sha256": "92999f8aa5cd3331a13e3073580762c9044eabc03403680b16424e46b8f1c4fa"
+      },
+      {
+        "width": 1425,
+        "target": "body-review-s18",
+        "heading": "定理 1.19：有限链与可数链的耦合收敛的完整证明",
+        "top": 23.90625,
+        "scrollWidth": 1425,
+        "path": "tmp/stochastic-explanations/coupling-1440.png",
+        "sha256": "99027f180f8e6ddb837ccc5fc7b760222113a701eebb262717778f1151c074c2"
+      },
+      {
+        "width": 375,
+        "target": "body-review-s18",
+        "heading": "定理 1.19：有限链与可数链的耦合收敛的完整证明",
+        "top": 80.0546875,
+        "scrollWidth": 375,
+        "path": "tmp/stochastic-explanations/coupling-390.png",
+        "sha256": "6800e7dc9bc658c25eef8c424254c45595290659e653ad7031d872adc6941689"
+      },
+      {
+        "width": 1009,
+        "target": "body-review-s19",
+        "heading": "定理 1.28：退出概率及解的唯一性的完整证明",
+        "top": 80.0078125,
+        "scrollWidth": 1009,
+        "path": "tmp/stochastic-explanations/exit-proof-1024.png",
+        "sha256": "ec53841c20366d755e4d9d9f72ba4864ec04a94e06c2ba2a1f638db57a4f4bad"
+      },
+      {
+        "width": 1425,
+        "target": "ex-1-9",
+        "heading": "1.9 · 解平稳方程",
+        "top": 24.21875,
+        "scrollWidth": 1425,
+        "path": "tmp/stochastic-explanations/equations-1440.png",
+        "sha256": "068e8b23c5c370a9a38f88b819069208e88054720326cda66c9ce173b1704719"
+      },
+      {
+        "width": 375,
+        "target": "ex-1-9",
+        "heading": "1.9 · 解平稳方程",
+        "top": 79.921875,
+        "scrollWidth": 375,
+        "path": "tmp/stochastic-explanations/equations-390.png",
+        "sha256": "7675a65f4c7a254f02f086d59d32ebaf2f5dbe29d18721d25f23bebaf8bb8147"
+      },
+      {
+        "width": 1009,
+        "target": "ex-1-15",
+        "heading": "1.15 · 多个闭类的极限矩阵",
+        "top": 79.78125,
+        "scrollWidth": 1009,
+        "path": "tmp/stochastic-explanations/mixture-1024.png",
+        "sha256": "f73603cbebd19803a8bc442481efb6be7c192aecef4656ab6801be19daf2db10"
+      },
+      {
+        "width": 375,
+        "target": "ex-1-38",
+        "heading": "1.38 · 办公室与家中的雨伞",
+        "top": 79.78125,
+        "scrollWidth": 375,
+        "path": "tmp/stochastic-explanations/umbrella-390.png",
+        "sha256": "c3b90762548ed949a37d0e9e3f6bb3790a2db549125f859f91648057872d0d7c"
+      },
+      {
+        "width": 1425,
+        "target": "ex-1-66",
+        "heading": "1.66 · 兄妹交配",
+        "top": 24.1640625,
+        "scrollWidth": 1425,
+        "path": "tmp/stochastic-explanations/boundary-1440.png",
+        "sha256": "6ca26f490ac2dd25baefa020c1400e0877498436ef80dd405010e5c5956a0ada"
+      },
+      {
+        "width": 375,
+        "target": "ex-1-66",
+        "heading": "1.66 · 兄妹交配",
+        "top": 80.140625,
+        "scrollWidth": 375,
+        "path": "tmp/stochastic-explanations/boundary-390.png",
+        "sha256": "60784881e5d81686ff194b565e828779795796c6db80d7db831b539d61eb0b60"
+      },
+      {
+        "width": 1425,
+        "target": "ex-1-68",
+        "heading": "1.68 · 集齐 N 种卡片",
+        "top": 24.2109375,
+        "scrollWidth": 1425,
+        "path": "tmp/stochastic-explanations/variance-1440.png",
+        "sha256": "5e94cfadcf2d5bd07900457a0c512f722a6be91bd740789f8166d0d177daadb7"
+      },
+      {
+        "width": 375,
+        "target": "ex-1-69",
+        "heading": "1.69 · 随机改进的算法步数",
+        "top": 79.8359375,
+        "scrollWidth": 375,
+        "path": "tmp/stochastic-explanations/proof-exercise-390.png",
+        "sha256": "da28f028689780553c8a4e416453d52920045701519e1bf451e107da83262cb0"
+      },
+      {
+        "width": 375,
+        "target": "ex-1-70",
+        "heading": "1.70 · 一般生灭链的常返判据",
+        "top": 79.796875,
+        "scrollWidth": 375,
+        "path": "tmp/stochastic-explanations/recurrence-390.png",
+        "sha256": "d6987d7fabda2e884d8100da78c4a4bb07e647b8dbf8704a6d999dc11967db1d"
+      },
+      {
+        "width": 375,
+        "target": "ex-1-77",
+        "heading": "1.77 · 几何后代的灭绝",
+        "top": 80.03125,
+        "scrollWidth": 375,
+        "path": "tmp/stochastic-explanations/branching-390.png",
+        "sha256": "de374de3558186dc3efbed839f1b47af56489c2a49b3c860a3868afc8e265a50"
+      },
+      {
+        "width": 1440,
+        "target": "ex-1-9",
+        "part": "table",
+        "targetText": "次序增广矩阵的行变换1R1←(−15)R1第 1 行第 1 个未知量的系数为 -5；乘 -1/5 把它化为 1，作为这一列的消元基准。2R2←R2−(4)R1第 2 行第 1 个未知量的系数为 4；减去 4 倍第 1 行，利用该行的系数 1 将它消为 0。3R3←R3−(1)R1第 3 行第 1 个未知量的系数为 1；减去 1 倍第 1 行，利用该行的系数 ",
+        "top": 85.2109375,
+        "root": 1425,
+        "scrollWidth": 1425,
+        "localScroll": null,
+        "path": "tmp/stochastic-explanations/elimination-1440.png",
+        "sha256": "21095e9a92345a06892034193678f37cd3a778ed98b352e66e9b1bf3178701f0",
+        "captured_at_utc": "2026-10-15T17:01:06.846Z"
+      },
+      {
+        "width": 390,
+        "target": "ex-1-9",
+        "part": "table",
+        "targetText": "次序增广矩阵的行变换1R1←(−15)R1第 1 行第 1 个未知量的系数为 -5；乘 -1/5 把它化为 1，作为这一列的消元基准。2R2←R2−(4)R1第 2 行第 1 个未知量的系数为 4；减去 4 倍第 1 行，利用该行的系数 1 将它消为 0。3R3←R3−(1)R1第 3 行第 1 个未知量的系数为 1；减去 1 倍第 1 行，利用该行的系数 ",
+        "top": 85.09375,
+        "root": 375,
+        "scrollWidth": 375,
+        "localScroll": null,
+        "path": "tmp/stochastic-explanations/elimination-390.png",
+        "sha256": "e0e14d7674dacb8fe9447144aea3a4188f745d12e7fcd379b490319fc1dd96b1",
+        "captured_at_utc": "2026-10-15T17:01:07.226Z"
+      },
+      {
+        "width": 1440,
+        "target": "ex-1-66",
+        "part": "boundary",
+        "targetText": "上述时间单位为代，边界的剩余等待为零。原题的 T+ 只从第 1 步开始找吸收：若起点已是 22 或 00，链下一步仍在那里，所以 T+=1；四个内部起点则 T+=V。因此按原题严格定义，最终答案为 ",
+        "top": 85.0390625,
+        "root": 1425,
+        "scrollWidth": 1425,
+        "localScroll": null,
+        "path": "tmp/stochastic-explanations/boundary-answer-1440.png",
+        "sha256": "f68b701b8f3b52961735377a30261f660b40bed1a329c8acbd1a92cf1ebc72fb",
+        "captured_at_utc": "2026-10-15T17:01:07.666Z"
+      },
+      {
+        "width": 390,
+        "target": "ex-1-66",
+        "part": "boundary",
+        "targetText": "上述时间单位为代，边界的剩余等待为零。原题的 T+ 只从第 1 步开始找吸收：若起点已是 22 或 00，链下一步仍在那里，所以 T+=1；四个内部起点则 T+=V。因此按原题严格定义，最终答案为 ",
+        "top": 84.9375,
+        "root": 375,
+        "scrollWidth": 375,
+        "localScroll": null,
+        "path": "tmp/stochastic-explanations/boundary-answer-390.png",
+        "sha256": "d0ee1c56806a4061b78812460ef0df486b3fc98341e1993699effbccd4456fca",
+        "captured_at_utc": "2026-10-15T17:01:08.010Z"
+      },
+      {
+        "width": 1440,
+        "target": "ex-1-68",
+        "part": "variance",
+        "targetText": "计算精确方差。",
+        "top": 84.78125,
+        "root": 1425,
+        "scrollWidth": 1425,
+        "localScroll": null,
+        "path": "tmp/stochastic-explanations/variance-detail-1440.png",
+        "sha256": "c2acd53527946191638c293120e4d6afa501bc2b23c91f83dbb8dc5207bac066",
+        "captured_at_utc": "2026-10-15T17:01:08.449Z"
+      },
+      {
+        "width": 390,
+        "target": "ex-1-77",
+        "part": "scroll",
+        "targetText": "ϕ(s)=∑k≥0p[(1−p)s]k=p1−(1−p)s.",
+        "top": 85.1796875,
+        "root": 375,
+        "scrollWidth": 375,
+        "localScroll": {
+          "left": 37.5,
+          "width": 281,
+          "full": 318
+        },
+        "path": "tmp/stochastic-explanations/branching-scrolled-390.png",
+        "sha256": "c497079d166996d78f3788d8f7899cfb22df742d36afc103ba2269cc8593fda5",
+        "captured_at_utc": "2026-10-15T17:01:08.928Z"
+      },
+      {
+        "width": 390,
+        "target": "ex-1-9",
+        "part": "horizontal_scroll_end",
+        "localScrollLeft": 339,
+        "localWidth": 281,
+        "localScrollWidth": 620,
+        "pageWidth": 375,
+        "pageScrollWidth": 375,
+        "path": "tmp/stochastic-explanations/elimination-scrolled-390.png",
+        "sha256": "583f3a63652501444483ff1337157ad13bef5872ce036a123423a968fd8e1601"
+      },
+      {
+        "width": 390,
+        "target": "ex-1-66",
+        "part": "horizontal_scroll_end",
+        "localScrollLeft": 256.5,
+        "localWidth": 281,
+        "localScrollWidth": 537,
+        "pageWidth": 375,
+        "pageScrollWidth": 375,
+        "path": "tmp/stochastic-explanations/boundary-scrolled-390.png",
+        "sha256": "eaf34733e8b68da6100a3d27298b6dc5d479b446691f4a235ce6d041e6f112b2"
+      }
+    ],
+    "browser_event_errors": [],
+    "visual_review": {
+      "status": "passed",
+      "reviewed_at_utc": "2026-10-15T17:03:36.602049+00:00",
+      "screenshots_read": 27,
+      "scope": "Read all 27 final screenshots: four widths plus example 1.4, inventory, coupling, exit proof, matrix/explanation rows, closed-class mixture, umbrella, absorption boundary, coupon variance, recurrence and branching.",
+      "observations": [
+        "The existing desktop annotation/TOC and narrow-screen collapsed TOC layouts remain intact.",
+        "No whole-page horizontal overflow, zero-size visible formulas or MathML error nodes in the four tested layouts.",
+        "Long equations and the existing 620px-wide calculation tables require horizontal scrolling inside their containers at 390px. Both ends were checked; prose outside these containers wraps normally.",
+        "The first 1800px capture drifted after layout and was replaced with a correctly positioned example 1.28 screenshot."
+      ],
+      "interaction_scope": "All 31 proof links and all 77 exercise summaries activated in the browser and resulting hash/open states checked."
+    },
+    "status": "passed_for_chapter_1_revision"
+  },
+  "checks": [
+    {
+      "command": "python3 test/test_stochastic_derivations.py",
+      "exit_code": 0,
+      "tests": 16,
+      "evidence": "tmp/stochastic-explanations/tests.log",
+      "bytes": 2132,
+      "sha256": "adc4b9e7673f10b9ca8db292c23da7fde4aec646cb5d9cc50fa581c8c0ad8e51"
+    },
+    {
+      "command": "python3 tmp/stochastic-explanations/verify_revision.py",
+      "exit_code": 0,
+      "exact_checks": 66,
+      "evidence": "tmp/stochastic-explanations/exact-and-scope.json",
+      "bytes": 4682,
+      "sha256": "ee795f8687fa3596a5a8bc1a75ea83e77558f76cba8e4f4a6b191f65912c08e0"
+    },
+    {
+      "command": "python3 tools/project.py check --quick",
+      "exit_code": 0,
+      "evidence": "tmp/project-check/20261016T010409-qpodwr3t/report.json",
+      "evidence_sha256": "e2692979808677ced97bcf85ace4bad9e493a4984b24928a045dd3a455125a42"
+    },
+    {
+      "command": "python3 tools/project.py check --book stochastic",
+      "exit_code": 0,
+      "evidence": "tmp/project-check/20261016T010451-8g25drzt/report.json",
+      "evidence_sha256": "79acf68442da819a67459a3fd7a8c9c8d6a1a57bef05f69f32c27adf35b725e0"
+    },
+    {
+      "command": "python3 books/stochastic/tools/content_integrity.py --source-pages",
+      "exit_code": 0,
+      "evidence": "tmp/stochastic-explanations/source-pages.log",
+      "evidence_sha256": "02d444042d329d100f6064996428e6e0cccc01880f8814fd132c869169d53211"
+    },
+    {
+      "command": "python3 books/stochastic/tools/derivation_coverage.py --write --check --page chapter01_markov_chains.html",
+      "exit_code": 0,
+      "evidence": "tmp/stochastic-explanations/coverage.log",
+      "evidence_sha256": "b147164c30afcf4aa897789e5c869238c5f8eb21efaa5f78ac496c456db34218"
+    }
+  ],
+  "limitations": [
+    "Example 1.24: the original full Monopoly simulation plot is not reproduced because complete card rules, sample size and seed are not provided; the displayed analytic waiting-time calculation and reported original percentages are explained separately.",
+    "This revision covers Chapter 1. The remaining chapters retain the previously recorded derivation backlog."
+  ],
+  "files": {
+    "notes/chapter01_markov_chains.html": {
+      "bytes": 2125126,
+      "sha256": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e"
+    },
+    "notes/source_manifest.json": {
+      "bytes": 36372,
+      "sha256": "f139c6dfedbf36be0b24bbae20b3f5af15482c4db068906a629bb6e29aafe23f"
+    },
+    "assets/essentials-of-stochastic-processes.pdf": {
+      "bytes": 2579008,
+      "sha256": "2232660e1909b42c6df8b5aca8eba12cdb383bf3741ecb53add49f6c26c6a0e7"
+    },
+    "tools/content_baseline.json": {
+      "bytes": 1975727,
+      "sha256": "88b59f81fd487316f90696b8bd442ad3433536adc500a2195ef90bf3a0a15202"
+    },
+    "../../test/test_stochastic_derivations.py": {
+      "bytes": 21772,
+      "sha256": "2d23757248548a11d2a7d42107b8ea501c7eebddc606c9b705e7b6bfeaccca93"
+    },
+    "notes/derivation_coverage.json": {
+      "bytes": 356326,
+      "sha256": "e89ee6dfea1f7e7c9ed9ab403aa8ba436249c97ef382a0de64befcdc4166ec23"
+    }
+  },
+  "publication": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  },
+  "locally_checked_at_utc": "2026-10-15T17:08:52.723240+00:00",
+  "verification_boundary": "Content/source readback, independent calculations and actual browser screenshots precede the new baseline. Registered checks were then run against the unchanged final HTML. Final record/governance-only updates receive separate binding and structure checks.",
+  "runtime_evidence": {
+    "report": "tmp/project-check/20261016T010451-8g25drzt/stochastic/report.json",
+    "numerical_fixtures": 159,
+    "program_pairs": 7,
+    "invalid_inputs": 46,
+    "c11_strict": "pass",
+    "asan_ubsan": "pass",
+    "python": "pass",
+    "cross_language": "pass"
+  },
+  "file_binding_updates": [
+    {
+      "recorded_at_utc": "2026-10-15T19:23:03.282449+00:00",
+      "scope": "I017 global content baseline refreshed; chapter 1 HTML and its item review remain unchanged.",
+      "changes": [
+        {
+          "path": "tools/content_baseline.json",
+          "previous": {
+            "bytes": 1639148,
+            "sha256": "ab0b66a382fb43ee21511b58deb4d8455f651c957da76133535f6bebf19a657d"
+          },
+          "current": {
+            "bytes": 1975727,
+            "sha256": "88b59f81fd487316f90696b8bd442ad3433536adc500a2195ef90bf3a0a15202"
+          }
+        },
+        {
+          "path": "../../test/test_stochastic_derivations.py",
+          "previous": {
+            "bytes": 11690,
+            "sha256": "4b64a3002c5f55ab25c8a58c6241704c7e757d411ce18ecaadb328607c0a2be4"
+          },
+          "current": {
+            "bytes": 21772,
+            "sha256": "2d23757248548a11d2a7d42107b8ea501c7eebddc606c9b705e7b6bfeaccca93"
+          }
+        },
+        {
+          "path": "notes/derivation_coverage.json",
+          "previous": {
+            "bytes": 320588,
+            "sha256": "fdd552d775aedcfcb3de8dd8c7dce5babf15033ac969765ed27b17e87d20ead7"
+          },
+          "current": {
+            "bytes": 356326,
+            "sha256": "e89ee6dfea1f7e7c9ed9ab403aa8ba436249c97ef382a0de64befcdc4166ec23"
+          }
+        }
+      ]
+    }
+  ],
+  "subsequent_revision": {
+    "record": "remaining_explanation_review.json",
+    "scope": "I017: source comparison and author readback of all 349 items in chapters 2–6 and appendix A: 106 examples, 84 theorems/lemmas, 159 exercises and their subparts. Chapter 1, preface and overview unchanged from the I016 checkpoint.",
+    "note": "The remaining-chapter backlog in the I016 historical limitations is now handled by I017."
+  }
+}

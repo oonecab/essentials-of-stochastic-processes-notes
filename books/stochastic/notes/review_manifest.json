@@ -5146,14 +5146,14 @@
         237,
         237
       ],
-      "mathml": 13,
-      "body_characters": 596,
+      "mathml": 11,
+      "body_characters": 674,
       "example_source_pages": {
         "6.1": [
           237
         ]
       },
-      "html_sha256": "924172d31cfd6e70704ab26dc83c2cff85b3c4a528cff5ab661e4c0a3ab5fd97",
+      "html_sha256": "28459b58e53ed7e26fdd28733459cfaa326ac276b883fec236fe24a40e68f043",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5193,8 +5193,8 @@
         241,
         242
       ],
-      "mathml": 32,
-      "body_characters": 1002,
+      "mathml": 168,
+      "body_characters": 4513,
       "example_source_pages": {
         "6.2": [
           241
@@ -5203,7 +5203,7 @@
           242
         ]
       },
-      "html_sha256": "e0125d700691bcabb26051b2c8348ff63816ca86738cfa06f46ffa703e3a4c7c",
+      "html_sha256": "aaddf8ac757cb8644bf253ae98d7f9697f7d6452a04d4ce13f3f7ce121caec13",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5223,8 +5223,8 @@
         243,
         245
       ],
-      "mathml": 19,
-      "body_characters": 906,
+      "mathml": 93,
+      "body_characters": 3136,
       "example_source_pages": {
         "6.4": [
           243,
@@ -5235,7 +5235,7 @@
           245
         ]
       },
-      "html_sha256": "a22b12d1b7aae364ac78bb651b6683f70f2aebfc6db9a71fcb56ba486d86d95d",
+      "html_sha256": "1e570298677ade4292a65039740734cb8b9dde186339e6f2b8122a4f38b7de74",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5256,8 +5256,8 @@
         246,
         249
       ],
-      "mathml": 26,
-      "body_characters": 876,
+      "mathml": 200,
+      "body_characters": 5380,
       "example_source_pages": {
         "6.6": [
           246,
@@ -5269,7 +5269,7 @@
           249
         ]
       },
-      "html_sha256": "03e432416b7571e72fb785e93afb15b01186eaf195dc82ac9ef1a173f4670af8",
+      "html_sha256": "32d11535d571fce56aa5bed65b3760bdec3403cc0fa22351e7a1b544b411535d",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5310,8 +5310,8 @@
         255,
         255
       ],
-      "mathml": 12,
-      "body_characters": 608,
+      "mathml": 13,
+      "body_characters": 1252,
       "example_source_pages": {
         "6.8": [
           255
@@ -5320,7 +5320,7 @@
           255
         ]
       },
-      "html_sha256": "cf2ee101a28337389f2e9c5a2f04911cd998f4d0ba99629d8ed480998320c7f7",
+      "html_sha256": "335825f00e116a5a0383e09d693e0b61a1cb16070afca809b759a663b307dd48",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5341,8 +5341,8 @@
         259,
         262
       ],
-      "mathml": 24,
-      "body_characters": 671,
+      "mathml": 21,
+      "body_characters": 1849,
       "example_source_pages": {
         "A.1": [
           259
@@ -5363,7 +5363,7 @@
           262
         ]
       },
-      "html_sha256": "28d89e84e3aae7fb3e16ea460f4efb35fffd8b829e9211eb3acb0da059299a02",
+      "html_sha256": "9c0e43d8067915506258de1709146ece3d5460d1e4bb9ad32eaabb99e7122852",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5381,8 +5381,8 @@
         262,
         263
       ],
-      "mathml": 22,
-      "body_characters": 473,
+      "mathml": 3,
+      "body_characters": 811,
       "example_source_pages": {
         "A.6": [
           262,
@@ -5392,7 +5392,7 @@
           263
         ]
       },
-      "html_sha256": "4af1ffa9d3b5bcdc9a21384294735f80eca905e6d3d0517f2d4ae395e1ac4272",
+      "html_sha256": "881af1f4e1b8214c6bf4e69f85e57293333662196c7bf1ff48f7e9c1fbbe01c5",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5416,8 +5416,8 @@
         264,
         268
       ],
-      "mathml": 25,
-      "body_characters": 667,
+      "mathml": 40,
+      "body_characters": 2690,
       "example_source_pages": {
         "A.8": [
           264
@@ -5447,7 +5447,7 @@
           268
         ]
       },
-      "html_sha256": "c638f2b5d1267c9dda8edb1b8e744516f423deacd963bab81e324363972e157e",
+      "html_sha256": "e2760fad0106d973e48eef02ab7950ff5412b8c1693b9727f26a0e2a4f745873",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5468,8 +5468,8 @@
         268,
         269
       ],
-      "mathml": 25,
-      "body_characters": 660,
+      "mathml": 7,
+      "body_characters": 871,
       "example_source_pages": {
         "A.16": [
           268,
@@ -5479,7 +5479,7 @@
           269
         ]
       },
-      "html_sha256": "30d65b1283c3fff0f37f888152b05be40f1511e90b00041228daf8cb5558a678",
+      "html_sha256": "32316beb75d75e9942ea8e73707da6c9904ecac84a401f4cd2b7c4a9486d08d2",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5505,8 +5505,8 @@
         270,
         275
       ],
-      "mathml": 30,
-      "body_characters": 903,
+      "mathml": 20,
+      "body_characters": 1884,
       "example_source_pages": {
         "A.18": [
           270
@@ -5528,7 +5528,7 @@
           275
         ]
       },
-      "html_sha256": "5f1ad901f845f386a531999b8fbe5fff4dcf3c6b99686a21402fab4d848ce23f",
+      "html_sha256": "697c89a8ea78a7e376a441c520a90898b944ad8a9cc7a545de3b08f2b1b2794b",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5571,14 +5571,14 @@
         275,
         275
       ],
-      "mathml": 37,
-      "body_characters": 708,
+      "mathml": 6,
+      "body_characters": 470,
       "example_source_pages": {
         "A.23": [
           275
         ]
       },
-      "html_sha256": "d372c60e458c824b9fc59dc758114b04f5c2bc9b2cc53b67870d3ec2dbe931dc",
+      "html_sha256": "b90caeb4d22433795a982a6708a510bec84c0c3ebec7815ef03b56d65bd25e02",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5604,8 +5604,8 @@
         135,
         139
       ],
-      "mathml": 36,
-      "body_characters": 943,
+      "mathml": 39,
+      "body_characters": 2244,
       "example_source_pages": {
         "3.1": [
           135
@@ -5627,7 +5627,7 @@
           139
         ]
       },
-      "html_sha256": "ed2da036adb7d27ff545547c0d708e7f9d6e31de2c6869909fe2b2c9526816be",
+      "html_sha256": "4127e19d7abd138c9c89445c45e6e5456c296a2d24a03ede250d1a5ca4a87275",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5651,8 +5651,8 @@
         141,
         145
       ],
-      "mathml": 27,
-      "body_characters": 861,
+      "mathml": 17,
+      "body_characters": 824,
       "example_source_pages": {
         "3.6": [
           141,
@@ -5662,7 +5662,7 @@
           145
         ]
       },
-      "html_sha256": "1a425ee445540daa950f46363cae97c062e96d0dbe7babc319bc0e14be98dce9",
+      "html_sha256": "cf658aaafbf3cf34507a78f86cac414b76b322234b208f192e6498cb9183cc91",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5681,15 +5681,15 @@
         147,
         148
       ],
-      "mathml": 12,
-      "body_characters": 353,
+      "mathml": 6,
+      "body_characters": 589,
       "example_source_pages": {
         "3.8": [
           147,
           148
         ]
       },
-      "html_sha256": "740554ba8e7028620d5b660e509acc928f29e3a272ca039efe6101b4f676aea2",
+      "html_sha256": "62c1f4058a3a2f213bf8435ffbc1259465d66aefa4ebe8cfd43a772fddf9fc0a",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5709,8 +5709,8 @@
         149,
         150
       ],
-      "mathml": 24,
-      "body_characters": 675,
+      "mathml": 21,
+      "body_characters": 884,
       "example_source_pages": {
         "3.9": [
           149
@@ -5720,7 +5720,7 @@
           150
         ]
       },
-      "html_sha256": "5891b147a50e1f564951024d6dddd289258b8921dd6e2257a4af75b1ebb31b81",
+      "html_sha256": "a821c7a0426acd29543adbb3ec9f34569cf2b61f030705b17f3e11d6e25015d8",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5740,8 +5740,8 @@
         210,
         212
       ],
-      "mathml": 19,
-      "body_characters": 479,
+      "mathml": 6,
+      "body_characters": 508,
       "example_source_pages": {
         "5.1": [
           210,
@@ -5749,7 +5749,7 @@
           212
         ]
       },
-      "html_sha256": "0887b67277bfc7d7698d98755aa4d9c88bc9d57ab4632b7a8651bf36558e622f",
+      "html_sha256": "c5c57e5283c38d42cec4878db2315581a80d1c48dafe5339ad4a75c5c54d75ac",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5774,8 +5774,8 @@
         212,
         215
       ],
-      "mathml": 29,
-      "body_characters": 672,
+      "mathml": 35,
+      "body_characters": 2746,
       "example_source_pages": {
         "5.2": [
           212,
@@ -5801,7 +5801,7 @@
           215
         ]
       },
-      "html_sha256": "f5dd4f2ceb23e932627b364b8e56f9f74693f35b712b6cca83fce47d75c65b8e",
+      "html_sha256": "3fff84f316d34b0afbd1928b29e5c8459e500cf1b6a6a5d4668d73b264bbde88",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5827,8 +5827,8 @@
         216,
         220
       ],
-      "mathml": 27,
-      "body_characters": 751,
+      "mathml": 21,
+      "body_characters": 1585,
       "example_source_pages": {
         "5.9": [
           216,
@@ -5844,7 +5844,7 @@
           220
         ]
       },
-      "html_sha256": "ae621abe84c6fdbee928862298f20e4a76092b6db73163254c7da49af4a563e4",
+      "html_sha256": "5f13c6f82e862dad0dfae62d73df3f59e6782f5d947f4d6b8b7733c67ee93d12",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5863,8 +5863,8 @@
         220,
         221
       ],
-      "mathml": 25,
-      "body_characters": 658,
+      "mathml": 20,
+      "body_characters": 1403,
       "example_source_pages": {
         "5.12": [
           220
@@ -5876,7 +5876,7 @@
           221
         ]
       },
-      "html_sha256": "e08c08e98366627e736acf50874724afe77522f5557eb84bf580c5c957b5a66d",
+      "html_sha256": "ee2d111c704f7dbe5359724ea8e710feeef1f976fd0b302e67956e3849f98799",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5896,8 +5896,8 @@
         222,
         224
       ],
-      "mathml": 21,
-      "body_characters": 578,
+      "mathml": 13,
+      "body_characters": 801,
       "example_source_pages": {
         "5.15": [
           222,
@@ -5907,7 +5907,7 @@
           224
         ]
       },
-      "html_sha256": "790f6d5b8f84bf77abe1aa60b1a34d6393fadcbf301c7a86381a4c059c44fa58",
+      "html_sha256": "d59560bec5a92350bad881bd02672a3d94dbc814ce5fbea76a0477720c3d9c47",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5928,8 +5928,8 @@
         224,
         226
       ],
-      "mathml": 34,
-      "body_characters": 701,
+      "mathml": 18,
+      "body_characters": 1408,
       "example_source_pages": {
         "5.17": [
           224,
@@ -5943,7 +5943,7 @@
           226
         ]
       },
-      "html_sha256": "b8c1b53127b61ecc6df57f51967a81682939c78827a310f4d6cb494e5e1ada8a",
+      "html_sha256": "d69ced01af5ba3ceca402a8672a176d7f9482bfdb9299e6edefddbf457facb58",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -5964,8 +5964,8 @@
         10,
         13
       ],
-      "mathml": 11,
-      "body_characters": 495,
+      "mathml": 116,
+      "body_characters": 4027,
       "example_source_pages": {
         "1.1": [
           10,
@@ -5985,7 +5985,7 @@
           13
         ]
       },
-      "html_sha256": "406668e20e8bce358c9221b98b57fc0fd05a38138e2c151a8617ba6a27ef5164",
+      "html_sha256": "743fc5f1791d4905fa14b2337ef12e2d3349718f3623da815ec0f259b2a40e92",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6003,8 +6003,8 @@
         13,
         15
       ],
-      "mathml": 17,
-      "body_characters": 745,
+      "mathml": 46,
+      "body_characters": 1978,
       "example_source_pages": {
         "1.6": [
           13,
@@ -6015,7 +6015,7 @@
           15
         ]
       },
-      "html_sha256": "9d49c31f159764b9dea797e5c9fb03cc43716e4f5e87cb70267e3edf82b6d1e0",
+      "html_sha256": "efb487b009e5559a1e0bb9eeee0b2b05df60a2adaa08be222e0c8cbd6cb6df03",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6034,8 +6034,8 @@
         15,
         17
       ],
-      "mathml": 18,
-      "body_characters": 548,
+      "mathml": 93,
+      "body_characters": 2133,
       "example_source_pages": {
         "1.8": [
           15
@@ -6049,7 +6049,7 @@
           17
         ]
       },
-      "html_sha256": "6dbbb949205d5a90f77d50e6aaf8769a0b763b043cd612680c6e7452030ac67d",
+      "html_sha256": "46ebe8cabf6f62d8d044fa1f3d515e803fff1fd23bd5620d7cbaf91f46eaa2ba",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6068,15 +6068,15 @@
         21,
         22
       ],
-      "mathml": 14,
-      "body_characters": 415,
+      "mathml": 26,
+      "body_characters": 770,
       "example_source_pages": {
         "1.11": [
           21,
           22
         ]
       },
-      "html_sha256": "00a281d48517be393d44cf26fa09e3669f6413607b6abe7fa2b59f5d5851bedd",
+      "html_sha256": "16fb16f640826011b20b5994bcc22492000618c52193ee3d5129aad36f24df61",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6098,8 +6098,8 @@
         24,
         29
       ],
-      "mathml": 22,
-      "body_characters": 746,
+      "mathml": 44,
+      "body_characters": 1885,
       "example_source_pages": {
         "1.12": [
           24
@@ -6115,7 +6115,7 @@
           29
         ]
       },
-      "html_sha256": "606487266a0ec413c220b65b190bb05797ca39ad227fa684daba9d33ca31da93",
+      "html_sha256": "aa5830afd9500e63b5701275fb48cc855df4ee08526d4a0185a53cf7c4739ab6",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6137,8 +6137,8 @@
         30,
         35
       ],
-      "mathml": 32,
-      "body_characters": 829,
+      "mathml": 139,
+      "body_characters": 4459,
       "example_source_pages": {
         "1.15": [
           30
@@ -6164,7 +6164,7 @@
           35
         ]
       },
-      "html_sha256": "6164084ba54458142413fb301454d9d21502e7318a86bf94c5b327f088aec48d",
+      "html_sha256": "ae11b8b4da1046d364bd98b66451322d5331e214f4bab6708aaa2563e6b80517",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6187,8 +6187,8 @@
         36,
         38
       ],
-      "mathml": 21,
-      "body_characters": 796,
+      "mathml": 94,
+      "body_characters": 3861,
       "example_source_pages": {
         "1.21": [
           36
@@ -6207,7 +6207,7 @@
           38
         ]
       },
-      "html_sha256": "9bb2d4fb9cda3102ca8c2883a5ae276c773ecd4cac530fd5eaa2ffe27357cf3a",
+      "html_sha256": "c8a4bf788b8d5c1e73960d9d87e14999bf8c4402c9c4c8203f79e48fce8397e8",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6230,8 +6230,8 @@
         39,
         43
       ],
-      "mathml": 26,
-      "body_characters": 716,
+      "mathml": 121,
+      "body_characters": 3723,
       "example_source_pages": {
         "1.26": [
           39
@@ -6253,7 +6253,7 @@
           43
         ]
       },
-      "html_sha256": "376b10bc3b2d7613c7ed2a105e2a37a541bdafbc756fdeb92cc4bebef530c74c",
+      "html_sha256": "4849d2f2643a328e7361a550390f46bd9c36e7e06cb7610ca6d0e00f8029c1a0",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6277,8 +6277,8 @@
         45,
         49
       ],
-      "mathml": 35,
-      "body_characters": 935,
+      "mathml": 138,
+      "body_characters": 3659,
       "example_source_pages": {
         "1.31": [
           45
@@ -6299,7 +6299,7 @@
           49
         ]
       },
-      "html_sha256": "0434789df277f3f7ddb3326f829ee0027af0b10defb42f7a6dfff6828041ce52",
+      "html_sha256": "db2c10c3c4f69c31563009efefe0e0a37714f94f8721699d13d73383c6d1599b",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6322,8 +6322,8 @@
         50,
         55
       ],
-      "mathml": 21,
-      "body_characters": 1004,
+      "mathml": 98,
+      "body_characters": 4003,
       "example_source_pages": {
         "1.36": [
           50
@@ -6340,7 +6340,7 @@
           55
         ]
       },
-      "html_sha256": "85ca0fd6e71e3ac10b02ec8063a1a0b810f29346589f6ec74d0c9e567f1a81c7",
+      "html_sha256": "58f9fc0aa38a8e12fcc05054879a79872b1e3b22246f20ce6fd0193337d2e7fe",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6405,8 +6405,8 @@
         62,
         68
       ],
-      "mathml": 30,
-      "body_characters": 711,
+      "mathml": 137,
+      "body_characters": 4169,
       "example_source_pages": {
         "1.40": [
           62,
@@ -6433,7 +6433,7 @@
           68
         ]
       },
-      "html_sha256": "ab92fa6da1fadf61afb1d2edc806ea7ce711422664d4bc88212aa1e67d2c76bf",
+      "html_sha256": "7b064b348c247bb3136a38be09455f96212e577cfd65e0963ef6856a648419d6",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6450,14 +6450,14 @@
         69,
         69
       ],
-      "mathml": 31,
-      "body_characters": 512,
+      "mathml": 53,
+      "body_characters": 1054,
       "example_source_pages": {
         "1.46": [
           69
         ]
       },
-      "html_sha256": "edfa889d8b7c83670f3d76fa05ed18c99c143f0c5d84dacdc1aeaad36d3e4cdd",
+      "html_sha256": "2a37e9a9c69e5fb9b12f68d289cf716697be5f25dfa04aa598b05f1bd8e50df8",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6475,8 +6475,8 @@
         70,
         72
       ],
-      "mathml": 14,
-      "body_characters": 375,
+      "mathml": 36,
+      "body_characters": 1281,
       "example_source_pages": {
         "1.47": [
           70
@@ -6487,7 +6487,7 @@
           72
         ]
       },
-      "html_sha256": "96a7b4ef32c78bd189f5752f4272bb97190d98b764b6c63f95a284690fde7b38",
+      "html_sha256": "95b41e7203086842745e678d2330806dc48f72ffec4eecc72dc35077ed1d49dd",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6506,8 +6506,8 @@
         72,
         75
       ],
-      "mathml": 22,
-      "body_characters": 670,
+      "mathml": 65,
+      "body_characters": 2317,
       "example_source_pages": {
         "1.49": [
           72
@@ -6522,7 +6522,7 @@
           75
         ]
       },
-      "html_sha256": "7eae3a2c2a2e2ad8ea5859ac66d3b770421ee1c78e1b0a65fdc729ba5ac3b62d",
+      "html_sha256": "e669ebb13faeed0e8d1da53a159fe60aa99943d97f6b08267d95270c7969b202",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6540,8 +6540,8 @@
         75,
         77
       ],
-      "mathml": 17,
-      "body_characters": 411,
+      "mathml": 55,
+      "body_characters": 1421,
       "example_source_pages": {
         "1.52": [
           75,
@@ -6552,7 +6552,7 @@
           77
         ]
       },
-      "html_sha256": "e3031511e7c53a5576a95dfa2c6dd1d9ad0174acb67f39f7b5f0807e0ca54838",
+      "html_sha256": "1ad98d657e2ab60e9bea53515a00cbfe0c33a9657ddd70fe8beab99d2dbdc584",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6571,8 +6571,8 @@
         77,
         83
       ],
-      "mathml": 36,
-      "body_characters": 749,
+      "mathml": 129,
+      "body_characters": 3012,
       "example_source_pages": {
         "1.54": [
           77,
@@ -6590,7 +6590,7 @@
           83
         ]
       },
-      "html_sha256": "1b36c5314742975a136955e1ba7284ed3c59fce9732235b3b5a4dd37f55032fb",
+      "html_sha256": "88b85da7565a5df80c923ad9fc9de3f8363d23150c463276e32118183b3c11f7",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6612,8 +6612,8 @@
         106,
         108
       ],
-      "mathml": 21,
-      "body_characters": 709,
+      "mathml": 28,
+      "body_characters": 1229,
       "example_source_pages": {
         "2.1": [
           106,
@@ -6624,7 +6624,7 @@
           108
         ]
       },
-      "html_sha256": "448cb990c3a5663feeb916087b9d67b0912adc22e4b26d43ae98fe341b894f58",
+      "html_sha256": "398ea8e5acaca3028294815695d3bc4064ed48919e90f87720c1f70a79384f54",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6671,8 +6671,8 @@
         115,
         117
       ],
-      "mathml": 17,
-      "body_characters": 470,
+      "mathml": 35,
+      "body_characters": 1493,
       "example_source_pages": {
         "2.3": [
           115
@@ -6686,7 +6686,7 @@
           117
         ]
       },
-      "html_sha256": "49c46a353a8b6000bfd39e797dd79c0aa78039e09c31a106c04e9c7cf963131d",
+      "html_sha256": "6d61c20b8b34c243c280000b485208e8f41a7a64f3bb66c57b29c27871912aa5",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6707,8 +6707,8 @@
         118,
         119
       ],
-      "mathml": 17,
-      "body_characters": 701,
+      "mathml": 35,
+      "body_characters": 1376,
       "example_source_pages": {
         "2.6": [
           118
@@ -6720,7 +6720,7 @@
           119
         ]
       },
-      "html_sha256": "c8388cfba454aa21d52b194b9b4e0b9ed32fd5ae884e2754555a5b847629a1af",
+      "html_sha256": "abbad03349673edff0fdd19e1fcbbc024b9be0d5555448584c0f7813b4b23112",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6742,8 +6742,8 @@
         115,
         121
       ],
-      "mathml": 21,
-      "body_characters": 611,
+      "mathml": 34,
+      "body_characters": 1537,
       "example_source_pages": {
         "2.9": [
           115,
@@ -6758,7 +6758,7 @@
           121
         ]
       },
-      "html_sha256": "451a708a952fb9b5008ecce6b4cb1c60c69bba65bc743cc0621ac120b5ec916d",
+      "html_sha256": "172b2114ebfc46d38a39b3581984a432a89b08ae9ac500f8a5ea6feb873b603f",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6781,8 +6781,8 @@
         121,
         124
       ],
-      "mathml": 23,
-      "body_characters": 864,
+      "mathml": 34,
+      "body_characters": 1627,
       "example_source_pages": {
         "2.12": [
           121
@@ -6795,7 +6795,7 @@
           124
         ]
       },
-      "html_sha256": "7c0ef055cd66bb3640ef34ba79ce016466c612d3ab044149e9fe7586539db206",
+      "html_sha256": "99b60a469bf9421c8760d36f190fae8378e4b5554cc4b660ab4e47bda6da14a7",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6819,8 +6819,8 @@
         155,
         160
       ],
-      "mathml": 31,
-      "body_characters": 717,
+      "mathml": 33,
+      "body_characters": 2377,
       "example_source_pages": {
         "4.1": [
           155,
@@ -6845,7 +6845,7 @@
           160
         ]
       },
-      "html_sha256": "db47f833aacc72205b34497c68fd1247d48474b8de8abfb7d2f4f21eb440aaa5",
+      "html_sha256": "4b7589528da2fc712650b989d44408bd23e9c5f370d1815d00e1098b2c9f7424",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6867,8 +6867,8 @@
         162,
         165
       ],
-      "mathml": 39,
-      "body_characters": 826,
+      "mathml": 35,
+      "body_characters": 1876,
       "example_source_pages": {
         "4.7": [
           162,
@@ -6886,7 +6886,7 @@
           165
         ]
       },
-      "html_sha256": "fd8b74d6845e5466184e67838aa40dfdbf30a8865348b07dc72f814325f52179",
+      "html_sha256": "ca49bf7b64d184b51fe4e9b3278a4a6e71e0b914e783978b6ff909667f777b1b",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6909,8 +6909,8 @@
         165,
         170
       ],
-      "mathml": 34,
-      "body_characters": 824,
+      "mathml": 9,
+      "body_characters": 973,
       "example_source_pages": {
         "4.11": [
           165,
@@ -6924,7 +6924,7 @@
           170
         ]
       },
-      "html_sha256": "6e233fe97c8305a03f890900b466155239f24a1b233c500bece7ec0186daf5e4",
+      "html_sha256": "09e3c203f9ef879a548103f411091cbeb86fed12135966cbfe859942007f54d9",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6946,8 +6946,8 @@
         172,
         184
       ],
-      "mathml": 25,
-      "body_characters": 732,
+      "mathml": 12,
+      "body_characters": 1117,
       "example_source_pages": {
         "4.13": [
           172,
@@ -6961,7 +6961,7 @@
           184
         ]
       },
-      "html_sha256": "3d4419a077774a44772b7ce15be3a7f253494f4c28aa47efc2fe23a9eb38ad02",
+      "html_sha256": "20b2316412d76ad04000792a5a1a2fc949737e1e0daf353434950057ed4de287",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -6984,8 +6984,8 @@
         175,
         182
       ],
-      "mathml": 25,
-      "body_characters": 657,
+      "mathml": 28,
+      "body_characters": 2281,
       "example_source_pages": {
         "4.15": [
           175,
@@ -7008,7 +7008,7 @@
           178
         ]
       },
-      "html_sha256": "fd0512c3c0fdf5fd80555d3fdc1c38f27fff5f5fca9fac44cea7dd944d94d9c0",
+      "html_sha256": "76beeba67a734f531ae7a6231759debab9ebda4c5e72e0ec29991277345853e2",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -7058,8 +7058,8 @@
         178,
         183
       ],
-      "mathml": 36,
-      "body_characters": 1068,
+      "mathml": 17,
+      "body_characters": 1619,
       "example_source_pages": {
         "4.20": [
           178,
@@ -7074,7 +7074,7 @@
           183
         ]
       },
-      "html_sha256": "3b52ea08f5703ddec2c7ddc7de37025c766aabfcd1169c02966c19dba6e700e2",
+      "html_sha256": "a9697ec9a1dcb24176cbaac6442fb5fa49792284a4ab973fdf6a93beec4b998f",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -7098,8 +7098,8 @@
         185,
         190
       ],
-      "mathml": 39,
-      "body_characters": 837,
+      "mathml": 37,
+      "body_characters": 2238,
       "example_source_pages": {
         "4.23": [
           185
@@ -7121,7 +7121,7 @@
           190
         ]
       },
-      "html_sha256": "6a65e72f669ca93c87aaca822ae91eb71be93317e61442edeb5bcc39edf556f3",
+      "html_sha256": "2d0c1d36f3aa7ffceeb8ba99fd7962dac7045eab7af39c1f365d73ad711f0e02",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     },
@@ -7167,8 +7167,8 @@
         191,
         198
       ],
-      "mathml": 49,
-      "body_characters": 1187,
+      "mathml": 26,
+      "body_characters": 2159,
       "example_source_pages": {
         "4.28": [
           191,
@@ -7190,7 +7190,7 @@
           198
         ]
       },
-      "html_sha256": "65a4b6fbc84757b08cae37e11e1cc83afee9721de5b504ba4bbaed38a3d7b160",
+      "html_sha256": "35f51b86d6127fe417abbd86aefee7b66d10ecc7eca5fdaa19316e2a08d18210",
       "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
       "hash_method": "html_support.canonical JSON SHA-256"
     }
@@ -7565,68 +7565,68 @@
       "sha256": "bf0b0b959701437b80da8829b7b7f9ea25a8c0f02a6ade6090f9e316ce90d8fa"
     },
     "notes/README.md": {
-      "bytes": 9388,
-      "sha256": "0e9c348ea75c4ad5b4d6d5dc3f4b6b094cc6586d5c81308017526664f3aab2e0"
+      "bytes": 13308,
+      "sha256": "ee58ce9ab391429d8f136a90a9d9b7f7b2d3df089c788b5dcd021838ba393bbc"
     },
     "notes/annotations_review.json": {
-      "bytes": 155234,
-      "sha256": "32d44eea2f9d104616745f89e446b2a129ca0f4c563f0311ec39db0d903bfd2b"
+      "bytes": 169194,
+      "sha256": "b490480870a7af1fe05e10910190462e40b080567e4404ff47fc69c5417a90e1"
     },
     "notes/appendix_a_probability_review.html": {
-      "bytes": 192942,
-      "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a"
+      "bytes": 234663,
+      "sha256": "e9f6b0e37de94beada21f646eaaef34bdd4aea8815b0b4eaa1b82f5190574072"
     },
     "notes/book_overview.html": {
       "bytes": 50653,
       "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0"
     },
     "notes/chapter01_markov_chains.html": {
-      "bytes": 1141735,
-      "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f"
+      "bytes": 2125126,
+      "sha256": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e"
     },
     "notes/chapter02_poisson_processes.html": {
-      "bytes": 493525,
-      "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b"
+      "bytes": 681667,
+      "sha256": "bea17e948c3e109e2179a9b6c786eb71545c90c633f53721f70f7f71b5d5af0f"
     },
     "notes/chapter03_renewal_processes.html": {
-      "bytes": 256873,
-      "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa"
+      "bytes": 351148,
+      "sha256": "780e29b3a4dde7f84314e1d53b66403585b008c361fd8f375546fce047d354ba"
     },
     "notes/chapter04_continuous_time_markov_chains.html": {
-      "bytes": 644426,
-      "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3"
+      "bytes": 850422,
+      "sha256": "b566c5c4da6b6031c7c89c86afdbdec24182cfe9d905a5f53e62dfd1c74f6b1c"
     },
     "notes/chapter05_martingales.html": {
-      "bytes": 322830,
-      "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c"
+      "bytes": 409836,
+      "sha256": "402c2d0834d8ed2a2e0cff270f1e19d216baf3a98f7df89b32692be2fc45005c"
     },
     "notes/chapter06_mathematical_finance.html": {
-      "bytes": 571627,
-      "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17"
+      "bytes": 1187107,
+      "sha256": "abdb3e6c1c7bcee20a443671dac19190b9160dc40280db2ec926098ad5caaece"
     },
     "notes/code_deployment_review.json": {
-      "bytes": 216714,
-      "sha256": "7bfe668de47e437fd0c570bddb4a73484c6d9dedee9ab77517637b24aa23f50f"
+      "bytes": 226859,
+      "sha256": "7c9b20ef6a2db5330d2d7227de632d97af9cd47e1a171227b5e78aa59f12b15b"
     },
     "notes/preface.html": {
       "bytes": 40431,
       "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba"
     },
     "notes/readability_review.json": {
-      "bytes": 170951,
-      "sha256": "254dba4aad14e07a3c450371466b7a7fa90ff933fb6cc9fb01b892929266c384"
+      "bytes": 289562,
+      "sha256": "3679658de4729713dd28a80fd6541b32c5b08d438c990d980a4cc89a61232daf"
     },
     "notes/source_manifest.json": {
       "bytes": 36372,
       "sha256": "f139c6dfedbf36be0b24bbae20b3f5af15482c4db068906a629bb6e29aafe23f"
     },
     "notes/statements_review.json": {
-      "bytes": 375910,
-      "sha256": "de14bb238f336eefdf95df9bbf1dd7b9365469830f325f3138b9d23a00685519"
+      "bytes": 617296,
+      "sha256": "89ab1cae6ee6de730e545b73974d8a3af6c3b1b05a6e861bca240a82ae1ffd40"
     },
     "tools/check_notes.py": {
-      "bytes": 26392,
-      "sha256": "483ad49c248314be817587190e008037929ace0c7bbfed7104a836e64fbab026"
+      "bytes": 26770,
+      "sha256": "034867cf277244e8f5b74cb6b7ce4830ab522b1075a3cf9b27402d90e25298de"
     },
     "tools/notes_cases.json": {
       "bytes": 1499759,
@@ -7637,8 +7637,8 @@
       "sha256": "9cd18a8d68169aa32d93b45954ee386ed4ae732742ee9913909c08291b03f603"
     },
     "notes/audit_fix_review.json": {
-      "bytes": 49590,
-      "sha256": "347fa8969c2628310f9e85bcbbad1d48723916b32516534df56847e490581e51"
+      "bytes": 253077,
+      "sha256": "79e959898322fe9547b2d75986ae221a218a274dd310caed1cde72a574b8209b"
     }
   },
   "review_history": [
@@ -7809,21 +7809,10 @@
       "section": "a3",
       "title": "尾矩公式与 Jensen 的支撑线证明",
       "mathml": 6,
-      "body_characters": 512,
-      "html_sha256": "63a3409a3a5c6f6f9ebf40a5f76d14211edbd42517b20c3e6bb56ed923bb19ba",
+      "body_characters": 403,
+      "html_sha256": "f339a8adc08fe21fc6a05ddbb98ae3af8c8d0608b7d48c08f062a287a60d3e35",
       "source_links": [
-        "../assets/essentials-of-stochastic-processes.pdf#page=269",
-        "../assets/essentials-of-stochastic-processes.pdf#page=271",
-        "../assets/essentials-of-stochastic-processes.pdf#page=272",
-        "../assets/essentials-of-stochastic-processes.pdf#page=272",
-        "../assets/essentials-of-stochastic-processes.pdf#page=272",
-        "../assets/essentials-of-stochastic-processes.pdf#page=273",
-        "../assets/essentials-of-stochastic-processes.pdf#page=274",
-        "../assets/essentials-of-stochastic-processes.pdf#page=275",
-        "../assets/essentials-of-stochastic-processes.pdf#page=116",
-        "../assets/essentials-of-stochastic-processes.pdf#page=273",
-        "../assets/essentials-of-stochastic-processes.pdf#page=270",
-        "../assets/essentials-of-stochastic-processes.pdf#page=271"
+        "../assets/essentials-of-stochastic-processes.pdf#page=273"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
     },
@@ -7831,27 +7820,12 @@
       "page": "chapter01_markov_chains.html",
       "id": "body-review-s13",
       "section": "s13",
-      "title": "分类判据中的返回计数与有限性",
-      "mathml": 3,
-      "body_characters": 385,
-      "html_sha256": "29e5fdad27eb74dc99b24db4ce4767d5d858ba4a3288ed5883f03d46fd929200",
+      "title": "定理 1.13：返回概率级数判定常返的完整证明",
+      "mathml": 17,
+      "body_characters": 586,
+      "html_sha256": "a669017598605b2dcd7e79cb6f9240e8e8b220e2ff5a71149d9ac713aa89459f",
       "source_links": [
-        "../assets/essentials-of-stochastic-processes.pdf#page=22",
-        "../assets/essentials-of-stochastic-processes.pdf#page=25",
-        "../assets/essentials-of-stochastic-processes.pdf#page=22",
-        "../assets/essentials-of-stochastic-processes.pdf#page=25",
-        "../assets/essentials-of-stochastic-processes.pdf#page=25",
-        "../assets/essentials-of-stochastic-processes.pdf#page=25",
-        "../assets/essentials-of-stochastic-processes.pdf#page=26",
-        "../assets/essentials-of-stochastic-processes.pdf#page=27",
-        "../assets/essentials-of-stochastic-processes.pdf#page=27",
-        "../assets/essentials-of-stochastic-processes.pdf#page=27",
-        "../assets/essentials-of-stochastic-processes.pdf#page=27",
-        "../assets/essentials-of-stochastic-processes.pdf#page=28",
-        "../assets/essentials-of-stochastic-processes.pdf#page=28",
-        "../assets/essentials-of-stochastic-processes.pdf#page=29",
-        "../assets/essentials-of-stochastic-processes.pdf#page=28",
-        "../assets/essentials-of-stochastic-processes.pdf#page=24"
+        "../assets/essentials-of-stochastic-processes.pdf#page=29"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
     },
@@ -7859,14 +7833,13 @@
       "page": "chapter01_markov_chains.html",
       "id": "body-review-s17",
       "section": "s17",
-      "title": "平稳测度、零常返与周期奖励的完整关系",
-      "mathml": 10,
-      "body_characters": 605,
-      "html_sha256": "55abd0ae6c626ba8719602384df7877af3765c08a2de9b60c03d40bcc75e1008",
+      "title": "定理 1.24：返回周期构造平稳测度的完整证明",
+      "mathml": 56,
+      "body_characters": 1297,
+      "html_sha256": "9e690cc0d4ae95b06d2acf236500cc61f3bf71814474062539b90ee05aed2781",
       "source_links": [
         "../assets/essentials-of-stochastic-processes.pdf#page=57",
-        "../assets/essentials-of-stochastic-processes.pdf#page=57",
-        "../assets/essentials-of-stochastic-processes.pdf#page=55"
+        "../assets/essentials-of-stochastic-processes.pdf#page=58"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
     },
@@ -7874,16 +7847,16 @@
       "page": "chapter01_markov_chains.html",
       "id": "body-review-s18",
       "section": "s18",
-      "title": "可数状态空间的相遇证明",
-      "mathml": 4,
-      "body_characters": 468,
-      "html_sha256": "b0899d3c789ae9ed89db0062b3532c7c482f4e94525bd32f1960b55102f77c1f",
+      "title": "定理 1.19：有限链与可数链的耦合收敛的完整证明",
+      "mathml": 65,
+      "body_characters": 2162,
+      "html_sha256": "7ea234c116d960b8a6eae90f82f785c9410b42a93b8ad5c0f5337eae1052b810",
       "source_links": [
+        "../assets/essentials-of-stochastic-processes.pdf#page=52",
         "../assets/essentials-of-stochastic-processes.pdf#page=59",
         "../assets/essentials-of-stochastic-processes.pdf#page=60",
-        "../assets/essentials-of-stochastic-processes.pdf#page=60",
-        "../assets/essentials-of-stochastic-processes.pdf#page=59",
-        "../assets/essentials-of-stochastic-processes.pdf#page=55"
+        "../assets/essentials-of-stochastic-processes.pdf#page=61",
+        "../assets/essentials-of-stochastic-processes.pdf#page=62"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
     },
@@ -7891,15 +7864,13 @@
       "page": "chapter01_markov_chains.html",
       "id": "body-review-s19",
       "section": "s19",
-      "title": "退出问题的唯一性如何证明",
-      "mathml": 3,
-      "body_characters": 361,
-      "html_sha256": "1ba7fdf28a3acfacb2508734380fcaed5fe4d5c715fa5a3e036ff657484aed1a",
+      "title": "定理 1.28：退出概率及解的唯一性的完整证明",
+      "mathml": 34,
+      "body_characters": 1028,
+      "html_sha256": "90542cbb534e39f7da956f1f571472ea0b220af6a33337d1557b731b8f0e08c2",
       "source_links": [
         "../assets/essentials-of-stochastic-processes.pdf#page=64",
-        "../assets/essentials-of-stochastic-processes.pdf#page=72",
-        "../assets/essentials-of-stochastic-processes.pdf#page=62",
-        "../assets/essentials-of-stochastic-processes.pdf#page=69"
+        "../assets/essentials-of-stochastic-processes.pdf#page=65"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
     },
@@ -7909,13 +7880,9 @@
       "section": "s21",
       "title": "指数竞争的联合密度与 Gamma 卷积",
       "mathml": 8,
-      "body_characters": 444,
-      "html_sha256": "3b28f9b303ccce162e422e96dd900b09a87622b92e10d82026c62c31b6a50dfb",
+      "body_characters": 289,
+      "html_sha256": "851014f76a07a53b9232d5c9104ccd7d8d8f9f2b7df153fdc07d7f2a6f85719c",
       "source_links": [
-        "../assets/essentials-of-stochastic-processes.pdf#page=104",
-        "../assets/essentials-of-stochastic-processes.pdf#page=106",
-        "../assets/essentials-of-stochastic-processes.pdf#page=108",
-        "../assets/essentials-of-stochastic-processes.pdf#page=106",
         "../assets/essentials-of-stochastic-processes.pdf#page=106"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
@@ -7926,19 +7893,10 @@
       "section": "s22",
       "title": "非齐次到达的累计速率与间隔",
       "mathml": 7,
-      "body_characters": 447,
-      "html_sha256": "e156033904636af530467f65fa4d02878a2b0af69cf148918db547bd33574190",
+      "body_characters": 329,
+      "html_sha256": "4ad78191ceebb79c07dba537e9a2e31e801c9deb9c2402a6b897e7212849b57b",
       "source_links": [
-        "../assets/essentials-of-stochastic-processes.pdf#page=109",
-        "../assets/essentials-of-stochastic-processes.pdf#page=109",
-        "../assets/essentials-of-stochastic-processes.pdf#page=109",
-        "../assets/essentials-of-stochastic-processes.pdf#page=110",
-        "../assets/essentials-of-stochastic-processes.pdf#page=112",
-        "../assets/essentials-of-stochastic-processes.pdf#page=113",
-        "../assets/essentials-of-stochastic-processes.pdf#page=113",
-        "../assets/essentials-of-stochastic-processes.pdf#page=113",
-        "../assets/essentials-of-stochastic-processes.pdf#page=119",
-        "../assets/essentials-of-stochastic-processes.pdf#page=108"
+        "../assets/essentials-of-stochastic-processes.pdf#page=119"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
     },
@@ -7948,16 +7906,9 @@
       "section": "s31",
       "title": "零间隔与无限均值的计数率",
       "mathml": 6,
-      "body_characters": 252,
-      "html_sha256": "6f92271cde0430de690a20c0ba27388f143627b87d3af9b4ed3b49fd96a77dcb",
+      "body_characters": 205,
+      "html_sha256": "16f72d9f3d81a07d4cec08856e0429618738d608af244d4feb7cea302743e970",
       "source_links": [
-        "../assets/essentials-of-stochastic-processes.pdf#page=134",
-        "../assets/essentials-of-stochastic-processes.pdf#page=135",
-        "../assets/essentials-of-stochastic-processes.pdf#page=135",
-        "../assets/essentials-of-stochastic-processes.pdf#page=136",
-        "../assets/essentials-of-stochastic-processes.pdf#page=137",
-        "../assets/essentials-of-stochastic-processes.pdf#page=138",
-        "../assets/essentials-of-stochastic-processes.pdf#page=135",
         "../assets/essentials-of-stochastic-processes.pdf#page=135"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
@@ -7968,17 +7919,10 @@
       "section": "s32",
       "title": "服务开始链与时间空闲比例",
       "mathml": 18,
-      "body_characters": 540,
-      "html_sha256": "dc59695995999fa7c51dd07233441dc22e2ea7f7632e1ad0ea980bd77e2445a1",
+      "body_characters": 391,
+      "html_sha256": "d54cdefa29ca6557cf59044603adf956bd4dfde11ff052d22d36b1771ca7b666",
       "source_links": [
-        "../assets/essentials-of-stochastic-processes.pdf#page=139",
-        "../assets/essentials-of-stochastic-processes.pdf#page=140",
-        "../assets/essentials-of-stochastic-processes.pdf#page=141",
-        "../assets/essentials-of-stochastic-processes.pdf#page=143",
-        "../assets/essentials-of-stochastic-processes.pdf#page=144",
-        "../assets/essentials-of-stochastic-processes.pdf#page=144",
-        "../assets/essentials-of-stochastic-processes.pdf#page=143",
-        "../assets/essentials-of-stochastic-processes.pdf#page=141"
+        "../assets/essentials-of-stochastic-processes.pdf#page=143"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
     },
@@ -7988,16 +7932,9 @@
       "section": "s42",
       "title": "Kimura 与 HKY 的速率校注",
       "mathml": 7,
-      "body_characters": 387,
-      "html_sha256": "c6fa432ffa4e601a2ae71480482e95d08d67f0204f69502dcf12e3c4f0c69f53",
+      "body_characters": 302,
+      "html_sha256": "c3fc8ea33bdf8ee4a0ea571323e2a62a6f563ab4eabcaece11fc32b0948010ba",
       "source_links": [
-        "../assets/essentials-of-stochastic-processes.pdf#page=160",
-        "../assets/essentials-of-stochastic-processes.pdf#page=165",
-        "../assets/essentials-of-stochastic-processes.pdf#page=167",
-        "../assets/essentials-of-stochastic-processes.pdf#page=169",
-        "../assets/essentials-of-stochastic-processes.pdf#page=169",
-        "../assets/essentials-of-stochastic-processes.pdf#page=165",
-        "../assets/essentials-of-stochastic-processes.pdf#page=162",
         "../assets/essentials-of-stochastic-processes.pdf#page=165"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
@@ -8008,16 +7945,10 @@
       "section": "s43",
       "title": "跳链的平稳分布如何换回时间分布",
       "mathml": 4,
-      "body_characters": 416,
-      "html_sha256": "b140a7cb024dc7ad9e694297ed9f8a38098997eb155a589279e9123ff9c9fca2",
+      "body_characters": 320,
+      "html_sha256": "7af44338ed7cb4d4b28ecd5e2338b8e8577cdcd338ff4780d0aa76fb158ed8f9",
       "source_links": [
-        "../assets/essentials-of-stochastic-processes.pdf#page=170",
-        "../assets/essentials-of-stochastic-processes.pdf#page=171",
-        "../assets/essentials-of-stochastic-processes.pdf#page=171",
-        "../assets/essentials-of-stochastic-processes.pdf#page=175",
-        "../assets/essentials-of-stochastic-processes.pdf#page=171",
-        "../assets/essentials-of-stochastic-processes.pdf#page=172",
-        "../assets/essentials-of-stochastic-processes.pdf#page=175"
+        "../assets/essentials-of-stochastic-processes.pdf#page=171"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
     },
@@ -8027,19 +7958,10 @@
       "section": "s45",
       "title": "多服务器队列在临界速率下的分类",
       "mathml": 8,
-      "body_characters": 298,
-      "html_sha256": "651d6f2877ee00de53a64a875b29d3df7fb08db775654dfbcef1c7f2768d3719",
+      "body_characters": 240,
+      "html_sha256": "a288c9640c348249d9f60ac19361cfb29d1b45e60319ff9bb61189523bf7b9df",
       "source_links": [
-        "../assets/essentials-of-stochastic-processes.pdf#page=186",
-        "../assets/essentials-of-stochastic-processes.pdf#page=188",
-        "../assets/essentials-of-stochastic-processes.pdf#page=189",
-        "../assets/essentials-of-stochastic-processes.pdf#page=190",
-        "../assets/essentials-of-stochastic-processes.pdf#page=190",
-        "../assets/essentials-of-stochastic-processes.pdf#page=191",
-        "../assets/essentials-of-stochastic-processes.pdf#page=191",
-        "../assets/essentials-of-stochastic-processes.pdf#page=188",
-        "../assets/essentials-of-stochastic-processes.pdf#page=185",
-        "../assets/essentials-of-stochastic-processes.pdf#page=189"
+        "../assets/essentials-of-stochastic-processes.pdf#page=188"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
     },
@@ -8049,13 +7971,10 @@
       "section": "s52",
       "title": "时间空间调和与漂移补偿",
       "mathml": 3,
-      "body_characters": 346,
-      "html_sha256": "9deab5f9b9a5b68578c55c43f4b01e466a4776e35dedc7b160b95803c819bb5b",
+      "body_characters": 317,
+      "html_sha256": "332f7bc62ca82115c18e7a69434f5867b5fce2fb7d3706df463f6b10cafcc38e",
       "source_links": [
-        "../assets/essentials-of-stochastic-processes.pdf#page=212",
-        "../assets/essentials-of-stochastic-processes.pdf#page=214",
-        "../assets/essentials-of-stochastic-processes.pdf#page=213",
-        "../assets/essentials-of-stochastic-processes.pdf#page=212"
+        "../assets/essentials-of-stochastic-processes.pdf#page=213"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
     },
@@ -8065,17 +7984,10 @@
       "section": "s53",
       "title": "有限期望与有界增量的停止条件",
       "mathml": 5,
-      "body_characters": 257,
-      "html_sha256": "90a399e7ca016038eb19065f0a1d847a2195ea74928669c7ca67baa5c9790282",
+      "body_characters": 204,
+      "html_sha256": "548e383fd93836c634dd1b3b616af13a97cfb8aaa1c0f99b067c6dfe6f006b6a",
       "source_links": [
-        "../assets/essentials-of-stochastic-processes.pdf#page=215",
-        "../assets/essentials-of-stochastic-processes.pdf#page=216",
-        "../assets/essentials-of-stochastic-processes.pdf#page=216",
-        "../assets/essentials-of-stochastic-processes.pdf#page=217",
-        "../assets/essentials-of-stochastic-processes.pdf#page=217",
-        "../assets/essentials-of-stochastic-processes.pdf#page=219",
-        "../assets/essentials-of-stochastic-processes.pdf#page=220",
-        "../assets/essentials-of-stochastic-processes.pdf#page=216"
+        "../assets/essentials-of-stochastic-processes.pdf#page=220"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
     },
@@ -8085,20 +7997,10 @@
       "section": "s54",
       "title": "GI/G/1 的负漂移与正再生证明",
       "mathml": 3,
-      "body_characters": 620,
-      "html_sha256": "19b3eb1c6ce546afa166f350ed9a6f7bb23689a35eee4a8e2e81dc745b5ffc47",
+      "body_characters": 568,
+      "html_sha256": "c2502700fca6d12e23229fbd7d68d637ea14e0e578214d7da05dbb71927d2c2c",
       "source_links": [
-        "../assets/essentials-of-stochastic-processes.pdf#page=220",
-        "../assets/essentials-of-stochastic-processes.pdf#page=223",
-        "../assets/essentials-of-stochastic-processes.pdf#page=224",
-        "../assets/essentials-of-stochastic-processes.pdf#page=227",
-        "../assets/essentials-of-stochastic-processes.pdf#page=227",
-        "../assets/essentials-of-stochastic-processes.pdf#page=227",
-        "../assets/essentials-of-stochastic-processes.pdf#page=228",
-        "../assets/essentials-of-stochastic-processes.pdf#page=227",
-        "../assets/essentials-of-stochastic-processes.pdf#page=220",
-        "../assets/essentials-of-stochastic-processes.pdf#page=222",
-        "../assets/essentials-of-stochastic-processes.pdf#page=224"
+        "../assets/essentials-of-stochastic-processes.pdf#page=227"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
     },
@@ -8108,14 +8010,10 @@
       "section": "s61",
       "title": "两个入门例子的现金流与两周期复制",
       "mathml": 1,
-      "body_characters": 439,
-      "html_sha256": "b494de4a392f003a09d75657f5df1b2b212ea51865b8fc26b30b519b6c799d79",
+      "body_characters": 424,
+      "html_sha256": "af42a03fb36a20633c807c88ba974cdad453f84b70006de049c550179da1b616",
       "source_links": [
-        "../assets/essentials-of-stochastic-processes.pdf#page=231",
-        "../assets/essentials-of-stochastic-processes.pdf#page=232",
-        "../assets/essentials-of-stochastic-processes.pdf#page=232",
-        "../assets/essentials-of-stochastic-processes.pdf#page=231",
-        "../assets/essentials-of-stochastic-processes.pdf#page=232"
+        "../assets/essentials-of-stochastic-processes.pdf#page=231"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
     },
@@ -8125,14 +8023,10 @@
       "section": "s64",
       "title": "一般凸支付的继续价值",
       "mathml": 3,
-      "body_characters": 392,
-      "html_sha256": "93d9e3f78eb13a30ded977d481b3371206aab2c3af2811dc4b165d70ce8c8817",
+      "body_characters": 336,
+      "html_sha256": "6267f775d9adafd05c92d99eb60e97c312d15f64afca2d64e8ea4f9f48a0469b",
       "source_links": [
-        "../assets/essentials-of-stochastic-processes.pdf#page=245",
-        "../assets/essentials-of-stochastic-processes.pdf#page=245",
-        "../assets/essentials-of-stochastic-processes.pdf#page=248",
-        "../assets/essentials-of-stochastic-processes.pdf#page=248",
-        "../assets/essentials-of-stochastic-processes.pdf#page=246"
+        "../assets/essentials-of-stochastic-processes.pdf#page=248"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
     },
@@ -8142,15 +8036,9 @@
       "section": "s65",
       "title": "把二项极限与定价 PDE 的省略步骤展开",
       "mathml": 6,
-      "body_characters": 775,
-      "html_sha256": "2875cc76214ccbfc978adfd76c6f7d8d068037fab0bcd89e11229956112a6c4c",
+      "body_characters": 631,
+      "html_sha256": "27f42d30634d1574069148e65b21104026ed0aece2c57e67c778d8e16a2f3dd5",
       "source_links": [
-        "../assets/essentials-of-stochastic-processes.pdf#page=249",
-        "../assets/essentials-of-stochastic-processes.pdf#page=250",
-        "../assets/essentials-of-stochastic-processes.pdf#page=251",
-        "../assets/essentials-of-stochastic-processes.pdf#page=252",
-        "../assets/essentials-of-stochastic-processes.pdf#page=250",
-        "../assets/essentials-of-stochastic-processes.pdf#page=249",
         "../assets/essentials-of-stochastic-processes.pdf#page=249"
       ],
       "hash_scope": "entire containing section, program bodies omitted"
@@ -9384,6 +9272,3872 @@
           }
         }
       ]
+    },
+    {
+      "recorded_at_utc": "2026-10-15T15:20:54.985468+00:00",
+      "scope": "I015 chapter 1 derivation review, regression integration, and dependent current record bindings. Full details in derivation_review.json; historical snapshots are preserved.",
+      "changes": [
+        {
+          "path": "notes/README.md",
+          "previous": {
+            "bytes": 9388,
+            "sha256": "0e9c348ea75c4ad5b4d6d5dc3f4b6b094cc6586d5c81308017526664f3aab2e0"
+          },
+          "current": {
+            "bytes": 11056,
+            "sha256": "ab9daf6cf2f6b313dcfea7f414184dba378da122f7880c5891c0f7801d7db779"
+          }
+        },
+        {
+          "path": "notes/annotations_review.json",
+          "previous": {
+            "bytes": 155234,
+            "sha256": "32d44eea2f9d104616745f89e446b2a129ca0f4c563f0311ec39db0d903bfd2b"
+          },
+          "current": {
+            "bytes": 158104,
+            "sha256": "1aca5dc31f893944d5f7d36f33ba2c825723f67173cb00132abe563b06f01330"
+          }
+        },
+        {
+          "path": "notes/chapter01_markov_chains.html",
+          "previous": {
+            "bytes": 1141735,
+            "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f"
+          },
+          "current": {
+            "bytes": 1594077,
+            "sha256": "65379c377b12a2de8fc47f24553c25a8dcc9a62a705b8f0edb1cc46e8ab9c3b0"
+          }
+        },
+        {
+          "path": "notes/code_deployment_review.json",
+          "previous": {
+            "bytes": 216714,
+            "sha256": "7bfe668de47e437fd0c570bddb4a73484c6d9dedee9ab77517637b24aa23f50f"
+          },
+          "current": {
+            "bytes": 218821,
+            "sha256": "9e238bbadf871c5ad7cb69b9858d12155919616fcf525b98187c4f15c03f2068"
+          }
+        },
+        {
+          "path": "notes/readability_review.json",
+          "previous": {
+            "bytes": 170951,
+            "sha256": "254dba4aad14e07a3c450371466b7a7fa90ff933fb6cc9fb01b892929266c384"
+          },
+          "current": {
+            "bytes": 198016,
+            "sha256": "3166837b2f6ac89da2f8dd48c9d3f80c777c5ace2f7492243a82c443ebef0ab1"
+          }
+        },
+        {
+          "path": "notes/statements_review.json",
+          "previous": {
+            "bytes": 375910,
+            "sha256": "de14bb238f336eefdf95df9bbf1dd7b9365469830f325f3138b9d23a00685519"
+          },
+          "current": {
+            "bytes": 433889,
+            "sha256": "da9b3d2723ca2f5391de9bf6c778ce5113e90ed5aeaf8d4146a59a838a51c15e"
+          }
+        },
+        {
+          "path": "tools/check_notes.py",
+          "previous": {
+            "bytes": 26392,
+            "sha256": "483ad49c248314be817587190e008037929ace0c7bbfed7104a836e64fbab026"
+          },
+          "current": {
+            "bytes": 26885,
+            "sha256": "7dbb379cb5bcbb7b529c3d567331bf477166163ecfb30f173853194d2b9451f3"
+          }
+        },
+        {
+          "path": "notes/audit_fix_review.json",
+          "previous": {
+            "bytes": 49590,
+            "sha256": "347fa8969c2628310f9e85bcbbad1d48723916b32516534df56847e490581e51"
+          },
+          "current": {
+            "bytes": 92392,
+            "sha256": "1530c5fc9a6eafc1dc3e32d3b973278ff501200d38afefb4a90ee6223d565fcb"
+          }
+        }
+      ],
+      "block_changes": [
+        {
+          "group": "body_additions",
+          "id": "derive-c1-basic-models",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s11",
+            "id": "derive-c1-basic-models",
+            "title": "例 1.1–1.5：一步概率怎样从规则得到",
+            "examples": [
+              "1.1",
+              "1.2",
+              "1.3",
+              "1.4",
+              "1.5"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              10,
+              13
+            ],
+            "mathml": 11,
+            "body_characters": 495,
+            "example_source_pages": {
+              "1.1": [
+                10,
+                11
+              ],
+              "1.2": [
+                12
+              ],
+              "1.3": [
+                12,
+                13
+              ],
+              "1.4": [
+                13
+              ],
+              "1.5": [
+                13
+              ]
+            },
+            "html_sha256": "406668e20e8bce358c9221b98b57fc0fd05a38138e2c151a8617ba6a27ef5164",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "7a3b117990bf34fcf6f6e66e911beec52993ad7d0efab05e841753a7543b93ae"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-inventory-repair",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s11",
+            "id": "derive-c1-inventory-repair",
+            "title": "例 1.6–1.7：把库存与维修规则逐行翻译",
+            "examples": [
+              "1.6",
+              "1.7"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              13,
+              15
+            ],
+            "mathml": 17,
+            "body_characters": 745,
+            "example_source_pages": {
+              "1.6": [
+                13,
+                14
+              ],
+              "1.7": [
+                14,
+                15
+              ]
+            },
+            "html_sha256": "9d49c31f159764b9dea797e5c9fb03cc43716e4f5e87cb70267e3edf82b6d1e0",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "1906cf4d73b201b32c34b80d3e0af34b60d8fe09891d977f708a498074a475dd"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-expanded-state",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s11",
+            "id": "derive-c1-expanded-state",
+            "title": "例 1.8–1.10：分枝、抽样与扩大状态",
+            "examples": [
+              "1.8",
+              "1.9",
+              "1.10"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              15,
+              17
+            ],
+            "mathml": 18,
+            "body_characters": 548,
+            "example_source_pages": {
+              "1.8": [
+                15
+              ],
+              "1.9": [
+                15,
+                16
+              ],
+              "1.10": [
+                16,
+                17
+              ]
+            },
+            "html_sha256": "6dbbb949205d5a90f77d50e6aaf8769a0b763b043cd612680c6e7452030ac67d",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "601f9148f48d2bb0a3a4882abc3e0d7200693111da9c27421c873beedf48b6f6"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-matrix-paths",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s12",
+            "id": "derive-c1-matrix-paths",
+            "title": "例 1.11：两步转移要汇总所有中间状态",
+            "examples": [
+              "1.11"
+            ],
+            "theorems": [
+              "Chapman–Kolmogorov equation"
+            ],
+            "pdf_pages": [
+              21,
+              22
+            ],
+            "mathml": 14,
+            "body_characters": 415,
+            "example_source_pages": {
+              "1.11": [
+                21,
+                22
+              ]
+            },
+            "html_sha256": "00a281d48517be393d44cf26fa09e3669f6413607b6abe7fa2b59f5d5851bedd",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "3e96b9ff94ada2027eb0462ac12420315ef1322bab9d34607e40945862c6bcb2"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-return-classification",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s13",
+            "id": "derive-c1-return-classification",
+            "title": "例 1.12–1.14与强马尔可夫性：为什么能从返回时刻重来",
+            "examples": [
+              "1.12",
+              "1.13",
+              "1.14"
+            ],
+            "theorems": [
+              "strong Markov property",
+              "recurrence via visit counts"
+            ],
+            "pdf_pages": [
+              24,
+              29
+            ],
+            "mathml": 22,
+            "body_characters": 746,
+            "example_source_pages": {
+              "1.12": [
+                24
+              ],
+              "1.13": [
+                25,
+                26
+              ],
+              "1.14": [
+                26,
+                27,
+                28,
+                29
+              ]
+            },
+            "html_sha256": "606487266a0ec413c220b65b190bb05797ca39ad227fa684daba9d33ca31da93",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "5625f0af880691687adba1660b129018162992ebf611f518dff195750bde0135"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-stationary-computations",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s14",
+            "id": "derive-c1-stationary-computations",
+            "title": "例 1.15–1.20：从初始分布到平稳方程",
+            "examples": [
+              "1.15",
+              "1.16",
+              "1.17",
+              "1.18",
+              "1.19",
+              "1.20"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              30,
+              35
+            ],
+            "mathml": 32,
+            "body_characters": 829,
+            "example_source_pages": {
+              "1.15": [
+                30
+              ],
+              "1.16": [
+                30,
+                31
+              ],
+              "1.17": [
+                31,
+                32
+              ],
+              "1.18": [
+                32,
+                33,
+                34
+              ],
+              "1.19": [
+                34,
+                35
+              ],
+              "1.20": [
+                35
+              ]
+            },
+            "html_sha256": "6164084ba54458142413fb301454d9d21502e7318a86bf94c5b327f088aec48d",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "28bd03fdefd5f394bab226e329327a83aa6021b8be40f3490a389857fbb050a9"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-uniform-board",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s14",
+            "id": "derive-c1-uniform-board",
+            "title": "例 1.21–1.25：均匀分布何时能够成立",
+            "examples": [
+              "1.21",
+              "1.22",
+              "1.23",
+              "1.24",
+              "1.25"
+            ],
+            "theorems": [
+              "uniform stationary distribution for doubly stochastic P"
+            ],
+            "pdf_pages": [
+              36,
+              38
+            ],
+            "mathml": 21,
+            "body_characters": 796,
+            "example_source_pages": {
+              "1.21": [
+                36
+              ],
+              "1.22": [
+                36
+              ],
+              "1.23": [
+                36,
+                37
+              ],
+              "1.24": [
+                37
+              ],
+              "1.25": [
+                38
+              ]
+            },
+            "html_sha256": "9bb2d4fb9cda3102ca8c2883a5ae276c773ecd4cac530fd5eaa2ffe27357cf3a",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "353c363faea077dca62c2a43512f80cc727f4b9b692d0a48755101b6b39e8674"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-balance-weights",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s15",
+            "id": "derive-c1-balance-weights",
+            "title": "例 1.26–1.30：细致平衡把联立方程变成比例",
+            "examples": [
+              "1.26",
+              "1.27",
+              "1.28",
+              "1.29",
+              "1.30"
+            ],
+            "theorems": [
+              "detailed balance implies stationarity"
+            ],
+            "pdf_pages": [
+              39,
+              43
+            ],
+            "mathml": 26,
+            "body_characters": 716,
+            "example_source_pages": {
+              "1.26": [
+                39
+              ],
+              "1.27": [
+                39,
+                40
+              ],
+              "1.28": [
+                40,
+                41
+              ],
+              "1.29": [
+                41,
+                42
+              ],
+              "1.30": [
+                42,
+                43
+              ]
+            },
+            "html_sha256": "376b10bc3b2d7613c7ed2a105e2a37a541bdafbc756fdeb92cc4bebef530c74c",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "8bafe6a8787e4019ef13562e65729ca48fc2cafdc3cb75a2eee69406fdedcc9e"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-metropolis-cycle",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s15",
+            "id": "derive-c1-metropolis-cycle",
+            "title": "例 1.31–1.35：接受率与循环条件的来源",
+            "examples": [
+              "1.31",
+              "1.32",
+              "1.33",
+              "1.34",
+              "1.35"
+            ],
+            "theorems": [
+              "Metropolis–Hastings reversibility",
+              "Kolmogorov cycle condition"
+            ],
+            "pdf_pages": [
+              45,
+              49
+            ],
+            "mathml": 35,
+            "body_characters": 935,
+            "example_source_pages": {
+              "1.31": [
+                45
+              ],
+              "1.32": [
+                45
+              ],
+              "1.33": [
+                46,
+                47
+              ],
+              "1.34": [
+                47
+              ],
+              "1.35": [
+                47,
+                48,
+                49
+              ]
+            },
+            "html_sha256": "0434789df277f3f7ddb3326f829ee0027af0b10defb42f7a6dfff6828041ce52",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "8280bfc7972cecfc8d1286e1bb980c4af29d01e5b33ac6d99a89b839cc826563"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-period-cost",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s16",
+            "id": "derive-c1-period-cost",
+            "title": "例 1.36–1.39：周期与长期业务量怎样计算",
+            "examples": [
+              "1.36",
+              "1.37",
+              "1.38",
+              "1.39"
+            ],
+            "theorems": [
+              "period via gcd",
+              "ergodic reward calculation"
+            ],
+            "pdf_pages": [
+              50,
+              55
+            ],
+            "mathml": 21,
+            "body_characters": 1004,
+            "example_source_pages": {
+              "1.36": [
+                50
+              ],
+              "1.37": [
+                50
+              ],
+              "1.38": [
+                53,
+                54
+              ],
+              "1.39": [
+                54,
+                55
+              ]
+            },
+            "html_sha256": "85ca0fd6e71e3ac10b02ec8063a1a0b810f29346589f6ec74d0c9e567f1a81c7",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "b5e0211a159085a1e5fb94edbf46a85ed206a850e23cbb286ea1cf6bda380ed2"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-gambler-harmonic",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s19",
+            "id": "derive-c1-gambler-harmonic",
+            "title": "例 1.40–1.45：退出概率的方程与通解",
+            "examples": [
+              "1.40",
+              "1.41",
+              "1.42",
+              "1.43",
+              "1.44",
+              "1.45"
+            ],
+            "theorems": [
+              "exit probability harmonic equation"
+            ],
+            "pdf_pages": [
+              62,
+              68
+            ],
+            "mathml": 30,
+            "body_characters": 711,
+            "example_source_pages": {
+              "1.40": [
+                62,
+                63
+              ],
+              "1.41": [
+                63,
+                64,
+                65
+              ],
+              "1.42": [
+                65,
+                66
+              ],
+              "1.43": [
+                66
+              ],
+              "1.44": [
+                66,
+                67,
+                68
+              ],
+              "1.45": [
+                68
+              ]
+            },
+            "html_sha256": "ab92fa6da1fadf61afb1d2edc806ea7ce711422664d4bc88212aa1e67d2c76bf",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "55c1dc9b03b457cee6a7647457406a24c7737e82833bbbd236fdcc74614627cd"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-two-closed-classes",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s19",
+            "id": "derive-c1-two-closed-classes",
+            "title": "例 1.46：多个封闭类的极限是吸收概率的混合",
+            "examples": [
+              "1.46"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              69,
+              69
+            ],
+            "mathml": 31,
+            "body_characters": 512,
+            "example_source_pages": {
+              "1.46": [
+                69
+              ]
+            },
+            "html_sha256": "edfa889d8b7c83670f3d76fa05ed18c99c143f0c5d84dacdc1aeaad36d3e4cdd",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "6eeb70d96b6b11a717e9ebd0fbe6c2811c04a1c37dc6621d09712f1fca99fe0b"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-college-tennis-time",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s110",
+            "id": "derive-c1-college-tennis-time",
+            "title": "例 1.47–1.48：退出时间为什么多出常数一",
+            "examples": [
+              "1.47",
+              "1.48"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              70,
+              72
+            ],
+            "mathml": 14,
+            "body_characters": 375,
+            "example_source_pages": {
+              "1.47": [
+                70
+              ],
+              "1.48": [
+                70,
+                71,
+                72
+              ]
+            },
+            "html_sha256": "96a7b4ef32c78bd189f5752f4272bb97190d98b764b6c63f95a284690fde7b38",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "db18d3b43355c27b8656ef18e649ff3156c60e48b464d06b5e9a5aca4ea6ee89"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-pattern-times",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s110",
+            "id": "derive-c1-pattern-times",
+            "title": "例 1.49–1.51：等待模式必须保留已经匹配的后缀",
+            "examples": [
+              "1.49",
+              "1.50",
+              "1.51"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              72,
+              75
+            ],
+            "mathml": 22,
+            "body_characters": 670,
+            "example_source_pages": {
+              "1.49": [
+                72
+              ],
+              "1.50": [
+                72,
+                73,
+                74
+              ],
+              "1.51": [
+                74,
+                75
+              ]
+            },
+            "html_sha256": "7eae3a2c2a2e2ad8ea5859ac66d3b770421ee1c78e1b0a65fdc729ba5ac3b62d",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "e850d6974b9184b8cb348221166ffdde6e0d1579e391a82a2b43c64b9a6850d4"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-walk-time-differences",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s110",
+            "id": "derive-c1-walk-time-differences",
+            "title": "例 1.52–1.53：公平与偏置退出时间的推导",
+            "examples": [
+              "1.52",
+              "1.53"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              75,
+              77
+            ],
+            "mathml": 17,
+            "body_characters": 411,
+            "example_source_pages": {
+              "1.52": [
+                75,
+                76
+              ],
+              "1.53": [
+                76,
+                77
+              ]
+            },
+            "html_sha256": "e3031511e7c53a5576a95dfa2c6dd1d9ad0174acb67f39f7b5f0807e0ca54838",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "6096010e0b5c16228b46eec986c2dfd3d59d845983c48430184be3768c99f672"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-infinite-branching",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s111",
+            "id": "derive-c1-infinite-branching",
+            "title": "例 1.54–1.56：归一化、灭绝根与临界边界",
+            "examples": [
+              "1.54",
+              "1.55",
+              "1.56"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              77,
+              83
+            ],
+            "mathml": 36,
+            "body_characters": 749,
+            "example_source_pages": {
+              "1.54": [
+                77,
+                78,
+                79
+              ],
+              "1.55": [
+                79,
+                80,
+                81
+              ],
+              "1.56": [
+                81,
+                82,
+                83
+              ]
+            },
+            "html_sha256": "1b36c5314742975a136955e1ba7284ed3c59fce9732235b3b5a4dd37f55032fb",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "48d807f87cdca1a2ad72093ed17e5fbc8aabf87fdbed58960879a2600bb21513"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s13",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "id": "body-review-s13",
+            "section": "s13",
+            "title": "分类判据中的返回计数与有限性",
+            "mathml": 3,
+            "body_characters": 385,
+            "html_sha256": "29e5fdad27eb74dc99b24db4ce4767d5d858ba4a3288ed5883f03d46fd929200",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=22",
+              "../assets/essentials-of-stochastic-processes.pdf#page=25",
+              "../assets/essentials-of-stochastic-processes.pdf#page=22",
+              "../assets/essentials-of-stochastic-processes.pdf#page=25",
+              "../assets/essentials-of-stochastic-processes.pdf#page=25",
+              "../assets/essentials-of-stochastic-processes.pdf#page=25",
+              "../assets/essentials-of-stochastic-processes.pdf#page=26",
+              "../assets/essentials-of-stochastic-processes.pdf#page=27",
+              "../assets/essentials-of-stochastic-processes.pdf#page=27",
+              "../assets/essentials-of-stochastic-processes.pdf#page=27",
+              "../assets/essentials-of-stochastic-processes.pdf#page=27",
+              "../assets/essentials-of-stochastic-processes.pdf#page=28",
+              "../assets/essentials-of-stochastic-processes.pdf#page=28",
+              "../assets/essentials-of-stochastic-processes.pdf#page=29",
+              "../assets/essentials-of-stochastic-processes.pdf#page=28",
+              "../assets/essentials-of-stochastic-processes.pdf#page=24"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "7b6b762a771b7eb3ebd3f467369c81e184fc4b1132d6eb03560bd0a692abb55e"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s17",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "id": "body-review-s17",
+            "section": "s17",
+            "title": "平稳测度、零常返与周期奖励的完整关系",
+            "mathml": 10,
+            "body_characters": 605,
+            "html_sha256": "55abd0ae6c626ba8719602384df7877af3765c08a2de9b60c03d40bcc75e1008",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=57",
+              "../assets/essentials-of-stochastic-processes.pdf#page=57",
+              "../assets/essentials-of-stochastic-processes.pdf#page=55"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "34862fb31d96a6deaa15ccafa86a353c11ca900a595b50be9fd722d640b702c0"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s18",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "id": "body-review-s18",
+            "section": "s18",
+            "title": "可数状态空间的相遇证明",
+            "mathml": 4,
+            "body_characters": 468,
+            "html_sha256": "b0899d3c789ae9ed89db0062b3532c7c482f4e94525bd32f1960b55102f77c1f",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=59",
+              "../assets/essentials-of-stochastic-processes.pdf#page=60",
+              "../assets/essentials-of-stochastic-processes.pdf#page=60",
+              "../assets/essentials-of-stochastic-processes.pdf#page=59",
+              "../assets/essentials-of-stochastic-processes.pdf#page=55"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "ae00f71208a3832ed802c5a3b6343004053e7d34c4753b29f6b8cc259414830c"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s19",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "id": "body-review-s19",
+            "section": "s19",
+            "title": "退出问题的唯一性如何证明",
+            "mathml": 3,
+            "body_characters": 361,
+            "html_sha256": "1ba7fdf28a3acfacb2508734380fcaed5fe4d5c715fa5a3e036ff657484aed1a",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=64",
+              "../assets/essentials-of-stochastic-processes.pdf#page=72",
+              "../assets/essentials-of-stochastic-processes.pdf#page=62",
+              "../assets/essentials-of-stochastic-processes.pdf#page=69"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "8899f5950c22804f1482e36118a4b66867169c08caf4e1f2227026d47a30bee0"
+        }
+      ]
+    },
+    {
+      "recorded_at_utc": "2026-10-15T15:43:33.685225+00:00",
+      "scope": "I015 reader feedback: only example-1-4 explains the two-generation probability, its conditional paths and assumptions. All other HTML content unchanged; teaching depth awaits reader acceptance.",
+      "changes": [
+        {
+          "path": "notes/README.md",
+          "previous": {
+            "bytes": 11056,
+            "sha256": "ab9daf6cf2f6b313dcfea7f414184dba378da122f7880c5891c0f7801d7db779"
+          },
+          "current": {
+            "bytes": 11552,
+            "sha256": "caa3c8018dfbda43bdad87e9fb03ca96da41e6bb0cbbc5981962169a1361b344"
+          }
+        },
+        {
+          "path": "notes/annotations_review.json",
+          "previous": {
+            "bytes": 158104,
+            "sha256": "1aca5dc31f893944d5f7d36f33ba2c825723f67173cb00132abe563b06f01330"
+          },
+          "current": {
+            "bytes": 160335,
+            "sha256": "98b58a9feb38f2c6f28f09338c3c766e4aec8cb7ab8b342bd612a3dbb389663b"
+          }
+        },
+        {
+          "path": "notes/chapter01_markov_chains.html",
+          "previous": {
+            "bytes": 1594077,
+            "sha256": "65379c377b12a2de8fc47f24553c25a8dcc9a62a705b8f0edb1cc46e8ab9c3b0"
+          },
+          "current": {
+            "bytes": 1603828,
+            "sha256": "fa7e23298784f25ab60945cbfd0c8deffad782faa44122d1bf96583019db1c5c"
+          }
+        },
+        {
+          "path": "notes/code_deployment_review.json",
+          "previous": {
+            "bytes": 218821,
+            "sha256": "9e238bbadf871c5ad7cb69b9858d12155919616fcf525b98187c4f15c03f2068"
+          },
+          "current": {
+            "bytes": 220289,
+            "sha256": "c2432313de70875f61afa2e0ace3b2620c5d7d70b1218d62ba5ba3c84e15bf64"
+          }
+        },
+        {
+          "path": "notes/readability_review.json",
+          "previous": {
+            "bytes": 198016,
+            "sha256": "3166837b2f6ac89da2f8dd48c9d3f80c777c5ace2f7492243a82c443ebef0ab1"
+          },
+          "current": {
+            "bytes": 200909,
+            "sha256": "688d4e057717fc21bae2fab4cdff28e43f981827271767d95b95ca5673b7a6e4"
+          }
+        },
+        {
+          "path": "notes/statements_review.json",
+          "previous": {
+            "bytes": 433889,
+            "sha256": "da9b3d2723ca2f5391de9bf6c778ce5113e90ed5aeaf8d4146a59a838a51c15e"
+          },
+          "current": {
+            "bytes": 435741,
+            "sha256": "5faa91be984bf57d86e0f8c6b27f8d5649690691418322493c585f6ad9fa29d6"
+          }
+        },
+        {
+          "path": "notes/audit_fix_review.json",
+          "previous": {
+            "bytes": 92392,
+            "sha256": "1530c5fc9a6eafc1dc3e32d3b973278ff501200d38afefb4a90ee6223d565fcb"
+          },
+          "current": {
+            "bytes": 122889,
+            "sha256": "d0946d13935b760fdffe88f8384df0f1c47a7da35b4273abe1517f6b59741b86"
+          }
+        }
+      ],
+      "block_changes": [
+        {
+          "group": "body_additions",
+          "id": "derive-c1-basic-models",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s11",
+            "id": "derive-c1-basic-models",
+            "title": "例 1.1–1.5：一步概率怎样从规则得到",
+            "examples": [
+              "1.1",
+              "1.2",
+              "1.3",
+              "1.4",
+              "1.5"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              10,
+              13
+            ],
+            "mathml": 51,
+            "body_characters": 1505,
+            "example_source_pages": {
+              "1.1": [
+                10,
+                11
+              ],
+              "1.2": [
+                12
+              ],
+              "1.3": [
+                12,
+                13
+              ],
+              "1.4": [
+                13
+              ],
+              "1.5": [
+                13
+              ]
+            },
+            "html_sha256": "7a3b117990bf34fcf6f6e66e911beec52993ad7d0efab05e841753a7543b93ae",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "990791043cfafa941c58a8f8b062491d54e8ce979c468b62e4f2f5764553aaeb"
+        }
+      ]
+    },
+    {
+      "recorded_at_utc": "2026-10-15T17:04:02.097274+00:00",
+      "scope": "I016: Chapter 1 only; read all 56 examples, 31 numbered proofs and 77 exercises, preserve reader-approved example 1.4 and explain the other 163 items. Explain 293 row operations in 35 systems; clarify exercise 1.66 positive-time absorption and original approximation in 1.68.",
+      "changes": [
+        {
+          "path": "notes/README.md",
+          "previous": {
+            "bytes": 11552,
+            "sha256": "caa3c8018dfbda43bdad87e9fb03ca96da41e6bb0cbbc5981962169a1361b344"
+          },
+          "current": {
+            "bytes": 12437,
+            "sha256": "f414ad9bad99bd3d448a3240adf4d7f452c97a9bf8e228f060a383b17c269a9c"
+          }
+        },
+        {
+          "path": "notes/annotations_review.json",
+          "previous": {
+            "bytes": 160335,
+            "sha256": "98b58a9feb38f2c6f28f09338c3c766e4aec8cb7ab8b342bd612a3dbb389663b"
+          },
+          "current": {
+            "bytes": 162648,
+            "sha256": "f482b770f41406040abcb549f7c5d1d832fec7cfd8f938837fffde21d5ae1bce"
+          }
+        },
+        {
+          "path": "notes/chapter01_markov_chains.html",
+          "previous": {
+            "bytes": 1603828,
+            "sha256": "fa7e23298784f25ab60945cbfd0c8deffad782faa44122d1bf96583019db1c5c"
+          },
+          "current": {
+            "bytes": 2125126,
+            "sha256": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e"
+          }
+        },
+        {
+          "path": "notes/code_deployment_review.json",
+          "previous": {
+            "bytes": 220289,
+            "sha256": "c2432313de70875f61afa2e0ace3b2620c5d7d70b1218d62ba5ba3c84e15bf64"
+          },
+          "current": {
+            "bytes": 221839,
+            "sha256": "7474eef295c64f7e0fedb679c1c20f58fad38e61e44c5112d616b9bbf13d2db8"
+          }
+        },
+        {
+          "path": "notes/readability_review.json",
+          "previous": {
+            "bytes": 200909,
+            "sha256": "688d4e057717fc21bae2fab4cdff28e43f981827271767d95b95ca5673b7a6e4"
+          },
+          "current": {
+            "bytes": 227690,
+            "sha256": "06355373ce6a6104ac14fb4bee52d013c913d13765f8abaccb63d0b4772b3454"
+          }
+        },
+        {
+          "path": "notes/statements_review.json",
+          "previous": {
+            "bytes": 435741,
+            "sha256": "5faa91be984bf57d86e0f8c6b27f8d5649690691418322493c585f6ad9fa29d6"
+          },
+          "current": {
+            "bytes": 437675,
+            "sha256": "46affdc345e3301f8d45974136ca6d9c89cc1fa1e10e192de8b4d4cdfd51af36"
+          }
+        },
+        {
+          "path": "notes/audit_fix_review.json",
+          "previous": {
+            "bytes": 122889,
+            "sha256": "d0946d13935b760fdffe88f8384df0f1c47a7da35b4273abe1517f6b59741b86"
+          },
+          "current": {
+            "bytes": 171924,
+            "sha256": "2189808a9b62a1cb8ed1b133a54764fb5aacdea16f1d818ce0074c65334aa752"
+          }
+        }
+      ],
+      "block_changes": [
+        {
+          "group": "body_additions",
+          "id": "derive-c1-basic-models",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s11",
+            "id": "derive-c1-basic-models",
+            "title": "例 1.1–1.5：一步概率怎样从规则得到",
+            "examples": [
+              "1.1",
+              "1.2",
+              "1.3",
+              "1.4",
+              "1.5"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              10,
+              13
+            ],
+            "mathml": 81,
+            "body_characters": 2763,
+            "example_source_pages": {
+              "1.1": [
+                10,
+                11
+              ],
+              "1.2": [
+                12
+              ],
+              "1.3": [
+                12,
+                13
+              ],
+              "1.4": [
+                13
+              ],
+              "1.5": [
+                13
+              ]
+            },
+            "html_sha256": "990791043cfafa941c58a8f8b062491d54e8ce979c468b62e4f2f5764553aaeb",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "743fc5f1791d4905fa14b2337ef12e2d3349718f3623da815ec0f259b2a40e92"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-inventory-repair",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s11",
+            "id": "derive-c1-inventory-repair",
+            "title": "例 1.6–1.7：把库存与维修规则逐行翻译",
+            "examples": [
+              "1.6",
+              "1.7"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              13,
+              15
+            ],
+            "mathml": 33,
+            "body_characters": 1110,
+            "example_source_pages": {
+              "1.6": [
+                13,
+                14
+              ],
+              "1.7": [
+                14,
+                15
+              ]
+            },
+            "html_sha256": "1906cf4d73b201b32c34b80d3e0af34b60d8fe09891d977f708a498074a475dd",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "efb487b009e5559a1e0bb9eeee0b2b05df60a2adaa08be222e0c8cbd6cb6df03"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-expanded-state",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s11",
+            "id": "derive-c1-expanded-state",
+            "title": "例 1.8–1.10：分枝、抽样与扩大状态",
+            "examples": [
+              "1.8",
+              "1.9",
+              "1.10"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              15,
+              17
+            ],
+            "mathml": 44,
+            "body_characters": 1012,
+            "example_source_pages": {
+              "1.8": [
+                15
+              ],
+              "1.9": [
+                15,
+                16
+              ],
+              "1.10": [
+                16,
+                17
+              ]
+            },
+            "html_sha256": "601f9148f48d2bb0a3a4882abc3e0d7200693111da9c27421c873beedf48b6f6",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "46ebe8cabf6f62d8d044fa1f3d515e803fff1fd23bd5620d7cbaf91f46eaa2ba"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-matrix-paths",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s12",
+            "id": "derive-c1-matrix-paths",
+            "title": "例 1.11：两步转移要汇总所有中间状态",
+            "examples": [
+              "1.11"
+            ],
+            "theorems": [
+              "Chapman–Kolmogorov equation"
+            ],
+            "pdf_pages": [
+              21,
+              22
+            ],
+            "mathml": 20,
+            "body_characters": 472,
+            "example_source_pages": {
+              "1.11": [
+                21,
+                22
+              ]
+            },
+            "html_sha256": "3e96b9ff94ada2027eb0462ac12420315ef1322bab9d34607e40945862c6bcb2",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "16fb16f640826011b20b5994bcc22492000618c52193ee3d5129aad36f24df61"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-return-classification",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s13",
+            "id": "derive-c1-return-classification",
+            "title": "例 1.12–1.14与强马尔可夫性：为什么能从返回时刻重来",
+            "examples": [
+              "1.12",
+              "1.13",
+              "1.14"
+            ],
+            "theorems": [
+              "strong Markov property",
+              "recurrence via visit counts"
+            ],
+            "pdf_pages": [
+              24,
+              29
+            ],
+            "mathml": 30,
+            "body_characters": 979,
+            "example_source_pages": {
+              "1.12": [
+                24
+              ],
+              "1.13": [
+                25,
+                26
+              ],
+              "1.14": [
+                26,
+                27,
+                28,
+                29
+              ]
+            },
+            "html_sha256": "5625f0af880691687adba1660b129018162992ebf611f518dff195750bde0135",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "aa5830afd9500e63b5701275fb48cc855df4ee08526d4a0185a53cf7c4739ab6"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-stationary-computations",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s14",
+            "id": "derive-c1-stationary-computations",
+            "title": "例 1.15–1.20：从初始分布到平稳方程",
+            "examples": [
+              "1.15",
+              "1.16",
+              "1.17",
+              "1.18",
+              "1.19",
+              "1.20"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              30,
+              35
+            ],
+            "mathml": 78,
+            "body_characters": 2202,
+            "example_source_pages": {
+              "1.15": [
+                30
+              ],
+              "1.16": [
+                30,
+                31
+              ],
+              "1.17": [
+                31,
+                32
+              ],
+              "1.18": [
+                32,
+                33,
+                34
+              ],
+              "1.19": [
+                34,
+                35
+              ],
+              "1.20": [
+                35
+              ]
+            },
+            "html_sha256": "28bd03fdefd5f394bab226e329327a83aa6021b8be40f3490a389857fbb050a9",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "ae11b8b4da1046d364bd98b66451322d5331e214f4bab6708aaa2563e6b80517"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-uniform-board",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s14",
+            "id": "derive-c1-uniform-board",
+            "title": "例 1.21–1.25：均匀分布何时能够成立",
+            "examples": [
+              "1.21",
+              "1.22",
+              "1.23",
+              "1.24",
+              "1.25"
+            ],
+            "theorems": [
+              "uniform stationary distribution for doubly stochastic P"
+            ],
+            "pdf_pages": [
+              36,
+              38
+            ],
+            "mathml": 63,
+            "body_characters": 1956,
+            "example_source_pages": {
+              "1.21": [
+                36
+              ],
+              "1.22": [
+                36
+              ],
+              "1.23": [
+                36,
+                37
+              ],
+              "1.24": [
+                37
+              ],
+              "1.25": [
+                38
+              ]
+            },
+            "html_sha256": "353c363faea077dca62c2a43512f80cc727f4b9b692d0a48755101b6b39e8674",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "c8a4bf788b8d5c1e73960d9d87e14999bf8c4402c9c4c8203f79e48fce8397e8"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-balance-weights",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s15",
+            "id": "derive-c1-balance-weights",
+            "title": "例 1.26–1.30：细致平衡把联立方程变成比例",
+            "examples": [
+              "1.26",
+              "1.27",
+              "1.28",
+              "1.29",
+              "1.30"
+            ],
+            "theorems": [
+              "detailed balance implies stationarity"
+            ],
+            "pdf_pages": [
+              39,
+              43
+            ],
+            "mathml": 57,
+            "body_characters": 1733,
+            "example_source_pages": {
+              "1.26": [
+                39
+              ],
+              "1.27": [
+                39,
+                40
+              ],
+              "1.28": [
+                40,
+                41
+              ],
+              "1.29": [
+                41,
+                42
+              ],
+              "1.30": [
+                42,
+                43
+              ]
+            },
+            "html_sha256": "8bafe6a8787e4019ef13562e65729ca48fc2cafdc3cb75a2eee69406fdedcc9e",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "4849d2f2643a328e7361a550390f46bd9c36e7e06cb7610ca6d0e00f8029c1a0"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-metropolis-cycle",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s15",
+            "id": "derive-c1-metropolis-cycle",
+            "title": "例 1.31–1.35：接受率与循环条件的来源",
+            "examples": [
+              "1.31",
+              "1.32",
+              "1.33",
+              "1.34",
+              "1.35"
+            ],
+            "theorems": [
+              "Metropolis–Hastings reversibility",
+              "Kolmogorov cycle condition"
+            ],
+            "pdf_pages": [
+              45,
+              49
+            ],
+            "mathml": 82,
+            "body_characters": 1882,
+            "example_source_pages": {
+              "1.31": [
+                45
+              ],
+              "1.32": [
+                45
+              ],
+              "1.33": [
+                46,
+                47
+              ],
+              "1.34": [
+                47
+              ],
+              "1.35": [
+                47,
+                48,
+                49
+              ]
+            },
+            "html_sha256": "8280bfc7972cecfc8d1286e1bb980c4af29d01e5b33ac6d99a89b839cc826563",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "db2c10c3c4f69c31563009efefe0e0a37714f94f8721699d13d73383c6d1599b"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-period-cost",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s16",
+            "id": "derive-c1-period-cost",
+            "title": "例 1.36–1.39：周期与长期业务量怎样计算",
+            "examples": [
+              "1.36",
+              "1.37",
+              "1.38",
+              "1.39"
+            ],
+            "theorems": [
+              "period via gcd",
+              "ergodic reward calculation"
+            ],
+            "pdf_pages": [
+              50,
+              55
+            ],
+            "mathml": 66,
+            "body_characters": 2083,
+            "example_source_pages": {
+              "1.36": [
+                50
+              ],
+              "1.37": [
+                50
+              ],
+              "1.38": [
+                53,
+                54
+              ],
+              "1.39": [
+                54,
+                55
+              ]
+            },
+            "html_sha256": "b5e0211a159085a1e5fb94edbf46a85ed206a850e23cbb286ea1cf6bda380ed2",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "58f9fc0aa38a8e12fcc05054879a79872b1e3b22246f20ce6fd0193337d2e7fe"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-gambler-harmonic",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s19",
+            "id": "derive-c1-gambler-harmonic",
+            "title": "例 1.40–1.45：退出概率的方程与通解",
+            "examples": [
+              "1.40",
+              "1.41",
+              "1.42",
+              "1.43",
+              "1.44",
+              "1.45"
+            ],
+            "theorems": [
+              "exit probability harmonic equation"
+            ],
+            "pdf_pages": [
+              62,
+              68
+            ],
+            "mathml": 89,
+            "body_characters": 2052,
+            "example_source_pages": {
+              "1.40": [
+                62,
+                63
+              ],
+              "1.41": [
+                63,
+                64,
+                65
+              ],
+              "1.42": [
+                65,
+                66
+              ],
+              "1.43": [
+                66
+              ],
+              "1.44": [
+                66,
+                67,
+                68
+              ],
+              "1.45": [
+                68
+              ]
+            },
+            "html_sha256": "55c1dc9b03b457cee6a7647457406a24c7737e82833bbbd236fdcc74614627cd",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "7b064b348c247bb3136a38be09455f96212e577cfd65e0963ef6856a648419d6"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-two-closed-classes",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s19",
+            "id": "derive-c1-two-closed-classes",
+            "title": "例 1.46：多个封闭类的极限是吸收概率的混合",
+            "examples": [
+              "1.46"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              69,
+              69
+            ],
+            "mathml": 33,
+            "body_characters": 553,
+            "example_source_pages": {
+              "1.46": [
+                69
+              ]
+            },
+            "html_sha256": "6eeb70d96b6b11a717e9ebd0fbe6c2811c04a1c37dc6621d09712f1fca99fe0b",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "2a37e9a9c69e5fb9b12f68d289cf716697be5f25dfa04aa598b05f1bd8e50df8"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-college-tennis-time",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s110",
+            "id": "derive-c1-college-tennis-time",
+            "title": "例 1.47–1.48：退出时间为什么多出常数一",
+            "examples": [
+              "1.47",
+              "1.48"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              70,
+              72
+            ],
+            "mathml": 25,
+            "body_characters": 658,
+            "example_source_pages": {
+              "1.47": [
+                70
+              ],
+              "1.48": [
+                70,
+                71,
+                72
+              ]
+            },
+            "html_sha256": "db18d3b43355c27b8656ef18e649ff3156c60e48b464d06b5e9a5aca4ea6ee89",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "95b41e7203086842745e678d2330806dc48f72ffec4eecc72dc35077ed1d49dd"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-pattern-times",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s110",
+            "id": "derive-c1-pattern-times",
+            "title": "例 1.49–1.51：等待模式必须保留已经匹配的后缀",
+            "examples": [
+              "1.49",
+              "1.50",
+              "1.51"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              72,
+              75
+            ],
+            "mathml": 43,
+            "body_characters": 1118,
+            "example_source_pages": {
+              "1.49": [
+                72
+              ],
+              "1.50": [
+                72,
+                73,
+                74
+              ],
+              "1.51": [
+                74,
+                75
+              ]
+            },
+            "html_sha256": "e850d6974b9184b8cb348221166ffdde6e0d1579e391a82a2b43c64b9a6850d4",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "e669ebb13faeed0e8d1da53a159fe60aa99943d97f6b08267d95270c7969b202"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-walk-time-differences",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s110",
+            "id": "derive-c1-walk-time-differences",
+            "title": "例 1.52–1.53：公平与偏置退出时间的推导",
+            "examples": [
+              "1.52",
+              "1.53"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              75,
+              77
+            ],
+            "mathml": 31,
+            "body_characters": 686,
+            "example_source_pages": {
+              "1.52": [
+                75,
+                76
+              ],
+              "1.53": [
+                76,
+                77
+              ]
+            },
+            "html_sha256": "6096010e0b5c16228b46eec986c2dfd3d59d845983c48430184be3768c99f672",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "1ad98d657e2ab60e9bea53515a00cbfe0c33a9657ddd70fe8beab99d2dbdc584"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c1-infinite-branching",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "section": "s111",
+            "id": "derive-c1-infinite-branching",
+            "title": "例 1.54–1.56：归一化、灭绝根与临界边界",
+            "examples": [
+              "1.54",
+              "1.55",
+              "1.56"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              77,
+              83
+            ],
+            "mathml": 79,
+            "body_characters": 1532,
+            "example_source_pages": {
+              "1.54": [
+                77,
+                78,
+                79
+              ],
+              "1.55": [
+                79,
+                80,
+                81
+              ],
+              "1.56": [
+                81,
+                82,
+                83
+              ]
+            },
+            "html_sha256": "48d807f87cdca1a2ad72093ed17e5fbc8aabf87fdbed58960879a2600bb21513",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "88b85da7565a5df80c923ad9fc9de3f8363d23150c463276e32118183b3c11f7"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s13",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "id": "body-review-s13",
+            "section": "s13",
+            "title": "定理 1.13：返回概率级数判定常返的完整证明",
+            "mathml": 13,
+            "body_characters": 354,
+            "html_sha256": "7b6b762a771b7eb3ebd3f467369c81e184fc4b1132d6eb03560bd0a692abb55e",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=29"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "a669017598605b2dcd7e79cb6f9240e8e8b220e2ff5a71149d9ac713aa89459f"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s17",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "id": "body-review-s17",
+            "section": "s17",
+            "title": "定理 1.24：返回周期构造平稳测度的完整证明",
+            "mathml": 31,
+            "body_characters": 775,
+            "html_sha256": "34862fb31d96a6deaa15ccafa86a353c11ca900a595b50be9fd722d640b702c0",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=57",
+              "../assets/essentials-of-stochastic-processes.pdf#page=58"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "9e690cc0d4ae95b06d2acf236500cc61f3bf71814474062539b90ee05aed2781"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s18",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "id": "body-review-s18",
+            "section": "s18",
+            "title": "定理 1.19：有限链与可数链的耦合收敛的完整证明",
+            "mathml": 42,
+            "body_characters": 1240,
+            "html_sha256": "ae00f71208a3832ed802c5a3b6343004053e7d34c4753b29f6b8cc259414830c",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=52",
+              "../assets/essentials-of-stochastic-processes.pdf#page=59",
+              "../assets/essentials-of-stochastic-processes.pdf#page=60",
+              "../assets/essentials-of-stochastic-processes.pdf#page=61",
+              "../assets/essentials-of-stochastic-processes.pdf#page=62"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "7ea234c116d960b8a6eae90f82f785c9410b42a93b8ad5c0f5337eae1052b810"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s19",
+          "previous": {
+            "page": "chapter01_markov_chains.html",
+            "id": "body-review-s19",
+            "section": "s19",
+            "title": "定理 1.28：退出概率及解的唯一性的完整证明",
+            "mathml": 27,
+            "body_characters": 601,
+            "html_sha256": "8899f5950c22804f1482e36118a4b66867169c08caf4e1f2227026d47a30bee0",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=64",
+              "../assets/essentials-of-stochastic-processes.pdf#page=65"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "90542cbb534e39f7da956f1f571472ea0b220af6a33337d1557b731b8f0e08c2"
+        }
+      ]
+    },
+    {
+      "recorded_at_utc": "2026-10-15T19:23:03.282449+00:00",
+      "scope": "I017: source comparison and author readback of all 349 items in chapters 2–6 and appendix A: 106 examples, 84 theorems/lemmas, 159 exercises and their subparts. Chapter 1, preface and overview unchanged from the I016 checkpoint.",
+      "changes": [
+        {
+          "path": "notes/README.md",
+          "previous": {
+            "bytes": 12437,
+            "sha256": "f414ad9bad99bd3d448a3240adf4d7f452c97a9bf8e228f060a383b17c269a9c"
+          },
+          "current": {
+            "bytes": 13308,
+            "sha256": "ee58ce9ab391429d8f136a90a9d9b7f7b2d3df089c788b5dcd021838ba393bbc"
+          }
+        },
+        {
+          "path": "notes/annotations_review.json",
+          "previous": {
+            "bytes": 162648,
+            "sha256": "f482b770f41406040abcb549f7c5d1d832fec7cfd8f938837fffde21d5ae1bce"
+          },
+          "current": {
+            "bytes": 167773,
+            "sha256": "5f83d7cb02be5b97232fa5680459d6f0f2d51e1247097f9df8411cf2c52a3647"
+          }
+        },
+        {
+          "path": "notes/appendix_a_probability_review.html",
+          "previous": {
+            "bytes": 192942,
+            "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a"
+          },
+          "current": {
+            "bytes": 234663,
+            "sha256": "e9f6b0e37de94beada21f646eaaef34bdd4aea8815b0b4eaa1b82f5190574072"
+          }
+        },
+        {
+          "path": "notes/chapter02_poisson_processes.html",
+          "previous": {
+            "bytes": 493525,
+            "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b"
+          },
+          "current": {
+            "bytes": 681667,
+            "sha256": "bea17e948c3e109e2179a9b6c786eb71545c90c633f53721f70f7f71b5d5af0f"
+          }
+        },
+        {
+          "path": "notes/chapter03_renewal_processes.html",
+          "previous": {
+            "bytes": 256873,
+            "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa"
+          },
+          "current": {
+            "bytes": 351148,
+            "sha256": "780e29b3a4dde7f84314e1d53b66403585b008c361fd8f375546fce047d354ba"
+          }
+        },
+        {
+          "path": "notes/chapter04_continuous_time_markov_chains.html",
+          "previous": {
+            "bytes": 644426,
+            "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3"
+          },
+          "current": {
+            "bytes": 850422,
+            "sha256": "b566c5c4da6b6031c7c89c86afdbdec24182cfe9d905a5f53e62dfd1c74f6b1c"
+          }
+        },
+        {
+          "path": "notes/chapter05_martingales.html",
+          "previous": {
+            "bytes": 322830,
+            "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c"
+          },
+          "current": {
+            "bytes": 409836,
+            "sha256": "402c2d0834d8ed2a2e0cff270f1e19d216baf3a98f7df89b32692be2fc45005c"
+          }
+        },
+        {
+          "path": "notes/chapter06_mathematical_finance.html",
+          "previous": {
+            "bytes": 571627,
+            "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17"
+          },
+          "current": {
+            "bytes": 1187107,
+            "sha256": "abdb3e6c1c7bcee20a443671dac19190b9160dc40280db2ec926098ad5caaece"
+          }
+        },
+        {
+          "path": "notes/code_deployment_review.json",
+          "previous": {
+            "bytes": 221839,
+            "sha256": "7474eef295c64f7e0fedb679c1c20f58fad38e61e44c5112d616b9bbf13d2db8"
+          },
+          "current": {
+            "bytes": 226201,
+            "sha256": "3ae1b4429c8641669aad42ce9eb2d3cf9131af15ecc3cad0ce4c249e755ce439"
+          }
+        },
+        {
+          "path": "notes/readability_review.json",
+          "previous": {
+            "bytes": 227690,
+            "sha256": "06355373ce6a6104ac14fb4bee52d013c913d13765f8abaccb63d0b4772b3454"
+          },
+          "current": {
+            "bytes": 288520,
+            "sha256": "5179fe3f29eee345d8526b25fda364a4711523444393655f75d9e995ea889140"
+          }
+        },
+        {
+          "path": "notes/statements_review.json",
+          "previous": {
+            "bytes": 437675,
+            "sha256": "46affdc345e3301f8d45974136ca6d9c89cc1fa1e10e192de8b4d4cdfd51af36"
+          },
+          "current": {
+            "bytes": 616254,
+            "sha256": "bb0dcc32d6f79d9ecee36f8a8e7d6d838dae79f9d66b7b0f90a57c7ec2d19f92"
+          }
+        },
+        {
+          "path": "tools/check_notes.py",
+          "previous": {
+            "bytes": 26885,
+            "sha256": "7dbb379cb5bcbb7b529c3d567331bf477166163ecfb30f173853194d2b9451f3"
+          },
+          "current": {
+            "bytes": 26770,
+            "sha256": "034867cf277244e8f5b74cb6b7ce4830ab522b1075a3cf9b27402d90e25298de"
+          }
+        },
+        {
+          "path": "notes/audit_fix_review.json",
+          "previous": {
+            "bytes": 171924,
+            "sha256": "2189808a9b62a1cb8ed1b133a54764fb5aacdea16f1d818ce0074c65334aa752"
+          },
+          "current": {
+            "bytes": 252048,
+            "sha256": "d5683800ce814512c8ff41a72524d75c95680407b3e0613e39b97a35081571cd"
+          }
+        }
+      ],
+      "block_changes": [
+        {
+          "group": "body_additions",
+          "id": "derive-c6-one-period-example",
+          "previous": {
+            "page": "chapter06_mathematical_finance.html",
+            "section": "s62",
+            "id": "derive-c6-one-period-example",
+            "title": "例 6.1：一周期复制的金额与对冲验算",
+            "examples": [
+              "6.1"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              237,
+              237
+            ],
+            "mathml": 13,
+            "body_characters": 596,
+            "example_source_pages": {
+              "6.1": [
+                237
+              ]
+            },
+            "html_sha256": "924172d31cfd6e70704ab26dc83c2cff85b3c4a528cff5ab661e4c0a3ab5fd97",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "28459b58e53ed7e26fdd28733459cfaa326ac276b883fec236fe24a40e68f043"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c6-callback-put",
+          "previous": {
+            "page": "chapter06_mathematical_finance.html",
+            "section": "s63",
+            "id": "derive-c6-callback-put",
+            "title": "例 6.2–6.3：完整终点路径与内部节点",
+            "examples": [
+              "6.2",
+              "6.3"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              241,
+              242
+            ],
+            "mathml": 32,
+            "body_characters": 1002,
+            "example_source_pages": {
+              "6.2": [
+                241
+              ],
+              "6.3": [
+                242
+              ]
+            },
+            "html_sha256": "e0125d700691bcabb26051b2c8348ff63816ca86738cfa06f46ffa703e3a4c7c",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "aaddf8ac757cb8644bf253ae98d7f9697f7d6452a04d4ce13f3f7ce121caec13"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c6-parity-knockout",
+          "previous": {
+            "page": "chapter06_mathematical_finance.html",
+            "section": "s63",
+            "id": "derive-c6-parity-knockout",
+            "title": "例 6.4–6.5：平价恒等式与障碍路径",
+            "examples": [
+              "6.4",
+              "6.5"
+            ],
+            "theorems": [
+              "6.6"
+            ],
+            "pdf_pages": [
+              243,
+              245
+            ],
+            "mathml": 19,
+            "body_characters": 906,
+            "example_source_pages": {
+              "6.4": [
+                243,
+                244
+              ],
+              "6.5": [
+                244,
+                245
+              ]
+            },
+            "html_sha256": "a22b12d1b7aae364ac78bb651b6683f70f2aebfc6db9a71fcb56ba486d86d95d",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "1e570298677ade4292a65039740734cb8b9dde186339e6f2b8122a4f38b7de74"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c6-snell-examples",
+          "previous": {
+            "page": "chapter06_mathematical_finance.html",
+            "section": "s64",
+            "id": "derive-c6-snell-examples",
+            "title": "例 6.6–6.7：美式节点比较与最优停止的证明",
+            "examples": [
+              "6.6",
+              "6.7"
+            ],
+            "theorems": [
+              "Snell envelope and finite optimal stopping",
+              "6.7"
+            ],
+            "pdf_pages": [
+              246,
+              249
+            ],
+            "mathml": 26,
+            "body_characters": 876,
+            "example_source_pages": {
+              "6.6": [
+                246,
+                247
+              ],
+              "6.7": [
+                247,
+                248,
+                249
+              ]
+            },
+            "html_sha256": "03e432416b7571e72fb785e93afb15b01186eaf195dc82ac9ef1a173f4670af8",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "32d11535d571fce56aa5bed65b3760bdec3403cc0fa22351e7a1b544b411535d"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c6-historical-input",
+          "previous": {
+            "page": "chapter06_mathematical_finance.html",
+            "section": "s66",
+            "id": "derive-c6-historical-input",
+            "title": "例 6.8–6.9：把参数、正态概率与平价逐项代入",
+            "examples": [
+              "6.8",
+              "6.9"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              255,
+              255
+            ],
+            "mathml": 12,
+            "body_characters": 608,
+            "example_source_pages": {
+              "6.8": [
+                255
+              ],
+              "6.9": [
+                255
+              ]
+            },
+            "html_sha256": "cf2ee101a28337389f2e9c5a2f04911cd998f4d0ba99629d8ed480998320c7f7",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "335825f00e116a5a0383e09d693e0b61a1cb16070afca809b759a663b307dd48"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-a-counting-bayes",
+          "previous": {
+            "page": "appendix_a_probability_review.html",
+            "section": "a1",
+            "id": "derive-a-counting-bayes",
+            "title": "例 A.1–A.5：计数、条件与全概率的计算",
+            "examples": [
+              "A.1",
+              "A.2",
+              "A.3",
+              "A.4",
+              "A.5"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              259,
+              262
+            ],
+            "mathml": 24,
+            "body_characters": 671,
+            "example_source_pages": {
+              "A.1": [
+                259
+              ],
+              "A.2": [
+                259,
+                260
+              ],
+              "A.3": [
+                260,
+                261
+              ],
+              "A.4": [
+                261
+              ],
+              "A.5": [
+                261,
+                262
+              ]
+            },
+            "html_sha256": "28d89e84e3aae7fb3e16ea460f4efb35fffd8b829e9211eb3acb0da059299a02",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "9c0e43d8067915506258de1709146ece3d5460d1e4bb9ad32eaabb99e7122852"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-a-independence-events",
+          "previous": {
+            "page": "appendix_a_probability_review.html",
+            "section": "a1",
+            "id": "derive-a-independence-events",
+            "title": "例 A.6–A.7：独立性必须用实际交集核对",
+            "examples": [
+              "A.6",
+              "A.7"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              262,
+              263
+            ],
+            "mathml": 22,
+            "body_characters": 473,
+            "example_source_pages": {
+              "A.6": [
+                262,
+                263
+              ],
+              "A.7": [
+                263
+              ]
+            },
+            "html_sha256": "4af1ffa9d3b5bcdc9a21384294735f80eca905e6d3d0517f2d4ae395e1ac4272",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "881af1f4e1b8214c6bf4e69f85e57293333662196c7bf1ff48f7e9c1fbbe01c5"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-a-distribution-construction",
+          "previous": {
+            "page": "appendix_a_probability_review.html",
+            "section": "a2",
+            "id": "derive-a-distribution-construction",
+            "title": "例 A.8–A.15：常见分布的质量、密度与 CDF",
+            "examples": [
+              "A.8",
+              "A.9",
+              "A.10",
+              "A.11",
+              "A.12",
+              "A.13",
+              "A.14",
+              "A.15"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              264,
+              268
+            ],
+            "mathml": 25,
+            "body_characters": 667,
+            "example_source_pages": {
+              "A.8": [
+                264
+              ],
+              "A.9": [
+                264
+              ],
+              "A.10": [
+                264
+              ],
+              "A.11": [
+                265
+              ],
+              "A.12": [
+                265
+              ],
+              "A.13": [
+                265,
+                266
+              ],
+              "A.14": [
+                266
+              ],
+              "A.15": [
+                266,
+                267,
+                268
+              ]
+            },
+            "html_sha256": "c638f2b5d1267c9dda8edb1b8e744516f423deacd963bab81e324363972e157e",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "e2760fad0106d973e48eef02ab7950ff5412b8c1693b9727f26a0e2a4f745873"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-a-independent-convolution",
+          "previous": {
+            "page": "appendix_a_probability_review.html",
+            "section": "a2",
+            "id": "derive-a-independent-convolution",
+            "title": "定理 A.1–A.2与例 A.16–A.17：独立函数与卷积",
+            "examples": [
+              "A.16",
+              "A.17"
+            ],
+            "theorems": [
+              "A.1",
+              "A.2"
+            ],
+            "pdf_pages": [
+              268,
+              269
+            ],
+            "mathml": 25,
+            "body_characters": 660,
+            "example_source_pages": {
+              "A.16": [
+                268,
+                269
+              ],
+              "A.17": [
+                269
+              ]
+            },
+            "html_sha256": "30d65b1283c3fff0f37f888152b05be40f1511e90b00041228daf8cb5558a678",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "32316beb75d75e9942ea8e73707da6c9904ecac84a401f4cd2b7c4a9486d08d2"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-a-moment-examples",
+          "previous": {
+            "page": "appendix_a_probability_review.html",
+            "section": "a3",
+            "id": "derive-a-moment-examples",
+            "title": "例 A.18–A.22：均值、方差与生成函数求导",
+            "examples": [
+              "A.18",
+              "A.19",
+              "A.20",
+              "A.21",
+              "A.22"
+            ],
+            "theorems": [
+              "A.3",
+              "A.4",
+              "A.5",
+              "A.6"
+            ],
+            "pdf_pages": [
+              270,
+              275
+            ],
+            "mathml": 30,
+            "body_characters": 903,
+            "example_source_pages": {
+              "A.18": [
+                270
+              ],
+              "A.19": [
+                270
+              ],
+              "A.20": [
+                271,
+                272
+              ],
+              "A.21": [
+                272
+              ],
+              "A.22": [
+                272,
+                273,
+                274,
+                275
+              ]
+            },
+            "html_sha256": "5f1ad901f845f386a531999b8fbe5fff4dcf3c6b99686a21402fab4d848ce23f",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "697c89a8ea78a7e376a441c520a90898b944ad8a9cc7a545de3b08f2b1b2794b"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-a-convergence-proof",
+          "previous": {
+            "page": "appendix_a_probability_review.html",
+            "section": "a4",
+            "id": "derive-a-convergence-proof",
+            "title": "例 A.23与换极限定理的证明要点",
+            "examples": [
+              "A.23"
+            ],
+            "theorems": [
+              "A.10",
+              "A.11",
+              "A.12",
+              "Fatou lemma"
+            ],
+            "pdf_pages": [
+              275,
+              275
+            ],
+            "mathml": 37,
+            "body_characters": 708,
+            "example_source_pages": {
+              "A.23": [
+                275
+              ]
+            },
+            "html_sha256": "d372c60e458c824b9fc59dc758114b04f5c2bc9b2cc53b67870d3ec2dbe931dc",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "b90caeb4d22433795a982a6708a510bec84c0c3ebec7815ef03b56d65bd25e02"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c3-cycles-replacement",
+          "previous": {
+            "page": "chapter03_renewal_processes.html",
+            "section": "s31",
+            "id": "derive-c3-cycles-replacement",
+            "title": "例 3.1–3.5：周期、奖励与换车最优年龄",
+            "examples": [
+              "3.1",
+              "3.2",
+              "3.3",
+              "3.4",
+              "3.5"
+            ],
+            "theorems": [
+              "3.1",
+              "3.2 (used with integrable iid cycles)",
+              "3.3",
+              "3.4"
+            ],
+            "pdf_pages": [
+              135,
+              139
+            ],
+            "mathml": 36,
+            "body_characters": 943,
+            "example_source_pages": {
+              "3.1": [
+                135
+              ],
+              "3.2": [
+                135,
+                136
+              ],
+              "3.3": [
+                136,
+                137,
+                138
+              ],
+              "3.4": [
+                138
+              ],
+              "3.5": [
+                138,
+                139
+              ]
+            },
+            "html_sha256": "ed2da036adb7d27ff545547c0d708e7f9d6e31de2c6869909fe2b2c9526816be",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "4127e19d7abd138c9c89445c45e6e5456c296a2d24a03ede250d1a5ca4a87275"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c3-queue-identities",
+          "previous": {
+            "page": "chapter03_renewal_processes.html",
+            "section": "s32",
+            "id": "derive-c3-queue-identities",
+            "title": "例 3.6–3.7：Little、忙期与等待公式的计算",
+            "examples": [
+              "3.6",
+              "3.7"
+            ],
+            "theorems": [
+              "3.5 (stability)",
+              "3.6 (Little)",
+              "3.7",
+              "3.8 (PASTA)",
+              "3.9"
+            ],
+            "pdf_pages": [
+              141,
+              145
+            ],
+            "mathml": 27,
+            "body_characters": 861,
+            "example_source_pages": {
+              "3.6": [
+                141,
+                142
+              ],
+              "3.7": [
+                145
+              ]
+            },
+            "html_sha256": "1a425ee445540daa950f46363cae97c062e96d0dbe7babc319bc0e14be98dce9",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "cf658aaafbf3cf34507a78f86cac414b76b322234b208f192e6498cb9183cc91"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c3-equilibrium-discrete",
+          "previous": {
+            "page": "chapter03_renewal_processes.html",
+            "section": "s33",
+            "id": "derive-c3-equilibrium-discrete",
+            "title": "例 3.8：倒计时平稳分布的递推与归一",
+            "examples": [
+              "3.8"
+            ],
+            "theorems": [
+              "3.10"
+            ],
+            "pdf_pages": [
+              147,
+              148
+            ],
+            "mathml": 12,
+            "body_characters": 353,
+            "example_source_pages": {
+              "3.8": [
+                147,
+                148
+              ]
+            },
+            "html_sha256": "740554ba8e7028620d5b660e509acc928f29e3a272ca039efe6101b4f676aea2",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "62c1f4058a3a2f213bf8435ffbc1259465d66aefa4ebe8cfd43a772fddf9fc0a"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c3-equilibrium-continuous",
+          "previous": {
+            "page": "chapter03_renewal_processes.html",
+            "section": "s33",
+            "id": "derive-c3-equilibrium-continuous",
+            "title": "例 3.9–3.10：从周期面积得到年龄与剩余寿命",
+            "examples": [
+              "3.9",
+              "3.10"
+            ],
+            "theorems": [
+              "3.11"
+            ],
+            "pdf_pages": [
+              149,
+              150
+            ],
+            "mathml": 24,
+            "body_characters": 675,
+            "example_source_pages": {
+              "3.9": [
+                149
+              ],
+              "3.10": [
+                149,
+                150
+              ]
+            },
+            "html_sha256": "5891b147a50e1f564951024d6dddd289258b8921dd6e2257a4af75b1ebb31b81",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "a821c7a0426acd29543adbb3ec9f34569cf2b61f030705b17f3e11d6e25015d8"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c5-conditional-rules",
+          "previous": {
+            "page": "chapter05_martingales.html",
+            "section": "s51",
+            "id": "derive-c5-conditional-rules",
+            "title": "例 5.1：条件期望的运算规则怎样验证",
+            "examples": [
+              "5.1"
+            ],
+            "theorems": [
+              "conditional expectation rules",
+              "conditional Jensen"
+            ],
+            "pdf_pages": [
+              210,
+              212
+            ],
+            "mathml": 19,
+            "body_characters": 479,
+            "example_source_pages": {
+              "5.1": [
+                210,
+                211,
+                212
+              ]
+            },
+            "html_sha256": "0887b67277bfc7d7698d98755aa4d9c88bc9d57ab4632b7a8651bf36558e622f",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "c5c57e5283c38d42cec4878db2315581a80d1c48dafe5339ad4a75c5c54d75ac"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c5-martingale-constructions",
+          "previous": {
+            "page": "chapter05_martingales.html",
+            "section": "s52",
+            "id": "derive-c5-martingale-constructions",
+            "title": "例 5.2–5.8：逐个计算下一步条件均值",
+            "examples": [
+              "5.2",
+              "5.3",
+              "5.4",
+              "5.5",
+              "5.6",
+              "5.7",
+              "5.8"
+            ],
+            "theorems": [
+              "5.1"
+            ],
+            "pdf_pages": [
+              212,
+              215
+            ],
+            "mathml": 29,
+            "body_characters": 672,
+            "example_source_pages": {
+              "5.2": [
+                212,
+                213
+              ],
+              "5.3": [
+                213
+              ],
+              "5.4": [
+                213,
+                214
+              ],
+              "5.5": [
+                214
+              ],
+              "5.6": [
+                214
+              ],
+              "5.7": [
+                215
+              ],
+              "5.8": [
+                215
+              ]
+            },
+            "html_sha256": "f5dd4f2ceb23e932627b364b8e56f9f74693f35b712b6cca83fce47d75c65b8e",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "3fff84f316d34b0afbd1928b29e5c8459e500cf1b6a6a5d4668d73b264bbde88"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c5-stopping-proof",
+          "previous": {
+            "page": "chapter05_martingales.html",
+            "section": "s53",
+            "id": "derive-c5-stopping-proof",
+            "title": "例 5.9–5.11：停止族的公平与极限条件",
+            "examples": [
+              "5.9",
+              "5.10",
+              "5.11"
+            ],
+            "theorems": [
+              "5.6",
+              "5.7",
+              "5.8",
+              "5.9",
+              "5.10",
+              "5.11"
+            ],
+            "pdf_pages": [
+              216,
+              220
+            ],
+            "mathml": 27,
+            "body_characters": 751,
+            "example_source_pages": {
+              "5.9": [
+                216,
+                217,
+                218
+              ],
+              "5.10": [
+                218,
+                219
+              ],
+              "5.11": [
+                219,
+                220
+              ]
+            },
+            "html_sha256": "ae621abe84c6fdbee928862298f20e4a76092b6db73163254c7da49af4a563e4",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "5f13c6f82e862dad0dfae62d73df3f59e6782f5d947f4d6b8b7733c67ee93d12"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c5-exit-scale",
+          "previous": {
+            "page": "chapter05_martingales.html",
+            "section": "s54",
+            "id": "derive-c5-exit-scale",
+            "title": "例 5.12–5.14：停住调和鞅得到退出概率",
+            "examples": [
+              "5.12",
+              "5.13",
+              "5.14"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              220,
+              221
+            ],
+            "mathml": 25,
+            "body_characters": 658,
+            "example_source_pages": {
+              "5.12": [
+                220
+              ],
+              "5.13": [
+                221
+              ],
+              "5.14": [
+                221
+              ]
+            },
+            "html_sha256": "e08c08e98366627e736acf50874724afe77522f5557eb84bf580c5c957b5a66d",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "ee2d111c704f7dbe5359724ea8e710feeef1f976fd0b302e67956e3849f98799"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c5-exit-wald",
+          "previous": {
+            "page": "chapter05_martingales.html",
+            "section": "s54",
+            "id": "derive-c5-exit-wald",
+            "title": "例 5.15–5.16：先证明可积，再使用 Wald",
+            "examples": [
+              "5.15",
+              "5.16"
+            ],
+            "theorems": [
+              "5.12"
+            ],
+            "pdf_pages": [
+              222,
+              224
+            ],
+            "mathml": 21,
+            "body_characters": 578,
+            "example_source_pages": {
+              "5.15": [
+                222,
+                223
+              ],
+              "5.16": [
+                224
+              ]
+            },
+            "html_sha256": "790f6d5b8f84bf77abe1aa60b1a34d6393fadcbf301c7a86381a4c059c44fa58",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "d59560bec5a92350bad881bd02672a3d94dbc814ce5fbea76a0477720c3d9c47"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c5-ruin-root",
+          "previous": {
+            "page": "chapter05_martingales.html",
+            "section": "s54",
+            "id": "derive-c5-ruin-root",
+            "title": "例 5.17–5.19：指数鞅怎样给出精确概率和上界",
+            "examples": [
+              "5.17",
+              "5.18",
+              "5.19"
+            ],
+            "theorems": [
+              "5.13"
+            ],
+            "pdf_pages": [
+              224,
+              226
+            ],
+            "mathml": 34,
+            "body_characters": 701,
+            "example_source_pages": {
+              "5.17": [
+                224,
+                225
+              ],
+              "5.18": [
+                225
+              ],
+              "5.19": [
+                225,
+                226
+              ]
+            },
+            "html_sha256": "b8c1b53127b61ecc6df57f51967a81682939c78827a310f4d6cb494e5e1ada8a",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "d69ced01af5ba3ceca402a8672a176d7f9482bfdb9299e6edefddbf457facb58"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c2-exponential-examples",
+          "previous": {
+            "page": "chapter02_poisson_processes.html",
+            "section": "s21",
+            "id": "derive-c2-exponential-examples",
+            "title": "指数公式与例 2.1–2.2 的逐次竞争",
+            "examples": [
+              "2.1",
+              "2.2"
+            ],
+            "theorems": [
+              "exponential memorylessness",
+              "2.1",
+              "2.2"
+            ],
+            "pdf_pages": [
+              106,
+              108
+            ],
+            "mathml": 21,
+            "body_characters": 709,
+            "example_source_pages": {
+              "2.1": [
+                106,
+                107
+              ],
+              "2.2": [
+                107,
+                108
+              ]
+            },
+            "html_sha256": "448cb990c3a5663feeb916087b9d67b0912adc22e4b26d43ae98fe341b894f58",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "398ea8e5acaca3028294815695d3bc4064ed48919e90f87720c1f70a79384f54"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c2-compound-moments",
+          "previous": {
+            "page": "chapter02_poisson_processes.html",
+            "section": "s23",
+            "id": "derive-c2-compound-moments",
+            "title": "例 2.3–2.5：复合泊松均值与方差的两层计算",
+            "examples": [
+              "2.3",
+              "2.4",
+              "2.5"
+            ],
+            "theorems": [
+              "2.10"
+            ],
+            "pdf_pages": [
+              115,
+              117
+            ],
+            "mathml": 17,
+            "body_characters": 470,
+            "example_source_pages": {
+              "2.3": [
+                115
+              ],
+              "2.4": [
+                115,
+                116,
+                117
+              ],
+              "2.5": [
+                117
+              ]
+            },
+            "html_sha256": "49c46a353a8b6000bfd39e797dd79c0aa78039e09c31a106c04e9c7cf963131d",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "6d61c20b8b34c243c280000b485208e8f41a7a64f3bb66c57b29c27871912aa5"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c2-thinning-examples",
+          "previous": {
+            "page": "chapter02_poisson_processes.html",
+            "section": "s24",
+            "id": "derive-c2-thinning-examples",
+            "title": "例 2.6–2.8：类别计数的独立性从哪里来",
+            "examples": [
+              "2.6",
+              "2.7",
+              "2.8"
+            ],
+            "theorems": [
+              "2.11"
+            ],
+            "pdf_pages": [
+              118,
+              119
+            ],
+            "mathml": 17,
+            "body_characters": 701,
+            "example_source_pages": {
+              "2.6": [
+                118
+              ],
+              "2.7": [
+                119
+              ],
+              "2.8": [
+                119
+              ]
+            },
+            "html_sha256": "c8388cfba454aa21d52b194b9b4e0b9ed32fd5ae884e2754555a5b847629a1af",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "abbad03349673edff0fdd19e1fcbbc024b9be0d5555448584c0f7813b4b23112"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c2-infinite-server",
+          "previous": {
+            "page": "chapter02_poisson_processes.html",
+            "section": "s24",
+            "id": "derive-c2-infinite-server",
+            "title": "例 2.9–2.11：仍在系统里的人数与年龄分类",
+            "examples": [
+              "2.9",
+              "2.10",
+              "2.11"
+            ],
+            "theorems": [
+              "2.12",
+              "2.13"
+            ],
+            "pdf_pages": [
+              115,
+              121
+            ],
+            "mathml": 21,
+            "body_characters": 611,
+            "example_source_pages": {
+              "2.9": [
+                115,
+                119,
+                120
+              ],
+              "2.10": [
+                120
+              ],
+              "2.11": [
+                120,
+                121
+              ]
+            },
+            "html_sha256": "451a708a952fb9b5008ecce6b4cb1c60c69bba65bc743cc0621ac120b5ec916d",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "172b2114ebfc46d38a39b3581984a432a89b08ae9ac500f8a5ea6feb873b603f"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c2-race-conditional",
+          "previous": {
+            "page": "chapter02_poisson_processes.html",
+            "section": "s24",
+            "id": "derive-c2-race-conditional",
+            "title": "例 2.12–2.14：到达竞赛与给定总数后的计算",
+            "examples": [
+              "2.12",
+              "2.13",
+              "2.14"
+            ],
+            "theorems": [
+              "2.14",
+              "2.15",
+              "2.16"
+            ],
+            "pdf_pages": [
+              121,
+              124
+            ],
+            "mathml": 23,
+            "body_characters": 864,
+            "example_source_pages": {
+              "2.12": [
+                121
+              ],
+              "2.13": [
+                123
+              ],
+              "2.14": [
+                123,
+                124
+              ]
+            },
+            "html_sha256": "7c0ef055cd66bb3640ef34ba79ce016466c612d3ab044149e9fe7586539db206",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "99b60a469bf9421c8760d36f190fae8378e4b5554cc4b660ab4e47bda6da14a7"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c4-clock-models",
+          "previous": {
+            "page": "chapter04_continuous_time_markov_chains.html",
+            "section": "s41",
+            "id": "derive-c4-clock-models",
+            "title": "例 4.1–4.6：从事件时钟构造生成矩阵",
+            "examples": [
+              "4.1",
+              "4.2",
+              "4.3",
+              "4.4",
+              "4.5",
+              "4.6"
+            ],
+            "theorems": [
+              "4.1"
+            ],
+            "pdf_pages": [
+              155,
+              160
+            ],
+            "mathml": 31,
+            "body_characters": 717,
+            "example_source_pages": {
+              "4.1": [
+                155,
+                156,
+                157
+              ],
+              "4.2": [
+                157
+              ],
+              "4.3": [
+                157
+              ],
+              "4.4": [
+                158,
+                159
+              ],
+              "4.5": [
+                159
+              ],
+              "4.6": [
+                159,
+                160
+              ]
+            },
+            "html_sha256": "db47f833aacc72205b34497c68fd1247d48474b8de8abfb7d2f4f21eb440aaa5",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "4b7589528da2fc712650b989d44408bd23e9c5f370d1815d00e1098b2c9f7424"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c4-transition-ode",
+          "previous": {
+            "page": "chapter04_continuous_time_markov_chains.html",
+            "section": "s42",
+            "id": "derive-c4-transition-ode",
+            "title": "例 4.7–4.10：由前向方程解转移概率",
+            "examples": [
+              "4.7",
+              "4.8",
+              "4.9",
+              "4.10"
+            ],
+            "theorems": [
+              "Kolmogorov forward and backward equations"
+            ],
+            "pdf_pages": [
+              162,
+              165
+            ],
+            "mathml": 39,
+            "body_characters": 826,
+            "example_source_pages": {
+              "4.7": [
+                162,
+                163
+              ],
+              "4.8": [
+                163
+              ],
+              "4.9": [
+                163,
+                164
+              ],
+              "4.10": [
+                164,
+                165
+              ]
+            },
+            "html_sha256": "fd8b74d6845e5466184e67838aa40dfdbf30a8865348b07dc72f814325f52179",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "ca49bf7b64d184b51fe4e9b3278a4a6e71e0b914e783978b6ff909667f777b1b"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c4-yule-riccati",
+          "previous": {
+            "page": "chapter04_continuous_time_markov_chains.html",
+            "section": "s42",
+            "id": "derive-c4-yule-riccati",
+            "title": "例 4.11–4.12：分枝生成函数与缩放极限",
+            "examples": [
+              "4.11",
+              "4.12"
+            ],
+            "theorems": [
+              "4.2",
+              "4.3",
+              "4.4",
+              "4.5"
+            ],
+            "pdf_pages": [
+              165,
+              170
+            ],
+            "mathml": 34,
+            "body_characters": 824,
+            "example_source_pages": {
+              "4.11": [
+                165,
+                166,
+                167
+              ],
+              "4.12": [
+                167,
+                168,
+                169,
+                170
+              ]
+            },
+            "html_sha256": "6e233fe97c8305a03f890900b466155239f24a1b233c500bece7ec0186daf5e4",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "09e3c203f9ef879a548103f411091cbeb86fed12135966cbfe859942007f54d9"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c4-weather-basketball",
+          "previous": {
+            "page": "chapter04_continuous_time_markov_chains.html",
+            "section": "s43",
+            "id": "derive-c4-weather-basketball",
+            "title": "例 4.13–4.14：真实时间平稳比例与得分率",
+            "examples": [
+              "4.13",
+              "4.14"
+            ],
+            "theorems": [
+              "4.6",
+              "4.7",
+              "4.8"
+            ],
+            "pdf_pages": [
+              172,
+              184
+            ],
+            "mathml": 25,
+            "body_characters": 732,
+            "example_source_pages": {
+              "4.13": [
+                172,
+                173
+              ],
+              "4.14": [
+                173,
+                174,
+                175,
+                183,
+                184
+              ]
+            },
+            "html_sha256": "3d4419a077774a44772b7ce15be3a7f253494f4c28aa47efc2fe23a9eb38ad02",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "20b2316412d76ad04000792a5a1a2fc949737e1e0daf353434950057ed4de287"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c4-birthdeath-stationarity",
+          "previous": {
+            "page": "chapter04_continuous_time_markov_chains.html",
+            "section": "s43",
+            "id": "derive-c4-birthdeath-stationarity",
+            "title": "例 4.15–4.19：由速率比求平稳分布",
+            "examples": [
+              "4.15",
+              "4.16",
+              "4.17",
+              "4.18",
+              "4.19"
+            ],
+            "theorems": [
+              "4.9"
+            ],
+            "pdf_pages": [
+              175,
+              182
+            ],
+            "mathml": 25,
+            "body_characters": 657,
+            "example_source_pages": {
+              "4.15": [
+                175,
+                176
+              ],
+              "4.16": [
+                176
+              ],
+              "4.17": [
+                176
+              ],
+              "4.18": [
+                177,
+                179,
+                180,
+                182
+              ],
+              "4.19": [
+                177,
+                178
+              ]
+            },
+            "html_sha256": "fd0512c3c0fdf5fd80555d3fdc1c38f27fff5f5fca9fac44cea7dd944d94d9c0",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "76beeba67a734f531ae7a6231759debab9ebda4c5e72e0ec29991277345853e2"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c4-branch-office-basketball",
+          "previous": {
+            "page": "chapter04_continuous_time_markov_chains.html",
+            "section": "s44",
+            "id": "derive-c4-branch-office-basketball",
+            "title": "例 4.20–4.22：跳链、最后离开与得分返回周期",
+            "examples": [
+              "4.20",
+              "4.21",
+              "4.22"
+            ],
+            "theorems": [],
+            "pdf_pages": [
+              178,
+              183
+            ],
+            "mathml": 36,
+            "body_characters": 1068,
+            "example_source_pages": {
+              "4.20": [
+                178,
+                179
+              ],
+              "4.21": [
+                180,
+                181,
+                183
+              ],
+              "4.22": [
+                183
+              ]
+            },
+            "html_sha256": "3b52ea08f5703ddec2c7ddc7de37025c766aabfcd1169c02966c19dba6e700e2",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "a9697ec9a1dcb24176cbaac6442fb5fa49792284a4ab973fdf6a93beec4b998f"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c4-queue-means",
+          "previous": {
+            "page": "chapter04_continuous_time_markov_chains.html",
+            "section": "s45",
+            "id": "derive-c4-queue-means",
+            "title": "例 4.23–4.27：人数、拒绝率与等待时间的求和",
+            "examples": [
+              "4.23",
+              "4.24",
+              "4.25",
+              "4.26",
+              "4.27"
+            ],
+            "theorems": [
+              "4.11",
+              "4.12"
+            ],
+            "pdf_pages": [
+              185,
+              190
+            ],
+            "mathml": 39,
+            "body_characters": 837,
+            "example_source_pages": {
+              "4.23": [
+                185
+              ],
+              "4.24": [
+                185,
+                186
+              ],
+              "4.25": [
+                186,
+                187
+              ],
+              "4.26": [
+                188
+              ],
+              "4.27": [
+                188,
+                189,
+                190
+              ]
+            },
+            "html_sha256": "6a65e72f669ca93c87aaca822ae91eb71be93317e61442edeb5bcc39edf556f3",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "2d0c1d36f3aa7ffceeb8ba99fd7962dac7045eab7af39c1f365d73ad711f0e02"
+        },
+        {
+          "group": "body_additions",
+          "id": "derive-c4-jackson-balance",
+          "previous": {
+            "page": "chapter04_continuous_time_markov_chains.html",
+            "section": "s46",
+            "id": "derive-c4-jackson-balance",
+            "title": "例 4.28–4.31：交通方程与乘积解的验证",
+            "examples": [
+              "4.28",
+              "4.29",
+              "4.30",
+              "4.31"
+            ],
+            "theorems": [
+              "4.17",
+              "4.18"
+            ],
+            "pdf_pages": [
+              191,
+              198
+            ],
+            "mathml": 49,
+            "body_characters": 1187,
+            "example_source_pages": {
+              "4.28": [
+                191,
+                192,
+                193
+              ],
+              "4.29": [
+                193,
+                194,
+                195,
+                196
+              ],
+              "4.30": [
+                196,
+                197
+              ],
+              "4.31": [
+                197,
+                198
+              ]
+            },
+            "html_sha256": "65a4b6fbc84757b08cae37e11e1cc83afee9721de5b504ba4bbaed38a3d7b160",
+            "derivation_review": "source, assumptions, equations and intermediate steps reviewed",
+            "hash_method": "html_support.canonical JSON SHA-256"
+          },
+          "current_html_sha256": "35f51b86d6127fe417abbd86aefee7b66d10ecc7eca5fdaa19316e2a08d18210"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-a3",
+          "previous": {
+            "page": "appendix_a_probability_review.html",
+            "id": "body-review-a3",
+            "section": "a3",
+            "title": "尾矩公式与 Jensen 的支撑线证明",
+            "mathml": 6,
+            "body_characters": 512,
+            "html_sha256": "63a3409a3a5c6f6f9ebf40a5f76d14211edbd42517b20c3e6bb56ed923bb19ba",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=269",
+              "../assets/essentials-of-stochastic-processes.pdf#page=271",
+              "../assets/essentials-of-stochastic-processes.pdf#page=272",
+              "../assets/essentials-of-stochastic-processes.pdf#page=272",
+              "../assets/essentials-of-stochastic-processes.pdf#page=272",
+              "../assets/essentials-of-stochastic-processes.pdf#page=273",
+              "../assets/essentials-of-stochastic-processes.pdf#page=274",
+              "../assets/essentials-of-stochastic-processes.pdf#page=275",
+              "../assets/essentials-of-stochastic-processes.pdf#page=116",
+              "../assets/essentials-of-stochastic-processes.pdf#page=273",
+              "../assets/essentials-of-stochastic-processes.pdf#page=270",
+              "../assets/essentials-of-stochastic-processes.pdf#page=271"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "f339a8adc08fe21fc6a05ddbb98ae3af8c8d0608b7d48c08f062a287a60d3e35"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s21",
+          "previous": {
+            "page": "chapter02_poisson_processes.html",
+            "id": "body-review-s21",
+            "section": "s21",
+            "title": "指数竞争的联合密度与 Gamma 卷积",
+            "mathml": 8,
+            "body_characters": 444,
+            "html_sha256": "3b28f9b303ccce162e422e96dd900b09a87622b92e10d82026c62c31b6a50dfb",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=104",
+              "../assets/essentials-of-stochastic-processes.pdf#page=106",
+              "../assets/essentials-of-stochastic-processes.pdf#page=108",
+              "../assets/essentials-of-stochastic-processes.pdf#page=106",
+              "../assets/essentials-of-stochastic-processes.pdf#page=106"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "851014f76a07a53b9232d5c9104ccd7d8d8f9f2b7df153fdc07d7f2a6f85719c"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s22",
+          "previous": {
+            "page": "chapter02_poisson_processes.html",
+            "id": "body-review-s22",
+            "section": "s22",
+            "title": "非齐次到达的累计速率与间隔",
+            "mathml": 7,
+            "body_characters": 447,
+            "html_sha256": "e156033904636af530467f65fa4d02878a2b0af69cf148918db547bd33574190",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=109",
+              "../assets/essentials-of-stochastic-processes.pdf#page=109",
+              "../assets/essentials-of-stochastic-processes.pdf#page=109",
+              "../assets/essentials-of-stochastic-processes.pdf#page=110",
+              "../assets/essentials-of-stochastic-processes.pdf#page=112",
+              "../assets/essentials-of-stochastic-processes.pdf#page=113",
+              "../assets/essentials-of-stochastic-processes.pdf#page=113",
+              "../assets/essentials-of-stochastic-processes.pdf#page=113",
+              "../assets/essentials-of-stochastic-processes.pdf#page=119",
+              "../assets/essentials-of-stochastic-processes.pdf#page=108"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "4ad78191ceebb79c07dba537e9a2e31e801c9deb9c2402a6b897e7212849b57b"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s31",
+          "previous": {
+            "page": "chapter03_renewal_processes.html",
+            "id": "body-review-s31",
+            "section": "s31",
+            "title": "零间隔与无限均值的计数率",
+            "mathml": 6,
+            "body_characters": 252,
+            "html_sha256": "6f92271cde0430de690a20c0ba27388f143627b87d3af9b4ed3b49fd96a77dcb",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=134",
+              "../assets/essentials-of-stochastic-processes.pdf#page=135",
+              "../assets/essentials-of-stochastic-processes.pdf#page=135",
+              "../assets/essentials-of-stochastic-processes.pdf#page=136",
+              "../assets/essentials-of-stochastic-processes.pdf#page=137",
+              "../assets/essentials-of-stochastic-processes.pdf#page=138",
+              "../assets/essentials-of-stochastic-processes.pdf#page=135",
+              "../assets/essentials-of-stochastic-processes.pdf#page=135"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "16f72d9f3d81a07d4cec08856e0429618738d608af244d4feb7cea302743e970"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s32",
+          "previous": {
+            "page": "chapter03_renewal_processes.html",
+            "id": "body-review-s32",
+            "section": "s32",
+            "title": "服务开始链与时间空闲比例",
+            "mathml": 18,
+            "body_characters": 540,
+            "html_sha256": "dc59695995999fa7c51dd07233441dc22e2ea7f7632e1ad0ea980bd77e2445a1",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=139",
+              "../assets/essentials-of-stochastic-processes.pdf#page=140",
+              "../assets/essentials-of-stochastic-processes.pdf#page=141",
+              "../assets/essentials-of-stochastic-processes.pdf#page=143",
+              "../assets/essentials-of-stochastic-processes.pdf#page=144",
+              "../assets/essentials-of-stochastic-processes.pdf#page=144",
+              "../assets/essentials-of-stochastic-processes.pdf#page=143",
+              "../assets/essentials-of-stochastic-processes.pdf#page=141"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "d54cdefa29ca6557cf59044603adf956bd4dfde11ff052d22d36b1771ca7b666"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s42",
+          "previous": {
+            "page": "chapter04_continuous_time_markov_chains.html",
+            "id": "body-review-s42",
+            "section": "s42",
+            "title": "Kimura 与 HKY 的速率校注",
+            "mathml": 7,
+            "body_characters": 387,
+            "html_sha256": "c6fa432ffa4e601a2ae71480482e95d08d67f0204f69502dcf12e3c4f0c69f53",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=160",
+              "../assets/essentials-of-stochastic-processes.pdf#page=165",
+              "../assets/essentials-of-stochastic-processes.pdf#page=167",
+              "../assets/essentials-of-stochastic-processes.pdf#page=169",
+              "../assets/essentials-of-stochastic-processes.pdf#page=169",
+              "../assets/essentials-of-stochastic-processes.pdf#page=165",
+              "../assets/essentials-of-stochastic-processes.pdf#page=162",
+              "../assets/essentials-of-stochastic-processes.pdf#page=165"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "c3fc8ea33bdf8ee4a0ea571323e2a62a6f563ab4eabcaece11fc32b0948010ba"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s43",
+          "previous": {
+            "page": "chapter04_continuous_time_markov_chains.html",
+            "id": "body-review-s43",
+            "section": "s43",
+            "title": "跳链的平稳分布如何换回时间分布",
+            "mathml": 4,
+            "body_characters": 416,
+            "html_sha256": "b140a7cb024dc7ad9e694297ed9f8a38098997eb155a589279e9123ff9c9fca2",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=170",
+              "../assets/essentials-of-stochastic-processes.pdf#page=171",
+              "../assets/essentials-of-stochastic-processes.pdf#page=171",
+              "../assets/essentials-of-stochastic-processes.pdf#page=175",
+              "../assets/essentials-of-stochastic-processes.pdf#page=171",
+              "../assets/essentials-of-stochastic-processes.pdf#page=172",
+              "../assets/essentials-of-stochastic-processes.pdf#page=175"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "7af44338ed7cb4d4b28ecd5e2338b8e8577cdcd338ff4780d0aa76fb158ed8f9"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s45",
+          "previous": {
+            "page": "chapter04_continuous_time_markov_chains.html",
+            "id": "body-review-s45",
+            "section": "s45",
+            "title": "多服务器队列在临界速率下的分类",
+            "mathml": 8,
+            "body_characters": 298,
+            "html_sha256": "651d6f2877ee00de53a64a875b29d3df7fb08db775654dfbcef1c7f2768d3719",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=186",
+              "../assets/essentials-of-stochastic-processes.pdf#page=188",
+              "../assets/essentials-of-stochastic-processes.pdf#page=189",
+              "../assets/essentials-of-stochastic-processes.pdf#page=190",
+              "../assets/essentials-of-stochastic-processes.pdf#page=190",
+              "../assets/essentials-of-stochastic-processes.pdf#page=191",
+              "../assets/essentials-of-stochastic-processes.pdf#page=191",
+              "../assets/essentials-of-stochastic-processes.pdf#page=188",
+              "../assets/essentials-of-stochastic-processes.pdf#page=185",
+              "../assets/essentials-of-stochastic-processes.pdf#page=189"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "a288c9640c348249d9f60ac19361cfb29d1b45e60319ff9bb61189523bf7b9df"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s52",
+          "previous": {
+            "page": "chapter05_martingales.html",
+            "id": "body-review-s52",
+            "section": "s52",
+            "title": "时间空间调和与漂移补偿",
+            "mathml": 3,
+            "body_characters": 346,
+            "html_sha256": "9deab5f9b9a5b68578c55c43f4b01e466a4776e35dedc7b160b95803c819bb5b",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=212",
+              "../assets/essentials-of-stochastic-processes.pdf#page=214",
+              "../assets/essentials-of-stochastic-processes.pdf#page=213",
+              "../assets/essentials-of-stochastic-processes.pdf#page=212"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "332f7bc62ca82115c18e7a69434f5867b5fce2fb7d3706df463f6b10cafcc38e"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s53",
+          "previous": {
+            "page": "chapter05_martingales.html",
+            "id": "body-review-s53",
+            "section": "s53",
+            "title": "有限期望与有界增量的停止条件",
+            "mathml": 5,
+            "body_characters": 257,
+            "html_sha256": "90a399e7ca016038eb19065f0a1d847a2195ea74928669c7ca67baa5c9790282",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=215",
+              "../assets/essentials-of-stochastic-processes.pdf#page=216",
+              "../assets/essentials-of-stochastic-processes.pdf#page=216",
+              "../assets/essentials-of-stochastic-processes.pdf#page=217",
+              "../assets/essentials-of-stochastic-processes.pdf#page=217",
+              "../assets/essentials-of-stochastic-processes.pdf#page=219",
+              "../assets/essentials-of-stochastic-processes.pdf#page=220",
+              "../assets/essentials-of-stochastic-processes.pdf#page=216"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "548e383fd93836c634dd1b3b616af13a97cfb8aaa1c0f99b067c6dfe6f006b6a"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s54",
+          "previous": {
+            "page": "chapter05_martingales.html",
+            "id": "body-review-s54",
+            "section": "s54",
+            "title": "GI/G/1 的负漂移与正再生证明",
+            "mathml": 3,
+            "body_characters": 620,
+            "html_sha256": "19b3eb1c6ce546afa166f350ed9a6f7bb23689a35eee4a8e2e81dc745b5ffc47",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=220",
+              "../assets/essentials-of-stochastic-processes.pdf#page=223",
+              "../assets/essentials-of-stochastic-processes.pdf#page=224",
+              "../assets/essentials-of-stochastic-processes.pdf#page=227",
+              "../assets/essentials-of-stochastic-processes.pdf#page=227",
+              "../assets/essentials-of-stochastic-processes.pdf#page=227",
+              "../assets/essentials-of-stochastic-processes.pdf#page=228",
+              "../assets/essentials-of-stochastic-processes.pdf#page=227",
+              "../assets/essentials-of-stochastic-processes.pdf#page=220",
+              "../assets/essentials-of-stochastic-processes.pdf#page=222",
+              "../assets/essentials-of-stochastic-processes.pdf#page=224"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "c2502700fca6d12e23229fbd7d68d637ea14e0e578214d7da05dbb71927d2c2c"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s61",
+          "previous": {
+            "page": "chapter06_mathematical_finance.html",
+            "id": "body-review-s61",
+            "section": "s61",
+            "title": "两个入门例子的现金流与两周期复制",
+            "mathml": 1,
+            "body_characters": 439,
+            "html_sha256": "b494de4a392f003a09d75657f5df1b2b212ea51865b8fc26b30b519b6c799d79",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=231",
+              "../assets/essentials-of-stochastic-processes.pdf#page=232",
+              "../assets/essentials-of-stochastic-processes.pdf#page=232",
+              "../assets/essentials-of-stochastic-processes.pdf#page=231",
+              "../assets/essentials-of-stochastic-processes.pdf#page=232"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "af42a03fb36a20633c807c88ba974cdad453f84b70006de049c550179da1b616"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s64",
+          "previous": {
+            "page": "chapter06_mathematical_finance.html",
+            "id": "body-review-s64",
+            "section": "s64",
+            "title": "一般凸支付的继续价值",
+            "mathml": 3,
+            "body_characters": 392,
+            "html_sha256": "93d9e3f78eb13a30ded977d481b3371206aab2c3af2811dc4b165d70ce8c8817",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=245",
+              "../assets/essentials-of-stochastic-processes.pdf#page=245",
+              "../assets/essentials-of-stochastic-processes.pdf#page=248",
+              "../assets/essentials-of-stochastic-processes.pdf#page=248",
+              "../assets/essentials-of-stochastic-processes.pdf#page=246"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "6267f775d9adafd05c92d99eb60e97c312d15f64afca2d64e8ea4f9f48a0469b"
+        },
+        {
+          "group": "retained_body_reviews",
+          "id": "body-review-s65",
+          "previous": {
+            "page": "chapter06_mathematical_finance.html",
+            "id": "body-review-s65",
+            "section": "s65",
+            "title": "把二项极限与定价 PDE 的省略步骤展开",
+            "mathml": 6,
+            "body_characters": 775,
+            "html_sha256": "2875cc76214ccbfc978adfd76c6f7d8d068037fab0bcd89e11229956112a6c4c",
+            "source_links": [
+              "../assets/essentials-of-stochastic-processes.pdf#page=249",
+              "../assets/essentials-of-stochastic-processes.pdf#page=250",
+              "../assets/essentials-of-stochastic-processes.pdf#page=251",
+              "../assets/essentials-of-stochastic-processes.pdf#page=252",
+              "../assets/essentials-of-stochastic-processes.pdf#page=250",
+              "../assets/essentials-of-stochastic-processes.pdf#page=249",
+              "../assets/essentials-of-stochastic-processes.pdf#page=249"
+            ],
+            "hash_scope": "entire containing section, program bodies omitted"
+          },
+          "current_html_sha256": "27f42d30634d1574069148e65b21104026ed0aece2c57e67c778d8e16a2f3dd5"
+        }
+      ]
+    },
+    {
+      "recorded_at_utc": "2026-10-15T19:27:36.796258+00:00",
+      "scope": "I017 final metadata synchronization after source-reading regression updates; current content and its 35 viewed screenshots unchanged. Historical values retained.",
+      "changes": [
+        {
+          "path": "notes/annotations_review.json",
+          "previous": {
+            "bytes": 167773,
+            "sha256": "5f83d7cb02be5b97232fa5680459d6f0f2d51e1247097f9df8411cf2c52a3647"
+          },
+          "current": {
+            "bytes": 169194,
+            "sha256": "b490480870a7af1fe05e10910190462e40b080567e4404ff47fc69c5417a90e1"
+          }
+        },
+        {
+          "path": "notes/code_deployment_review.json",
+          "previous": {
+            "bytes": 226201,
+            "sha256": "3ae1b4429c8641669aad42ce9eb2d3cf9131af15ecc3cad0ce4c249e755ce439"
+          },
+          "current": {
+            "bytes": 226859,
+            "sha256": "7c9b20ef6a2db5330d2d7227de632d97af9cd47e1a171227b5e78aa59f12b15b"
+          }
+        },
+        {
+          "path": "notes/readability_review.json",
+          "previous": {
+            "bytes": 288520,
+            "sha256": "5179fe3f29eee345d8526b25fda364a4711523444393655f75d9e995ea889140"
+          },
+          "current": {
+            "bytes": 289562,
+            "sha256": "3679658de4729713dd28a80fd6541b32c5b08d438c990d980a4cc89a61232daf"
+          }
+        },
+        {
+          "path": "notes/statements_review.json",
+          "previous": {
+            "bytes": 616254,
+            "sha256": "bb0dcc32d6f79d9ecee36f8a8e7d6d838dae79f9d66b7b0f90a57c7ec2d19f92"
+          },
+          "current": {
+            "bytes": 617296,
+            "sha256": "89ab1cae6ee6de730e545b73974d8a3af6c3b1b05a6e861bca240a82ae1ffd40"
+          }
+        },
+        {
+          "path": "notes/audit_fix_review.json",
+          "previous": {
+            "bytes": 252048,
+            "sha256": "d5683800ce814512c8ff41a72524d75c95680407b3e0613e39b97a35081571cd"
+          },
+          "current": {
+            "bytes": 253077,
+            "sha256": "79e959898322fe9547b2d75986ae221a218a274dd310caed1cde72a574b8209b"
+          }
+        }
+      ]
     }
-  ]
+  ],
+  "derivation_revision": {
+    "recorded_at_utc": "2026-10-15T15:20:54.985468+00:00",
+    "review_file": "derivation_review.json",
+    "scope": "Current chapter 1 content and link revision. Earlier evidence retains its original times and hashes in history; other chapter HTML unchanged."
+  },
+  "remaining_explanation_revision": {
+    "record": "remaining_explanation_review.json",
+    "scope": "I017: source comparison and author readback of all 349 items in chapters 2–6 and appendix A: 106 examples, 84 theorems/lemmas, 159 exercises and their subparts. Chapter 1, preface and overview unchanged from the I016 checkpoint.",
+    "recorded_at_utc": "2026-10-15T19:23:03.282449+00:00",
+    "general_proof_evidence": "author source comparison and mathematical readback; distinct from finite executable regressions"
+  }
 }

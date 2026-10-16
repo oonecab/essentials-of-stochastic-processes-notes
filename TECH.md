@@ -69,6 +69,12 @@
 
 内容与计算规则的权威入口见 [规则职责索引](docs/rules/README.md)，兼容取舍见 [ADR-001](docs/decisions/ADR-001-book-subprojects.md)。
 
+随机过程详细过程的分批修订见 [I015](issues/I015-stochastic-derivations.md) / [T015](test/T015-stochastic-derivations.md)。标准库脚本 `books/stochastic/tools/derivation_coverage.py` 从原来源清单枚举 115 条结果、162 例和 236 题，验证证明目标、逐项过程与证明块入链。公共检查现对全书 513 项运行过程门禁、清单新鲜度检查和错链等反例回归；单独 `--check` 使用同一全书范围。正式 HTML 继续是正文唯一维护源，现有 CSS/JS、MathML 和发布结构保持；本轮没有技术栈或环境约定变更。
+
+第一章按读者认可的例 1.4 深度完成逐项解释修订，范围和验收见 [I016](issues/I016-stochastic-chapter1-explanations.md) / [T016](test/T016-stochastic-chapter1-explanations.md)。逐项审阅记录绑定 164 项内容，涵盖模型、系数、证明条件及消元理由；习题 1.66 的原书计时边界另有精确回归。教学解释的人工读回与结构、计算、浏览器证据分别记录，运行时和发布机制沿用现有约定。
+
+第 2—6 章及附录 A 的 349 项解释修订见 [I017](issues/I017-stochastic-remaining-explanations.md) / [T017](test/T017-stochastic-remaining-explanations.md)：106 例、84 条定理／引理、159 题及小问逐项对照原书并读回，补齐独立证明入口和每一步的理由。`notes/remaining_explanation_review.json` 绑定逐项内容、来源和浏览器证据。维护回归覆盖全书 48 组线性系统，以及服务开始链与真实时间分布、竞争时钟、无限服务台、倍增赌局、金融路径和节点复制、历史报价舍入、收敛条件等计算边界；这些有限回归与一般定理的数学审阅分别记录。
+
 跨书伴读方法由 [RN-001](docs/reading-notes-standard.md)维护，新书按[接入步骤](docs/adding-a-book.md)和[工作模板](docs/templates/reading-notes/README.md)执行。该层只统一内容生产及验收方法，书级来源/计算规则和历史审阅保持原权威位置；现有按书检查与构建仍需显式接线。本次方法固化见 [I009](issues/I009-reading-notes-standard.md)，技术栈与服务环境保持不变。
 
 CS:APP 子项目当前为第三版 Global Edition 的全书地图、序言、第 1 章、Part I 第 2—6 章、Part II 第 7—9 章与 Part III 第 10—12 章，共十四页。正文沿 117 个大节、261 个二级节展开，涵盖 419 道本版原书题、36 道补充自测。`code/` 是 C/Python 维护源，固定宽度运算、ABI、Y86、优化与缓存条件随正文说明；源码及额外汇编/性能基准由 `code/programs.json` 登记。`tools/check_notes.py` 核对来源、逐题页码、源码同步和独立计算基准。普通 C 使用 C11 编译并配合 ASan/UBSan；按字填充明确使用 GNU/Clang may_alias 扩展，x86-64 分类汇编经 Rosetta 执行，Linux 跨目标汇编生成另列，Y86 教学模型与官方 yas/yis/ssim/psim 执行分别记录，code/y86/ 提供七个 HCL 补丁、31 个输入与复现命令；官方旧工具以 GNU89、Clang、Lex 兼容选项构建，普通教学程序继续使用严格 C11。完整原 PDF 按来源清单的 publication.include_source_pdf 纳入构建包，当前已启用；发布页保留章节、来源和习题的 #page 页序链接，关闭收录时退回文字来源。接入与本地验收见 [I011](issues/I011-csapp-pdf-navigation.md) / [T011](test/T011-csapp-pdf-navigation.md)。宽屏目录和右侧阅读注解、窄屏折叠、题目/代码结构沿现有两书版式。详见 [I003](issues/I003-csapp-companion.md) 和 [T003](test/T003-csapp-companion.md)。

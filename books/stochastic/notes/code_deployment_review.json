@@ -1406,36 +1406,36 @@
   },
   "files": {
     "notes/appendix_a_probability_review.html": {
-      "bytes": 192942,
-      "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a"
+      "bytes": 234663,
+      "sha256": "e9f6b0e37de94beada21f646eaaef34bdd4aea8815b0b4eaa1b82f5190574072"
     },
     "notes/book_overview.html": {
       "bytes": 50653,
       "sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0"
     },
     "notes/chapter01_markov_chains.html": {
-      "bytes": 1141735,
-      "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f"
+      "bytes": 2125126,
+      "sha256": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e"
     },
     "notes/chapter02_poisson_processes.html": {
-      "bytes": 493525,
-      "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b"
+      "bytes": 681667,
+      "sha256": "bea17e948c3e109e2179a9b6c786eb71545c90c633f53721f70f7f71b5d5af0f"
     },
     "notes/chapter03_renewal_processes.html": {
-      "bytes": 256873,
-      "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa"
+      "bytes": 351148,
+      "sha256": "780e29b3a4dde7f84314e1d53b66403585b008c361fd8f375546fce047d354ba"
     },
     "notes/chapter04_continuous_time_markov_chains.html": {
-      "bytes": 644426,
-      "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3"
+      "bytes": 850422,
+      "sha256": "b566c5c4da6b6031c7c89c86afdbdec24182cfe9d905a5f53e62dfd1c74f6b1c"
     },
     "notes/chapter05_martingales.html": {
-      "bytes": 322830,
-      "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c"
+      "bytes": 409836,
+      "sha256": "402c2d0834d8ed2a2e0cff270f1e19d216baf3a98f7df89b32692be2fc45005c"
     },
     "notes/chapter06_mathematical_finance.html": {
-      "bytes": 571627,
-      "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17"
+      "bytes": 1187107,
+      "sha256": "abdb3e6c1c7bcee20a443671dac19190b9160dc40280db2ec926098ad5caaece"
     },
     "notes/preface.html": {
       "bytes": 40431,
@@ -1446,16 +1446,16 @@
       "sha256": "bf0b0b959701437b80da8829b7b7f9ea25a8c0f02a6ade6090f9e316ce90d8fa"
     },
     "notes/README.md": {
-      "bytes": 9388,
-      "sha256": "0e9c348ea75c4ad5b4d6d5dc3f4b6b094cc6586d5c81308017526664f3aab2e0"
+      "bytes": 13308,
+      "sha256": "ee58ce9ab391429d8f136a90a9d9b7f7b2d3df089c788b5dcd021838ba393bbc"
     },
     "notes/source_manifest.json": {
       "bytes": 36372,
       "sha256": "f139c6dfedbf36be0b24bbae20b3f5af15482c4db068906a629bb6e29aafe23f"
     },
     "tools/check_notes.py": {
-      "bytes": 26392,
-      "sha256": "483ad49c248314be817587190e008037929ace0c7bbfed7104a836e64fbab026"
+      "bytes": 26770,
+      "sha256": "034867cf277244e8f5b74cb6b7ce4830ab522b1075a3cf9b27402d90e25298de"
     },
     "tools/sync_code.py": {
       "bytes": 4837,
@@ -1570,8 +1570,8 @@
       "sha256": "2232660e1909b42c6df8b5aca8eba12cdb383bf3741ecb53add49f6c26c6a0e7"
     },
     "notes/audit_fix_review.json": {
-      "bytes": 49590,
-      "sha256": "347fa8969c2628310f9e85bcbbad1d48723916b32516534df56847e490581e51"
+      "bytes": 253077,
+      "sha256": "79e959898322fe9547b2d75986ae221a218a274dd310caed1cde72a574b8209b"
     }
   },
   "review_history": [
@@ -6237,6 +6237,271 @@
           }
         }
       ]
+    },
+    {
+      "recorded_at_utc": "2026-10-15T15:20:54.985468+00:00",
+      "scope": "I015 chapter 1 derivation review, regression integration, and dependent current record bindings. Full details in derivation_review.json; historical snapshots are preserved.",
+      "changes": [
+        {
+          "path": "notes/chapter01_markov_chains.html",
+          "previous": {
+            "bytes": 1141735,
+            "sha256": "952ceb462308e6e4a7ed95b786b6e9c409d2a904a98308a7f7a044be67c9e82f"
+          },
+          "current": {
+            "bytes": 1594077,
+            "sha256": "65379c377b12a2de8fc47f24553c25a8dcc9a62a705b8f0edb1cc46e8ab9c3b0"
+          }
+        },
+        {
+          "path": "notes/README.md",
+          "previous": {
+            "bytes": 9388,
+            "sha256": "0e9c348ea75c4ad5b4d6d5dc3f4b6b094cc6586d5c81308017526664f3aab2e0"
+          },
+          "current": {
+            "bytes": 11056,
+            "sha256": "ab9daf6cf2f6b313dcfea7f414184dba378da122f7880c5891c0f7801d7db779"
+          }
+        },
+        {
+          "path": "tools/check_notes.py",
+          "previous": {
+            "bytes": 26392,
+            "sha256": "483ad49c248314be817587190e008037929ace0c7bbfed7104a836e64fbab026"
+          },
+          "current": {
+            "bytes": 26885,
+            "sha256": "7dbb379cb5bcbb7b529c3d567331bf477166163ecfb30f173853194d2b9451f3"
+          }
+        },
+        {
+          "path": "notes/audit_fix_review.json",
+          "previous": {
+            "bytes": 49590,
+            "sha256": "347fa8969c2628310f9e85bcbbad1d48723916b32516534df56847e490581e51"
+          },
+          "current": {
+            "bytes": 92392,
+            "sha256": "1530c5fc9a6eafc1dc3e32d3b973278ff501200d38afefb4a90ee6223d565fcb"
+          }
+        }
+      ],
+      "block_changes": []
+    },
+    {
+      "recorded_at_utc": "2026-10-15T15:43:33.685225+00:00",
+      "scope": "I015 reader feedback: only example-1-4 explains the two-generation probability, its conditional paths and assumptions. All other HTML content unchanged; teaching depth awaits reader acceptance.",
+      "changes": [
+        {
+          "path": "notes/chapter01_markov_chains.html",
+          "previous": {
+            "bytes": 1594077,
+            "sha256": "65379c377b12a2de8fc47f24553c25a8dcc9a62a705b8f0edb1cc46e8ab9c3b0"
+          },
+          "current": {
+            "bytes": 1603828,
+            "sha256": "fa7e23298784f25ab60945cbfd0c8deffad782faa44122d1bf96583019db1c5c"
+          }
+        },
+        {
+          "path": "notes/README.md",
+          "previous": {
+            "bytes": 11056,
+            "sha256": "ab9daf6cf2f6b313dcfea7f414184dba378da122f7880c5891c0f7801d7db779"
+          },
+          "current": {
+            "bytes": 11552,
+            "sha256": "caa3c8018dfbda43bdad87e9fb03ca96da41e6bb0cbbc5981962169a1361b344"
+          }
+        },
+        {
+          "path": "notes/audit_fix_review.json",
+          "previous": {
+            "bytes": 92392,
+            "sha256": "1530c5fc9a6eafc1dc3e32d3b973278ff501200d38afefb4a90ee6223d565fcb"
+          },
+          "current": {
+            "bytes": 122889,
+            "sha256": "d0946d13935b760fdffe88f8384df0f1c47a7da35b4273abe1517f6b59741b86"
+          }
+        }
+      ],
+      "block_changes": []
+    },
+    {
+      "recorded_at_utc": "2026-10-15T17:04:02.097274+00:00",
+      "scope": "I016: Chapter 1 only; read all 56 examples, 31 numbered proofs and 77 exercises, preserve reader-approved example 1.4 and explain the other 163 items. Explain 293 row operations in 35 systems; clarify exercise 1.66 positive-time absorption and original approximation in 1.68.",
+      "changes": [
+        {
+          "path": "notes/chapter01_markov_chains.html",
+          "previous": {
+            "bytes": 1603828,
+            "sha256": "fa7e23298784f25ab60945cbfd0c8deffad782faa44122d1bf96583019db1c5c"
+          },
+          "current": {
+            "bytes": 2125126,
+            "sha256": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e"
+          }
+        },
+        {
+          "path": "notes/README.md",
+          "previous": {
+            "bytes": 11552,
+            "sha256": "caa3c8018dfbda43bdad87e9fb03ca96da41e6bb0cbbc5981962169a1361b344"
+          },
+          "current": {
+            "bytes": 12437,
+            "sha256": "f414ad9bad99bd3d448a3240adf4d7f452c97a9bf8e228f060a383b17c269a9c"
+          }
+        },
+        {
+          "path": "notes/audit_fix_review.json",
+          "previous": {
+            "bytes": 122889,
+            "sha256": "d0946d13935b760fdffe88f8384df0f1c47a7da35b4273abe1517f6b59741b86"
+          },
+          "current": {
+            "bytes": 171924,
+            "sha256": "2189808a9b62a1cb8ed1b133a54764fb5aacdea16f1d818ce0074c65334aa752"
+          }
+        }
+      ],
+      "block_changes": []
+    },
+    {
+      "recorded_at_utc": "2026-10-15T19:23:03.282449+00:00",
+      "scope": "I017: source comparison and author readback of all 349 items in chapters 2–6 and appendix A: 106 examples, 84 theorems/lemmas, 159 exercises and their subparts. Chapter 1, preface and overview unchanged from the I016 checkpoint.",
+      "changes": [
+        {
+          "path": "notes/appendix_a_probability_review.html",
+          "previous": {
+            "bytes": 192942,
+            "sha256": "f97ffe43e5342e65239906842ce6351279ca30862afaa9aebaa45cfe48b2c84a"
+          },
+          "current": {
+            "bytes": 234663,
+            "sha256": "e9f6b0e37de94beada21f646eaaef34bdd4aea8815b0b4eaa1b82f5190574072"
+          }
+        },
+        {
+          "path": "notes/chapter02_poisson_processes.html",
+          "previous": {
+            "bytes": 493525,
+            "sha256": "fb6c679fa1954f085223cf9000c4cc4730cd705498faabd3e64a0aaedf94ee8b"
+          },
+          "current": {
+            "bytes": 681667,
+            "sha256": "bea17e948c3e109e2179a9b6c786eb71545c90c633f53721f70f7f71b5d5af0f"
+          }
+        },
+        {
+          "path": "notes/chapter03_renewal_processes.html",
+          "previous": {
+            "bytes": 256873,
+            "sha256": "e09e1d962f51fb968189c5cada21f20b3d25fa507b240e3e1038e9e34988b8fa"
+          },
+          "current": {
+            "bytes": 351148,
+            "sha256": "780e29b3a4dde7f84314e1d53b66403585b008c361fd8f375546fce047d354ba"
+          }
+        },
+        {
+          "path": "notes/chapter04_continuous_time_markov_chains.html",
+          "previous": {
+            "bytes": 644426,
+            "sha256": "6ef1c98ec24d7f0e4f2326792cb5e1214e15925829298c8c9e9cf644f452e3c3"
+          },
+          "current": {
+            "bytes": 850422,
+            "sha256": "b566c5c4da6b6031c7c89c86afdbdec24182cfe9d905a5f53e62dfd1c74f6b1c"
+          }
+        },
+        {
+          "path": "notes/chapter05_martingales.html",
+          "previous": {
+            "bytes": 322830,
+            "sha256": "cd058a42749c5c9023ba972beaacf214d9d68a9f79d12dc8f4f05ce0e78ba23c"
+          },
+          "current": {
+            "bytes": 409836,
+            "sha256": "402c2d0834d8ed2a2e0cff270f1e19d216baf3a98f7df89b32692be2fc45005c"
+          }
+        },
+        {
+          "path": "notes/chapter06_mathematical_finance.html",
+          "previous": {
+            "bytes": 571627,
+            "sha256": "1101765040fa8cab4999f120cf6cb8fb16d1bb39702c21cb63ee5ab2e559ad17"
+          },
+          "current": {
+            "bytes": 1187107,
+            "sha256": "abdb3e6c1c7bcee20a443671dac19190b9160dc40280db2ec926098ad5caaece"
+          }
+        },
+        {
+          "path": "notes/README.md",
+          "previous": {
+            "bytes": 12437,
+            "sha256": "f414ad9bad99bd3d448a3240adf4d7f452c97a9bf8e228f060a383b17c269a9c"
+          },
+          "current": {
+            "bytes": 13308,
+            "sha256": "ee58ce9ab391429d8f136a90a9d9b7f7b2d3df089c788b5dcd021838ba393bbc"
+          }
+        },
+        {
+          "path": "tools/check_notes.py",
+          "previous": {
+            "bytes": 26885,
+            "sha256": "7dbb379cb5bcbb7b529c3d567331bf477166163ecfb30f173853194d2b9451f3"
+          },
+          "current": {
+            "bytes": 26770,
+            "sha256": "034867cf277244e8f5b74cb6b7ce4830ab522b1075a3cf9b27402d90e25298de"
+          }
+        },
+        {
+          "path": "notes/audit_fix_review.json",
+          "previous": {
+            "bytes": 171924,
+            "sha256": "2189808a9b62a1cb8ed1b133a54764fb5aacdea16f1d818ce0074c65334aa752"
+          },
+          "current": {
+            "bytes": 252048,
+            "sha256": "d5683800ce814512c8ff41a72524d75c95680407b3e0613e39b97a35081571cd"
+          }
+        }
+      ],
+      "block_changes": []
+    },
+    {
+      "recorded_at_utc": "2026-10-15T19:27:36.796258+00:00",
+      "scope": "I017 final metadata synchronization after source-reading regression updates; current content and its 35 viewed screenshots unchanged. Historical values retained.",
+      "changes": [
+        {
+          "path": "notes/audit_fix_review.json",
+          "previous": {
+            "bytes": 252048,
+            "sha256": "d5683800ce814512c8ff41a72524d75c95680407b3e0613e39b97a35081571cd"
+          },
+          "current": {
+            "bytes": 253077,
+            "sha256": "79e959898322fe9547b2d75986ae221a218a274dd310caed1cde72a574b8209b"
+          }
+        }
+      ]
     }
-  ]
+  ],
+  "derivation_revision": {
+    "recorded_at_utc": "2026-10-15T15:20:54.985468+00:00",
+    "review_file": "derivation_review.json",
+    "scope": "Current chapter 1 content and link revision. Earlier evidence retains its original times and hashes in history; other chapter HTML unchanged."
+  },
+  "remaining_explanation_revision": {
+    "record": "remaining_explanation_review.json",
+    "scope": "I017: source comparison and author readback of all 349 items in chapters 2–6 and appendix A: 106 examples, 84 theorems/lemmas, 159 exercises and their subparts. Chapter 1, preface and overview unchanged from the I016 checkpoint.",
+    "recorded_at_utc": "2026-10-15T19:23:03.282449+00:00",
+    "general_proof_evidence": "author source comparison and mathematical readback; distinct from finite executable regressions"
+  }
 }

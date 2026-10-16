@@ -14,6 +14,7 @@ from readable_numbers import readable_tex, readable_code
 import content_integrity
 import sync_code
 import check_notes
+import check_content_regressions
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -80,6 +81,23 @@ class RegressionTests(unittest.TestCase):
             builder.write_archive(b,{'example.txt':b'same'})
             self.assertEqual(a.read_bytes(),b.read_bytes())
             self.assertEqual(int.from_bytes(a.read_bytes()[4:8],'little'),0)
+
+    def test_corrected_content_regressions_reject_wrong_displayed_values(self):
+        # Changes in notation or equivalent fraction spelling must not hide
+        # a wrong traffic sum, parity price or average-price option value.
+        real_read=Path.read_text
+        cases=[
+            ('chapter04_continuous_time_markov_chains.html','r₁=1+5/7=12/7','r₁=1+5/7=11/7'),
+            ('chapter06_mathematical_finance.html','10368/1225','10367/1225'),
+            ('chapter06_mathematical_finance.html',r'V_0=\frac{476}{375}',r'V_0=\frac{64}{25}'),
+        ]
+        for filename,correct,wrong in cases:
+            path=ROOT/'notes'/filename;source=real_read(path)
+            self.assertIn(correct,source)
+            changed=source.replace(correct,wrong)
+            def read(obj,*args,**kwargs):return changed if obj==path else real_read(obj,*args,**kwargs)
+            with self.subTest(filename=filename,value=wrong),patch.object(Path,'read_text',read):
+                with self.assertRaises(AssertionError):check_content_regressions.main()
 
 
 if __name__=='__main__':unittest.main()

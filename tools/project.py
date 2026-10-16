@@ -43,6 +43,7 @@ def check(book_id: str, quick: bool, benchmarks: bool) -> int:
     if "stochastic" in selected:
         base = selected["stochastic"]["root"]
         commands += [[sys.executable, base / "tools/check_review_records.py"],
+                     [sys.executable, ROOT / "test/test_stochastic_derivations.py"],
                      [sys.executable, base / "tools/check_notes.py", "--extract-only", "--run-dir", run / "stochastic-structure"]]
         if not quick:
             commands.append([sys.executable, base / "tools/check_notes.py", "--run-dir", run / "stochastic"])

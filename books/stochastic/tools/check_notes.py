@@ -8,6 +8,7 @@ from readable_numbers import readable_text, readable_tex, readable_code
 from sync_code import program_sources, synchronize
 from html_support import Document, check_resources
 from content_integrity import check_snapshot, check_pdf_locations, check_source_numbers
+from derivation_coverage import load_documents, validate, check_current_inventory
 from generate_cases import reference
 from datetime import datetime, timezone
 ROOT=Path(__file__).resolve().parents[1]
@@ -168,6 +169,11 @@ def main():
     synchronization=synchronize()
     if synchronization['differences']:raise AssertionError('HTML differs from standalone programs: '+str(synchronization['differences']))
     source_programs,standalone_sources=program_sources()
+    # I017 extends the reviewed explanation gate to every catalogued item.
+    derivation_documents=load_documents()
+    check_current_inventory(derivation_documents)
+    derivation_errors=validate(derivation_documents)
+    if derivation_errors:raise AssertionError('\n'.join(derivation_errors))
     content_binding=check_snapshot()
     page_correspondence=check_pdf_locations()
     paths=sorted(NOTES.glob("*.html"))

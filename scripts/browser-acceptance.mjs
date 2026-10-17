@@ -53,7 +53,7 @@ try {
       await page.waitForFunction(id=>{
         const e=document.getElementById(id);if(!e)return false;
         for(let n=e;n;n=n.parentElement)if(n.tagName==='DETAILS'&&!n.open)return false;
-        const r=(e.querySelector('summary')??e).getBoundingClientRect();return r.top>=0&&r.top<innerHeight&&r.bottom>0;
+        const r=(e.tagName==='DETAILS'?e.querySelector(':scope > summary'):e).getBoundingClientRect();return r.top>=0&&r.top<innerHeight&&r.bottom>0;
       },id,{timeout:10000});
       await page.waitForFunction(id=>{
         const links=[...document.querySelectorAll('#chapter-toc a[href^="#"]')];
@@ -61,7 +61,7 @@ try {
         for(;e&&!expected;e=e.parentElement)expected=links.find(a=>a.getAttribute('href')==='#'+e.id);
         return !expected||expected.getAttribute('aria-current')==='location';
       },id,{timeout:10000});
-      view.deep_links.push(await page.evaluate(id=>{const e=document.getElementById(id),r=(e.querySelector('summary')??e).getBoundingClientRect();return {id,hash:location.hash,open:e.open??null,top:r.top,active:document.querySelector('#chapter-toc [aria-current="location"]')?.getAttribute('href'),answer:e.querySelector('.answer')?.textContent.length??null};},id));
+      view.deep_links.push(await page.evaluate(id=>{const e=document.getElementById(id),r=(e.tagName==='DETAILS'?e.querySelector(':scope > summary'):e).getBoundingClientRect();return {id,hash:location.hash,open:e.open??null,top:r.top,active:document.querySelector('#chapter-toc [aria-current="location"]')?.getAttribute('href'),answer:e.querySelector('.answer')?.textContent.length??null};},id));
     }
     if(width===390&&state.exercises.length)await screenshot(stem+'-answer');
     if(width>=1440&&state.annotations){

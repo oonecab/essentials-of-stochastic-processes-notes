@@ -7561,16 +7561,16 @@
   "validation_file": "validation.json",
   "files": {
     "agent.md": {
-      "bytes": 6910,
-      "sha256": "bf0b0b959701437b80da8829b7b7f9ea25a8c0f02a6ade6090f9e316ce90d8fa"
+      "bytes": 7102,
+      "sha256": "ac845c60605089b7db9d6e421446de3666039923e493e9e9818c5affd083a31a"
     },
     "notes/README.md": {
-      "bytes": 13308,
-      "sha256": "ee58ce9ab391429d8f136a90a9d9b7f7b2d3df089c788b5dcd021838ba393bbc"
+      "bytes": 13603,
+      "sha256": "654dd57be66614b5310f8fa8f6499b0c0faed03a2149d429e01fee1561994422"
     },
     "notes/annotations_review.json": {
-      "bytes": 169194,
-      "sha256": "b490480870a7af1fe05e10910190462e40b080567e4404ff47fc69c5417a90e1"
+      "bytes": 171253,
+      "sha256": "944b1d9e4eff3c20f2196cbbe046c816e7070847a89fc1ca400da2ea074f7bba"
     },
     "notes/appendix_a_probability_review.html": {
       "bytes": 234663,
@@ -7605,24 +7605,24 @@
       "sha256": "abdb3e6c1c7bcee20a443671dac19190b9160dc40280db2ec926098ad5caaece"
     },
     "notes/code_deployment_review.json": {
-      "bytes": 226859,
-      "sha256": "7c9b20ef6a2db5330d2d7227de632d97af9cd47e1a171227b5e78aa59f12b15b"
+      "bytes": 228155,
+      "sha256": "2d6c69f74b23dff7a234ab1e271adbaee84c2a89b58ae5135a7a7118b17cfeb9"
     },
     "notes/preface.html": {
       "bytes": 40431,
       "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba"
     },
     "notes/readability_review.json": {
-      "bytes": 289562,
-      "sha256": "3679658de4729713dd28a80fd6541b32c5b08d438c990d980a4cc89a61232daf"
+      "bytes": 290523,
+      "sha256": "5c27c80b018471ead7ad47ce52ecc58be394a59ddee21dc0f5dae9f21deea367"
     },
     "notes/source_manifest.json": {
       "bytes": 36372,
       "sha256": "f139c6dfedbf36be0b24bbae20b3f5af15482c4db068906a629bb6e29aafe23f"
     },
     "notes/statements_review.json": {
-      "bytes": 617296,
-      "sha256": "89ab1cae6ee6de730e545b73974d8a3af6c3b1b05a6e861bca240a82ae1ffd40"
+      "bytes": 618976,
+      "sha256": "b360cc5777f149ded793ede09fa33a2ac11b71f8591d36360b735af00dc50804"
     },
     "tools/check_notes.py": {
       "bytes": 26770,
@@ -7637,8 +7637,8 @@
       "sha256": "9cd18a8d68169aa32d93b45954ee386ed4ae732742ee9913909c08291b03f603"
     },
     "notes/audit_fix_review.json": {
-      "bytes": 253077,
-      "sha256": "79e959898322fe9547b2d75986ae221a218a274dd310caed1cde72a574b8209b"
+      "bytes": 253995,
+      "sha256": "f7f1df05c0676ce4ae17620cdf2452a48c37b7e472a6170a4186e21e8a4b2e62"
     }
   },
   "review_history": [
@@ -13139,5 +13139,89 @@
     "scope": "I017: source comparison and author readback of all 349 items in chapters 2–6 and appendix A: 106 examples, 84 theorems/lemmas, 159 exercises and their subparts. Chapter 1, preface and overview unchanged from the I016 checkpoint.",
     "recorded_at_utc": "2026-10-15T19:23:03.282449+00:00",
     "general_proof_evidence": "author source comparison and mathematical readback; distinct from finite executable regressions"
-  }
+  },
+  "migration_binding_history": [
+    {
+      "scope": "I028 仅维护路径说明及其审阅记录绑定联动；正文、公式、原始内容基线保持。",
+      "updates": [
+        {
+          "file": "agent.md",
+          "previous": {
+            "bytes": 6910,
+            "sha256": "bf0b0b959701437b80da8829b7b7f9ea25a8c0f02a6ade6090f9e316ce90d8fa"
+          },
+          "current": {
+            "bytes": 7102,
+            "sha256": "ac845c60605089b7db9d6e421446de3666039923e493e9e9818c5affd083a31a"
+          }
+        },
+        {
+          "file": "notes/README.md",
+          "previous": {
+            "bytes": 13308,
+            "sha256": "ee58ce9ab391429d8f136a90a9d9b7f7b2d3df089c788b5dcd021838ba393bbc"
+          },
+          "current": {
+            "bytes": 13603,
+            "sha256": "654dd57be66614b5310f8fa8f6499b0c0faed03a2149d429e01fee1561994422"
+          }
+        },
+        {
+          "file": "notes/annotations_review.json",
+          "previous": {
+            "bytes": 169194,
+            "sha256": "b490480870a7af1fe05e10910190462e40b080567e4404ff47fc69c5417a90e1"
+          },
+          "current": {
+            "bytes": 171253,
+            "sha256": "944b1d9e4eff3c20f2196cbbe046c816e7070847a89fc1ca400da2ea074f7bba"
+          }
+        },
+        {
+          "file": "notes/code_deployment_review.json",
+          "previous": {
+            "bytes": 226859,
+            "sha256": "7c9b20ef6a2db5330d2d7227de632d97af9cd47e1a171227b5e78aa59f12b15b"
+          },
+          "current": {
+            "bytes": 228155,
+            "sha256": "2d6c69f74b23dff7a234ab1e271adbaee84c2a89b58ae5135a7a7118b17cfeb9"
+          }
+        },
+        {
+          "file": "notes/readability_review.json",
+          "previous": {
+            "bytes": 289562,
+            "sha256": "3679658de4729713dd28a80fd6541b32c5b08d438c990d980a4cc89a61232daf"
+          },
+          "current": {
+            "bytes": 290523,
+            "sha256": "5c27c80b018471ead7ad47ce52ecc58be394a59ddee21dc0f5dae9f21deea367"
+          }
+        },
+        {
+          "file": "notes/statements_review.json",
+          "previous": {
+            "bytes": 617296,
+            "sha256": "89ab1cae6ee6de730e545b73974d8a3af6c3b1b05a6e861bca240a82ae1ffd40"
+          },
+          "current": {
+            "bytes": 618976,
+            "sha256": "b360cc5777f149ded793ede09fa33a2ac11b71f8591d36360b735af00dc50804"
+          }
+        },
+        {
+          "file": "notes/audit_fix_review.json",
+          "previous": {
+            "bytes": 253077,
+            "sha256": "79e959898322fe9547b2d75986ae221a218a274dd310caed1cde72a574b8209b"
+          },
+          "current": {
+            "bytes": 253995,
+            "sha256": "f7f1df05c0676ce4ae17620cdf2452a48c37b7e472a6170a4186e21e8a4b2e62"
+          }
+        }
+      ]
+    }
+  ]
 }

@@ -2622,8 +2622,8 @@
   },
   "files": {
     "agent.md": {
-      "bytes": 6910,
-      "sha256": "bf0b0b959701437b80da8829b7b7f9ea25a8c0f02a6ade6090f9e316ce90d8fa"
+      "bytes": 7102,
+      "sha256": "ac845c60605089b7db9d6e421446de3666039923e493e9e9818c5affd083a31a"
     },
     "assets/essentials-of-stochastic-processes.pdf": {
       "bytes": 2579008,
@@ -2734,8 +2734,8 @@
       "sha256": "7977a4f5e1d6b6704b8efd1b8251a963689598d9371e61d58c9d68ac8bf91871"
     },
     "notes/README.md": {
-      "bytes": 13308,
-      "sha256": "ee58ce9ab391429d8f136a90a9d9b7f7b2d3df089c788b5dcd021838ba393bbc"
+      "bytes": 13603,
+      "sha256": "654dd57be66614b5310f8fa8f6499b0c0faed03a2149d429e01fee1561994422"
     },
     "notes/appendix_a_probability_review.html": {
       "bytes": 234663,
@@ -7607,5 +7607,34 @@
     "scope": "I017: source comparison and author readback of all 349 items in chapters 2–6 and appendix A: 106 examples, 84 theorems/lemmas, 159 exercises and their subparts. Chapter 1, preface and overview unchanged from the I016 checkpoint.",
     "recorded_at_utc": "2026-10-15T19:23:03.282449+00:00",
     "general_proof_evidence": "author source comparison and mathematical readback; distinct from finite executable regressions"
-  }
+  },
+  "migration_binding_history": [
+    {
+      "scope": "I028 仅维护路径说明及其审阅记录绑定联动；正文、公式、原始内容基线保持。",
+      "updates": [
+        {
+          "file": "agent.md",
+          "previous": {
+            "bytes": 6910,
+            "sha256": "bf0b0b959701437b80da8829b7b7f9ea25a8c0f02a6ade6090f9e316ce90d8fa"
+          },
+          "current": {
+            "bytes": 7102,
+            "sha256": "ac845c60605089b7db9d6e421446de3666039923e493e9e9818c5affd083a31a"
+          }
+        },
+        {
+          "file": "notes/README.md",
+          "previous": {
+            "bytes": 13308,
+            "sha256": "ee58ce9ab391429d8f136a90a9d9b7f7b2d3df089c788b5dcd021838ba393bbc"
+          },
+          "current": {
+            "bytes": 13603,
+            "sha256": "654dd57be66614b5310f8fa8f6499b0c0faed03a2149d429e01fee1561994422"
+          }
+        }
+      ]
+    }
+  ]
 }

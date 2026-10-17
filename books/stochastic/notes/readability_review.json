@@ -6189,16 +6189,16 @@
       "sha256": "abdb3e6c1c7bcee20a443671dac19190b9160dc40280db2ec926098ad5caaece"
     },
     "notes/code_deployment_review.json": {
-      "bytes": 226859,
-      "sha256": "7c9b20ef6a2db5330d2d7227de632d97af9cd47e1a171227b5e78aa59f12b15b"
+      "bytes": 228155,
+      "sha256": "2d6c69f74b23dff7a234ab1e271adbaee84c2a89b58ae5135a7a7118b17cfeb9"
     },
     "notes/preface.html": {
       "bytes": 40431,
       "sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba"
     },
     "notes/audit_fix_review.json": {
-      "bytes": 253077,
-      "sha256": "79e959898322fe9547b2d75986ae221a218a274dd310caed1cde72a574b8209b"
+      "bytes": 253995,
+      "sha256": "f7f1df05c0676ce4ae17620cdf2452a48c37b7e472a6170a4186e21e8a4b2e62"
     }
   },
   "review_history": [
@@ -10034,5 +10034,34 @@
     "scope": "I017: source comparison and author readback of all 349 items in chapters 2–6 and appendix A: 106 examples, 84 theorems/lemmas, 159 exercises and their subparts. Chapter 1, preface and overview unchanged from the I016 checkpoint.",
     "recorded_at_utc": "2026-10-15T19:23:03.282449+00:00",
     "general_proof_evidence": "author source comparison and mathematical readback; distinct from finite executable regressions"
-  }
+  },
+  "migration_binding_history": [
+    {
+      "scope": "I028 仅维护路径说明及其审阅记录绑定联动；正文、公式、原始内容基线保持。",
+      "updates": [
+        {
+          "file": "notes/code_deployment_review.json",
+          "previous": {
+            "bytes": 226859,
+            "sha256": "7c9b20ef6a2db5330d2d7227de632d97af9cd47e1a171227b5e78aa59f12b15b"
+          },
+          "current": {
+            "bytes": 228155,
+            "sha256": "2d6c69f74b23dff7a234ab1e271adbaee84c2a89b58ae5135a7a7118b17cfeb9"
+          }
+        },
+        {
+          "file": "notes/audit_fix_review.json",
+          "previous": {
+            "bytes": 253077,
+            "sha256": "79e959898322fe9547b2d75986ae221a218a274dd310caed1cde72a574b8209b"
+          },
+          "current": {
+            "bytes": 253995,
+            "sha256": "f7f1df05c0676ce4ae17620cdf2452a48c37b7e472a6170a4186e21e8a4b2e62"
+          }
+        }
+      ]
+    }
+  ]
 }

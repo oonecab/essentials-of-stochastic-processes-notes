@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "book": "stochastic",
+  "recorded_at_utc": "2026-10-17T08:31:18.968665+00:00",
+  "status": "Go",
+  "scope": "Astro 静态迁移；原正文、数学、代码和历史内容审阅保持。",
+  "baseline_ref": "b2aeff3",
+  "pages": 9,
+  "counts": {
+    "exercises": 236,
+    "self_checks": 0,
+    "statements": 150,
+    "mathml": 13009,
+    "svg": 7
+  },
+  "source_bytes": 5931053,
+  "output_bytes": 5986389,
+  "js_bytes": 38155,
+  "max_js_ratio": 1,
+  "parity_differences": [],
+  "external_requests": [],
+  "js_views": 36,
+  "no_js_views": 9,
+  "visual_review": "逐页查看九页 1800/390 首屏、六章末题和 no-JS 首题联系图，另读第一章 1440/1024 原图及序言手机原图；正文、题号、公式横滚与注解正常。",
+  "evidence_sha256": {
+    "tmp/reading-notes-migration/parity/stochastic.json": "c41d7c803cd8d2d4605f7b0dab2aa32c2190a05dfbf7e6a4a162dc04dddb1d6a",
+    "tmp/reading-notes-migration/browser/stochastic/report.json": "b1c548eaa320f85abc558f01aebb2b830bf94421b0a92b4a05364d1d93d2bc11",
+    "tmp/project-check/20261017T162900-95_1u10w/report.json": "64d244a820c18541e856a36a0834c32d764d9d85ad25a18459c75b5888d3108f"
+  },
+  "screenshots": [
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_appendix_a_probability_review-1800-top.png",
+      "sha256": "9fc1c0a363b219ea5b8d8f1c6e6c9cfa0f58240cdd4094fecc77b86f651663f7"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_appendix_a_probability_review-1440-top.png",
+      "sha256": "43e89531acca89a8213a681d55ff4f4635ac714ca086e9bc4f75e93f3e93546c"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_appendix_a_probability_review-1024-top.png",
+      "sha256": "f10faed908fb5f6e28a0a095ba39aa20dc1cc952659feabbac0efa07d7aa525e"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_appendix_a_probability_review-390-top.png",
+      "sha256": "6dc9c7f45da92655f40d49467a487e21cabc64f30618cf0511cfa4efe350bc00"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_book_overview-1800-top.png",
+      "sha256": "de47eaba60bb433a8fb95ffbb23a898b3e8558c2d89a5a56e4f0e28142c5f078"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_book_overview-1440-top.png",
+      "sha256": "b3b18553c675b040c53300020c6337b56d259f58ecc4e97198212177b1cf7431"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_book_overview-1024-top.png",
+      "sha256": "6390d410b068eaae1c2c0856371a0def8b197f6e21e7040641bab165a59da705"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_book_overview-390-top.png",
+      "sha256": "bf793c0ddcd437a76fce8a83f2f66344f0efb046bf6b1befb990586e69690fe9"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter01_markov_chains-1800-top.png",
+      "sha256": "9c890727effc9404f88f4a27a7ec59dc8d837c2a6320a4fd3231265e13afa685"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter01_markov_chains-1440-top.png",
+      "sha256": "3a48a84a2527f43e325c6e933aa54721dab8b0a70acfbaa7b12ccd3f30fb231e"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter01_markov_chains-1024-top.png",
+      "sha256": "310b139f0d2d886e09ba098af5d309e0d6bf1e719cd2af086b17a3fb16f9e2c4"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter01_markov_chains-390-top.png",
+      "sha256": "5fad3e16d776fd729b8a10453ea3d19b1495ab78c2bc464363a6371ca5670f0b"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter01_markov_chains-390-answer.png",
+      "sha256": "e62bd7a61ce58806f54167a527a44a69d4b530da4d9b901565bd7752f5c6ebe0"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter02_poisson_processes-1800-top.png",
+      "sha256": "998a18651baadac881fbd9adc4499e401322a7c9a051d32dbbc06930d55a182c"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter02_poisson_processes-1440-top.png",
+      "sha256": "471fec06fda9151f4fc07359e21009afb127ce96823466f51e6c232f6e4fafbc"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter02_poisson_processes-1024-top.png",
+      "sha256": "e4431808fb97bca15d622faebec263e5a1a81a2cad1308fac7a7ece1093dd832"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter02_poisson_processes-390-top.png",
+      "sha256": "96b31bd5d78f7fdb2e155ed1c5b1168883be3e9636ef35b1ab990bee3ea6f794"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter02_poisson_processes-390-answer.png",
+      "sha256": "7d5bbbbe93c0f458d3a6f580953d2600a1d71608accf5594022a7fa828ff662f"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter03_renewal_processes-1800-top.png",
+      "sha256": "b3dbec77db7907da3a0fe2977ecbd22561b7bf66093ec2009d33c96aaf84c576"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter03_renewal_processes-1440-top.png",
+      "sha256": "d7df8202f3156243c43d0dea59fa2c0dc03de34bb6cf0a3d22b6c164e7586d80"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter03_renewal_processes-1024-top.png",
+      "sha256": "30bc03ad5df3daf04c178d1925e3546ac415b0f4da9aef98dc1408d5b0fac181"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter03_renewal_processes-390-top.png",
+      "sha256": "74e5a35d20c3692136141e34dafa8bdb997c859557580f3f145e5e97c363aa4e"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter03_renewal_processes-390-answer.png",
+      "sha256": "f9d8faf9bcda315fca6f112742fc29c70039d11111f035261e43dc261937d653"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter04_continuous_time_markov_chains-1800-top.png",
+      "sha256": "914127511bf792b847853aaf27bfe247e0bc3eb66dfd7452cb3b510e4c561f25"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter04_continuous_time_markov_chains-1440-top.png",
+      "sha256": "6ae8bc05b6cd07ec67b635513691fd75f28a16e440f25e5bbe12c154d8ff09a1"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter04_continuous_time_markov_chains-1024-top.png",
+      "sha256": "351583521af52d8de95d16e8e710186295a24754cba8d83829daffc11143621a"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter04_continuous_time_markov_chains-390-top.png",
+      "sha256": "bc0efca83c6b787b81a3ffa9fe5f5edc389cf580f8de2f51e5614b0cb3985f13"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter04_continuous_time_markov_chains-390-answer.png",
+      "sha256": "a3b4f99f008e632b477d74f2095d99971def0f22b36d3bbdeea246680adff28c"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter05_martingales-1800-top.png",
+      "sha256": "46d5a25299076d2c550ced940c60ba7263fcf14442398aa092047cd0861c413c"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter05_martingales-1440-top.png",
+      "sha256": "809709ebb85a0d46876f05d920b1318b1039756dc8fe131419f2c6220c696cfd"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter05_martingales-1024-top.png",
+      "sha256": "6b199514179e470c67d15fd7163762b917d53af6951ce869b2c3f4517d74b63d"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter05_martingales-390-top.png",
+      "sha256": "25383ec4564a6cdb41db319621c9fba91b8f4adeb02b5dbad43e3be88c4300fb"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter05_martingales-390-answer.png",
+      "sha256": "2599ca9830638c1210af80dfa487400837dd3ee54c275f23b6cc802bdbac1adc"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter06_mathematical_finance-1800-top.png",
+      "sha256": "5d8ade2a989fc0fb0bcb4dc1f2ec0e9c2ca9e9835d43b75358442df3a87c9de9"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter06_mathematical_finance-1440-top.png",
+      "sha256": "0c1e57884bc4c3d778d495691ca4e7f0fe46914cf0856d81e4d5ec616c9d8d6e"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter06_mathematical_finance-1024-top.png",
+      "sha256": "9934a39882ce6986d1c6e2b3341977108105f05861aa671be41c109a08d2acbe"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter06_mathematical_finance-390-top.png",
+      "sha256": "f4f22729b51905a6b9582c5699399f9a1f87b7720278065fe33a7245e860e21e"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter06_mathematical_finance-390-answer.png",
+      "sha256": "06bd951b2445b4ffb8fcf49ad96206cca26e237567009b42384987ee378350df"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_preface-1800-top.png",
+      "sha256": "023e064d8df13a92bbb6500e20840db1f197a433e9da8508668cffc352081921"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_preface-1440-top.png",
+      "sha256": "8970a5784679daefa829e45196661b4f1246594d8b0a01558dafc68f274e4b20"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_preface-1024-top.png",
+      "sha256": "f51599650c571a49c040fb1ca05c17b0f1b8c11dae4c742baa817bf5cb1beadd"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_preface-390-top.png",
+      "sha256": "66932d436fb4ea277db5641ab94ec23c445ecee0952dbf33e6aa32319001286f"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_appendix_a_probability_review-no-js.png",
+      "sha256": "6a60e39ef6c33d00ca0abcf36d108cd4e53ed03fbd650617f5c40ca02d3218fa"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_book_overview-no-js.png",
+      "sha256": "da3dd0c453708212afa52fe5726e245a1b62ab23be9b50b9fff1fab594bca191"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter01_markov_chains-no-js.png",
+      "sha256": "707bf84adb43da28f43a812639fc3d453d4a7c6422d69dcdfecb0042e550eabf"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter02_poisson_processes-no-js.png",
+      "sha256": "d6a652e6580d9b0154554380a3d376acc3800cede460956836c4351cdc1fd77a"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter03_renewal_processes-no-js.png",
+      "sha256": "04260a24a518e83fd7fdcaef20c65842966f3d0f5679273ceb9ab38de891feb7"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter04_continuous_time_markov_chains-no-js.png",
+      "sha256": "ad51428d48f53267a0b645bd40f85bf1c27d6b9abcee94b15a86d9c276b20c29"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter05_martingales-no-js.png",
+      "sha256": "e8bd6e41e72916aa80082d40d39c1268724d0d3c809e15ee46e1d442743fd2e6"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_chapter06_mathematical_finance-no-js.png",
+      "sha256": "f6d6820e1086aa124f9a75025d49641fed6c9ffd4c68c89a18cf6748c78a5c86"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/stochastic/stochastic_notes_preface-no-js.png",
+      "sha256": "e57076f0cde546f2c942a64e358974ac7f047be54450135d2c04b039ccac57ff"
+    }
+  ],
+  "open_findings": [],
+  "boundaries": [
+    "实体手机和真实读屏器未验证",
+    "本次只做本地迁移；生产未部署",
+    "原数学与程序审阅的历史范围不因迁移验收而扩大"
+  ]
+}

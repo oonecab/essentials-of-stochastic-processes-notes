@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "scope": "local_dist_reading_pages",
+  "files": {
+    "stochastic/notes/appendix_a_probability_review.html": "030788d6425e7b6def3cf07dba5ec99a50a10164996fca451239188091425c6c",
+    "stochastic/notes/book_overview.html": "a166ed47ff6ee9c74b1729a7d5d6657081e5f2114381387305cb8708d44690fb",
+    "stochastic/notes/chapter01_markov_chains.html": "ac5865366a3e78650bfb120071a558899d1079c07814597f1be9e531a7209b21",
+    "stochastic/notes/chapter02_poisson_processes.html": "7c60a8fa59860a734fdd7cba421a0f3f52c7879ba8a8bb67206bd971467c75da",
+    "stochastic/notes/chapter03_renewal_processes.html": "8326a142e059fc4e03023814c6b1c3333873089ff64e55dbc2b8364c2eb74b28",
+    "stochastic/notes/chapter04_continuous_time_markov_chains.html": "5c70523f94328e09d1cf2e0d31b7e6be6b138c1aa4f1e6534049286ed243bd97",
+    "stochastic/notes/chapter05_martingales.html": "333d9bf2de4abae3ab55e7c563361de6d8eb225210c6378ef1acfb54955180df",
+    "stochastic/notes/chapter06_mathematical_finance.html": "a670dcea84b837b4a18cda9fbf33b102dcb63a536307dc4ecf4cff52d403687e",
+    "stochastic/notes/preface.html": "100e28ac857ecc8d8da3496fe725c7ae038481f265ef9ab265b03d3aaf7a3bbb"
+  }
+}

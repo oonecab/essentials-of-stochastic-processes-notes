@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "kind": "additive_migration_baseline",
+  "baseline_ref": "b2aeff3",
+  "records": [
+    {
+      "page": "stochastic/notes/appendix_a_probability_review.html",
+      "source_sha256": "e9f6b0e37de94beada21f646eaaef34bdd4aea8815b0b4eaa1b82f5190574072",
+      "output_sha256": "030788d6425e7b6def3cf07dba5ec99a50a10164996fca451239188091425c6c",
+      "source_counts": {
+        "exercises": 0,
+        "self_checks": 0,
+        "statements": 19,
+        "mathml": 379,
+        "svg": 0
+      },
+      "publication_counts": {
+        "exercises": 0,
+        "self_checks": 0,
+        "statements": 19,
+        "mathml": 379,
+        "svg": 1
+      },
+      "differences": [],
+      "source_bytes": 234663,
+      "output_bytes": 240829,
+      "js_bytes": 4154,
+      "js_ratio": 1
+    },
+    {
+      "page": "stochastic/notes/book_overview.html",
+      "source_sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0",
+      "output_sha256": "a166ed47ff6ee9c74b1729a7d5d6657081e5f2114381387305cb8708d44690fb",
+      "source_counts": {
+        "exercises": 0,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 28,
+        "svg": 1
+      },
+      "publication_counts": {
+        "exercises": 0,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 28,
+        "svg": 2
+      },
+      "differences": [],
+      "source_bytes": 50653,
+      "output_bytes": 56661,
+      "js_bytes": 4154,
+      "js_ratio": 1
+    },
+    {
+      "page": "stochastic/notes/chapter01_markov_chains.html",
+      "source_sha256": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e",
+      "output_sha256": "ac5865366a3e78650bfb120071a558899d1079c07814597f1be9e531a7209b21",
+      "source_counts": {
+        "exercises": 77,
+        "self_checks": 0,
+        "statements": 38,
+        "mathml": 5159,
+        "svg": 1
+      },
+      "publication_counts": {
+        "exercises": 77,
+        "self_checks": 0,
+        "statements": 38,
+        "mathml": 5159,
+        "svg": 2
+      },
+      "differences": [],
+      "source_bytes": 2125126,
+      "output_bytes": 2131292,
+      "js_bytes": 4154,
+      "js_ratio": 1
+    },
+    {
+      "page": "stochastic/notes/chapter02_poisson_processes.html",
+      "source_sha256": "bea17e948c3e109e2179a9b6c786eb71545c90c633f53721f70f7f71b5d5af0f",
+      "output_sha256": "7c60a8fa59860a734fdd7cba421a0f3f52c7879ba8a8bb67206bd971467c75da",
+      "source_counts": {
+        "exercises": 61,
+        "self_checks": 0,
+        "statements": 19,
+        "mathml": 1425,
+        "svg": 1
+      },
+      "publication_counts": {
+        "exercises": 61,
+        "self_checks": 0,
+        "statements": 19,
+        "mathml": 1425,
+        "svg": 2
+      },
+      "differences": [],
+      "source_bytes": 681667,
+      "output_bytes": 687833,
+      "js_bytes": 4617,
+      "js_ratio": 1
+    },
+    {
+      "page": "stochastic/notes/chapter03_renewal_processes.html",
+      "source_sha256": "780e29b3a4dde7f84314e1d53b66403585b008c361fd8f375546fce047d354ba",
+      "output_sha256": "8326a142e059fc4e03023814c6b1c3333873089ff64e55dbc2b8364c2eb74b28",
+      "source_counts": {
+        "exercises": 24,
+        "self_checks": 0,
+        "statements": 14,
+        "mathml": 633,
+        "svg": 1
+      },
+      "publication_counts": {
+        "exercises": 24,
+        "self_checks": 0,
+        "statements": 14,
+        "mathml": 633,
+        "svg": 2
+      },
+      "differences": [],
+      "source_bytes": 351148,
+      "output_bytes": 357314,
+      "js_bytes": 4209,
+      "js_ratio": 1
+    },
+    {
+      "page": "stochastic/notes/chapter04_continuous_time_markov_chains.html",
+      "source_sha256": "b566c5c4da6b6031c7c89c86afdbdec24182cfe9d905a5f53e62dfd1c74f6b1c",
+      "output_sha256": "5c70523f94328e09d1cf2e0d31b7e6be6b138c1aa4f1e6534049286ed243bd97",
+      "source_counts": {
+        "exercises": 39,
+        "self_checks": 0,
+        "statements": 23,
+        "mathml": 1412,
+        "svg": 1
+      },
+      "publication_counts": {
+        "exercises": 39,
+        "self_checks": 0,
+        "statements": 23,
+        "mathml": 1412,
+        "svg": 2
+      },
+      "differences": [],
+      "source_bytes": 850422,
+      "output_bytes": 856588,
+      "js_bytes": 4228,
+      "js_ratio": 1
+    },
+    {
+      "page": "stochastic/notes/chapter05_martingales.html",
+      "source_sha256": "402c2d0834d8ed2a2e0cff270f1e19d216baf3a98f7df89b32692be2fc45005c",
+      "output_sha256": "333d9bf2de4abae3ab55e7c563361de6d8eb225210c6378ef1acfb54955180df",
+      "source_counts": {
+        "exercises": 10,
+        "self_checks": 0,
+        "statements": 20,
+        "mathml": 821,
+        "svg": 1
+      },
+      "publication_counts": {
+        "exercises": 10,
+        "self_checks": 0,
+        "statements": 20,
+        "mathml": 821,
+        "svg": 2
+      },
+      "differences": [],
+      "source_bytes": 409836,
+      "output_bytes": 416002,
+      "js_bytes": 4174,
+      "js_ratio": 1
+    },
+    {
+      "page": "stochastic/notes/chapter06_mathematical_finance.html",
+      "source_sha256": "abdb3e6c1c7bcee20a443671dac19190b9160dc40280db2ec926098ad5caaece",
+      "output_sha256": "a670dcea84b837b4a18cda9fbf33b102dcb63a536307dc4ecf4cff52d403687e",
+      "source_counts": {
+        "exercises": 25,
+        "self_checks": 0,
+        "statements": 17,
+        "mathml": 3146,
+        "svg": 1
+      },
+      "publication_counts": {
+        "exercises": 25,
+        "self_checks": 0,
+        "statements": 17,
+        "mathml": 3146,
+        "svg": 2
+      },
+      "differences": [],
+      "source_bytes": 1187107,
+      "output_bytes": 1193273,
+      "js_bytes": 4311,
+      "js_ratio": 1
+    },
+    {
+      "page": "stochastic/notes/preface.html",
+      "source_sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba",
+      "output_sha256": "100e28ac857ecc8d8da3496fe725c7ae038481f265ef9ab265b03d3aaf7a3bbb",
+      "source_counts": {
+        "exercises": 0,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 6,
+        "svg": 0
+      },
+      "publication_counts": {
+        "exercises": 0,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 6,
+        "svg": 1
+      },
+      "differences": [],
+      "source_bytes": 40431,
+      "output_bytes": 46597,
+      "js_bytes": 4154,
+      "js_ratio": 1
+    }
+  ],
+  "note": "原内容完整性基线保持；此文件追加原源文件与 Astro 输出的身份及逐页 parity。"
+}

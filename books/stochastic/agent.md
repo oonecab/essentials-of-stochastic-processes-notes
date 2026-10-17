@@ -30,7 +30,7 @@
 
 每次改动最终页面后检查受影响页面的宽屏左目录、小屏折叠、习题深链接及自动展开、公式/表格/代码局部滚动、章间链接与截图。静态/程序检查与浏览器验收分别记录。
 
-tmp 中保留本次提取、视觉核对与编写中间件。正文与图数据直接编辑最终 HTML，程序编辑 code/ 源文件并同步；检查脚本和数值基准随实质计算变更更新。
+tmp 中保留本次提取、视觉核对与编写中间件。正文与图数据编辑 `src/content/books/stochastic/` 的受控 HTML，`notes/*.html` 保留为独立检查用兼容镜像，程序编辑 code/ 源文件并同步；检查脚本和数值基准随实质计算变更更新。
 
 ## 静态发布
 
@@ -43,3 +43,5 @@ tmp 中保留本次提取、视觉核对与编写中间件。正文与图数据�
 修改内容后先对照原书核实，再运行 `python3 tools/content_integrity.py --record` 记录审阅基线；不得用自动更新基线绕过变更审阅。`tools/content_integrity.py --source-pages` 检查编号及起始页，不能当作题干或证明正确性的替代。独立基准生成器在 tools/generate_cases.py；tools/check_content_regressions.py 保留内容错误的确切复现，tools/test_tooling.py 保留变异、错误退出与资源扫描的回归，tools/check_simulation_seeds.py 检查额外种子。
 
 完整程序检查采用 `-ffp-contract=off`，区分输入失败2、数值失败3、资源失败4和信号崩溃。当前环境的C／Python数值程序输出逐字一致，数值另与独立基准比较。原始执行时间与记录整理时间分开；更新复查JSON时保留历史检查点，当前SHA与当前浏览器／运行记录对应。发布元数据只能保存相对路径。
+
+Astro 维护、镜像同步与冻结基线规则见 [构建维护说明](../../docs/astro-authoring.md)。

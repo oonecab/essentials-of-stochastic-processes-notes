@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "book": "stochastic",
+  "status": "migration_verified",
+  "historical_review_entry": "notes/validation.json",
+  "file_sha256": {
+    "agent.md": "ac845c60605089b7db9d6e421446de3666039923e493e9e9818c5affd083a31a",
+    "notes/README.md": "654dd57be66614b5310f8fa8f6499b0c0faed03a2149d429e01fee1561994422"
+  },
+  "open_findings": [],
+  "astro_migration": {
+    "record": "review/astro-migration.json",
+    "sha256": "f43b84f7fffc8cc933108b963762cc04ab0c4839fd74d34a331269e072c1b97f",
+    "status": "Go",
+    "open_findings": [],
+    "source_sha256": {
+      "appendix_a_probability_review.html": "e9f6b0e37de94beada21f646eaaef34bdd4aea8815b0b4eaa1b82f5190574072",
+      "book_overview.html": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0",
+      "chapter01_markov_chains.html": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e",
+      "chapter02_poisson_processes.html": "bea17e948c3e109e2179a9b6c786eb71545c90c633f53721f70f7f71b5d5af0f",
+      "chapter03_renewal_processes.html": "780e29b3a4dde7f84314e1d53b66403585b008c361fd8f375546fce047d354ba",
+      "chapter04_continuous_time_markov_chains.html": "b566c5c4da6b6031c7c89c86afdbdec24182cfe9d905a5f53e62dfd1c74f6b1c",
+      "chapter05_martingales.html": "402c2d0834d8ed2a2e0cff270f1e19d216baf3a98f7df89b32692be2fc45005c",
+      "chapter06_mathematical_finance.html": "abdb3e6c1c7bcee20a443671dac19190b9160dc40280db2ec926098ad5caaece",
+      "preface.html": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba"
+    }
+  }
+}

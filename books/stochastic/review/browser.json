@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "astro_migration": {
+    "status": "passed",
+    "record": "review/astro-migration.json",
+    "sha256": "f43b84f7fffc8cc933108b963762cc04ab0c4839fd74d34a331269e072c1b97f",
+    "widths": [
+      1800,
+      1440,
+      1024,
+      390
+    ],
+    "js_views": 36,
+    "no_js_views": 9,
+    "external_requests": [],
+    "visual_review": "逐页查看九页 1800/390 首屏、六章末题和 no-JS 首题联系图，另读第一章 1440/1024 原图及序言手机原图；正文、题号、公式横滚与注解正常。"
+  }
+}

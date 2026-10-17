@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-17T01:50:14.041311+00:00",
+  "status": "completed_locally",
+  "scope": {
+    "pages": 4,
+    "source_numbered_statements": 56,
+    "source_numbered_examples": 19,
+    "original_exercises": 57,
+    "later_chapters": "3–6 pending"
+  },
+  "environment": {
+    "platform": "macOS-15.8.1-arm64-arm-64bit-Mach-O",
+    "python": "3.14.6",
+    "compiler": "Apple clang 17.0.0; arm64-apple-darwin24.6.0",
+    "browser": "Ego Lite 0.5.1.13; TaskSpace 16"
+  },
+  "source_reading": {
+    "record": "review/source-reading.json",
+    "pdf_identity": "notes/source_manifest.json",
+    "correction_record": "notes/source_issues.json",
+    "proof_scope": "前两章逐项读回；有限运行不充当一般证明"
+  },
+  "structure": {
+    "pages": 4,
+    "mathml": 666,
+    "svg": 2,
+    "local_links": 344,
+    "source_copies": 4,
+    "mutations_rejected": [
+      "exercise_number",
+      "question_condition",
+      "source_page",
+      "displayed_source"
+    ]
+  },
+  "programs": {
+    "report": "tmp/project-check/20261017T093242-60bnrjd4/measure-probability/report.json",
+    "sigma_closure_cases": 343,
+    "cover_subfamily_cases": 47,
+    "exact_rational_cases": 96,
+    "cli_executions": 579,
+    "builds": [
+      [
+        "clang",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-pedantic",
+        "-O2",
+        "code/finite_spaces.c",
+        "-o",
+        "finite_spaces-release"
+      ],
+      [
+        "clang",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-pedantic",
+        "-O1",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "code/finite_spaces.c",
+        "-o",
+        "finite_spaces-sanitized"
+      ],
+      [
+        "clang",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-pedantic",
+        "-O2",
+        "code/simple_approx.c",
+        "-o",
+        "simple_approx-release"
+      ],
+      [
+        "clang",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-pedantic",
+        "-O1",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "code/simple_approx.c",
+        "-o",
+        "simple_approx-sanitized"
+      ]
+    ],
+    "correction_regressions": [
+      "missing empty intersection",
+      "missing global cover",
+      "probability Cesaro counterexample"
+    ],
+    "scope": "finite models and numerical boundaries; general proofs are reviewed in HTML"
+  },
+  "browser": {
+    "current_reading_release": "20261017T093758",
+    "source_layout_views": 16,
+    "current_packaged_views": 16,
+    "widths": [
+      1800,
+      1440,
+      1024,
+      390
+    ],
+    "source_exercise_deeplinks": 57,
+    "packaged_exercise_deeplinks": 57,
+    "native_no_javascript_reading": {
+      "before": {
+        "toc": true,
+        "scriptDecoration": false
+      },
+      "after": {
+        "open": true,
+        "toc": false,
+        "scriptDecoration": false,
+        "width": 390,
+        "scrollWidth": 375,
+        "mathErrors": 0
+      },
+      "method": "CDP disables page scripts; native Input mouse events toggle details. Semantic click wrapper timed out with scripts disabled."
+    },
+    "toc_settled": {
+      "hash": "#program-guide",
+      "open": false,
+      "active": "#program-guide",
+      "top": 127.84375
+    },
+    "chapter_navigation": {
+      "preface_to_ch1": true,
+      "ch1_to_ch2": true,
+      "lastURL": "http://127.0.0.1:49560/measure-probability/notes/chapter02_measure_spaces.html",
+      "returnHome": true
+    },
+    "download": {
+      "name": "finite_spaces.c",
+      "sameBytes": true,
+      "sha256": "bf0bdd33edcf8c32d7b1e8b9b0204d0d031c5a181520bf2454fcbdb040bd1613"
+    },
+    "evidence_root": "tmp/measure-probability/browser",
+    "final_release": "20261017T095014",
+    "reading_page_equivalence": "tmp/measure-probability/release-equivalence.json",
+    "final_downloads": {
+      "release": "20261017T095014",
+      "downloads": [
+        {
+          "name": "finite_spaces.py",
+          "sameBytes": true,
+          "sha256": "08f5ecba1fa03d0e38dd553f1763965beedebdf9a6173d0dc8a0924d7d41886d"
+        },
+        {
+          "name": "finite_spaces.c",
+          "sameBytes": true,
+          "sha256": "bf0bdd33edcf8c32d7b1e8b9b0204d0d031c5a181520bf2454fcbdb040bd1613"
+        },
+        {
+          "name": "simple_approx.py",
+          "sameBytes": true,
+          "sha256": "ed4eff2e11569f54b4d6d9f47b9089a070d67e0cf74264c82d18a247e4666b89"
+        },
+        {
+          "name": "simple_approx.c",
+          "sameBytes": true,
+          "sha256": "93fdfe1ac362cc025f1258511a231b58202efec7c1b27e987340cd4dff133b17"
+        }
+      ],
+      "geometry": {
+        "width": 390,
+        "scrollWidth": 375
+      }
+    },
+    "taskspace_lifecycle": {
+      "id": 16,
+      "finished": true,
+      "kept_tabs": []
+    }
+  },
+  "integration": {
+    "quick_report": "tmp/project-check/20261017T095142-4xwbwhmp/report.json",
+    "full_report": "tmp/project-check/20261017T093242-60bnrjd4/report.json",
+    "quick_checks": 10,
+    "full_checks": 13,
+    "status": "passed",
+    "content_release": "20261017T093758",
+    "https_report": "tmp/release-check/20261017T095014-nwufkysi/https-verification.json",
+    "public_deployment": "not performed",
+    "initial_quick_report": "tmp/project-check/20261017T093120-kso1tl8j/report.json",
+    "final_release": "20261017T095014",
+    "content_release_https_report": "tmp/release-check/20261017T093758-hlit0j84/https-verification.json",
+    "final_release_counts": {
+      "files": 279,
+      "html": 66,
+      "reading_pages": 46,
+      "https_files_checked": 274,
+      "entry_redirects_checked": 15
+    },
+    "governance": {
+      "strict_validation": "passed",
+      "idempotent_preview": "unchanged",
+      "validation_log": "tmp/measure-probability/governance-validation.log",
+      "idempotence_log": "tmp/measure-probability/governance-idempotence.log"
+    }
+  },
+  "file_sha256": {
+    "README.md": "59caadf5940b06f0f37548d3f48f08d3137a1e42c832d9d1130447bcd48aecd8",
+    "agent.md": "b004caf0c405d424f255b390b16138618d866032cd0a045c990e2e30ca7f1c9b",
+    "code/README.md": "12e7e65f61e175f84accafd993f12d8b6bc1559b25f6cb7710264c142c68bcb4",
+    "code/finite_spaces.c": "bf0bdd33edcf8c32d7b1e8b9b0204d0d031c5a181520bf2454fcbdb040bd1613",
+    "code/finite_spaces.py": "08f5ecba1fa03d0e38dd553f1763965beedebdf9a6173d0dc8a0924d7d41886d",
+    "code/programs.json": "70e38963fb23d10afda17e9c203476aa0ebf8d3cf1b20543a23b493893b4b1fc",
+    "code/simple_approx.c": "93fdfe1ac362cc025f1258511a231b58202efec7c1b27e987340cd4dff133b17",
+    "code/simple_approx.py": "ed4eff2e11569f54b4d6d9f47b9089a070d67e0cf74264c82d18a247e4666b89",
+    "notes/README.md": "73c6fe870a189e16251db381ff94907b5fec0527fe8dd1c428da4ff4e032bd6d",
+    "notes/book_overview.html": "697c022bf3c11e8141f20fe3e0c1408f25bbfb338922d6c29dd7f54b3dc0f15e",
+    "notes/chapter01_measurable_spaces.html": "e42c667532b38baa9c910df41ff77342a14b0f9a49748fa44b1f0685823b06a2",
+    "notes/chapter02_measure_spaces.html": "e4afcec57c3153b470474e1126349112eb8850d0ca627e26a98fa19870ec5a07",
+    "notes/exercise_manifest.json": "1670060c737d2c0a2156de21de6901c2f2f9299dc261e31c762d1d1bba08e212",
+    "notes/preface.html": "ca606f60da08e0d4229dcc3bda2896c980f3076efa6b2f68a841e3c659b0038b",
+    "notes/source_excerpts.json": "ac631a4012b039fc857bae372abf1686b7effed47c86e8bd61fe6b65aa99da97",
+    "notes/source_inventory.json": "daa58a277e16ebc0ccd3d8ca8be6639d6234589527c6c6880bd659becb9f6e47",
+    "notes/source_issues.json": "d28f3790f5a17b8a0f203b6f8519a97fd37e0a44e4f1ef3b7bb5d9d05846ad15",
+    "notes/source_manifest.json": "7c0278fd8fcbf10206e4881244a40ddd33147b2e826f583a4a1a6b204e881303",
+    "reading-plan.md": "0544ccca1883fadddaaee1dd472a77bfb5555cfaa0bde8c1a47ba9141034a7de",
+    "review/README.md": "7df8d6fd55c01a4b67443e3527f862bb110d7fc66e1b3b1d24cdbffdb5b1bef3",
+    "review/source-reading.json": "ce12a90eead4af5dd906dc7b5186c65e617103ec69338bad29f5364900e9968e",
+    "tools/check_models.py": "c9071293686062c1643400fab67b53afa6a04a75e959784c9d9647056299697b",
+    "tools/check_notes.py": "1cee94ab6e9786397289fafce7c433e4b864d06a16b4fd99b39dbc2c053cd18c",
+    "tools/sync_code.py": "f79e0fa5c37bc6d3ff6a22942096273ad064cf7d53f8aea0275746772ca63f82"
+  },
+  "evidence_sha256": {
+    "tmp/measure-probability/browser/contact-1024.png": "bbbe3493eec2c2f3e0fa11394d2ffacc44344bd113cb9adf8b6c040f70800f5c",
+    "tmp/measure-probability/browser/contact-1440.png": "217344a073c3b78c2c116e58419354cb459897f58feb74da59780d8be5e3f2c9",
+    "tmp/measure-probability/browser/contact-1800.png": "47a9d17c276e9f46882a51c6fc4451c84b39db646fc2e8970aeae6a0d760482d",
+    "tmp/measure-probability/browser/contact-390.png": "07000be64996afe299e5a3d6f830a12f52ae91f35865b4bb1e12edda17a96876",
+    "tmp/measure-probability/browser/map-down-detail.png": "140ecf52580bbef6a86314592e4290fe9e69b70422b6155acecb3a842b04a823",
+    "tmp/measure-probability/browser/release-book_overview-1024.png": "8d67d2619897c07b887a0e5bf7bff3c80e2c5882576d5e7059c2b464560681f9",
+    "tmp/measure-probability/browser/release-book_overview-1440.png": "8aefa98f72fd8c8fec1cdc5bc8647d1a0809a431997f27cd026cfa3fadfb0968",
+    "tmp/measure-probability/browser/release-book_overview-1800.png": "bf6995d03743e75cad52899fad448e683d3c5261044d00de995100b5aadca492",
+    "tmp/measure-probability/browser/release-book_overview-390.png": "fe43860cb03fc63c37e2d6b6ce1ddce7a4ac9d4fa9f2127cc532b54c5d95a571",
+    "tmp/measure-probability/browser/release-chapter-navigation.json": "c1f3adf358502197b2640397fd066f2b860424a86f5d58048b0a3cb6cc36d61f",
+    "tmp/measure-probability/browser/release-chapter01_measurable_spaces-1024.png": "aa176924843f0a1ed3b5c262ecf363d7c0cf5186215c03709059240cca678286",
+    "tmp/measure-probability/browser/release-chapter01_measurable_spaces-1440.png": "337499a7ccb513b5b3c4fcad7424b16f8118bf395c91e41d6c8d66f3d6d29803",
+    "tmp/measure-probability/browser/release-chapter01_measurable_spaces-1800.png": "3090b87fc5c7cbe4e46a6599cf8e8219c3c8d8d20c66f23577f4cb99058499b2",
+    "tmp/measure-probability/browser/release-chapter01_measurable_spaces-390.png": "c49c25b37aed43cb8c09666d6310cfd53ba20f719d8e69238c34446a0638fd06",
+    "tmp/measure-probability/browser/release-chapter02_measure_spaces-1024.png": "771f760fdd0ba6fc2efec163eb8a5f28ebbd94c3573c0c64fef9690e0b9e1580",
+    "tmp/measure-probability/browser/release-chapter02_measure_spaces-1440.png": "7d373816fd5a8aded0e7323c1f1f9dd8e17ada31cb226df941fe4e03634151ba",
+    "tmp/measure-probability/browser/release-chapter02_measure_spaces-1800.png": "0425e7c55268bd5c5ffe20cb15b899f0c676cf7af91cd7b95e9dbac11ea70589",
+    "tmp/measure-probability/browser/release-chapter02_measure_spaces-390.png": "b0a69de37f338955c3abdf59d42955a706eb4b7b6629d132572c7a68739f2a7a",
+    "tmp/measure-probability/browser/release-code-guide-390.png": "62a5636b8146e4f4648a529a32d2e0b1d933f78c6f67fee21052d1da5017084b",
+    "tmp/measure-probability/browser/release-contact-1024.png": "3652f19cf66ad4c07584da1908a4024726be254115844f43a097cd6c2969710d",
+    "tmp/measure-probability/browser/release-contact-1440.png": "9e199c85b11ca8276d92b72f5e59822cb69ed489ac9758178c96d2ddeb840339",
+    "tmp/measure-probability/browser/release-contact-1800.png": "6783ce2da612c3a69578dddc865fc00fc8f0b2989cd4d1714b63326d936011d3",
+    "tmp/measure-probability/browser/release-contact-390.png": "3435b2305e9eb4c1002d9a209bb8cf80829f448b0d4a1d1bea44f38a23edca2b",
+    "tmp/measure-probability/browser/release-correction-monotone-class-1440.png": "4652c32ac7c3e03b233bd143f6da2cc818d954d5ce940baff01ee6bf710f3976",
+    "tmp/measure-probability/browser/release-deeplinks.json": "4fa676a05f887f235e8211e6a47798a901e68fe7f78c0a56b10df4bca2a4feef",
+    "tmp/measure-probability/browser/release-dependencies-1440.png": "a98d8be5d9623f7403f2f1418ba025a274db16182a842c09b79fe0bae7db70a1",
+    "tmp/measure-probability/browser/release-ex-2-20-390.png": "ab16ac67bc1b3e17390587156abb0b06edc4c83480d590035c7f6aad3176ea9e",
+    "tmp/measure-probability/browser/release-ex-2-26-390.png": "463bacce820f9f6ac1c7de7e5dc7a236b9a1386fecb5e04f0c5a6acaa2c8be56",
+    "tmp/measure-probability/browser/release-ex-2-6-390.png": "64375fab2fa5884bba6118092ae759b393307661f3d466b3be5de1e42b37a140",
+    "tmp/measure-probability/browser/release-preface-1024.png": "d4fadaf530987f1e09092443c0878eeb89d4ad5c2213e888c675fe5f8bb04cbf",
+    "tmp/measure-probability/browser/release-preface-1440.png": "7284daa79d6bdfdecea1e908c38fd51c3140c7259e1a682abd7c644b9fec5074",
+    "tmp/measure-probability/browser/release-preface-1800.png": "c7aa77c037469d47efc48ed22220e583b5385d34b773925b05c19bbbd3217df3",
+    "tmp/measure-probability/browser/release-preface-390.png": "62e9561283bc03be2e399cca69bc61fc90611e25fc1988c72d458c82661b0370",
+    "tmp/measure-probability/browser/release-reader-flow.json": "3bd21497ef06be0e68a2e39de10fa366311d932565ede6a9cf21753a6c942eef",
+    "tmp/measure-probability/browser/release-shelf-390.png": "bfea2ffd5130589b3a4beb56bbb531404a5c8c94572db017edd5a61b5d93141f",
+    "tmp/measure-probability/browser/release-theorem-2-5-3-1440.png": "2553701811f40a136e67de1a5881f00c700b8a38505d108a9ced7f7aa0cef8c8",
+    "tmp/measure-probability/browser/release-toc-settled.json": "7c1712d3b171626ecadf221c8bdd44e3806ffc6cacf920e76357684faa55375c",
+    "tmp/measure-probability/browser/release-viewports.json": "2fa871bf94ce7e119843f440d78ac2113c966782e4ecfbd05e7b360b78e9c41e",
+    "tmp/measure-probability/browser/source-book_overview-1024.png": "76215b62a7ae5de8624fa7a3b82454130fa9729ecb894c70fd250a7983b13924",
+    "tmp/measure-probability/browser/source-book_overview-1440.png": "d80a2298547f5c96f2a9d0a0aab7e629b3ee28be25a469faea8d4f5ea14c6da5",
+    "tmp/measure-probability/browser/source-book_overview-1800.png": "c433d4a8c60bfde8a5cef8f3b15dd29124d82a6f27f8f20fce9f63cfb07dec7f",
+    "tmp/measure-probability/browser/source-book_overview-390.png": "2b29b9e3bdb46a56f2b10ed433055db83046c9912b4d498fd209a0da1decc622",
+    "tmp/measure-probability/browser/source-c-expanded-390.png": "17e565b36bbaa4e5a4a23d9721fc79ba73a71c6ff26bc114eda84d158698a986",
+    "tmp/measure-probability/browser/source-chapter01_measurable_spaces-1024.png": "574f63d4de8c86980378b6420b22b5adc73719af0f661befbb42811f8587d32c",
+    "tmp/measure-probability/browser/source-chapter01_measurable_spaces-1440.png": "8d362456bee11b3d1fe349fc3bf4bf02bad947645e15219f7dc082021b4fbe95",
+    "tmp/measure-probability/browser/source-chapter01_measurable_spaces-1800.png": "b790ef93949d2edaf72f3539d9ae60ef2b0ba03f6e8b323fb4f2cef14a2c1dac",
+    "tmp/measure-probability/browser/source-chapter01_measurable_spaces-390.png": "285046e8bbba69d1baa8ba93e07aeb03f525d70aa0d46a1c2efc460025bf96d2",
+    "tmp/measure-probability/browser/source-chapter02_measure_spaces-1024.png": "063d281c5dfe4e119ff74ef835a10e92dcefd19ed5a28e52225d2eb7555d20ef",
+    "tmp/measure-probability/browser/source-chapter02_measure_spaces-1440.png": "0f0d50b53a1b426d661e41a69e13c6b133b91c8cc5ecfa5918f28cf4b88ef2ec",
+    "tmp/measure-probability/browser/source-chapter02_measure_spaces-1800.png": "235eac32e29b438576aa4ac0ac33e93b79ab73cca3b6291e6085793d9d0529b4",
+    "tmp/measure-probability/browser/source-chapter02_measure_spaces-390.png": "e91f1a05a4cd837e00aa2fd27164ae5776b502edb0e2755cca64920ccdba8396",
+    "tmp/measure-probability/browser/source-chapters-390.png": "ac4077c7cedb7afe4f43f9629428145c294613026ee6f7ba275c6267de30c543",
+    "tmp/measure-probability/browser/source-correction-monotone-class-1440.png": "70ef7f93a0f830a762882167bc42aa72494b83d3ea4ec5f3936a78657db1f4d5",
+    "tmp/measure-probability/browser/source-dependencies-1440.png": "dbe1923f0c65f003da3331027e646529ff5acedfbab56818fae446427aab361f",
+    "tmp/measure-probability/browser/source-download.json": "503713a847c33150024345fd1a94d4b00e5f17a8aae0f6a54c950f761f65ff7b",
+    "tmp/measure-probability/browser/source-ex-2-26-390.png": "a3c391e0d31e4fce8bf39d13d72ea9cc36139480c51f55144e7b55a95d9dc7d9",
+    "tmp/measure-probability/browser/source-exercise-deeplinks.json": "230bdfbee6b138159afbba4c8652e5295054aeb67e5c4f10a1a4eced568b195f",
+    "tmp/measure-probability/browser/source-feature-geometry.json": "aad1566ce569fcbf1c6603afe9e71967f0b3331b794d04303fd5b4f78c92c0f9",
+    "tmp/measure-probability/browser/source-finite-model-390.png": "b95f298fb60afa823b82bc5139dcb38c26a86e3db1b6ef4993a501a38574a317",
+    "tmp/measure-probability/browser/source-inclusion-exclusion-390.png": "d0acca99bc4527f5cbd1c7f2ebabcd8121b8e3c1e9109357ce3c3558564837c9",
+    "tmp/measure-probability/browser/source-nojs-exercise-390.png": "55ac9bad9f6529599519bfec9ba095f5e2fb27cfd3f59834d6ccd6ae015d526b",
+    "tmp/measure-probability/browser/source-nojs.json": "a7cc22a6fae0053e2fa31850b1ce5cc831a036a4ad8d9b4590f337a4d108b043",
+    "tmp/measure-probability/browser/source-preface-1024.png": "9947a8bca82857976b2529185e0fd3058872553db44b018a47e9f5b387087b68",
+    "tmp/measure-probability/browser/source-preface-1440.png": "f0bec1fe1c0ba1d57621e53280abdde64b4e7bf499886e7434aa98cb9bf87447",
+    "tmp/measure-probability/browser/source-preface-1800.png": "2857f59c7d9fe33e014d9c9b2126f17d02d89eaa1cc8fdb0b84bbbdaf31e67e9",
+    "tmp/measure-probability/browser/source-preface-390.png": "c846fbf14df97c4fd1e3c7a17795665a5d607bb27521390c98df15155d86f2ba",
+    "tmp/measure-probability/browser/source-python-expanded-390.png": "5abcad67fa9567e00b8d00ead74defea09946233c493c8f9fff7249d69dddbbc",
+    "tmp/measure-probability/browser/source-theorem-2-5-3-1440.png": "1dd2f87d8818dc3ffaeff3c369ba84df93eb1cf3fd7606890806b56ea8296b21",
+    "tmp/measure-probability/browser/source-viewports.json": "a516f8a5c7cf23818d559d010213f4405bdad5031d02911be10077d4106d7de5",
+    "tmp/measure-probability/browser/final-download-simple_approx.py": "ed4eff2e11569f54b4d6d9f47b9089a070d67e0cf74264c82d18a247e4666b89",
+    "tmp/measure-probability/browser/final-download-finite_spaces.c": "bf0bdd33edcf8c32d7b1e8b9b0204d0d031c5a181520bf2454fcbdb040bd1613",
+    "tmp/measure-probability/browser/final-download-simple_approx.c": "93fdfe1ac362cc025f1258511a231b58202efec7c1b27e987340cd4dff133b17",
+    "tmp/measure-probability/browser/final-code-guide-1440.png": "228e866bcad1e5895279732d4fbcde4d64c3363e7f757ae671314dc00b2b8cde",
+    "tmp/measure-probability/browser/final-code-guide-390.png": "d339d369900c7b66e6f19f81bed2b6f5f952a31340167851e2fa0b0a1727c3bf",
+    "tmp/measure-probability/browser/final-downloads.json": "332d4edcf76b164540e5e876c31492e921eee3a6f4fbc982d49f5acda31f7932",
+    "tmp/measure-probability/browser/final-download-finite_spaces.py": "08f5ecba1fa03d0e38dd553f1763965beedebdf9a6173d0dc8a0924d7d41886d",
+    "tmp/measure-probability/release-equivalence.json": "48727a2c23c6ec6fff9e401d05eb0db7c721ea117937a725cfb73b58028877b1",
+    "tmp/project-check/20261017T095142-4xwbwhmp/report.json": "c93f4ef2866c14b01b4b9a145ab91e53f58274ae4e30c8743a5869303b3afd8a",
+    "tmp/project-check/20261017T093242-60bnrjd4/report.json": "595761966629cab288dd79917a19442983c0292f921f2e26f79eb44a6f0a122d",
+    "tmp/release-check/20261017T095014-nwufkysi/https-verification.json": "d6180f6d75046b169132fae805e89def5ab38a4e0eaf4511b2e37154f693c559",
+    "tmp/measure-probability/governance-validation.log": "43e14442283eac83b8bbbf99b41d1140db905f701b60e43c98229ff8e4bc161b",
+    "tmp/measure-probability/governance-idempotence.log": "d2e9e9f2fb9729c82cb3c6193ed61c9c312309d7c16c744337a5cd9f87375642"
+  },
+  "completed_at_utc": "2026-10-17T01:55:32.772705+00:00"
+}

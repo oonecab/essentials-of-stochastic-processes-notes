@@ -1,0 +1,26 @@
+{
+  "excerpts": [
+    {
+      "anchor": "excerpt-bridge",
+      "page": "preface.html",
+      "text": "在初等概率论和公理化的概率论之间搭起一座桥梁是十分必要的。",
+      "printed_pages": [
+        "III"
+      ],
+      "pdf_pages": [
+        8
+      ]
+    },
+    {
+      "anchor": "excerpt-rigor",
+      "page": "preface.html",
+      "text": "为了“短平快”而损害数学的严格性是不可以的。",
+      "printed_pages": [
+        "III"
+      ],
+      "pdf_pages": [
+        8
+      ]
+    }
+  ]
+}

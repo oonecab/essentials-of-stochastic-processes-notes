@@ -1,0 +1,239 @@
+{
+  "status": "completed_locally",
+  "verified_at": "2026-10-17T15:02:39.587314+08:00",
+  "scope": "Display-formula fallback follow-up",
+  "release_id": "20261017T145648",
+  "package_sha256": "ee2f415a02e20d8c6f9297d3760d5c2dc4110e9b5f6a9de9452829fb05099750",
+  "release_metadata_sha256": "812069a6829db624adbf76668a6d90abf98d0f1f341cd013230bc05a75e94cc5",
+  "manifest_sha256": "c6c45ba21076ceee813220172463656b026a96b23bce6afe78b9ae13b8d987fa",
+  "counts": {
+    "files": 303,
+    "html_pages": 74,
+    "reading_pages": 54,
+    "inline_scripts": 11
+  },
+  "https_evidence": "tmp/release-check/20261017T145648-k12qecfq/https-verification.json",
+  "https_evidence_sha256": "2b2af16fc7a1c5e676b9811b836f6e46ec26421c58b1d538cea3e5210b581760",
+  "temporary_nginx_stopped": true,
+  "preview_origin": "http://127.0.0.1:8000",
+  "preview_byte_comparison": [
+    {
+      "file": "visual-group-theory/code/README.md",
+      "sha256": "da295413d10016da5b85cd5377d3de4784b0cbe3be3c2f396fdf714b1996d9fd",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/actions.c",
+      "sha256": "10c2675329943b96563a463ba692bc6665563c0e2bb92640b28b64086533e0dd",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/actions.py",
+      "sha256": "724f6b0d89fb58636a13f113d59fb0825ded258909894d8305e7a63fb05fd1ee",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/cayley.c",
+      "sha256": "14f19c8ee1c71b6c02bd2a33754cc2d49777adc95e2cea44748db29f47f5ac38",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/cayley.py",
+      "sha256": "2bc73bf21150fb9a18d8f12a9dd4bc970dad1fee949eccac7dc5e1a9d35b5f92",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/frieze.c",
+      "sha256": "65b730a677befd7286b1d8f2e2fe7f941a9a3ab1e2a5d5b844429adf44bf1c69",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/frieze.py",
+      "sha256": "67685c9b8c547482a9fe6d8defcf25e68917d7f735543e3dd9e5275835af59ac",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/galois.c",
+      "sha256": "097b40f610e8310fbfff0d0a9401fc0a4e1286cb1500b69fae22e20cb8602c6d",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/galois.py",
+      "sha256": "db3428a0421fcde4851b9273be3ef1ef220cb345a7b5f60f4a6c81b0ed632f9f",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/homomorphisms.c",
+      "sha256": "78df22c361713b576cd30e1135edec8862dc61eb5f3eac31be0276c559be4675",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/homomorphisms.py",
+      "sha256": "8337403fad5073e1e145dd08643c9e059919377ca4a20c57400e717b899e2fe6",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/index.html",
+      "sha256": "9459441db612552d18e4064be79ce259239650d9c69a2d791101df5a582a8c45",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/permutations.c",
+      "sha256": "318fbba42e47dc9c624218c0369d6b40b11a6f433aebdaa4988f9644d11a226b",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/permutations.py",
+      "sha256": "53645d447c0e1025cf10eb847724392f4cfa56b62adc4693b0e24b9526333942",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/products.c",
+      "sha256": "f8749bf28457a75f976a61716c3773efe4b8d26179d53cdd6fa236d9878e5530",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/products.py",
+      "sha256": "b527fe29eda5c69881f33337d2d0af1094aa9f1febb56500cab0e23f1db2ce50",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/programs.json",
+      "sha256": "a462e213e7d57891551da98b5cb0f45332c53544395e942e2f5473aeca234e68",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/subgroups.c",
+      "sha256": "d3fb1a068926c4d45284e3ede02effda238e56077f09c64a0b320421a0e73e28",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/subgroups.py",
+      "sha256": "4f7c1f4a8d7db29b4ead5ee9fc0c9f552d950f4ceee419e9f9e6d9c679fe4153",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/sylow.c",
+      "sha256": "458b493ad7289ef3309129f5eeb151d661d3c99a9530321d3196da7e8be4aba6",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/sylow.py",
+      "sha256": "a912c93325b8d76b9c358148481f12e25420cfe7993b49eff5237b240714942c",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/tables.c",
+      "sha256": "94fc3d207985dbda78ca3f4e53b7300a5decac14d505d688d675aa5206b4eeb3",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/code/tables.py",
+      "sha256": "9e5755dfdb90ccc2d04f28a27ab4c430893469730a15dc075c79aa7994b62d83",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/index.html",
+      "redirect_target": "http://127.0.0.1:8000/visual-group-theory/notes/book_overview.html",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/algebra_inputs.json",
+      "sha256": "0f9d1ca881822af32e01db131019fb91192f0570fa1b366946f5dd192cd770ce",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/book_overview.html",
+      "sha256": "c419ebe4a715c7c77729538c8caf71eaffa05d7da947c0c21bbdca7603269456",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/chapter01_what_is_a_group.html",
+      "sha256": "1a9e5a69b4661effecd4ac82592714b32656969e37b3640af54264bf08cca4f9",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "sha256": "3d8406b400ac569b4ed9443a27783341078a3442b72f33244cc37b065b27f8c0",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/chapter03_why_study_groups.html",
+      "sha256": "ce5061af61bbf92e40eacff90f39c192970fc0a6fc06981cdca6a6272ef09534",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "sha256": "5023f0c710650f78f58988e9f2ac99310ab72ff69fac1c2cf1650ee5d0b65476",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/chapter05_five_families.html",
+      "sha256": "49cee9c5576f34c7964a67a772c939fc7a37768d1561162b07d937effd59ad4d",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/chapter06_subgroups.html",
+      "sha256": "dcfb68e50bb3dd103c1c8229effabe245e4f4f27f3efe8d9cec10e46b623d03d",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/chapter07_products_and_quotients.html",
+      "sha256": "8fffa0ab4f1bcdc33ac35ffcbb6bdb688ee2c9e35c85da6ba8036a136f41e56d",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/chapter08_homomorphisms.html",
+      "sha256": "54237aea2310c1a2d3d83a19da8cc6d8262fc3f2dcf2c9047c8ee9c4d5c21115",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/chapter09_sylow_theory.html",
+      "sha256": "091b48901f2246bb71253c673bbf2f8d6318a0d4b1d4e5d95bacc77af7762ac2",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/chapter10_galois_theory.html",
+      "sha256": "ae7d517bcd86464f8e2d4167a629513d426e1d24770760c6ee52f0eaa5b68375",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/exercise_manifest.json",
+      "sha256": "804134c833922b16c8b2cbdd1657f140f90710d37e1a9f275bf85d3e549d6cbc",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/preface.html",
+      "sha256": "81348803c19fece5e6c88f26d4ad49b0bccf40d2d1c3f0def9e0aa492aae12c2",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/source_excerpts.json",
+      "sha256": "ae9a838e098ba9805b1eda5a2c835f512bd100f5ae86cc774aa1d59ec968bf5a",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/source_inventory.json",
+      "sha256": "bac4bfb9e68bee85bba3c779ded0fb2e7372c79be69c7f04e58628e76e53b284",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/source_manifest.json",
+      "sha256": "36d3e1d988194e724320d0a8e56c96afd09e91d8865e6e4010a24754109a344a",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/structures_inputs.json",
+      "sha256": "c6c534adfd2414c9600a8f6747c958123badf4c182db51a676ce9df863606977",
+      "verified": true
+    },
+    {
+      "file": "visual-group-theory/notes/sylow_galois_inputs.json",
+      "sha256": "f1e2ee6baca55ebadb1f5f66eb3ff60fe7a2fe42a44eb74c43e7c102b520dba3",
+      "verified": true
+    }
+  ],
+  "presentation_comparison": "tmp/vgt-display-math-20261017/presentation-preservation.json",
+  "deployment": "Local build and preview only; no production deployment, commit or push.",
+  "previous_record": "review/history/polish-v1-release.json"
+}

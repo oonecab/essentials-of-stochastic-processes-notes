@@ -1,0 +1,348 @@
+{
+  "status": "completed_locally",
+  "verified_at": "2026-10-17T09:49:12.851386+08:00",
+  "scope": "chapters 1–4; batch 2 adds chapters 2–4 and all 68 exercises with subparts",
+  "release_id": "20261017T094630",
+  "package_sha256": "0bf12c74cc91ee44de5f2af64afe8098ecbdc86548df59994f4c7cc6d76288ad",
+  "manifest_sha256": "889a4819c90c2e2f0a15f92f98f1a79bd4ba0f9214b83a74e9f82d3d0dc96245",
+  "counts": {
+    "files": 279,
+    "https_checked": 274,
+    "entry_redirects": 15,
+    "book_files": 23
+  },
+  "https_evidence": "tmp/release-check/20261017T094630-icsgteki/https-verification.json",
+  "https_evidence_sha256": "2c36b56340f0d51da03a87de7aa0c14f8b534d5165e8f1fc4d6ed5851e503a0f",
+  "temporary_nginx_stopped": true,
+  "preview_origin": "http://127.0.0.1:58674",
+  "preview_byte_comparison": {
+    "release": "20261017T094630",
+    "matched_files": [
+      "visual-group-theory/code/README.md",
+      "visual-group-theory/code/actions.c",
+      "visual-group-theory/code/actions.py",
+      "visual-group-theory/code/cayley.c",
+      "visual-group-theory/code/cayley.py",
+      "visual-group-theory/code/frieze.c",
+      "visual-group-theory/code/frieze.py",
+      "visual-group-theory/code/index.html",
+      "visual-group-theory/code/programs.json",
+      "visual-group-theory/code/tables.c",
+      "visual-group-theory/code/tables.py",
+      "visual-group-theory/notes/algebra_inputs.json",
+      "visual-group-theory/notes/book_overview.html",
+      "visual-group-theory/notes/chapter01_what_is_a_group.html",
+      "visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "visual-group-theory/notes/chapter03_why_study_groups.html",
+      "visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "visual-group-theory/notes/exercise_manifest.json",
+      "visual-group-theory/notes/preface.html",
+      "visual-group-theory/notes/source_excerpts.json",
+      "visual-group-theory/notes/source_inventory.json",
+      "visual-group-theory/notes/source_manifest.json",
+      "index.html",
+      "styles.css"
+    ]
+  },
+  "book_files": [
+    {
+      "path": "visual-group-theory/code/README.md",
+      "bytes": 4240,
+      "sha256": "5fe9a326ef98e9aaab35928ccc235993c75ab95566a05c148d55fd5c4df6ab77",
+      "source_sha256": "5fe9a326ef98e9aaab35928ccc235993c75ab95566a05c148d55fd5c4df6ab77"
+    },
+    {
+      "path": "visual-group-theory/code/actions.c",
+      "bytes": 2297,
+      "sha256": "10c2675329943b96563a463ba692bc6665563c0e2bb92640b28b64086533e0dd",
+      "source_sha256": "10c2675329943b96563a463ba692bc6665563c0e2bb92640b28b64086533e0dd"
+    },
+    {
+      "path": "visual-group-theory/code/actions.py",
+      "bytes": 1806,
+      "sha256": "724f6b0d89fb58636a13f113d59fb0825ded258909894d8305e7a63fb05fd1ee",
+      "source_sha256": "724f6b0d89fb58636a13f113d59fb0825ded258909894d8305e7a63fb05fd1ee"
+    },
+    {
+      "path": "visual-group-theory/code/cayley.c",
+      "bytes": 2154,
+      "sha256": "14f19c8ee1c71b6c02bd2a33754cc2d49777adc95e2cea44748db29f47f5ac38",
+      "source_sha256": "14f19c8ee1c71b6c02bd2a33754cc2d49777adc95e2cea44748db29f47f5ac38"
+    },
+    {
+      "path": "visual-group-theory/code/cayley.py",
+      "bytes": 1506,
+      "sha256": "2bc73bf21150fb9a18d8f12a9dd4bc970dad1fee949eccac7dc5e1a9d35b5f92",
+      "source_sha256": "2bc73bf21150fb9a18d8f12a9dd4bc970dad1fee949eccac7dc5e1a9d35b5f92"
+    },
+    {
+      "path": "visual-group-theory/code/frieze.c",
+      "bytes": 1038,
+      "sha256": "65b730a677befd7286b1d8f2e2fe7f941a9a3ab1e2a5d5b844429adf44bf1c69",
+      "source_sha256": "65b730a677befd7286b1d8f2e2fe7f941a9a3ab1e2a5d5b844429adf44bf1c69"
+    },
+    {
+      "path": "visual-group-theory/code/frieze.py",
+      "bytes": 961,
+      "sha256": "67685c9b8c547482a9fe6d8defcf25e68917d7f735543e3dd9e5275835af59ac",
+      "source_sha256": "67685c9b8c547482a9fe6d8defcf25e68917d7f735543e3dd9e5275835af59ac"
+    },
+    {
+      "path": "visual-group-theory/code/index.html",
+      "bytes": 5718,
+      "sha256": "dc0c2b96e5ffaf4627784b1d1f6fc9ae73d0ba4cbe43b926a5c2b83fd00f6fb7"
+    },
+    {
+      "path": "visual-group-theory/code/programs.json",
+      "bytes": 1684,
+      "sha256": "7c10efb22ac7f9a1d2471755291572e1e5775d25d1378658d7545eab32c8cb41",
+      "source_sha256": "7c10efb22ac7f9a1d2471755291572e1e5775d25d1378658d7545eab32c8cb41"
+    },
+    {
+      "path": "visual-group-theory/code/tables.c",
+      "bytes": 3133,
+      "sha256": "94fc3d207985dbda78ca3f4e53b7300a5decac14d505d688d675aa5206b4eeb3",
+      "source_sha256": "94fc3d207985dbda78ca3f4e53b7300a5decac14d505d688d675aa5206b4eeb3"
+    },
+    {
+      "path": "visual-group-theory/code/tables.py",
+      "bytes": 2734,
+      "sha256": "9e5755dfdb90ccc2d04f28a27ab4c430893469730a15dc075c79aa7994b62d83",
+      "source_sha256": "9e5755dfdb90ccc2d04f28a27ab4c430893469730a15dc075c79aa7994b62d83"
+    },
+    {
+      "path": "visual-group-theory/index.html",
+      "bytes": 340,
+      "sha256": "1d56eab26987f5706d9ca03901be918b65c13b08120007b69566a6c64ed997f3"
+    },
+    {
+      "path": "visual-group-theory/notes/algebra_inputs.json",
+      "bytes": 9735,
+      "sha256": "0f9d1ca881822af32e01db131019fb91192f0570fa1b366946f5dd192cd770ce",
+      "source_sha256": "0f9d1ca881822af32e01db131019fb91192f0570fa1b366946f5dd192cd770ce"
+    },
+    {
+      "path": "visual-group-theory/notes/book_overview.html",
+      "bytes": 39583,
+      "sha256": "f7b9ce0eebdbad7f9d3d987a2087b4e813303ec6dfcde3f09f4c806c7eecd7f7",
+      "source_sha256": "64e9c60f9fa021e098d707b7684bb70a272862eb837c9afce23d6c82ea420838"
+    },
+    {
+      "path": "visual-group-theory/notes/chapter01_what_is_a_group.html",
+      "bytes": 76474,
+      "sha256": "496eee7257a4bdc9af6e546e8446d4bdf02fc770e064bf22c9723df8621c2992",
+      "source_sha256": "11d8f5884dd1aea11e5a636594f17b159833c1b0f65c8cb32f71e8045024d76d"
+    },
+    {
+      "path": "visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "bytes": 83202,
+      "sha256": "70ae4a8cee029414e32427857ece8ac20177837e0df9a9c24afa4e14fe4fe7c5",
+      "source_sha256": "1636dd7785d1b3c881be08169daa6adec9773a35dba5c84cc2b776b3e6e6d95a"
+    },
+    {
+      "path": "visual-group-theory/notes/chapter03_why_study_groups.html",
+      "bytes": 126219,
+      "sha256": "fd37d542a6d24703ca8f8878fd250de6d6f74b925f5308f5c9023cccd94136ef",
+      "source_sha256": "26e5355f624677db187aecf08982e44b12adb00624e1da11583e18e901892366"
+    },
+    {
+      "path": "visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "bytes": 129277,
+      "sha256": "a7bd053ccb4730f29a0985d76b941e1d2dca92c63f1642f6e4fb1fea692d6377",
+      "source_sha256": "8cd4f603c18cdbee6adbc2c495484611cdb290e0a5fc80c8b872899547746e3f"
+    },
+    {
+      "path": "visual-group-theory/notes/exercise_manifest.json",
+      "bytes": 32618,
+      "sha256": "9a761cc3d115e91e2d656dcd1083e47049c80f68b90c982aa54f59725bb4351a",
+      "source_sha256": "9a761cc3d115e91e2d656dcd1083e47049c80f68b90c982aa54f59725bb4351a"
+    },
+    {
+      "path": "visual-group-theory/notes/preface.html",
+      "bytes": 33168,
+      "sha256": "ba3a6d5387aa5f7877fac2ca9ab5d6480a502a015373c4749576846b83d4c830",
+      "source_sha256": "7d91c8c31be6bd3479083b670103899ba2e5e2d0722a999d9f8a019b86a241f8"
+    },
+    {
+      "path": "visual-group-theory/notes/source_excerpts.json",
+      "bytes": 2630,
+      "sha256": "a9d639689b412084f91741922dce19a8d60067cd0b2166fafead6b102d10bc86",
+      "source_sha256": "a9d639689b412084f91741922dce19a8d60067cd0b2166fafead6b102d10bc86"
+    },
+    {
+      "path": "visual-group-theory/notes/source_inventory.json",
+      "bytes": 74130,
+      "sha256": "d250df1dad2373b6c34301f6e7e9333cf0adaf37a0d1fdb38304630d6ad88b4e",
+      "source_sha256": "d250df1dad2373b6c34301f6e7e9333cf0adaf37a0d1fdb38304630d6ad88b4e"
+    },
+    {
+      "path": "visual-group-theory/notes/source_manifest.json",
+      "bytes": 16569,
+      "sha256": "c726c84e18427ca5b79cb0eb517b5c78665a2dfe1906a7f243157f56fc5c50a1",
+      "source_sha256": "c726c84e18427ca5b79cb0eb517b5c78665a2dfe1906a7f243157f56fc5c50a1"
+    }
+  ],
+  "browser": {
+    "name": "Ego Lite",
+    "version": "0.5.1.13",
+    "task_space": 15,
+    "baseline_release": "20261017T093740",
+    "viewport_widths": [
+      1800,
+      1440,
+      1024,
+      390
+    ],
+    "scope": "All three chapters at four browser viewport widths, selected body/figure/proof/answer/code screenshots opened for reading; phone emulation, not physical hardware.",
+    "unchanged_from_reviewed_release": [
+      "visual-group-theory/code/README.md",
+      "visual-group-theory/code/actions.c",
+      "visual-group-theory/code/actions.py",
+      "visual-group-theory/code/cayley.c",
+      "visual-group-theory/code/cayley.py",
+      "visual-group-theory/code/frieze.c",
+      "visual-group-theory/code/frieze.py",
+      "visual-group-theory/code/index.html",
+      "visual-group-theory/code/programs.json",
+      "visual-group-theory/code/tables.c",
+      "visual-group-theory/code/tables.py",
+      "visual-group-theory/notes/algebra_inputs.json",
+      "visual-group-theory/notes/chapter01_what_is_a_group.html",
+      "visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "visual-group-theory/notes/chapter03_why_study_groups.html",
+      "visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "visual-group-theory/notes/preface.html",
+      "visual-group-theory/notes/source_excerpts.json"
+    ],
+    "changed_from_reviewed_release": [
+      "visual-group-theory/notes/book_overview.html",
+      "visual-group-theory/notes/exercise_manifest.json",
+      "visual-group-theory/notes/source_inventory.json",
+      "visual-group-theory/notes/source_manifest.json"
+    ],
+    "change_reason": "Overview scope, chapter status and exercise/source review status finalized; chapter 2–4 HTML and all programs are byte-identical to the reviewed package.",
+    "final_recheck": {
+      "release": "20261017T094630",
+      "map": [
+        {
+          "width": 1440,
+          "status": "已完成本地验收：全书地图、序言、第 1—4 章及全部 82 题；本批新增第 2—4 章的 68 题。第 5—10 章待整理。",
+          "docWidth": 1440,
+          "innerWidth": 1440,
+          "section": "current-batch"
+        },
+        {
+          "width": 390,
+          "status": "已完成本地验收：全书地图、序言、第 1—4 章及全部 82 题；本批新增第 2—4 章的 68 题。第 5—10 章待整理。",
+          "docWidth": 390,
+          "innerWidth": 390,
+          "section": "current-batch"
+        }
+      ],
+      "shelf": [
+        {
+          "viewport": 1440,
+          "text": "NATHAN C. CARTER\n04\n\nVisual\nGroup\nTheory\n\n动作 · 对称 · 结构\nMAA / 2009\n\n群论与可视化\nCarter · Visual Group Theory\n\n视觉群论\n\n从魔方与可逆动作建立直觉，用图看见群的结构，再沿子群、商群和同态走向方程。\n\n6 页笔记 / 82 道习题 / 全书地图、序言与第 1—4 章\n\nCayley 图\n几何对称\n运算表与群公理\nC/Python 实验\n进入视觉群论笔记\n↗\n从序言开始 →",
+          "width": 1440,
+          "top": 30.0390625
+        },
+        {
+          "viewport": 390,
+          "text": "NATHAN C. CARTER\n04\n\nVisual\nGroup\nTheory\n\n动作 · 对称 · 结构\nMAA / 2009\n\n群论与可视化\nCarter · Visual Group Theory\n\n视觉群论\n\n从魔方与可逆动作建立直觉，用图看见群的结构，再沿子群、商群和同态走向方程。\n\n6 页笔记 / 82 道习题 / 全书地图、序言与第 1—4 章\n\nCayley 图\n几何对称\n运算表与群公理\nC/Python 实验\n进入视觉群论笔记\n↗\n从序言开始 →",
+          "width": 390,
+          "top": 30.1484375
+        },
+        {
+          "navigation": "shelf to map",
+          "url": "http://127.0.0.1:58674/visual-group-theory/notes/book_overview.html"
+        }
+      ]
+    },
+    "viewed_screenshot_sha256": {
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/detail-03-ex311-d.png": "8bff7bbab795d1882930cbbcef72eed38b4605658ccfb263497ab7259fbe62c1",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/detail-03-ex311-supplement.png": "1bca2a2afbf2e1cd1405e6e5aac6afe8d77fb63ac0fbe383a29e1af219aefffc",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/detail-03-frieze-six-source.png": "56317ca28b3284fda73f4dfa72f6094336490867e18f001ba64145f963344478",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/ch02-390-figure.png": "500a23f3a216f976f459b0bfcfb69c4bd00c69f908688e0421f22021a4026e28",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/ch03-1800-figure.png": "112fd53cbc09c5be20dbb053de8a86d4e5a66e3cca7e72b77c85d2017268534c",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/ch04-1800-figure.png": "3cdf3adbe55a4fae45d7b2a73e5c899091c291bf6e6801d25e0933819108b45e",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/detail-04-a4-table.png": "701b731fab81227acc34b8ac40f0792b15d9832d3a2abb24cbdae71f4a93a7be",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/mobile-code-python-before.png": "def35dcd03c7ff5cf575dc112df067fc0b033b9de961ccaacedc217c84133d5c",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/mobile-formula-dn-after.png": "4df1de5c3a1a165e9b8f854b46bfa6970856d2d66b1868a93a1304e435c0f341",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/mobile-a4-table-after.png": "87e746d39d21b771dffcb9b6978fbfdb33975e2d3e0309dbe012004e33a16741",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/mobile-frieze-four-rows-after.png": "fb8079d6a918633585e6f0017f7899e7fe2e7b88ee73a498b5bd371b99afbbf2",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/mobile-quasi-table-after.png": "2b5398119684e11ea23d24687e4c32f5e0b17292fb3ac871fe02bb575d8d4e67",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/code-guide-1440.png": "988a2621ccbdeb5a893ab34c1229c1429213f7c686bc3295c0182da39fb7725d",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/code-guide-390.png": "a86d3c3f07b88c403d12278f7493a4e2bb657d7a895ea5ed5977db09f84dca45",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/final-map-1440.png": "0d5d5967b4c4473edde6e6d702441868d651929afc4d05e327e7498aa4115b90",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/final-map-390.png": "e25f2059bf3a7bd3fa2f63dacfced8052088c119cbb46946b78b60d22a03da09",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/final-shelf-1440.png": "1ad9147e4bc0b196b042142143b399e6b50396ed8c71a7eeca5dcc773f42c7cc",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/final-shelf-390.png": "96e643007ccab1a298a2626c9654818271ea84599f2b2eae836bfc4ffba602fd",
+      "tmp/visual-group-theory-ch02-04-20261017/nojs-02.png": "eadcc7e690d21c238655bc291c079e28e467b41aa22377e29588a7cec949dfe6",
+      "tmp/visual-group-theory-ch02-04-20261017/nojs-03.png": "8f4266cbc83d260419d0e3122e670a7cf72c2fd62676fc97648f2d7c0d0ad31b",
+      "tmp/visual-group-theory-ch02-04-20261017/nojs-04.png": "970772ada13aebc06c6900c42c21a29ab5f6d1225a54b0f2bb7d9d513d015fcb",
+      "tmp/visual-group-theory-ch02-04-20261017/ch02-1800-top.png": "765b6e09a79049b527d09a6b923f038da87d13fc65ea3d096287b3cc744921d3",
+      "tmp/visual-group-theory-ch02-04-20261017/ch02-1024-top.png": "da61eae2a5173c4e61e8bb85b4b7a285baca2a437a17dbc06d9e5e0a2e0d1f01",
+      "tmp/visual-group-theory-ch02-04-20261017/ch02-390-top.png": "74adbda9a94c68047e6b3f1881288e349c538de33b61623ca6ed149f818037a2",
+      "tmp/visual-group-theory-ch02-04-20261017/ch02-1440-figure.png": "0f79e4dd06d33c2db87947f727c131e06293add5a0c92f1337f36334f8fc6e3c",
+      "tmp/visual-group-theory-ch02-04-20261017/ch02-1024-figure.png": "28e6044fcda77a53914a4afd568fa31a92a74bd89905d77d2d7332c33e30ee90",
+      "tmp/visual-group-theory-ch02-04-20261017/ch02-1800-figure.png": "750be2cd0f4dd5c22d538797619467766a275470d9b894146282b55203fd5a43",
+      "tmp/visual-group-theory-ch02-04-20261017/ch03-1800-top.png": "63e60be78e9ca1d779966461ade4b184cc90bf2279454553abf25603604bd827",
+      "tmp/visual-group-theory-ch02-04-20261017/ch03-390-top.png": "ad015e3c35f2f61198a9cf2aa63e2838425b691ce7171d236563145fb546026b",
+      "tmp/visual-group-theory-ch02-04-20261017/ch03-1440-figure.png": "1a1d911d17d7cfe8dc69e9d9754c6425deec3b77fd7c58b4ae7beb6579fda014",
+      "tmp/visual-group-theory-ch02-04-20261017/ch03-1024-figure.png": "8f67791e46cc28a6b46f1de3aca81e07cede9399553dac38e0ec4353cd4b2f86",
+      "tmp/visual-group-theory-ch02-04-20261017/ch03-390-figure.png": "d70afe61b6df0478fadf4754c7cbf4d52a3980952d7c1059d3092ada2f6b6822",
+      "tmp/visual-group-theory-ch02-04-20261017/ch04-1800-top.png": "4d3970488e4b0ec7af8413cd33ff65f78cbb30749a0c15b8f408f57466a3a898",
+      "tmp/visual-group-theory-ch02-04-20261017/ch04-390-top.png": "59e66db745ba14a32e7dd39c0a822772068702f968804300c9c2a09a7edb102c",
+      "tmp/visual-group-theory-ch02-04-20261017/ch04-1440-figure.png": "0e0abd867bced73d007e23ebcc89358d46b972ca14204b15bec781d3b23fc4ae",
+      "tmp/visual-group-theory-ch02-04-20261017/ch04-1024-figure.png": "bdaa396582560093c61a11d05ed61c568012c85770defdf1c893250c7d8c4f13",
+      "tmp/visual-group-theory-ch02-04-20261017/ch04-390-figure.png": "28d2ffe1378c8e2ce6307c76521b1219bb4b5a71a19e9b9685524b42331cbdc6",
+      "tmp/visual-group-theory-ch02-04-20261017/ge-d4-cayley.png": "3a0d56c3c85303039485de49430511ce401c8b0031908743588faea863d41874",
+      "tmp/visual-group-theory-ch02-04-20261017/ge-d4-table.png": "6c9100693e06e2ac487c28f5413be8b9836cd83fa3d574ffdbfeed3269c2df9f",
+      "tmp/visual-group-theory-ch02-04-20261017/ge-S_3-table.png": "673682de029e6780b4b0f901c5cd4fd34cdedfa7e5eff6d1ffee024662645257",
+      "tmp/visual-group-theory-ch02-04-20261017/ge-D_5-table.png": "5e78e66aadb727f5f95ffd9ea6df8254c5b62d67a44ae2a7601ccd5fe45d4616",
+      "tmp/visual-group-theory-ch02-04-20261017/ge-D_6-cayley.png": "2886abe257a31b905710bc44754cfb9c5b83d6a0b8554edc6def24d9da9e6923",
+      "tmp/visual-group-theory-ch02-04-20261017/ge-Z_4-cayley.png": "93c744477a5c046095dc7d2f702a7228dabbe94b272bc513d92ae049faf1d87c",
+      "tmp/visual-group-theory-ch02-04-20261017/ge-library.png": "04d808aacd4f2a1f6a3a97b1ab123cdda355ae66e75976a6d466063068084b71",
+      "tmp/visual-group-theory-ch02-04-20261017/ge-D_10-table.png": "e28f3739870cea8fa5ae9c732695f4ec52a04dc38d854112aa9361f6d3523cc0"
+    },
+    "raw_reports": {
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/browser-matrix.json": "87928cd9e35f9da9d493addc0c89c6f0d45c1a2419cf865feaadca5b522526fe",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/browser-colors.json": "683d43f5b23ac88ae72f5598ee03f31e634e7b751e61ef47d35f8c7f359f9516",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/browser-mobile-final.json": "b105b9f05e72ba59962cdb8795b51ff2ecb9d08d1cf1bfe130b2b73ae43e7895",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/browser-downloads.json": "11b7f9f479e607111989a359dcf61eca1b4596a088a4087866dbe51ad99b7e0c",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/browser-guide-navigation.json": "12146524247e44158dab5967b6965d90e0729817d3cdfccc54f3a6257d26f65c",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/browser-final-map.json": "06fc21f8c598672e722582503c254559379d2e5c45c1d932d81409fb30cac755",
+      "tmp/visual-group-theory-ch02-04-20261017/accepted/browser-final-shelf.json": "1a9b88d675ab6b50345cd2e8379d8a892bdaaa26d2a0109b67fae1a8b63e504d",
+      "tmp/visual-group-theory-ch02-04-20261017/browser-interactions.json": "06f9a0a27c8b79a329c58d1f8c5994f8fd7330c8acda0c2a92195fbf1308bbdc",
+      "tmp/visual-group-theory-ch02-04-20261017/browser-nojs.json": "59ecdcbafcb8a86a525f0135864e7680c24c53cd39115a4be944d520cd4ddd99",
+      "tmp/visual-group-theory-ch02-04-20261017/browser-navigation.json": "c0ad805b4730dfcc76c51bbd651073bad9789d7bcf49267d1d422f00b64a2ed7",
+      "tmp/visual-group-theory-ch02-04-20261017/group-explorer-comparison.json": "5a8d072fe0236187a6da5822a8a60fbe684ec73de88945c16c690a6ddbc5d2c7",
+      "tmp/visual-group-theory-ch02-04-20261017/ge-browser-tables.json": "27af20b02921611067aaf6d524fc8d377a4fc75d9c03a00d6ab6714aca4c1a4d"
+    },
+    "evidence_note": "Root screenshots preserve prior reading rounds; accepted/ holds the final chapter package and final map/shelf. Only the explicitly listed viewed subset is labelled as opened for visual reading.",
+    "tool_recoveries": "See review/chapters02-04.md. Pre-fix and blank clip images are not final acceptance evidence.",
+    "task_finished": {
+      "spaceId": 15,
+      "closedSpace": true,
+      "keptManagedLabels": [],
+      "closedManagedLabels": [
+        "p1"
+      ]
+    }
+  },
+  "final_checks": {
+    "whole_repository_full": "tmp/project-check/20261017T093458-gh2s383c/report.json",
+    "whole_repository_quick": "tmp/project-check/20261017T094503-tw5uhni_/report.json",
+    "stale_binding_rejected": "tmp/visual-group-theory-ch02-04-20261017/binding-regression.json",
+    "book_final_quick": "tmp/project-check/20261017T094912-c1c6s2w8/report.json"
+  },
+  "previous_release_binding": "review/history/batch01-release.json",
+  "remaining": "Chapters 5–10 pending; this is local acceptance.",
+  "temporary_previews_stopped": [
+    58669,
+    58670,
+    58671,
+    58672,
+    58673
+  ]
+}

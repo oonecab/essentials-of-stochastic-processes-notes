@@ -1,0 +1,124 @@
+{
+  "programs": [
+    {
+      "id": "three-pictures",
+      "chapter": 1,
+      "title": "用两个相邻交换枚举三幅画的六个动作",
+      "page": "notes/chapter01_what_is_a_group.html",
+      "anchor": "program-actions",
+      "files": {
+        "c": "code/actions.c",
+        "python": "code/actions.py"
+      },
+      "expected_stdout": "e ABC\na BAC\nb ACB\nab BCA\nba CAB\naba CBA\n"
+    },
+    {
+      "id": "cayley",
+      "chapter": 2,
+      "title": "正多边形的广度优先枚举",
+      "page": "notes/chapter02_what_do_groups_look_like.html",
+      "anchor": "program-cayley",
+      "files": {
+        "c": "code/cayley.c",
+        "python": "code/cayley.py"
+      },
+      "expected_stdout": "D4: 8 actions\nid word sign shift r f\n0 e 1 0 1 2\n1 r 1 1 3 4\n2 f -1 0 5 0\n3 rr 1 2 6 7\n4 rf -1 3 2 1\n5 fr -1 1 7 6\n6 rrr 1 3 0 5\n7 rrf -1 2 4 3\n"
+    },
+    {
+      "id": "frieze",
+      "chapter": 3,
+      "title": "无限饰带的精确坐标动作",
+      "page": "notes/chapter03_why_study_groups.html",
+      "anchor": "program-frieze",
+      "files": {
+        "c": "code/frieze.c",
+        "python": "code/frieze.py"
+      },
+      "expected_stdout": "word sx sy dx\ne 1 1 0\nh -1 1 0\ng 1 -1 1\nG 1 -1 -1\ngg 1 1 2\nhgh 1 -1 -1\nhghg 1 1 0\nghgh 1 1 0\n"
+    },
+    {
+      "id": "tables",
+      "chapter": 4,
+      "title": "有限运算表的群公理检验",
+      "page": "notes/chapter04_algebra_at_last.html",
+      "anchor": "program-tables",
+      "files": {
+        "c": "code/tables.c",
+        "python": "code/tables.py"
+      },
+      "expected_stdout": "CLOSURE OK\nASSOCIATIVE OK\nIDENTITY 0\nINVERSES OK\nGROUP YES\n"
+    },
+    {
+      "id": "permutations",
+      "chapter": 5,
+      "title": "置换分解与顺序",
+      "page": "notes/chapter05_five_families.html",
+      "anchor": "program-permutations",
+      "files": {
+        "c": "code/permutations.c",
+        "python": "code/permutations.py"
+      },
+      "expected_stdout": "p 2,3,4,1 (1 2 3 4) order=4 sign=-1\nq 2,1,3,4 (1 2) order=2 sign=-1\np*q 1,3,4,2 (2 3 4) order=3 sign=1\nq*p 3,2,4,1 (1 3 4) order=3 sign=1\np^-1 4,1,2,3 (1 4 3 2) order=4 sign=-1\np^2 3,4,1,2 (1 3)(2 4) order=2 sign=1\n"
+    },
+    {
+      "id": "subgroups",
+      "chapter": 6,
+      "title": "Dₙ 全部子群与陪集",
+      "page": "notes/chapter06_subgroups.html",
+      "anchor": "program-subgroups",
+      "files": {
+        "c": "code/subgroups.c",
+        "python": "code/subgroups.py"
+      },
+      "expected_stdout": "D4: index i+n*j means r^i f^j; identity=0\nH={0} order=1 index=8 normal=yes\nL {0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}\nR {0}|{1}|{2}|{3}|{4}|{5}|{6}|{7}\nH={0,2} order=2 index=4 normal=yes\nL {0,2}|{1,3}|{4,6}|{5,7}\nR {0,2}|{1,3}|{4,6}|{5,7}\nH={0,1,2,3} order=4 index=2 normal=yes\nL {0,1,2,3}|{4,5,6,7}\nR {0,1,2,3}|{4,5,6,7}\nH={0,4} order=2 index=4 normal=no\nL {0,4}|{1,5}|{2,6}|{3,7}\nR {0,4}|{3,5}|{2,6}|{1,7}\nH={0,5} order=2 index=4 normal=no\nL {3,4}|{0,5}|{1,6}|{2,7}\nR {1,4}|{0,5}|{3,6}|{2,7}\nH={0,6} order=2 index=4 normal=no\nL {2,4}|{3,5}|{0,6}|{1,7}\nR {2,4}|{1,5}|{0,6}|{3,7}\nH={0,2,4,6} order=4 index=2 normal=yes\nL {0,2,4,6}|{1,3,5,7}\nR {0,2,4,6}|{1,3,5,7}\nH={0,7} order=2 index=4 normal=no\nL {1,4}|{2,5}|{3,6}|{0,7}\nR {3,4}|{2,5}|{1,6}|{0,7}\nH={0,2,5,7} order=4 index=2 normal=yes\nL {1,3,4,6}|{0,2,5,7}\nR {1,3,4,6}|{0,2,5,7}\nH={0,1,2,3,4,5,6,7} order=8 index=1 normal=yes\nL {0,1,2,3,4,5,6,7}\nR {0,1,2,3,4,5,6,7}\nsubgroups=10\n"
+    },
+    {
+      "id": "products",
+      "chapter": 7,
+      "title": "直积与半直积",
+      "page": "notes/chapter07_products_and_quotients.html",
+      "anchor": "program-products",
+      "files": {
+        "c": "code/products.c",
+        "python": "code/products.py"
+      },
+      "expected_stdout": "n=4 m=2 u=3; id=i+n*j represents r^i t^j\n0 (0,0) order=1 quotient=0\n1 (1,0) order=4 quotient=0\n2 (2,0) order=2 quotient=0\n3 (3,0) order=4 quotient=0\n4 (0,1) order=2 quotient=1\n5 (1,1) order=2 quotient=1\n6 (2,1) order=2 quotient=1\n7 (3,1) order=2 quotient=1\nTABLE\n0 1 2 3 4 5 6 7\n1 2 3 0 5 6 7 4\n2 3 0 1 6 7 4 5\n3 0 1 2 7 4 5 6\n4 7 6 5 0 3 2 1\n5 4 7 6 1 0 3 2\n6 5 4 7 2 1 0 3\n7 6 5 4 3 2 1 0\nQUOTIENT C2\n0: 0,1,2,3\n1: 4,5,6,7\n"
+    },
+    {
+      "id": "homomorphisms",
+      "chapter": 8,
+      "title": "循环群间全部同态",
+      "page": "notes/chapter08_homomorphisms.html",
+      "anchor": "program-homomorphisms",
+      "files": {
+        "c": "code/homomorphisms.c",
+        "python": "code/homomorphisms.py"
+      },
+      "expected_stdout": "C12 -> C8\nk=0 values={0,0,0,0,0,0,0,0,0,0,0,0}\nkernel={0,1,2,3,4,5,6,7,8,9,10,11} image={0} injective=no surjective=no\nfiber {0,1,2,3,4,5,6,7,8,9,10,11} -> 0\nk=2 values={0,2,4,6,0,2,4,6,0,2,4,6}\nkernel={0,4,8} image={0,2,4,6} injective=no surjective=no\nfiber {0,4,8} -> 0\nfiber {1,5,9} -> 2\nfiber {2,6,10} -> 4\nfiber {3,7,11} -> 6\nk=4 values={0,4,0,4,0,4,0,4,0,4,0,4}\nkernel={0,2,4,6,8,10} image={0,4} injective=no surjective=no\nfiber {0,2,4,6,8,10} -> 0\nfiber {1,3,5,7,9,11} -> 4\nk=6 values={0,6,4,2,0,6,4,2,0,6,4,2}\nkernel={0,4,8} image={0,2,4,6} injective=no surjective=no\nfiber {0,4,8} -> 0\nfiber {3,7,11} -> 2\nfiber {2,6,10} -> 4\nfiber {1,5,9} -> 6\nhomomorphisms=4\n"
+    },
+    {
+      "id": "sylow",
+      "chapter": 9,
+      "title": "对称群中的 Sylow 子群",
+      "page": "notes/chapter09_sylow_theory.html",
+      "anchor": "program-sylow",
+      "files": {
+        "c": "code/sylow.c",
+        "python": "code/sylow.py"
+      },
+      "expected_stdout": "S4 order=24 p=2 sylow_order=8\nperm 0: 1,2,3,4\nperm 1: 1,2,4,3\nperm 2: 1,3,2,4\nperm 3: 1,3,4,2\nperm 4: 1,4,2,3\nperm 5: 1,4,3,2\nperm 6: 2,1,3,4\nperm 7: 2,1,4,3\nperm 8: 2,3,1,4\nperm 9: 2,3,4,1\nperm 10: 2,4,1,3\nperm 11: 2,4,3,1\nperm 12: 3,1,2,4\nperm 13: 3,1,4,2\nperm 14: 3,2,1,4\nperm 15: 3,2,4,1\nperm 16: 3,4,1,2\nperm 17: 3,4,2,1\nperm 18: 4,1,2,3\nperm 19: 4,1,3,2\nperm 20: 4,2,1,3\nperm 21: 4,2,3,1\nperm 22: 4,3,1,2\nperm 23: 4,3,2,1\nH={0,1,6,7,16,17,22,23} normalizer=8\nH={0,2,7,10,13,16,21,23} normalizer=8\nH={0,5,7,9,14,16,18,23} normalizer=8\nsylow_count=3\npoint_orbit=4 point_stabilizer=6\n"
+    },
+    {
+      "id": "galois",
+      "chapter": 10,
+      "title": "六次分裂域的精确自同构",
+      "page": "notes/chapter10_galois_theory.html",
+      "anchor": "program-galois",
+      "files": {
+        "c": "code/galois.c",
+        "python": "code/galois.py"
+      },
+      "expected_stdout": "basis=1,t,t^2,s,ts,t^2s; t^3=2; s^2=-3\ninput=[1,1,1,1,1,1]\nsigma(0,1) roots=1,2,3 value=[1,1,1,1,1,1]\nsigma(0,-1) roots=1,3,2 value=[1,1,1,-1,-1,-1]\nsigma(1,1) roots=2,3,1 value=[1,-2,1,1,0,-1]\nsigma(1,-1) roots=2,1,3 value=[1,1,-2,-1,1,0]\nsigma(2,1) roots=3,1,2 value=[1,1,-2,1,-1,0]\nsigma(2,-1) roots=3,2,1 value=[1,-2,1,-1,0,1]\ntrace=[6,0,0,0,0,0]\nz*conjugate(z)=[20,16,12,0,0,0]\n"
+    }
+  ]
+}

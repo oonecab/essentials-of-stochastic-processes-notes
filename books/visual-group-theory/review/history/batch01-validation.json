@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "book_id": "visual-group-theory",
+  "reviewed_at": "2026-10-17T00:51:25.452183+08:00",
+  "scope": "overview, preface, chapter 1, exercises 1.1–1.14",
+  "status": "completed_locally",
+  "file_sha256": {
+    "notes/book_overview.html": "680bd5864f1e4745739651e86e9cc872a3338e61d8050f9f3711672db1a4e82a",
+    "notes/chapter01_what_is_a_group.html": "927677bb534540ffd85ad30d55ad0de5834dc7b3b26f0cbe4dca69e43bd28dac",
+    "notes/preface.html": "7d91c8c31be6bd3479083b670103899ba2e5e2d0722a999d9f8a019b86a241f8",
+    "notes/exercise_manifest.json": "b78917e925c2245754140ea33837b071baf4a2fcdb6a782e6666c99eb365efee",
+    "notes/source_excerpts.json": "a7395dafd3b3c80a94fe504feac431cbb0446fee979fe5bd29cd6eabc0c7a4b4",
+    "notes/source_inventory.json": "be51a9b6c42f3e3e16d67bf952d3c666a7a6b3cf90807c3ff4a1471d72f80f9d",
+    "notes/source_manifest.json": "979c6654806f30f4d7c886179be8f0b6cce4b978edaa662a0335992c5acc79b5",
+    "code/README.md": "05c1c43cd2c23472ccb0bca2bb73156a578ae52c4f623eccf5e95dfdf1e28d63",
+    "code/actions.c": "10c2675329943b96563a463ba692bc6665563c0e2bb92640b28b64086533e0dd",
+    "code/actions.py": "724f6b0d89fb58636a13f113d59fb0825ded258909894d8305e7a63fb05fd1ee",
+    "code/programs.json": "6857e1397b537b689b62b7b455efef0b53b581f2bc181734f207919d3af06758",
+    "tools/check_notes.py": "9f5d9a8b275f48803b79e4db6440269abaf6151763c080fe8935291381d74e8d",
+    "tools/inventory_source.py": "c60e49e1a4b44589857b3f06af76cd1fa7f742112d31faaa4c7b745c41310375",
+    "tools/sync_code.py": "4a80aaf7162a9ed1d954069a27ab22e97b2de1ec2a9123823e76dc2b53ceab1e"
+  },
+  "evidence": {
+    "full_check": "tmp/project-check/20261017T004018-ajn7b10b/report.json",
+    "programs": "tmp/project-check/20261017T004018-ajn7b10b/visual-group-theory/report.json",
+    "browser_release": "20261017T003924",
+    "browser_directory": "tmp/visual-group-theory-20261017",
+    "https": "tmp/release-check/20261017T003924-39evswh6/https-verification.json",
+    "final_quick": "tmp/project-check/20261017T005309-2wgadcqb/report.json",
+    "final_release": "review/release.json",
+    "final_https": "tmp/release-check/20261017T005309-4fxnuyk4/https-verification.json",
+    "binding_negative": "tmp/visual-group-theory-20261017/binding-regression.json"
+  },
+  "browser_reuse": "Final overview status sentence re-read at 1440/390px in release 20261017T005309. Preface, chapter and program bytes match the fully reviewed baseline release. Final package and HTTPS evidence recorded in review/release.json.",
+  "open_findings": [],
+  "remaining_scope": "Chapters 2–10 pending; no commit, push or production publication performed."
+}

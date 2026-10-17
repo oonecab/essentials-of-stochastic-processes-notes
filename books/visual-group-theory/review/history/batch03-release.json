@@ -1,0 +1,460 @@
+{
+  "status": "completed_locally",
+  "verified_at": "2026-10-17T12:24:07.499272+08:00",
+  "scope": "chapters 1–8; batch 3 adds chapters 5–8 and all 162 exercises with subparts",
+  "release_id": "20261017T121534",
+  "package_sha256": "c45c4815779b4fb9013de224197187023e870341309cefe6cc4beda8880e70f0",
+  "manifest_sha256": "079398774a482e38727523873934d3bf68e0d2f4c95b020a99d0ff8de5c9cb27",
+  "counts": {
+    "files": 296,
+    "https_checked": 291,
+    "entry_redirects": 15,
+    "book_files": 36
+  },
+  "https_evidence": "tmp/release-check/20261017T121534-0ch8eeue/https-verification.json",
+  "https_evidence_sha256": "fb80ae05541f83f698e8544a641e25303e48c9f9b4c44715bb9a64ca08dbc463",
+  "temporary_nginx_stopped": true,
+  "preview_origin": "http://127.0.0.1:60998",
+  "preview_byte_comparison": {
+    "release": "20261017T121534",
+    "origin": "http://127.0.0.1:60998",
+    "matched_files": [
+      "index.html",
+      "styles.css",
+      "visual-group-theory/code/README.md",
+      "visual-group-theory/code/actions.c",
+      "visual-group-theory/code/actions.py",
+      "visual-group-theory/code/cayley.c",
+      "visual-group-theory/code/cayley.py",
+      "visual-group-theory/code/frieze.c",
+      "visual-group-theory/code/frieze.py",
+      "visual-group-theory/code/homomorphisms.c",
+      "visual-group-theory/code/homomorphisms.py",
+      "visual-group-theory/code/index.html",
+      "visual-group-theory/code/permutations.c",
+      "visual-group-theory/code/permutations.py",
+      "visual-group-theory/code/products.c",
+      "visual-group-theory/code/products.py",
+      "visual-group-theory/code/programs.json",
+      "visual-group-theory/code/subgroups.c",
+      "visual-group-theory/code/subgroups.py",
+      "visual-group-theory/code/tables.c",
+      "visual-group-theory/code/tables.py",
+      "visual-group-theory/notes/algebra_inputs.json",
+      "visual-group-theory/notes/book_overview.html",
+      "visual-group-theory/notes/chapter01_what_is_a_group.html",
+      "visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "visual-group-theory/notes/chapter03_why_study_groups.html",
+      "visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "visual-group-theory/notes/chapter05_five_families.html",
+      "visual-group-theory/notes/chapter06_subgroups.html",
+      "visual-group-theory/notes/chapter07_products_and_quotients.html",
+      "visual-group-theory/notes/chapter08_homomorphisms.html",
+      "visual-group-theory/notes/exercise_manifest.json",
+      "visual-group-theory/notes/preface.html",
+      "visual-group-theory/notes/source_excerpts.json",
+      "visual-group-theory/notes/source_inventory.json",
+      "visual-group-theory/notes/source_manifest.json",
+      "visual-group-theory/notes/structures_inputs.json"
+    ],
+    "redirects": [
+      {
+        "path": "visual-group-theory/index.html",
+        "status": 301,
+        "location": "/visual-group-theory/notes/book_overview.html"
+      }
+    ],
+    "compared_to": "20261017T121026",
+    "unchanged": [
+      "index.html",
+      "styles.css",
+      "visual-group-theory/code/actions.c",
+      "visual-group-theory/code/actions.py",
+      "visual-group-theory/code/cayley.c",
+      "visual-group-theory/code/cayley.py",
+      "visual-group-theory/code/frieze.c",
+      "visual-group-theory/code/frieze.py",
+      "visual-group-theory/code/homomorphisms.c",
+      "visual-group-theory/code/homomorphisms.py",
+      "visual-group-theory/code/permutations.c",
+      "visual-group-theory/code/permutations.py",
+      "visual-group-theory/code/products.c",
+      "visual-group-theory/code/products.py",
+      "visual-group-theory/code/programs.json",
+      "visual-group-theory/code/subgroups.c",
+      "visual-group-theory/code/subgroups.py",
+      "visual-group-theory/code/tables.c",
+      "visual-group-theory/code/tables.py",
+      "visual-group-theory/notes/algebra_inputs.json",
+      "visual-group-theory/notes/chapter01_what_is_a_group.html",
+      "visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "visual-group-theory/notes/chapter03_why_study_groups.html",
+      "visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "visual-group-theory/notes/chapter05_five_families.html",
+      "visual-group-theory/notes/chapter06_subgroups.html",
+      "visual-group-theory/notes/chapter07_products_and_quotients.html",
+      "visual-group-theory/notes/preface.html",
+      "visual-group-theory/notes/source_excerpts.json",
+      "visual-group-theory/notes/source_inventory.json",
+      "visual-group-theory/notes/structures_inputs.json"
+    ],
+    "changed": [
+      "visual-group-theory/code/README.md",
+      "visual-group-theory/code/index.html",
+      "visual-group-theory/notes/book_overview.html",
+      "visual-group-theory/notes/chapter08_homomorphisms.html",
+      "visual-group-theory/notes/exercise_manifest.json",
+      "visual-group-theory/notes/source_manifest.json"
+    ],
+    "source_pdf_published": false,
+    "archive_sha256": "c45c4815779b4fb9013de224197187023e870341309cefe6cc4beda8880e70f0",
+    "manifest_sha256": "079398774a482e38727523873934d3bf68e0d2f4c95b020a99d0ff8de5c9cb27",
+    "initial_attempt": "Following the entry redirect returns the chapter map; the redirect stub cannot be compared as a served body. Corrected by checking Location and status separately."
+  },
+  "book_files": [
+    {
+      "path": "visual-group-theory/code/README.md",
+      "bytes": 5601,
+      "sha256": "e3f814b5cfc2b83927b149cfbb26688a683966bbd1b4070bec57841be14271fd",
+      "source_sha256": "e3f814b5cfc2b83927b149cfbb26688a683966bbd1b4070bec57841be14271fd"
+    },
+    {
+      "path": "visual-group-theory/code/actions.c",
+      "bytes": 2297,
+      "sha256": "10c2675329943b96563a463ba692bc6665563c0e2bb92640b28b64086533e0dd",
+      "source_sha256": "10c2675329943b96563a463ba692bc6665563c0e2bb92640b28b64086533e0dd"
+    },
+    {
+      "path": "visual-group-theory/code/actions.py",
+      "bytes": 1806,
+      "sha256": "724f6b0d89fb58636a13f113d59fb0825ded258909894d8305e7a63fb05fd1ee",
+      "source_sha256": "724f6b0d89fb58636a13f113d59fb0825ded258909894d8305e7a63fb05fd1ee"
+    },
+    {
+      "path": "visual-group-theory/code/cayley.c",
+      "bytes": 2154,
+      "sha256": "14f19c8ee1c71b6c02bd2a33754cc2d49777adc95e2cea44748db29f47f5ac38",
+      "source_sha256": "14f19c8ee1c71b6c02bd2a33754cc2d49777adc95e2cea44748db29f47f5ac38"
+    },
+    {
+      "path": "visual-group-theory/code/cayley.py",
+      "bytes": 1506,
+      "sha256": "2bc73bf21150fb9a18d8f12a9dd4bc970dad1fee949eccac7dc5e1a9d35b5f92",
+      "source_sha256": "2bc73bf21150fb9a18d8f12a9dd4bc970dad1fee949eccac7dc5e1a9d35b5f92"
+    },
+    {
+      "path": "visual-group-theory/code/frieze.c",
+      "bytes": 1038,
+      "sha256": "65b730a677befd7286b1d8f2e2fe7f941a9a3ab1e2a5d5b844429adf44bf1c69",
+      "source_sha256": "65b730a677befd7286b1d8f2e2fe7f941a9a3ab1e2a5d5b844429adf44bf1c69"
+    },
+    {
+      "path": "visual-group-theory/code/frieze.py",
+      "bytes": 961,
+      "sha256": "67685c9b8c547482a9fe6d8defcf25e68917d7f735543e3dd9e5275835af59ac",
+      "source_sha256": "67685c9b8c547482a9fe6d8defcf25e68917d7f735543e3dd9e5275835af59ac"
+    },
+    {
+      "path": "visual-group-theory/code/homomorphisms.c",
+      "bytes": 1929,
+      "sha256": "78df22c361713b576cd30e1135edec8862dc61eb5f3eac31be0276c559be4675",
+      "source_sha256": "78df22c361713b576cd30e1135edec8862dc61eb5f3eac31be0276c559be4675"
+    },
+    {
+      "path": "visual-group-theory/code/homomorphisms.py",
+      "bytes": 1670,
+      "sha256": "8337403fad5073e1e145dd08643c9e059919377ca4a20c57400e717b899e2fe6",
+      "source_sha256": "8337403fad5073e1e145dd08643c9e059919377ca4a20c57400e717b899e2fe6"
+    },
+    {
+      "path": "visual-group-theory/code/index.html",
+      "bytes": 5722,
+      "sha256": "5f9882dc49fb52dd98f0a99bd6ef58151362a89f183d37614885c0620bc795d2"
+    },
+    {
+      "path": "visual-group-theory/code/permutations.c",
+      "bytes": 2716,
+      "sha256": "318fbba42e47dc9c624218c0369d6b40b11a6f433aebdaa4988f9644d11a226b",
+      "source_sha256": "318fbba42e47dc9c624218c0369d6b40b11a6f433aebdaa4988f9644d11a226b"
+    },
+    {
+      "path": "visual-group-theory/code/permutations.py",
+      "bytes": 2212,
+      "sha256": "53645d447c0e1025cf10eb847724392f4cfa56b62adc4693b0e24b9526333942",
+      "source_sha256": "53645d447c0e1025cf10eb847724392f4cfa56b62adc4693b0e24b9526333942"
+    },
+    {
+      "path": "visual-group-theory/code/products.c",
+      "bytes": 1880,
+      "sha256": "f8749bf28457a75f976a61716c3773efe4b8d26179d53cdd6fa236d9878e5530",
+      "source_sha256": "f8749bf28457a75f976a61716c3773efe4b8d26179d53cdd6fa236d9878e5530"
+    },
+    {
+      "path": "visual-group-theory/code/products.py",
+      "bytes": 1541,
+      "sha256": "b527fe29eda5c69881f33337d2d0af1094aa9f1febb56500cab0e23f1db2ce50",
+      "source_sha256": "b527fe29eda5c69881f33337d2d0af1094aa9f1febb56500cab0e23f1db2ce50"
+    },
+    {
+      "path": "visual-group-theory/code/programs.json",
+      "bytes": 5279,
+      "sha256": "6adfc40be477976cde99fd7fcb0d59ff0e2ac0ba9a7bcf1d583525d147281393",
+      "source_sha256": "6adfc40be477976cde99fd7fcb0d59ff0e2ac0ba9a7bcf1d583525d147281393"
+    },
+    {
+      "path": "visual-group-theory/code/subgroups.c",
+      "bytes": 2977,
+      "sha256": "d3fb1a068926c4d45284e3ede02effda238e56077f09c64a0b320421a0e73e28",
+      "source_sha256": "d3fb1a068926c4d45284e3ede02effda238e56077f09c64a0b320421a0e73e28"
+    },
+    {
+      "path": "visual-group-theory/code/subgroups.py",
+      "bytes": 1967,
+      "sha256": "4f7c1f4a8d7db29b4ead5ee9fc0c9f552d950f4ceee419e9f9e6d9c679fe4153",
+      "source_sha256": "4f7c1f4a8d7db29b4ead5ee9fc0c9f552d950f4ceee419e9f9e6d9c679fe4153"
+    },
+    {
+      "path": "visual-group-theory/code/tables.c",
+      "bytes": 3133,
+      "sha256": "94fc3d207985dbda78ca3f4e53b7300a5decac14d505d688d675aa5206b4eeb3",
+      "source_sha256": "94fc3d207985dbda78ca3f4e53b7300a5decac14d505d688d675aa5206b4eeb3"
+    },
+    {
+      "path": "visual-group-theory/code/tables.py",
+      "bytes": 2734,
+      "sha256": "9e5755dfdb90ccc2d04f28a27ab4c430893469730a15dc075c79aa7994b62d83",
+      "source_sha256": "9e5755dfdb90ccc2d04f28a27ab4c430893469730a15dc075c79aa7994b62d83"
+    },
+    {
+      "path": "visual-group-theory/index.html",
+      "bytes": 340,
+      "sha256": "1d56eab26987f5706d9ca03901be918b65c13b08120007b69566a6c64ed997f3"
+    },
+    {
+      "path": "visual-group-theory/notes/algebra_inputs.json",
+      "bytes": 9735,
+      "sha256": "0f9d1ca881822af32e01db131019fb91192f0570fa1b366946f5dd192cd770ce",
+      "source_sha256": "0f9d1ca881822af32e01db131019fb91192f0570fa1b366946f5dd192cd770ce"
+    },
+    {
+      "path": "visual-group-theory/notes/book_overview.html",
+      "bytes": 40634,
+      "sha256": "9f48e2e97dec08c146d5c7f36dbe8ed451a32a125820d9a9f32762dc3b0c604e",
+      "source_sha256": "953181bd6e4c32fb13de5435d8aab9f38c5468699d517c26d578b78ac7bc5bbf"
+    },
+    {
+      "path": "visual-group-theory/notes/chapter01_what_is_a_group.html",
+      "bytes": 76474,
+      "sha256": "496eee7257a4bdc9af6e546e8446d4bdf02fc770e064bf22c9723df8621c2992",
+      "source_sha256": "11d8f5884dd1aea11e5a636594f17b159833c1b0f65c8cb32f71e8045024d76d"
+    },
+    {
+      "path": "visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "bytes": 83202,
+      "sha256": "70ae4a8cee029414e32427857ece8ac20177837e0df9a9c24afa4e14fe4fe7c5",
+      "source_sha256": "1636dd7785d1b3c881be08169daa6adec9773a35dba5c84cc2b776b3e6e6d95a"
+    },
+    {
+      "path": "visual-group-theory/notes/chapter03_why_study_groups.html",
+      "bytes": 126219,
+      "sha256": "fd37d542a6d24703ca8f8878fd250de6d6f74b925f5308f5c9023cccd94136ef",
+      "source_sha256": "26e5355f624677db187aecf08982e44b12adb00624e1da11583e18e901892366"
+    },
+    {
+      "path": "visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "bytes": 129255,
+      "sha256": "f763a5d3ff2be8f527b75e3c781aeed6d9db93587b7907ebf590b1d9e643626e",
+      "source_sha256": "e04bc2dd522e05ee323a5950d703afb9aabf194c32f744479a97a9fffc9ff47c"
+    },
+    {
+      "path": "visual-group-theory/notes/chapter05_five_families.html",
+      "bytes": 213356,
+      "sha256": "4aa24c279d0714cdf74c2644fbadf7f8b7b14f5533e52fa00b961cc9f33c4c11",
+      "source_sha256": "549a96fcd645cbeb771fd9429c4e06aeb4325f9032808fc99ac133d01a57e85a"
+    },
+    {
+      "path": "visual-group-theory/notes/chapter06_subgroups.html",
+      "bytes": 182501,
+      "sha256": "5fdac347c061a49e7791525fd8da225e6fa00c2fba86f82ccd22f8034d87f2c0",
+      "source_sha256": "49bc342f48cc117bf544d601f4f564e9e0fa336b1961e8df1fb91bb4ae842c4b"
+    },
+    {
+      "path": "visual-group-theory/notes/chapter07_products_and_quotients.html",
+      "bytes": 255605,
+      "sha256": "8307543fa8af764155c939564e96209f74cde63b106816984435c976c72ebd08",
+      "source_sha256": "0843ac1d65e82f0bcb53b2015cd1f0914af22ab20bafbdd2e4001f91e56bc361"
+    },
+    {
+      "path": "visual-group-theory/notes/chapter08_homomorphisms.html",
+      "bytes": 211816,
+      "sha256": "04294dcfbd8fca03b9218ad2c282518aaed6dd669c9e8d8a2ad108e64e0f3656",
+      "source_sha256": "da3c38cd7184ccc432f5aa08d7fc6b911244dc486373d44970be901d0fceb695"
+    },
+    {
+      "path": "visual-group-theory/notes/exercise_manifest.json",
+      "bytes": 98668,
+      "sha256": "723244216ecaf09859cae24370e1eaa16bc311de990049fd23029adad5d3ebd7",
+      "source_sha256": "723244216ecaf09859cae24370e1eaa16bc311de990049fd23029adad5d3ebd7"
+    },
+    {
+      "path": "visual-group-theory/notes/preface.html",
+      "bytes": 33168,
+      "sha256": "ba3a6d5387aa5f7877fac2ca9ab5d6480a502a015373c4749576846b83d4c830",
+      "source_sha256": "7d91c8c31be6bd3479083b670103899ba2e5e2d0722a999d9f8a019b86a241f8"
+    },
+    {
+      "path": "visual-group-theory/notes/source_excerpts.json",
+      "bytes": 8640,
+      "sha256": "88a63de6920ceb129741f6b84247e3a4f2fd84246d6bbdb051cbd2ca39502051",
+      "source_sha256": "88a63de6920ceb129741f6b84247e3a4f2fd84246d6bbdb051cbd2ca39502051"
+    },
+    {
+      "path": "visual-group-theory/notes/source_inventory.json",
+      "bytes": 74355,
+      "sha256": "68eecb231f0e0eaa8f80e0b67455f03d1c92abc15666698c824a79dd50be07d1",
+      "source_sha256": "68eecb231f0e0eaa8f80e0b67455f03d1c92abc15666698c824a79dd50be07d1"
+    },
+    {
+      "path": "visual-group-theory/notes/source_manifest.json",
+      "bytes": 20488,
+      "sha256": "5fb781cfadb44b0b23ad349557f7666a4eeb3944eca550f61d9dbf983931b7c6",
+      "source_sha256": "5fb781cfadb44b0b23ad349557f7666a4eeb3944eca550f61d9dbf983931b7c6"
+    },
+    {
+      "path": "visual-group-theory/notes/structures_inputs.json",
+      "bytes": 10963,
+      "sha256": "c6c534adfd2414c9600a8f6747c958123badf4c182db51a676ce9df863606977",
+      "source_sha256": "c6c534adfd2414c9600a8f6747c958123badf4c182db51a676ce9df863606977"
+    }
+  ],
+  "browser_record": "review/browser.json",
+  "browser_record_sha256": "13b888cb4edc52938eba8ca73e93618762c8009429ac3671bf4609a0a45acb66",
+  "browser_reuse": {
+    "reviewed_release": "20261017T121026",
+    "unchanged_files": [
+      "index.html",
+      "styles.css",
+      "visual-group-theory/code/actions.c",
+      "visual-group-theory/code/actions.py",
+      "visual-group-theory/code/cayley.c",
+      "visual-group-theory/code/cayley.py",
+      "visual-group-theory/code/frieze.c",
+      "visual-group-theory/code/frieze.py",
+      "visual-group-theory/code/homomorphisms.c",
+      "visual-group-theory/code/homomorphisms.py",
+      "visual-group-theory/code/permutations.c",
+      "visual-group-theory/code/permutations.py",
+      "visual-group-theory/code/products.c",
+      "visual-group-theory/code/products.py",
+      "visual-group-theory/code/programs.json",
+      "visual-group-theory/code/subgroups.c",
+      "visual-group-theory/code/subgroups.py",
+      "visual-group-theory/code/tables.c",
+      "visual-group-theory/code/tables.py",
+      "visual-group-theory/notes/algebra_inputs.json",
+      "visual-group-theory/notes/chapter01_what_is_a_group.html",
+      "visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "visual-group-theory/notes/chapter03_why_study_groups.html",
+      "visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "visual-group-theory/notes/chapter05_five_families.html",
+      "visual-group-theory/notes/chapter06_subgroups.html",
+      "visual-group-theory/notes/chapter07_products_and_quotients.html",
+      "visual-group-theory/notes/preface.html",
+      "visual-group-theory/notes/source_excerpts.json",
+      "visual-group-theory/notes/source_inventory.json",
+      "visual-group-theory/notes/structures_inputs.json"
+    ],
+    "changes": [
+      "visual-group-theory/code/README.md",
+      "visual-group-theory/code/index.html",
+      "visual-group-theory/notes/book_overview.html",
+      "visual-group-theory/notes/chapter08_homomorphisms.html",
+      "visual-group-theory/notes/exercise_manifest.json",
+      "visual-group-theory/notes/source_manifest.json"
+    ],
+    "change_reason": "Finalized map/exercise statuses; program guide title and eight-program introduction; chapter 8 exercise 8.47 subscript/superscript typography. All changes read again at 1440/390px.",
+    "final_recheck": {
+      "release": "20261017T121534",
+      "results": [
+        {
+          "width": 1440,
+          "name": "map",
+          "documentWidth": 1425,
+          "innerWidth": 1440,
+          "text": "当前正文：地图、序言、第 1—8 章及全部 244 题。本批第 5—8 章的推导、图解、源码与桌面/手机视口阅读已完成本地验收。第 9—10 章的 58 题待整理。",
+          "uncontained": 0
+        },
+        {
+          "width": 1440,
+          "name": "guide",
+          "documentWidth": 1425,
+          "innerWidth": 1440,
+          "text": "Carter · 视觉群论 / 阅读资料\n\n群的动作、结构与同态程序\n\n从位置交换、Cayley 图与运算表，到置换、子群、积群与同态，复现八组 C11/Python 程序。\n\n返回全书地图\n下载原始说明",
+          "uncontained": 0
+        },
+        {
+          "width": 1440,
+          "name": "proof",
+          "documentWidth": 1425,
+          "innerWidth": 1440,
+          "text": "解答与推导\n\n(a) 8.46 的逆否命题：G 至少有两个 p 阶子群。非平凡 p 群至少有一个，可由任意元素取幂得到。\n\n(b) 恰一个，若 C=⟨c⟩ 阶 pᵐ，它是 ⟨cpm−1⟩。\n\n(c) 选与 C 内唯一 p 阶子群不同的 K。K 阶为素数，任何非单位交点都会生成整个 K，从而 K≤C，矛盾。故交集只有 e。\n\n(d) C、K 正规且交集平凡，CK≅C×K，由 (c,k)↦ck 给出。\n\n(e) q(CK)=CK/K，且 q(CK)=q(C)。q|C 的核 C∩K 平凡，故 CK/K≅C。\n\n(f) C₂=q(C) 有与 C 相同的阶。它仍是最长循环：商中任何元素阶整除其原像的阶，不会超过原群最长元素阶；而这一个最长阶确实保留下来。\n\n(g) 只要 Gᵢ≠Cᵢ，因 Cᵢ 已有最长阶，Gᵢ 不能是循环群，就仍可选 Kᵢ。每步 |Gi+1|=|Gᵢ|/p，|Cᵢ| 固定，因此有限步后恰有 Gₙ=Cₙ。\n\n(h) 终点取 Hₙ={e}。若 Gi+1=Ci+1Hi+1 且交集平凡，令 Hᵢ=qᵢ⁻¹(Hi+1)。任意 c∈Cᵢ∩Hᵢ 的像在 Ci+1∩Hi+1={e}，而 qᵢ|Cᵢ 单射，故 c=e。对任意 g∈Gᵢ，把 qᵢ(g) 写成 qᵢ(c)h′，则 c⁻¹g∈qᵢ⁻¹(Hi+1)=Hᵢ，故 Gᵢ=CᵢHᵢ。交换性加 8.43 得 Gᵢ≅Cᵢ×Hᵢ。逆推到第一层得到 G=C×H；H 阶更小，对 H 重复即可终止于循环直积。\n\n原书校注。原提示写 Hₙ=Kₙ，但终点 Gₙ=Cₙ 已停止选 K。正确逆推基点是 Hₙ={e}，随后取每个商映射的完整原像，而不是只取原先的 Kᵢ。\n\nC₄×C₈×C₂\nC₄×C₈\n商去末尾 C₂\nC₄×C₈\nC₂×C₈\n商去第一坐标的 ⟨2⟩\nC₂×C₈\nC₈\n商去第一坐标 C₂\n三步始终保持第二坐标 C₈ 完整。终点补因子为 {e}；向上取原像，补因子依次为 C₂、C₄、C₄×C₂。原群因此分解为 C₈×(C₄×C₂)。",
+          "uncontained": 0
+        },
+        {
+          "width": 1440,
+          "name": "shelf",
+          "text": "NATHAN C. CARTER\n04\n\nVisual\nGroup\nTheory\n\n动作 · 对称 · 结构\nMAA / 2009\n\n群论与可视化\nCarter · Visual Group Theory\n\n视觉群论\n\n从魔方与可逆动作建立直觉，用图看见群的结构，再沿子群、商群和同态走向方程。\n\n10 页笔记 / 244 道习题 / 全书地图、序言与第 1—8 章\n\nCayley 图\n几何对称\n运算表与群公理\nC/Python 实验\n进入视觉群论笔记\n↗\n从序言开始 →",
+          "documentWidth": 1425
+        },
+        {
+          "width": 1440,
+          "name": "shelf to map",
+          "url": "http://127.0.0.1:60998/visual-group-theory/notes/book_overview.html"
+        },
+        {
+          "width": 390,
+          "name": "map",
+          "documentWidth": 390,
+          "innerWidth": 390,
+          "text": "当前正文：地图、序言、第 1—8 章及全部 244 题。本批第 5—8 章的推导、图解、源码与桌面/手机视口阅读已完成本地验收。第 9—10 章的 58 题待整理。",
+          "uncontained": 0
+        },
+        {
+          "width": 390,
+          "name": "guide",
+          "documentWidth": 390,
+          "innerWidth": 390,
+          "text": "Carter · 视觉群论 / 阅读资料\n\n群的动作、结构与同态程序\n\n从位置交换、Cayley 图与运算表，到置换、子群、积群与同态，复现八组 C11/Python 程序。\n\n返回全书地图\n下载原始说明",
+          "uncontained": 0
+        },
+        {
+          "width": 390,
+          "name": "proof",
+          "documentWidth": 390,
+          "innerWidth": 390,
+          "text": "解答与推导\n\n(a) 8.46 的逆否命题：G 至少有两个 p 阶子群。非平凡 p 群至少有一个，可由任意元素取幂得到。\n\n(b) 恰一个，若 C=⟨c⟩ 阶 pᵐ，它是 ⟨cpm−1⟩。\n\n(c) 选与 C 内唯一 p 阶子群不同的 K。K 阶为素数，任何非单位交点都会生成整个 K，从而 K≤C，矛盾。故交集只有 e。\n\n(d) C、K 正规且交集平凡，CK≅C×K，由 (c,k)↦ck 给出。\n\n(e) q(CK)=CK/K，且 q(CK)=q(C)。q|C 的核 C∩K 平凡，故 CK/K≅C。\n\n(f) C₂=q(C) 有与 C 相同的阶。它仍是最长循环：商中任何元素阶整除其原像的阶，不会超过原群最长元素阶；而这一个最长阶确实保留下来。\n\n(g) 只要 Gᵢ≠Cᵢ，因 Cᵢ 已有最长阶，Gᵢ 不能是循环群，就仍可选 Kᵢ。每步 |Gi+1|=|Gᵢ|/p，|Cᵢ| 固定，因此有限步后恰有 Gₙ=Cₙ。\n\n(h) 终点取 Hₙ={e}。若 Gi+1=Ci+1Hi+1 且交集平凡，令 Hᵢ=qᵢ⁻¹(Hi+1)。任意 c∈Cᵢ∩Hᵢ 的像在 Ci+1∩Hi+1={e}，而 qᵢ|Cᵢ 单射，故 c=e。对任意 g∈Gᵢ，把 qᵢ(g) 写成 qᵢ(c)h′，则 c⁻¹g∈qᵢ⁻¹(Hi+1)=Hᵢ，故 Gᵢ=CᵢHᵢ。交换性加 8.43 得 Gᵢ≅Cᵢ×Hᵢ。逆推到第一层得到 G=C×H；H 阶更小，对 H 重复即可终止于循环直积。\n\n原书校注。原提示写 Hₙ=Kₙ，但终点 Gₙ=Cₙ 已停止选 K。正确逆推基点是 Hₙ={e}，随后取每个商映射的完整原像，而不是只取原先的 Kᵢ。\n\nC₄×C₈×C₂\nC₄×C₈\n商去末尾 C₂\nC₄×C₈\nC₂×C₈\n商去第一坐标的 ⟨2⟩\nC₂×C₈\nC₈\n商去第一坐标 C₂\n三步始终保持第二坐标 C₈ 完整。终点补因子为 {e}；向上取原像，补因子依次为 C₂、C₄、C₄×C₂。原群因此分解为 C₈×(C₄×C₂)。",
+          "uncontained": 0
+        },
+        {
+          "width": 390,
+          "name": "shelf",
+          "text": "NATHAN C. CARTER\n04\n\nVisual\nGroup\nTheory\n\n动作 · 对称 · 结构\nMAA / 2009\n\n群论与可视化\nCarter · Visual Group Theory\n\n视觉群论\n\n从魔方与可逆动作建立直觉，用图看见群的结构，再沿子群、商群和同态走向方程。\n\n10 页笔记 / 244 道习题 / 全书地图、序言与第 1—8 章\n\nCayley 图\n几何对称\n运算表与群公理\nC/Python 实验\n进入视觉群论笔记\n↗\n从序言开始 →",
+          "documentWidth": 390
+        },
+        {
+          "width": 390,
+          "name": "shelf to map",
+          "url": "http://127.0.0.1:60998/visual-group-theory/notes/book_overview.html"
+        }
+      ]
+    },
+    "task_finished": {
+      "taskSpace": 18,
+      "finished": true,
+      "keep": [],
+      "finishedAt": "2026-10-17T04:23:34.197Z"
+    }
+  },
+  "production": "not deployed; no commit or push",
+  "previous_release_record": "review/history/batch02-release.json"
+}

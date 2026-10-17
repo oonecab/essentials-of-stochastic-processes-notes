@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "status": "source wording distinguished from companion corrections",
+  "issues": [
+    {
+      "id": "MP-001",
+      "page": "chapter01_measurable_spaces.html",
+      "anchor": "correction-empty",
+      "printed_pages": [
+        4
+      ],
+      "pdf_pages": [
+        16
+      ],
+      "original": "例 3 的单点集合族未列空集，却称其为 π 系和半环。",
+      "correction": "补入空集；两个不同单点的交及成员减自身检验缺项。",
+      "basis": "原书半环定义与有限两点反例"
+    },
+    {
+      "id": "MP-002",
+      "page": "chapter01_measurable_spaces.html",
+      "anchor": "correction-quotient",
+      "printed_pages": [
+        12,
+        15
+      ],
+      "pdf_pages": [
+        24,
+        27
+      ],
+      "original": "定理 1.5.1(4) 商只列分母非零。",
+      "correction": "还要商有意义；分子分母同时无穷取值时原书已规定不定义。",
+      "basis": "原书广义实数运算约定与 f=g=正无穷反例"
+    },
+    {
+      "id": "MP-003",
+      "page": "chapter01_measurable_spaces.html",
+      "anchor": "correction-monotone-class",
+      "printed_pages": [
+        19,
+        20
+      ],
+      "pdf_pages": [
+        31,
+        32
+      ],
+      "original": "定理 1.5.5 仅列非负线性组合和单调上升极限封闭，证明却宣称指示函数集合系为单调系。",
+      "correction": "给出反例，并补上非负单调下降极限封闭这一充分条件。",
+      "basis": "可列收敛点列上的 liminf 函数类反例；集合单调类定理"
+    },
+    {
+      "id": "MP-004",
+      "page": "chapter02_measure_spaces.html",
+      "anchor": "correction-cover",
+      "printed_pages": [
+        23,
+        24,
+        45,
+        58
+      ],
+      "pdf_pages": [
+        35,
+        36,
+        57,
+        70
+      ],
+      "original": "半环逐成员 σ 有限用于完全化相等及习题 20。",
+      "correction": "明示全空间能由有限测度半环成员可数覆盖；若半环含 X 即自动满足。",
+      "basis": "Q={空集} 在二点空间上的外测度与完全化反例；定理 2.3.4 所用条件"
+    },
+    {
+      "id": "MP-005",
+      "page": "chapter03_integration.html",
+      "anchor": "correction-holder-space",
+      "printed_pages": [
+        77
+      ],
+      "pdf_pages": [
+        89
+      ],
+      "original": "定理 3.3.3 写 f,g 属于 Lp，但使用 g 的 Lq 范数。",
+      "correction": "明示共轭指数条件 f 属于 Lp、g 属于 Lq。",
+      "basis": "原书公式、归一化 Young 证明及共轭指数定义"
+    },
+    {
+      "id": "MP-006",
+      "page": "chapter03_integration.html",
+      "anchor": "correction-low-p",
+      "printed_pages": [
+        79,
+        80,
+        81,
+        86
+      ],
+      "pdf_pages": [
+        91,
+        92,
+        93,
+        98
+      ],
+      "original": "低阶以未开根矩定义记号，部分完备性证明与矩比较又按开根量运算。",
+      "correction": "分别使用 M_p=积分绝对值的 p 次方、N_p=M_p 的 1/p 次方；低阶距离为 M_p。",
+      "basis": "低阶次可加性、完备性分情形证明和常数 1/4 的反例"
+    },
+    {
+      "id": "MP-007",
+      "page": "chapter03_integration.html",
+      "anchor": "correction-moment-equality",
+      "printed_pages": [
+        86
+      ],
+      "pdf_pages": [
+        98
+      ],
+      "original": "矩比较等号写 f 几乎必然为常数。",
+      "correction": "改为绝对值 |f| 几乎必然为常数。",
+      "basis": "等概率正负一变量；Hölder 等号条件"
+    },
+    {
+      "id": "MP-008",
+      "page": "chapter03_integration.html",
+      "anchor": "correction-weak-infinity",
+      "printed_pages": [
+        92
+      ],
+      "pdf_pages": [
+        104
+      ],
+      "original": "习题 19 使用 L∞ 弱收敛，正文定义 3.3.1 未覆盖该端点。",
+      "correction": "区分全对偶弱收敛和 L1 测试定义的弱星收敛；反例属于前者。",
+      "basis": "指标函数序列与 Hahn–Banach 延拓；L1 测试由积分绝对连续性趋零"
+    },
+    {
+      "id": "MP-009",
+      "page": "chapter03_integration.html",
+      "anchor": "correction-metric-quotient",
+      "printed_pages": [
+        92
+      ],
+      "pdf_pages": [
+        104
+      ],
+      "original": "习题 22 直接称随机变量空间上的距离。",
+      "correction": "按几乎必然相等取等价类；原函数集合上为伪距离。",
+      "basis": "零概率点改值不改变距离；三角不等式展开"
+    },
+    {
+      "id": "MP-010",
+      "page": "chapter03_integration.html",
+      "anchor": "correction-stieltjes-endpoint",
+      "printed_pages": [
+        93,
+        227
+      ],
+      "pdf_pages": [
+        105,
+        239
+      ],
+      "original": "习题 23 写区间 [a,b]；附录实际用 (a,b] 测度积分。",
+      "correction": "通常 Riemann–Stieltjes 增量对应 (a,b]；闭区间补入左端原子项。",
+      "basis": "Darboux 夹逼与左端 Dirac 质量反例"
+    },
+    {
+      "id": "MP-011",
+      "page": "chapter04_signed_measures.html",
+      "anchor": "correction-domination-zero",
+      "printed_pages": [
+        125,
+        228
+      ],
+      "pdf_pages": [
+        137,
+        240
+      ],
+      "original": "习题 4.5 附录权重分母为测度总质量，零测度时出现 0/0。",
+      "correction": "使用 2 的负 n 次方除以 1 加总质量，保持正权和有限总质量。",
+      "basis": "可数正权测度和；零质量成员回归"
+    },
+    {
+      "id": "MP-012",
+      "page": "chapter04_signed_measures.html",
+      "anchor": "correction-uniform-cdf",
+      "printed_pages": [
+        127,
+        229
+      ],
+      "pdf_pages": [
+        139,
+        241
+      ],
+      "original": "习题 4.15 附录离散均匀分布的中间区间向左错一格。",
+      "correction": "在 k≤x<k+1 时 CDF 为 k/n；x<1 为零，x≥n 为一。",
+      "basis": "逐点计数整数 1 至 n 中不大于 x 的个数；n=1 边界"
+    }
+  ]
+}

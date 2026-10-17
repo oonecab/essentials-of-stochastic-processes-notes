@@ -1,6 +1,6 @@
 # 统一笔记站点的构建与部署
 
-Reading Notes 从 `books/catalog.json` 登记的 stochastic、weiss、csapp 子项目读取正式内容，为 `notes.zzzping.top` 构建统一书架。部署单位是完整静态站点包，C/Python 示例供读者下载后在自己的电脑运行。日常发布使用这里的统一入口；各书 `deploy/` 中的工具用于保留原单书发布能力与历史资料。
+Reading Notes 从 `books/catalog.json` 登记的 stochastic、weiss、csapp、visual-group-theory、measure-probability 子项目读取正式内容，为 `notes.zzzping.top` 构建统一书架。部署单位是完整静态站点包，C/Python 示例供读者下载后在自己的电脑运行。日常发布使用这里的统一入口；各书 `deploy/` 中的工具用于保留原单书发布能力与历史资料。
 
 ## 构建与预览
 
@@ -38,10 +38,14 @@ weiss/c/ch8.c                     # 第八章引用的共享源码
 csapp/notes/                      # 全书地图、序言、第 1—12 章和来源清单
 csapp/code/                       # 按程序索引收录源码、汇编、基准与运行说明
 csapp/csapp.pdf                   # 原书；按来源清单启用，保留章节/习题页序链接
-stochastic/index.html、weiss/index.html、csapp/index.html  # 离线入口
+visual-group-theory/notes/        # 全书地图、序言、第 1—10 章及来源/习题清单
+visual-group-theory/code/         # 十组 C/Python 源码、运行说明及资料网页
+measure-probability/notes/        # 全书总览、序言与前言、前四章及来源/习题清单
+measure-probability/code/         # 三组 C/Python 源码、运行说明及资料网页
+<book>/index.html                # 每本已登记书籍的离线入口
 ```
 
-注册书籍的三个入口 `/<book>`、`/<book>/`、`/<book>/index.html` 由 Nginx 返回 301 到本书全书地图，并保留查询参数。当前模板含 stochastic、weiss、csapp；章节锚点由浏览器保留和解释。CS:APP 来源清单的 `publication.include_source_pdf` 当前为 `true`，构建收录 `/csapp/csapp.pdf`，章首、来源和习题链接保留 `#page=N`，N 为从 1 开始的 PDF 页序。将该字段设为 `false` 时，构建不收录原书并把相应链接转为页码文字。本地接入与线上生效分别验收，记录见 [T011](../test/T011-csapp-pdf-navigation.md)。
+注册书籍的三个入口 `/<book>`、`/<book>/`、`/<book>/index.html` 由 Nginx 返回 301 到本书全书地图，并保留查询参数。当前模板包含上述五本书；章节锚点由浏览器保留和解释。CS:APP 来源清单的 `publication.include_source_pdf` 当前为 `true`，构建收录 `/csapp/csapp.pdf`，章首、来源和习题链接保留 `#page=N`，N 为从 1 开始的 PDF 页序。将该字段设为 `false` 时，构建不收录原书并把相应链接转为页码文字。本地接入与线上生效分别验收，记录见 [T011](../test/T011-csapp-pdf-navigation.md)。视觉群论与测度概率的该字段均为 `false`，原 PDF 位于忽略目录，仅作本地对照；构建保留印刷页/PDF 页序文字及来源说明链接，收录笔记、登记源码和元数据。
 
 `portal/` 维护书架与共享阅读样式，`deploy/reader_views.py` 在发布阶段增加首页导航、资料网页和源码 ZIP，不回写正式笔记。原有章节结构、公式与实现保留。可用下面的命令预览已构建版本：
 
@@ -98,7 +102,7 @@ python3 /var/lib/notes-deploy/YYYYMMDDTHHMMSS/verify_portal.py \
   --output /var/lib/notes-deploy/YYYYMMDDTHHMMSS/origin-https.json
 ```
 
-6. 在真实公网浏览器中检查书架、三本书入口、受影响章节、目录高亮与手机折叠、习题/代码展开、返回首页、资料页、下载与 PDF 页码定位。源站响应校验与公网显示验收分别记录，完成后保留旧版本作为回滚点。
+6. 在真实公网浏览器中检查书架、全部已登记书籍入口、受影响章节、目录高亮与手机折叠、习题/代码展开、返回首页、资料页、下载与已收录 PDF 的页码定位。源站响应校验与公网显示验收分别记录，完成后保留旧版本作为回滚点。
 
 静态模板设置 `.c/.py/.md` 为 `text/plain`、PDF 为 `application/pdf`，使用 `no-cache`、`nosniff` 与本版 CSP；点路径返回 404，修改方法返回 403。服务器不执行示例源码。保留现有站点的访问控制与安全配置，不因为本地构建而修改其他虚拟主机。
 

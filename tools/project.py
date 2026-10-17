@@ -62,6 +62,18 @@ def check(book_id: str, quick: bool, benchmarks: bool) -> int:
         if quick:
             command.append("--quick")
         commands.append(command)
+    if "visual-group-theory" in selected:
+        command = [sys.executable, selected["visual-group-theory"]["root"] / "tools/check_notes.py",
+                   "--run-dir", run / "visual-group-theory"]
+        if quick:
+            command.append("--quick")
+        commands.append(command)
+    if "measure-probability" in selected:
+        command = [sys.executable, selected["measure-probability"]["root"] / "tools/check_notes.py",
+                   "--run-dir", run / "measure-probability"]
+        if quick:
+            command.append("--quick")
+        commands.append(command)
     report = {"status": "running", "book": book_id, "quick": quick, "benchmarks": benchmarks,
               "started_at": datetime.now(timezone.utc).isoformat(), "checks": []}
     evidence = run / "report.json"

@@ -1,0 +1,5403 @@
+{
+  "source_sha256": "f82d041ad301baa07b1ec17f495805e17c49852a772c770a28afeb29de7ecf2a",
+  "scope": "Chapters 1–10, all 302 original exercises and all subparts; batch 4 adds chapters 9–10 and 58 exercises",
+  "exercises": [
+    {
+      "number": "1.1",
+      "chapter": 1,
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "ex-1-1",
+      "printed_pages": [
+        7
+      ],
+      "pdf_pages": [
+        22
+      ],
+      "subparts": [],
+      "question_sha256": "012168914d5822a3c8077eaa6c1c2f5ea9515c822b6496749c43a5ea25c2c472",
+      "status": "completed_locally"
+    },
+    {
+      "number": "1.2",
+      "chapter": 1,
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "ex-1-2",
+      "printed_pages": [
+        7
+      ],
+      "pdf_pages": [
+        22
+      ],
+      "subparts": [],
+      "question_sha256": "4293859476cbed085234fc9ab415660751c7ff9b400fccd00540eed1e9ec368f",
+      "status": "completed_locally"
+    },
+    {
+      "number": "1.3",
+      "chapter": 1,
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "ex-1-3",
+      "printed_pages": [
+        7
+      ],
+      "pdf_pages": [
+        22
+      ],
+      "subparts": [],
+      "question_sha256": "ee220fa848cc6e8fda26d39c61dfa386a7e7d25d468a256f9d0260565f8c65ef",
+      "status": "completed_locally"
+    },
+    {
+      "number": "1.4",
+      "chapter": 1,
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "ex-1-4",
+      "printed_pages": [
+        7,
+        8
+      ],
+      "pdf_pages": [
+        22,
+        23
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "f5d6499de37c91cc4f2dfa11034a7df392c0305a77e51b90a4d759dc71af51c4",
+      "status": "completed_locally"
+    },
+    {
+      "number": "1.5",
+      "chapter": 1,
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "ex-1-5",
+      "printed_pages": [
+        8
+      ],
+      "pdf_pages": [
+        23
+      ],
+      "subparts": [],
+      "question_sha256": "fe438bec890bedbbb4b1684d9cb4812811d8a1e5dc711b96759a44e5c1e09c96",
+      "status": "completed_locally"
+    },
+    {
+      "number": "1.6",
+      "chapter": 1,
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "ex-1-6",
+      "printed_pages": [
+        8
+      ],
+      "pdf_pages": [
+        23
+      ],
+      "subparts": [],
+      "question_sha256": "85ebb5cc69485ea96b7118612c5a6b3ac4db9685e99e8995c13e6e8eb2abfb8f",
+      "status": "completed_locally"
+    },
+    {
+      "number": "1.7",
+      "chapter": 1,
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "ex-1-7",
+      "printed_pages": [
+        8
+      ],
+      "pdf_pages": [
+        23
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "10b94995e9e7e123c34ae4d58861de79d8126672728aa437a4f09853fee6af85",
+      "status": "completed_locally"
+    },
+    {
+      "number": "1.8",
+      "chapter": 1,
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "ex-1-8",
+      "printed_pages": [
+        8
+      ],
+      "pdf_pages": [
+        23
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "b9985861eec0b676b3720da6cfdc17f19f5f5ac77eec60d3e1390e874f36421b",
+      "status": "completed_locally"
+    },
+    {
+      "number": "1.9",
+      "chapter": 1,
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "ex-1-9",
+      "printed_pages": [
+        8
+      ],
+      "pdf_pages": [
+        23
+      ],
+      "subparts": [],
+      "question_sha256": "95b687d04afd836e60e7e6143049e66ffcbc7884ab5fec82809f1ad6102db30e",
+      "status": "completed_locally"
+    },
+    {
+      "number": "1.10",
+      "chapter": 1,
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "ex-1-10",
+      "printed_pages": [
+        9
+      ],
+      "pdf_pages": [
+        24
+      ],
+      "subparts": [],
+      "question_sha256": "53cebe5d5b0f472cd38d2c8cdfb7a88364165c7f891967301bcf994c6315f63d",
+      "status": "completed_locally"
+    },
+    {
+      "number": "1.11",
+      "chapter": 1,
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "ex-1-11",
+      "printed_pages": [
+        9
+      ],
+      "pdf_pages": [
+        24
+      ],
+      "subparts": [],
+      "question_sha256": "a5bf38c108b645ece19320fb6f63c27e41eb4bfc4ee54dc3bfcd18c1f001f879",
+      "status": "completed_locally"
+    },
+    {
+      "number": "1.12",
+      "chapter": 1,
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "ex-1-12",
+      "printed_pages": [
+        9
+      ],
+      "pdf_pages": [
+        24
+      ],
+      "subparts": [],
+      "question_sha256": "23f9cbf7180009db4737319888b79db4e3cf62103e91ebed1abfbff80bb37c60",
+      "status": "completed_locally"
+    },
+    {
+      "number": "1.13",
+      "chapter": 1,
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "ex-1-13",
+      "printed_pages": [
+        9
+      ],
+      "pdf_pages": [
+        24
+      ],
+      "subparts": [],
+      "question_sha256": "5eb8c4fcd2844e222598c6c95b05f224bcb54f5de4ad578facf89e16c38f5af7",
+      "status": "completed_locally"
+    },
+    {
+      "number": "1.14",
+      "chapter": 1,
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "ex-1-14",
+      "printed_pages": [
+        9
+      ],
+      "pdf_pages": [
+        24
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "afcfccff11770d7af6e6e84c6dfdf5b6761ff3da1d3b9b6436a47455a19c147d",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.1",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-1",
+      "printed_pages": [
+        21
+      ],
+      "pdf_pages": [
+        36
+      ],
+      "subparts": [],
+      "question_sha256": "5b7682c50ab5760c0c489cfbda02e7341f58460044a9a442965f122e98dcd420",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.2",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-2",
+      "printed_pages": [
+        21
+      ],
+      "pdf_pages": [
+        36
+      ],
+      "subparts": [],
+      "question_sha256": "cf99ef4bb3931167009ebfe5ca6d50372bf2441d45d7567abc82f4e8b7c85849",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.3",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-3",
+      "printed_pages": [
+        21
+      ],
+      "pdf_pages": [
+        36
+      ],
+      "subparts": [],
+      "question_sha256": "2917bb9047ab876bc9c88cb272923b9da32e804295aba6d3502cba4caca1b47c",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.4",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-4",
+      "printed_pages": [
+        21
+      ],
+      "pdf_pages": [
+        36
+      ],
+      "subparts": [],
+      "question_sha256": "7ced9121762e5e1693c9eef04af62c6980dbdfd8dc7e1af0093ea3a5d9058a42",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.5",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-5",
+      "printed_pages": [
+        21
+      ],
+      "pdf_pages": [
+        36
+      ],
+      "subparts": [],
+      "question_sha256": "ed2b0ee9d0dea475eb228cfc9ba2672ed8357adca2361e808245d01d14d64069",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.6",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-6",
+      "printed_pages": [
+        23
+      ],
+      "pdf_pages": [
+        38
+      ],
+      "subparts": [],
+      "question_sha256": "7f20854d771b65afcc5ccee331291f74510a0fca746ca6bb49a14a0c9a6a9a10",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.7",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-7",
+      "printed_pages": [
+        23
+      ],
+      "pdf_pages": [
+        38
+      ],
+      "subparts": [],
+      "question_sha256": "1b4fbd4ebb0f9281541c0931df06e0e35a8b80ddd5c62042380e7a112460eb88",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.8",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-8",
+      "printed_pages": [
+        23
+      ],
+      "pdf_pages": [
+        38
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "e6c6b6a0b7302368bc154d70cbc5edf1492932d8f1693ccdfbec55283518a21e",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.9",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-9",
+      "printed_pages": [
+        23
+      ],
+      "pdf_pages": [
+        38
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "7975c8522647b7e7ae14c2bc8133932b97664b09dcccca19f749cc2884bcab03",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.10",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-10",
+      "printed_pages": [
+        23
+      ],
+      "pdf_pages": [
+        38
+      ],
+      "subparts": [],
+      "question_sha256": "76fdcee7db657cdc8017a57fd4949b3618124371108c59aa018d3ec7d6e589ee",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.11",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-11",
+      "printed_pages": [
+        23
+      ],
+      "pdf_pages": [
+        38
+      ],
+      "subparts": [],
+      "question_sha256": "6c49d827cf65e983cdd927a7b6cf1b0e2758d968a768ae9a9bc146872053903c",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.12",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-12",
+      "printed_pages": [
+        24
+      ],
+      "pdf_pages": [
+        39
+      ],
+      "subparts": [],
+      "question_sha256": "a0f9e68e097e3ea685aa4b1a7b39f2bc4659c3d54675001e12fb34963c7c2aeb",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.13",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-13",
+      "printed_pages": [
+        24
+      ],
+      "pdf_pages": [
+        39
+      ],
+      "subparts": [],
+      "question_sha256": "8d21220ebb7602477db5a7bb34773c8fbaf9e12840d71931ddeb5e57e2f3a687",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.14",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-14",
+      "printed_pages": [
+        24
+      ],
+      "pdf_pages": [
+        39
+      ],
+      "subparts": [],
+      "question_sha256": "b230b7f58185935c03cdfabc95e90cec66b1efaaf23a94839be60e2a8324bd8d",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.15",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-15",
+      "printed_pages": [
+        24
+      ],
+      "pdf_pages": [
+        39
+      ],
+      "subparts": [],
+      "question_sha256": "fdaa1a1d39b9f3e0075fea8be8da44a5b20a81323896de739d7817435ffa0b4f",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.16",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-16",
+      "printed_pages": [
+        24
+      ],
+      "pdf_pages": [
+        39
+      ],
+      "subparts": [],
+      "question_sha256": "edd113e2ac44c10d1baf7ac63904331a9651134b036af28bc1b51be068f9a564",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.17",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-17",
+      "printed_pages": [
+        24
+      ],
+      "pdf_pages": [
+        39
+      ],
+      "subparts": [],
+      "question_sha256": "ab9b70bda97440b4172c663c09317ca385986b43c095bdfcd609351f6368eda8",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.18",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-18",
+      "printed_pages": [
+        24
+      ],
+      "pdf_pages": [
+        39
+      ],
+      "subparts": [],
+      "question_sha256": "261fcaf9b202602047c2602016a0a253579c7090030fd719b2f1815971d38cbc",
+      "status": "completed_locally"
+    },
+    {
+      "number": "2.19",
+      "chapter": 2,
+      "page": "chapter02_what_do_groups_look_like.html",
+      "anchor": "ex-2-19",
+      "printed_pages": [
+        24
+      ],
+      "pdf_pages": [
+        39
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c.i",
+        "c.ii",
+        "d"
+      ],
+      "question_sha256": "6b0148032887e4689de9c4d58f7faf9f709c856e2debbe516a8627c66ae57bad",
+      "status": "completed_locally"
+    },
+    {
+      "number": "3.1",
+      "chapter": 3,
+      "page": "chapter03_why_study_groups.html",
+      "anchor": "ex-3-1",
+      "printed_pages": [
+        37
+      ],
+      "pdf_pages": [
+        52
+      ],
+      "subparts": [],
+      "question_sha256": "45537aa9e7378e56a057f20106b96ee71b883edd2d3f7f5f117e2b275867eb94",
+      "status": "completed_locally"
+    },
+    {
+      "number": "3.2",
+      "chapter": 3,
+      "page": "chapter03_why_study_groups.html",
+      "anchor": "ex-3-2",
+      "printed_pages": [
+        37
+      ],
+      "pdf_pages": [
+        52
+      ],
+      "subparts": [],
+      "question_sha256": "7bd40d68ceb29682d687b7b989ca389b968a9bd499c3c060991684efee268a64",
+      "status": "completed_locally"
+    },
+    {
+      "number": "3.3",
+      "chapter": 3,
+      "page": "chapter03_why_study_groups.html",
+      "anchor": "ex-3-3",
+      "printed_pages": [
+        37
+      ],
+      "pdf_pages": [
+        52
+      ],
+      "subparts": [],
+      "question_sha256": "4846c4b50ca0c049d6d874ddf423e390575ff2dcc89b89ae2e1398677e73c8ac",
+      "status": "completed_locally"
+    },
+    {
+      "number": "3.4",
+      "chapter": 3,
+      "page": "chapter03_why_study_groups.html",
+      "anchor": "ex-3-4",
+      "printed_pages": [
+        37
+      ],
+      "pdf_pages": [
+        52
+      ],
+      "subparts": [],
+      "question_sha256": "87dfb0f58b782271542a2667e979d7353415d8d395d54b624f576ec43c5832a9",
+      "status": "completed_locally"
+    },
+    {
+      "number": "3.5",
+      "chapter": 3,
+      "page": "chapter03_why_study_groups.html",
+      "anchor": "ex-3-5",
+      "printed_pages": [
+        38
+      ],
+      "pdf_pages": [
+        53
+      ],
+      "subparts": [],
+      "question_sha256": "9ba4e01aad5f0d9d5834720aa7bc4d5f1e68ce442be59d66417882cbb742c260",
+      "status": "completed_locally"
+    },
+    {
+      "number": "3.6",
+      "chapter": 3,
+      "page": "chapter03_why_study_groups.html",
+      "anchor": "ex-3-6",
+      "printed_pages": [
+        38
+      ],
+      "pdf_pages": [
+        53
+      ],
+      "subparts": [],
+      "question_sha256": "8476542be48553ae6df5f764aca4c60c6c9200d6aabdc5738bbbe10996e422fb",
+      "status": "completed_locally"
+    },
+    {
+      "number": "3.7",
+      "chapter": 3,
+      "page": "chapter03_why_study_groups.html",
+      "anchor": "ex-3-7",
+      "printed_pages": [
+        38
+      ],
+      "pdf_pages": [
+        53
+      ],
+      "subparts": [],
+      "question_sha256": "96a2e76de7655e27ae78a8ccb60cd2917e0a3adf72d2f4a9a8901d3e09acbae9",
+      "status": "completed_locally"
+    },
+    {
+      "number": "3.8",
+      "chapter": 3,
+      "page": "chapter03_why_study_groups.html",
+      "anchor": "ex-3-8",
+      "printed_pages": [
+        38,
+        39
+      ],
+      "pdf_pages": [
+        53,
+        54
+      ],
+      "subparts": [],
+      "question_sha256": "9a3108110bce74ee146f84e6c6721da87f1b451f0e6f172fe3e999f4d0e858fa",
+      "status": "completed_locally"
+    },
+    {
+      "number": "3.9",
+      "chapter": 3,
+      "page": "chapter03_why_study_groups.html",
+      "anchor": "ex-3-9",
+      "printed_pages": [
+        39
+      ],
+      "pdf_pages": [
+        54
+      ],
+      "subparts": [],
+      "question_sha256": "ce5683c6c57eae1115308c0d1918ed71b8c50ba3a4b39ff33d6cd5537eaf10eb",
+      "status": "completed_locally"
+    },
+    {
+      "number": "3.10",
+      "chapter": 3,
+      "page": "chapter03_why_study_groups.html",
+      "anchor": "ex-3-10",
+      "printed_pages": [
+        39
+      ],
+      "pdf_pages": [
+        54
+      ],
+      "subparts": [],
+      "question_sha256": "2faa577dd867e92bdf5c6ea4080da097762dcaf12a2b33a7107c56574a52f548",
+      "status": "completed_locally"
+    },
+    {
+      "number": "3.11",
+      "chapter": 3,
+      "page": "chapter03_why_study_groups.html",
+      "anchor": "ex-3-11",
+      "printed_pages": [
+        39,
+        40
+      ],
+      "pdf_pages": [
+        54,
+        55
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "b76bcae72e0a07d0ce6c047a20128dbddf98f60f0e41b338926e959b868d9d80",
+      "status": "completed_locally"
+    },
+    {
+      "number": "3.12",
+      "chapter": 3,
+      "page": "chapter03_why_study_groups.html",
+      "anchor": "ex-3-12",
+      "printed_pages": [
+        40
+      ],
+      "pdf_pages": [
+        55
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "fa92c9d0367b157ead6f317021912aebe8d10ac3f9d110506a720e34cbbb7c4e",
+      "status": "completed_locally"
+    },
+    {
+      "number": "3.13",
+      "chapter": 3,
+      "page": "chapter03_why_study_groups.html",
+      "anchor": "ex-3-13",
+      "printed_pages": [
+        40
+      ],
+      "pdf_pages": [
+        55
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "50b51646b23be59adfaf92d577ede2afd7dcc726f1e674625790c12dc29d2153",
+      "status": "completed_locally"
+    },
+    {
+      "number": "3.14",
+      "chapter": 3,
+      "page": "chapter03_why_study_groups.html",
+      "anchor": "ex-3-14",
+      "printed_pages": [
+        40
+      ],
+      "pdf_pages": [
+        55
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "0ac30c199a81e531a63aef6aa569b07291b85c330776bef2e4e0360f41cd8eea",
+      "status": "completed_locally"
+    },
+    {
+      "number": "3.15",
+      "chapter": 3,
+      "page": "chapter03_why_study_groups.html",
+      "anchor": "ex-3-15",
+      "printed_pages": [
+        40
+      ],
+      "pdf_pages": [
+        55
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "b9aa41cfd71b6754fec0c4851b1cdba112460df3698e0b94387d03f7c25644cd",
+      "status": "completed_locally"
+    },
+    {
+      "number": "3.16",
+      "chapter": 3,
+      "page": "chapter03_why_study_groups.html",
+      "anchor": "ex-3-16",
+      "printed_pages": [
+        40
+      ],
+      "pdf_pages": [
+        55
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "fb731d9c8b7bbe45a0a91ebbaeb66d735f433572e7eb9b14b2d71cdda6422663",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.1",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-1",
+      "printed_pages": [
+        52
+      ],
+      "pdf_pages": [
+        67
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "28371490422a5b09aa53beaa68c57323a65790f51c497cb4de3cdea7888fdf82",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.2",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-2",
+      "printed_pages": [
+        52
+      ],
+      "pdf_pages": [
+        67
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "ce2afe49f972df03fd7eefc022294af402824327a11c3be98b233a9753a686b0",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.3",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-3",
+      "printed_pages": [
+        52,
+        53
+      ],
+      "pdf_pages": [
+        67,
+        68
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "4c20a549f4a5cbd8dad5db1807abcb7c3c46094de14ab039c9f2c82ae71e25c6",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.4",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-4",
+      "printed_pages": [
+        53
+      ],
+      "pdf_pages": [
+        68
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "a435cd9f7f24e0f7529a84f2911b982f5093da7e828400e9566067ebf264d312",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.5",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-5",
+      "printed_pages": [
+        53
+      ],
+      "pdf_pages": [
+        68
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "b490d470c86af3cb5ce779080b17a73695decc04d574ed0a6215e10a09dee4bd",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.6",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-6",
+      "printed_pages": [
+        53,
+        54
+      ],
+      "pdf_pages": [
+        68,
+        69
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "66c8f4330fccf662291eec2a972cfa935e12cd42045033eadaa89dd4ad751611",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.7",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-7",
+      "printed_pages": [
+        54
+      ],
+      "pdf_pages": [
+        69
+      ],
+      "subparts": [],
+      "question_sha256": "ad8159f5fb2adda83137ca93df07a4bd369d5e9892bbb2cd5410b2e9b7e907f9",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.8",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-8",
+      "printed_pages": [
+        55
+      ],
+      "pdf_pages": [
+        70
+      ],
+      "subparts": [],
+      "question_sha256": "6f6f18d29a4280b493b009b96e41dbbe21c2f38578b240df209545ae51e075c5",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.9",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-9",
+      "printed_pages": [
+        55
+      ],
+      "pdf_pages": [
+        70
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c.i",
+        "c.ii",
+        "d"
+      ],
+      "question_sha256": "3103569c27010092a25449e36bb0ba33406932296410789032464f724848589f",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.10",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-10",
+      "printed_pages": [
+        55
+      ],
+      "pdf_pages": [
+        70
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "17f999d0f3e5e74bf5b053ad93e3eba5205b4f7d813567cb13e99c69252f384e",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.11",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-11",
+      "printed_pages": [
+        56
+      ],
+      "pdf_pages": [
+        71
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "890c83e4edf8e2921fa53c38f828e6455c360bb8eb0e4e95941492b4d0d1344c",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.12",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-12",
+      "printed_pages": [
+        56
+      ],
+      "pdf_pages": [
+        71
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "678525a9e3166139416e31c39fea8efbe9b53f4fe341a2db57ceec212870d4af",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.13",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-13",
+      "printed_pages": [
+        56
+      ],
+      "pdf_pages": [
+        71
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "99eec3912dfcca3513a8acd3e1b0606f12b822b6ae9a4c039879f0fb982af77a",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.14",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-14",
+      "printed_pages": [
+        56,
+        57
+      ],
+      "pdf_pages": [
+        71,
+        72
+      ],
+      "subparts": [],
+      "question_sha256": "e2223e0a7b6e0aa1bab4ae36341dbc06b37d733cca94964f6cfb1e07b01dee52",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.15",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-15",
+      "printed_pages": [
+        57
+      ],
+      "pdf_pages": [
+        72
+      ],
+      "subparts": [],
+      "question_sha256": "16c22e6b957984831153b7d173540d0caec23e8ee2e2580dbaddcc5c4f56b8a4",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.16",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-16",
+      "printed_pages": [
+        57
+      ],
+      "pdf_pages": [
+        72
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "0a11e2bf39160c7eac90c4db680473b6ad11e812b50d5c7ca206c185b7499dfe",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.17",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-17",
+      "printed_pages": [
+        57
+      ],
+      "pdf_pages": [
+        72
+      ],
+      "subparts": [],
+      "question_sha256": "bbbe00b2e0df6dfc99eb391539a1f085ad47291f8b2a8591f99e631dad8c60f3",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.18",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-18",
+      "printed_pages": [
+        57
+      ],
+      "pdf_pages": [
+        72
+      ],
+      "subparts": [],
+      "question_sha256": "f1ee7eb7d309d1e1c4b447071d5827979f9fe405f3770ec32006e78e6700e598",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.19",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-19",
+      "printed_pages": [
+        58
+      ],
+      "pdf_pages": [
+        73
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "7c5b34a1f00b66fc9091eb69b6daa5596debc94039a388767b363a0db783c053",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.20",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-20",
+      "printed_pages": [
+        58,
+        59
+      ],
+      "pdf_pages": [
+        73,
+        74
+      ],
+      "subparts": [],
+      "question_sha256": "a14908cc1e9479c646a7874c064c5229f22df2c16f4d6dc6636ae024e65f7642",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.21",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-21",
+      "printed_pages": [
+        59
+      ],
+      "pdf_pages": [
+        74
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "dedc5a5d8594ee8e0a394692975a66b0547b62b25b1a07f345df43ff61bb69ea",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.22",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-22",
+      "printed_pages": [
+        59
+      ],
+      "pdf_pages": [
+        74
+      ],
+      "subparts": [],
+      "question_sha256": "9c5f9533506ac0883e8e70781cca4db2ca3ccb16618b7b6c35051f591bdce485",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.23",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-23",
+      "printed_pages": [
+        59
+      ],
+      "pdf_pages": [
+        74
+      ],
+      "subparts": [],
+      "question_sha256": "1cec49ae9c9daf68fde43ac590c99b741b7826121ba8e14cb11dedd320cbaf87",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.24",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-24",
+      "printed_pages": [
+        59
+      ],
+      "pdf_pages": [
+        74
+      ],
+      "subparts": [],
+      "question_sha256": "728ef22efecfd22df0dd8c5ade21c3e3362095edae5ce368ada40adf6c203f5c",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.25",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-25",
+      "printed_pages": [
+        59,
+        60
+      ],
+      "pdf_pages": [
+        74,
+        75
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "e6ff6987cea75867275ffa85124e7c4cb31781af28f3f2097d6e1d192e32efa4",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.26",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-26",
+      "printed_pages": [
+        60
+      ],
+      "pdf_pages": [
+        75
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "04b69c4d2cd78922f9c1ec52dcc2c97c1ff12a2fdbca02f002be8c700699c6b6",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.27",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-27",
+      "printed_pages": [
+        61
+      ],
+      "pdf_pages": [
+        76
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "2f9eda4d8c3496b3e6d9823a1701be07e54533adc71c95b3d3f4b75185ce4f8f",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.28",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-28",
+      "printed_pages": [
+        61
+      ],
+      "pdf_pages": [
+        76
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "69c843ca10f88eaeb6c3a0c460bec5aa2006f2298d056d2b33986a0bd1897730",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.29",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-29",
+      "printed_pages": [
+        61
+      ],
+      "pdf_pages": [
+        76
+      ],
+      "subparts": [],
+      "question_sha256": "ebc729d21bca7af9f9acdef0a4302390d30db73dea4daadebd0555fc25fbc0dc",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.30",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-30",
+      "printed_pages": [
+        61
+      ],
+      "pdf_pages": [
+        76
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "1c49403259e841410886fe7c73d75b931cf079d0d55e61efdcb2aa8a7843279c",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.31",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-31",
+      "printed_pages": [
+        61
+      ],
+      "pdf_pages": [
+        76
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "fac161029b9b569beaa4bd8ca0fe055329da658adac29cd5fd9baf495d2db3ce",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.32",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-32",
+      "printed_pages": [
+        62
+      ],
+      "pdf_pages": [
+        77
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "5b8700e6786931005ac56ebf08614dd2cb34faac90ccc99eaede79f1aae87580",
+      "status": "completed_locally"
+    },
+    {
+      "number": "4.33",
+      "chapter": 4,
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "ex-4-33",
+      "printed_pages": [
+        62
+      ],
+      "pdf_pages": [
+        77
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "question_sha256": "7a9521b793658c645d4e2a045ef60fe80084a4f11979b0d6bf65fb781e99c41c",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.1",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-1",
+      "printed_pages": [
+        87
+      ],
+      "pdf_pages": [
+        102
+      ],
+      "subparts": [],
+      "question_sha256": "72869770491760eaf877dde755112194fa24a12263dce2ea667c16f34c106067",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.2",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-2",
+      "printed_pages": [
+        87
+      ],
+      "pdf_pages": [
+        102
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "a911b062c0f20c1242d1738578fe1015cfe3cf53946bf749c8b6a9f578da8410",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.3",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-3",
+      "printed_pages": [
+        87
+      ],
+      "pdf_pages": [
+        102
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i"
+      ],
+      "question_sha256": "a2773ecbdf586b73d27527c7e4385a48617df38afa75067f3078c4e4d7aa998d",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.4",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-4",
+      "printed_pages": [
+        87
+      ],
+      "pdf_pages": [
+        102
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "9cbfbc6229e0dde2cf2e802da92d6461b02f6b27b9a32d85ff2f0463d0ac4ecd",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.5",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-5",
+      "printed_pages": [
+        87
+      ],
+      "pdf_pages": [
+        102
+      ],
+      "subparts": [],
+      "question_sha256": "85e6261ec44483ba2c93a8347a6f02a706b78ed384bce17dcda3ef70ac098842",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.6",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-6",
+      "printed_pages": [
+        88
+      ],
+      "pdf_pages": [
+        103
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "1c5171e281ae65a6129823f1b956a00da9e303debb0fdce5b23a248f3dc51998",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.7",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-7",
+      "printed_pages": [
+        88
+      ],
+      "pdf_pages": [
+        103
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "1ac3dd2b99e2a05202d4790189348b76c813966d574c13ae190dda6dad52ea23",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.8",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-8",
+      "printed_pages": [
+        88
+      ],
+      "pdf_pages": [
+        103
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "1ac3dd2b99e2a05202d4790189348b76c813966d574c13ae190dda6dad52ea23",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.9",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-9",
+      "printed_pages": [
+        88
+      ],
+      "pdf_pages": [
+        103
+      ],
+      "subparts": [],
+      "question_sha256": "1225b22c470d96cfb34bfb20a7bf629a4f8aceb21759a92711277f95bbe2b5bf",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.10",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-10",
+      "printed_pages": [
+        88
+      ],
+      "pdf_pages": [
+        103
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h"
+      ],
+      "question_sha256": "6830aee913ffa602fe039083425ef49987dcfbeef92baf5318c87b4eb26f2c61",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.11",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-11",
+      "printed_pages": [
+        88
+      ],
+      "pdf_pages": [
+        103
+      ],
+      "subparts": [],
+      "question_sha256": "8c2f21bce68d34df37db32ba0387e6ed6f2043a162912c86078569adb89ef6b1",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.12",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-12",
+      "printed_pages": [
+        89
+      ],
+      "pdf_pages": [
+        104
+      ],
+      "subparts": [],
+      "question_sha256": "972ea933db1c4d372db0b5a729d27598f47ae72797d59772978b145442f1f4d0",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.13",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-13",
+      "printed_pages": [
+        89
+      ],
+      "pdf_pages": [
+        104
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "9b77fb6af1ed9f674bdc4c82b7715e71c19c2c6d7c8d0ea5445189e201c32d0f",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.14",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-14",
+      "printed_pages": [
+        89
+      ],
+      "pdf_pages": [
+        104
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "a3fb4ef00b98a009c1078c69097f75b37c1896d97f1c81fbf9b6e8e7e42006e8",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.15",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-15",
+      "printed_pages": [
+        89
+      ],
+      "pdf_pages": [
+        104
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "ef39294f61020ccf36d773fe6b567f82c24f64481d50bbd1360292c38f315f38",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.16",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-16",
+      "printed_pages": [
+        89
+      ],
+      "pdf_pages": [
+        104
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "ebeea73544ac9e8720e8abc6503d7722d9972421b994d9d2b73aaeed78e55bdd",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.17",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-17",
+      "printed_pages": [
+        90
+      ],
+      "pdf_pages": [
+        105
+      ],
+      "subparts": [],
+      "question_sha256": "6ccaf47ecd09f9aa41d8a9be77f235244ef4d6715dd2400e5290a16ecb54536b",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.18",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-18",
+      "printed_pages": [
+        90
+      ],
+      "pdf_pages": [
+        105
+      ],
+      "subparts": [],
+      "question_sha256": "aa3fdd9efd21fe407b72e8fba45c0e6d5d0567fabcc50940046c751c0d985e33",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.19",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-19",
+      "printed_pages": [
+        90
+      ],
+      "pdf_pages": [
+        105
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "dbf3dd980dc876ba82764e0a88d0ae5e4c861632567f3ab8834db98f35e996f9",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.20",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-20",
+      "printed_pages": [
+        90
+      ],
+      "pdf_pages": [
+        105
+      ],
+      "subparts": [],
+      "question_sha256": "366f5d4d8b8a02a0ec7f878b19d78229972a11467a49d839d20ae877f1d0a44c",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.21",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-21",
+      "printed_pages": [
+        90
+      ],
+      "pdf_pages": [
+        105
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "a8507cb705c59a6fd53576b87f2ce585877dd503ed4ca957ac5a6fd07e9908bb",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.22",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-22",
+      "printed_pages": [
+        90
+      ],
+      "pdf_pages": [
+        105
+      ],
+      "subparts": [],
+      "question_sha256": "c5b80d03084fe53ede23ccb6c3ea14ec78ed21f26106a7c0280fba005febe7bd",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.23",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-23",
+      "printed_pages": [
+        91
+      ],
+      "pdf_pages": [
+        106
+      ],
+      "subparts": [],
+      "question_sha256": "a8c2297d56aef670442dade6944241dbbdee23a03e61b4910f71104647c73ddf",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.24",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-24",
+      "printed_pages": [
+        91
+      ],
+      "pdf_pages": [
+        106
+      ],
+      "subparts": [],
+      "question_sha256": "f7ea6f66f4d04776474075677c6df02753ea1792d1c0c33e7495671e3c7fcb0b",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.25",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-25",
+      "printed_pages": [
+        91
+      ],
+      "pdf_pages": [
+        106
+      ],
+      "subparts": [],
+      "question_sha256": "03a295ee836fa2c77d9fbbfc155999588dfcc29f4cf506fe5d074f5f43ff35c4",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.26",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-26",
+      "printed_pages": [
+        91
+      ],
+      "pdf_pages": [
+        106
+      ],
+      "subparts": [],
+      "question_sha256": "9326954178126a3f5bf170a73bc02312ebbe5106259afb0d51989031ad12318d",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.27",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-27",
+      "printed_pages": [
+        92
+      ],
+      "pdf_pages": [
+        107
+      ],
+      "subparts": [],
+      "question_sha256": "d835bb81aa1fd32c2b470b46605d03c3d2428f17dfdf2ffd4dd14351f3acdb47",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.28",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-28",
+      "printed_pages": [
+        92
+      ],
+      "pdf_pages": [
+        107
+      ],
+      "subparts": [],
+      "question_sha256": "eabce7011752b28ea406f7c6e79ae2badb15bb2f0ec246ff4813150e3957076f",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.29",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-29",
+      "printed_pages": [
+        92
+      ],
+      "pdf_pages": [
+        107
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "2a4fa09084d7f81df6379795e6a84e7fcc4beb3f032c0f61623f55eae6077f1d",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.30",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-30",
+      "printed_pages": [
+        92
+      ],
+      "pdf_pages": [
+        107
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "ac0c95a286278cb67de71fd2b668eb8b9dbe2218125919b5dfc481f998aa515b",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.31",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-31",
+      "printed_pages": [
+        92
+      ],
+      "pdf_pages": [
+        107
+      ],
+      "subparts": [],
+      "question_sha256": "ee97a6a6f7f2326720f0f72870670c443270d4d2b1fba0e3d5d4e470dee8dd52",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.32",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-32",
+      "printed_pages": [
+        92
+      ],
+      "pdf_pages": [
+        107
+      ],
+      "subparts": [],
+      "question_sha256": "78f58e4646f2be3f4e9f88fa175aeac7b238b99752e0e9a4af5dfb31345656b9",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.33",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-33",
+      "printed_pages": [
+        92,
+        93
+      ],
+      "pdf_pages": [
+        107,
+        108
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "79725870070202d368a35484118613c120691c6552d776cbce3ee091ba061cac",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.34",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-34",
+      "printed_pages": [
+        93
+      ],
+      "pdf_pages": [
+        108
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "85496d4a58aaed648c00d68829c56858a5c7469d5ccca0be9f15863eb6529228",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.35",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-35",
+      "printed_pages": [
+        93
+      ],
+      "pdf_pages": [
+        108
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "269f5b60c64827144ff4ef895c64e4c82d959a11ac5fd6fb78d72936bc29d6ff",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.36",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-36",
+      "printed_pages": [
+        94
+      ],
+      "pdf_pages": [
+        109
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i"
+      ],
+      "question_sha256": "ec734ccb4783c0ea47577079362492e4a0a0c6950222c091ccfc6d5ac0906d58",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.37",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-37",
+      "printed_pages": [
+        94
+      ],
+      "pdf_pages": [
+        109
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "34ff28887af9ad003c4f3c233e27458d7894e9f5e497da075b342fab89c5588f",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.38",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-38",
+      "printed_pages": [
+        94
+      ],
+      "pdf_pages": [
+        109
+      ],
+      "subparts": [],
+      "question_sha256": "d0f4aa61a60e961866361386ad136c4bda529a3581749d72961a1cd4463282c6",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.39",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-39",
+      "printed_pages": [
+        94
+      ],
+      "pdf_pages": [
+        109
+      ],
+      "subparts": [],
+      "question_sha256": "189db1116f94d94fed09a69ba003817b7e1cd6b7e1f0fc3c6d5e26d18d292b57",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.40",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-40",
+      "printed_pages": [
+        94,
+        95
+      ],
+      "pdf_pages": [
+        109,
+        110
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "28feef71aa51d88c71c826dbcab8d67d3b285328f1ac0e8af3fc5b07b999d4d4",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.41",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-41",
+      "printed_pages": [
+        95
+      ],
+      "pdf_pages": [
+        110
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "cf8a7c1c798bcccdbc28ffba306e7de9d39b771f7124dfb8c4e121c6d91a5a60",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.42",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-42",
+      "printed_pages": [
+        95
+      ],
+      "pdf_pages": [
+        110
+      ],
+      "subparts": [],
+      "question_sha256": "d5dbd70909877b56c2665e65824f0800f2ecf4c39c67ce410a0d2d8612381ea2",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.43",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-43",
+      "printed_pages": [
+        96
+      ],
+      "pdf_pages": [
+        111
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "199e585f52065d0c57369398c9ebe355431baea77cc061b9167b379ce06b09f7",
+      "status": "completed_locally"
+    },
+    {
+      "number": "5.44",
+      "chapter": 5,
+      "page": "chapter05_five_families.html",
+      "anchor": "ex-5-44",
+      "printed_pages": [
+        96
+      ],
+      "pdf_pages": [
+        111
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "c3fcb0da105c71b915f7fe9e1cedf07a89bd1fb7e21519416329c0907c9471d8",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.1",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-1",
+      "printed_pages": [
+        108
+      ],
+      "pdf_pages": [
+        123
+      ],
+      "subparts": [],
+      "question_sha256": "73889ce99ab484abd84343ad20d94830bc88c153dbdf01a39be9a4794ce1e07f",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.2",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-2",
+      "printed_pages": [
+        108,
+        109
+      ],
+      "pdf_pages": [
+        123,
+        124
+      ],
+      "subparts": [],
+      "question_sha256": "1639f1fa210a556339757f76ea7d79dfe0fd3d68f64307aa2bc05e866983dca0",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.3",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-3",
+      "printed_pages": [
+        109
+      ],
+      "pdf_pages": [
+        124
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "424abd2277f879599c9947ad7fe47bfd8b878c1fcdf7abf7db030590e3076121",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.4",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-4",
+      "printed_pages": [
+        109
+      ],
+      "pdf_pages": [
+        124
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "fdb4a864a73760064a89e0e87471f757d64eed8d46f7649277866f26a8ade643",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.5",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-5",
+      "printed_pages": [
+        109
+      ],
+      "pdf_pages": [
+        124
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "68c4face47d04f3930caf0ed98a18c7b315e7bff2f371be5a653f141c37ae0dc",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.6",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-6",
+      "printed_pages": [
+        109
+      ],
+      "pdf_pages": [
+        124
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "b7203bda0983a24e88b185f2c1e49a29e634390e15d3a4e22ec16e793ea27d53",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.7",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-7",
+      "printed_pages": [
+        110
+      ],
+      "pdf_pages": [
+        125
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "7bb23e5a83ffa8ddef8f626829ea59819316a471f80a0cf2ec19ef69323bfe7e",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.8",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-8",
+      "printed_pages": [
+        110
+      ],
+      "pdf_pages": [
+        125
+      ],
+      "subparts": [],
+      "question_sha256": "677aceb00a09e487997d809f9f634448ad662886338144f0eb59fe9cb2e2a6f4",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.9",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-9",
+      "printed_pages": [
+        110
+      ],
+      "pdf_pages": [
+        125
+      ],
+      "subparts": [],
+      "question_sha256": "92d4363f3dbfe9919404a01e141c191a57bd377edfdb3720f19e49c425c2f392",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.10",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-10",
+      "printed_pages": [
+        110
+      ],
+      "pdf_pages": [
+        125
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "2c80fbab81d7abc699a4a75d3abc50397e33753281f526a321fb0768a231205a",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.11",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-11",
+      "printed_pages": [
+        110
+      ],
+      "pdf_pages": [
+        125
+      ],
+      "subparts": [],
+      "question_sha256": "ebb43e987a865e70f1e93803a8dc595f3125ae30478ce3d3cba7d188ddba9a0e",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.12",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-12",
+      "printed_pages": [
+        110
+      ],
+      "pdf_pages": [
+        125
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "7ff50caf4dc8402b3da0c942d0e9cded87b98493de7108e9ad7c682de9744437",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.13",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-13",
+      "printed_pages": [
+        110
+      ],
+      "pdf_pages": [
+        125
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "6396b4277860576a3957f5dea1da3d08fa087382e686cd699ba2ca5f4243e785",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.14",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-14",
+      "printed_pages": [
+        110
+      ],
+      "pdf_pages": [
+        125
+      ],
+      "subparts": [],
+      "question_sha256": "2b754686948c74792902e946520fbab01fa808809416d5a6e1cc47d1e42e5f08",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.15",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-15",
+      "printed_pages": [
+        111
+      ],
+      "pdf_pages": [
+        126
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "0d0866e2a5d71e7d53551b541a5c62229554db3f2a3d2ff1f9819e780f77c773",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.16",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-16",
+      "printed_pages": [
+        111
+      ],
+      "pdf_pages": [
+        126
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "9f5387b5f0278b101a68788aaafadd3aef858945d2bc624ef23d2c61e5cac9ba",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.17",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-17",
+      "printed_pages": [
+        111
+      ],
+      "pdf_pages": [
+        126
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "857d7933a1e4f3a243fa145eccac6a0f41b0163b35067ee60d8e5b792ea0f01f",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.18",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-18",
+      "printed_pages": [
+        111
+      ],
+      "pdf_pages": [
+        126
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "59420ea069367799ad8a081b173948c077ca4465b1da318fe2ef5cd37eced1d1",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.19",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-19",
+      "printed_pages": [
+        112
+      ],
+      "pdf_pages": [
+        127
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "ca51bb11dbdcd066140c36fdca64265e1798cfe2ffa8c1d3e61d37f00cc2d9f3",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.20",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-20",
+      "printed_pages": [
+        112
+      ],
+      "pdf_pages": [
+        127
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "197a37fb0f69a3902bbb517da1d996dab6208d2b904133f631ccaec6d3eca558",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.21",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-21",
+      "printed_pages": [
+        112
+      ],
+      "pdf_pages": [
+        127
+      ],
+      "subparts": [],
+      "question_sha256": "ff2f891f2aa90195fd71196409756d4f4262f6fb51a0c0a0f36f1c05a70567eb",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.22",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-22",
+      "printed_pages": [
+        112
+      ],
+      "pdf_pages": [
+        127
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "4ce02cbf1d71f40586b909a6560a4f4f340d27a9342902ada8b9740f89eb42b9",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.23",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-23",
+      "printed_pages": [
+        113
+      ],
+      "pdf_pages": [
+        128
+      ],
+      "subparts": [],
+      "question_sha256": "b85db59de93ef3244048e8083415e1d0dec13202ad588523e133c380c250e937",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.24",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-24",
+      "printed_pages": [
+        113
+      ],
+      "pdf_pages": [
+        128
+      ],
+      "subparts": [],
+      "question_sha256": "a45bf983f5f54909a77936d9a31cb34f69e608f191ef7359255523f8fe1571c4",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.25",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-25",
+      "printed_pages": [
+        113
+      ],
+      "pdf_pages": [
+        128
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "a7bd3505f1bee55077ade98738b4d5b5ce4d1e05b2f746481bc6f5cd3e077e0b",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.26",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-26",
+      "printed_pages": [
+        113,
+        114
+      ],
+      "pdf_pages": [
+        128,
+        129
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "5a23d59a2945c2bd18d626583c313023e37d7374a63601ab07146464d93afce6",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.27",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-27",
+      "printed_pages": [
+        114
+      ],
+      "pdf_pages": [
+        129
+      ],
+      "subparts": [],
+      "question_sha256": "6d668d9503af9ba45583be80f1beca17a02cd800cf76fb3504a7bd0091976d87",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.28",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-28",
+      "printed_pages": [
+        114
+      ],
+      "pdf_pages": [
+        129
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "444f6e3694e9ade313b7a69cd98cc58b24725f0f9bb5edb0d3f08beebd13b579",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.29",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-29",
+      "printed_pages": [
+        114
+      ],
+      "pdf_pages": [
+        129
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "429d251f64972633f29776b38caa37693bf95a1b238ce485504ff22c77925964",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.30",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-30",
+      "printed_pages": [
+        114
+      ],
+      "pdf_pages": [
+        129
+      ],
+      "subparts": [],
+      "question_sha256": "53a1e32abb0fe07a8af4f2f3b5754c8858cce04608dedea8d0f927e4001d8c6b",
+      "status": "completed_locally"
+    },
+    {
+      "number": "6.31",
+      "chapter": 6,
+      "page": "chapter06_subgroups.html",
+      "anchor": "ex-6-31",
+      "printed_pages": [
+        114,
+        115
+      ],
+      "pdf_pages": [
+        129,
+        130
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "1f14d415f37f62669a7efdbf21208d6dd2a630788c1cc93bd730447b14d44082",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.1",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-1",
+      "printed_pages": [
+        147
+      ],
+      "pdf_pages": [
+        162
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "70638ba49fa5b247567bcdb895e1c81d8c8d49c3f00072f9e8b5cee876fe854b",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.2",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-2",
+      "printed_pages": [
+        147
+      ],
+      "pdf_pages": [
+        162
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "8ea2c00d1729fe8badd45cdbaa748be921d528ac0a54d292b61a79761a61b768",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.3",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-3",
+      "printed_pages": [
+        147
+      ],
+      "pdf_pages": [
+        162
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "f1bfd16c42ba6081df81c4b7b6a5d8c91a00142a62dbf75ae6627799acce5301",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.4",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-4",
+      "printed_pages": [
+        148
+      ],
+      "pdf_pages": [
+        163
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "8ee3350084dde65ed9cd0bfb94848c2fc177950889a709e7ad2b95a818482abf",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.5",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-5",
+      "printed_pages": [
+        148
+      ],
+      "pdf_pages": [
+        163
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "e1dbc75c501c7e4e47121362d3d2b051a5dc440481fccedd7c40fa3035bec5ff",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.6",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-6",
+      "printed_pages": [
+        148
+      ],
+      "pdf_pages": [
+        163
+      ],
+      "subparts": [],
+      "question_sha256": "fdb6e13081f4dec2c05ecd4988ffd5dcd52d4e12ce5c6e5cb330d0df777ecb24",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.7",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-7",
+      "printed_pages": [
+        148
+      ],
+      "pdf_pages": [
+        163
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "366d458ee3963b2d430053e398fd13918011ab191304a004d08635742ee40eba",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.8",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-8",
+      "printed_pages": [
+        148,
+        149
+      ],
+      "pdf_pages": [
+        163,
+        164
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "62b150f5d4b458a4ff93a35ef671be26a3a49b72a0c0eeff39830f3cbdfd5e1e",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.9",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-9",
+      "printed_pages": [
+        149
+      ],
+      "pdf_pages": [
+        164
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "488a0e32b08317ee95602f1712035363b17bb3664fb8c046bff1f96ae8b62b64",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.10",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-10",
+      "printed_pages": [
+        149
+      ],
+      "pdf_pages": [
+        164
+      ],
+      "subparts": [],
+      "question_sha256": "60c9fcc3f59a6a8a94ee5da34fe37bc9c93adba66e4b6a08b42caefcb3e8b5ed",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.11",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-11",
+      "printed_pages": [
+        149
+      ],
+      "pdf_pages": [
+        164
+      ],
+      "subparts": [],
+      "question_sha256": "dbffc4c3ceb2270117cb2670391f0678806f22e34373ba462065d8a8e5c4fcf8",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.12",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-12",
+      "printed_pages": [
+        149
+      ],
+      "pdf_pages": [
+        164
+      ],
+      "subparts": [],
+      "question_sha256": "8add335e683f0324c14676281b677ff10d24f915941c51589c515a527ceba638",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.13",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-13",
+      "printed_pages": [
+        149
+      ],
+      "pdf_pages": [
+        164
+      ],
+      "subparts": [],
+      "question_sha256": "f1b507ab1819c15513f7834e76055554ea4c80f6c9536cf410c110b95b43f781",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.14",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-14",
+      "printed_pages": [
+        149
+      ],
+      "pdf_pages": [
+        164
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "ac26a05affa60fcc4ce4f263080c7bf8bb018f6ca2d0abf33fe71e63299fe17c",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.15",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-15",
+      "printed_pages": [
+        149,
+        150
+      ],
+      "pdf_pages": [
+        164,
+        165
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "498b7daad35191c6344b37e7c3e2f380ea2f620d794844e8e05bf77fd0442b03",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.16",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-16",
+      "printed_pages": [
+        150
+      ],
+      "pdf_pages": [
+        165
+      ],
+      "subparts": [],
+      "question_sha256": "26bb070438157b2f60c14d46e06b6e605d46038fd6e4ca5a6e3b0b6c37a301c7",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.17",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-17",
+      "printed_pages": [
+        150
+      ],
+      "pdf_pages": [
+        165
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "44a0334d86619948e5d60b86f619e54a5fde89b2c0fb034ce0f8dd7ebe183d4e",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.18",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-18",
+      "printed_pages": [
+        150,
+        151
+      ],
+      "pdf_pages": [
+        165,
+        166
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h"
+      ],
+      "question_sha256": "f7c420405f49b6cb4bfbcbfc9c5a88edc3688de501ff6175421cb767544c9288",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.19",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-19",
+      "printed_pages": [
+        151
+      ],
+      "pdf_pages": [
+        166
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "ca5c091ae92b3de2c216b09e8ef254e6ab77eb8ec5470fcd9d9d66f3b0e956f3",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.20",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-20",
+      "printed_pages": [
+        151
+      ],
+      "pdf_pages": [
+        166
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "0281ea162e72911f5045ffada7858763af446ec88e7dc17762542583f86d6e9d",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.21",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-21",
+      "printed_pages": [
+        152
+      ],
+      "pdf_pages": [
+        167
+      ],
+      "subparts": [],
+      "question_sha256": "190e58db4a4411bbdf7dba6f547ca22525b0cf34322611d35823f1b2d9546c22",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.22",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-22",
+      "printed_pages": [
+        152
+      ],
+      "pdf_pages": [
+        167
+      ],
+      "subparts": [],
+      "question_sha256": "c2c3dcfde8513fee68b35441878185539dab76b71d4671097d18e61a73ef5357",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.23",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-23",
+      "printed_pages": [
+        152
+      ],
+      "pdf_pages": [
+        167
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "d61c13dc861f3baf857791fe9a5708020a5bcbe919a429b25dd5055ada457587",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.24",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-24",
+      "printed_pages": [
+        152
+      ],
+      "pdf_pages": [
+        167
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "ae3c9629fb4780a7f4931ccbf872a3ac25b0f0e520f5cc48134001059ef39597",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.25",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-25",
+      "printed_pages": [
+        152
+      ],
+      "pdf_pages": [
+        167
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "b82775e80af807edbe721a30f1c790a5df0a3a10c3a7d96e96e949d737391d54",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.26",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-26",
+      "printed_pages": [
+        152
+      ],
+      "pdf_pages": [
+        167
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "c81b8b404fa50ed767c4fbec5558d217135a0c3ea2fae26ba10eff753770a396",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.27",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-27",
+      "printed_pages": [
+        152
+      ],
+      "pdf_pages": [
+        167
+      ],
+      "subparts": [],
+      "question_sha256": "6dbf635b3b408a4aa0e5787906c8c858970ec2ab5b91f8acb49d196c7d74b7a1",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.28",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-28",
+      "printed_pages": [
+        152
+      ],
+      "pdf_pages": [
+        167
+      ],
+      "subparts": [],
+      "question_sha256": "6ec2bb62c43390c696d81b69bb78721744314e1d9c1b49ead309a1d0516513e4",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.29",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-29",
+      "printed_pages": [
+        152
+      ],
+      "pdf_pages": [
+        167
+      ],
+      "subparts": [],
+      "question_sha256": "cd3a428f8f410694e3727b8df8d1bc39cf3c7fac8d5c221e80f587caf503c9a4",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.30",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-30",
+      "printed_pages": [
+        152,
+        153
+      ],
+      "pdf_pages": [
+        167,
+        168
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "question_sha256": "5957ec0b08588d94f475dcf58c815202aab505b313c4f108377d85190f8d00cf",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.31",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-31",
+      "printed_pages": [
+        153
+      ],
+      "pdf_pages": [
+        168
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "5da2eb5aebfa1785c359b50297877a8a4b6544d5a664014122d9f743ad712a7f",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.32",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-32",
+      "printed_pages": [
+        153,
+        154
+      ],
+      "pdf_pages": [
+        168,
+        169
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "d5af289d1dac4a7dff5eb1d37db916641470a3d51114b422ee43436c42d3a4fe",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.33",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-33",
+      "printed_pages": [
+        154
+      ],
+      "pdf_pages": [
+        169
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "be68b3b04626094dc8973722fbeb38e09737e4fb9804ab7fbfaac258b9b5b420",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.34",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-34",
+      "printed_pages": [
+        154
+      ],
+      "pdf_pages": [
+        169
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "8639e3a5811ce8003017f011edea9955e944164c9798fc34540d1b9681315c36",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.35",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-35",
+      "printed_pages": [
+        154
+      ],
+      "pdf_pages": [
+        169
+      ],
+      "subparts": [],
+      "question_sha256": "62d4b195e88b5b67949821c16cd0e07f63582107eb50928c15523fcf62fa2c78",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.36",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-36",
+      "printed_pages": [
+        154
+      ],
+      "pdf_pages": [
+        169
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "c2121147a1e4e1bde9d1dfdbaa8044923c60fab4e2742dbff5d812d1000d4693",
+      "status": "completed_locally"
+    },
+    {
+      "number": "7.37",
+      "chapter": 7,
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "ex-7-37",
+      "printed_pages": [
+        155
+      ],
+      "pdf_pages": [
+        170
+      ],
+      "subparts": [],
+      "question_sha256": "f9d02cfe9169a0c7a2eebd4528cd944e51aa24c922ea0b206e51f241b2cac7aa",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.1",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-1",
+      "printed_pages": [
+        180
+      ],
+      "pdf_pages": [
+        195
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "97d18955a882818ce1d8c022a7cfc60dbb6b63c56f504e6da3d8d1627946a4e4",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.2",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-2",
+      "printed_pages": [
+        180
+      ],
+      "pdf_pages": [
+        195
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "b3857ba627820d36eaf10cad3ef6949821107c0312e581ebf32075438e4edb9a",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.3",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-3",
+      "printed_pages": [
+        180
+      ],
+      "pdf_pages": [
+        195
+      ],
+      "subparts": [],
+      "question_sha256": "6e016c899d97a7c2bb912bdd93d5e610bb4c75bd97246e7192ef970ce7fc6c12",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.4",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-4",
+      "printed_pages": [
+        180
+      ],
+      "pdf_pages": [
+        195
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "0017366914ce95f257c3a0bc9927f2c7093d7e56dd3556ac0fa1b8c0adb1b053",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.5",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-5",
+      "printed_pages": [
+        180
+      ],
+      "pdf_pages": [
+        195
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "25bccb13c290a95f3d1eeea08c191c7f769017e4ec1a5ecc9150777f06c05061",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.6",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-6",
+      "printed_pages": [
+        181
+      ],
+      "pdf_pages": [
+        196
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "afef340e40fab73d5c778d25cf64b9d88ad532d6a4aba53bcd39c3a325873fe6",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.7",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-7",
+      "printed_pages": [
+        181
+      ],
+      "pdf_pages": [
+        196
+      ],
+      "subparts": [],
+      "question_sha256": "b724b794a0ead7fee2b275a58a28fd9e7169cbe259a54d901eb0c0b55acb1409",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.8",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-8",
+      "printed_pages": [
+        181
+      ],
+      "pdf_pages": [
+        196
+      ],
+      "subparts": [],
+      "question_sha256": "a750d50c77c616dc17531082b0b1c16e45711f152964bd18eb7c5ec347dc7bf0",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.9",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-9",
+      "printed_pages": [
+        181
+      ],
+      "pdf_pages": [
+        196
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "a6c3a703e57ad43b6454605904634b3896eb5a337cc88648c303ffc1352fb5e8",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.10",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-10",
+      "printed_pages": [
+        181
+      ],
+      "pdf_pages": [
+        196
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "575998e54f8abcab98694803657aeacf5c278536b932a9c777349465706f35a0",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.11",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-11",
+      "printed_pages": [
+        182
+      ],
+      "pdf_pages": [
+        197
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "0c1cf7f82355e2d986f50c613ae24e34af888916323a495e110a2514d8d4cc1b",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.12",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-12",
+      "printed_pages": [
+        182
+      ],
+      "pdf_pages": [
+        197
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "a2db98c276fea0fcb96f071506a2bd07f86670b925ff9205d5496baec3f0da03",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.13",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-13",
+      "printed_pages": [
+        182
+      ],
+      "pdf_pages": [
+        197
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "6b37c20ed936753fda4ceb8ec8c47f55da9e478e65fd329e913821296ce64ef4",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.14",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-14",
+      "printed_pages": [
+        183
+      ],
+      "pdf_pages": [
+        198
+      ],
+      "subparts": [],
+      "question_sha256": "4b87fdd70239eaea5f3bb51be0195cf1ff35615d89a70ea1828d480e78bf21ea",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.15",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-15",
+      "printed_pages": [
+        183
+      ],
+      "pdf_pages": [
+        198
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "d637d566f7fec84ef8a21b12c1f04f503a1f5a8df9187359dda1c14457a395f0",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.16",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-16",
+      "printed_pages": [
+        183
+      ],
+      "pdf_pages": [
+        198
+      ],
+      "subparts": [],
+      "question_sha256": "3e27726927ccae2f4c59aab38b42981f9fac49669e3cb87de5e4a576be71ee6a",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.17",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-17",
+      "printed_pages": [
+        183
+      ],
+      "pdf_pages": [
+        198
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "4a512a6c5f8664c9ef3f89304dc70821c4d6f207c0f8c2e317d91e4276cb5b2b",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.18",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-18",
+      "printed_pages": [
+        183
+      ],
+      "pdf_pages": [
+        198
+      ],
+      "subparts": [],
+      "question_sha256": "b953038c2b2d4f3a69a3a9f0f1653337fa631ec7022b1a4b9a101e2b239e65b4",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.19",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-19",
+      "printed_pages": [
+        184
+      ],
+      "pdf_pages": [
+        199
+      ],
+      "subparts": [],
+      "question_sha256": "6afa17c39a2d047ce615ef48d5f100f05e4cf772bdf4f501c5311cfd46e3bbd8",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.20",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-20",
+      "printed_pages": [
+        184
+      ],
+      "pdf_pages": [
+        199
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "cea4331bcb9e6a392bfd0a280fcdf9524116ac352ffaf404086159f61298e8c7",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.21",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-21",
+      "printed_pages": [
+        184
+      ],
+      "pdf_pages": [
+        199
+      ],
+      "subparts": [],
+      "question_sha256": "48b51309ab69b263e2fbe6571e8fb9b7ed380491c3ffaef10f3a104be8858062",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.22",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-22",
+      "printed_pages": [
+        184
+      ],
+      "pdf_pages": [
+        199
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "cc187f1aae82e4243be1a6e9288d52bb8c6b2dc0fe43e05a0a7512aab7d9d0a5",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.23",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-23",
+      "printed_pages": [
+        184
+      ],
+      "pdf_pages": [
+        199
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "6e65075cbe0e187bffa03d85bec00a6847ce6baf227029a50cf841fe796905f4",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.24",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-24",
+      "printed_pages": [
+        184
+      ],
+      "pdf_pages": [
+        199
+      ],
+      "subparts": [],
+      "question_sha256": "bdfc0b74cf1dc67c872c32945facc09440c0ef53730cc50f0239d8027b87fa30",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.25",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-25",
+      "printed_pages": [
+        184
+      ],
+      "pdf_pages": [
+        199
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "31aafeb7a8af3d59e92444283722c641af7a61d45c3bae795a57772ef7a34b0b",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.26",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-26",
+      "printed_pages": [
+        185
+      ],
+      "pdf_pages": [
+        200
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "a19ac1b81948a018c15bdb7ebf9f82a687280461a76a608eabfb7109ccc75ea8",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.27",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-27",
+      "printed_pages": [
+        185
+      ],
+      "pdf_pages": [
+        200
+      ],
+      "subparts": [],
+      "question_sha256": "3c1fcdd112d64684ecf8d6d43a639f0674556670079fddf670f1ace4a994b1c1",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.28",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-28",
+      "printed_pages": [
+        185
+      ],
+      "pdf_pages": [
+        200
+      ],
+      "subparts": [],
+      "question_sha256": "44a95e4b8b374985e74c970e5d5fb41fb60d438c750a36092f9ea0ebb9eacc7e",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.29",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-29",
+      "printed_pages": [
+        185
+      ],
+      "pdf_pages": [
+        200
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "62600b1eaeeba142d7ed157d6e9187be3aa93511b23845b184e4b3311c351f07",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.30",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-30",
+      "printed_pages": [
+        186
+      ],
+      "pdf_pages": [
+        201
+      ],
+      "subparts": [],
+      "question_sha256": "564649b3315e9d151d898f00501a51048a867ec65550984980f795d09be51fc4",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.31",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-31",
+      "printed_pages": [
+        186
+      ],
+      "pdf_pages": [
+        201
+      ],
+      "subparts": [],
+      "question_sha256": "7a95e20ab9868671145c3a3bc486e3e86781a2cd64f2c3e34db10085ea48e440",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.32",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-32",
+      "printed_pages": [
+        186
+      ],
+      "pdf_pages": [
+        201
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "56a59797e7b959b850e5e969c03e3594ded87d224690b847e82172e575234d07",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.33",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-33",
+      "printed_pages": [
+        187
+      ],
+      "pdf_pages": [
+        202
+      ],
+      "subparts": [],
+      "question_sha256": "f211e9c507c487103bed038bb6f390b9d05749ec89729941323eb1fa00ce54fa",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.34",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-34",
+      "printed_pages": [
+        187
+      ],
+      "pdf_pages": [
+        202
+      ],
+      "subparts": [],
+      "question_sha256": "1fb70b2be7c49a455d8c82e41d08429bb0d593c55cff6f15a885ff62a4f2d8a0",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.35",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-35",
+      "printed_pages": [
+        187
+      ],
+      "pdf_pages": [
+        202
+      ],
+      "subparts": [],
+      "question_sha256": "00d13faebad0e3ffbd2ec769a7f5ceedee8ff0d7c0e4980a7962a64ca17834a4",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.36",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-36",
+      "printed_pages": [
+        187
+      ],
+      "pdf_pages": [
+        202
+      ],
+      "subparts": [],
+      "question_sha256": "7e85ce4d8a0ccaef04487131ae8a9be336be5449493ca0f5969390394583fa6f",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.37",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-37",
+      "printed_pages": [
+        187
+      ],
+      "pdf_pages": [
+        202
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "f2374941f50f1b5eb140d2d4d9b34aab74947ca3731ce9c9be55d705a3c4df74",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.38",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-38",
+      "printed_pages": [
+        187
+      ],
+      "pdf_pages": [
+        202
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "30a45924ed8671d1d1db1139cea4e86c96d567961745b1b6ab4863868bd5c118",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.39",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-39",
+      "printed_pages": [
+        187
+      ],
+      "pdf_pages": [
+        202
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "b1f6bc6af1dddad218d94530a9cdb9c3b52cd00d6b7583426fa6d744a5dd4513",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.40",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-40",
+      "printed_pages": [
+        187
+      ],
+      "pdf_pages": [
+        202
+      ],
+      "subparts": [],
+      "question_sha256": "1030393c4d6f96e59f66581b19e9344ba5baa25dac5ea236612833d527d1ca52",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.41",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-41",
+      "printed_pages": [
+        188
+      ],
+      "pdf_pages": [
+        203
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "5f27d690606a39bd0d3a7e55b1437c989ca068ad10b4b14fd4e28f30c9234ede",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.42",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-42",
+      "printed_pages": [
+        188
+      ],
+      "pdf_pages": [
+        203
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "45e3cb7af8d831fd77c36041abeea1e796d6a5c862412c2719f500f6535aa489",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.43",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-43",
+      "printed_pages": [
+        189
+      ],
+      "pdf_pages": [
+        204
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "2b18abaf50b5a0332167cb3609869fd35ae247d1c22192d6d451f4744de59d6d",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.44",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-44",
+      "printed_pages": [
+        189
+      ],
+      "pdf_pages": [
+        204
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "84c054202f262f9b3d96cc4f80c4e0502b40a4fd5c8c23509b372d950e7d753c",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.45",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-45",
+      "printed_pages": [
+        190
+      ],
+      "pdf_pages": [
+        205
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "abbaa93bf84304faaf43e44d59a31df424ae9cba98b9fdf6d626bf4d5cb6abf7",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.46",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-46",
+      "printed_pages": [
+        190
+      ],
+      "pdf_pages": [
+        205
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "de0536df5f67b414b3a219b09ff823c26a399e65c76f79a3d144670feb2ade38",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.47",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-47",
+      "printed_pages": [
+        191
+      ],
+      "pdf_pages": [
+        206
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h"
+      ],
+      "question_sha256": "355525231124b7bb2678b5075d58e2473b24a9b58cd970ea2ee247d5320b55d2",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.48",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-48",
+      "printed_pages": [
+        191
+      ],
+      "pdf_pages": [
+        206
+      ],
+      "subparts": [],
+      "question_sha256": "18ba17b367be6e9a04c325f8272ff5ce97b6df977f1596ca1c4470c489923f65",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.49",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-49",
+      "printed_pages": [
+        191
+      ],
+      "pdf_pages": [
+        206
+      ],
+      "subparts": [],
+      "question_sha256": "9b5bcf408595478ccc25fd7351a28bd8054719ad8cc271101583e95a953ea3d4",
+      "status": "completed_locally"
+    },
+    {
+      "number": "8.50",
+      "chapter": 8,
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "ex-8-50",
+      "printed_pages": [
+        192
+      ],
+      "pdf_pages": [
+        207
+      ],
+      "subparts": [],
+      "question_sha256": "3803b607147d392edc9c78b8dba8b07b755371dfad2efb518af8882441d59a0a",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.1",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-1",
+      "printed_pages": [
+        217
+      ],
+      "pdf_pages": [
+        232
+      ],
+      "subparts": [],
+      "question_sha256": "a905d6f1fdb1a838bc75b9ef6e5ac728b10871a4722a2591559cb5f45cc88f48",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.2",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-2",
+      "printed_pages": [
+        217
+      ],
+      "pdf_pages": [
+        232
+      ],
+      "subparts": [],
+      "question_sha256": "a1e2636596a06dd20d6014707a96238d89c0bff4bd83cf5397c971405d031cfb",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.3",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-3",
+      "printed_pages": [
+        217,
+        218
+      ],
+      "pdf_pages": [
+        232,
+        233
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "4334835c793d757a6d7ad2c8980472d249c730d33629c3bfbf20541e71ce547c",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.4",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-4",
+      "printed_pages": [
+        218
+      ],
+      "pdf_pages": [
+        233
+      ],
+      "subparts": [],
+      "question_sha256": "45245d530e9de44866dfd498b908c9bc1d6a75cc249d233dbc2e8709a99a59b8",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.5",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-5",
+      "printed_pages": [
+        218
+      ],
+      "pdf_pages": [
+        233
+      ],
+      "subparts": [],
+      "question_sha256": "0624fd6e5625039721b0401bc23200c834dfe323608464786a9ca36c3c85f76d",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.6",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-6",
+      "printed_pages": [
+        218
+      ],
+      "pdf_pages": [
+        233
+      ],
+      "subparts": [],
+      "question_sha256": "017596166fa039e430fea36954094a92700f6c0bb704c1f5209e88e8cbb4eb2f",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.7",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-7",
+      "printed_pages": [
+        218
+      ],
+      "pdf_pages": [
+        233
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "a99a21e4e7e087d0e8c65f7420afff240d89c525de89d75c0e584cc5ff611a4a",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.8",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-8",
+      "printed_pages": [
+        218
+      ],
+      "pdf_pages": [
+        233
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "b2a54c4d00747d07f7bcc759e1f74023070ff7a14c1265e32a998f85a1559946",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.9",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-9",
+      "printed_pages": [
+        218
+      ],
+      "pdf_pages": [
+        233
+      ],
+      "subparts": [],
+      "question_sha256": "8f19cf9796aac43c2e17217bacb35344ed541640fae65fb5c6c1066c3e4f1077",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.10",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-10",
+      "printed_pages": [
+        218
+      ],
+      "pdf_pages": [
+        233
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "825e21d7458b1e2d7b1d8bc15225ddf7040d13afa979a2b2df25b0a37ae0988b",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.11",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-11",
+      "printed_pages": [
+        218
+      ],
+      "pdf_pages": [
+        233
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "a446ffcd0a56830c87dd15ef82321fe750ff499d5a2fb6182fe593a7b1111115",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.12",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-12",
+      "printed_pages": [
+        218
+      ],
+      "pdf_pages": [
+        233
+      ],
+      "subparts": [],
+      "question_sha256": "2164fe90795198d908deab9d2efcaf0d592b6f4f630411182a118fcc9121320a",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.13",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-13",
+      "printed_pages": [
+        219
+      ],
+      "pdf_pages": [
+        234
+      ],
+      "subparts": [],
+      "question_sha256": "8a8e101b583d545c141eced4efa3c0ce40fea485996459f50dd3d51b6ade1890",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.14",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-14",
+      "printed_pages": [
+        219
+      ],
+      "pdf_pages": [
+        234
+      ],
+      "subparts": [],
+      "question_sha256": "7795c2166e3cd3d8b519ef1e7ea8346719258e131aba77e078aba9040ee9f1a0",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.15",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-15",
+      "printed_pages": [
+        219
+      ],
+      "pdf_pages": [
+        234
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "c79491007f1142e9b3b6ddf774c7c2f48856781d64b5ac7c8f1d02b72de4749d",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.16",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-16",
+      "printed_pages": [
+        219
+      ],
+      "pdf_pages": [
+        234
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "bfc73d2665e29df2c8a20eb820e694a2f747c9461ae5ae100b733ebb063c1ce0",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.17",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-17",
+      "printed_pages": [
+        219
+      ],
+      "pdf_pages": [
+        234
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "081274544cd77bb0fe0599e4af2c4d6127c7676ceb1a60350135e942c1950d23",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.18",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-18",
+      "printed_pages": [
+        219
+      ],
+      "pdf_pages": [
+        234
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "766002afc69a95a129d985aa9c925d9653b5424c6211b8c691f662f5bacad88b",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.19",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-19",
+      "printed_pages": [
+        219
+      ],
+      "pdf_pages": [
+        234
+      ],
+      "subparts": [],
+      "question_sha256": "940322c30610fae30833f62f720e123c3deee6f1a6165ef5aa4eb64a945bee7d",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.20",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-20",
+      "printed_pages": [
+        219
+      ],
+      "pdf_pages": [
+        234
+      ],
+      "subparts": [],
+      "question_sha256": "513678f54e49111f0be71646c9b6f5ab4847bb5eec23a7bcbfa6c085fd6656a2",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.21",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-21",
+      "printed_pages": [
+        219
+      ],
+      "pdf_pages": [
+        234
+      ],
+      "subparts": [],
+      "question_sha256": "2954194f7be14856b3426bfe4c92aec4d0d190af064d03f1d956bcf181825035",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.22",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-22",
+      "printed_pages": [
+        219
+      ],
+      "pdf_pages": [
+        234
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "9c793f62dd84c1b9e0bbabff34610226da6efa50c7732893d4b65c8040f5c40e",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.23",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-23",
+      "printed_pages": [
+        220
+      ],
+      "pdf_pages": [
+        235
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "49864074e05b681d699ed16ebc71b52fe057a253e142d7f748f33a1b4bd5037d",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.24",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-24",
+      "printed_pages": [
+        220
+      ],
+      "pdf_pages": [
+        235
+      ],
+      "subparts": [],
+      "question_sha256": "cf73d025bdd3fea1e88df2f37b8c858e1b950a478341b11e502e21db82cc96d1",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.25",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-25",
+      "printed_pages": [
+        220
+      ],
+      "pdf_pages": [
+        235
+      ],
+      "subparts": [],
+      "question_sha256": "3cdb9c3999347633ac81233ca37651638c0e690342e9045cc16d494cad983093",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.26",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-26",
+      "printed_pages": [
+        220
+      ],
+      "pdf_pages": [
+        235
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "62200340652c7f3a022dba021e698f826c70f7c9023b884e31b549033bd7d1b5",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.27",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-27",
+      "printed_pages": [
+        220
+      ],
+      "pdf_pages": [
+        235
+      ],
+      "subparts": [],
+      "question_sha256": "1fe3a899dcb05926f9c00308a942c708da5a0c100f87fc1a419faec7c92b3508",
+      "status": "completed_locally"
+    },
+    {
+      "number": "9.28",
+      "chapter": 9,
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "ex-9-28",
+      "printed_pages": [
+        220
+      ],
+      "pdf_pages": [
+        235
+      ],
+      "subparts": [],
+      "question_sha256": "2737111530e568cf8ce08cbb23be30b203e4ed73e1c8487abfc7043fb76019c8",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.1",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-1",
+      "printed_pages": [
+        252
+      ],
+      "pdf_pages": [
+        267
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "question_sha256": "4a9908b294dc6c04938281e95db3462ae10775c3fbaa32d5d88f462d6a1232d3",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.2",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-2",
+      "printed_pages": [
+        252
+      ],
+      "pdf_pages": [
+        267
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "57faeba58a154df85e0e76aac5c3599ce2e0b749448a8adfc16813a68ec81034",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.3",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-3",
+      "printed_pages": [
+        252
+      ],
+      "pdf_pages": [
+        267
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m"
+      ],
+      "question_sha256": "8bcf42216064c332dc18ae3fa4113097e4130147a57aeb23f076130a22d93288",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.4",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-4",
+      "printed_pages": [
+        252,
+        253
+      ],
+      "pdf_pages": [
+        267,
+        268
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "66e73f86f869db0144eec34c346d821690aa1e5849a410d375bce3854366c9cd",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.5",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-5",
+      "printed_pages": [
+        253
+      ],
+      "pdf_pages": [
+        268
+      ],
+      "subparts": [],
+      "question_sha256": "a00a1b737b62b9ef3fea0fee6e6ff9398ebeab3c703dcad0087e7cdb3f4b045d",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.6",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-6",
+      "printed_pages": [
+        253,
+        254
+      ],
+      "pdf_pages": [
+        268,
+        269
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "question_sha256": "a0ffdc9c8a123cb25fabe11bb679a8c8fa21a2b82c95240c67ed5cb61330e4a3",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.7",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-7",
+      "printed_pages": [
+        254
+      ],
+      "pdf_pages": [
+        269
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "27a8d1c82c29b1029865b6aa5b3c490b01e6ebe9528df9acbf8d923ce3980e4d",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.8",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-8",
+      "printed_pages": [
+        254,
+        255
+      ],
+      "pdf_pages": [
+        269,
+        270
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "e13a5ab3965f895e303d639205b252282e22001f0c3beeb9641b6b3aad76de27",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.9",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-9",
+      "printed_pages": [
+        255
+      ],
+      "pdf_pages": [
+        270
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "question_sha256": "74fd9269ddd92ef6d083163372d8dc8a812ee5e7fd0bdf8789b414921766bb3b",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.10",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-10",
+      "printed_pages": [
+        255
+      ],
+      "pdf_pages": [
+        270
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "89688fff23761f76c614587347695790efafb10db531ebfc0d9c4a1b0ef1ae2c",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.11",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-11",
+      "printed_pages": [
+        255
+      ],
+      "pdf_pages": [
+        270
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "7bd4e3dc3254ff51c0579028ff3054212f72a7e8c6562c81fbd6f0ba55fa0b4f",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.12",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-12",
+      "printed_pages": [
+        255
+      ],
+      "pdf_pages": [
+        270
+      ],
+      "subparts": [],
+      "question_sha256": "d370ad9e56dc8f6af0a5c4ac07d66ecbdf18c46d5b858d2927580c87812a539b",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.13",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-13",
+      "printed_pages": [
+        256
+      ],
+      "pdf_pages": [
+        271
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "e19d3553663b7f339b470e9ef09f0f4bc1cfff3a5c89555fa77565fe96b61d9c",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.14",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-14",
+      "printed_pages": [
+        256
+      ],
+      "pdf_pages": [
+        271
+      ],
+      "subparts": [],
+      "question_sha256": "e59e44f42b976ac289b8688a26ae551a6c2454957ce1859028064a7c1582702c",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.15",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-15",
+      "printed_pages": [
+        256
+      ],
+      "pdf_pages": [
+        271
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "6337b7c663a3a201df7c29d436cdfd05df406f5e15d3b0e05928aa4100eb8dd9",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.16",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-16",
+      "printed_pages": [
+        256
+      ],
+      "pdf_pages": [
+        271
+      ],
+      "subparts": [],
+      "question_sha256": "275cb92b923e8df286fd3c4de74d29e0065d5ec5f4afd26b9a74ddccd08a769b",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.17",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-17",
+      "printed_pages": [
+        256,
+        257
+      ],
+      "pdf_pages": [
+        271,
+        272
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "question_sha256": "fc7943fbea30c8408d314f49141e8080079a2538dcfe8ccb3960760fd1a43da3",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.18",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-18",
+      "printed_pages": [
+        257
+      ],
+      "pdf_pages": [
+        272
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "question_sha256": "0e8ef6d751f14984420e8d1238bc1369572a18a6b263f6198086343cc2895ce0",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.19",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-19",
+      "printed_pages": [
+        257
+      ],
+      "pdf_pages": [
+        272
+      ],
+      "subparts": [],
+      "question_sha256": "b8b6b8c6cb7ef6628056903ab247407be8490b74742db4c3253c573451ca2128",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.20",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-20",
+      "printed_pages": [
+        257
+      ],
+      "pdf_pages": [
+        272
+      ],
+      "subparts": [],
+      "question_sha256": "896678c9aa8648238ac553ed3d515ca2ee725f7937d173fe76cecc924467b528",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.21",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-21",
+      "printed_pages": [
+        257
+      ],
+      "pdf_pages": [
+        272
+      ],
+      "subparts": [],
+      "question_sha256": "fa38fe01a61f78dab45335b9c12717eb504dbe96e53b27c1033764e433bbdc12",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.22",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-22",
+      "printed_pages": [
+        258
+      ],
+      "pdf_pages": [
+        273
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "78aeb1377e52689cbc1f5594a4a306dfa2a266dabca7ae1e63a0498b2fd39f7c",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.23",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-23",
+      "printed_pages": [
+        258
+      ],
+      "pdf_pages": [
+        273
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "3af9aa463b8e16e17d9faece3bf5a19c46cd3e945c12351b437e6697c6ac8dc1",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.24",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-24",
+      "printed_pages": [
+        258
+      ],
+      "pdf_pages": [
+        273
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "question_sha256": "c488b4f376cbdf3b1d9b674dc76eebbc3e7ee81f7eead57824a908bc753b1447",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.25",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-25",
+      "printed_pages": [
+        258
+      ],
+      "pdf_pages": [
+        273
+      ],
+      "subparts": [],
+      "question_sha256": "ffa7acb41ebf13fe81bd8f2f3ee2112499c73639e41efc1926dc8b938b813267",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.26",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-26",
+      "printed_pages": [
+        259
+      ],
+      "pdf_pages": [
+        274
+      ],
+      "subparts": [],
+      "question_sha256": "438d48c87008523b30f24be10a91ccfc01a240b995592ad2ce1487abb9602ceb",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.27",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-27",
+      "printed_pages": [
+        259
+      ],
+      "pdf_pages": [
+        274
+      ],
+      "subparts": [],
+      "question_sha256": "11b679d3c8a5dba2942df3226217998ac851cdcb2a55980bdbece647a89ec381",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.28",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-28",
+      "printed_pages": [
+        259
+      ],
+      "pdf_pages": [
+        274
+      ],
+      "subparts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "question_sha256": "1bb984b2d15bd798f233001fe44cf34494b0fbec80181b97bd08f72406d7f9db",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.29",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-29",
+      "printed_pages": [
+        259,
+        260
+      ],
+      "pdf_pages": [
+        274,
+        275
+      ],
+      "subparts": [
+        "a",
+        "b"
+      ],
+      "question_sha256": "2ebf88caabbd24e4c5c38cf42b8db91a359ab80d3b59eca9faaa029501fa06f7",
+      "status": "completed_locally"
+    },
+    {
+      "number": "10.30",
+      "chapter": 10,
+      "page": "chapter10_galois_theory.html",
+      "anchor": "ex-10-30",
+      "printed_pages": [
+        260
+      ],
+      "pdf_pages": [
+        275
+      ],
+      "subparts": [],
+      "question_sha256": "c4f5379a866c6501005737717dbd87228d31745f47a95aa2324018069bcd0232",
+      "status": "completed_locally"
+    }
+  ]
+}

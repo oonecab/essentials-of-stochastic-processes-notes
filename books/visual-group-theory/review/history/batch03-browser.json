@@ -1,0 +1,358 @@
+{
+  "status": "completed_locally",
+  "reviewed_at": "2026-10-17T12:24:07.499272+08:00",
+  "browser": "Ego Lite 0.5.1.13 / Chromium; Group Explorer 3.6.1",
+  "task": {
+    "taskSpace": 18,
+    "finished": true,
+    "keep": [],
+    "finishedAt": "2026-10-17T04:23:34.197Z"
+  },
+  "phone_boundary": "390 x 844 browser device emulation; no physical phone",
+  "viewports": [
+    [
+      1800,
+      1000
+    ],
+    [
+      1440,
+      1000
+    ],
+    [
+      1024,
+      1000
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "matrix_cases": 16,
+  "all_exercises_open_per_case": {
+    "5": [
+      44,
+      44,
+      44,
+      44
+    ],
+    "6": [
+      31,
+      31,
+      31,
+      31
+    ],
+    "7": [
+      37,
+      37,
+      37,
+      37
+    ],
+    "8": [
+      50,
+      50,
+      50,
+      50
+    ]
+  },
+  "uncontained_text_overflows": 0,
+  "annotation_bindings_checked": 31,
+  "deep_links": [
+    {
+      "chapter": 5,
+      "open": true,
+      "top": 127.78125,
+      "hash": "#ex-5-44"
+    },
+    {
+      "chapter": 6,
+      "open": true,
+      "top": 127.75,
+      "hash": "#ex-6-31"
+    },
+    {
+      "chapter": 7,
+      "open": true,
+      "top": 127.75,
+      "hash": "#ex-7-37"
+    },
+    {
+      "chapter": 8,
+      "open": true,
+      "top": 128.03125,
+      "hash": "#ex-8-50"
+    }
+  ],
+  "native_horizontal_scroll_cases": 17,
+  "native_downloads": 8,
+  "no_javascript": {
+    "results": [
+      {
+        "chapter": 5,
+        "javascriptDisabled": true,
+        "before": [
+          "class",
+          "exercise",
+          "id",
+          "ex-5-1",
+          "data-exercise",
+          "5.1"
+        ],
+        "after": [
+          "class",
+          "exercise",
+          "id",
+          "ex-5-1",
+          "data-exercise",
+          "5.1",
+          "open",
+          ""
+        ],
+        "answerHeight": 140,
+        "nativeMouseClick": true
+      },
+      {
+        "chapter": 6,
+        "javascriptDisabled": true,
+        "before": [
+          "class",
+          "exercise",
+          "id",
+          "ex-6-1",
+          "data-exercise",
+          "6.1"
+        ],
+        "after": [
+          "class",
+          "exercise",
+          "id",
+          "ex-6-1",
+          "data-exercise",
+          "6.1",
+          "open",
+          ""
+        ],
+        "answerHeight": 269,
+        "nativeMouseClick": true
+      },
+      {
+        "chapter": 7,
+        "javascriptDisabled": true,
+        "before": [
+          "class",
+          "exercise",
+          "id",
+          "ex-7-1",
+          "data-exercise",
+          "7.1"
+        ],
+        "after": [
+          "class",
+          "exercise",
+          "id",
+          "ex-7-1",
+          "data-exercise",
+          "7.1",
+          "open",
+          ""
+        ],
+        "answerHeight": 242,
+        "nativeMouseClick": true
+      },
+      {
+        "chapter": 8,
+        "javascriptDisabled": true,
+        "before": [
+          "class",
+          "exercise",
+          "id",
+          "ex-8-1",
+          "data-exercise",
+          "8.1"
+        ],
+        "after": [
+          "class",
+          "exercise",
+          "id",
+          "ex-8-1",
+          "data-exercise",
+          "8.1",
+          "open",
+          ""
+        ],
+        "answerHeight": 338,
+        "nativeMouseClick": true
+      }
+    ],
+    "restored": true
+  },
+  "figures_reviewed": 111,
+  "figures_contact_sheets": 19,
+  "final_release_recheck": {
+    "release": "20261017T121534",
+    "results": [
+      {
+        "width": 1440,
+        "name": "map",
+        "documentWidth": 1425,
+        "innerWidth": 1440,
+        "text": "当前正文：地图、序言、第 1—8 章及全部 244 题。本批第 5—8 章的推导、图解、源码与桌面/手机视口阅读已完成本地验收。第 9—10 章的 58 题待整理。",
+        "uncontained": 0
+      },
+      {
+        "width": 1440,
+        "name": "guide",
+        "documentWidth": 1425,
+        "innerWidth": 1440,
+        "text": "Carter · 视觉群论 / 阅读资料\n\n群的动作、结构与同态程序\n\n从位置交换、Cayley 图与运算表，到置换、子群、积群与同态，复现八组 C11/Python 程序。\n\n返回全书地图\n下载原始说明",
+        "uncontained": 0
+      },
+      {
+        "width": 1440,
+        "name": "proof",
+        "documentWidth": 1425,
+        "innerWidth": 1440,
+        "text": "解答与推导\n\n(a) 8.46 的逆否命题：G 至少有两个 p 阶子群。非平凡 p 群至少有一个，可由任意元素取幂得到。\n\n(b) 恰一个，若 C=⟨c⟩ 阶 pᵐ，它是 ⟨cpm−1⟩。\n\n(c) 选与 C 内唯一 p 阶子群不同的 K。K 阶为素数，任何非单位交点都会生成整个 K，从而 K≤C，矛盾。故交集只有 e。\n\n(d) C、K 正规且交集平凡，CK≅C×K，由 (c,k)↦ck 给出。\n\n(e) q(CK)=CK/K，且 q(CK)=q(C)。q|C 的核 C∩K 平凡，故 CK/K≅C。\n\n(f) C₂=q(C) 有与 C 相同的阶。它仍是最长循环：商中任何元素阶整除其原像的阶，不会超过原群最长元素阶；而这一个最长阶确实保留下来。\n\n(g) 只要 Gᵢ≠Cᵢ，因 Cᵢ 已有最长阶，Gᵢ 不能是循环群，就仍可选 Kᵢ。每步 |Gi+1|=|Gᵢ|/p，|Cᵢ| 固定，因此有限步后恰有 Gₙ=Cₙ。\n\n(h) 终点取 Hₙ={e}。若 Gi+1=Ci+1Hi+1 且交集平凡，令 Hᵢ=qᵢ⁻¹(Hi+1)。任意 c∈Cᵢ∩Hᵢ 的像在 Ci+1∩Hi+1={e}，而 qᵢ|Cᵢ 单射，故 c=e。对任意 g∈Gᵢ，把 qᵢ(g) 写成 qᵢ(c)h′，则 c⁻¹g∈qᵢ⁻¹(Hi+1)=Hᵢ，故 Gᵢ=CᵢHᵢ。交换性加 8.43 得 Gᵢ≅Cᵢ×Hᵢ。逆推到第一层得到 G=C×H；H 阶更小，对 H 重复即可终止于循环直积。\n\n原书校注。原提示写 Hₙ=Kₙ，但终点 Gₙ=Cₙ 已停止选 K。正确逆推基点是 Hₙ={e}，随后取每个商映射的完整原像，而不是只取原先的 Kᵢ。\n\nC₄×C₈×C₂\nC₄×C₈\n商去末尾 C₂\nC₄×C₈\nC₂×C₈\n商去第一坐标的 ⟨2⟩\nC₂×C₈\nC₈\n商去第一坐标 C₂\n三步始终保持第二坐标 C₈ 完整。终点补因子为 {e}；向上取原像，补因子依次为 C₂、C₄、C₄×C₂。原群因此分解为 C₈×(C₄×C₂)。",
+        "uncontained": 0
+      },
+      {
+        "width": 1440,
+        "name": "shelf",
+        "text": "NATHAN C. CARTER\n04\n\nVisual\nGroup\nTheory\n\n动作 · 对称 · 结构\nMAA / 2009\n\n群论与可视化\nCarter · Visual Group Theory\n\n视觉群论\n\n从魔方与可逆动作建立直觉，用图看见群的结构，再沿子群、商群和同态走向方程。\n\n10 页笔记 / 244 道习题 / 全书地图、序言与第 1—8 章\n\nCayley 图\n几何对称\n运算表与群公理\nC/Python 实验\n进入视觉群论笔记\n↗\n从序言开始 →",
+        "documentWidth": 1425
+      },
+      {
+        "width": 1440,
+        "name": "shelf to map",
+        "url": "http://127.0.0.1:60998/visual-group-theory/notes/book_overview.html"
+      },
+      {
+        "width": 390,
+        "name": "map",
+        "documentWidth": 390,
+        "innerWidth": 390,
+        "text": "当前正文：地图、序言、第 1—8 章及全部 244 题。本批第 5—8 章的推导、图解、源码与桌面/手机视口阅读已完成本地验收。第 9—10 章的 58 题待整理。",
+        "uncontained": 0
+      },
+      {
+        "width": 390,
+        "name": "guide",
+        "documentWidth": 390,
+        "innerWidth": 390,
+        "text": "Carter · 视觉群论 / 阅读资料\n\n群的动作、结构与同态程序\n\n从位置交换、Cayley 图与运算表，到置换、子群、积群与同态，复现八组 C11/Python 程序。\n\n返回全书地图\n下载原始说明",
+        "uncontained": 0
+      },
+      {
+        "width": 390,
+        "name": "proof",
+        "documentWidth": 390,
+        "innerWidth": 390,
+        "text": "解答与推导\n\n(a) 8.46 的逆否命题：G 至少有两个 p 阶子群。非平凡 p 群至少有一个，可由任意元素取幂得到。\n\n(b) 恰一个，若 C=⟨c⟩ 阶 pᵐ，它是 ⟨cpm−1⟩。\n\n(c) 选与 C 内唯一 p 阶子群不同的 K。K 阶为素数，任何非单位交点都会生成整个 K，从而 K≤C，矛盾。故交集只有 e。\n\n(d) C、K 正规且交集平凡，CK≅C×K，由 (c,k)↦ck 给出。\n\n(e) q(CK)=CK/K，且 q(CK)=q(C)。q|C 的核 C∩K 平凡，故 CK/K≅C。\n\n(f) C₂=q(C) 有与 C 相同的阶。它仍是最长循环：商中任何元素阶整除其原像的阶，不会超过原群最长元素阶；而这一个最长阶确实保留下来。\n\n(g) 只要 Gᵢ≠Cᵢ，因 Cᵢ 已有最长阶，Gᵢ 不能是循环群，就仍可选 Kᵢ。每步 |Gi+1|=|Gᵢ|/p，|Cᵢ| 固定，因此有限步后恰有 Gₙ=Cₙ。\n\n(h) 终点取 Hₙ={e}。若 Gi+1=Ci+1Hi+1 且交集平凡，令 Hᵢ=qᵢ⁻¹(Hi+1)。任意 c∈Cᵢ∩Hᵢ 的像在 Ci+1∩Hi+1={e}，而 qᵢ|Cᵢ 单射，故 c=e。对任意 g∈Gᵢ，把 qᵢ(g) 写成 qᵢ(c)h′，则 c⁻¹g∈qᵢ⁻¹(Hi+1)=Hᵢ，故 Gᵢ=CᵢHᵢ。交换性加 8.43 得 Gᵢ≅Cᵢ×Hᵢ。逆推到第一层得到 G=C×H；H 阶更小，对 H 重复即可终止于循环直积。\n\n原书校注。原提示写 Hₙ=Kₙ，但终点 Gₙ=Cₙ 已停止选 K。正确逆推基点是 Hₙ={e}，随后取每个商映射的完整原像，而不是只取原先的 Kᵢ。\n\nC₄×C₈×C₂\nC₄×C₈\n商去末尾 C₂\nC₄×C₈\nC₂×C₈\n商去第一坐标的 ⟨2⟩\nC₂×C₈\nC₈\n商去第一坐标 C₂\n三步始终保持第二坐标 C₈ 完整。终点补因子为 {e}；向上取原像，补因子依次为 C₂、C₄、C₄×C₂。原群因此分解为 C₈×(C₄×C₂)。",
+        "uncontained": 0
+      },
+      {
+        "width": 390,
+        "name": "shelf",
+        "text": "NATHAN C. CARTER\n04\n\nVisual\nGroup\nTheory\n\n动作 · 对称 · 结构\nMAA / 2009\n\n群论与可视化\nCarter · Visual Group Theory\n\n视觉群论\n\n从魔方与可逆动作建立直觉，用图看见群的结构，再沿子群、商群和同态走向方程。\n\n10 页笔记 / 244 道习题 / 全书地图、序言与第 1—8 章\n\nCayley 图\n几何对称\n运算表与群公理\nC/Python 实验\n进入视觉群论笔记\n↗\n从序言开始 →",
+        "documentWidth": 390
+      },
+      {
+        "width": 390,
+        "name": "shelf to map",
+        "url": "http://127.0.0.1:60998/visual-group-theory/notes/book_overview.html"
+      }
+    ]
+  },
+  "viewed_image_sha256": {
+    "tmp/visual-group-theory-ch05-08-20261017/browser/code-guide-mobile.png": "3e40d69d815f7d24a28626912082cd528dda816ee4729e41adac2bf67b5211db",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/desktop-5-1024-proof.png": "868e9ec3779322bd7f301bbe9ce1c394b360ca63008e57823a8d5ee24e54e04f",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/desktop-5-1440-proof.png": "5dea472d9e24fe7e4f23d2c1d5de64f2a6844959f5a2547a53e38cd2e666e311",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/desktop-5-1800-proof.png": "ad99fb07258c1d68f54103e695f2ea9c7ba427bff179ef8d778322190cc60b00",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/desktop-6-1024-proof.png": "52e6aada2b306d80e2e867c886751c16936d297b6c288a0462c8c904e96ccb1c",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/desktop-6-1440-proof.png": "24442ccbfa72295db7ca742155c8b0554d1f98d943fb6ce356bacd1a50b29456",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/desktop-6-1800-proof.png": "9fb11d9a72422edbfd1593bee10ad980c8887b6a0ca632c4743c5b3ed67663cc",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/desktop-7-1024-proof.png": "ad0a7b26eaad3bdf3717ab0a7202aedb957ce5bacbfd3a4e53914fc1e846236f",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/desktop-7-1440-proof.png": "584a75a52d4a1c3a6f76eac5fb52813f199fd79f15e2db6cd692225331dfb794",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/desktop-7-1800-proof.png": "4f3cf523ac1535c24047ae50b5bb69d5c96f3426b68b28c575c15a5d8995bc95",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/desktop-8-1024-proof.png": "bd2d0a6971b65209bb3310ca678071696e820239f870b63fa9822f2dfbd32c98",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/desktop-8-1440-proof.png": "83a6d73b3785d32a19137d738ffca6a0e5e0806999867558116d09033675d897",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/desktop-8-1800-proof.png": "e389cd2a53feb7915bedd827829bcbd74098fdee2909733c68ffde99d5dea3ad",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-5-ex519-a3-1440.png": "192e7a20e28d43d80386df04d79c9d5f4caaba6ee1d47f30f9d2d74210ee87d6",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-5-software-1440.png": "1dac3f48dc8569730013715a00bf62095249193b0d953db48e71bbec1c53cf80",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-5-tetrahedron-axes-1440.png": "c7c77bbde246463c18c0de6ecf948b1685418700f791d013bc3a05cc7ca5da0c",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-6-ch6-s3-390.png": "4650acfd5d9df5f4975e73b41ff59d0d891c57526a0e250a0e8abfd683953537",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-7-ex714a-1440.png": "2c8f1f00e5ec68531839b28a996151903db5b31401a7b318dac3aba34f6a2b65",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-7-ex714b-1440.png": "60135f98ce70251d394c0c992cafa9c2d925907d8976caf706fe024d88dce35e",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-7-software-1440.png": "64b6a1342befa021729cb70cb76b0d5bb1082c27a4175dc81b239db098aaeaf5",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-desktop-5-proof.png": "557e241a4231a061107af97bed19de0aaeebc0be32bfd7c8f1bd582b0cad5edb",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-desktop-6-proof.png": "c2d9d6221dd8483ada6fb45397e94d571fda81f7a93657beb9864059f8face54",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-desktop-7-proof.png": "efe2ef245e35c3b18eff289d089949aa6bae80ed723786d57cd94ca8b7b9920d",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-desktop-8-proof.png": "8ea24f637054eccf0d7de523c6ec680cd32fb7e6fe3717bb3bc187075d7a37cb",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-01.jpg": "42c41a2e0ff31899335900e384262ada3aa0b7681944394a96564ce2b242a245",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-02.jpg": "41f913ced4b9000c59aa75981547ff200649d0931ef43d3fb3ee4139d078d618",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-03.jpg": "cdb4a73269e90921606f53a8c8f141e421a72328b3b37814510daac833b29888",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-04.jpg": "569ed99aabfc57cdf86fbdc41f23743c39577674736c2db25ebab46af3cf53fe",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-05.jpg": "3774c3585db824e52727bb2bf0bc289955690d5b5b9c2b8c23818b67603e13a4",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-06.jpg": "12d782ea58340ad53ed4ffafebec95f2e9ee3f0f1998ba551569db969552de13",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-07.jpg": "0cf8943cf906d1bcd247d63f779ed946d39c6327e80f7b344249def7e5d2c78a",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-08.jpg": "0716972f3c734413c0b77814b543b0ef6047b82042310663dc435aa3202dc14f",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-09.jpg": "6f10d3a7f3a1f09280af2391429b3f53f0adb2ab74f7c731e5155263beb91fea",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-10.jpg": "60b0678d548b7a3909341ffca7a6b8348f3a1af7853c613783307cf37d6cce0c",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-11.jpg": "898c9f5baa89229d01866385fb72f2b7ec0a62a1c485d1cfb2071dc7e43f8566",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-12.jpg": "7a8a9c2b47dc6ff13b0cdc68d10d98bda4ad3f2f77a52fc78c45cea6702ad0a5",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-13.jpg": "585244f494b42772070c76bf6e8b924dff027e7071834a14a401f6b1a520cfb5",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-14.jpg": "3b6cc553799df3135ff8096e543882e48513df55709edfd70b02bf71a8e071dc",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-15.jpg": "1494b5bf3f4ccbb6d0a691bd0f52c1bb75f56d2405ab2833f4f51fbfb85a86c3",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-16.jpg": "d4aa7ebf9b32f191e5b8c6e8eb7d9338850d176e872d203ad6fb3f150b319dcd",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-17.jpg": "3de71d00f06abe7147e5914acb072361395f6de998ca9f698fd718d2db4e60c1",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-18.jpg": "f956aa8260fe3ce692793517896231afebcd510f0ad755297df4df60e3b68e71",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-figures/contact-19.jpg": "41e41131eb03da338f17a98c89e609a609d95f745a4ae5900cf700960b6ea05c",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-mobile-changes-contact.jpg": "2bfff97239c395c623330481b47d00aa5c196686fdaa1baad06ef0db9ad7d050",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-mobile-deep-contact.jpg": "e1e20d33989e8a194fc3ef7f9bc8caf98d455e3e493bef4a16686281457b27c0",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/final-mobile-software-contact.jpg": "c87d14f52330d807de734fcab440ce3f581c5be41e52631f1a62c4c7a8734160",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/ge-D4-layout-1.png": "014a2abb083d5d11b6e0ae797ae252678b0e5717994fa63587a27c8ba8bb2fb5",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/ge-D4-layout-2.png": "903814e30d152f68faef7d6712c11107e169fcf0c73b12ea799d764f6e7da100",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/ge-D4-layout-3.png": "5429a18a4001752c68e1858759b75050861e9ca444b24a378b3c4dadd88cb729",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/ge-D5-conjugacy.png": "6e2634508c14eb6e036dc674857099718362eb5a61d1185f8815bfceb6b3fcd0",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/ge-D6-conjugacy.png": "f8c7a336337fe1bea007bec9e61159b7b52a94e5205c3b00f2aaf6808fc3b387",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/ge-Q4-cycle.png": "b01f209911fd96fefb04b4772a4a03305a6ececbcc436bb42c5e91aa6b6eef23",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/long-proof-1440-1.png": "cbd00e971a67902c91fe6691393b40606277eda57a61b9dd7d4e37060fda031a",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/long-proof-1440-2.png": "4376bce750f37527a848e5308b929cc42f556cd1d72b1045e123eaf906b26959",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/long-proof-390-1.png": "4cd4993fb9b51b84cf7f1ecf470355badd601c8590361053ab4ae5f5336ac62d",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/long-proof-390-2.png": "f83c39ccdf72be6dc0f1be490dd5a72dc3fea5b8e66da22d5da61958d1d09b9c",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/long-proof-390-3.png": "0b95c5eb4301e50d2265056337b848b8788629fef09179e3218dd2f71604cddb",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/mobile-5-proof-final.png": "8151604c9bea9eefcffa87629e73d9a8177e4126d3ce6b0734f2393beadb2f10",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/mobile-5-proof.png": "9226e83a7c9470e81aaad5a2c8c68034f3081cad3179f17280204013e44e1958",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/mobile-6-proof.png": "2ec70f8734095b309608a1c70f6299eb4e4e5d7c1d8bee0a163e59c0cc799cad",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/mobile-7-proof.png": "dd1a8cec9947eb76c855cbefe959bf79e9be1720a1dc7db6924fa57b66898133",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/mobile-8-proof.png": "86538c14b61487dc9bcbd0c7c38e4424ea2643f89f5b3205b30b5d9856eacf66",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/mobile-exercises-contact.jpg": "c9fa53c8e38c69cc6c9844d80ff26c3729a2cb61d144011197c57433be6e4a79",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/mobile-tops-contact.jpg": "6353c1f7b542099e3a2fd7747196ac5df226ab817551785d55c3ae7284e73b10",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/nojs-5.png": "4a78bc53cab80b1538751946feef2e7e4bd202e58ee0d41e08a855d24fdb82b2",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/nojs-6.png": "448f10a3e881223aac2d437ba8cc9edb3e67de9f43ea0b0ee6b48c4b33908682",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/nojs-7.png": "dcdc4ca8d3f65556dfa360b032b8f0cda6926b72dcd419a60b0f3a0087a2ee3c",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/nojs-8.png": "34b6358658bb22fd83d4cf77e56e297e1d9099dcd9db4351c3a94bc0740a113f",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/release-guide-1440.png": "f96a4e6c40ef526f22bb93707fd80284cfa047795dbea5392419d062d88a8846",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/release-guide-390.png": "eb940d146f14826912d08aa3ef8fd66b4679728faac9cabc5356caa3b6e3d505",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/release-map-1440.png": "b4e25763d561b075f56cedc52a94a5f23883d61afed4adf4f5b6d7e032b6f0c0",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/release-map-390.png": "46dbaf5bdfaeb26e782d3a2f357b1550455f8cc16a6369d85e911c6356003278",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/release-proof-1440.png": "ed5697511646b9db241c68672a6fcd95760dccdd1a116b798bad852a19fcadd5",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/release-proof-390-h.png": "e97de7f4b78f5d5e9b8474476514e2afd2d624c2c0815ce7aba70269b36857aa",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/release-proof-390.png": "4dba0d5c5d9999e24ac6afc91193a7af9650e7d0b37b85ee3bd8630f1b7cdb6a",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/release-shelf-1440.png": "472a0e8580f9da0b1fd35b818a56c24e3757fadef801815b77c6696836721969",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/release-shelf-390.png": "34939d610952c0ccf950c5a5156a5a3f486d489b2d7af0f1273983f86a03da18",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/scroll-8-c-after.png": "956b294bce3cb2a1a76ee5a485c45c52e3e851ebca7cdcd3db9c8412ff3e416b",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/scroll-8-c-before.png": "fa62cb4d23c276b7793d8eb263f03feb28404433adc38807f1e111ac9f048d7d",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/scroll-code-c-contact.jpg": "bd7fa262b23f1ccc547fe39039e182e3be686a750749c6f872f28d19a58361ca",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/scroll-code-python-contact.jpg": "fb3504f7b8548bb4a7c1c3f3156c1083ce47bfdfece48a6d31bfeac130a98528",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/scroll-equations-contact.jpg": "ae08749e53eb04d3fd16b2f1af01e7035c67189172b258c4c3454dfce9c8f0eb",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/scroll-svg-contact.jpg": "bd5d288b86d74ff53ddc25b4798089d8deb04a54995a7ece56afd75561bfe182",
+    "tmp/visual-group-theory-ch05-08-20261017/browser/scroll-tables-contact.jpg": "96b2fabb3418e61f7ae442ca04c513494362e4c5c33d39b4e5da7f63e517b384"
+  },
+  "tool_recovery_notes": [
+    "Initial screenshot clip coordinates were unreliable; accepted all-figure evidence uses complete viewport images then DOM-bounded crops.",
+    "Disabled-JS semantic click timed out; DOM box plus native mouse verified details expansion.",
+    "Initial shelf selector matched title and CTA; after inspecting snapshot, used the observed read-button class.",
+    "Native download hashes, screenshots and mathematical checks have separate evidence."
+  ],
+  "open_findings": []
+}

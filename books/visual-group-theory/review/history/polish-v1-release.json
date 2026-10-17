@@ -1,0 +1,1876 @@
+{
+  "status": "completed_locally",
+  "verified_at": "2026-10-17T14:20:26.093984+08:00",
+  "scope": "Whole-book V1–V8 consistency polish",
+  "release_id": "20261017T141653",
+  "package_sha256": "1c600f8237a1dfb0cf3278dc4901689884486876a79cc56705fa92a757fef91e",
+  "release_metadata_sha256": "b23cf1aaed4d9adc0172f7633c696a51c959b6e4bc36d8086f64f61d1cc9ab5b",
+  "manifest_sha256": "6e99257b5ddac653dd6ab3e5f57e0155f3b7a74563eb64be83cf5dbf635d56db",
+  "counts": {
+    "files": [
+      {
+        "path": "csapp/code/README.md",
+        "bytes": 18442,
+        "sha256": "6551d347a3db3f2f41d6c23a13bb600ad58549a4290952fe59d8377859ec0c77",
+        "source_sha256": "6551d347a3db3f2f41d6c23a13bb600ad58549a4290952fe59d8377859ec0c77"
+      },
+      {
+        "path": "csapp/code/addresses.c",
+        "bytes": 855,
+        "sha256": "f4134b28953a01ab380cd12ec265009c0744f9dc5baf507d038a8964eb2d9745",
+        "source_sha256": "f4134b28953a01ab380cd12ec265009c0744f9dc5baf507d038a8964eb2d9745"
+      },
+      {
+        "path": "csapp/code/addresses.py",
+        "bytes": 553,
+        "sha256": "0715ea9900fd527e45652d7a0891ccb1392f6f30c81afc1f2af01a0baf453e25",
+        "source_sha256": "0715ea9900fd527e45652d7a0891ccb1392f6f30c81afc1f2af01a0baf453e25"
+      },
+      {
+        "path": "csapp/code/cache.c",
+        "bytes": 2925,
+        "sha256": "63760fd19ca5546a20fd7e2b6371188b9275689a94e8620663e4edc746372966",
+        "source_sha256": "63760fd19ca5546a20fd7e2b6371188b9275689a94e8620663e4edc746372966"
+      },
+      {
+        "path": "csapp/code/cache.py",
+        "bytes": 1856,
+        "sha256": "0b23b2765471b8b4cb3fef90a690236e364ca689e23304f1f4ec609140d592d6",
+        "source_sha256": "0b23b2765471b8b4cb3fef90a690236e364ca689e23304f1f4ec609140d592d6"
+      },
+      {
+        "path": "csapp/code/ch01_amdahl.c",
+        "bytes": 727,
+        "sha256": "c66b7250cd4beac1c758adde37b19b884cb4ca978ca9fb9aea614a5c201bab46",
+        "source_sha256": "c66b7250cd4beac1c758adde37b19b884cb4ca978ca9fb9aea614a5c201bab46"
+      },
+      {
+        "path": "csapp/code/ch01_amdahl.py",
+        "bytes": 513,
+        "sha256": "31472814225a00cb3f13c56cdb67b714c9efa7b8fa78943a54e7d8c1d901456e",
+        "source_sha256": "31472814225a00cb3f13c56cdb67b714c9efa7b8fa78943a54e7d8c1d901456e"
+      },
+      {
+        "path": "csapp/code/ch02_float.c",
+        "bytes": 5586,
+        "sha256": "0880ff583f42bccd123d8a1711a3e987545f030d60c753242b284a709b81f526",
+        "source_sha256": "0880ff583f42bccd123d8a1711a3e987545f030d60c753242b284a709b81f526"
+      },
+      {
+        "path": "csapp/code/ch02_float.py",
+        "bytes": 4043,
+        "sha256": "a404d1d2d0d3f0578a07ee0e26e20819ed839715db3226b560d44214ec5a50ef",
+        "source_sha256": "a404d1d2d0d3f0578a07ee0e26e20819ed839715db3226b560d44214ec5a50ef"
+      },
+      {
+        "path": "csapp/code/ch02_integer.c",
+        "bytes": 9008,
+        "sha256": "24aeb4813ea080e5a6882faf37095aa9081a39000b04e94688edcac8946fedac",
+        "source_sha256": "24aeb4813ea080e5a6882faf37095aa9081a39000b04e94688edcac8946fedac"
+      },
+      {
+        "path": "csapp/code/ch02_integer.py",
+        "bytes": 7973,
+        "sha256": "1fb2f61536a38d9d08a340a8018aad9cb7c567ea5e80cc61db002694f982a37f",
+        "source_sha256": "1fb2f61536a38d9d08a340a8018aad9cb7c567ea5e80cc61db002694f982a37f"
+      },
+      {
+        "path": "csapp/code/ch03_compiler.c",
+        "bytes": 744,
+        "sha256": "94071b72a3017203bbf19eda8a3da59e2716bff548f349749a2b2dcbf1788471",
+        "source_sha256": "94071b72a3017203bbf19eda8a3da59e2716bff548f349749a2b2dcbf1788471"
+      },
+      {
+        "path": "csapp/code/ch03_good_echo.c",
+        "bytes": 442,
+        "sha256": "f6a3db899f6caa5e464e42bfba06419b96af68923124f2c7a49958292d375d0c",
+        "source_sha256": "f6a3db899f6caa5e464e42bfba06419b96af68923124f2c7a49958292d375d0c"
+      },
+      {
+        "path": "csapp/code/ch03_good_echo.py",
+        "bytes": 471,
+        "sha256": "460c3784d96e7c1e89fdf500fbaa52a17e5b5067ae8410be7ba7eee6f2dac329",
+        "source_sha256": "460c3784d96e7c1e89fdf500fbaa52a17e5b5067ae8410be7ba7eee6f2dac329"
+      },
+      {
+        "path": "csapp/code/ch03_models.c",
+        "bytes": 5285,
+        "sha256": "32cd5493c4acae7b22dea1aefbc34c2a5df7d39fe9eb07212cc5bed98e87eb54",
+        "source_sha256": "32cd5493c4acae7b22dea1aefbc34c2a5df7d39fe9eb07212cc5bed98e87eb54"
+      },
+      {
+        "path": "csapp/code/ch03_models.py",
+        "bytes": 2238,
+        "sha256": "74b25a0ad3590339cd3bd412654591873c37a6788a6e9753359ef65305bf972d",
+        "source_sha256": "74b25a0ad3590339cd3bd412654591873c37a6788a6e9753359ef65305bf972d"
+      },
+      {
+        "path": "csapp/code/ch03_procprob_alias.c",
+        "bytes": 1448,
+        "sha256": "a794572a71b65b3d828ca1fcc511e09cad6d1c837f0a2b03f1bcf24f3bbf6523",
+        "source_sha256": "a794572a71b65b3d828ca1fcc511e09cad6d1c837f0a2b03f1bcf24f3bbf6523"
+      },
+      {
+        "path": "csapp/code/ch03_range_check.c",
+        "bytes": 2284,
+        "sha256": "880a63f6088c005b46b7b05c19b72aaf3a078cd3ff39c1851d6337e6509ae08b",
+        "source_sha256": "880a63f6088c005b46b7b05c19b72aaf3a078cd3ff39c1851d6337e6509ae08b"
+      },
+      {
+        "path": "csapp/code/ch03_range_check.py",
+        "bytes": 1194,
+        "sha256": "fcd0c99a942e90e2523d9c47673d31f0f815e0917851c6336aa83a07f122c678",
+        "source_sha256": "fcd0c99a942e90e2523d9c47673d31f0f815e0917851c6336aa83a07f122c678"
+      },
+      {
+        "path": "csapp/code/ch03_ranges.S",
+        "bytes": 840,
+        "sha256": "b29f385c89d888a99c8fe35e7b7ca165fcb5156f894d5020947051ee46b2264a",
+        "source_sha256": "b29f385c89d888a99c8fe35e7b7ca165fcb5156f894d5020947051ee46b2264a"
+      },
+      {
+        "path": "csapp/code/ch04_algorithms.c",
+        "bytes": 1123,
+        "sha256": "cddd66e0157c5815944deefca12d91098b2d986b328e52782ea24e35e174b7ac",
+        "source_sha256": "cddd66e0157c5815944deefca12d91098b2d986b328e52782ea24e35e174b7ac"
+      },
+      {
+        "path": "csapp/code/ch04_algorithms.py",
+        "bytes": 748,
+        "sha256": "a4593431d442cb085f09f6c40e5fe35287dc1ee3c1aee3d108477ed4c0e5100e",
+        "source_sha256": "a4593431d442cb085f09f6c40e5fe35287dc1ee3c1aee3d108477ed4c0e5100e"
+      },
+      {
+        "path": "csapp/code/ch04_machine.c",
+        "bytes": 6825,
+        "sha256": "54f2e781f370be0dfd669b2bb55f60cb87b61719b97a9153d10566d0c876085b",
+        "source_sha256": "54f2e781f370be0dfd669b2bb55f60cb87b61719b97a9153d10566d0c876085b"
+      },
+      {
+        "path": "csapp/code/ch04_machine.py",
+        "bytes": 6765,
+        "sha256": "13f5b2788a677383cfe19380a10c2eb2d42338f6ca9efead2d7b1fa85c951cc6",
+        "source_sha256": "13f5b2788a677383cfe19380a10c2eb2d42338f6ca9efead2d7b1fa85c951cc6"
+      },
+      {
+        "path": "csapp/code/ch05_bench.c",
+        "bytes": 1553,
+        "sha256": "c2656ce5143d315108c6cf99dafa5e103cc22c9075aaed953cf336cc125d1349",
+        "source_sha256": "c2656ce5143d315108c6cf99dafa5e103cc22c9075aaed953cf336cc125d1349"
+      },
+      {
+        "path": "csapp/code/ch05_fill.c",
+        "bytes": 1916,
+        "sha256": "c337c6299bef0833fdae06bb498c99f195967978059f92c9b03fcae6daceb744",
+        "source_sha256": "c337c6299bef0833fdae06bb498c99f195967978059f92c9b03fcae6daceb744"
+      },
+      {
+        "path": "csapp/code/ch05_fill.py",
+        "bytes": 746,
+        "sha256": "c08c5adb4b14c86ee0ec525cdd6122d9beef2d1af6da5d9eb8350ede7e03fac4",
+        "source_sha256": "c08c5adb4b14c86ee0ec525cdd6122d9beef2d1af6da5d9eb8350ede7e03fac4"
+      },
+      {
+        "path": "csapp/code/ch05_loops.c",
+        "bytes": 4558,
+        "sha256": "fbbebf374197ea06a401059f68625f6e5235a310d1b6541dfeee53a90dcaa128",
+        "source_sha256": "fbbebf374197ea06a401059f68625f6e5235a310d1b6541dfeee53a90dcaa128"
+      },
+      {
+        "path": "csapp/code/ch05_loops.py",
+        "bytes": 2961,
+        "sha256": "8d14ac0a4a6ab4e828ab1ae8b0ea25c3dd5928e6128776f2154cef9247a2a854",
+        "source_sha256": "8d14ac0a4a6ab4e828ab1ae8b0ea25c3dd5928e6128776f2154cef9247a2a854"
+      },
+      {
+        "path": "csapp/code/ch05_polynomial.c",
+        "bytes": 1480,
+        "sha256": "ddfaeb78726b63c5e4802ff4697b9904a5a7a4ad007640d923ace94a81718b2c",
+        "source_sha256": "ddfaeb78726b63c5e4802ff4697b9904a5a7a4ad007640d923ace94a81718b2c"
+      },
+      {
+        "path": "csapp/code/ch05_polynomial.py",
+        "bytes": 923,
+        "sha256": "d8ceae233a85b8c02730b80bdc0c6901d81c0464c33ecad149ed13ca5f33a279",
+        "source_sha256": "d8ceae233a85b8c02730b80bdc0c6901d81c0464c33ecad149ed13ca5f33a279"
+      },
+      {
+        "path": "csapp/code/ch06_cache.c",
+        "bytes": 3729,
+        "sha256": "d98fdc9de99e1cf6c85eb40579f109228c2ed4a98e4bff25f9c3c09915dfae29",
+        "source_sha256": "d98fdc9de99e1cf6c85eb40579f109228c2ed4a98e4bff25f9c3c09915dfae29"
+      },
+      {
+        "path": "csapp/code/ch06_cache.py",
+        "bytes": 3616,
+        "sha256": "9df4ab5796b681caeb707130af752a5e194188f8909889e5767d0052cc25dc7d",
+        "source_sha256": "9df4ab5796b681caeb707130af752a5e194188f8909889e5767d0052cc25dc7d"
+      },
+      {
+        "path": "csapp/code/ch06_kernels.c",
+        "bytes": 4328,
+        "sha256": "4c2614b90a5d07b1fc7cd9267598193881b82530b341fbfe10ded7c0e1772db8",
+        "source_sha256": "4c2614b90a5d07b1fc7cd9267598193881b82530b341fbfe10ded7c0e1772db8"
+      },
+      {
+        "path": "csapp/code/ch06_kernels.py",
+        "bytes": 3376,
+        "sha256": "7d6443abb0d8933da1bf4e979f6b8d2f3b5df1e36eb08123b2673800fdf1e496",
+        "source_sha256": "7d6443abb0d8933da1bf4e979f6b8d2f3b5df1e36eb08123b2673800fdf1e496"
+      },
+      {
+        "path": "csapp/code/ch06_mountain.c",
+        "bytes": 2143,
+        "sha256": "6671555e6e468c0d989e676a84b1e4abfc855d988a29a6617b40d57ca311e585",
+        "source_sha256": "6671555e6e468c0d989e676a84b1e4abfc855d988a29a6617b40d57ca311e585"
+      },
+      {
+        "path": "csapp/code/ch06_mountain.py",
+        "bytes": 1871,
+        "sha256": "fa96deb75cf0d50a7cf27b0ca4497ea05e03e9946c14f37bce85d463e28adda2",
+        "source_sha256": "fa96deb75cf0d50a7cf27b0ca4497ea05e03e9946c14f37bce85d463e28adda2"
+      },
+      {
+        "path": "csapp/code/ch07_archive.c",
+        "bytes": 1963,
+        "sha256": "d326da5041adc3ccb0217dc5d4d7eaba98034d0414c7e97491eb70c2934306d7",
+        "source_sha256": "d326da5041adc3ccb0217dc5d4d7eaba98034d0414c7e97491eb70c2934306d7"
+      },
+      {
+        "path": "csapp/code/ch07_archive.py",
+        "bytes": 1497,
+        "sha256": "2e90465a94a2ecea8219ece791a6ab9393fb706fcd9497b3af79c99358f35f25",
+        "source_sha256": "2e90465a94a2ecea8219ece791a6ab9393fb706fcd9497b3af79c99358f35f25"
+      },
+      {
+        "path": "csapp/code/ch07_dlopen.c",
+        "bytes": 1143,
+        "sha256": "41b5a27d2a44a9d4a9fcd0ff3d765ca03016d120e487620deabd11171c912808",
+        "source_sha256": "41b5a27d2a44a9d4a9fcd0ff3d765ca03016d120e487620deabd11171c912808"
+      },
+      {
+        "path": "csapp/code/ch07_link_main.c",
+        "bytes": 210,
+        "sha256": "ade7b56bd2905faf66d83ddf8636a52b417d209608eccda498ea2141956c2c9e",
+        "source_sha256": "ade7b56bd2905faf66d83ddf8636a52b417d209608eccda498ea2141956c2c9e"
+      },
+      {
+        "path": "csapp/code/ch07_link_sum.c",
+        "bytes": 191,
+        "sha256": "8a6467ad58390be8302de62de8158d2155f8446ab1b4d1ed99c123660f3e78d2",
+        "source_sha256": "8a6467ad58390be8302de62de8158d2155f8446ab1b4d1ed99c123660f3e78d2"
+      },
+      {
+        "path": "csapp/code/ch07_plugin.c",
+        "bytes": 149,
+        "sha256": "e7f0785a5ff464ae1f1a2071b7cc01ec6ff22dff82279a5500dd5906ae494986",
+        "source_sha256": "e7f0785a5ff464ae1f1a2071b7cc01ec6ff22dff82279a5500dd5906ae494986"
+      },
+      {
+        "path": "csapp/code/ch07_probe.py",
+        "bytes": 4479,
+        "sha256": "8bc74a47ec58cc5addb09c8fbdb1ea2d567e75194e5eeec323d73ee665aeb8fe",
+        "source_sha256": "8bc74a47ec58cc5addb09c8fbdb1ea2d567e75194e5eeec323d73ee665aeb8fe"
+      },
+      {
+        "path": "csapp/code/ch07_relocation.c",
+        "bytes": 2479,
+        "sha256": "a6816278a051f3ae5843a30199e5ea2856db2d85d67115a1df3268168fe49666",
+        "source_sha256": "a6816278a051f3ae5843a30199e5ea2856db2d85d67115a1df3268168fe49666"
+      },
+      {
+        "path": "csapp/code/ch07_relocation.py",
+        "bytes": 1740,
+        "sha256": "b0dd8580f6e809a615b38ff9cbef5deb8c5ca27de0b5bc833fb11878351aa2a1",
+        "source_sha256": "b0dd8580f6e809a615b38ff9cbef5deb8c5ca27de0b5bc833fb11878351aa2a1"
+      },
+      {
+        "path": "csapp/code/ch08_ecf.c",
+        "bytes": 3774,
+        "sha256": "23d53686b4e50f111158d2c0d155833eb87bff5de500164bf5fb4d9a1c923846",
+        "source_sha256": "23d53686b4e50f111158d2c0d155833eb87bff5de500164bf5fb4d9a1c923846"
+      },
+      {
+        "path": "csapp/code/ch08_ecf.py",
+        "bytes": 3519,
+        "sha256": "37aaf6730ff3d11df2b006fb9d72168ace71f0773a4209a7259c538dbeb0c6e0",
+        "source_sha256": "37aaf6730ff3d11df2b006fb9d72168ace71f0773a4209a7259c538dbeb0c6e0"
+      },
+      {
+        "path": "csapp/code/ch08_io.c",
+        "bytes": 5372,
+        "sha256": "e1127d2d2151de28351431760fe673dd5b337f5365051e7357ea0202ff10e63e",
+        "source_sha256": "e1127d2d2151de28351431760fe673dd5b337f5365051e7357ea0202ff10e63e"
+      },
+      {
+        "path": "csapp/code/ch08_io.py",
+        "bytes": 954,
+        "sha256": "03ea441f9a86b85ddaddfdc751f32ecad77b2e8c8b7cf759245f73d7cdf87571",
+        "source_sha256": "03ea441f9a86b85ddaddfdc751f32ecad77b2e8c8b7cf759245f73d7cdf87571"
+      },
+      {
+        "path": "csapp/code/ch08_shell.c",
+        "bytes": 9132,
+        "sha256": "94d6d4984244b9e7b0c791a6df193f8a96106877192ad161c3cfbbcc8aa59487",
+        "source_sha256": "94d6d4984244b9e7b0c791a6df193f8a96106877192ad161c3cfbbcc8aa59487"
+      },
+      {
+        "path": "csapp/code/ch08_shell.py",
+        "bytes": 1062,
+        "sha256": "531d995bff0cc2797dc046e34fe81d52e9ee7237b54fc53d6bd2a12771c90e54",
+        "source_sha256": "531d995bff0cc2797dc046e34fe81d52e9ee7237b54fc53d6bd2a12771c90e54"
+      },
+      {
+        "path": "csapp/code/ch09_allocator.c",
+        "bytes": 6387,
+        "sha256": "2f27f100c77d48b7712e0703adae0f7de23cfce89fa93ea39f7f897f73d41276",
+        "source_sha256": "2f27f100c77d48b7712e0703adae0f7de23cfce89fa93ea39f7f897f73d41276"
+      },
+      {
+        "path": "csapp/code/ch09_allocator.py",
+        "bytes": 3295,
+        "sha256": "fb682cee1dbf374e75be9a48346f14c6108bb3a24b3ada0236110763b2394408",
+        "source_sha256": "fb682cee1dbf374e75be9a48346f14c6108bb3a24b3ada0236110763b2394408"
+      },
+      {
+        "path": "csapp/code/ch09_mmap.c",
+        "bytes": 2320,
+        "sha256": "c8e71c598d79211626fbb489b43ed4e4b4e62fe049d8a4b33f5c8e0e9ca2e7f7",
+        "source_sha256": "c8e71c598d79211626fbb489b43ed4e4b4e62fe049d8a4b33f5c8e0e9ca2e7f7"
+      },
+      {
+        "path": "csapp/code/ch09_space.c",
+        "bytes": 5448,
+        "sha256": "f3798426fb55a624f8aa098f0b50131cf0a5184f7f9180fa7d818e18d3c0ed9d",
+        "source_sha256": "f3798426fb55a624f8aa098f0b50131cf0a5184f7f9180fa7d818e18d3c0ed9d"
+      },
+      {
+        "path": "csapp/code/ch09_vm.c",
+        "bytes": 2621,
+        "sha256": "4eccbe11e93bde579cb61e28cb55418f2071e78bd30c93bc0acff0abecf78628",
+        "source_sha256": "4eccbe11e93bde579cb61e28cb55418f2071e78bd30c93bc0acff0abecf78628"
+      },
+      {
+        "path": "csapp/code/ch09_vm.py",
+        "bytes": 1765,
+        "sha256": "975aad9b0f9d9c4bb0af02707c6b135a2937b1fa6c8f7d5de9e43ab7d1c1cf38",
+        "source_sha256": "975aad9b0f9d9c4bb0af02707c6b135a2937b1fa6c8f7d5de9e43ab7d1c1cf38"
+      },
+      {
+        "path": "csapp/code/ch10_cpfile.c",
+        "bytes": 1847,
+        "sha256": "28def72e0b2128dd22b2b8896bf81abee05180585bc232d588949b7bf666ea60",
+        "source_sha256": "28def72e0b2128dd22b2b8896bf81abee05180585bc232d588949b7bf666ea60"
+      },
+      {
+        "path": "csapp/code/ch10_files.c",
+        "bytes": 2942,
+        "sha256": "f15af9c2e8f58ff2694e83678202053558101c26a398f4fb6e9ddd2d6cea7e18",
+        "source_sha256": "f15af9c2e8f58ff2694e83678202053558101c26a398f4fb6e9ddd2d6cea7e18"
+      },
+      {
+        "path": "csapp/code/ch10_files.py",
+        "bytes": 1341,
+        "sha256": "e32ac8c170a48d42d9060b56ea2b62aabf28f6ed0ff87731a8ea3ffb85ef3cb6",
+        "source_sha256": "e32ac8c170a48d42d9060b56ea2b62aabf28f6ed0ff87731a8ea3ffb85ef3cb6"
+      },
+      {
+        "path": "csapp/code/ch10_fstatcheck.c",
+        "bytes": 1004,
+        "sha256": "96426c3af63c685ad8e132a3aec5e675ad89d4e6af13dfe6e07822aa7339be59",
+        "source_sha256": "96426c3af63c685ad8e132a3aec5e675ad89d4e6af13dfe6e07822aa7339be59"
+      },
+      {
+        "path": "csapp/code/ch10_rio.c",
+        "bytes": 7663,
+        "sha256": "5c4f5bf3febc2188079931361902fb314b35dfd059496e21d8ddb1eaeabe1860",
+        "source_sha256": "5c4f5bf3febc2188079931361902fb314b35dfd059496e21d8ddb1eaeabe1860"
+      },
+      {
+        "path": "csapp/code/ch10_rio.py",
+        "bytes": 4361,
+        "sha256": "5915bae3af97fc3ba9a1fb972bbcb240d0fd3a49f5d1f3423430b9dadf063a1d",
+        "source_sha256": "5915bae3af97fc3ba9a1fb972bbcb240d0fd3a49f5d1f3423430b9dadf063a1d"
+      },
+      {
+        "path": "csapp/code/ch11_address.c",
+        "bytes": 3236,
+        "sha256": "b54a7a59129aa892eceebc4eee961df189daa68399c90e1ba885c3bf6017afcf",
+        "source_sha256": "b54a7a59129aa892eceebc4eee961df189daa68399c90e1ba885c3bf6017afcf"
+      },
+      {
+        "path": "csapp/code/ch11_address.py",
+        "bytes": 1917,
+        "sha256": "38c1bac8ac65c3f1616e15568f7323eccb70356f84f542343e4ce72b064ef0f6",
+        "source_sha256": "38c1bac8ac65c3f1616e15568f7323eccb70356f84f542343e4ce72b064ef0f6"
+      },
+      {
+        "path": "csapp/code/ch11_echo.c",
+        "bytes": 3292,
+        "sha256": "cae23d959a71e46ea641fbdf9281101386f87f127475d6b07830bb31c409e201",
+        "source_sha256": "cae23d959a71e46ea641fbdf9281101386f87f127475d6b07830bb31c409e201"
+      },
+      {
+        "path": "csapp/code/ch11_echo.py",
+        "bytes": 1425,
+        "sha256": "856fb9c20a63acc17da3155abecb1f415d3f9929502efcb75d35543ec344a160",
+        "source_sha256": "856fb9c20a63acc17da3155abecb1f415d3f9929502efcb75d35543ec344a160"
+      },
+      {
+        "path": "csapp/code/ch11_http.c",
+        "bytes": 24870,
+        "sha256": "35060b7dee8fd6f34748ca8fe2f882a58d48186c9669993c21c090f6fdcc2412",
+        "source_sha256": "35060b7dee8fd6f34748ca8fe2f882a58d48186c9669993c21c090f6fdcc2412"
+      },
+      {
+        "path": "csapp/code/ch11_http.py",
+        "bytes": 14472,
+        "sha256": "293ce29c1f456be15f417c0542196416022b89d7d4f84783b4e515003be2083c",
+        "source_sha256": "293ce29c1f456be15f417c0542196416022b89d7d4f84783b4e515003be2083c"
+      },
+      {
+        "path": "csapp/code/ch12_models.c",
+        "bytes": 2618,
+        "sha256": "b3741101b62bf31e3c9f54f4c23f54e26033f14e0ed2d230e77aa2bfc37a1b15",
+        "source_sha256": "b3741101b62bf31e3c9f54f4c23f54e26033f14e0ed2d230e77aa2bfc37a1b15"
+      },
+      {
+        "path": "csapp/code/ch12_models.py",
+        "bytes": 2611,
+        "sha256": "b1643e63a0affee8b9c7b323edcc06d5a8c0b4b135ad960e9318898bc8910bdb",
+        "source_sha256": "b1643e63a0affee8b9c7b323edcc06d5a8c0b4b135ad960e9318898bc8910bdb"
+      },
+      {
+        "path": "csapp/code/ch12_resolver.c",
+        "bytes": 3472,
+        "sha256": "2d5c161ded9d450251d411c6e1b8b4c02e9fc9552b16f08a5d218f4f66e2cadf",
+        "source_sha256": "2d5c161ded9d450251d411c6e1b8b4c02e9fc9552b16f08a5d218f4f66e2cadf"
+      },
+      {
+        "path": "csapp/code/ch12_sbuf.c",
+        "bytes": 2626,
+        "sha256": "379d7f73918e7d217167c22bedcd7faf357b0c25920f479fa7f7f4374e9f0549",
+        "source_sha256": "379d7f73918e7d217167c22bedcd7faf357b0c25920f479fa7f7f4374e9f0549"
+      },
+      {
+        "path": "csapp/code/ch12_server_checks.py",
+        "bytes": 8930,
+        "sha256": "1a33bd240d434c6a528a2cad63307fb6eaba6d54e9f9288b05e838f5bed2a62f",
+        "source_sha256": "1a33bd240d434c6a528a2cad63307fb6eaba6d54e9f9288b05e838f5bed2a62f"
+      },
+      {
+        "path": "csapp/code/ch12_servers.c",
+        "bytes": 17043,
+        "sha256": "04ef8b295d53ba8cb67cdfb52cbcc3be82dc7abb6e6196b494378d2ee63cb1b6",
+        "source_sha256": "04ef8b295d53ba8cb67cdfb52cbcc3be82dc7abb6e6196b494378d2ee63cb1b6"
+      },
+      {
+        "path": "csapp/code/ch12_tfgets.c",
+        "bytes": 6720,
+        "sha256": "1914d1f35ac038393b334ec9ed9e647ef4b588f05fbe3aa01e01a99815357b7a",
+        "source_sha256": "1914d1f35ac038393b334ec9ed9e647ef4b588f05fbe3aa01e01a99815357b7a"
+      },
+      {
+        "path": "csapp/code/ch12_threads.c",
+        "bytes": 6474,
+        "sha256": "e45ba52cee98920d121a0ea0a8165dc2008a15b6b507763e244659d18bfc2b30",
+        "source_sha256": "e45ba52cee98920d121a0ea0a8165dc2008a15b6b507763e244659d18bfc2b30"
+      },
+      {
+        "path": "csapp/code/hello.c",
+        "bytes": 80,
+        "sha256": "0a091a7bb6cbf5992cf196f4c56545ccffd474bf0037449f772c2ef7a68c70fb",
+        "source_sha256": "0a091a7bb6cbf5992cf196f4c56545ccffd474bf0037449f772c2ef7a68c70fb"
+      },
+      {
+        "path": "csapp/code/hello.py",
+        "bytes": 24,
+        "sha256": "17c124a2dff64669265d40fc4300a8751a9707390fb607b374067e27c3c6c82a",
+        "source_sha256": "17c124a2dff64669265d40fc4300a8751a9707390fb607b374067e27c3c6c82a"
+      },
+      {
+        "path": "csapp/code/index.html",
+        "bytes": 18816,
+        "sha256": "0edb229f286c9c1b6c537f31cd69d186a4e9a5e516bd03454571ab33c825eb75"
+      },
+      {
+        "path": "csapp/code/pipeline.c",
+        "bytes": 632,
+        "sha256": "9d8dc9b3cf11a5570019a940ce02a36b868dd239874f3c009abd7697b9924cdf",
+        "source_sha256": "9d8dc9b3cf11a5570019a940ce02a36b868dd239874f3c009abd7697b9924cdf"
+      },
+      {
+        "path": "csapp/code/pipeline.py",
+        "bytes": 585,
+        "sha256": "35716182f87f7a84926303af2e3d73e67abca105a167fb3845bd466f0797763b",
+        "source_sha256": "35716182f87f7a84926303af2e3d73e67abca105a167fb3845bd466f0797763b"
+      },
+      {
+        "path": "csapp/code/programs.json",
+        "bytes": 18082,
+        "sha256": "5fc698e6f853531d97fbbd84a57c6f11017e006a4f27b0f96475ced116a045e4",
+        "source_sha256": "5fc698e6f853531d97fbbd84a57c6f11017e006a4f27b0f96475ced116a045e4"
+      },
+      {
+        "path": "csapp/code/reductions.c",
+        "bytes": 954,
+        "sha256": "b0e0af03241e5347677dc398f8d9d9db192326b393807c1698c7301386eba4e3",
+        "source_sha256": "b0e0af03241e5347677dc398f8d9d9db192326b393807c1698c7301386eba4e3"
+      },
+      {
+        "path": "csapp/code/reductions.py",
+        "bytes": 515,
+        "sha256": "7e6fbe996f47fa28db1b6399e82f8bc9ce5153a241d19eec20c7dcbd1ce4e01d",
+        "source_sha256": "7e6fbe996f47fa28db1b6399e82f8bc9ce5153a241d19eec20c7dcbd1ce4e01d"
+      },
+      {
+        "path": "csapp/code/representation.c",
+        "bytes": 1100,
+        "sha256": "36651d07fee7431b9e86e285e89aa458ae81b7fd60ed490dcd3fb7c813fb1fe4",
+        "source_sha256": "36651d07fee7431b9e86e285e89aa458ae81b7fd60ed490dcd3fb7c813fb1fe4"
+      },
+      {
+        "path": "csapp/code/representation.py",
+        "bytes": 392,
+        "sha256": "4825d2d9b206c902d47c880ac64748fcc2d728e26ed3738088f96e040c0724da",
+        "source_sha256": "4825d2d9b206c902d47c880ac64748fcc2d728e26ed3738088f96e040c0724da"
+      },
+      {
+        "path": "csapp/code/y86-verification-support.tar.gz",
+        "bytes": 10820,
+        "sha256": "ec9b5927e9427149d6fcf56871140bcd40abbe13af412690fa32bdaa2779e2f3",
+        "source_sha256": "ec9b5927e9427149d6fcf56871140bcd40abbe13af412690fa32bdaa2779e2f3"
+      },
+      {
+        "path": "csapp/code/y86/Y86_REPRODUCE.md",
+        "bytes": 8475,
+        "sha256": "3fefa4e1eb9d97f527e7e90d71530c5d692ff72fd1fa34c07f5d2b3772354ca8",
+        "source_sha256": "3fefa4e1eb9d97f527e7e90d71530c5d692ff72fd1fa34c07f5d2b3772354ca8"
+      },
+      {
+        "path": "csapp/code/y86/build_y86_variants.sh",
+        "bytes": 1144,
+        "sha256": "128f985044405caf6e539c2f5b76e30280122a71f5bf0c7418382f5bc692deae",
+        "source_sha256": "128f985044405caf6e539c2f5b76e30280122a71f5bf0c7418382f5bc692deae"
+      },
+      {
+        "path": "csapp/code/y86/csapp-ex4-52-58.patch",
+        "bytes": 21291,
+        "sha256": "72b62d714a134da150ac26a181607f30ed12a84de0354e5e5a7e5ce00873dbfb",
+        "source_sha256": "72b62d714a134da150ac26a181607f30ed12a84de0354e5e5a7e5ce00873dbfb"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/branch-equal-taken.ys",
+        "bytes": 49,
+        "sha256": "7b1a9679b65a83c86eac8f8e4fc84b00d1c1f4e138cb054afb306342919e5786",
+        "source_sha256": "7b1a9679b65a83c86eac8f8e4fc84b00d1c1f4e138cb054afb306342919e5786"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/branch-equal-untaken.ys",
+        "bytes": 50,
+        "sha256": "2ef6bb1e06e2246f6e7688b329fcc71b0126d7333fab0e8efdcc3b843f6572bb",
+        "source_sha256": "2ef6bb1e06e2246f6e7688b329fcc71b0126d7333fab0e8efdcc3b843f6572bb"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/branch-loop-ret.ys",
+        "bytes": 103,
+        "sha256": "21697ccd1b80a6a6cb8482c75da7cc5868652e2016c04e3971c94fcc8433e0de",
+        "source_sha256": "21697ccd1b80a6a6cb8482c75da7cc5868652e2016c04e3971c94fcc8433e0de"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/branch-unconditional-target-once.ys",
+        "bytes": 81,
+        "sha256": "01883d8182408683ff6b5facaae952eaab0a9d0f5c4d90369ef5f3322a34420c",
+        "source_sha256": "01883d8182408683ff6b5facaae952eaab0a9d0f5c4d90369ef5f3322a34420c"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/iadd-load-forward-cc.ys",
+        "bytes": 152,
+        "sha256": "154a0757b3b3c21c63fdc62dd8bed8d78d609eda9b7a7c4791508a678d7174c5",
+        "source_sha256": "154a0757b3b3c21c63fdc62dd8bed8d78d609eda9b7a7c4791508a678d7174c5"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/iadd-negative.ys",
+        "bytes": 35,
+        "sha256": "f8b7d32755604a6705b2773e58dcc0ee111916ec52e2e504e28222db16ac9342",
+        "source_sha256": "f8b7d32755604a6705b2773e58dcc0ee111916ec52e2e504e28222db16ac9342"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/iadd-old-memory-error.ys",
+        "bytes": 77,
+        "sha256": "13cd3f79e71e2a0640c64b1a16eefdbfb6c11ce6fc8b82427fa5faddcb5e08ab",
+        "source_sha256": "13cd3f79e71e2a0640c64b1a16eefdbfb6c11ce6fc8b82427fa5faddcb5e08ab"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/iadd-overflow.ys",
+        "bytes": 51,
+        "sha256": "42271546e2cbf288454161d46b0d16d3677631ef5b7d14fbdf28fcb55cc1484e",
+        "source_sha256": "42271546e2cbf288454161d46b0d16d3677631ef5b7d14fbdf28fcb55cc1484e"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/lf-load-push-data.ys",
+        "bytes": 108,
+        "sha256": "7ab53e7a316895212b41d17c92943f5540b1800753fe10f3117827d6a8007d68",
+        "source_sha256": "7ab53e7a316895212b41d17c92943f5540b1800753fe10f3117827d6a8007d68"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/lf-load-rsp-push.ys",
+        "bytes": 92,
+        "sha256": "5f4a229506f3770ccd71a95ed1765f90084093533092753ea621a0ab99bbfa13",
+        "source_sha256": "5f4a229506f3770ccd71a95ed1765f90084093533092753ea621a0ab99bbfa13"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/lf-load-store-address.ys",
+        "bytes": 107,
+        "sha256": "53c9bc0111775468cfa99a9d04cd2cdeb04c73b19df605bcda8a2015a6c7c07e",
+        "source_sha256": "53c9bc0111775468cfa99a9d04cd2cdeb04c73b19df605bcda8a2015a6c7c07e"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/noforward-h-b-r.ys",
+        "bytes": 76,
+        "sha256": "4631d2e664f376a046112eb2b4d702bc66bfd5373e315c341a144e20b070db19",
+        "source_sha256": "4631d2e664f376a046112eb2b4d702bc66bfd5373e315c341a144e20b070db19"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/noforward-h-b.ys",
+        "bytes": 91,
+        "sha256": "d6448faf44e82d233e316b5c5571ddf96d3ea5a76b3f7d85dd4b8bcc50c807bf",
+        "source_sha256": "d6448faf44e82d233e316b5c5571ddf96d3ea5a76b3f7d85dd4b8bcc50c807bf"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/page-4-4-representative.ys",
+        "bytes": 724,
+        "sha256": "cd562e60a46c348dc72590626933b04ad4a085a99ca6e5d24428d71da56ce3c4",
+        "source_sha256": "cd562e60a46c348dc72590626933b04ad4a085a99ca6e5d24428d71da56ce3c4"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/page-4-47-mixed.ys",
+        "bytes": 810,
+        "sha256": "f66b733e94868b62cfb68c216ec97fb1263467aacbc16f3cd5a6935389180494",
+        "source_sha256": "f66b733e94868b62cfb68c216ec97fb1263467aacbc16f3cd5a6935389180494"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/page-4-47-reverse.ys",
+        "bytes": 810,
+        "sha256": "a2be3e78ebc0fcd9a3aa48e63a54c264ef388e1d5c2b175912fecec77db69e52",
+        "source_sha256": "a2be3e78ebc0fcd9a3aa48e63a54c264ef388e1d5c2b175912fecec77db69e52"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/page-4-47-sorted.ys",
+        "bytes": 810,
+        "sha256": "3960392fa4e53cce36d7150c2ea4fbef05ca6ae484f4ff1bbe94746789a2dfed",
+        "source_sha256": "3960392fa4e53cce36d7150c2ea4fbef05ca6ae484f4ff1bbe94746789a2dfed"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/page-4-48-mixed.ys",
+        "bytes": 832,
+        "sha256": "4566f419ca05e0e2e9991d91c910084994849fe0dfe22b0d5fe4f1b13c12250f",
+        "source_sha256": "4566f419ca05e0e2e9991d91c910084994849fe0dfe22b0d5fe4f1b13c12250f"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/page-4-48-reverse.ys",
+        "bytes": 832,
+        "sha256": "0457e29c9c4161c1a9243d32b7bb78ddfaa7ceb356f39dbc3311b68c0c60208b",
+        "source_sha256": "0457e29c9c4161c1a9243d32b7bb78ddfaa7ceb356f39dbc3311b68c0c60208b"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/page-4-48-sorted.ys",
+        "bytes": 832,
+        "sha256": "4935ef45c6ff969ad3254ace25f1e5c4486f4b22dcfd799b8646d65ee01f03d6",
+        "source_sha256": "4935ef45c6ff969ad3254ace25f1e5c4486f4b22dcfd799b8646d65ee01f03d6"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/page-4-49-mixed.ys",
+        "bytes": 849,
+        "sha256": "4b9ed355637f2c759ea24eead68f2781ff01751c0b99efc6e0c6813dd8294026",
+        "source_sha256": "4b9ed355637f2c759ea24eead68f2781ff01751c0b99efc6e0c6813dd8294026"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/page-4-49-reverse.ys",
+        "bytes": 849,
+        "sha256": "7cc9ceaeb8dc6f7de3b94607d0a16d6a29e2b3b32943695375869e77a991600d",
+        "source_sha256": "7cc9ceaeb8dc6f7de3b94607d0a16d6a29e2b3b32943695375869e77a991600d"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/page-4-49-sorted.ys",
+        "bytes": 849,
+        "sha256": "4cd8f918b77a14de14ad8b456b796906b43d5654202ee0ca0afd6eb2773b94a4",
+        "source_sha256": "4cd8f918b77a14de14ad8b456b796906b43d5654202ee0ca0afd6eb2773b94a4"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/page-4-5-representative.ys",
+        "bytes": 490,
+        "sha256": "6f7a5b94997827e47144c282e064491075fae9f628375ce5fe38712e569fee6e",
+        "source_sha256": "6f7a5b94997827e47144c282e064491075fae9f628375ce5fe38712e569fee6e"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/page-4-6-representative.ys",
+        "bytes": 454,
+        "sha256": "5ca209ade50d4b0f012f746cd38f9090d11249041b229e96420b485c3e3ff061",
+        "source_sha256": "5ca209ade50d4b0f012f746cd38f9090d11249041b229e96420b485c3e3ff061"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/pop-adjacent.ys",
+        "bytes": 98,
+        "sha256": "ed9b5eddfeee80c29136b59ebbc534bd048a8777879cc4493b3f558383bacc87",
+        "source_sha256": "ed9b5eddfeee80c29136b59ebbc534bd048a8777879cc4493b3f558383bacc87"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/pop-invalid-address.ys",
+        "bytes": 37,
+        "sha256": "b5904011f5f8eb75d9a43410eceb420bfda6a7bf31f8746eb59c8a30597ab284",
+        "source_sha256": "b5904011f5f8eb75d9a43410eceb420bfda6a7bf31f8746eb59c8a30597ab284"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/pop-load-rsp-refetch.ys",
+        "bytes": 101,
+        "sha256": "078866ad847db1fff336c3d7ae46c1f768b638ab6dfd04aa0a46210b2c896d84",
+        "source_sha256": "078866ad847db1fff336c3d7ae46c1f768b638ab6dfd04aa0a46210b2c896d84"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/pop-preserve-cc.ys",
+        "bytes": 100,
+        "sha256": "4f06242614e1b4980dd110f5c71328dfbe0c9177ff4a1444a7f2cbd0ed47de59",
+        "source_sha256": "4f06242614e1b4980dd110f5c71328dfbe0c9177ff4a1444a7f2cbd0ed47de59"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/pop-rsp-ret.ys",
+        "bytes": 119,
+        "sha256": "380ae6dbc9c4520a54158dc5687911967ecd1e4390a6c63c23f9539cd9d99e9c",
+        "source_sha256": "380ae6dbc9c4520a54158dc5687911967ecd1e4390a6c63c23f9539cd9d99e9c"
+      },
+      {
+        "path": "csapp/code/y86/sim-cases/pop-wrongpath-flush.ys",
+        "bytes": 112,
+        "sha256": "69e00092ce25cf14ceb017a884772d14c0934b2a37d5f2803fb5ce7ea10aee4c",
+        "source_sha256": "69e00092ce25cf14ceb017a884772d14c0934b2a37d5f2803fb5ce7ea10aee4c"
+      },
+      {
+        "path": "csapp/csapp.pdf",
+        "bytes": 6765790,
+        "sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a",
+        "source_sha256": "dcd44c5dd0819af7dbef3ebef088a5012aadb5c82761e4b6603b4fb5d0ff504a"
+      },
+      {
+        "path": "csapp/index.html",
+        "bytes": 331,
+        "sha256": "0ac3773cf62b9b6e5ffdb6a60085260186f25ed20a6e2b3eb7e9da38f88213d1"
+      },
+      {
+        "path": "csapp/notes/book_overview.html",
+        "bytes": 80140,
+        "sha256": "702a40e9074e70355d6b8a9a1a670b63f9d6c51f1258d5cb1bc4da64856b41cf",
+        "source_sha256": "4d2e6495e2caba77b6321b12b5eef854eafa6f1477926ae88ef38e370c87c50d"
+      },
+      {
+        "path": "csapp/notes/chapter01_review.json",
+        "bytes": 1847,
+        "sha256": "e9e89178d2842a4bb66a303008fd9792e36dd09d55dfc147ab9ca1faa0ffde98",
+        "source_sha256": "e9e89178d2842a4bb66a303008fd9792e36dd09d55dfc147ab9ca1faa0ffde98"
+      },
+      {
+        "path": "csapp/notes/chapter01_tour.html",
+        "bytes": 96869,
+        "sha256": "ccf7bd4163bfd566b70d0dd8fba0da59b83b39004ce3d1927eba14338b8b00b6",
+        "source_sha256": "05f2121c0f6c2ca0e8e177252855f508eca9f0c21ab7b2d5cb123fb88dce276e"
+      },
+      {
+        "path": "csapp/notes/chapter02_information.html",
+        "bytes": 522883,
+        "sha256": "3972c1e27ab03f579e8022c15d0d9ea63acc6ee57a52c48e37ccb19955d4dddf",
+        "source_sha256": "8c45e5730f6c6e985e0463f9aec882ce078ca2e4514bd6f31fdcdec0d99362a4"
+      },
+      {
+        "path": "csapp/notes/chapter02_review.json",
+        "bytes": 117080,
+        "sha256": "4d1dd8369a95acf76cc21c99c3617b154e1f1f4d518bc1fd2f22026dd1c5d7ce",
+        "source_sha256": "4d1dd8369a95acf76cc21c99c3617b154e1f1f4d518bc1fd2f22026dd1c5d7ce"
+      },
+      {
+        "path": "csapp/notes/chapter03_machine_level.html",
+        "bytes": 312827,
+        "sha256": "501a7f8378da144b6d9e5e316392cab6011c01170ca50aa9f5fe402f4c0248c7",
+        "source_sha256": "ac840fb8cf74fa81b88f81ac3568da82831d05e20b9b0ab19e0245863977c73d"
+      },
+      {
+        "path": "csapp/notes/chapter03_review.json",
+        "bytes": 76038,
+        "sha256": "d1ea10cd160f29b38b54325513f0fb2011b0dc21d646b8b5611a4120e1764ee1",
+        "source_sha256": "d1ea10cd160f29b38b54325513f0fb2011b0dc21d646b8b5611a4120e1764ee1"
+      },
+      {
+        "path": "csapp/notes/chapter04_architecture.html",
+        "bytes": 233442,
+        "sha256": "42cfc540f1335fd5525475cd1c8a596c23a37dc2a8adf9c31dcd2b70eb00c910",
+        "source_sha256": "602f162d79e0fea454916f45817181113108e84bc1fbc22acc87ce44d74dec66"
+      },
+      {
+        "path": "csapp/notes/chapter04_review.json",
+        "bytes": 30450,
+        "sha256": "143341de81f6ab630c5ece1b45ed4ae2e704b038a377a695f07d0b07a636634b",
+        "source_sha256": "143341de81f6ab630c5ece1b45ed4ae2e704b038a377a695f07d0b07a636634b"
+      },
+      {
+        "path": "csapp/notes/chapter05_optimization.html",
+        "bytes": 157170,
+        "sha256": "4c7993a1118221053384876d6b4fd22d37f9e06958154d13e8dede94f081c73d",
+        "source_sha256": "611f7c57d8b01b73cd892d0e38ef1c5d176adc0da5a2383798d1bebf46ad523b"
+      },
+      {
+        "path": "csapp/notes/chapter05_review.json",
+        "bytes": 4095,
+        "sha256": "fc90206615b510cda3f19952987facda4b6dd59309c275b81c6648dc3cc42c59",
+        "source_sha256": "fc90206615b510cda3f19952987facda4b6dd59309c275b81c6648dc3cc42c59"
+      },
+      {
+        "path": "csapp/notes/chapter06_memory.html",
+        "bytes": 258530,
+        "sha256": "d951f828cebd4410c8906ee9a0a7eb48ccb0bbe2d1d94c67ca92fb151c5d1fa7",
+        "source_sha256": "a396a64df9c0731b3debd690cd179cb25ca39d829c76a279b5685ba5cff301d3"
+      },
+      {
+        "path": "csapp/notes/chapter06_review.json",
+        "bytes": 40724,
+        "sha256": "13f5d0baca1c38c2f3a130bbfdf9b07ae3755a5aacd9efb4d148f7116be7e79c",
+        "source_sha256": "13f5d0baca1c38c2f3a130bbfdf9b07ae3755a5aacd9efb4d148f7116be7e79c"
+      },
+      {
+        "path": "csapp/notes/chapter07_linking.html",
+        "bytes": 140039,
+        "sha256": "b3a9fdcf5a1d8ffd611c4756dceac18dd2c711ecf390d7fecce34b519c5c6833",
+        "source_sha256": "c8e12a0d44d570b29d9733dedbc93f3bf790eb60ca19d868b3261e3373a3003b"
+      },
+      {
+        "path": "csapp/notes/chapter07_review.json",
+        "bytes": 12285,
+        "sha256": "f6182354541adbcbff27ce555d02300904092ae9834c6c5049ec8a8417bdfee4",
+        "source_sha256": "f6182354541adbcbff27ce555d02300904092ae9834c6c5049ec8a8417bdfee4"
+      },
+      {
+        "path": "csapp/notes/chapter08_exceptional.html",
+        "bytes": 147376,
+        "sha256": "5f1880d893f9db45d0488c221e1a888774de737df4c34d957d16fb291864a1d8",
+        "source_sha256": "5c73e2644b34d07f4483664a1d10a657e10917675e264f6b5f130b28030f8083"
+      },
+      {
+        "path": "csapp/notes/chapter08_review.json",
+        "bytes": 37890,
+        "sha256": "327d54e0c90ebe3a93b8d2efcb4c1cca880eb42fc7c1c845a6437377d3584954",
+        "source_sha256": "327d54e0c90ebe3a93b8d2efcb4c1cca880eb42fc7c1c845a6437377d3584954"
+      },
+      {
+        "path": "csapp/notes/chapter09_review.json",
+        "bytes": 25581,
+        "sha256": "1add39440750ebefd6549f0e0579b306dc64da6bf711d3240d5941a1bedecfb3",
+        "source_sha256": "1add39440750ebefd6549f0e0579b306dc64da6bf711d3240d5941a1bedecfb3"
+      },
+      {
+        "path": "csapp/notes/chapter09_virtual_memory.html",
+        "bytes": 172601,
+        "sha256": "569965b69925d6d4b7398bdc89664f3b1183a488c9757475fa15e76b6c91d1f5",
+        "source_sha256": "43a342f6d35e3466001e5872f2ce0d77425a99f24ae5dd24126f7f683a87f9ad"
+      },
+      {
+        "path": "csapp/notes/chapter10_review.json",
+        "bytes": 9705,
+        "sha256": "15b4598670d083e4033b1937c8cfaa350467043653e56da6f5ce6743852597d0",
+        "source_sha256": "15b4598670d083e4033b1937c8cfaa350467043653e56da6f5ce6743852597d0"
+      },
+      {
+        "path": "csapp/notes/chapter10_system_io.html",
+        "bytes": 131480,
+        "sha256": "942dfd2ddb1ec771de9cde894592209de413e6ce863f219cceeee242f9718973",
+        "source_sha256": "c2a4e6c9921aa9ef5443304c924d04d5973dfcb0fa2aa638cfa0fbde4d443f42"
+      },
+      {
+        "path": "csapp/notes/chapter11_network.html",
+        "bytes": 171312,
+        "sha256": "142d74abb883c26ad59a5f7e348ac50e358d1e1f6d8d4650577348d36123a3d1",
+        "source_sha256": "53c0efb1485c8d7d47ea9b8303f32facf3bc56c90b308a1f189ad0985040bccb"
+      },
+      {
+        "path": "csapp/notes/chapter11_review.json",
+        "bytes": 21750,
+        "sha256": "188f8b66283146ed90d048151937470ec4c1ff9eda13486c3797ae45b5658c27",
+        "source_sha256": "188f8b66283146ed90d048151937470ec4c1ff9eda13486c3797ae45b5658c27"
+      },
+      {
+        "path": "csapp/notes/chapter12_concurrency.html",
+        "bytes": 246744,
+        "sha256": "7ab8aa2b183fb1c23b4ef9ad39cfa63b0d65879b55043ac8be6f64e05af761a2",
+        "source_sha256": "bc85d93c6859d8981a6e9668b7f1a4e4779397cdcbf13e4461c94eb91dc24e14"
+      },
+      {
+        "path": "csapp/notes/chapter12_review.json",
+        "bytes": 43977,
+        "sha256": "7fd735df8e633c8729a828785a455f3703c81566b170b7010596e504686132ae",
+        "source_sha256": "7fd735df8e633c8729a828785a455f3703c81566b170b7010596e504686132ae"
+      },
+      {
+        "path": "csapp/notes/exercise_manifest.json",
+        "bytes": 74888,
+        "sha256": "888e9028579118ebbc1b427bef887ede0e8d739fab121d07f4ef6abfac74cf2a",
+        "source_sha256": "888e9028579118ebbc1b427bef887ede0e8d739fab121d07f4ef6abfac74cf2a"
+      },
+      {
+        "path": "csapp/notes/explanation_review.json",
+        "bytes": 240645,
+        "sha256": "f1956848a043433954a24e2dfcf2ab35b0184a73fa48a9ab3f3b5948e65ce366",
+        "source_sha256": "f1956848a043433954a24e2dfcf2ab35b0184a73fa48a9ab3f3b5948e65ce366"
+      },
+      {
+        "path": "csapp/notes/preface.html",
+        "bytes": 55065,
+        "sha256": "84880675b01815a31520f8b3efc63bd1d4c7650cab7124e37973717c2438b9db",
+        "source_sha256": "6ac27be90cd0d914a57b48734422ef3df1a8cfbb363b99fccd575be798efc977"
+      },
+      {
+        "path": "csapp/notes/reading_review.json",
+        "bytes": 74286,
+        "sha256": "e2963bfe37312e9453b96c264e5e5b77af757a7b1ef430c8f121e6483ef4c2e9",
+        "source_sha256": "e2963bfe37312e9453b96c264e5e5b77af757a7b1ef430c8f121e6483ef4c2e9"
+      },
+      {
+        "path": "csapp/notes/simulator_review.json",
+        "bytes": 6985,
+        "sha256": "8e017e44eb318cc2168c3f5a3f4760272ad708dcf99255587027bca834aa4382",
+        "source_sha256": "8e017e44eb318cc2168c3f5a3f4760272ad708dcf99255587027bca834aa4382"
+      },
+      {
+        "path": "csapp/notes/source_excerpts.json",
+        "bytes": 108062,
+        "sha256": "1c335b9c6ad8b6e2db1975fdc41d225245882bf6515475ca055734394de30635",
+        "source_sha256": "1c335b9c6ad8b6e2db1975fdc41d225245882bf6515475ca055734394de30635"
+      },
+      {
+        "path": "csapp/notes/source_manifest.json",
+        "bytes": 30318,
+        "sha256": "f400ccdcc551593b2c43d59f3eef94787a3e0a01b2b57d6b4b9e126374911546",
+        "source_sha256": "f400ccdcc551593b2c43d59f3eef94787a3e0a01b2b57d6b4b9e126374911546"
+      },
+      {
+        "path": "csapp/notes/source_reading_review.json",
+        "bytes": 129494,
+        "sha256": "0271766b7164851165472e83d060154937df617bcc9421414053e0db2e8fcfae",
+        "source_sha256": "0271766b7164851165472e83d060154937df617bcc9421414053e0db2e8fcfae"
+      },
+      {
+        "path": "csapp/notes/validation.json",
+        "bytes": 211326,
+        "sha256": "911c9f62d35258617ca764770f7c9277e049d1eb592857abb4104f42b995688a",
+        "source_sha256": "911c9f62d35258617ca764770f7c9277e049d1eb592857abb4104f42b995688a"
+      },
+      {
+        "path": "csapp/notes/visual_navigation_review.json",
+        "bytes": 318324,
+        "sha256": "ec0e54b01c50067d45bf7c318c3b417eed334e5eb91787a0c1819808db8f5525",
+        "source_sha256": "ec0e54b01c50067d45bf7c318c3b417eed334e5eb91787a0c1819808db8f5525"
+      },
+      {
+        "path": "favicon.svg",
+        "bytes": 292,
+        "sha256": "f1ab2a8e135a12be4f93a272888396812665e9e095b3479975bc89237bbc1e86",
+        "source_sha256": "f1ab2a8e135a12be4f93a272888396812665e9e095b3479975bc89237bbc1e86"
+      },
+      {
+        "path": "index.html",
+        "bytes": 11151,
+        "sha256": "da1c0543e1f3bc7c2563d1968846f89210030a35117fae21b155f70ade39bf8f",
+        "source_sha256": "da1c0543e1f3bc7c2563d1968846f89210030a35117fae21b155f70ade39bf8f"
+      },
+      {
+        "path": "measure-probability/code/README.md",
+        "bytes": 4712,
+        "sha256": "54f4acdb53c6a5b852204fa2b2077fc16396aa337eff285148eb82bc68efd86e",
+        "source_sha256": "54f4acdb53c6a5b852204fa2b2077fc16396aa337eff285148eb82bc68efd86e"
+      },
+      {
+        "path": "measure-probability/code/finite_integrals.c",
+        "bytes": 4464,
+        "sha256": "3f743432f9cf038833614b2294a59981bc11fe22ae807c9241b19aaa66931c1b",
+        "source_sha256": "3f743432f9cf038833614b2294a59981bc11fe22ae807c9241b19aaa66931c1b"
+      },
+      {
+        "path": "measure-probability/code/finite_integrals.py",
+        "bytes": 2947,
+        "sha256": "3a598f0554c1497890df87dffe885e882ccfc912e8f446f466b11118ae97c5c7",
+        "source_sha256": "3a598f0554c1497890df87dffe885e882ccfc912e8f446f466b11118ae97c5c7"
+      },
+      {
+        "path": "measure-probability/code/finite_spaces.c",
+        "bytes": 3953,
+        "sha256": "bf0bdd33edcf8c32d7b1e8b9b0204d0d031c5a181520bf2454fcbdb040bd1613",
+        "source_sha256": "bf0bdd33edcf8c32d7b1e8b9b0204d0d031c5a181520bf2454fcbdb040bd1613"
+      },
+      {
+        "path": "measure-probability/code/finite_spaces.py",
+        "bytes": 2776,
+        "sha256": "08f5ecba1fa03d0e38dd553f1763965beedebdf9a6173d0dc8a0924d7d41886d",
+        "source_sha256": "08f5ecba1fa03d0e38dd553f1763965beedebdf9a6173d0dc8a0924d7d41886d"
+      },
+      {
+        "path": "measure-probability/code/index.html",
+        "bytes": 6318,
+        "sha256": "a5bb3aae9682267b68a9952722e139bf112253d6825768f9874df6d756ee346c"
+      },
+      {
+        "path": "measure-probability/code/programs.json",
+        "bytes": 733,
+        "sha256": "6a6b36cdc783f521f63d15ddda2679485a7b694c8ad238ccf209feed482788fe",
+        "source_sha256": "6a6b36cdc783f521f63d15ddda2679485a7b694c8ad238ccf209feed482788fe"
+      },
+      {
+        "path": "measure-probability/code/simple_approx.c",
+        "bytes": 995,
+        "sha256": "93fdfe1ac362cc025f1258511a231b58202efec7c1b27e987340cd4dff133b17",
+        "source_sha256": "93fdfe1ac362cc025f1258511a231b58202efec7c1b27e987340cd4dff133b17"
+      },
+      {
+        "path": "measure-probability/code/simple_approx.py",
+        "bytes": 732,
+        "sha256": "ed4eff2e11569f54b4d6d9f47b9089a070d67e0cf74264c82d18a247e4666b89",
+        "source_sha256": "ed4eff2e11569f54b4d6d9f47b9089a070d67e0cf74264c82d18a247e4666b89"
+      },
+      {
+        "path": "measure-probability/index.html",
+        "bytes": 364,
+        "sha256": "068cc8a6968ee80e0c4c2280db15bfa9ca85786c4ec32ecaf961070b64f152d6"
+      },
+      {
+        "path": "measure-probability/notes/book_overview.html",
+        "bytes": 41254,
+        "sha256": "049d2cf564d730418a5fb0fe1771148a6cc74b16cc2db9f3997ba5cb9e4cfbd4",
+        "source_sha256": "d373a539537e762e6f019dfa8f8784ccbad8a7f459f9253809496424be8575aa"
+      },
+      {
+        "path": "measure-probability/notes/chapter01_measurable_spaces.html",
+        "bytes": 178456,
+        "sha256": "265e9262606dc2a276b15174f0e9d07c1960b0feed4f2fb3e2de4346faf955dc",
+        "source_sha256": "e42c667532b38baa9c910df41ff77342a14b0f9a49748fa44b1f0685823b06a2"
+      },
+      {
+        "path": "measure-probability/notes/chapter02_measure_spaces.html",
+        "bytes": 205880,
+        "sha256": "fb0fe6238c017b197b9b3640a6e80ebd8ff4a938244f0b52b3cf35e66f3c4c53",
+        "source_sha256": "ee36adc70aafd5b556017e6b1ed494b8f92caddc3671601a8ed585779b834447"
+      },
+      {
+        "path": "measure-probability/notes/chapter03_integration.html",
+        "bytes": 346414,
+        "sha256": "c8336fc349776cf522f6155d2f1df077932f8ffdc81fae1c28cad9e1fc264dd5",
+        "source_sha256": "68883c73cf1e41066594031d2b5dc3780913ca5cd0e9941060e5617521a991d3"
+      },
+      {
+        "path": "measure-probability/notes/chapter04_signed_measures.html",
+        "bytes": 361399,
+        "sha256": "2fa058e15f4553d56b9e95c6660591da3a5386b4d7620d0a106fd9efacf8ef8e",
+        "source_sha256": "ebc05efd5d6517577b13ed564643a6d30dc4168ade61754fdaaa756daf00337b"
+      },
+      {
+        "path": "measure-probability/notes/exercise_manifest.json",
+        "bytes": 41812,
+        "sha256": "327d1af2bbde0525022b67191ab48165e34f5683dbca5650896f13e85a401292",
+        "source_sha256": "327d1af2bbde0525022b67191ab48165e34f5683dbca5650896f13e85a401292"
+      },
+      {
+        "path": "measure-probability/notes/preface.html",
+        "bytes": 32115,
+        "sha256": "71fd8a0c937bd414b08de537b7f8992623a56596cbcf7adacdc18f0795f7035a",
+        "source_sha256": "ca606f60da08e0d4229dcc3bda2896c980f3076efa6b2f68a841e3c659b0038b"
+      },
+      {
+        "path": "measure-probability/notes/source_excerpts.json",
+        "bytes": 539,
+        "sha256": "ac631a4012b039fc857bae372abf1686b7effed47c86e8bd61fe6b65aa99da97",
+        "source_sha256": "ac631a4012b039fc857bae372abf1686b7effed47c86e8bd61fe6b65aa99da97"
+      },
+      {
+        "path": "measure-probability/notes/source_inventory.json",
+        "bytes": 61067,
+        "sha256": "edf64973dffe629b7a24ac9dea2e587daa901576f19dd84060cb0a40d8ed9f28",
+        "source_sha256": "edf64973dffe629b7a24ac9dea2e587daa901576f19dd84060cb0a40d8ed9f28"
+      },
+      {
+        "path": "measure-probability/notes/source_issues.json",
+        "bytes": 6099,
+        "sha256": "89611bc97aa274bb220c2a73c0f60e9467a5df5ecc50138b01f351b06d2a61f4",
+        "source_sha256": "89611bc97aa274bb220c2a73c0f60e9467a5df5ecc50138b01f351b06d2a61f4"
+      },
+      {
+        "path": "measure-probability/notes/source_manifest.json",
+        "bytes": 8921,
+        "sha256": "43bf8e5904bc8db8d6eaacda0dab02a2f6723d56ff98c3d5d06193af80f76a8a",
+        "source_sha256": "43bf8e5904bc8db8d6eaacda0dab02a2f6723d56ff98c3d5d06193af80f76a8a"
+      },
+      {
+        "path": "reader.css",
+        "bytes": 5562,
+        "sha256": "86a801934fbe22ccdde611215001c3a5bebb3abc087e7666aa8e6a22db9281f6",
+        "source_sha256": "86a801934fbe22ccdde611215001c3a5bebb3abc087e7666aa8e6a22db9281f6"
+      },
+      {
+        "path": "stochastic/assets/essentials-of-stochastic-processes.pdf",
+        "bytes": 2579008,
+        "sha256": "2232660e1909b42c6df8b5aca8eba12cdb383bf3741ecb53add49f6c26c6a0e7",
+        "source_sha256": "2232660e1909b42c6df8b5aca8eba12cdb383bf3741ecb53add49f6c26c6a0e7"
+      },
+      {
+        "path": "stochastic/code/Makefile",
+        "bytes": 847,
+        "sha256": "f6adbc7bf204b54136ebcdf6542ebd3ecc93259c9dee06a3eb810406f1e133db",
+        "source_sha256": "f6adbc7bf204b54136ebcdf6542ebd3ecc93259c9dee06a3eb810406f1e133db"
+      },
+      {
+        "path": "stochastic/code/README.md",
+        "bytes": 3064,
+        "sha256": "68cf2436c4b2a1e3591ccf0150f315743a3605dabac9d3c0a077517dd67c2709",
+        "source_sha256": "68cf2436c4b2a1e3591ccf0150f315743a3605dabac9d3c0a077517dd67c2709"
+      },
+      {
+        "path": "stochastic/code/chapter01_markov_chains/README.md",
+        "bytes": 1667,
+        "sha256": "bfc1a9727b4db8b3187ce1e4724b4e85b0cccdae370a8a07a7e9b58092f07d4e",
+        "source_sha256": "bfc1a9727b4db8b3187ce1e4724b4e85b0cccdae370a8a07a7e9b58092f07d4e"
+      },
+      {
+        "path": "stochastic/code/chapter01_markov_chains/index.html",
+        "bytes": 3220,
+        "sha256": "13e5ba0cc69fb9e8665de4955909237a7e0c1dd5d1218679715f5740b12ef391"
+      },
+      {
+        "path": "stochastic/code/chapter01_markov_chains/linear.c",
+        "bytes": 4812,
+        "sha256": "c37f130775d512fdf3fed1965d8b547d2ee03a87375c0cbb227b944ff43b9533",
+        "source_sha256": "c37f130775d512fdf3fed1965d8b547d2ee03a87375c0cbb227b944ff43b9533"
+      },
+      {
+        "path": "stochastic/code/chapter01_markov_chains/linear.py",
+        "bytes": 4144,
+        "sha256": "cbdbc203976adc8d8ac3ff41a086df439bc10eee2dc2335065a77ed9bf7624ac",
+        "source_sha256": "cbdbc203976adc8d8ac3ff41a086df439bc10eee2dc2335065a77ed9bf7624ac"
+      },
+      {
+        "path": "stochastic/code/chapter02_poisson_processes/README.md",
+        "bytes": 591,
+        "sha256": "910de1231ebcaef2119fe3a6e43725ad7a6c9cab11a9aabcead0cd9ec560c304",
+        "source_sha256": "910de1231ebcaef2119fe3a6e43725ad7a6c9cab11a9aabcead0cd9ec560c304"
+      },
+      {
+        "path": "stochastic/code/chapter02_poisson_processes/index.html",
+        "bytes": 2047,
+        "sha256": "b15eff9b3ec5e7b143e643926dd5983d50714d9428daa9d8546e82245039f4d9"
+      },
+      {
+        "path": "stochastic/code/chapter02_poisson_processes/poisson.c",
+        "bytes": 787,
+        "sha256": "d2bc153b9dea2f7baf70207248621597e3d62bd9c1d012d4fefade79ac7e1e41",
+        "source_sha256": "d2bc153b9dea2f7baf70207248621597e3d62bd9c1d012d4fefade79ac7e1e41"
+      },
+      {
+        "path": "stochastic/code/chapter02_poisson_processes/poisson.py",
+        "bytes": 729,
+        "sha256": "b55dfcba3aceb4214db7e3a989d10a0fa54c25c2ff38a814830ef04678980e9f",
+        "source_sha256": "b55dfcba3aceb4214db7e3a989d10a0fa54c25c2ff38a814830ef04678980e9f"
+      },
+      {
+        "path": "stochastic/code/chapter03_renewal_processes/README.md",
+        "bytes": 553,
+        "sha256": "15a858b55ef74ec10f0b265876f845ab66ba8d78a808f1dedea9483641f5c325",
+        "source_sha256": "15a858b55ef74ec10f0b265876f845ab66ba8d78a808f1dedea9483641f5c325"
+      },
+      {
+        "path": "stochastic/code/chapter03_renewal_processes/index.html",
+        "bytes": 2009,
+        "sha256": "1b7fddcd07207fa8bd4a0e61299726971e7d040c33b93c7e2f1aeb9fb2cef28b"
+      },
+      {
+        "path": "stochastic/code/chapter03_renewal_processes/renewal.c",
+        "bytes": 642,
+        "sha256": "2cc22f6794582f56fd0eaf3aad87659dc70695bca16cd9db8fee4fc419e5d56d",
+        "source_sha256": "2cc22f6794582f56fd0eaf3aad87659dc70695bca16cd9db8fee4fc419e5d56d"
+      },
+      {
+        "path": "stochastic/code/chapter03_renewal_processes/renewal.py",
+        "bytes": 565,
+        "sha256": "11a18d22032e4f8c1943948a3e50e55db9e91bf43fe69ddbd4385a97905328a2",
+        "source_sha256": "11a18d22032e4f8c1943948a3e50e55db9e91bf43fe69ddbd4385a97905328a2"
+      },
+      {
+        "path": "stochastic/code/chapter04_continuous_time_markov_chains/README.md",
+        "bytes": 584,
+        "sha256": "f49a8e8e4d5795087071ec49582024d3f9c2d8d51348bbdca0bbe2d09cad638a",
+        "source_sha256": "f49a8e8e4d5795087071ec49582024d3f9c2d8d51348bbdca0bbe2d09cad638a"
+      },
+      {
+        "path": "stochastic/code/chapter04_continuous_time_markov_chains/ctmc.c",
+        "bytes": 689,
+        "sha256": "6493f9199e146a5a7d6bef639f13198d163a3d6525e8722cff02263d7b18fd84",
+        "source_sha256": "6493f9199e146a5a7d6bef639f13198d163a3d6525e8722cff02263d7b18fd84"
+      },
+      {
+        "path": "stochastic/code/chapter04_continuous_time_markov_chains/ctmc.py",
+        "bytes": 603,
+        "sha256": "217c365c1cdab883780998a46e8d4e6550aa32caab6f4ff83201184863e4341f",
+        "source_sha256": "217c365c1cdab883780998a46e8d4e6550aa32caab6f4ff83201184863e4341f"
+      },
+      {
+        "path": "stochastic/code/chapter04_continuous_time_markov_chains/index.html",
+        "bytes": 2040,
+        "sha256": "fef28cc5bd6f49934621573e752ee421ed372db206b392c05cf985141d4813bb"
+      },
+      {
+        "path": "stochastic/code/chapter05_martingales/README.md",
+        "bytes": 551,
+        "sha256": "93a19752b6ccc53c286958ac51d09023d9196ff9d74f631a21022caa78af3690",
+        "source_sha256": "93a19752b6ccc53c286958ac51d09023d9196ff9d74f631a21022caa78af3690"
+      },
+      {
+        "path": "stochastic/code/chapter05_martingales/index.html",
+        "bytes": 2007,
+        "sha256": "956e98a9d8ff523e2e2545d972034561c072266372c35b1dda4ac27dfeeaf9cb"
+      },
+      {
+        "path": "stochastic/code/chapter05_martingales/stopping.c",
+        "bytes": 607,
+        "sha256": "792dcf9a0aa05283d771f7d881bf47ae98308358c99a0d1fe07f192f7a2322ee",
+        "source_sha256": "792dcf9a0aa05283d771f7d881bf47ae98308358c99a0d1fe07f192f7a2322ee"
+      },
+      {
+        "path": "stochastic/code/chapter05_martingales/stopping.py",
+        "bytes": 519,
+        "sha256": "6725b436812708cc80c39363107d10395ba2b940e71c6583688c3140a2ab7d87",
+        "source_sha256": "6725b436812708cc80c39363107d10395ba2b940e71c6583688c3140a2ab7d87"
+      },
+      {
+        "path": "stochastic/code/chapter06_mathematical_finance/README.md",
+        "bytes": 2396,
+        "sha256": "c10f6ab5778f6882235f150c50e3d805f21224e9767061685af0ecd2a320db35",
+        "source_sha256": "c10f6ab5778f6882235f150c50e3d805f21224e9767061685af0ecd2a320db35"
+      },
+      {
+        "path": "stochastic/code/chapter06_mathematical_finance/bs.c",
+        "bytes": 2742,
+        "sha256": "3c84c4a479f244847150055020f350e14be57292e1aeb94a80d825f2cd5e65da",
+        "source_sha256": "3c84c4a479f244847150055020f350e14be57292e1aeb94a80d825f2cd5e65da"
+      },
+      {
+        "path": "stochastic/code/chapter06_mathematical_finance/bs.py",
+        "bytes": 2700,
+        "sha256": "b00e2d2ecada89dc9e9b01263f9abcb009aed4aad658187cdda44f59fa4a82f9",
+        "source_sha256": "b00e2d2ecada89dc9e9b01263f9abcb009aed4aad658187cdda44f59fa4a82f9"
+      },
+      {
+        "path": "stochastic/code/chapter06_mathematical_finance/finance.c",
+        "bytes": 3646,
+        "sha256": "a43e075b3a0bb38bffe59ff3df67e4c784dd086673842d36bff82763200995ff",
+        "source_sha256": "a43e075b3a0bb38bffe59ff3df67e4c784dd086673842d36bff82763200995ff"
+      },
+      {
+        "path": "stochastic/code/chapter06_mathematical_finance/finance.py",
+        "bytes": 2612,
+        "sha256": "d788304d79d497a667838c4b50ed87310a3ec65986e2a26b5b821b885160d10f",
+        "source_sha256": "d788304d79d497a667838c4b50ed87310a3ec65986e2a26b5b821b885160d10f"
+      },
+      {
+        "path": "stochastic/code/chapter06_mathematical_finance/index.html",
+        "bytes": 4045,
+        "sha256": "b50d804db2465f33b29f5e516f9b69977c0ddd47c8c3fd352d461506385eb7fe"
+      },
+      {
+        "path": "stochastic/code/examples.zip",
+        "bytes": 21500,
+        "sha256": "70ea6087d114a0c37870f3b19066465e7463e1b472494e59f9d5ccc7b86fa261"
+      },
+      {
+        "path": "stochastic/code/index.html",
+        "bytes": 6087,
+        "sha256": "4fda3fc6dd5d2bd88b6ef3691f0aa690354bccd87e895a6a83c0d137ee56941f"
+      },
+      {
+        "path": "stochastic/code/programs.json",
+        "bytes": 2608,
+        "sha256": "694683da26051d8dff8cdfb55537b798b6a4d2a7b8be0afe5a43dbc10e64866d",
+        "source_sha256": "694683da26051d8dff8cdfb55537b798b6a4d2a7b8be0afe5a43dbc10e64866d"
+      },
+      {
+        "path": "stochastic/index.html",
+        "bytes": 339,
+        "sha256": "d3730d9480cff801c99a2b0549bc56acc7ce8cbdabb0ce311b0a9501dd2148db"
+      },
+      {
+        "path": "stochastic/notes/annotations_review.json",
+        "bytes": 169194,
+        "sha256": "b490480870a7af1fe05e10910190462e40b080567e4404ff47fc69c5417a90e1",
+        "source_sha256": "b490480870a7af1fe05e10910190462e40b080567e4404ff47fc69c5417a90e1"
+      },
+      {
+        "path": "stochastic/notes/appendix_a_probability_review.html",
+        "bytes": 235298,
+        "sha256": "73b23dfbf39ae7d5b640faac4b98359eaaea494df9f9755f439281df1cdc4f57",
+        "source_sha256": "e9f6b0e37de94beada21f646eaaef34bdd4aea8815b0b4eaa1b82f5190574072"
+      },
+      {
+        "path": "stochastic/notes/audit_fix_review.json",
+        "bytes": 253077,
+        "sha256": "79e959898322fe9547b2d75986ae221a218a274dd310caed1cde72a574b8209b",
+        "source_sha256": "79e959898322fe9547b2d75986ae221a218a274dd310caed1cde72a574b8209b"
+      },
+      {
+        "path": "stochastic/notes/book_overview.html",
+        "bytes": 51130,
+        "sha256": "752d8437dfc49ff92d7e42446cc5ebfcd22195108d4e827d775afca529c2735d",
+        "source_sha256": "ada864dd6a3702675b9506f4f99d1918c7b39ecb13b11b3404b4b2b767a418f0"
+      },
+      {
+        "path": "stochastic/notes/chapter01_explanation_review.json",
+        "bytes": 184641,
+        "sha256": "d5a6cf3b02ded119fbc837bf4824836ac91485373a401ab1d07e79c4b41df0f2",
+        "source_sha256": "d5a6cf3b02ded119fbc837bf4824836ac91485373a401ab1d07e79c4b41df0f2"
+      },
+      {
+        "path": "stochastic/notes/chapter01_markov_chains.html",
+        "bytes": 2125761,
+        "sha256": "9ed2fbecca30cf0251631ff51d2cc8e9d963119d7d9699ac1937e83627438b32",
+        "source_sha256": "43117cafd58f73e03af5c4626e88c32bbe42dbe0905660b1397b00a8a744ac0e"
+      },
+      {
+        "path": "stochastic/notes/chapter02_poisson_processes.html",
+        "bytes": 682302,
+        "sha256": "5f83f440628be9f8307a82aacf4d2d456167fbc42dd13d0b7c69c0a25661c59e",
+        "source_sha256": "bea17e948c3e109e2179a9b6c786eb71545c90c633f53721f70f7f71b5d5af0f"
+      },
+      {
+        "path": "stochastic/notes/chapter03_renewal_processes.html",
+        "bytes": 351783,
+        "sha256": "e0597121e5089d9a05bda86ce8dc7ac8920c84e47d8b36fddca33e41ed98f918",
+        "source_sha256": "780e29b3a4dde7f84314e1d53b66403585b008c361fd8f375546fce047d354ba"
+      },
+      {
+        "path": "stochastic/notes/chapter04_continuous_time_markov_chains.html",
+        "bytes": 851057,
+        "sha256": "6f77efef67463b34033f8a3f9bd5c804c0be399990c33ed1910dc7b0c262eaa9",
+        "source_sha256": "b566c5c4da6b6031c7c89c86afdbdec24182cfe9d905a5f53e62dfd1c74f6b1c"
+      },
+      {
+        "path": "stochastic/notes/chapter05_martingales.html",
+        "bytes": 410471,
+        "sha256": "ab5cba0d6c81f3041873e4068f211b2f37f38e03c3ca7d4cd9e03afd66109b4f",
+        "source_sha256": "402c2d0834d8ed2a2e0cff270f1e19d216baf3a98f7df89b32692be2fc45005c"
+      },
+      {
+        "path": "stochastic/notes/chapter06_mathematical_finance.html",
+        "bytes": 1187742,
+        "sha256": "918ea04e2ee18bba76347fc4eb5b125e45162ed8154633a741fbbc52edeab145",
+        "source_sha256": "abdb3e6c1c7bcee20a443671dac19190b9160dc40280db2ec926098ad5caaece"
+      },
+      {
+        "path": "stochastic/notes/code_deployment_review.json",
+        "bytes": 226859,
+        "sha256": "7c9b20ef6a2db5330d2d7227de632d97af9cd47e1a171227b5e78aa59f12b15b",
+        "source_sha256": "7c9b20ef6a2db5330d2d7227de632d97af9cd47e1a171227b5e78aa59f12b15b"
+      },
+      {
+        "path": "stochastic/notes/derivation_coverage.json",
+        "bytes": 356326,
+        "sha256": "e89ee6dfea1f7e7c9ed9ab403aa8ba436249c97ef382a0de64befcdc4166ec23",
+        "source_sha256": "e89ee6dfea1f7e7c9ed9ab403aa8ba436249c97ef382a0de64befcdc4166ec23"
+      },
+      {
+        "path": "stochastic/notes/derivation_review.json",
+        "bytes": 214305,
+        "sha256": "f9c363e296ca2871d57c4e8572243ba9a245fa385096b1335a66b11420d69902",
+        "source_sha256": "f9c363e296ca2871d57c4e8572243ba9a245fa385096b1335a66b11420d69902"
+      },
+      {
+        "path": "stochastic/notes/preface.html",
+        "bytes": 41066,
+        "sha256": "83e613af9bfaea9188d9de94c31027af171d3aeab705a1376eee7caafea9f12a",
+        "source_sha256": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba"
+      },
+      {
+        "path": "stochastic/notes/readability_review.json",
+        "bytes": 289562,
+        "sha256": "3679658de4729713dd28a80fd6541b32c5b08d438c990d980a4cc89a61232daf",
+        "source_sha256": "3679658de4729713dd28a80fd6541b32c5b08d438c990d980a4cc89a61232daf"
+      },
+      {
+        "path": "stochastic/notes/remaining_explanation_review.json",
+        "bytes": 830665,
+        "sha256": "7e418f9d21e4982279490a996e55802369b43b1907cdc2e2a19f4915748c0952",
+        "source_sha256": "7e418f9d21e4982279490a996e55802369b43b1907cdc2e2a19f4915748c0952"
+      },
+      {
+        "path": "stochastic/notes/review_manifest.html",
+        "bytes": 68051,
+        "sha256": "fb729d67f0f4d4adc053153c65fd936ce4ab06aea48e50b945db39a2da0e2890"
+      },
+      {
+        "path": "stochastic/notes/review_manifest.json",
+        "bytes": 473055,
+        "sha256": "20842974955d56d70a7e66674ab7e426a91971fcdba55be602f0aa2081a3df69",
+        "source_sha256": "20842974955d56d70a7e66674ab7e426a91971fcdba55be602f0aa2081a3df69"
+      },
+      {
+        "path": "stochastic/notes/source_manifest.html",
+        "bytes": 3800,
+        "sha256": "7817be9dc35061a5c87613eb18d77f9eadc757e801e04c8ddaa420a9e61d8def"
+      },
+      {
+        "path": "stochastic/notes/source_manifest.json",
+        "bytes": 36372,
+        "sha256": "f139c6dfedbf36be0b24bbae20b3f5af15482c4db068906a629bb6e29aafe23f",
+        "source_sha256": "f139c6dfedbf36be0b24bbae20b3f5af15482c4db068906a629bb6e29aafe23f"
+      },
+      {
+        "path": "stochastic/notes/statements_review.json",
+        "bytes": 617296,
+        "sha256": "89ab1cae6ee6de730e545b73974d8a3af6c3b1b05a6e861bca240a82ae1ffd40",
+        "source_sha256": "89ab1cae6ee6de730e545b73974d8a3af6c3b1b05a6e861bca240a82ae1ffd40"
+      },
+      {
+        "path": "stochastic/notes/validation.html",
+        "bytes": 3408,
+        "sha256": "83f9679d36b804eda3a0eb8c73b922ca0e3a2221fb006192d61a04c43fab1ed4"
+      },
+      {
+        "path": "stochastic/notes/validation.json",
+        "bytes": 243399,
+        "sha256": "7327cdf44d52d865a088eccbd6f8e1d1db9e8738b8ed806c4939951611c5f9f2",
+        "source_sha256": "7327cdf44d52d865a088eccbd6f8e1d1db9e8738b8ed806c4939951611c5f9f2"
+      },
+      {
+        "path": "styles.css",
+        "bytes": 6364,
+        "sha256": "953990060a3c2f8dd3bd4f752c3ff048920c8081030f334997ceee89a811bd37",
+        "source_sha256": "953990060a3c2f8dd3bd4f752c3ff048920c8081030f334997ceee89a811bd37"
+      },
+      {
+        "path": "visual-group-theory/code/README.md",
+        "bytes": 7054,
+        "sha256": "da295413d10016da5b85cd5377d3de4784b0cbe3be3c2f396fdf714b1996d9fd",
+        "source_sha256": "da295413d10016da5b85cd5377d3de4784b0cbe3be3c2f396fdf714b1996d9fd"
+      },
+      {
+        "path": "visual-group-theory/code/actions.c",
+        "bytes": 2297,
+        "sha256": "10c2675329943b96563a463ba692bc6665563c0e2bb92640b28b64086533e0dd",
+        "source_sha256": "10c2675329943b96563a463ba692bc6665563c0e2bb92640b28b64086533e0dd"
+      },
+      {
+        "path": "visual-group-theory/code/actions.py",
+        "bytes": 1806,
+        "sha256": "724f6b0d89fb58636a13f113d59fb0825ded258909894d8305e7a63fb05fd1ee",
+        "source_sha256": "724f6b0d89fb58636a13f113d59fb0825ded258909894d8305e7a63fb05fd1ee"
+      },
+      {
+        "path": "visual-group-theory/code/cayley.c",
+        "bytes": 2154,
+        "sha256": "14f19c8ee1c71b6c02bd2a33754cc2d49777adc95e2cea44748db29f47f5ac38",
+        "source_sha256": "14f19c8ee1c71b6c02bd2a33754cc2d49777adc95e2cea44748db29f47f5ac38"
+      },
+      {
+        "path": "visual-group-theory/code/cayley.py",
+        "bytes": 1506,
+        "sha256": "2bc73bf21150fb9a18d8f12a9dd4bc970dad1fee949eccac7dc5e1a9d35b5f92",
+        "source_sha256": "2bc73bf21150fb9a18d8f12a9dd4bc970dad1fee949eccac7dc5e1a9d35b5f92"
+      },
+      {
+        "path": "visual-group-theory/code/frieze.c",
+        "bytes": 1038,
+        "sha256": "65b730a677befd7286b1d8f2e2fe7f941a9a3ab1e2a5d5b844429adf44bf1c69",
+        "source_sha256": "65b730a677befd7286b1d8f2e2fe7f941a9a3ab1e2a5d5b844429adf44bf1c69"
+      },
+      {
+        "path": "visual-group-theory/code/frieze.py",
+        "bytes": 961,
+        "sha256": "67685c9b8c547482a9fe6d8defcf25e68917d7f735543e3dd9e5275835af59ac",
+        "source_sha256": "67685c9b8c547482a9fe6d8defcf25e68917d7f735543e3dd9e5275835af59ac"
+      },
+      {
+        "path": "visual-group-theory/code/galois.c",
+        "bytes": 3895,
+        "sha256": "097b40f610e8310fbfff0d0a9401fc0a4e1286cb1500b69fae22e20cb8602c6d",
+        "source_sha256": "097b40f610e8310fbfff0d0a9401fc0a4e1286cb1500b69fae22e20cb8602c6d"
+      },
+      {
+        "path": "visual-group-theory/code/galois.py",
+        "bytes": 2651,
+        "sha256": "db3428a0421fcde4851b9273be3ef1ef220cb345a7b5f60f4a6c81b0ed632f9f",
+        "source_sha256": "db3428a0421fcde4851b9273be3ef1ef220cb345a7b5f60f4a6c81b0ed632f9f"
+      },
+      {
+        "path": "visual-group-theory/code/homomorphisms.c",
+        "bytes": 1929,
+        "sha256": "78df22c361713b576cd30e1135edec8862dc61eb5f3eac31be0276c559be4675",
+        "source_sha256": "78df22c361713b576cd30e1135edec8862dc61eb5f3eac31be0276c559be4675"
+      },
+      {
+        "path": "visual-group-theory/code/homomorphisms.py",
+        "bytes": 1670,
+        "sha256": "8337403fad5073e1e145dd08643c9e059919377ca4a20c57400e717b899e2fe6",
+        "source_sha256": "8337403fad5073e1e145dd08643c9e059919377ca4a20c57400e717b899e2fe6"
+      },
+      {
+        "path": "visual-group-theory/code/index.html",
+        "bytes": 9147,
+        "sha256": "9459441db612552d18e4064be79ce259239650d9c69a2d791101df5a582a8c45"
+      },
+      {
+        "path": "visual-group-theory/code/permutations.c",
+        "bytes": 2716,
+        "sha256": "318fbba42e47dc9c624218c0369d6b40b11a6f433aebdaa4988f9644d11a226b",
+        "source_sha256": "318fbba42e47dc9c624218c0369d6b40b11a6f433aebdaa4988f9644d11a226b"
+      },
+      {
+        "path": "visual-group-theory/code/permutations.py",
+        "bytes": 2212,
+        "sha256": "53645d447c0e1025cf10eb847724392f4cfa56b62adc4693b0e24b9526333942",
+        "source_sha256": "53645d447c0e1025cf10eb847724392f4cfa56b62adc4693b0e24b9526333942"
+      },
+      {
+        "path": "visual-group-theory/code/products.c",
+        "bytes": 1880,
+        "sha256": "f8749bf28457a75f976a61716c3773efe4b8d26179d53cdd6fa236d9878e5530",
+        "source_sha256": "f8749bf28457a75f976a61716c3773efe4b8d26179d53cdd6fa236d9878e5530"
+      },
+      {
+        "path": "visual-group-theory/code/products.py",
+        "bytes": 1541,
+        "sha256": "b527fe29eda5c69881f33337d2d0af1094aa9f1febb56500cab0e23f1db2ce50",
+        "source_sha256": "b527fe29eda5c69881f33337d2d0af1094aa9f1febb56500cab0e23f1db2ce50"
+      },
+      {
+        "path": "visual-group-theory/code/programs.json",
+        "bytes": 6904,
+        "sha256": "a462e213e7d57891551da98b5cb0f45332c53544395e942e2f5473aeca234e68",
+        "source_sha256": "a462e213e7d57891551da98b5cb0f45332c53544395e942e2f5473aeca234e68"
+      },
+      {
+        "path": "visual-group-theory/code/subgroups.c",
+        "bytes": 2977,
+        "sha256": "d3fb1a068926c4d45284e3ede02effda238e56077f09c64a0b320421a0e73e28",
+        "source_sha256": "d3fb1a068926c4d45284e3ede02effda238e56077f09c64a0b320421a0e73e28"
+      },
+      {
+        "path": "visual-group-theory/code/subgroups.py",
+        "bytes": 1967,
+        "sha256": "4f7c1f4a8d7db29b4ead5ee9fc0c9f552d950f4ceee419e9f9e6d9c679fe4153",
+        "source_sha256": "4f7c1f4a8d7db29b4ead5ee9fc0c9f552d950f4ceee419e9f9e6d9c679fe4153"
+      },
+      {
+        "path": "visual-group-theory/code/sylow.c",
+        "bytes": 3935,
+        "sha256": "458b493ad7289ef3309129f5eeb151d661d3c99a9530321d3196da7e8be4aba6",
+        "source_sha256": "458b493ad7289ef3309129f5eeb151d661d3c99a9530321d3196da7e8be4aba6"
+      },
+      {
+        "path": "visual-group-theory/code/sylow.py",
+        "bytes": 2435,
+        "sha256": "a912c93325b8d76b9c358148481f12e25420cfe7993b49eff5237b240714942c",
+        "source_sha256": "a912c93325b8d76b9c358148481f12e25420cfe7993b49eff5237b240714942c"
+      },
+      {
+        "path": "visual-group-theory/code/tables.c",
+        "bytes": 3133,
+        "sha256": "94fc3d207985dbda78ca3f4e53b7300a5decac14d505d688d675aa5206b4eeb3",
+        "source_sha256": "94fc3d207985dbda78ca3f4e53b7300a5decac14d505d688d675aa5206b4eeb3"
+      },
+      {
+        "path": "visual-group-theory/code/tables.py",
+        "bytes": 2734,
+        "sha256": "9e5755dfdb90ccc2d04f28a27ab4c430893469730a15dc075c79aa7994b62d83",
+        "source_sha256": "9e5755dfdb90ccc2d04f28a27ab4c430893469730a15dc075c79aa7994b62d83"
+      },
+      {
+        "path": "visual-group-theory/index.html",
+        "bytes": 340,
+        "sha256": "1d56eab26987f5706d9ca03901be918b65c13b08120007b69566a6c64ed997f3"
+      },
+      {
+        "path": "visual-group-theory/notes/algebra_inputs.json",
+        "bytes": 9735,
+        "sha256": "0f9d1ca881822af32e01db131019fb91192f0570fa1b366946f5dd192cd770ce",
+        "source_sha256": "0f9d1ca881822af32e01db131019fb91192f0570fa1b366946f5dd192cd770ce"
+      },
+      {
+        "path": "visual-group-theory/notes/book_overview.html",
+        "bytes": 44094,
+        "sha256": "9bc46807459eb51f9ef5b4686ca634aa00137ed195619800e7a8f2ce45df44b3",
+        "source_sha256": "98d12bd2e0975d9ae66dc52fc3c8b88ebbf385c631e9c5d2aad6cf3943061087"
+      },
+      {
+        "path": "visual-group-theory/notes/chapter01_what_is_a_group.html",
+        "bytes": 81084,
+        "sha256": "44e2bcc2697ab16d64c23f6a14bf456210b45f2d6004eaaa84714aa335f16cb9",
+        "source_sha256": "fca1995748df45765ed8bc7db9fd802afae60f14fd1453528c30e7bd13eb85dd"
+      },
+      {
+        "path": "visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+        "bytes": 91495,
+        "sha256": "7fb19f7cb4eb7d96a510cba5de66f40b092fb3c945427587ede82df4f8abcc34",
+        "source_sha256": "b530c4851e487124e8709f28aed6f7cba2e8107f835226a43248fb6640488bf9"
+      },
+      {
+        "path": "visual-group-theory/notes/chapter03_why_study_groups.html",
+        "bytes": 134729,
+        "sha256": "c75ef74e7de12371e74dd68fe72c04c01053f7266ef3bbce623916ca01783e50",
+        "source_sha256": "ada4a24cd2135f653b4c13a7bad071aa39bfe9871d68fc0627b2374cfc5b0649"
+      },
+      {
+        "path": "visual-group-theory/notes/chapter04_algebra_at_last.html",
+        "bytes": 139531,
+        "sha256": "fa36495d37386aacd153c8c8046d87007eb8c8ea8931cdde3699b6004e5d233c",
+        "source_sha256": "2308f4dc55360d0d2d4a3eae8e130b3a6ede30eeffa90a542c679dca437fd49c"
+      },
+      {
+        "path": "visual-group-theory/notes/chapter05_five_families.html",
+        "bytes": 223597,
+        "sha256": "03e960e2b878b3e82caa6d128f17880bf65c2729a67d6eb310e102facc2c6ddb",
+        "source_sha256": "f59af821c82e8105f76177b6181075634e52b899a10bc7fedcd759fb8f0cd7a6"
+      },
+      {
+        "path": "visual-group-theory/notes/chapter06_subgroups.html",
+        "bytes": 191219,
+        "sha256": "13d32c3301389a6b97f8cc66c5e410e79108507f00ab3de7f7eda803d687b90f",
+        "source_sha256": "95258fd7d577dc5545c5897e06ba55887b55cd3ee3107d06fe31ad39b6c4126e"
+      },
+      {
+        "path": "visual-group-theory/notes/chapter07_products_and_quotients.html",
+        "bytes": 268205,
+        "sha256": "24c737073062cd3dbfe3a16bd9cfa28e52e822e0f98f80c7900a8823e57c79c7",
+        "source_sha256": "d54522249e6f0966a390e11c7eefcac7aa12374c461a5982687f90b10be7932d"
+      },
+      {
+        "path": "visual-group-theory/notes/chapter08_homomorphisms.html",
+        "bytes": 226244,
+        "sha256": "5ff884cdbcb017caa8caee13a4fcb1d8e38b3daa8f59e65922f79a4e8a04e4c0",
+        "source_sha256": "ba26310e193c8d19b3b82c7d555a8fd8f21f3471a8ac6b4e8435dfc0d04a49d7"
+      },
+      {
+        "path": "visual-group-theory/notes/chapter09_sylow_theory.html",
+        "bytes": 159375,
+        "sha256": "80bdff7e1a6ef2ae0084d4678940489bf63713a91d9d7f49d1eb36e1f2842f4f",
+        "source_sha256": "3f0b74e45aef6e3c3ddcaf58186d1ed64cee34e00e891ac55dc24b73ad2b8eb9"
+      },
+      {
+        "path": "visual-group-theory/notes/chapter10_galois_theory.html",
+        "bytes": 234159,
+        "sha256": "6682f3f6809ce2aef33a9350fd82763e56d4309ed5ba6c98271894ee865ebf6f",
+        "source_sha256": "49cfe452047b81f60bc8963869dc98995ef09a6d30358db29ca7a4015699d6bd"
+      },
+      {
+        "path": "visual-group-theory/notes/exercise_manifest.json",
+        "bytes": 122012,
+        "sha256": "804134c833922b16c8b2cbdd1657f140f90710d37e1a9f275bf85d3e549d6cbc",
+        "source_sha256": "804134c833922b16c8b2cbdd1657f140f90710d37e1a9f275bf85d3e549d6cbc"
+      },
+      {
+        "path": "visual-group-theory/notes/preface.html",
+        "bytes": 35859,
+        "sha256": "6f7b75564ef01c2a37bd801465d8cd018dcdfba3ad211c421b230cf1ef6badb7",
+        "source_sha256": "c989e34dc7a619916a581bb009c8af199b3febf0f7fa331501a2c198eca5dc8c"
+      },
+      {
+        "path": "visual-group-theory/notes/source_excerpts.json",
+        "bytes": 17428,
+        "sha256": "ae9a838e098ba9805b1eda5a2c835f512bd100f5ae86cc774aa1d59ec968bf5a",
+        "source_sha256": "ae9a838e098ba9805b1eda5a2c835f512bd100f5ae86cc774aa1d59ec968bf5a"
+      },
+      {
+        "path": "visual-group-theory/notes/source_inventory.json",
+        "bytes": 75676,
+        "sha256": "bac4bfb9e68bee85bba3c779ded0fb2e7372c79be69c7f04e58628e76e53b284",
+        "source_sha256": "bac4bfb9e68bee85bba3c779ded0fb2e7372c79be69c7f04e58628e76e53b284"
+      },
+      {
+        "path": "visual-group-theory/notes/source_manifest.json",
+        "bytes": 23799,
+        "sha256": "36d3e1d988194e724320d0a8e56c96afd09e91d8865e6e4010a24754109a344a",
+        "source_sha256": "36d3e1d988194e724320d0a8e56c96afd09e91d8865e6e4010a24754109a344a"
+      },
+      {
+        "path": "visual-group-theory/notes/structures_inputs.json",
+        "bytes": 10963,
+        "sha256": "c6c534adfd2414c9600a8f6747c958123badf4c182db51a676ce9df863606977",
+        "source_sha256": "c6c534adfd2414c9600a8f6747c958123badf4c182db51a676ce9df863606977"
+      },
+      {
+        "path": "visual-group-theory/notes/sylow_galois_inputs.json",
+        "bytes": 4866,
+        "sha256": "f1e2ee6baca55ebadb1f5f66eb3ff60fe7a2fe42a44eb74c43e7c102b520dba3",
+        "source_sha256": "f1e2ee6baca55ebadb1f5f66eb3ff60fe7a2fe42a44eb74c43e7c102b520dba3"
+      },
+      {
+        "path": "weiss/c/ch8.c",
+        "bytes": 1539,
+        "sha256": "c8556d8cedb1500c729bf57f6e0f68f53d08ba12716719390da2992f8b76e604",
+        "source_sha256": "c8556d8cedb1500c729bf57f6e0f68f53d08ba12716719390da2992f8b76e604"
+      },
+      {
+        "path": "weiss/index.html",
+        "bytes": 329,
+        "sha256": "f09d5ae237a8c83b79cfbd63f0197c3fc66c17de65a0b3be7b325f452ee9f79e"
+      },
+      {
+        "path": "weiss/notes/README.md",
+        "bytes": 12480,
+        "sha256": "dcdb18f9dd58e291767f57038a146bc1c457d2961078250d60fbfc3ddadc33bf",
+        "source_sha256": "dcdb18f9dd58e291767f57038a146bc1c457d2961078250d60fbfc3ddadc33bf"
+      },
+      {
+        "path": "weiss/notes/book_overview.html",
+        "bytes": 86899,
+        "sha256": "72b3af45e1899ce036597bb1385b09c5af4a1df4fb9bffb1c8846c6378d7d0f3",
+        "source_sha256": "d9affaad061d069ff234c7df10971336e66f35cb6e9f4e6166942fb61fcc4410"
+      },
+      {
+        "path": "weiss/notes/chapter01_introduction.html",
+        "bytes": 135641,
+        "sha256": "72fd132519d0be93329097bc0832115c37258895e35c627689dc6f81b1aba11f",
+        "source_sha256": "a05dcf3379c9b44e22744f7644e3d15dd2ff7c7c000c94201229a74f92f28371"
+      },
+      {
+        "path": "weiss/notes/chapter02_algorithm_analysis.html",
+        "bytes": 345861,
+        "sha256": "55a42da8576096fccf1ae2975ae82377a8ad79e0d1901539aea1af1e944a377c",
+        "source_sha256": "5a72251a6cb216a274fe6f6c97e2d5a7aca183a763b6a906f698307cf323cca6"
+      },
+      {
+        "path": "weiss/notes/chapter03_lists_stacks_queues.html",
+        "bytes": 322746,
+        "sha256": "f7097dc63e93cc9cb9bdab994cffd6048a038739e727193f8800a3e2f2d02ea7",
+        "source_sha256": "fe455ada73c21041bed4c58307edb003f3c9d33443e9db64bb2afeea507c3753"
+      },
+      {
+        "path": "weiss/notes/chapter04_trees.html",
+        "bytes": 566826,
+        "sha256": "fb3adebd482eb20bcd1d0da7cc8d209afeef24ae7bb065ab3662567b2367406e",
+        "source_sha256": "bfea8f1feb4c561e8e94238511cf201be32a089f3e5bb294072ab0445b11365b"
+      },
+      {
+        "path": "weiss/notes/chapter05_priority_queues.html",
+        "bytes": 524379,
+        "sha256": "8616ee29177ff6153eae0712e20a677c1af4ea27dab0d8803d044e0e1aa7fd84",
+        "source_sha256": "a71a9d3eb4c6db1d1d93a7277da1652c0addef2efb4dce5affbf1417811fe78c"
+      },
+      {
+        "path": "weiss/notes/chapter06_sorting.html",
+        "bytes": 1015431,
+        "sha256": "2c7392fa1d0df88857b7d70b59e975f10199b210e460124216469494c78b7c4b",
+        "source_sha256": "bc0b051868aee4cfeacf261b66dea30ea861231abc305c44617c0f9a2353339d"
+      },
+      {
+        "path": "weiss/notes/chapter07_hashing.html",
+        "bytes": 464682,
+        "sha256": "3635a7189eb568fe6171548585b21b4e3b1468218d6db1b58afe4cd3a3578d31",
+        "source_sha256": "3254d029ed34f588b5f518f2d71bc9a54fdbf5cec7725235893e58c0b814905c"
+      },
+      {
+        "path": "weiss/notes/chapter08_disjoint_sets.html",
+        "bytes": 310325,
+        "sha256": "d3713dafb98994ef0839450facfca287cc452968789a53468242b3082eea6876",
+        "source_sha256": "f857814b6a739938b0746170338a1b2edacb9bcd640625953ce2c870c64b8b59"
+      },
+      {
+        "path": "weiss/notes/chapter09_graph_algorithms.html",
+        "bytes": 321737,
+        "sha256": "c6e35e6ee195ddbe43b4da3cf09eabb2634548256937ade4e5fa3e99f97992e1",
+        "source_sha256": "50bb2ae925b92a9981d6a3484d35ab05c80b16165216b184fe9ca69655825b06"
+      },
+      {
+        "path": "weiss/notes/chapter10_algorithm_design.html",
+        "bytes": 915422,
+        "sha256": "1fd344674807d85d225a207ea7f7e569454249d44f67f8bb608a4c35335d9042",
+        "source_sha256": "38090454df465bd260d3dbc955ca09f06d7f7ac36bf376c946574c93a909e87d"
+      },
+      {
+        "path": "weiss/notes/chapter11_amortized_analysis.html",
+        "bytes": 376933,
+        "sha256": "de46e9e9c552317ae87b52de96534ddef6bf784be8a91f2c602fe8a887a06d0d",
+        "source_sha256": "125dfb580200b673a07590a09020e27381f354e1be65ccbdd403fee36725b355"
+      },
+      {
+        "path": "weiss/notes/chapter12_advanced_data_structures.html",
+        "bytes": 960926,
+        "sha256": "6309fb3070cacf65f259aaed38472a01a1303805beef056fc7c91abc6f8bc641",
+        "source_sha256": "ab22dcfc47bd830aadc0830500f858ee6c6596525b39f4750bc1c95a9c52bfef"
+      },
+      {
+        "path": "weiss/notes/reading_guide.html",
+        "bytes": 15156,
+        "sha256": "b7f40fad63d30718c6042f1b204dfc1fc3186b1a454e9ef690d8fcc98217f780"
+      },
+      {
+        "path": "weiss/notes/tools/check_notes.py",
+        "bytes": 50375,
+        "sha256": "f324d73b91637cacfbed72f5a9883a6320658d8d6cb34a17dd1582de0a8eacd5",
+        "source_sha256": "f324d73b91637cacfbed72f5a9883a6320658d8d6cb34a17dd1582de0a8eacd5"
+      }
+    ],
+    "https_checked": 298,
+    "entry_redirects": 15,
+    "book_direct_files": 42,
+    "book_redirects": 1
+  },
+  "https_evidence": "tmp/release-check/20261017T141653-3hjl8vek/https-verification.json",
+  "https_evidence_sha256": "662b76f5426c8f03b029678768cc8370609bd9e552cb8ce7fb270a7a99529680",
+  "temporary_nginx_stopped": true,
+  "preview_origin": "http://127.0.0.1:53536",
+  "preview_byte_comparison": {
+    "release": "20261017T141653",
+    "origin": "http://127.0.0.1:53536",
+    "matched_files": [
+      "visual-group-theory/code/README.md",
+      "visual-group-theory/code/actions.c",
+      "visual-group-theory/code/actions.py",
+      "visual-group-theory/code/cayley.c",
+      "visual-group-theory/code/cayley.py",
+      "visual-group-theory/code/frieze.c",
+      "visual-group-theory/code/frieze.py",
+      "visual-group-theory/code/galois.c",
+      "visual-group-theory/code/galois.py",
+      "visual-group-theory/code/homomorphisms.c",
+      "visual-group-theory/code/homomorphisms.py",
+      "visual-group-theory/code/index.html",
+      "visual-group-theory/code/permutations.c",
+      "visual-group-theory/code/permutations.py",
+      "visual-group-theory/code/products.c",
+      "visual-group-theory/code/products.py",
+      "visual-group-theory/code/programs.json",
+      "visual-group-theory/code/subgroups.c",
+      "visual-group-theory/code/subgroups.py",
+      "visual-group-theory/code/sylow.c",
+      "visual-group-theory/code/sylow.py",
+      "visual-group-theory/code/tables.c",
+      "visual-group-theory/code/tables.py",
+      "visual-group-theory/notes/algebra_inputs.json",
+      "visual-group-theory/notes/book_overview.html",
+      "visual-group-theory/notes/chapter01_what_is_a_group.html",
+      "visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "visual-group-theory/notes/chapter03_why_study_groups.html",
+      "visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "visual-group-theory/notes/chapter05_five_families.html",
+      "visual-group-theory/notes/chapter06_subgroups.html",
+      "visual-group-theory/notes/chapter07_products_and_quotients.html",
+      "visual-group-theory/notes/chapter08_homomorphisms.html",
+      "visual-group-theory/notes/chapter09_sylow_theory.html",
+      "visual-group-theory/notes/chapter10_galois_theory.html",
+      "visual-group-theory/notes/exercise_manifest.json",
+      "visual-group-theory/notes/preface.html",
+      "visual-group-theory/notes/source_excerpts.json",
+      "visual-group-theory/notes/source_inventory.json",
+      "visual-group-theory/notes/source_manifest.json",
+      "visual-group-theory/notes/structures_inputs.json",
+      "visual-group-theory/notes/sylow_galois_inputs.json"
+    ],
+    "verified_redirects": [
+      {
+        "from": "visual-group-theory/index.html",
+        "to": "/visual-group-theory/notes/book_overview.html"
+      }
+    ]
+  },
+  "presentation_comparison": "tmp/visual-group-theory-polish-20261017/presentation-comparison.json",
+  "deployment": "local acceptance only; no commit, push or public deployment",
+  "previous_record": "review/history/batch04-release.json"
+}

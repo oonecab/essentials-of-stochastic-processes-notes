@@ -1,0 +1,31 @@
+{
+  "programs": [
+    {
+      "id": "finite_spaces",
+      "page": "notes/chapter01_measurable_spaces.html",
+      "anchor": "finite-model",
+      "files": {
+        "c": "code/finite_spaces.c",
+        "python": "code/finite_spaces.py"
+      }
+    },
+    {
+      "id": "simple_approx",
+      "page": "notes/chapter01_measurable_spaces.html",
+      "anchor": "simple-model",
+      "files": {
+        "c": "code/simple_approx.c",
+        "python": "code/simple_approx.py"
+      }
+    },
+    {
+      "id": "finite_integrals",
+      "page": "notes/chapter03_integration.html",
+      "anchor": "integration-model",
+      "files": {
+        "c": "code/finite_integrals.c",
+        "python": "code/finite_integrals.py"
+      }
+    }
+  ]
+}

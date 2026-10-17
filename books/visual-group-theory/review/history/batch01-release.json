@@ -1,0 +1,185 @@
+{
+  "status": "completed_locally",
+  "verified_at": "2026-10-17T00:58:04.599270+08:00",
+  "release_id": "20261017T005309",
+  "package_sha256": "8ecc7bd866aaedaf24cbb1a38271e50816a359c502328e63c7f2e81b9c6ca740",
+  "manifest_sha256": "11bb61844bcc19a996efc2d08c5d87a487d60b0de130fde1cd6575b711cb43ea",
+  "counts": {
+    "files": 252,
+    "https_checked": 248,
+    "entry_redirects": 12
+  },
+  "https_evidence": "tmp/release-check/20261017T005309-4fxnuyk4/https-verification.json",
+  "https_evidence_sha256": "acf11eaf68cfec7acab82c8674b3d432551907ca6d9a4fb618e55c533f999f2c",
+  "preview_origin": "http://127.0.0.1:58668",
+  "preview_byte_comparison": {
+    "release": "20261017T005309",
+    "matched_files": [
+      "index.html",
+      "styles.css",
+      "visual-group-theory/code/README.md",
+      "visual-group-theory/code/actions.c",
+      "visual-group-theory/code/actions.py",
+      "visual-group-theory/code/index.html",
+      "visual-group-theory/code/programs.json",
+      "visual-group-theory/notes/book_overview.html",
+      "visual-group-theory/notes/chapter01_what_is_a_group.html",
+      "visual-group-theory/notes/exercise_manifest.json",
+      "visual-group-theory/notes/preface.html",
+      "visual-group-theory/notes/source_excerpts.json",
+      "visual-group-theory/notes/source_inventory.json",
+      "visual-group-theory/notes/source_manifest.json"
+    ]
+  },
+  "book_files": [
+    {
+      "path": "visual-group-theory/code/README.md",
+      "bytes": 2029,
+      "sha256": "05c1c43cd2c23472ccb0bca2bb73156a578ae52c4f623eccf5e95dfdf1e28d63",
+      "source_sha256": "05c1c43cd2c23472ccb0bca2bb73156a578ae52c4f623eccf5e95dfdf1e28d63"
+    },
+    {
+      "path": "visual-group-theory/code/actions.c",
+      "bytes": 2297,
+      "sha256": "10c2675329943b96563a463ba692bc6665563c0e2bb92640b28b64086533e0dd",
+      "source_sha256": "10c2675329943b96563a463ba692bc6665563c0e2bb92640b28b64086533e0dd"
+    },
+    {
+      "path": "visual-group-theory/code/actions.py",
+      "bytes": 1806,
+      "sha256": "724f6b0d89fb58636a13f113d59fb0825ded258909894d8305e7a63fb05fd1ee",
+      "source_sha256": "724f6b0d89fb58636a13f113d59fb0825ded258909894d8305e7a63fb05fd1ee"
+    },
+    {
+      "path": "visual-group-theory/code/index.html",
+      "bytes": 3240,
+      "sha256": "0e057b7e0fcea3f3e08f48c5637ff97172c48cab17fff2de89db63116830ac6c"
+    },
+    {
+      "path": "visual-group-theory/code/programs.json",
+      "bytes": 388,
+      "sha256": "6857e1397b537b689b62b7b455efef0b53b581f2bc181734f207919d3af06758",
+      "source_sha256": "6857e1397b537b689b62b7b455efef0b53b581f2bc181734f207919d3af06758"
+    },
+    {
+      "path": "visual-group-theory/index.html",
+      "bytes": 340,
+      "sha256": "1d56eab26987f5706d9ca03901be918b65c13b08120007b69566a6c64ed997f3"
+    },
+    {
+      "path": "visual-group-theory/notes/book_overview.html",
+      "bytes": 39525,
+      "sha256": "646a4e9c677ef3b998d2c234402ba2082067940e502ceaf71c7ed0c0efe66045",
+      "source_sha256": "680bd5864f1e4745739651e86e9cc872a3338e61d8050f9f3711672db1a4e82a"
+    },
+    {
+      "path": "visual-group-theory/notes/chapter01_what_is_a_group.html",
+      "bytes": 76450,
+      "sha256": "553aac37d2cb1518a3649dbde9a451e9c3b2b6bb3158e48b02c386be6269bae8",
+      "source_sha256": "927677bb534540ffd85ad30d55ad0de5834dc7b3b26f0cbe4dca69e43bd28dac"
+    },
+    {
+      "path": "visual-group-theory/notes/exercise_manifest.json",
+      "bytes": 5548,
+      "sha256": "b78917e925c2245754140ea33837b071baf4a2fcdb6a782e6666c99eb365efee",
+      "source_sha256": "b78917e925c2245754140ea33837b071baf4a2fcdb6a782e6666c99eb365efee"
+    },
+    {
+      "path": "visual-group-theory/notes/preface.html",
+      "bytes": 33168,
+      "sha256": "ba3a6d5387aa5f7877fac2ca9ab5d6480a502a015373c4749576846b83d4c830",
+      "source_sha256": "7d91c8c31be6bd3479083b670103899ba2e5e2d0722a999d9f8a019b86a241f8"
+    },
+    {
+      "path": "visual-group-theory/notes/source_excerpts.json",
+      "bytes": 2073,
+      "sha256": "a7395dafd3b3c80a94fe504feac431cbb0446fee979fe5bd29cd6eabc0c7a4b4",
+      "source_sha256": "a7395dafd3b3c80a94fe504feac431cbb0446fee979fe5bd29cd6eabc0c7a4b4"
+    },
+    {
+      "path": "visual-group-theory/notes/source_inventory.json",
+      "bytes": 74059,
+      "sha256": "be51a9b6c42f3e3e16d67bf952d3c666a7a6b3cf90807c3ff4a1471d72f80f9d",
+      "source_sha256": "be51a9b6c42f3e3e16d67bf952d3c666a7a6b3cf90807c3ff4a1471d72f80f9d"
+    },
+    {
+      "path": "visual-group-theory/notes/source_manifest.json",
+      "bytes": 14633,
+      "sha256": "979c6654806f30f4d7c886179be8f0b6cce4b978edaa662a0335992c5acc79b5",
+      "source_sha256": "979c6654806f30f4d7c886179be8f0b6cce4b978edaa662a0335992c5acc79b5"
+    }
+  ],
+  "browser": {
+    "name": "Ego Lite",
+    "version": "0.5.1.13",
+    "task_space": 14,
+    "baseline_release": "20261017T003924",
+    "final_recheck": {
+      "release": "20261017T005309",
+      "results": [
+        {
+          "width": 1440,
+          "scroll": 1425,
+          "status": "本批已完成本地验收：全书地图、序言导读、第 1 章及全部 14 题；第 2—10 章待整理。"
+        },
+        {
+          "width": 390,
+          "scroll": 375,
+          "status": "本批已完成本地验收：全书地图、序言导读、第 1 章及全部 14 题；第 2—10 章待整理。"
+        }
+      ]
+    },
+    "viewed_screenshot_sha256": {
+      "tmp/visual-group-theory-20261017/book_overview-1800.png": "eac641f13697c44f499d76440e7006b16f7b86a1c460174796511ab905eaccd4",
+      "tmp/visual-group-theory-20261017/book_overview-1440.png": "39a80cf0fc52c7e897b38122e833300dbe3d416e059570ed66587ac06d9fafcb",
+      "tmp/visual-group-theory-20261017/book_overview-1024.png": "30fe9d195e0c88e4be6b9092c85260d3ab7880e3a716e0dd507cedb36b6944f9",
+      "tmp/visual-group-theory-20261017/book_overview-390.png": "6964231de4fcd74e7aba4da31a2b0c68c0be71c1bbcb40f87a74982697403257",
+      "tmp/visual-group-theory-20261017/preface-1800.png": "5383ebb06909930b8acaff2952b2fb5a600c6c628ab41ade4c964ccb7f0b40b4",
+      "tmp/visual-group-theory-20261017/preface-1440.png": "ed1d8296078edcfa7fdf844900f2b901df1b64b76b4d7f4e1162e08c8e930691",
+      "tmp/visual-group-theory-20261017/preface-1024.png": "b1a46e2aaae55138aab11ba61be2476313ccccac2ea6a5d442802c4c58aac8b5",
+      "tmp/visual-group-theory-20261017/preface-390.png": "ca5793fa685d042d19555f72b7ffc341fb459f3e3ca5c4a96b61d934f42b3391",
+      "tmp/visual-group-theory-20261017/chapter01_what_is_a_group-1800.png": "600f1fca2b8a96ea8e9f9d0d5cbb2fea66207e3f1dca190b1bc45e3967f1a242",
+      "tmp/visual-group-theory-20261017/chapter01_what_is_a_group-1440.png": "a436fba2ef44eece3b6ed2af144da804cf7fa27a4409a68104638a44ef79e94c",
+      "tmp/visual-group-theory-20261017/chapter01_what_is_a_group-1024.png": "eae3723116f5a27f80c041dc80704db65605d1f08e538b5133f0b9cbd9110b5a",
+      "tmp/visual-group-theory-20261017/chapter01_what_is_a_group-390.png": "645ff27279109c045156d1d283582106a56eadf56b3e5d9d9f380741e3d9ac20",
+      "tmp/visual-group-theory-20261017/interactive-390.png": "0696f424fd75ecc851542ab051b763e59a25243320c2e2d41ca03fa8e848fcea",
+      "tmp/visual-group-theory-20261017/exercise14-390.png": "8e93d8cbf6b38b91356746c2dca83fac40ec139360a380847e616ecf3c1f928b",
+      "tmp/visual-group-theory-20261017/formula13-390.png": "2b941b3b8137492d1b2d4968a753d7d609f61074a1a684a91ffde2945dfd0b7e",
+      "tmp/visual-group-theory-20261017/no-js-390.png": "e991ccb3bd51073ab22ea34be722c9a8559e29bde4651fc50224babcf4096050",
+      "tmp/visual-group-theory-20261017/exercises-readback.png": "b937bf2f119aa3d981253e512085a9412d9cc65596a2855d8011cb99adbc3774",
+      "tmp/visual-group-theory-20261017/program-guide-1440.png": "5a9b67b49bb98dc7847492636c413d5818393b5d8646fad12f53c67bee6acc9c",
+      "tmp/visual-group-theory-20261017/exercise-4-viewport.png": "3f097bb0a1a082ff562ac269d1c4c401dc72e16c134737b47c3e98c3ab469bac",
+      "tmp/visual-group-theory-20261017/exercise-7-viewport.png": "f276d486da449c1232ecfd891cf86b1bd708cf8ece526e065040588b780c9857",
+      "tmp/visual-group-theory-20261017/exercise-9-viewport.png": "efbf190f4b44cd8c2b1657377f7e733550faf991c0624ff61c95dd7842eca9d0",
+      "tmp/visual-group-theory-20261017/exercise-11-viewport.png": "60545bdb3ee358345095182cdc467621c8ba61069b1c2287a7d5e305f6b590b4",
+      "tmp/visual-group-theory-20261017/exercise-13-viewport.png": "9d84e7a6e912722f62c4109f20bbffc6498fa8216156c6c8cfc29068560cdef2",
+      "tmp/visual-group-theory-20261017/code-0-1440.png": "2007aeb84348eef6707710c366670bbc9fe08c4cdd890b8db01c7010f27fa663",
+      "tmp/visual-group-theory-20261017/code-0-390.png": "1d4537d5720ae93b0cf7953b6ce863ea2283a7309d31564ca5d344af2d7eb4df",
+      "tmp/visual-group-theory-20261017/code-1-1440.png": "bf4a5127436bc68604f2fa8e199b357990bb72accfe221621fe86e24768f491f",
+      "tmp/visual-group-theory-20261017/code-1-390.png": "36d725f7acead51ef06b9494a197abac7ef0a8be4e2b1b50e35eca263a5c5c63",
+      "tmp/visual-group-theory-20261017/final-shelf-1440.png": "e3ff3ebc39a44eb5c8d68dbad251ee29e194ef037c8ab133f30b4bdc856465b6",
+      "tmp/visual-group-theory-20261017/final-shelf-390.png": "3d61fb2679cdfcb78c21aa81ebc8bd78bf56513f115c3a8f0b7dcec2610ae4ae",
+      "tmp/visual-group-theory-20261017/final-status-1440.png": "434cc39a9d039cb22b26f53f27957d7376120ab28a843ff8bbf0e9651c05e81c",
+      "tmp/visual-group-theory-20261017/final-status-390.png": "9dd463cc92c22d1332dcfae589374e3189779640dcf5c408aed46c58bb34042d"
+    },
+    "raw_reports": [
+      "tmp/visual-group-theory-20261017/browser-layout.json",
+      "tmp/visual-group-theory-20261017/browser-interactions.json",
+      "tmp/visual-group-theory-20261017/browser-no-js.json",
+      "tmp/visual-group-theory-20261017/browser-navigation.json",
+      "tmp/visual-group-theory-20261017/browser-final.json"
+    ],
+    "unaccepted_artifacts": "exercise-*-1440.png blank clip images are not reading evidence",
+    "tool_recoveries": [
+      "No-script high-level click wait timed out; native CDP DOM and input completed the test.",
+      "Shelf bottom limits its top to about 149px at 1440; replaced an invalid top<100 scroll assertion with actual visible bounds, then viewed the full card."
+    ]
+  },
+  "final_checks": {
+    "whole_repository_quick": "tmp/project-check/20261017T005309-2wgadcqb/report.json",
+    "book_quick": "tmp/project-check/20261017T005405-yi5vcxhv/report.json",
+    "whole_repository_full": "tmp/project-check/20261017T004018-ajn7b10b/report.json",
+    "stale_binding_rejected": "tmp/visual-group-theory-20261017/binding-regression.json"
+  },
+  "remaining": "Chapters 2–10 pending; local acceptance only."
+}

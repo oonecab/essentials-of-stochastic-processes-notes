@@ -1,0 +1,3079 @@
+{
+  "status": "completed_locally",
+  "reviewed_at": "2026-10-17T15:02:39.587314+08:00",
+  "browser": "Ego Lite 0.5.1.13 / Chromium",
+  "task": 21,
+  "scope": "31 display formulas in chapters 1–10; static fallback, full/partial copy and rendered reading",
+  "phone_boundary": "Chromium viewport simulation; no physical phone or actual screen-reader speech test",
+  "matrix_cases": 20,
+  "display_formula_views": 62,
+  "copy_cases": 218,
+  "page_matrix": [
+    {
+      "page": "chapter01_what_is_a_group.html",
+      "width": 1440,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "s²=e，s^(2m)=e，s^(2m+1)=s",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "s²=e，s^(2m)=e，s^(2m+1)=s",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 whole",
+          "handled": true,
+          "text": "3!=3×2×1=6",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 visible",
+          "handled": true,
+          "text": "3!=3×2×1=6",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 whole",
+          "handled": true,
+          "text": "g⁻¹(g(x))=x",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 visible",
+          "handled": true,
+          "text": "g⁻¹(g(x))=x",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 whole",
+          "handled": true,
+          "text": "(T_l∘T_k)(x)=(x+k)+l=T_(k+l)(x)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 visible",
+          "handled": true,
+          "text": "(T_l∘T_k)(x)=(x+k)+l=T_(k+l)(x)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "在硬币例子里，s、sss、sssss 都交换两枚硬币；ss、ssss 则都保持位置不变。记保持全部状态不变的动作为 e。每两次相邻的 s 可以抵消，所以一个长度为 k 的串，只需看 k 是奇数还是偶数。\n\ns²=e，s^(2m)=e，s^(2m+1)=s",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "s²=e，s^(2m)=e，s^(2m+1)=s",
+          "fallback": "s²=e，s^(2m)=e，s^(2m+1)=s",
+          "nativeSelection": "𝑠\n2\n=\n𝑒\n,\n𝑠\n2\n𝑚\n=\n𝑒\n,\n𝑠\n2\n𝑚\n+\n1\n=\n𝑠",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250.03125,
+            "width": 745,
+            "height": 38.1015625,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter01-1-1440.png"
+        },
+        {
+          "index": 2,
+          "label": "3!=3×2×1=6",
+          "fallback": "3!=3×2×1=6",
+          "nativeSelection": "3\n!\n=\n3\n×\n2\n×\n1\n=\n6",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 249.8203125,
+            "width": 745,
+            "height": 33.5546875,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter01-2-1440.png"
+        },
+        {
+          "index": 3,
+          "label": "g⁻¹(g(x))=x",
+          "fallback": "g⁻¹(g(x))=x",
+          "nativeSelection": "𝑔\n−\n1\n(\n𝑔\n(\n𝑥\n)\n)\n=\n𝑥",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 337,
+            "y": 249.7734375,
+            "width": 711,
+            "height": 42.5703125,
+            "client": 711,
+            "scroll": 711
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter01-3-1440.png"
+        },
+        {
+          "index": 4,
+          "label": "(T_l∘T_k)(x)=(x+k)+l=T_(k+l)(x)",
+          "fallback": "(T_l∘T_k)(x)=(x+k)+l=T_(k+l)(x)",
+          "nativeSelection": "(\n𝑇\n𝑙\n∘\n𝑇\n𝑘\n)\n(\n𝑥\n)\n=\n(\n𝑥\n+\n𝑘\n)\n+\n𝑙\n=\n𝑇\n𝑘\n+\n𝑙\n(\n𝑥\n)",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 337,
+            "y": 249.96875,
+            "width": 711,
+            "height": 42.5703125,
+            "client": 711,
+            "scroll": 711
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter01-4-1440.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter02_what_do_groups_look_like.html",
+      "width": 1440,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "h²=e，v²=e，hv=vh；任意字词 = hⁱvʲ，i,j∈{0,1}。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "h²=e，v²=e，hv=vh；任意字词 = hⁱvʲ，i,j∈{0,1}。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "补全后，e 的邻点为 h、v；h 的邻点为 e、hv；v 的邻点为 hv、e；hv 的邻点为 v、h。特别地，先 h 后 v 与先 v 后 h 都把 12/34 变成 43/21，因此 hv=vh；这里四角全都标记，比较整个排列足以确定刚体动作。\n\nh²=e，v²=e，hv=vh；任意字词 = hⁱvʲ，i,j∈{0,1}。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "h²=e，v²=e，hv=vh；任意字词 = hⁱvʲ，i,j∈{0,1}。",
+          "fallback": "h²=e，v²=e，hv=vh；任意字词 = hⁱvʲ，i,j∈{0,1}。",
+          "nativeSelection": "h²=e，v²=e，hv=vh；任意字词 = hⁱvʲ，i,j∈{0,1}。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250.015625,
+            "width": 745,
+            "height": 40.2734375,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter02-1-1440.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter03_why_study_groups.html",
+      "width": 1440,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "TᵤTᵥ=Tᵤ₊ᵥ，Tᵤ⁻¹=T₋ᵤ；u,v 是保持点阵的平移向量。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "TᵤTᵥ=Tᵤ₊ᵥ，Tᵤ⁻¹=T₋ᵤ；u,v 是保持点阵的平移向量。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 whole",
+          "handled": true,
+          "text": "h²=e，hgh=g⁻¹；每个动作可写成 gᵏ 或 gᵏh，k∈ℤ。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 visible",
+          "handled": true,
+          "text": "h²=e，hgh=g⁻¹；每个动作可写成 gᵏ 或 gᵏh，k∈ℤ。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 whole",
+          "handled": true,
+          "text": "(a+b√2)(c+d√2)=(ac+2bd)+(ad+bc)√2。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 visible",
+          "handled": true,
+          "text": "(a+b√2)(c+d√2)=(ac+2bd)+(ad+bc)√2。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "体心立方的示意单元包含八个顶角及中心点。把它在三个方向无限重复，得到理想周期点阵。设立方边长为 a，角点位于 aℤ³，体心点位于 a(ℤ³+(1/2,1/2,1/2))；平移 (a,0,0) 将两类点分别送到同类点，逆平移 (−a,0,0) 撤销它。\n\nTᵤTᵥ=Tᵤ₊ᵥ，Tᵤ⁻¹=T₋ᵤ；u,v 是保持点阵的平移向量。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "TᵤTᵥ=Tᵤ₊ᵥ，Tᵤ⁻¹=T₋ᵤ；u,v 是保持点阵的平移向量。",
+          "fallback": "TᵤTᵥ=Tᵤ₊ᵥ，Tᵤ⁻¹=T₋ᵤ；u,v 是保持点阵的平移向量。",
+          "nativeSelection": "TᵤTᵥ=Tᵤ₊ᵥ，Tᵤ⁻¹=T₋ᵤ；u,v 是保持点阵的平移向量。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250.140625,
+            "width": 745,
+            "height": 40.1796875,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter03-1-1440.png"
+        },
+        {
+          "index": 2,
+          "label": "h²=e，hgh=g⁻¹；每个动作可写成 gᵏ 或 gᵏh，k∈ℤ。",
+          "fallback": "h²=e，hgh=g⁻¹；每个动作可写成 gᵏ 或 gᵏh，k∈ℤ。",
+          "nativeSelection": "h²=e，hgh=g⁻¹；每个动作可写成 gᵏ 或 gᵏh，k∈ℤ。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250.0703125,
+            "width": 745,
+            "height": 40.234375,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter03-2-1440.png"
+        },
+        {
+          "index": 3,
+          "label": "(a+b√2)(c+d√2)=(ac+2bd)+(ad+bc)√2。",
+          "fallback": "(a+b√2)(c+d√2)=(ac+2bd)+(ad+bc)√2。",
+          "nativeSelection": "(a+b√2)(c+d√2)=(ac+2bd)+(ad+bc)√2。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250.171875,
+            "width": 745,
+            "height": 42.578125,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter03-3-1440.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter04_algebra_at_last.html",
+      "width": 1440,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "R³BR²B³ = R³B(R²)B³ = R³B⁴ = R；在 V₄ 中也等于 R⁵B⁴。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "R³BR²B³ = R³B(R²)B³ = R³B⁴ = R；在 V₄ 中也等于 R⁵B⁴。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 whole",
+          "handled": true,
+          "text": "(ab)c=a(bc)；括号改变分组，不改变 a、b、c 的顺序。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 visible",
+          "handled": true,
+          "text": "(ab)c=a(bc)；括号改变分组，不改变 a、b、c 的顺序。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 whole",
+          "handled": true,
+          "text": "(rⁱfʲ)(rᵏfˡ)=r^(i+(−1)^j k)f^(j+l)，r 的指数模 n，f 的指数模 2。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 visible",
+          "handled": true,
+          "text": "(rⁱfʲ)(rᵏfˡ)=r^(i+(−1)^j k)f^(j+l)，r 的指数模 n，f 的指数模 2。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 whole",
+          "handled": true,
+          "text": "bta²=y ⇒ b⁻¹(bta²)(a²)⁻¹=b⁻¹y(a²)⁻¹ ⇒ t=b²ya。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 visible",
+          "handled": true,
+          "text": "bta²=y ⇒ b⁻¹(bta²)(a²)⁻¹=b⁻¹y(a²)⁻¹ ⇒ t=b²ya。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "在 V₄ 中 R²=B²=e，RB=BR。原书的 R³BR²B³ 可先删去相邻的 R²：R³BR²B³=R³B⁴，再用 B⁴=e、R³=R，得到 R。另一条路线利用 RB=BR 交换中间的 R、B，合为 R⁵B⁴=R；后一条路线明确使用交换性，不能移植到任意群。\n\nR³BR²B³ = R³B(R²)B³ = R³B⁴ = R；在 V₄ 中也等于 R⁵B⁴。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "R³BR²B³ = R³B(R²)B³ = R³B⁴ = R；在 V₄ 中也等于 R⁵B⁴。",
+          "fallback": "R³BR²B³ = R³B(R²)B³ = R³B⁴ = R；在 V₄ 中也等于 R⁵B⁴。",
+          "nativeSelection": "R³BR²B³ = R³B(R²)B³ = R³B⁴ = R；在 V₄ 中也等于 R⁵B⁴。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 249.9765625,
+            "width": 745,
+            "height": 40.125,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter04-1-1440.png"
+        },
+        {
+          "index": 2,
+          "label": "(ab)c=a(bc)；括号改变分组，不改变 a、b、c 的顺序。",
+          "fallback": "(ab)c=a(bc)；括号改变分组，不改变 a、b、c 的顺序。",
+          "nativeSelection": "(ab)c=a(bc)；括号改变分组，不改变 a、b、c 的顺序。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 249.9921875,
+            "width": 745,
+            "height": 39.609375,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter04-2-1440.png"
+        },
+        {
+          "index": 3,
+          "label": "(rⁱfʲ)(rᵏfˡ)=r^(i+(−1)^j k)f^(j+l)，r 的指数模 n，f 的指数模 2。",
+          "fallback": "(rⁱfʲ)(rᵏfˡ)=r^(i+(−1)^j k)f^(j+l)，r 的指数模 n，f 的指数模 2。",
+          "nativeSelection": "(\n𝑟\n𝑖\n𝑓\n𝑗\n)\n(\n𝑟\n𝑘\n𝑓\n𝑙\n)\n=\n𝑟\n𝑖\n+\n(\n−\n1\n)\n𝑗\n𝑘\n𝑓\n𝑗\n+\n𝑙\n，r 的指数模 n，f 的指数模 2。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 337,
+            "y": 249.7578125,
+            "width": 711,
+            "height": 51.3828125,
+            "client": 711,
+            "scroll": 711
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter04-3-1440.png"
+        },
+        {
+          "index": 4,
+          "label": "bta²=y ⇒ b⁻¹(bta²)(a²)⁻¹=b⁻¹y(a²)⁻¹ ⇒ t=b²ya。",
+          "fallback": "bta²=y ⇒ b⁻¹(bta²)(a²)⁻¹=b⁻¹y(a²)⁻¹ ⇒ t=b²ya。",
+          "nativeSelection": "bta²=y ⇒ b⁻¹(bta²)(a²)⁻¹=b⁻¹y(a²)⁻¹ ⇒ t=b²ya。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 337,
+            "y": 250.0390625,
+            "width": 711,
+            "height": 38.65625,
+            "client": 711,
+            "scroll": 711
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter04-4-1440.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter05_five_families.html",
+      "width": 1440,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "(i+j) mod n；逆元 −i mod n；单位元 0。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "(i+j) mod n；逆元 −i mod n；单位元 0。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 whole",
+          "handled": true,
+          "text": "Cₙ 中 |a| = n/gcd(n,a)，因为 ka≡0 (mod n) ⇔ n/gcd(n,a) 整除 k。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 visible",
+          "handled": true,
+          "text": "Cₙ 中 |a| = n/gcd(n,a)，因为 ka≡0 (mod n) ⇔ n/gcd(n,a) 整除 k。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 whole",
+          "handled": true,
+          "text": "非平凡循环数 = (p²−1)/(p−1) = p+1。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 visible",
+          "handled": true,
+          "text": "非平凡循环数 = (p²−1)/(p−1) = p+1。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 whole",
+          "handled": true,
+          "text": "rⁿ=e，f²=e，fr=r⁻¹f。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 visible",
+          "handled": true,
+          "text": "rⁿ=e，f²=e，fr=r⁻¹f。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 5 whole",
+          "handled": true,
+          "text": "(rⁱfʲ)(rᵏfˡ)=r^(i+(−1)^j k) f^(j+l)；(i,j)(k,l)=(i+(−1)^j k mod n, j+l mod 2)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 5 visible",
+          "handled": true,
+          "text": "(rⁱfʲ)(rᵏfˡ)=r^(i+(−1)^j k) f^(j+l)；(i,j)(k,l)=(i+(−1)^j k mod n, j+l mod 2)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 5 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 6 whole",
+          "handled": true,
+          "text": "sgn(pq)=sgn(p)sgn(q)，Aₙ={p∈Sₙ:sgn(p)=+1}。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 6 visible",
+          "handled": true,
+          "text": "sgn(pq)=sgn(p)sgn(q)，Aₙ={p∈Sₙ:sgn(p)=+1}。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 6 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 7 whole",
+          "handled": true,
+          "text": "G → Sym(G)，g ↦ R_g；R_(gh)(x)=x(gh)=(xg)h。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 7 visible",
+          "handled": true,
+          "text": "G → Sym(G)，g ↦ R_g；R_(gh)(x)=x(gh)=(xg)h。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 7 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "C₅ 的模 5 加法表\n·\t0\t1\t2\t3\t4\n0\t0\t1\t2\t3\t4\n1\t1\t2\t3\t4\t0\n2\t2\t3\t4\t0\t1\n3\t3\t4\t0\t1\t2\n4\t4\t0\t1\t2\t3\n(i+j) mod n；逆元 −i mod n；单位元 0。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "(i+j) mod n；逆元 −i mod n；单位元 0。",
+          "fallback": "(i+j) mod n；逆元 −i mod n；单位元 0。",
+          "nativeSelection": "(i+j) mod n；逆元 −i mod n；单位元 0。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 249.765625,
+            "width": 745,
+            "height": 40.234375,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter05-1-1440.png"
+        },
+        {
+          "index": 2,
+          "label": "Cₙ 中 |a| = n/gcd(n,a)，因为 ka≡0 (mod n) ⇔ n/gcd(n,a) 整除 k。",
+          "fallback": "Cₙ 中 |a| = n/gcd(n,a)，因为 ka≡0 (mod n) ⇔ n/gcd(n,a) 整除 k。",
+          "nativeSelection": "Cₙ 中 |a| = n/gcd(n,a)，因为 ka≡0 (mod n) ⇔ n/gcd(n,a) 整除 k。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250.0390625,
+            "width": 745,
+            "height": 40.1953125,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter05-2-1440.png"
+        },
+        {
+          "index": 3,
+          "label": "非平凡循环数 = (p²−1)/(p−1) = p+1。",
+          "fallback": "非平凡循环数 = (p²−1)/(p−1) = p+1。",
+          "nativeSelection": "非平凡循环数 = (p²−1)/(p−1) = p+1。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 249.7890625,
+            "width": 745,
+            "height": 39.8671875,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter05-3-1440.png"
+        },
+        {
+          "index": 4,
+          "label": "rⁿ=e，f²=e，fr=r⁻¹f。",
+          "fallback": "rⁿ=e，f²=e，fr=r⁻¹f。",
+          "nativeSelection": "rⁿ=e，f²=e，fr=r⁻¹f。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250.0546875,
+            "width": 745,
+            "height": 37.296875,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter05-4-1440.png"
+        },
+        {
+          "index": 5,
+          "label": "(rⁱfʲ)(rᵏfˡ)=r^(i+(−1)^j k) f^(j+l)；(i,j)(k,l)=(i+(−1)^j k mod n, j+l mod 2)。",
+          "fallback": "(rⁱfʲ)(rᵏfˡ)=r^(i+(−1)^j k) f^(j+l)；(i,j)(k,l)=(i+(−1)^j k mod n, j+l mod 2)。",
+          "nativeSelection": "(rⁱfʲ)(rᵏfˡ)=rⁱ⁺⁽⁻¹⁾ʲᵏ fʲ⁺ˡ；(i,j)(k,l)=(i+(−1)ʲk mod n, j+l mod 2)。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250,
+            "width": 745,
+            "height": 40.359375,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter05-5-1440.png"
+        },
+        {
+          "index": 6,
+          "label": "sgn(pq)=sgn(p)sgn(q)，Aₙ={p∈Sₙ:sgn(p)=+1}。",
+          "fallback": "sgn(pq)=sgn(p)sgn(q)，Aₙ={p∈Sₙ:sgn(p)=+1}。",
+          "nativeSelection": "sgn(pq)=sgn(p)sgn(q)，Aₙ={p∈Sₙ:sgn(p)=+1}。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250,
+            "width": 745,
+            "height": 38.6171875,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter05-6-1440.png"
+        },
+        {
+          "index": 7,
+          "label": "G → Sym(G)，g ↦ R_g；R_(gh)(x)=x(gh)=(xg)h。",
+          "fallback": "G → Sym(G)，g ↦ R_g；R_(gh)(x)=x(gh)=(xg)h。",
+          "nativeSelection": "G → Sym(G)，g ↦ Rg；Rgh(x)=x(gh)=(xg)h。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250.0390625,
+            "width": 745,
+            "height": 38.6171875,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter05-7-1440.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter06_subgroups.html",
+      "width": 1440,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "[G:H]=|G|/|H|",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "[G:H]=|G|/|H|",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "Definition 6.9\n\nIf H < G then the index of H in G, written [G : H], is how many times |H| goes into |G|.\n\n中文陈述：指数 [G:H] 是 H 的左陪集数；有限时等于 |G|/|H|。\n\n来源：印刷 107 / PDF 122\n\n[G:H]=|G|/|H|",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "[G:H]=|G|/|H|",
+          "fallback": "[G:H]=|G|/|H|",
+          "nativeSelection": "[\n𝐺\n:\n𝐻\n]\n=\n|\n𝐺\n|\n|\n𝐻\n|",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250,
+            "width": 745,
+            "height": 64.578125,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter06-1-1440.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter07_products_and_quotients.html",
+      "width": 1440,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "(a,b)(a′,b′)=(aa′,bb′)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "(a,b)(a′,b′)=(aa′,bb′)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 whole",
+          "handled": true,
+          "text": "(a,e)(e,b)=(a,b)=(e,b)(a,e)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 visible",
+          "handled": true,
+          "text": "(a,e)(e,b)=(a,b)=(e,b)(a,e)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 whole",
+          "handled": true,
+          "text": "H ≤ N_G(H) ≤ G；若 H◁K≤G，则 K≤N_G(H)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 visible",
+          "handled": true,
+          "text": "H ≤ N_G(H) ≤ G；若 H◁K≤G，则 K≤N_G(H)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 whole",
+          "handled": true,
+          "text": "A₄ 的类方程：1+3+4+4=12。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 visible",
+          "handled": true,
+          "text": "A₄ 的类方程：1+3+4+4=12。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "Definition 7.3\n\n原文节选（仅步骤 1；三步构造见下文）\n\nBegin with a multiplication table for A.\n\n中文陈述：从 A 的表开始，把每格放大为一张 B 表；格子的两个标签组成有序对。\n\n来源：印刷 126 / PDF 141\n\n(a,b)(a′,b′)=(aa′,bb′)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "(a,b)(a′,b′)=(aa′,bb′)。",
+          "fallback": "(a,b)(a′,b′)=(aa′,bb′)。",
+          "nativeSelection": "(a,b)(a′,b′)=(aa′,bb′)。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250.046875,
+            "width": 745,
+            "height": 37.8984375,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter07-1-1440.png"
+        },
+        {
+          "index": 2,
+          "label": "(a,e)(e,b)=(a,b)=(e,b)(a,e)。",
+          "fallback": "(a,e)(e,b)=(a,b)=(e,b)(a,e)。",
+          "nativeSelection": "(a,e)(e,b)=(a,b)=(e,b)(a,e)。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250.1328125,
+            "width": 745,
+            "height": 37.8984375,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter07-2-1440.png"
+        },
+        {
+          "index": 3,
+          "label": "H ≤ N_G(H) ≤ G；若 H◁K≤G，则 K≤N_G(H)。",
+          "fallback": "H ≤ N_G(H) ≤ G；若 H◁K≤G，则 K≤N_G(H)。",
+          "nativeSelection": "H ≤ N_G(H) ≤ G；若 H◁K≤G，则 K≤N_G(H)。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250.2265625,
+            "width": 745,
+            "height": 41.0703125,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter07-3-1440.png"
+        },
+        {
+          "index": 4,
+          "label": "A₄ 的类方程：1+3+4+4=12。",
+          "fallback": "A₄ 的类方程：1+3+4+4=12。",
+          "nativeSelection": "A₄ 的类方程：1+3+4+4=12。",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 249.78125,
+            "width": 745,
+            "height": 40.0703125,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter07-4-1440.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter08_homomorphisms.html",
+      "width": 1440,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "G ──φ──→ H；Ker φ = {g∈G : φ(g)=e_H}；Im φ = {φ(g) : g∈G}",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "G ──φ──→ H；Ker φ = {g∈G : φ(g)=e_H}；Im φ = {φ(g) : g∈G}",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 whole",
+          "handled": true,
+          "text": "a ≡ b (mod n) ⇔ a−b ∈ nZ ⇔ n | (a−b)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 visible",
+          "handled": true,
+          "text": "a ≡ b (mod n) ⇔ a−b ∈ nZ ⇔ n | (a−b)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 whole",
+          "handled": true,
+          "text": "(g,h)(g′,h′) = (g α_h(g′), hh′)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 visible",
+          "handled": true,
+          "text": "(g,h)(g′,h′) = (g α_h(g′), hh′)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 whole",
+          "handled": true,
+          "text": "((0,1)(0,2))(1,0) = (0,0)(1,0) = (1,0)；(0,1)((0,2)(1,0)) = (0,1)(1,2) = (2,0)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 visible",
+          "handled": true,
+          "text": "((0,1)(0,2))(1,0) = (0,0)(1,0) = (1,0)；(0,1)((0,2)(1,0)) = (0,1)(1,2) = (2,0)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "上一章的子群是“在群内找出一份完整结构”，商群是“把同类元素压成一点”。本章用一个公式把它们统一：φ(ab)=φ(a)φ(b)。这个等式允许压缩，却要求每一次乘法在压缩前后给出同一个结果。读图时要同时追踪节点和路径：一个生成元的箭头可以变成多步路径，也可以缩成自环。\n\nG ──φ──→ H；Ker φ = {g∈G : φ(g)=e_H}；Im φ = {φ(g) : g∈G}",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "G ──φ──→ H；Ker φ = {g∈G : φ(g)=e_H}；Im φ = {φ(g) : g∈G}",
+          "fallback": "G ──φ──→ H；Ker φ = {g∈G : φ(g)=e_H}；Im φ = {φ(g) : g∈G}",
+          "nativeSelection": "G ──φ──→ H；Ker φ = {g∈G : φ(g)=e_H}；Im φ = {φ(g) : g∈G}",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250.203125,
+            "width": 745,
+            "height": 38.6171875,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter08-1-1440.png"
+        },
+        {
+          "index": 2,
+          "label": "a ≡ b (mod n) ⇔ a−b ∈ nZ ⇔ n | (a−b)",
+          "fallback": "a ≡ b (mod n) ⇔ a−b ∈ nZ ⇔ n | (a−b)",
+          "nativeSelection": "a ≡ b (mod n) ⇔ a−b ∈ nZ ⇔ n | (a−b)",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250.1171875,
+            "width": 745,
+            "height": 38.34375,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter08-2-1440.png"
+        },
+        {
+          "index": 3,
+          "label": "(g,h)(g′,h′) = (g α_h(g′), hh′)",
+          "fallback": "(g,h)(g′,h′) = (g α_h(g′), hh′)",
+          "nativeSelection": "(g,h)(g′,h′) = (g α_h(g′), hh′)",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250.1953125,
+            "width": 745,
+            "height": 38.6171875,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter08-3-1440.png"
+        },
+        {
+          "index": 4,
+          "label": "((0,1)(0,2))(1,0) = (0,0)(1,0) = (1,0)；(0,1)((0,2)(1,0)) = (0,1)(1,2) = (2,0)",
+          "fallback": "((0,1)(0,2))(1,0) = (0,0)(1,0) = (1,0)；(0,1)((0,2)(1,0)) = (0,1)(1,2) = (2,0)",
+          "nativeSelection": "((0,1)(0,2))(1,0) = (0,0)(1,0) = (1,0)；(0,1)((0,2)(1,0)) = (0,1)(1,2) = (2,0)",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 337,
+            "y": 249.8828125,
+            "width": 711,
+            "height": 37.8984375,
+            "client": 711,
+            "scroll": 711
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter08-4-1440.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter09_sylow_theory.html",
+      "width": 1440,
+      "height": 900,
+      "copies": [
+        {
+          "name": "whole formula",
+          "handled": true,
+          "text": "nₚ∣|G|",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "visible formula characters",
+          "handled": true,
+          "text": "nₚ∣|G|",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "whole paragraph",
+          "handled": true,
+          "text": "中文陈述：Sylow p 子群的个数 nₚ 满足 nₚ∣|G| 且 nₚ≡1 (mod p)。事实上 nₚ=[G:N_G(P)]，因 P⊆N_G(P)，还有更强的 nₚ∣m，其中 |G|=pⁿm、p∤m。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "two paragraphs",
+          "handled": true,
+          "text": "中文陈述：Sylow p 子群的个数 nₚ 满足 nₚ∣|G| 且 nₚ≡1 (mod p)。事实上 nₚ=[G:N_G(P)]，因 P⊆N_G(P)，还有更强的 nₚ∣m，其中 |G|=pⁿm、p∤m。\n\n来源：印刷 215 / PDF 230",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "partial formula",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "ordinary text",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "X={(g₁,…,gₚ):g₁⋯gₚ=e}，|X|=|G|^(p−1)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "X={(g₁,…,gₚ):g₁⋯gₚ=e}，|X|=|G|^(p−1)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "要找到 g≠e 且 gᵖ=e，先把问题放大：令 X={(g₁,…,gₚ):g₁⋯gₚ=e}。前 p−1 项可任取，最后一项必须是前面乘积的逆元，因此 |X|=|G|ᵖ⁻¹。让 Cₚ 循环右移坐标：T(g₁,…,gₚ)=(gₚ,g₁,…,gₚ₋₁)。它保留 X，因为 gₚg₁⋯gₚ₋₁=gₚ(g₁⋯gₚ)gₚ⁻¹=e；左移是它的逆，Tᵖ=id。\n\nX={(g₁,…,gₚ):g₁⋯gₚ=e}，|X|=|G|^(p−1)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "X={(g₁,…,gₚ):g₁⋯gₚ=e}，|X|=|G|^(p−1)",
+          "fallback": "X={(g₁,…,gₚ):g₁⋯gₚ=e}，|X|=|G|^(p−1)",
+          "nativeSelection": "𝑋\n=\n{\n(\n𝑔\n1\n,\n…\n,\n𝑔\n𝑝\n)\n:\n𝑔\n1\n⋯\n𝑔\n𝑝\n=\n𝑒\n}\n,\n|\n𝑋\n|\n=\n|\n𝐺\n|\n𝑝\n−\n1",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250.171875,
+            "width": 745,
+            "height": 51.3984375,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter09-1-1440.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter10_galois_theory.html",
+      "width": 1440,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "x=(−b±√(b²−4ac))/(2a)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "x=(−b±√(b²−4ac))/(2a)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 whole",
+          "handled": true,
+          "text": "|A₅| = 1 + 12 + 12 + 20 + 15 = 60",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 visible",
+          "handled": true,
+          "text": "|A₅| = 1 + 12 + 12 + 20 + 15 = 60",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "二次公式可由配方得到：ax²+bx+c=0（a≠0），乘 4a，得 (2ax+b)²=b²−4ac；开平方并解出 x，得到下面的公式。三次与四次也有根式公式，五次则没有能处理所有输入的统一根式公式——这是 Key Points 10.3、10.4 的问题与答案。\n\nx=(−b±√(b²−4ac))/(2a)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "x=(−b±√(b²−4ac))/(2a)",
+          "fallback": "x=(−b±√(b²−4ac))/(2a)",
+          "nativeSelection": "𝑥\n=\n−\n𝑏\n±\n𝑏\n2\n−\n4\n𝑎\n𝑐\n2\n𝑎",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 249.921875,
+            "width": 745,
+            "height": 65.6640625,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter10-1-1440.png"
+        },
+        {
+          "index": 2,
+          "label": "|A₅| = 1 + 12 + 12 + 20 + 15 = 60",
+          "fallback": "|A₅| = 1 + 12 + 12 + 20 + 15 = 60",
+          "nativeSelection": "|A₅| = 1 + 12 + 12 + 20 + 15 = 60",
+          "viewport": 1440,
+          "documentWidth": 1425,
+          "equation": {
+            "x": 320,
+            "y": 250.234375,
+            "width": 745,
+            "height": 38.1015625,
+            "client": 745,
+            "scroll": 745
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter10-2-1440.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter01_what_is_a_group.html",
+      "width": 390,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "s²=e，s^(2m)=e，s^(2m+1)=s",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "s²=e，s^(2m)=e，s^(2m+1)=s",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 whole",
+          "handled": true,
+          "text": "3!=3×2×1=6",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 visible",
+          "handled": true,
+          "text": "3!=3×2×1=6",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 whole",
+          "handled": true,
+          "text": "g⁻¹(g(x))=x",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 visible",
+          "handled": true,
+          "text": "g⁻¹(g(x))=x",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 whole",
+          "handled": true,
+          "text": "(T_l∘T_k)(x)=(x+k)+l=T_(k+l)(x)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 visible",
+          "handled": true,
+          "text": "(T_l∘T_k)(x)=(x+k)+l=T_(k+l)(x)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "在硬币例子里，s、sss、sssss 都交换两枚硬币；ss、ssss 则都保持位置不变。记保持全部状态不变的动作为 e。每两次相邻的 s 可以抵消，所以一个长度为 k 的串，只需看 k 是奇数还是偶数。\n\ns²=e，s^(2m)=e，s^(2m+1)=s",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "s²=e，s^(2m)=e，s^(2m+1)=s",
+          "fallback": "s²=e，s^(2m)=e，s^(2m+1)=s",
+          "nativeSelection": "𝑠\n2\n=\n𝑒\n,\n𝑠\n2\n𝑚\n=\n𝑒\n,\n𝑠\n2\n𝑚\n+\n1\n=\n𝑠",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 250.1328125,
+            "width": 339,
+            "height": 38.1015625,
+            "client": 339,
+            "scroll": 339
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter01-1-390.png"
+        },
+        {
+          "index": 2,
+          "label": "3!=3×2×1=6",
+          "fallback": "3!=3×2×1=6",
+          "nativeSelection": "3\n!\n=\n3\n×\n2\n×\n1\n=\n6",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 249.984375,
+            "width": 339,
+            "height": 33.5546875,
+            "client": 339,
+            "scroll": 339
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter01-2-390.png"
+        },
+        {
+          "index": 3,
+          "label": "g⁻¹(g(x))=x",
+          "fallback": "g⁻¹(g(x))=x",
+          "nativeSelection": "𝑔\n−\n1\n(\n𝑔\n(\n𝑥\n)\n)\n=\n𝑥",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 35,
+            "y": 250.0703125,
+            "width": 305,
+            "height": 42.5703125,
+            "client": 305,
+            "scroll": 305
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter01-3-390.png"
+        },
+        {
+          "index": 4,
+          "label": "(T_l∘T_k)(x)=(x+k)+l=T_(k+l)(x)",
+          "fallback": "(T_l∘T_k)(x)=(x+k)+l=T_(k+l)(x)",
+          "nativeSelection": "(\n𝑇\n𝑙\n∘\n𝑇\n𝑘\n)\n(\n𝑥\n)\n=\n(\n𝑥\n+\n𝑘\n)\n+\n𝑙\n=\n𝑇\n𝑘\n+\n𝑙\n(\n𝑥\n)",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 35,
+            "y": 250,
+            "width": 305,
+            "height": 57.5703125,
+            "client": 305,
+            "scroll": 321
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter01-4-390.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter02_what_do_groups_look_like.html",
+      "width": 390,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "h²=e，v²=e，hv=vh；任意字词 = hⁱvʲ，i,j∈{0,1}。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "h²=e，v²=e，hv=vh；任意字词 = hⁱvʲ，i,j∈{0,1}。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "补全后，e 的邻点为 h、v；h 的邻点为 e、hv；v 的邻点为 hv、e；hv 的邻点为 v、h。特别地，先 h 后 v 与先 v 后 h 都把 12/34 变成 43/21，因此 hv=vh；这里四角全都标记，比较整个排列足以确定刚体动作。\n\nh²=e，v²=e，hv=vh；任意字词 = hⁱvʲ，i,j∈{0,1}。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "h²=e，v²=e，hv=vh；任意字词 = hⁱvʲ，i,j∈{0,1}。",
+          "fallback": "h²=e，v²=e，hv=vh；任意字词 = hⁱvʲ，i,j∈{0,1}。",
+          "nativeSelection": "h²=e，v²=e，hv=vh；任意字词 = hⁱvʲ，i,j∈{0,1}。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 249.9140625,
+            "width": 339,
+            "height": 55.2734375,
+            "client": 339,
+            "scroll": 412
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter02-1-390.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter03_why_study_groups.html",
+      "width": 390,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "TᵤTᵥ=Tᵤ₊ᵥ，Tᵤ⁻¹=T₋ᵤ；u,v 是保持点阵的平移向量。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "TᵤTᵥ=Tᵤ₊ᵥ，Tᵤ⁻¹=T₋ᵤ；u,v 是保持点阵的平移向量。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 whole",
+          "handled": true,
+          "text": "h²=e，hgh=g⁻¹；每个动作可写成 gᵏ 或 gᵏh，k∈ℤ。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 visible",
+          "handled": true,
+          "text": "h²=e，hgh=g⁻¹；每个动作可写成 gᵏ 或 gᵏh，k∈ℤ。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 whole",
+          "handled": true,
+          "text": "(a+b√2)(c+d√2)=(ac+2bd)+(ad+bc)√2。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 visible",
+          "handled": true,
+          "text": "(a+b√2)(c+d√2)=(ac+2bd)+(ad+bc)√2。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "体心立方的示意单元包含八个顶角及中心点。把它在三个方向无限重复，得到理想周期点阵。设立方边长为 a，角点位于 aℤ³，体心点位于 a(ℤ³+(1/2,1/2,1/2))；平移 (a,0,0) 将两类点分别送到同类点，逆平移 (−a,0,0) 撤销它。\n\nTᵤTᵥ=Tᵤ₊ᵥ，Tᵤ⁻¹=T₋ᵤ；u,v 是保持点阵的平移向量。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "TᵤTᵥ=Tᵤ₊ᵥ，Tᵤ⁻¹=T₋ᵤ；u,v 是保持点阵的平移向量。",
+          "fallback": "TᵤTᵥ=Tᵤ₊ᵥ，Tᵤ⁻¹=T₋ᵤ；u,v 是保持点阵的平移向量。",
+          "nativeSelection": "TᵤTᵥ=Tᵤ₊ᵥ，Tᵤ⁻¹=T₋ᵤ；u,v 是保持点阵的平移向量。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 250.203125,
+            "width": 339,
+            "height": 55.1796875,
+            "client": 339,
+            "scroll": 426
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter03-1-390.png"
+        },
+        {
+          "index": 2,
+          "label": "h²=e，hgh=g⁻¹；每个动作可写成 gᵏ 或 gᵏh，k∈ℤ。",
+          "fallback": "h²=e，hgh=g⁻¹；每个动作可写成 gᵏ 或 gᵏh，k∈ℤ。",
+          "nativeSelection": "h²=e，hgh=g⁻¹；每个动作可写成 gᵏ 或 gᵏh，k∈ℤ。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 249.8046875,
+            "width": 339,
+            "height": 55.234375,
+            "client": 339,
+            "scroll": 422
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter03-2-390.png"
+        },
+        {
+          "index": 3,
+          "label": "(a+b√2)(c+d√2)=(ac+2bd)+(ad+bc)√2。",
+          "fallback": "(a+b√2)(c+d√2)=(ac+2bd)+(ad+bc)√2。",
+          "nativeSelection": "(a+b√2)(c+d√2)=(ac+2bd)+(ad+bc)√2。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 250.1171875,
+            "width": 339,
+            "height": 57.578125,
+            "client": 339,
+            "scroll": 346
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter03-3-390.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter04_algebra_at_last.html",
+      "width": 390,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "R³BR²B³ = R³B(R²)B³ = R³B⁴ = R；在 V₄ 中也等于 R⁵B⁴。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "R³BR²B³ = R³B(R²)B³ = R³B⁴ = R；在 V₄ 中也等于 R⁵B⁴。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 whole",
+          "handled": true,
+          "text": "(ab)c=a(bc)；括号改变分组，不改变 a、b、c 的顺序。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 visible",
+          "handled": true,
+          "text": "(ab)c=a(bc)；括号改变分组，不改变 a、b、c 的顺序。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 whole",
+          "handled": true,
+          "text": "(rⁱfʲ)(rᵏfˡ)=r^(i+(−1)^j k)f^(j+l)，r 的指数模 n，f 的指数模 2。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 visible",
+          "handled": true,
+          "text": "(rⁱfʲ)(rᵏfˡ)=r^(i+(−1)^j k)f^(j+l)，r 的指数模 n，f 的指数模 2。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 whole",
+          "handled": true,
+          "text": "bta²=y ⇒ b⁻¹(bta²)(a²)⁻¹=b⁻¹y(a²)⁻¹ ⇒ t=b²ya。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 visible",
+          "handled": true,
+          "text": "bta²=y ⇒ b⁻¹(bta²)(a²)⁻¹=b⁻¹y(a²)⁻¹ ⇒ t=b²ya。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "在 V₄ 中 R²=B²=e，RB=BR。原书的 R³BR²B³ 可先删去相邻的 R²：R³BR²B³=R³B⁴，再用 B⁴=e、R³=R，得到 R。另一条路线利用 RB=BR 交换中间的 R、B，合为 R⁵B⁴=R；后一条路线明确使用交换性，不能移植到任意群。\n\nR³BR²B³ = R³B(R²)B³ = R³B⁴ = R；在 V₄ 中也等于 R⁵B⁴。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "R³BR²B³ = R³B(R²)B³ = R³B⁴ = R；在 V₄ 中也等于 R⁵B⁴。",
+          "fallback": "R³BR²B³ = R³B(R²)B³ = R³B⁴ = R；在 V₄ 中也等于 R⁵B⁴。",
+          "nativeSelection": "R³BR²B³ = R³B(R²)B³ = R³B⁴ = R；在 V₄ 中也等于 R⁵B⁴。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 249.796875,
+            "width": 339,
+            "height": 55.125,
+            "client": 339,
+            "scroll": 469
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter04-1-390.png"
+        },
+        {
+          "index": 2,
+          "label": "(ab)c=a(bc)；括号改变分组，不改变 a、b、c 的顺序。",
+          "fallback": "(ab)c=a(bc)；括号改变分组，不改变 a、b、c 的顺序。",
+          "nativeSelection": "(ab)c=a(bc)；括号改变分组，不改变 a、b、c 的顺序。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 249.953125,
+            "width": 339,
+            "height": 54.609375,
+            "client": 339,
+            "scroll": 446
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter04-2-390.png"
+        },
+        {
+          "index": 3,
+          "label": "(rⁱfʲ)(rᵏfˡ)=r^(i+(−1)^j k)f^(j+l)，r 的指数模 n，f 的指数模 2。",
+          "fallback": "(rⁱfʲ)(rᵏfˡ)=r^(i+(−1)^j k)f^(j+l)，r 的指数模 n，f 的指数模 2。",
+          "nativeSelection": "(\n𝑟\n𝑖\n𝑓\n𝑗\n)\n(\n𝑟\n𝑘\n𝑓\n𝑙\n)\n=\n𝑟\n𝑖\n+\n(\n−\n1\n)\n𝑗\n𝑘\n𝑓\n𝑗\n+\n𝑙\n，r 的指数模 n，f 的指数模 2。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 35,
+            "y": 249.765625,
+            "width": 305,
+            "height": 66.3828125,
+            "client": 305,
+            "scroll": 499
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter04-3-390.png"
+        },
+        {
+          "index": 4,
+          "label": "bta²=y ⇒ b⁻¹(bta²)(a²)⁻¹=b⁻¹y(a²)⁻¹ ⇒ t=b²ya。",
+          "fallback": "bta²=y ⇒ b⁻¹(bta²)(a²)⁻¹=b⁻¹y(a²)⁻¹ ⇒ t=b²ya。",
+          "nativeSelection": "bta²=y ⇒ b⁻¹(bta²)(a²)⁻¹=b⁻¹y(a²)⁻¹ ⇒ t=b²ya。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 35,
+            "y": 249.96875,
+            "width": 305,
+            "height": 53.65625,
+            "client": 305,
+            "scroll": 388
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter04-4-390.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter05_five_families.html",
+      "width": 390,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "(i+j) mod n；逆元 −i mod n；单位元 0。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "(i+j) mod n；逆元 −i mod n；单位元 0。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 whole",
+          "handled": true,
+          "text": "Cₙ 中 |a| = n/gcd(n,a)，因为 ka≡0 (mod n) ⇔ n/gcd(n,a) 整除 k。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 visible",
+          "handled": true,
+          "text": "Cₙ 中 |a| = n/gcd(n,a)，因为 ka≡0 (mod n) ⇔ n/gcd(n,a) 整除 k。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 whole",
+          "handled": true,
+          "text": "非平凡循环数 = (p²−1)/(p−1) = p+1。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 visible",
+          "handled": true,
+          "text": "非平凡循环数 = (p²−1)/(p−1) = p+1。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 whole",
+          "handled": true,
+          "text": "rⁿ=e，f²=e，fr=r⁻¹f。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 visible",
+          "handled": true,
+          "text": "rⁿ=e，f²=e，fr=r⁻¹f。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 5 whole",
+          "handled": true,
+          "text": "(rⁱfʲ)(rᵏfˡ)=r^(i+(−1)^j k) f^(j+l)；(i,j)(k,l)=(i+(−1)^j k mod n, j+l mod 2)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 5 visible",
+          "handled": true,
+          "text": "(rⁱfʲ)(rᵏfˡ)=r^(i+(−1)^j k) f^(j+l)；(i,j)(k,l)=(i+(−1)^j k mod n, j+l mod 2)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 5 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 6 whole",
+          "handled": true,
+          "text": "sgn(pq)=sgn(p)sgn(q)，Aₙ={p∈Sₙ:sgn(p)=+1}。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 6 visible",
+          "handled": true,
+          "text": "sgn(pq)=sgn(p)sgn(q)，Aₙ={p∈Sₙ:sgn(p)=+1}。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 6 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 7 whole",
+          "handled": true,
+          "text": "G → Sym(G)，g ↦ R_g；R_(gh)(x)=x(gh)=(xg)h。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 7 visible",
+          "handled": true,
+          "text": "G → Sym(G)，g ↦ R_g；R_(gh)(x)=x(gh)=(xg)h。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 7 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "C₅ 的模 5 加法表\n·\t0\t1\t2\t3\t4\n0\t0\t1\t2\t3\t4\n1\t1\t2\t3\t4\t0\n2\t2\t3\t4\t0\t1\n3\t3\t4\t0\t1\t2\n4\t4\t0\t1\t2\t3\n(i+j) mod n；逆元 −i mod n；单位元 0。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "(i+j) mod n；逆元 −i mod n；单位元 0。",
+          "fallback": "(i+j) mod n；逆元 −i mod n；单位元 0。",
+          "nativeSelection": "(i+j) mod n；逆元 −i mod n；单位元 0。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 249.78125,
+            "width": 339,
+            "height": 40.234375,
+            "client": 339,
+            "scroll": 339
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter05-1-390.png"
+        },
+        {
+          "index": 2,
+          "label": "Cₙ 中 |a| = n/gcd(n,a)，因为 ka≡0 (mod n) ⇔ n/gcd(n,a) 整除 k。",
+          "fallback": "Cₙ 中 |a| = n/gcd(n,a)，因为 ka≡0 (mod n) ⇔ n/gcd(n,a) 整除 k。",
+          "nativeSelection": "Cₙ 中 |a| = n/gcd(n,a)，因为 ka≡0 (mod n) ⇔ n/gcd(n,a) 整除 k。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 250.2421875,
+            "width": 339,
+            "height": 55.1953125,
+            "client": 339,
+            "scroll": 524
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter05-2-390.png"
+        },
+        {
+          "index": 3,
+          "label": "非平凡循环数 = (p²−1)/(p−1) = p+1。",
+          "fallback": "非平凡循环数 = (p²−1)/(p−1) = p+1。",
+          "nativeSelection": "非平凡循环数 = (p²−1)/(p−1) = p+1。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 249.875,
+            "width": 339,
+            "height": 39.8671875,
+            "client": 339,
+            "scroll": 339
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter05-3-390.png"
+        },
+        {
+          "index": 4,
+          "label": "rⁿ=e，f²=e，fr=r⁻¹f。",
+          "fallback": "rⁿ=e，f²=e，fr=r⁻¹f。",
+          "nativeSelection": "rⁿ=e，f²=e，fr=r⁻¹f。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 250.1640625,
+            "width": 339,
+            "height": 37.296875,
+            "client": 339,
+            "scroll": 339
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter05-4-390.png"
+        },
+        {
+          "index": 5,
+          "label": "(rⁱfʲ)(rᵏfˡ)=r^(i+(−1)^j k) f^(j+l)；(i,j)(k,l)=(i+(−1)^j k mod n, j+l mod 2)。",
+          "fallback": "(rⁱfʲ)(rᵏfˡ)=r^(i+(−1)^j k) f^(j+l)；(i,j)(k,l)=(i+(−1)^j k mod n, j+l mod 2)。",
+          "nativeSelection": "(rⁱfʲ)(rᵏfˡ)=rⁱ⁺⁽⁻¹⁾ʲᵏ fʲ⁺ˡ；(i,j)(k,l)=(i+(−1)ʲk mod n, j+l mod 2)。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 250.203125,
+            "width": 339,
+            "height": 55.359375,
+            "client": 339,
+            "scroll": 506
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter05-5-390.png"
+        },
+        {
+          "index": 6,
+          "label": "sgn(pq)=sgn(p)sgn(q)，Aₙ={p∈Sₙ:sgn(p)=+1}。",
+          "fallback": "sgn(pq)=sgn(p)sgn(q)，Aₙ={p∈Sₙ:sgn(p)=+1}。",
+          "nativeSelection": "sgn(pq)=sgn(p)sgn(q)，Aₙ={p∈Sₙ:sgn(p)=+1}。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 250.15625,
+            "width": 339,
+            "height": 53.6171875,
+            "client": 339,
+            "scroll": 389
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter05-6-390.png"
+        },
+        {
+          "index": 7,
+          "label": "G → Sym(G)，g ↦ R_g；R_(gh)(x)=x(gh)=(xg)h。",
+          "fallback": "G → Sym(G)，g ↦ R_g；R_(gh)(x)=x(gh)=(xg)h。",
+          "nativeSelection": "G → Sym(G)，g ↦ Rg；Rgh(x)=x(gh)=(xg)h。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 249.96875,
+            "width": 339,
+            "height": 53.6171875,
+            "client": 339,
+            "scroll": 379
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter05-7-390.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter06_subgroups.html",
+      "width": 390,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "[G:H]=|G|/|H|",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "[G:H]=|G|/|H|",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "Definition 6.9\n\nIf H < G then the index of H in G, written [G : H], is how many times |H| goes into |G|.\n\n中文陈述：指数 [G:H] 是 H 的左陪集数；有限时等于 |G|/|H|。\n\n来源：印刷 107 / PDF 122\n\n[G:H]=|G|/|H|",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "[G:H]=|G|/|H|",
+          "fallback": "[G:H]=|G|/|H|",
+          "nativeSelection": "[\n𝐺\n:\n𝐻\n]\n=\n|\n𝐺\n|\n|\n𝐻\n|",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 249.8671875,
+            "width": 339,
+            "height": 64.578125,
+            "client": 339,
+            "scroll": 339
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter06-1-390.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter07_products_and_quotients.html",
+      "width": 390,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "(a,b)(a′,b′)=(aa′,bb′)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "(a,b)(a′,b′)=(aa′,bb′)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 whole",
+          "handled": true,
+          "text": "(a,e)(e,b)=(a,b)=(e,b)(a,e)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 visible",
+          "handled": true,
+          "text": "(a,e)(e,b)=(a,b)=(e,b)(a,e)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 whole",
+          "handled": true,
+          "text": "H ≤ N_G(H) ≤ G；若 H◁K≤G，则 K≤N_G(H)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 visible",
+          "handled": true,
+          "text": "H ≤ N_G(H) ≤ G；若 H◁K≤G，则 K≤N_G(H)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 whole",
+          "handled": true,
+          "text": "A₄ 的类方程：1+3+4+4=12。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 visible",
+          "handled": true,
+          "text": "A₄ 的类方程：1+3+4+4=12。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "Definition 7.3\n\n原文节选（仅步骤 1；三步构造见下文）\n\nBegin with a multiplication table for A.\n\n中文陈述：从 A 的表开始，把每格放大为一张 B 表；格子的两个标签组成有序对。\n\n来源：印刷 126 / PDF 141\n\n(a,b)(a′,b′)=(aa′,bb′)。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "(a,b)(a′,b′)=(aa′,bb′)。",
+          "fallback": "(a,b)(a′,b′)=(aa′,bb′)。",
+          "nativeSelection": "(a,b)(a′,b′)=(aa′,bb′)。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 249.921875,
+            "width": 339,
+            "height": 37.8984375,
+            "client": 339,
+            "scroll": 339
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter07-1-390.png"
+        },
+        {
+          "index": 2,
+          "label": "(a,e)(e,b)=(a,b)=(e,b)(a,e)。",
+          "fallback": "(a,e)(e,b)=(a,b)=(e,b)(a,e)。",
+          "nativeSelection": "(a,e)(e,b)=(a,b)=(e,b)(a,e)。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 249.8984375,
+            "width": 339,
+            "height": 37.8984375,
+            "client": 339,
+            "scroll": 339
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter07-2-390.png"
+        },
+        {
+          "index": 3,
+          "label": "H ≤ N_G(H) ≤ G；若 H◁K≤G，则 K≤N_G(H)。",
+          "fallback": "H ≤ N_G(H) ≤ G；若 H◁K≤G，则 K≤N_G(H)。",
+          "nativeSelection": "H ≤ N_G(H) ≤ G；若 H◁K≤G，则 K≤N_G(H)。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 250.2265625,
+            "width": 339,
+            "height": 56.0703125,
+            "client": 339,
+            "scroll": 405
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter07-3-390.png"
+        },
+        {
+          "index": 4,
+          "label": "A₄ 的类方程：1+3+4+4=12。",
+          "fallback": "A₄ 的类方程：1+3+4+4=12。",
+          "nativeSelection": "A₄ 的类方程：1+3+4+4=12。",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 250.171875,
+            "width": 339,
+            "height": 40.0703125,
+            "client": 339,
+            "scroll": 339
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter07-4-390.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter08_homomorphisms.html",
+      "width": 390,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "G ──φ──→ H；Ker φ = {g∈G : φ(g)=e_H}；Im φ = {φ(g) : g∈G}",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "G ──φ──→ H；Ker φ = {g∈G : φ(g)=e_H}；Im φ = {φ(g) : g∈G}",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 whole",
+          "handled": true,
+          "text": "a ≡ b (mod n) ⇔ a−b ∈ nZ ⇔ n | (a−b)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 visible",
+          "handled": true,
+          "text": "a ≡ b (mod n) ⇔ a−b ∈ nZ ⇔ n | (a−b)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 whole",
+          "handled": true,
+          "text": "(g,h)(g′,h′) = (g α_h(g′), hh′)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 visible",
+          "handled": true,
+          "text": "(g,h)(g′,h′) = (g α_h(g′), hh′)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 3 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 whole",
+          "handled": true,
+          "text": "((0,1)(0,2))(1,0) = (0,0)(1,0) = (1,0)；(0,1)((0,2)(1,0)) = (0,1)(1,2) = (2,0)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 visible",
+          "handled": true,
+          "text": "((0,1)(0,2))(1,0) = (0,0)(1,0) = (1,0)；(0,1)((0,2)(1,0)) = (0,1)(1,2) = (2,0)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 4 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "上一章的子群是“在群内找出一份完整结构”，商群是“把同类元素压成一点”。本章用一个公式把它们统一：φ(ab)=φ(a)φ(b)。这个等式允许压缩，却要求每一次乘法在压缩前后给出同一个结果。读图时要同时追踪节点和路径：一个生成元的箭头可以变成多步路径，也可以缩成自环。\n\nG ──φ──→ H；Ker φ = {g∈G : φ(g)=e_H}；Im φ = {φ(g) : g∈G}",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "G ──φ──→ H；Ker φ = {g∈G : φ(g)=e_H}；Im φ = {φ(g) : g∈G}",
+          "fallback": "G ──φ──→ H；Ker φ = {g∈G : φ(g)=e_H}；Im φ = {φ(g) : g∈G}",
+          "nativeSelection": "G ──φ──→ H；Ker φ = {g∈G : φ(g)=e_H}；Im φ = {φ(g) : g∈G}",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 250.2109375,
+            "width": 339,
+            "height": 53.6171875,
+            "client": 339,
+            "scroll": 518
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter08-1-390.png"
+        },
+        {
+          "index": 2,
+          "label": "a ≡ b (mod n) ⇔ a−b ∈ nZ ⇔ n | (a−b)",
+          "fallback": "a ≡ b (mod n) ⇔ a−b ∈ nZ ⇔ n | (a−b)",
+          "nativeSelection": "a ≡ b (mod n) ⇔ a−b ∈ nZ ⇔ n | (a−b)",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 250.2421875,
+            "width": 339,
+            "height": 38.34375,
+            "client": 339,
+            "scroll": 339
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter08-2-390.png"
+        },
+        {
+          "index": 3,
+          "label": "(g,h)(g′,h′) = (g α_h(g′), hh′)",
+          "fallback": "(g,h)(g′,h′) = (g α_h(g′), hh′)",
+          "nativeSelection": "(g,h)(g′,h′) = (g α_h(g′), hh′)",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 250.015625,
+            "width": 339,
+            "height": 38.6171875,
+            "client": 339,
+            "scroll": 339
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter08-3-390.png"
+        },
+        {
+          "index": 4,
+          "label": "((0,1)(0,2))(1,0) = (0,0)(1,0) = (1,0)；(0,1)((0,2)(1,0)) = (0,1)(1,2) = (2,0)",
+          "fallback": "((0,1)(0,2))(1,0) = (0,0)(1,0) = (1,0)；(0,1)((0,2)(1,0)) = (0,1)(1,2) = (2,0)",
+          "nativeSelection": "((0,1)(0,2))(1,0) = (0,0)(1,0) = (1,0)；(0,1)((0,2)(1,0)) = (0,1)(1,2) = (2,0)",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 35,
+            "y": 250.234375,
+            "width": 305,
+            "height": 52.8984375,
+            "client": 305,
+            "scroll": 568
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter08-4-390.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter09_sylow_theory.html",
+      "width": 390,
+      "height": 900,
+      "copies": [
+        {
+          "name": "whole formula",
+          "handled": true,
+          "text": "nₚ∣|G|",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "visible formula characters",
+          "handled": true,
+          "text": "nₚ∣|G|",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "whole paragraph",
+          "handled": true,
+          "text": "中文陈述：Sylow p 子群的个数 nₚ 满足 nₚ∣|G| 且 nₚ≡1 (mod p)。事实上 nₚ=[G:N_G(P)]，因 P⊆N_G(P)，还有更强的 nₚ∣m，其中 |G|=pⁿm、p∤m。",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "two paragraphs",
+          "handled": true,
+          "text": "中文陈述：Sylow p 子群的个数 nₚ 满足 nₚ∣|G| 且 nₚ≡1 (mod p)。事实上 nₚ=[G:N_G(P)]，因 P⊆N_G(P)，还有更强的 nₚ∣m，其中 |G|=pⁿm、p∤m。\n\n来源：印刷 215 / PDF 230",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "partial formula",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "ordinary text",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "X={(g₁,…,gₚ):g₁⋯gₚ=e}，|X|=|G|^(p−1)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "X={(g₁,…,gₚ):g₁⋯gₚ=e}，|X|=|G|^(p−1)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "要找到 g≠e 且 gᵖ=e，先把问题放大：令 X={(g₁,…,gₚ):g₁⋯gₚ=e}。前 p−1 项可任取，最后一项必须是前面乘积的逆元，因此 |X|=|G|ᵖ⁻¹。让 Cₚ 循环右移坐标：T(g₁,…,gₚ)=(gₚ,g₁,…,gₚ₋₁)。它保留 X，因为 gₚg₁⋯gₚ₋₁=gₚ(g₁⋯gₚ)gₚ⁻¹=e；左移是它的逆，Tᵖ=id。\n\nX={(g₁,…,gₚ):g₁⋯gₚ=e}，|X|=|G|^(p−1)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "X={(g₁,…,gₚ):g₁⋯gₚ=e}，|X|=|G|^(p−1)",
+          "fallback": "X={(g₁,…,gₚ):g₁⋯gₚ=e}，|X|=|G|^(p−1)",
+          "nativeSelection": "𝑋\n=\n{\n(\n𝑔\n1\n,\n…\n,\n𝑔\n𝑝\n)\n:\n𝑔\n1\n⋯\n𝑔\n𝑝\n=\n𝑒\n}\n,\n|\n𝑋\n|\n=\n|\n𝐺\n|\n𝑝\n−\n1",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 249.8515625,
+            "width": 339,
+            "height": 66.3984375,
+            "client": 339,
+            "scroll": 407
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter09-1-390.png"
+        }
+      ]
+    },
+    {
+      "page": "chapter10_galois_theory.html",
+      "width": 390,
+      "height": 900,
+      "copies": [
+        {
+          "name": "display 1 whole",
+          "handled": true,
+          "text": "x=(−b±√(b²−4ac))/(2a)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 visible",
+          "handled": true,
+          "text": "x=(−b±√(b²−4ac))/(2a)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 1 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 whole",
+          "handled": true,
+          "text": "|A₅| = 1 + 12 + 12 + 20 + 15 = 60",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 visible",
+          "handled": true,
+          "text": "|A₅| = 1 + 12 + 12 + 20 + 15 = 60",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "display 2 partial",
+          "handled": false,
+          "text": "",
+          "richMath": false,
+          "temporaryHostRemoved": true
+        },
+        {
+          "name": "paragraph with display",
+          "handled": true,
+          "text": "二次公式可由配方得到：ax²+bx+c=0（a≠0），乘 4a，得 (2ax+b)²=b²−4ac；开平方并解出 x，得到下面的公式。三次与四次也有根式公式，五次则没有能处理所有输入的统一根式公式——这是 Key Points 10.3、10.4 的问题与答案。\n\nx=(−b±√(b²−4ac))/(2a)",
+          "richMath": true,
+          "temporaryHostRemoved": true
+        }
+      ],
+      "formulas": [
+        {
+          "index": 1,
+          "label": "x=(−b±√(b²−4ac))/(2a)",
+          "fallback": "x=(−b±√(b²−4ac))/(2a)",
+          "nativeSelection": "𝑥\n=\n−\n𝑏\n±\n𝑏\n2\n−\n4\n𝑎\n𝑐\n2\n𝑎",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 249.921875,
+            "width": 339,
+            "height": 65.6640625,
+            "client": 339,
+            "scroll": 339
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter10-1-390.png"
+        },
+        {
+          "index": 2,
+          "label": "|A₅| = 1 + 12 + 12 + 20 + 15 = 60",
+          "fallback": "|A₅| = 1 + 12 + 12 + 20 + 15 = 60",
+          "nativeSelection": "|A₅| = 1 + 12 + 12 + 20 + 15 = 60",
+          "viewport": 390,
+          "documentWidth": 375,
+          "equation": {
+            "x": 18,
+            "y": 249.8671875,
+            "width": 339,
+            "height": 38.1015625,
+            "client": 339,
+            "scroll": 339
+          },
+          "accessiblePresent": true,
+          "screenshot": "chapter10-2-390.png"
+        }
+      ]
+    }
+  ],
+  "no_javascript": [
+    {
+      "width": 1440,
+      "label": "x=(−b±√(b²−4ac))/(2a)",
+      "fallback": "x=(−b±√(b²−4ac))/(2a)",
+      "documentWidth": 1425,
+      "viewport": 1440,
+      "copyListeners": 0,
+      "screenshot": "nojs-quadratic-1440.png"
+    },
+    {
+      "width": 390,
+      "label": "x=(−b±√(b²−4ac))/(2a)",
+      "fallback": "x=(−b±√(b²−4ac))/(2a)",
+      "documentWidth": 375,
+      "viewport": 390,
+      "copyListeners": 0,
+      "screenshot": "nojs-quadratic-390.png"
+    }
+  ],
+  "interactions": {
+    "horizontal": [
+      {
+        "page": "chapter05_five_families.html",
+        "index": 5,
+        "before": {
+          "x": 187.5,
+          "y": 277.8828125,
+          "left": 0,
+          "max": 167
+        },
+        "after": {
+          "left": 166.5,
+          "max": 167,
+          "documentWidth": 375,
+          "viewport": 390
+        },
+        "screenshot": "chapter05-horizontal-end.png"
+      },
+      {
+        "page": "chapter08_homomorphisms.html",
+        "index": 4,
+        "before": {
+          "x": 187.5,
+          "y": 276.68359375,
+          "left": 0,
+          "max": 263
+        },
+        "after": {
+          "left": 263,
+          "max": 263,
+          "documentWidth": 375,
+          "viewport": 390
+        },
+        "screenshot": "chapter08-horizontal-end.png"
+      },
+      {
+        "page": "chapter09_sylow_theory.html",
+        "index": 1,
+        "before": {
+          "x": 187.5,
+          "y": 283.05078125,
+          "left": 0,
+          "max": 68
+        },
+        "after": {
+          "left": 68,
+          "max": 68,
+          "documentWidth": 375,
+          "viewport": 390
+        },
+        "screenshot": "chapter09-horizontal-end.png"
+      }
+    ],
+    "accessible_tree": {
+      "nodes": [
+        {
+          "nodeId": "17056",
+          "ignored": false,
+          "role": {
+            "type": "internalRole",
+            "value": "MathMLMath"
+          },
+          "chromeRole": {
+            "type": "internalRole",
+            "value": 187
+          },
+          "name": {
+            "type": "computedString",
+            "value": "x=(−b±√(b²−4ac))/(2a)",
+            "sources": [
+              {
+                "type": "relatedElement",
+                "attribute": "aria-labelledby"
+              },
+              {
+                "type": "attribute",
+                "value": {
+                  "type": "computedString",
+                  "value": "x=(−b±√(b²−4ac))/(2a)"
+                },
+                "attribute": "aria-label",
+                "attributeValue": {
+                  "type": "string",
+                  "value": "x=(−b±√(b²−4ac))/(2a)"
+                }
+              },
+              {
+                "type": "attribute",
+                "attribute": "title",
+                "superseded": true
+              }
+            ]
+          },
+          "properties": [],
+          "parentId": "17047",
+          "childIds": [
+            "17184"
+          ],
+          "backendDOMNodeId": 17056
+        }
+      ]
+    }
+  },
+  "copy_regression": {
+    "method": "Synthetic ClipboardEvent + DataTransfer on the actual rendered release; no system clipboard access",
+    "cases": 218,
+    "native_selection": "Recorded separately per formula; browser-native serialization may still split nodes across lines."
+  },
+  "screenshots_opened": {
+    "contact_sheets": [
+      "contact-1440-1.png",
+      "contact-1440-2.png",
+      "contact-1440-3.png",
+      "contact-1440-4.png",
+      "contact-1440-5.png",
+      "contact-1440-6.png",
+      "contact-390-1.png",
+      "contact-390-2.png",
+      "contact-390-3.png",
+      "contact-390-4.png"
+    ],
+    "additional": [
+      "chapter10-1-1440.png",
+      "chapter05-horizontal-end.png",
+      "chapter08-horizontal-end.png",
+      "chapter09-horizontal-end.png",
+      "nojs-quadratic-1440.png",
+      "nojs-quadratic-390.png"
+    ]
+  },
+  "preservation_evidence": "tmp/vgt-display-math-20261017/presentation-preservation.json",
+  "harness_notes": [
+    "Initial viewport CDP call rejected NaN width because ego-browser nodejs does not inherit the task-specific shell environment variable; changed the harness to read its explicit viewport configuration file.",
+    "Initial extra horizontal-scroll test timed out on chapter 8 formula 4 because its exercise details ancestor was closed after navigation. DOM hit testing showed a summary in front of the formula. Opened the actual ancestor before repeating the scroll; did not change page content or assertion.",
+    "System Python did not provide Pillow; contact sheets use the already bundled workspace Python."
+  ],
+  "evidence_directory": "tmp/vgt-display-math-20261017/browser",
+  "evidence_sha256": {
+    "chapter01-1-1440.png": "74d0f57ad910a98d41d9e9ad391c4ca58cc77e785936e0416989ae394be4768f",
+    "chapter01-1-390.png": "154da167776374143b35db7f634132d3968b73d5a8e8ae17edbfc280b8b77803",
+    "chapter01-2-1440.png": "91977ed03672af9931d52a298b6aa962f8cfda2dd9b45a70fa74f1f10b9f7203",
+    "chapter01-2-390.png": "39a2958c3b24c1a14797a5221343aaa0ffa540302b2a3de6dc931b451ea7040d",
+    "chapter01-3-1440.png": "0f090584da671e6cb22a32a476dd229924995337fa807c02ba77a0cdec35049b",
+    "chapter01-3-390.png": "f638d8ebabcb835899ad62c1b0a4ba35bcec07d9c5699d481ae004eaa5438d63",
+    "chapter01-4-1440.png": "29141e672b821d9f89670ac5dd38bc0b3c65db84dac5748c4e4738d25e5f348d",
+    "chapter01-4-390.png": "648510d43389b7ec01b1dbccd08127ce387b4487e8e854fdc0a05bf45267d041",
+    "chapter02-1-1440.png": "23f78cbe51884ffec79bdd49a4985122b147f7080aedc6c81cfc2ea553654001",
+    "chapter02-1-390.png": "3c9c9102622157a392efd2fdfd405176767e9d1035d08adba225227a716ce183",
+    "chapter03-1-1440.png": "0690fcc83ed9ce4758121da4afa9a27ea2f8206b4dc29b5a47da4263d3e1d22c",
+    "chapter03-1-390.png": "34cab3765712f6295db0abb06ab4d75a5f1df2158baaf7c0520f270d98248fe5",
+    "chapter03-2-1440.png": "010e7fd52e6b5fa68b31e54e6d83e97af6e338a7070c232871dc41e98303e26d",
+    "chapter03-2-390.png": "0b93f2c86ee4f277c5453e6aeba020e46186770830736124d30c4e0ba1727955",
+    "chapter03-3-1440.png": "b4c6ed41072d53c20861c49bc422f7aee3ae894a45970f35c75c691eb90ed99c",
+    "chapter03-3-390.png": "275fbf7c44508376d26c82ce7ed560dcf7817fbeed6a76f3805419466451394c",
+    "chapter04-1-1440.png": "ba4b04e40155c5dd7518be553367d3144568d9c585d31d5509990888b23de8ac",
+    "chapter04-1-390.png": "e867245239a3ee6f030900468e6ea454012f19720a5c99a01f4ad1d9cdd5b610",
+    "chapter04-2-1440.png": "12a74368af100473b1873d29219d47c08ce639cfd5f365199f13ee863b143d82",
+    "chapter04-2-390.png": "aca302149fa030255dc18d26e34027a72cca95cd1843dff6e26dc5c3386ea096",
+    "chapter04-3-1440.png": "5c28c4e4a8e7a0577f3eeca9b94f750a2b186945f554258aca322c481788c02f",
+    "chapter04-3-390.png": "3f3f3a91908d1fe0e5b59518e95420519354f174702ac949bfb487dbd008bb5f",
+    "chapter04-4-1440.png": "3caad2fe81588e679b8554237a347bbe8fb7ca7ec5c96f5a7929776175c6a687",
+    "chapter04-4-390.png": "6bbbc1043079a34a5cd68ce7fd9440ca959520069a4f8b7c507b9d0cf06efc18",
+    "chapter05-1-1440.png": "d3dbb32e8f8fafcfbc7550578e34bb47680fc9d4ec38a96627c89ce44c700df0",
+    "chapter05-1-390.png": "0f403f7c2ad4d4f4fdaf53ddedccb27261c04d082b40240154c6cf7eb6756b78",
+    "chapter05-2-1440.png": "24df942e489eecbe357bb5b3ae57ea1e6d2389258b310a9a43291ff7e67ff052",
+    "chapter05-2-390.png": "633481a0ed39f6674330850cbdeea1240d32befb32260fe0446fb49ee9f6081b",
+    "chapter05-3-1440.png": "68783dc74891597fee493aa25846f51d16241307df58c5686b88c5b073778a99",
+    "chapter05-3-390.png": "dcce40613741cc3db80598ebe9b07a7619ec1802429a32e317028fa65fadc2bf",
+    "chapter05-4-1440.png": "e35234781c7c3acd70ef93db7f93954c27f3b8a3cd6d1d25f9dd3369510c0298",
+    "chapter05-4-390.png": "24c692205e131b86014f906b5bc688437525c13f4f03f14932fd9ee41117f7ad",
+    "chapter05-5-1440.png": "7e55613c762e42e4ffe514954450f23a9501e9ce16d863bee7962f3869fbe49c",
+    "chapter05-5-390.png": "574f25f14bb6b8b484fc64ef289bc1ecb13e845d2358c86e0e2d55acbc9c025d",
+    "chapter05-6-1440.png": "ab391955c4cd63c59dbf6d1160eff8fdf35f22f0196ac206a8bb7dff654dda7c",
+    "chapter05-6-390.png": "ce0fd559add826e5acac1eef6799fe1e135833331fd720452c53ae0afe0c881d",
+    "chapter05-7-1440.png": "dafd4faadc199e4c80fa8097ca12bc6efcebfc2b66bb70b252a1c550525670fd",
+    "chapter05-7-390.png": "e54e5ed4c7727206c9f0126a66585101b06776648be84d7a306adfb9cf600bb4",
+    "chapter05-horizontal-end.png": "c612415d76da11123e078e3de125635c0b196e22eb6003c6bc505532b14ee903",
+    "chapter06-1-1440.png": "7065a2d28b3813c293dc91022a530cec29e68033b37ed937dff14b45e8a87132",
+    "chapter06-1-390.png": "c86d1804173ba6152c315b281a917ae0036a75f21d3f10b643fd2a35412a5d89",
+    "chapter07-1-1440.png": "dafdf7d461a89f299fc74b77445a421faff476a0ceed10c4d4eb29129fb5b75c",
+    "chapter07-1-390.png": "2d3460fa881f0fa169e28a43602b7ddc546e7717e220adf7b62d5f9e07958f84",
+    "chapter07-2-1440.png": "7b8ce4c3a78cde5271cae1d192a22c473da86be55e5d555b601711cf9c3e2a6a",
+    "chapter07-2-390.png": "3b74c0c4b8c4a5a1af5fdd8f3da74e9b4e880e10053941147fec5809d1efacf2",
+    "chapter07-3-1440.png": "867d0f7fa9e901d6fc44c8ebd4b2650e96dfbd94e2f23bce872c93a915943ed2",
+    "chapter07-3-390.png": "7bf9203acbd274f607e278bb2d67d03d6a732a425fa92d32ec13694963c98181",
+    "chapter07-4-1440.png": "39ba6a776c64eeec2df8cb0738b081b9f0d70d7c4082245465207e16f13e87b0",
+    "chapter07-4-390.png": "a262f4208b24239e81f371399a5c34b4d22f2c08e78e0dd24be13989eaf655a8",
+    "chapter08-1-1440.png": "ebed4c7fe3cc602921317d29277fafa55ec8c544bc0f3fb9ae4c44a179bdb3cd",
+    "chapter08-1-390.png": "acd94b4637ed46f70bb19cb11f5fa13423392c0d46d50c0fddfbcb5b6f4a704f",
+    "chapter08-2-1440.png": "c8e56896d5b9bbd9be5c6b8b44a952bfab470da974488b47e3b6e490f7c31eee",
+    "chapter08-2-390.png": "dfe130b3987b2f80c2084a26891911c5a9af68203d59e01d3cdcca74f0b291d7",
+    "chapter08-3-1440.png": "f81d583c879e92b4fe8bce02aca389df1c1b53ac2cdb430edd6e9be2d9649158",
+    "chapter08-3-390.png": "886d004a927035f45d5a37277446ff071f757605c7de6e45f77a4095a09a3a09",
+    "chapter08-4-1440.png": "cfeffcca0130bd5c7da9b67fc80786bffaaab4462b0934150ef661b18a387497",
+    "chapter08-4-390.png": "3773681c3ea8914578efc56c81cc0cbeaf78210c71dfa61d30c84cade2f9fbb0",
+    "chapter08-horizontal-end.png": "393444a7b5a3eaf4e6bdb4c6d4603967a0af1d43b75a6a8dd903f487bd055610",
+    "chapter09-1-1440.png": "f3eefc45ebb4442aee5349b0a7e8c66d7904b8d58150f7338ee245ab3096e1e7",
+    "chapter09-1-390.png": "e6f4af4a5ce915cad0c8aacf2b1bebcb79b8300a68fb673075f2322c325a6e4a",
+    "chapter09-horizontal-end.png": "b41fba1f6fc0c7a81d408794f916dafa406241cdb70be991af7bc776a72382f1",
+    "chapter10-1-1440.png": "bf6bc25f3a26b16f1bca66a280303d47a2e7120d0212ab51a33bf1213ca0635a",
+    "chapter10-1-390.png": "9917325812ab3a3e1c24b9395bf4aa46b06cf6562693110af4c2a48b09bb8b7a",
+    "chapter10-2-1440.png": "4779ee6285ed1b4343c1a554a0f5dfaef49d306c0fda51582bf3fb04392ca90d",
+    "chapter10-2-390.png": "8b9268304c4c47cf3c0b56c7774b2b14dbf8d06cb73f5fe950064f5f9a9d967d",
+    "contact-1440-1.png": "07c28f15c94ced397daf212fdd1c43fa1dc644d91cd6ca4ecc8783f1f9a8554c",
+    "contact-1440-2.png": "072e62463d3c6050e80f2d3344ea7e23dbe9ac7d029985287a764bd3e8c3aaa0",
+    "contact-1440-3.png": "c56646c3caa56d2829bd447f4fbb991995afd1a8717f75b8f0c8e7e56b05d442",
+    "contact-1440-4.png": "f36a9ff150e1d50d1cc44390674fb972a46c2db52b3cf30a0d84cdd2625965fc",
+    "contact-1440-5.png": "ec90e158c2b93948a8750b639632edb76e4545785193b2485f548b81ad19d537",
+    "contact-1440-6.png": "19e304ed1cf4b60a3a6a1136f962685599368d21b41e3bac2d5f56e54d604e1b",
+    "contact-390-1.png": "c863779663d332105c55b3e2a23e8946ffa13165eeb9d1796701c033978d1fe0",
+    "contact-390-2.png": "3b29b88d68e3f40857d771b32fcd44affc7b0df2093c917d3e8fd64f2992d885",
+    "contact-390-3.png": "5c10c6110d289a5b9d84fee25edbf2d1f486b027886071b832fce3d231eb4024",
+    "contact-390-4.png": "21c918ee87ca318c468e7438bfbc768539c6eb9c1260cbf6e425b9754a33ca6b",
+    "extra.json": "40bc0ebaa2906f6ac75f30536a63523a85139b5a0e2d4ef59740753f3f27d96f",
+    "finish.json": "cea07dffb2414dc0637262534cd96e0358ebbf334021c3a6888235103552ac1c",
+    "matrix-1440.json": "90d9c0f575552f5b24f72d5fca6e103aea19ad7c60fea8dd645c1e395a4c1b21",
+    "matrix-390.json": "c2a636a3bba2da187ed7b428897191da914fbede682e567dc0dbf307ef861221",
+    "nojs-quadratic-1440.png": "76318eeec25544168c7c1c7ec96861b481f8218dd92614a4d36ef71dfcc5f459",
+    "nojs-quadratic-390.png": "e9074a8512ebce0b00efc79e16868aba2c7336c0ea43fe406320c6afe70da2e2"
+  },
+  "open_findings": [],
+  "previous_record": "review/history/polish-v1-browser.json",
+  "reused_evidence": "V1–V8 annotations, exercise steps, diagram/source-download checks remain in polish-v1-browser.json. All non-display page content and all display presentation trees were compared byte-for-byte before this follow-up; only the copy controller and fallback wrappers changed."
+}

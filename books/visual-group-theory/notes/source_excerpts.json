@@ -1,0 +1,484 @@
+{
+  "source_sha256": "f82d041ad301baa07b1ec17f495805e17c49852a772c770a28afeb29de7ecf2a",
+  "excerpts": [
+    {
+      "page": "preface.html",
+      "anchor": "excerpt-preface",
+      "printed": "ix",
+      "pdf_page": 10,
+      "text": "This book, however, teaches you to know groups."
+    },
+    {
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "observation-1-1",
+      "printed": "4",
+      "pdf_page": 19,
+      "text": "There is a predefined list of moves that never changes."
+    },
+    {
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "observation-1-2",
+      "printed": "4",
+      "pdf_page": 19,
+      "text": "Every move is reversible."
+    },
+    {
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "observation-1-3",
+      "printed": "5",
+      "pdf_page": 20,
+      "text": "Every move is deterministic."
+    },
+    {
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "observation-1-4",
+      "printed": "5",
+      "pdf_page": 20,
+      "text": "Moves can be combined in any sequence."
+    },
+    {
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "rule-1-5",
+      "printed": "6",
+      "pdf_page": 21,
+      "text": "There is a predefined list of actions that never changes."
+    },
+    {
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "rule-1-6",
+      "printed": "6",
+      "pdf_page": 21,
+      "text": "Every action is reversible."
+    },
+    {
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "rule-1-7",
+      "printed": "6",
+      "pdf_page": 21,
+      "text": "Every action is deterministic."
+    },
+    {
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "rule-1-8",
+      "printed": "6",
+      "pdf_page": 21,
+      "text": "Any sequence of consecutive actions is also an action."
+    },
+    {
+      "page": "chapter01_what_is_a_group.html",
+      "anchor": "definition-1-9",
+      "printed": "7",
+      "pdf_page": 22,
+      "text": "A group is a system or collection of actions satisfying Rules 1.5 through 1.8."
+    },
+    {
+      "page": "chapter03_why_study_groups.html",
+      "anchor": "definition-3-1",
+      "printed": "26",
+      "pdf_page": 41,
+      "text": "This collection of actions forms a group.",
+      "excerpt_scope": "仅步骤 2 的结尾句；三步流程见下文",
+      "display_label": "原文节选（仅步骤 2 的结尾句；三步流程见下文）"
+    },
+    {
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "definition-4-1",
+      "printed": "43",
+      "pdf_page": 58,
+      "text": "Choose any node",
+      "excerpt_scope": "仅步骤 (i) 的开头；三步流程见下文",
+      "display_label": "原文节选（仅步骤 (i) 的开头；三步流程见下文）"
+    },
+    {
+      "page": "chapter04_algebra_at_last.html",
+      "anchor": "definition-4-2",
+      "printed": "51",
+      "pdf_page": 66,
+      "text": "That operation is associative",
+      "excerpt_scope": "仅条件 2 的开头；完整群公理见下文",
+      "display_label": "原文节选（仅条件 2 的开头；完整群公理见下文）"
+    },
+    {
+      "page": "chapter05_five_families.html",
+      "anchor": "theorem-5-1",
+      "printed": "85",
+      "pdf_page": 100,
+      "text": "Every group is isomorphic to a collection of permutations."
+    },
+    {
+      "page": "chapter06_subgroups.html",
+      "anchor": "definition-6-1",
+      "printed": "98",
+      "pdf_page": 113,
+      "text": "I call a diagram regular if it repeats every one of its internal patterns throughout the whole diagram, in the sense discussed above."
+    },
+    {
+      "page": "chapter06_subgroups.html",
+      "anchor": "definition-6-2",
+      "printed": "99",
+      "pdf_page": 114,
+      "text": "When one group is completely contained in another, the inner group is called a subgroup of the outer one."
+    },
+    {
+      "page": "chapter06_subgroups.html",
+      "anchor": "observation-6-3",
+      "printed": "102",
+      "pdf_page": 117,
+      "text": "Every subgroup has cosets, and they cover every node of the group’s Cayley diagram."
+    },
+    {
+      "page": "chapter06_subgroups.html",
+      "anchor": "observation-6-4",
+      "printed": "102",
+      "pdf_page": 117,
+      "text": "The copy of H based at a is named aH."
+    },
+    {
+      "page": "chapter06_subgroups.html",
+      "anchor": "observation-6-5",
+      "printed": "103",
+      "pdf_page": 118,
+      "text": "Each coset can have more than one name."
+    },
+    {
+      "page": "chapter06_subgroups.html",
+      "anchor": "observation-6-6",
+      "printed": "103",
+      "pdf_page": 118,
+      "text": "If b is in aH, then aH = bH."
+    },
+    {
+      "page": "chapter06_subgroups.html",
+      "anchor": "theorem-6-7",
+      "printed": "106",
+      "pdf_page": 121,
+      "text": "If H is a subgroup of G, then each element of G belongs to exactly one left coset of H."
+    },
+    {
+      "page": "chapter06_subgroups.html",
+      "anchor": "theorem-6-8",
+      "printed": "107",
+      "pdf_page": 122,
+      "text": "If H < G, then the order |H| of the subgroup divides the order |G| of the larger group."
+    },
+    {
+      "page": "chapter06_subgroups.html",
+      "anchor": "definition-6-9",
+      "printed": "107",
+      "pdf_page": 122,
+      "text": "If H < G then the index of H in G, written [G : H], is how many times |H| goes into |G|."
+    },
+    {
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "definition-7-1",
+      "printed": "118",
+      "pdf_page": 133,
+      "text": "Begin with the Cayley diagram for A.",
+      "excerpt_scope": "仅步骤 1；三步构造见下文",
+      "display_label": "原文节选（仅步骤 1；三步构造见下文）"
+    },
+    {
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "definition-7-2",
+      "printed": "121",
+      "pdf_page": 136,
+      "text": "A subgroup H < G is called normal if each left coset of H is also a right coset of H (and vice versa)."
+    },
+    {
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "definition-7-3",
+      "printed": "126",
+      "pdf_page": 141,
+      "text": "Begin with a multiplication table for A.",
+      "excerpt_scope": "仅步骤 1；三步构造见下文",
+      "display_label": "原文节选（仅步骤 1；三步构造见下文）"
+    },
+    {
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "definition-7-4",
+      "printed": "129",
+      "pdf_page": 144,
+      "text": "The algebraic relationships among group elements must be the same in both diagrams.",
+      "excerpt_scope": "仅条件 (c)；完整约束见下文",
+      "display_label": "原文节选（仅条件 (c)；完整约束见下文）"
+    },
+    {
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "definition-7-5",
+      "printed": "133",
+      "pdf_page": 148,
+      "text": "Collapse each left coset of H into one large node.",
+      "excerpt_scope": "仅步骤 2 的首句；三步取商流程见下文",
+      "display_label": "原文节选（仅步骤 2 的首句；三步取商流程见下文）"
+    },
+    {
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "theorem-7-6",
+      "printed": "137",
+      "pdf_page": 152,
+      "text": "If H < G, then a quotient group G/H can be constructed just when H ◁ G."
+    },
+    {
+      "page": "chapter07_products_and_quotients.html",
+      "anchor": "theorem-7-7",
+      "printed": "141",
+      "pdf_page": 156,
+      "text": "For any H < G, NG(H) < G as well."
+    },
+    {
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "definition-8-1",
+      "printed": "159",
+      "pdf_page": 174,
+      "text": "A homomorphism is a function between two groups that mimics the structure of its domain in its codomain.",
+      "excerpt_scope": "定义引导句；保乘法条件见下文",
+      "display_label": "原文节选（定义引导句；保乘法条件见下文）"
+    },
+    {
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "observation-8-2",
+      "printed": "164",
+      "pdf_page": 179,
+      "text": "Every collection of domain elements that maps to the same codomain element has the same structure in the domain."
+    },
+    {
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "observation-8-3",
+      "printed": "165",
+      "pdf_page": 180,
+      "text": "The collections of domain elements mentioned in Observation 8.2 are actually a subgroup and its left cosets."
+    },
+    {
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "observation-8-4",
+      "printed": "166",
+      "pdf_page": 181,
+      "text": "The left cosets mentioned in Observation 8.3 are also right cosets, and thus the subgroup is normal."
+    },
+    {
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "theorem-8-5",
+      "printed": "167",
+      "pdf_page": 182,
+      "text": "If φ : G → H is a homomorphism, then Im(φ) ≅ G/Ker(φ)."
+    },
+    {
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "definition-8-6",
+      "printed": "173",
+      "pdf_page": 188,
+      "text": "Two integers a and b are relatively prime when their least common multiple is their product ab."
+    },
+    {
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "theorem-8-7",
+      "printed": "174",
+      "pdf_page": 189,
+      "text": "Cn × Cm ≅ Cnm if and only if n and m are relatively prime."
+    },
+    {
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "theorem-8-8",
+      "printed": "175",
+      "pdf_page": 190,
+      "text": "Every finite abelian group A is isomorphic to a direct product of cyclic groups."
+    },
+    {
+      "page": "chapter08_homomorphisms.html",
+      "anchor": "definition-8-9",
+      "printed": "179",
+      "pdf_page": 194,
+      "text": "Begin with the Cayley diagram for H.",
+      "excerpt_scope": "仅步骤 1；三步构造见下文",
+      "display_label": "原文节选（仅步骤 1；三步构造见下文）"
+    },
+    {
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "definition-9-1",
+      "printed": "195",
+      "pdf_page": 210,
+      "text": "A group G acts on a set S if there is a homomorphism φ : G → Perm(S)."
+    },
+    {
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "definition-9-2",
+      "printed": "197",
+      "pdf_page": 212,
+      "text": "the orbit of any s in S is the set of elements of S that G arrows can reach from s.",
+      "excerpt_scope": "轨道的描述句；作用前提与记号见下文",
+      "display_label": "原文节选（轨道的描述句；作用前提与记号见下文）"
+    },
+    {
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "definition-9-3",
+      "printed": "197",
+      "pdf_page": 212,
+      "text": "The stabilizer of an element s in S is the set of group elements g that don't move s.",
+      "excerpt_scope": "稳定子的描述句；稳定点定义见下文",
+      "display_label": "原文节选（稳定子的描述句；稳定点定义见下文）"
+    },
+    {
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "theorem-9-4",
+      "printed": "198",
+      "pdf_page": 213,
+      "text": "The size of an element’s orbit times the size of its stabilizer is the size of the group."
+    },
+    {
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "theorem-9-5",
+      "printed": "200",
+      "pdf_page": 215,
+      "text": "the order of S and the number of stable elements in S are congruent mod p.",
+      "excerpt_scope": "同余结论；素数阶作用的条件见下文",
+      "display_label": "原文节选（同余结论；素数阶作用的条件见下文）"
+    },
+    {
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "theorem-9-6",
+      "printed": "200",
+      "pdf_page": 215,
+      "text": "If p is a prime number that divides |G|, then G has an element g of order p, and therefore a subgroup ⟨g⟩ of order p."
+    },
+    {
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "definition-9-7",
+      "printed": "206",
+      "pdf_page": 221,
+      "text": "A p-group is a group whose order is a power of a prime p."
+    },
+    {
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "theorem-9-8",
+      "printed": "206",
+      "pdf_page": 221,
+      "text": "If a p-group G acts on a set S, then the order of S and the number of stable elements in S are congruent mod p."
+    },
+    {
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "theorem-9-9",
+      "printed": "206",
+      "pdf_page": 221,
+      "text": "If H is a p-subgroup of G, then [N_G(H) : H] ≡ [G : H] (mod p)."
+    },
+    {
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "theorem-9-10",
+      "printed": "208",
+      "pdf_page": 223,
+      "text": "every p-subgroup with fewer than pⁿ elements is inside one of the larger p-subgroups.",
+      "excerpt_scope": "子群包含结论；存在性与阶的条件见下文",
+      "display_label": "原文节选（子群包含结论；存在性与阶的条件见下文）"
+    },
+    {
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "definition-9-11",
+      "printed": "213",
+      "pdf_page": 228,
+      "text": "We call H a Sylow p-subgroup of G if it is a p-subgroup whose order is the highest power of p that divides |G|."
+    },
+    {
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "theorem-9-12",
+      "printed": "213",
+      "pdf_page": 228,
+      "text": "Any two Sylow p-subgroups are conjugates."
+    },
+    {
+      "page": "chapter09_sylow_theory.html",
+      "anchor": "theorem-9-13",
+      "printed": "215",
+      "pdf_page": 230,
+      "text": "The number n of Sylow p-subgroups of G obeys the following two restrictions. n divides |G|; n ≡ 1 (mod p)."
+    },
+    {
+      "page": "chapter10_galois_theory.html",
+      "anchor": "definition-10-1",
+      "printed": "222",
+      "pdf_page": 237,
+      "text": "A set S with addition and multiplication operations is a field",
+      "excerpt_scope": "定义引导句；三项域公理见下文",
+      "display_label": "原文节选（定义引导句；三项域公理见下文）"
+    },
+    {
+      "page": "chapter10_galois_theory.html",
+      "anchor": "definition-10-2",
+      "printed": "229",
+      "pdf_page": 244,
+      "text": "we call a − bi its complex conjugate",
+      "excerpt_scope": "复共轭的命名片段；完整定义见下文",
+      "display_label": "原文节选（复共轭的命名片段；完整定义见下文）"
+    },
+    {
+      "page": "chapter10_galois_theory.html",
+      "anchor": "theorem-10-3",
+      "printed": "229",
+      "pdf_page": 244,
+      "text": "If r is a root of a polynomial, then its conjugate r̄ is a root of the same polynomial.",
+      "excerpt_scope": "共轭根结论句；系数条件见下文校注",
+      "display_label": "原文节选（共轭根结论句；系数条件见下文校注）"
+    },
+    {
+      "page": "chapter10_galois_theory.html",
+      "anchor": "theorem-10-4",
+      "printed": "233",
+      "pdf_page": 248,
+      "text": "The coefficient of the highest power of x is not a multiple of p",
+      "excerpt_scope": "仅条件 1 的首个分句；完整判据见下文",
+      "display_label": "原文节选（仅条件 1 的首个分句；完整判据见下文）"
+    },
+    {
+      "page": "chapter10_galois_theory.html",
+      "anchor": "theorem-10-5",
+      "printed": "234",
+      "pdf_page": 249,
+      "text": "The degree of an extension Q(r) always matches the degree of the irreducible polynomial to which r is a root."
+    },
+    {
+      "page": "chapter10_galois_theory.html",
+      "anchor": "definition-10-6",
+      "printed": "235",
+      "pdf_page": 250,
+      "text": "exactly those permutations undetectable by equations of arithmetic",
+      "excerpt_scope": "定义中关于置换的限定语；完整定义见下文",
+      "display_label": "原文节选（定义中关于置换的限定语；完整定义见下文）"
+    },
+    {
+      "page": "chapter10_galois_theory.html",
+      "anchor": "theorem-10-7",
+      "printed": "238",
+      "pdf_page": 253,
+      "text": "Successive extensions multiply degrees."
+    },
+    {
+      "page": "chapter10_galois_theory.html",
+      "anchor": "theorem-10-8",
+      "printed": "239",
+      "pdf_page": 254,
+      "text": "There is an isomorphism φ : Q(r₁) → Q(r₂) that replaces every r₁ with r₂, but fixes Q."
+    },
+    {
+      "page": "chapter10_galois_theory.html",
+      "anchor": "theorem-10-9",
+      "printed": "243",
+      "pdf_page": 258,
+      "text": "The degree of a normal extension equals the order of its Galois group."
+    },
+    {
+      "page": "chapter10_galois_theory.html",
+      "anchor": "theorem-10-10",
+      "printed": "244",
+      "pdf_page": 259,
+      "text": "Each subgroup H < G is not only the reflection of an extension field of Q, but it is the reflection of the exact field that the automorphisms in H hold fixed."
+    },
+    {
+      "page": "chapter10_galois_theory.html",
+      "anchor": "theorem-10-11",
+      "printed": "245",
+      "pdf_page": 260,
+      "text": "each quotient along the chain is abelian.",
+      "excerpt_scope": "正规链的商群条件；完整等价判据见下文",
+      "display_label": "原文节选（正规链的商群条件；完整等价判据见下文）"
+    }
+  ]
+}

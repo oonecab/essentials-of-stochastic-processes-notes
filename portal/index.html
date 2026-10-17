@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Durrett、Weiss 与 CS:APP 的中文读书笔记：章节伴读、机制与推导、习题解答、C / Python 程序。">
-  <title>读书笔记 · Durrett、Weiss 与 CS:APP</title>
+  <meta name="description" content="Durrett、Weiss、CS:APP、Carter 与程士宏教材的中文读书笔记：章节伴读、机制与推导、习题解答、C / Python 程序。">
+  <title>读书笔记 · 随机过程、数据结构、系统、群论与测度概率</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -23,9 +23,9 @@
         <p class="eyebrow">THE READING SHELF / 学习书架</p>
         <h1 id="page-title">让理解，在阅读中发生。</h1>
         <p class="lead">按原书章节组织的中文伴读。读清定义与推导，先尝试习题，再用程序核对自己的理解。</p>
-        <div class="shelf-caption"><span>选择一本书开始</span><span>03 本笔记</span></div>
+        <div class="shelf-caption"><span>选择一本书开始</span><span>05 本笔记</span></div>
       </section>
-      <section class="books" id="books" aria-label="三本书的读书笔记">
+      <section class="books" id="books" aria-label="五本书的读书笔记">
         <article class="book stochastic" aria-labelledby="stochastic-title">
           <div class="cover" aria-hidden="true">
             <div class="cover-top"><span>RICHARD DURRETT</span><span>01</span></div>
@@ -72,6 +72,38 @@
             <p class="book-scope"><strong>14</strong> 页笔记 <i aria-hidden="true">/</i> <strong>419</strong> 道习题 <i aria-hidden="true">/</i> 序言、第 1—12 章与三个部分</p>
             <ul class="topics" aria-label="主要主题"><li>程序执行与性能</li><li>链接与进程</li><li>虚拟内存</li><li>I/O、网络与并发</li></ul>
             <div class="book-actions"><a class="read-button" href="csapp/notes/book_overview.html">进入 CS:APP 笔记 <span aria-hidden="true">↗</span></a><a class="start-link" href="csapp/notes/preface.html">从序言开始 →</a></div>
+          </div>
+        </article>
+        <article class="book group-theory" aria-labelledby="group-theory-title">
+          <div class="cover" aria-hidden="true">
+            <div class="cover-top"><span>NATHAN C. CARTER</span><span>04</span></div>
+            <p class="cover-title">Visual<br>Group<br>Theory</p>
+            <svg class="cover-diagram" viewBox="0 0 300 90"><path d="M72 20h78l78 25-78 25H72L33 45Z"/><circle cx="72" cy="20" r="10"/><circle cx="150" cy="20" r="10"/><circle cx="228" cy="45" r="10"/><circle cx="150" cy="70" r="10"/><circle cx="72" cy="70" r="10"/><circle cx="33" cy="45" r="10"/></svg>
+            <div class="cover-bottom"><span>动作 · 对称 · 结构</span><span>MAA / 2009</span></div>
+          </div>
+          <div class="book-body">
+            <p class="book-meta">群论与可视化 <span>Carter · Visual Group Theory</span></p>
+            <h2 id="group-theory-title"><a href="visual-group-theory/notes/book_overview.html">视觉群论</a></h2>
+            <p class="book-description">从魔方与可逆动作建立直觉，用图看见群的结构，再沿子群、商群和同态走向方程。</p>
+            <p class="book-scope"><strong>12</strong> 页笔记 <i aria-hidden="true">/</i> <strong>302</strong> 道习题 <i aria-hidden="true">/</i> 全书地图、序言与第 1—10 章</p>
+            <ul class="topics" aria-label="当前主题"><li>Cayley 图</li><li>几何对称</li><li>运算表与群公理</li><li>C/Python 实验</li></ul>
+            <div class="book-actions"><a class="read-button" href="visual-group-theory/notes/book_overview.html">进入视觉群论笔记 <span aria-hidden="true">↗</span></a><a class="start-link" href="visual-group-theory/notes/preface.html">从序言开始 →</a></div>
+          </div>
+        </article>
+        <article class="book measure-probability" aria-labelledby="measure-probability-title">
+          <div class="cover" aria-hidden="true">
+            <div class="cover-top"><span>程士宏 / CHENG SHIHONG</span><span>05</span></div>
+            <p class="cover-title">测度论与<br>概率论基础</p>
+            <svg class="cover-diagram" viewBox="0 0 300 90"><rect x="20" y="16" width="260" height="58" rx="3"/><path d="M85 16v58m65-58v58m65-58v58"/><text x="52" y="51">A₁</text><text x="117" y="51">A₂</text><text x="182" y="51">A₃</text><text x="247" y="51">A₄</text></svg>
+            <div class="cover-bottom"><span>可测 · 积分 · 极限</span><span>北京大学出版社 / 2004</span></div>
+          </div>
+          <div class="book-body">
+            <p class="book-meta">测度论与概率基础 <span>程士宏 · 第一版</span></p>
+            <h2 id="measure-probability-title"><a href="measure-probability/notes/book_overview.html">测度论与概率论基础</a></h2>
+            <p class="book-description">从可测结构走向积分、密度与条件期望，沿证明中的条件理解收敛、分解和信息更新。</p>
+            <p class="book-scope"><strong>6</strong> 页笔记 <i aria-hidden="true">/</i> <strong>115</strong> 道习题 <i aria-hidden="true">/</i> 全书总览、序言与前四章</p>
+            <ul class="topics" aria-label="当前主题"><li>可测结构</li><li>外测度与扩张</li><li>收敛方式</li><li>C/Python 模型</li></ul>
+            <div class="book-actions"><a class="read-button" href="measure-probability/notes/book_overview.html">进入测度与概率笔记 <span aria-hidden="true">↗</span></a><a class="start-link" href="measure-probability/notes/preface.html">从序言开始 →</a></div>
           </div>
         </article>
       </section>

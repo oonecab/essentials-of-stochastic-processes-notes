@@ -1,0 +1,683 @@
+{
+  "status": "completed_locally",
+  "reviewed_at": "2026-10-17T13:33:15.828006+08:00",
+  "browser": "Ego Lite 0.5.1.13 / Chromium",
+  "task": {
+    "taskSpace": 19,
+    "finished": true,
+    "receipt": {
+      "spaceId": 19,
+      "closedSpace": true,
+      "keptManagedLabels": [],
+      "closedManagedLabels": [
+        "p1"
+      ],
+      "preservedUnmanagedCount": 0
+    }
+  },
+  "scope": "Chapters 9–10; prior chapter acceptance retained in history",
+  "phone_boundary": "390 × 844 Chromium device emulation; no physical phone",
+  "viewports": [
+    [
+      1800,
+      1000
+    ],
+    [
+      1440,
+      1000
+    ],
+    [
+      1024,
+      1000
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "matrix_cases": 8,
+  "final_matrix": [
+    {
+      "ch": 9,
+      "width": 1800,
+      "documentWidth": 1785,
+      "exercises": 28,
+      "overflow": []
+    },
+    {
+      "ch": 9,
+      "width": 1440,
+      "documentWidth": 1425,
+      "exercises": 28,
+      "overflow": []
+    },
+    {
+      "ch": 9,
+      "width": 1024,
+      "documentWidth": 1009,
+      "exercises": 28,
+      "overflow": []
+    },
+    {
+      "ch": 9,
+      "width": 390,
+      "documentWidth": 390,
+      "exercises": 28,
+      "overflow": []
+    },
+    {
+      "ch": 10,
+      "width": 1800,
+      "documentWidth": 1785,
+      "exercises": 30,
+      "overflow": []
+    },
+    {
+      "ch": 10,
+      "width": 1440,
+      "documentWidth": 1425,
+      "exercises": 30,
+      "overflow": []
+    },
+    {
+      "ch": 10,
+      "width": 1024,
+      "documentWidth": 1009,
+      "exercises": 30,
+      "overflow": []
+    },
+    {
+      "ch": 10,
+      "width": 390,
+      "documentWidth": 390,
+      "exercises": 30,
+      "overflow": []
+    }
+  ],
+  "figures_reviewed": 44,
+  "figures_by_chapter": {
+    "9": 16,
+    "10": 28
+  },
+  "figure_contact_sheets": 8,
+  "all_figure_screenshots_opened_as_contact_sheets": true,
+  "all_repaired_figures_opened": true,
+  "all_viewport_contact_sheets_opened": true,
+  "figure_edge_audit": [
+    {
+      "name": "chapter09_sylow_theory.html",
+      "hits": []
+    },
+    {
+      "name": "chapter10_galois_theory.html",
+      "hits": []
+    }
+  ],
+  "annotation_bindings": [
+    {
+      "id": "s9-1",
+      "active": "#s9-1",
+      "context": "#s9-1",
+      "visible": true,
+      "text": "理解与边界轨道与稳定子属于不同集合Orb(s) 在状态集合 S 中；Stab(s) 在群 G 中。作用的核是所有点稳定子的交集，不是任意一个稳定子。一个点被固定，也不意味着对应群元素在整个作用中不可见。"
+    },
+    {
+      "id": "s9-2",
+      "active": "#s9-2",
+      "context": "#s9-2",
+      "visible": true,
+      "text": "理解与边界为什么选乘积为单位元的元组若直接数 gᵖ=e，很难看出总数。扩充到自由选择前 p−1 个坐标的 X 后，总数变得可算；循环作用又把所求对象恰好变成固定点。"
+    },
+    {
+      "id": "s9-3",
+      "active": "#s9-3",
+      "context": "#s9-3",
+      "visible": true,
+      "text": "理解与边界正规化子为什么出现H 在 G 中可能不正规，但在 N_G(H) 中一定正规。9.9 让我们知道 N_G(H)/H 的阶还含多少 p 因子，下一步才有合法的商群可用。"
+    },
+    {
+      "id": "s9-4",
+      "active": "#s9-4",
+      "context": "#s9-4",
+      "visible": true,
+      "text": "理解与边界每一步都留下可检查的接口第一定理把 p 子群嵌入最大者，第二定理让最大者构成一个共轭轨道，第三定理把这个轨道的点数限制为一个整除条件和一个同余条件。数目为 1 才能直接推出正规。"
+    },
+    {
+      "id": "s9-5",
+      "active": "#s9-5",
+      "context": "#s9-5",
+      "visible": true,
+      "text": "理解与边界分类题要同时保证穷尽与不重复只写出几个群不能完成分类。9.28 先用 n₃ 分支证明任何 12 阶群都会落入清单，再证明这些结构实际存在，最后用不变量区分它们。"
+    },
+    {
+      "id": "program-sylow",
+      "active": "#program-sylow",
+      "context": "#program-sylow",
+      "visible": true,
+      "text": "理解与边界计算与证明如何相互检查程序得到具体子群，Sylow 定理给它们必须满足的阶、共轭与数目条件。额外独立检查直接枚举 S₂—S₅ 的全部子群，再按阶筛选出各 Sylow 子群，避免两种语言共享同一个构造错误。"
+    },
+    {
+      "id": "s10-1",
+      "active": "#s10-1",
+      "context": "#s10-1",
+      "visible": true,
+      "text": "理解与边界先确定“可解”的含义本章省略的限定始终是“用根式”。代数基本定理保证非恒定复系数多项式有复根；Galois 理论讨论的是这些根能否用指定运算表达。"
+    },
+    {
+      "id": "s10-2",
+      "active": "#s10-2",
+      "context": "#s10-2",
+      "visible": true,
+      "text": "理解与边界有限根式塔与一次开根不同表达式 √(1+∛2) 需要前一层提供下一层的被开方数。判断根式可达性必须允许这种嵌套，不能只研究 Q(ⁿ√a) 的单步形式。"
+    },
+    {
+      "id": "s10-3",
+      "active": "#s10-3",
+      "context": "#s10-3",
+      "visible": true,
+      "text": "理解与边界Galois 对称不要求保持距离√2↦−√2 而 7/5↦7/5，两个原本很近的数会分开。群作用保的是加法、乘法和基域，不是复平面的欧氏距离。"
+    },
+    {
+      "id": "s10-4",
+      "active": "#s10-4",
+      "context": "#s10-4",
+      "visible": true,
+      "text": "理解与边界根号不是一般多项式的通用逆运算ⁿ√a 只直接解决 xⁿ−a 的一个分支。嵌套根号能组合出很多更复杂的根，但它能走多远，需要整个分裂域的群结构来判断。"
+    },
+    {
+      "id": "s10-5",
+      "active": "#s10-5",
+      "context": "#s10-5",
+      "visible": true,
+      "text": "理解与边界次数、根数和群阶是三种数x³−2 次数为 3，单根域次数为 3，分裂域次数为 6；Galois 群阶为 6。正规可分条件连接的是分裂域次数与自同构群阶，并非任意一个“3”。"
+    },
+    {
+      "id": "s10-6",
+      "active": "#s10-6",
+      "context": "#s10-6",
+      "visible": true,
+      "text": "理解与边界为什么图会倒过来固定更多元素，会消除更多对称。真正的对应由固定域引理保证；画出两个相似的格只是结果的呈现。根式判据还要另外使用单位根与可解链，不能仅靠格的外形。"
+    },
+    {
+      "id": "s10-7",
+      "active": "#s10-7",
+      "context": "#s10-7",
+      "visible": true,
+      "text": "理解与边界两个不同的不可解结论A₅ 不可解是关于正规链；f 不可用根式解是关于数的表达。两者由 Theorem 10.11 连接，不能从某张根图缺少镜面对称直接作判断。"
+    },
+    {
+      "id": "s10-8",
+      "active": "#s10-8",
+      "context": "#s10-8",
+      "visible": true,
+      "text": "理解与边界原图是计算输入10.26 的蓝色循环长度与 10.29 的节点数直接决定结论。保留原编号和箭头，才能区分原书标签失误与数学方法本身的问题。"
+    },
+    {
+      "id": "program-galois",
+      "active": "#program-galois",
+      "context": "#program-galois",
+      "visible": true,
+      "text": "理解与边界为什么精确系数适合这里t 和 s 的小数值只能近似，而 t³=2、s²=−3 是精确关系。把元素化为唯一的六项基底后，关系验证变成有理数运算，不会因舍入误差把不同自同构混为一谈。"
+    }
+  ],
+  "interactions": [
+    {
+      "action": "mobile TOC jump",
+      "result": {
+        "hash": "#s10-6",
+        "top": 127.9140625,
+        "active": "#s10-6"
+      }
+    },
+    {
+      "action": "chapter9 deep link and native toggle",
+      "open": true
+    },
+    {
+      "action": "local table scroll",
+      "result": {
+        "left": 85,
+        "documentX": 0,
+        "width": 390
+      }
+    },
+    {
+      "action": "download",
+      "file": "sylow.py",
+      "sha256": "a912c93325b8d76b9c358148481f12e25420cfe7993b49eff5237b240714942c",
+      "matches": true
+    },
+    {
+      "action": "download",
+      "file": "sylow.c",
+      "sha256": "458b493ad7289ef3309129f5eeb151d661d3c99a9530321d3196da7e8be4aba6",
+      "matches": true
+    },
+    {
+      "action": "download",
+      "file": "galois.py",
+      "sha256": "db3428a0421fcde4851b9273be3ef1ef220cb345a7b5f60f4a6c81b0ed632f9f",
+      "matches": true
+    },
+    {
+      "action": "download",
+      "file": "galois.c",
+      "sha256": "097b40f610e8310fbfff0d0a9401fc0a4e1286cb1500b69fae22e20cb8602c6d",
+      "matches": true
+    }
+  ],
+  "local_horizontal_scroll": [
+    {
+      "ch": 9,
+      "kind": "figure",
+      "left": 318,
+      "documentX": 0,
+      "width": 390
+    },
+    {
+      "ch": 9,
+      "kind": "code",
+      "left": 425,
+      "documentX": 0,
+      "width": 390
+    },
+    {
+      "ch": 10,
+      "kind": "figure",
+      "left": 352,
+      "documentX": 0,
+      "width": 390
+    },
+    {
+      "ch": 10,
+      "kind": "code",
+      "left": 433.5,
+      "documentX": 0,
+      "width": 390
+    }
+  ],
+  "no_javascript": {
+    "results": [
+      {
+        "chapter": 9,
+        "javascriptDisabled": true,
+        "before": [
+          "class",
+          "exercise",
+          "id",
+          "ex-9-1",
+          "data-exercise",
+          "9.1"
+        ],
+        "after": [
+          "class",
+          "exercise",
+          "id",
+          "ex-9-1",
+          "data-exercise",
+          "9.1",
+          "open",
+          ""
+        ],
+        "nativeMouseClick": true,
+        "answerHeight": 236,
+        "staticCounts": {
+          "mathml": 1,
+          "svg": 17,
+          "code": 3
+        }
+      },
+      {
+        "chapter": 10,
+        "javascriptDisabled": true,
+        "before": [
+          "class",
+          "exercise",
+          "id",
+          "ex-10-1",
+          "data-exercise",
+          "10.1"
+        ],
+        "after": [
+          "class",
+          "exercise",
+          "id",
+          "ex-10-1",
+          "data-exercise",
+          "10.1",
+          "open",
+          ""
+        ],
+        "nativeMouseClick": true,
+        "answerHeight": 435,
+        "staticCounts": {
+          "mathml": 2,
+          "svg": 29,
+          "code": 3
+        }
+      }
+    ],
+    "restored": true
+  },
+  "final_navigation": [
+    {
+      "selector": ".chapter-nav a[href=\"chapter09_sylow_theory.html\"] >> nth=0",
+      "url": "http://127.0.0.1:49572/visual-group-theory/notes/chapter09_sylow_theory.html"
+    },
+    {
+      "selector": ".chapter-nav a[href=\"chapter10_galois_theory.html\"] >> nth=0",
+      "url": "http://127.0.0.1:49572/visual-group-theory/notes/chapter10_galois_theory.html"
+    },
+    {
+      "selector": ".chapter-nav a[href=\"book_overview.html\"] >> nth=0",
+      "url": "http://127.0.0.1:49572/visual-group-theory/notes/book_overview.html"
+    },
+    {
+      "selector": "a[href=\"../code/index.html\"]",
+      "url": "http://127.0.0.1:49572/visual-group-theory/code/index.html"
+    },
+    {
+      "selector": "a[href=\"../notes/book_overview.html\"] >> nth=0",
+      "url": "http://127.0.0.1:49572/visual-group-theory/notes/book_overview.html"
+    },
+    {
+      "selector": "a[href=\"../../\"] >> nth=0",
+      "url": "http://127.0.0.1:49572/"
+    },
+    {
+      "selector": "a.read-button[href=\"visual-group-theory/notes/book_overview.html\"]",
+      "url": "http://127.0.0.1:49572/visual-group-theory/notes/book_overview.html"
+    },
+    {
+      "selector": "a[href=\"../code/index.html\"]",
+      "url": "http://127.0.0.1:49572/visual-group-theory/code/index.html"
+    },
+    {
+      "selector": "a[href=\"../notes/book_overview.html\"] >> nth=0",
+      "url": "http://127.0.0.1:49572/visual-group-theory/notes/book_overview.html"
+    },
+    {
+      "selector": "a[href=\"../../\"] >> nth=0",
+      "url": "http://127.0.0.1:49572/"
+    },
+    {
+      "selector": "a.read-button[href=\"visual-group-theory/notes/book_overview.html\"]",
+      "url": "http://127.0.0.1:49572/visual-group-theory/notes/book_overview.html"
+    }
+  ],
+  "final_release_recheck": {
+    "release": "20261017T133042",
+    "origin": "http://127.0.0.1:50157",
+    "results": [
+      {
+        "width": 1440,
+        "guide": {
+          "title": "从群动作到 Galois 理论的程序",
+          "headings": [
+            "第 1 章：三幅画的动作枚举",
+            "第 2 章：正多边形地图",
+            "第 3 章：无限饰带",
+            "第 4 章：有限表的完整公理检查",
+            "第 5—8 章：结构与映射",
+            "第 9—10 章：Sylow 与域自同构"
+          ],
+          "downloads": [
+            "actions.py",
+            "actions.c",
+            "cayley.py",
+            "cayley.c",
+            "frieze.py",
+            "frieze.c",
+            "tables.py",
+            "tables.c",
+            "permutations.py",
+            "permutations.c",
+            "subgroups.py",
+            "subgroups.c",
+            "products.py",
+            "products.c",
+            "homomorphisms.py",
+            "homomorphisms.c",
+            "sylow.py",
+            "sylow.c",
+            "galois.py",
+            "galois.c"
+          ],
+          "documentWidth": 1440
+        },
+        "sylowURL": "http://127.0.0.1:50157/visual-group-theory/notes/chapter09_sylow_theory.html#program-sylow",
+        "shelf": "NATHAN C. CARTER04\n            VisualGroupTheory\n            \n            动作 · 对称 · 结构MAA / 2009\n          \n          \n            群论与可视化 Carter · Visual Group Theory\n            视觉群论\n            从魔方与可逆动作建立直觉，用图看见群的结构，再沿子群、商群和同态走向方程。\n            12 页笔记 / 302 道习题 / 全书地图、序言与第 1—10 章\n            Cayley 图几何对称运算表与群公理C/Python 实验\n            进入视觉群论笔记 ↗从序言开始 →",
+        "mapURL": "http://127.0.0.1:50157/visual-group-theory/notes/book_overview.html"
+      },
+      {
+        "width": 390,
+        "guide": {
+          "title": "从群动作到 Galois 理论的程序",
+          "headings": [
+            "第 1 章：三幅画的动作枚举",
+            "第 2 章：正多边形地图",
+            "第 3 章：无限饰带",
+            "第 4 章：有限表的完整公理检查",
+            "第 5—8 章：结构与映射",
+            "第 9—10 章：Sylow 与域自同构"
+          ],
+          "downloads": [
+            "actions.py",
+            "actions.c",
+            "cayley.py",
+            "cayley.c",
+            "frieze.py",
+            "frieze.c",
+            "tables.py",
+            "tables.c",
+            "permutations.py",
+            "permutations.c",
+            "subgroups.py",
+            "subgroups.c",
+            "products.py",
+            "products.c",
+            "homomorphisms.py",
+            "homomorphisms.c",
+            "sylow.py",
+            "sylow.c",
+            "galois.py",
+            "galois.c"
+          ],
+          "documentWidth": 390
+        },
+        "sylowURL": "http://127.0.0.1:50157/visual-group-theory/notes/chapter09_sylow_theory.html#program-sylow",
+        "shelf": "NATHAN C. CARTER04\n            VisualGroupTheory\n            \n            动作 · 对称 · 结构MAA / 2009\n          \n          \n            群论与可视化 Carter · Visual Group Theory\n            视觉群论\n            从魔方与可逆动作建立直觉，用图看见群的结构，再沿子群、商群和同态走向方程。\n            12 页笔记 / 302 道习题 / 全书地图、序言与第 1—10 章\n            Cayley 图几何对称运算表与群公理C/Python 实验\n            进入视觉群论笔记 ↗从序言开始 →",
+        "mapURL": "http://127.0.0.1:50157/visual-group-theory/notes/book_overview.html"
+      }
+    ]
+  },
+  "preview_byte_comparison": "tmp/visual-group-theory-ch09-10-20261017/preview-byte-comparison-final.json",
+  "fixes": [
+    "Separated overlapping arrows in S3 conjugation graph",
+    "Made the order-12 classification branches explicit",
+    "Rerouted seven paths crossing unrelated nodes, preserving generator endpoints",
+    "Kept the 10.19 table wide with local mobile scrolling",
+    "Moved the program guide maintenance section to the end so chapters 5–10 and all 20 downloads are rendered"
+  ],
+  "tool_recovery_notes": [
+    "Initial viewport/clip capture used full screenshots plus DOM-bounded contact-sheet crops",
+    "CDP DOM bounds and native mouse verified disabled-JavaScript details",
+    "Final navigation selected the observed first home link because the page has three equivalent links",
+    "The CLI environment was not forwarded to the browser runtime; the observed local preview URL was supplied directly"
+  ],
+  "evidence_directory": "tmp/visual-group-theory-ch09-10-20261017/browser",
+  "evidence_sha256": {
+    "tmp/visual-group-theory-ch09-10-20261017/browser/accepted-guide-1440-5-8.png": "653bde79683e47ed9f4bea575610774a38900a5d98b749afff436fc7a7b6c123",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/accepted-guide-1440-9-10.png": "2b37db88e7540d0b5da8eda27a8ebadcde9b62321f7eb2b889a27c22518c53e4",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/accepted-guide-1440-top.png": "30491c2f24bdb208425b06ea5019a8095626902a54d42746b567c7ae1d65fcce",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/accepted-guide-390-5-8.png": "e475185a5a4d6b581049b0a149cfb4664476f2b080bba53d37f27ca807ea8350",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/accepted-guide-390-9-10.png": "289c0db03e186568d92b8cca524a359f69ac8fb897d324c77cb8eda2735f00cb",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/accepted-guide-390-top.png": "c6d6da161990f7d1a5ad8ab5f865d2b65717d9d319ac5c770ce00df011291511",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/accepted-release.json": "6a06cf7ca0d61dc3b8fddcc930f92399001b4fc87fadd8368d9c52711957c3b1",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/accepted-shelf-1440.png": "ad92dca5f40e905c0781767da14d9056433e89be9db6fad1e1cc375d1751488e",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/accepted-shelf-390.png": "b6504cea468891907eafcf96b4594f84a89c873bd2af96edf83b9e84f931c7b4",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/capture.json": "1fe5fa6efef65f52dcd0d55dc1d5bc1d2cbfb587a4decb6cc0cffcd59ee223ea",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch10-1024-top.png": "2077544849ebc264f2dd628cacbb0922e87147cfbd9b60c5058d42c8b49873f1",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch10-1440-ex-10-22.png": "85d6e53a69199302f7d2fdcfeca69efe46f565621d2cb345bd411433a236d0e0",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch10-1440-program-galois.png": "2c71534168e1a3e3be05a232c18141c57a4787e24b0fbb74b768dceb5563d0e5",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch10-1440-s10-6.png": "cbb3a49289be18e544337971c282af6026d7941daeed8660462d92b679e743e5",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch10-1440-top.png": "1704a6ff005a50b713e5da04b210b3e0a87206f84a0bb87a6cc96782c7b6d1e7",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch10-1800-top.png": "74c1f466325ca6627bff32e0eb5cd570cd09f6b8e68c6afd516b79cb857d918d",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch10-390-ex-10-22.png": "5649d0ac216e022aac25525c94af9e3790bc719c8ef27a2ca4e7ea03ac00a809",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch10-390-program-galois.png": "c8a4f22d8bc2c109d5e6987b867c3c3ecb3733f3a72a2426f938fd368f6254dc",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch10-390-s10-6.png": "81299ef692b9804b74a50e1c1e99fc8e0db2df383a3d24ecbbb490aadf6b62c5",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch10-390-top.png": "64381578048e149dd9e4360f48bbb67eb972b3912d6739c8b060a0e211dd5751",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch9-1024-top.png": "7b2a1789824615d744630fb5ddfbaa21fac66760498f4f9b8f1b5967dd468204",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch9-1440-ex-9-28.png": "cf9521a1f720c1cefed56ce319b17638515f882563caf44f5b8edf1f45ebdb38",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch9-1440-program-sylow.png": "2ef1fd2312c2aaa2eee1d306719c34df93d470852ce57f98224be2d0a94e53ff",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch9-1440-s9-4.png": "ffa78a43a4bd3ee898c09caa93ec1c626d9502625ede2ea88d4c753efadb0114",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch9-1440-top.png": "614eabf351c63e2f40c372a2abf07b81225e6de25a5e9578ed4d9959e9968f5d",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch9-1800-top.png": "25755d7753ef4e042fbc581721763435c6c4b8d26f2dee6d982e2cc902c29143",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch9-390-ex-9-28.png": "8b03cdc78255f6d1292fa453177d35ebd3a86a469e9f50f5ecc2b89aa97a1777",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch9-390-program-sylow.png": "e236ba0e930df5d1360f03fb1974155f8b9d86f5152b9e7cce0708edcbe9f377",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch9-390-s9-4.png": "b993b04e0cd2676bd72a5af401be0a685ef251c9d842fb45dd1b16d971d6c07c",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/ch9-390-top.png": "0ab6bb7d01f4349a8df19a08892b8537877fe7e7bde81e89a3fcd9394d6c1b7f",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/biquadratic-lattice.png": "d04814df85d99f2c5cbd500047398000f3fd8155fd00d328a907b7d09efa63b8",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/cauchy-tuples.png": "6a2379008361538e55224ed275022e4fcbf11082e2af42413540f674fa10648b",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/complex-roots.png": "3f112dce92a7b6520e3d213a24c348fe8afc5b4c7f782269da42263e391935a1",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/cubic-lattice.png": "274388a844f51c4cc6d2e151aac1390b61dc7368dbaf5d6dd1913d45c43e8283",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/cubic-roots.png": "5edf3c76bb1cbc88f4348bcb28ba33c77d54a1dfea181550c64237f989dd3d3c",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-11-fields.png": "5af93dc85389bbc21a2eef21ec6589171b4a394a218762c8df7d946916a96d22",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-13-four.png": "29ab0da3ef1782fd0b054fcff908eb5d9a2b96c797b83d7a30119930c804a13f",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-13-two.png": "a36c6af4f9a03dafca22a787324218447347b3cd381a975e294e2f2cc06d18cb",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-17-unit.png": "46e4a9db4c513a13132d120371b3af628d78b79b1fab280a1029f3f7929a89f0",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-18-fields.png": "1630ea38434fb653b67d2b5cc9fd35146027ad2fc54fa6dde62a0634488725a3",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-23-roots.png": "0f8a6d6ec2f105f4ce4acea5603242e73ad586c8bae420f593c34cb7e8ccb8f3",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-26-source.png": "5000c63cc35be236d79f4d53a84c45dcefbc2c83359a74103450cc52d5975503",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-29-11-add.png": "f50ad23e977903312c3d2b967509fe0b807a9d4e82b782cb979c7e0be4592c54",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-29-11-mul.png": "f9e6bcbdaaa7a8b4b6f08269464abf044306ced81078543f85839039f4f163ce",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-29-3-add.png": "c74c629fe465f028cb1e965257bb829cf17f820930e6ec3ebc9c265a8aa9e1c3",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-29-3-mul.png": "525cf762f78668548d4dffc0d661c1da4a7793105566b1315b36c47d2b7c7af1",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-29-4-add.png": "7294b357c81295096801fae37c652a41ba6bc723073bd32f1e868bfa53ec58e5",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-29-4-mul.png": "a672d8a892faac59d3bf42208b3309accfb4c45a7bcba947abb54a74f5d194b8",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-29-7-add.png": "7b200a646980f21f09525f4cc518c65677a570c0796267b258d0a4ea752b4565",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-29-7-mul.png": "54d969dff8cef61ec9321d409d39389a2ed67ddc8d9578c82e5d1040b8f26745",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-29-source4-add.png": "ad0170e5c5b49525caa9792bd453fe3b166ba6101feb3ba2b17e08f2f692c909",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-29-source4-mul.png": "a55da7f69a44ddb3b79433086e474a354e36e43280790c9131c769439d7bfbf1",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-29-source8-add.png": "e394efe8ef0bb99932c6e22d0ba64564874d3b34cdd283f15b5450c98ac3f717",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex10-29-source8-mul.png": "5804eea24b5fb8775474aa8143717b14a429fa93b81aa3b7bf0e7f03e60e38ee",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex9-10-action.png": "5c9322351bede9aecf95aa6f12068b3f0c58144bc359a00d51472275c6f8e7a0",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex9-11-action.png": "ce0da820c8c98659bf81b7ebd2f2fa91be32983214c859546dc6858c2ec844d8",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex9-27-grid.png": "4d4f4d5b19e325b12ed267a206beb2f0baeb4e4110f76c402f0bb82c4c31198f",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex9-7-action.png": "918ddd7ac97852e55335e475b91c0331668870f16d45eaa6f5fda77dc97ee5a7",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex9-8a.png": "2f3396f04d7634b68340fa61f45a51ec4b2a45fd36abbae1943c69af80bc70e1",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex9-8b.png": "8fd61bc066e6010d1ae2be62c6fe643adec7141bb167c4c287880b575e52f345",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex9-8c.png": "a056d5f5b0c695ac5e84b11a79cc7899bb085d3222c0439e10a8b78db81b6567",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/ex9-9-action.png": "9e9217c220120a7c9f8ab6baacd108c539def87122173820b806e6517cb588d7",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/mirror-s3.png": "d1fb2590f7df1087ddb054040fa04846b5d3a394b196900045b3b2fd1a68020c",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/normalizer-count.png": "6bb9d88d947f501220c309a1cb86c5d906f4dcff94157419a17cb804ac586f2c",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/number-fields.png": "053754c3c6486dc1db32dce53b55ec48edbb281f4057206bca48045669d84296",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/order12-tree.png": "07cd1c2af560e8772ce9c5f195806621ae11c522829803eb078d0532364904d3",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/order6-direct.png": "ff5bf1cae0e3cab50431fbe2a034f139b0c59af06a60fe99d4e915bdbca88464",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/order6-twisted.png": "2bfcacd3560fbc7973517ae57486f2991b5e65da0865e190bf77f2b814b3dc87",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/quintic-proof.png": "62bfea9eda8c2d90de44fac7e3ced334ca25ba8e897f329da6f2d891799db249",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/radical-chain.png": "b4d6ec885b9eea86a5e8ba98fee5fd24775f47b68e6ddd12f9981371faa7f9f3",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/rectangle-action.png": "edc23594c3bc5450a538b98ab5226a766cba27345550cd486dcc4087af2d87be",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/s3-conjugation.png": "22a785ad4417ef8ef1d28b45d00af143b28f666504704f76823b0ee53191ca98",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/sheet-1.jpg": "dc71884c7d093e774f6026978e3e41a37680a69f2c38e471307be587a607677f",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/sheet-2.jpg": "98de8b7e8b870b056323c14562073f535ab8af3065b9fa9febdc9ad0aaf846b1",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/sheet-3.jpg": "6565b1a8e56a2ad44f8b7f9b01a4e164854ed226de25b7c62a470ceb42b70863",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/sheet-4.jpg": "e7d3d7fb737b7eb205952674d32cc47ecb85fe53fce0cba328ca0df0bd39463a",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/sheet-5.jpg": "06f45ff7ba5408bcd57242c10da2496c2aa9e45e9a566474812bb74faa88714d",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/sheet-6.jpg": "8584e035c653a4873ed0dc343b65cc2074cba29743a38bc7002af1b9c4083ffc",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/sheet-7.jpg": "e9aafc5557539b7bea904610474fb85ce90397e47a6dce224c0c0e68f14f6a29",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/sheet-8.jpg": "ccf0572a0ca64991edc9358d4f01c0903bf13e21157e95279a4de7e25e95b3a4",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/sqrt2-swaps.png": "35f8aa1b3fb90f1e916c00507671892e973438fdee630b078cd002b8111c88f3",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/sylow-lift.png": "8c4a206370e8bef4c17c5875408c1fa8970f1aed672265822e6b0e12089966bc",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/viewports-10.jpg": "2fd4e4a72a4d67c73c58f10f5133d3e86e13a2f55a83d6c7c8f258749a7398ef",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/contacts/viewports-9.jpg": "9705f9c7b55257f1cadea363310af052045263f5f667e716d57e75e48cd4e588",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/desktop-10-program-annotations.png": "e0a64ce55587f72c7569595030f571ba46f56f2943d749d48840d789da6f2edf",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/desktop-9-program-annotations.png": "d2fd48e259b7b706c64edb08fc7e15c0f790c0362f1b0c1827439a1d19b2eb20",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/edge-audit.json": "94611c09e1b086ecd425b419d546e3c79a3b4952968e861ef39e8540fc08e563",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/edge-repairs.json": "4f4dd650f1ffab1b9fe5ae2ed929fdf380809a99a9edd0a0ecc7263fc4ea55a1",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-biquadratic-lattice.png": "bf5041f63ecd29d7a2edc4511b9a97c4bf2f44809bf27fcf04e46ecd8aff2ab8",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-complex-roots.png": "ea06ad755c45bd63381a647168a9fc8f5ab80d6ea32c570c64c614f435bec842",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-cubic-lattice.png": "75f6c981ebbab731bcd6a6492cc74547a8f2750647714288f592c49ce5c49b95",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-cubic-roots.png": "8183c278d92ade903e23f4eab5fbdfc143206d2233c0e0ba41ed6f33c68f39d6",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-11-fields.png": "de06cdbe3da90c189ec071bcf796aa0df32631e25304f5884307771e4d42788f",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-13-four.png": "8532cf457d70d2c4b5e1be7bff6f3115e7292abc7bf1a217d4bc1979d8a9b01d",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-13-two.png": "d6ba8e948f6076a1437a57d8a28ff13a01cb545e7c4a17e376e9d7f32227fc99",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-17-unit.png": "db58adb3d8aae6159be63557d693f8f0d26bcbb9492daeed6c7ca4e144445eb4",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-18-fields.png": "561796051c71360c784a4cd2de4810c205e5e93aab578449e9bb8473039d3859",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-23-roots.png": "69365dabaf9a8c75375d14d2735140bb6ca4d40114a1ca7d2209e2f679d168ff",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-26-source.png": "e94638c0c6579418b4e6b4fd0bbe74b1f6026eb4472cb449195af18846494afc",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-29-11-add.png": "123904ab8219999eed289548b8f0ec3e1f0befa8015ba2088fb9d3e91d304416",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-29-11-mul.png": "594ce84599feec629d09ef666d05ca8e50d61d267a699620c4865975690054f7",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-29-3-add.png": "731e2a29d3ce0cf6def24b49f0df6dd42e3fb1f0014fad8f3a3e9b566d9e766a",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-29-3-mul.png": "90342674b68c79b8cfbd20ff855b7b4d4184151932c71d0949da3f564c5909b5",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-29-4-add.png": "32ec8e8046f2cb9d71b044460118051228b7db7f68f5ce20045abf3f1906fa0d",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-29-4-mul.png": "21ddc76f29f8eb455c4c3035379c126a2383cdc7f449f2f287854e4f4999afcf",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-29-7-add.png": "29e9e716d6434802fd717666f121e5e445c825c298ac4312e3ed8547763901fb",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-29-7-mul.png": "139527421fc219918f8a16d73088297a8901a0fe7169f80a961197d8a27b53d4",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-29-source4-add.png": "8fe074df7f9eb13b0949dcae3e62cc07d55840fbd13f16cc4aa7a0bedcd09378",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-29-source4-mul.png": "f033dfd1c5c49adb859d0c0fc2d28408453e6e6a1ab39dc4e23ae8154a877a4e",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-29-source8-add.png": "fca3ca8013165997d513524c86a1718aa08a1d86e6a8f41b4c68bdcfd184123d",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-ex10-29-source8-mul.png": "4d0fec3724ba1a0d5c2377b44463dd7cc02844807dab830c570c9957089a68a3",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-mirror-s3.png": "6749a9d50323d4386873794e69172ddfcb907b5cf2878075f6e358216e947286",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-number-fields.png": "d29afc2108861fd0ab771e038f1fb2d98d0ad34e7e7c8a369fd5d7acd3a6e201",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-quintic-proof.png": "3f29d0057327706883099d9b42bf3e85838c2720d3792a967663c30bec1e348b",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-radical-chain.png": "b89687a2d74c34e92006ae7ab0d595d12715b063924aae9560e6f1f9265cd8da",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-10-sqrt2-swaps.png": "4aab45bf4cc92c3e2b9f754d47793d590089c0e50ad1407cecf4a395f9fd9419",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-9-cauchy-tuples.png": "49641d1a20939ea60f0c199fd8704b2bade07337a0028ba29ea0e9db1f3ed3c8",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-9-ex9-10-action.png": "67aa8849f8977d590a4405578b80a005281c6fd69953748289be59074b50c7e6",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-9-ex9-11-action.png": "ff71030d06cda9c2d45afddabe8c85463a5a131a83f2b6c066a0901978ac6ed6",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-9-ex9-27-grid.png": "6b7da45cd7846c56b2a4a4553b92a252481721107784e9d4bdeff306a9f81705",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-9-ex9-7-action.png": "bb850955989bfdead1900d5cd92f1dc2826b8cbb48ae207b08112262c01cdc84",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-9-ex9-8a.png": "17bcd01e8fb88787c754efe0cd4e91cddbb6c02b40da3ed308a73bbcbb7c1359",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-9-ex9-8b.png": "87ded1d5778b6a79c395681692106af2382d2032d275cb869e7b7e24d0a7abcf",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-9-ex9-8c.png": "b689fc5b182ad67bb27bc81b675a0679b7d118fa4a897b264ee0f3351f326b7a",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-9-ex9-9-action.png": "89c36a68a6ffd5049ac606eb2d6d5462459aac2dab75d9520e75ec0e01818c09",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-9-normalizer-count.png": "256fe00b84ae7ca82d78ebfbe3e6a42fcac7088abe0880acf879419aee26de64",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-9-order12-tree.png": "7277f5dadc87cd0728689d1ff029895a1343ddf7caf4eb72b840f1ce62b9580b",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-9-order6-direct.png": "4907ec0c772d3adbaadfd6a468ecd0a089aef27bcdee554b1af5671f2efaa801",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-9-order6-twisted.png": "54947abb52735a9be33d0adb74086f5f9e6cecfb8d7bf1146d09bacec2cc062c",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-9-rectangle-action.png": "771724afb8ef98f7077f6b95149edc0bd87677e7e3b47b1f371cdcd946bcf715",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-9-s3-conjugation.png": "cfaacbfb43e04a5743a1bc691d8c98adee41f02f0d05382284f307e3e6bbe3c7",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/fig-9-sylow-lift.png": "e9bd38bad798ad9b468a2fd39af14a07db1f9b6098bc2c49632225450fe70848",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-ch10-1024.png": "f84b9722f53db08cb145df204c0f410bef61a4841a93d285c9cbefcbf42217c4",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-ch10-1440.png": "756fd248fcf23785d210472c4404b5ce90a81fbb17bcc95ea5209e916ec84a71",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-ch10-1800.png": "39cd87d6d4ece67b586bc324f5207b29284652f2b2dfedc9d026ab9c7c92e6e2",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-ch10-390.png": "6485629ac5e487b5f1c4fa6f07e1d3a222825492a29b1070080a569f28d49a2d",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-ch9-1024.png": "5f8e53d41f2cc96d4fb1db5632f563983cf9cefa2605df1ec42a328a1ca76997",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-ch9-1440.png": "ef0eed3722587371531db77fe13012e48740e43a31719461d7f62770b55b972c",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-ch9-1800.png": "29a7c545941b050607a0e6fdf194a8d27de01ae772805f86b597dfb4553ff39e",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-ch9-390.png": "0ab6bb7d01f4349a8df19a08892b8537877fe7e7bde81e89a3fcd9394d6c1b7f",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-guide-1440.png": "55592858c25cab27ddc0f357f475115b7dc45ea2ab045bf1de4ef29ce45bfbc7",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-guide-390.png": "65dc0aea4ec6314a5a2845f9d3f3a7b8a1cc9dc28d5d9ec3494bb9abe93e799b",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-map-1440.png": "6b5c0f20f4e52ec271df1ca384a1f977b764824ca5eab1cc4ba38d95ae8dc269",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-map-390.png": "b82d4aad842b292d7e64b7c81db17d9c32e014dee81e353190ba394c71a00186",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-proof-10-22-0.png": "b8991ceb4b3009dbcd36d32740a0da7d53e22eeb47e60324d76e40112f7d57bb",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-proof-10-22-1.png": "b7924978af8428edbb05eafe4544fdf531894b7f8ca710d1135d780a5d7eb87d",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-proof-10-22-2.png": "02480d18ce35cd484f799cef5dbdd635816ebe231c6f37818b9d851f928f16f7",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-review.json": "8cf99631ab297115617c1f3e944ff6fbb310fc782ab420c20d8c881a1042fe32",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-shelf-1440.png": "0a4e2d9487401c6f3a74763a0b7397d916f3377f8b6cc197d6abefea8901d78c",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-shelf-390.png": "cc1a1d408b30b2e4af14f3ca2522df2ba8c0d9021e3561052b87111ea9a20408",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-viewports-10.jpg": "abd5d1201f0040231793a034731bc2c5a8e9374675375d68f7e32098964d1e37",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/final-viewports-9.jpg": "662ed437e237c6204acb62179f15b8d6781c691511744f5e0642fa21281ee4f2",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/horizontal-annotations.json": "a0a6995c6d95a5d7fb4f2f39b68ade5a5e027014c01f91a718e6616ccbe3c170",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/interactions.json": "dec0b6f97d58206240c50a351ccd1d933798e5a91d12e0feeffdb52a3468239d",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/mobile-10-code-scroll.png": "cddd4eef26f67824c1ffa275bd3a4881930f537f63ec9136183e366d83261377",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/mobile-10-figure-scroll.png": "d2a65364bdfa7326f186bf8af291b522bc39d84dc4a0002eb56ff0e1b0d321d9",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/mobile-9-code-scroll.png": "d1ddaebb54efa8925e2d35723e101a34c8e4453a317132c50e91f787963c8354",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/mobile-9-figure-scroll.png": "65c63fa7d3bb678c16971b54e69622cc7fe63f9a73d63f7b82613a6ba96d7367",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/mobile-table-before.png": "632e8983436d0efbe5ad502790860bd1909ae7707a3fe8f2bc00f956b6f41d66",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/mobile-table-horizontal.png": "b340cc03dfd9ca5306113bedafe7c65061affb850515c7bd960287976db5013e",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/mobile-toc-open.png": "e295001da60dccffc2364b314a0cf7f6cff7f404b3d8eba67afe7dafd4e0fbf6",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/no-js-ch10.png": "49f75049493008826ae6910ebeb31d5162e79b60749193e9965420cb53ea5a99",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/no-js-ch9.png": "a83dd480811fcda1ffaae9d74690dc4289908ec82ec5cd3012f697527c71a144",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/no-js.json": "030171fd87144c23d51466af9f248a7713e7767b0ebaacc900bbdd781e611e20",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/repaired-edge-audit.json": "c6f3c699b5b0c656d528068b46ea685fe18f957c56eef07805d4baae1620a31a",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/repaired-ex10-26-source.png": "c273e452c675828d006a64adc895e9539b31cc8389f97ad05649d7a17c5e2cb3",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/repaired-ex9-27-grid.png": "5dd7267e54a46ec8a16d2a0ecc2ea097929fd00f28c4bbe915392898429a839b",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/repaired-order12-tree.png": "2469c16c8a296942394c2c0890e154451686cf0d18ba0ad98fcd878be0757b00",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/repaired-s3-conjugation.png": "04d00d136ec2d10a6c638445aca2d2f7cbf8e27d6288edd1db9eb84b3620b5ac",
+    "tmp/visual-group-theory-ch09-10-20261017/browser/task-finished.json": "ff84993d956c1c4215650d585c056922049cad3337055d8466b52d910541b1e5"
+  },
+  "open_findings": [],
+  "previous_record": "review/history/batch03-browser.json"
+}

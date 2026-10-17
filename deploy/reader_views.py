@@ -11,7 +11,8 @@ from urllib.parse import urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
 BOOKS = {'stochastic': 'Durrett · 随机过程', 'weiss': 'Weiss · 数据结构与算法',
-         'csapp': 'CS:APP · 深入理解计算机系统'}
+         'csapp': 'CS:APP · 深入理解计算机系统', 'visual-group-theory': 'Carter · 视觉群论',
+         'measure-probability': '程士宏 · 测度论与概率论基础'}
 EXTERNAL_LINKS = {
     'https://epubs.siam.org/doi/10.1137/0206024': 'https://www.cs.jhu.edu/~misha/Spring23/Knuth77.pdf',
     'https://epubs.siam.org/doi/10.1137/0218001': 'https://www.dcs.gla.ac.uk/~pat/cpM/papers/GAC/SMJ000001%5B1%5D.pdf',
@@ -202,6 +203,10 @@ def build_reader_views(blobs):
         views[f'stochastic/notes/{stem}.json'] = f'stochastic/notes/{stem}.html'
     if 'csapp/code/README.md' in blobs:
         views['csapp/code/README.md'] = 'csapp/code/index.html'
+    if 'visual-group-theory/code/README.md' in blobs:
+        views['visual-group-theory/code/README.md'] = 'visual-group-theory/code/index.html'
+    if 'measure-probability/code/README.md' in blobs:
+        views['measure-probability/code/README.md'] = 'measure-probability/code/index.html'
     generated = {}
     programs = json.loads(blobs['stochastic/code/programs.json'])['programs']
     index = 'stochastic/code/index.html'
@@ -296,4 +301,18 @@ def build_reader_views(blobs):
         generated[name] = document(name, '教学程序与运行说明',
             '选择一组程序，复现位表示、地址布局、流水线时间、归约或缓存计算。',
             markdown(text, 'csapp/code/README.md', views), 'csapp/code/README.md')
+    if 'visual-group-theory/code/README.md' in blobs:
+        raw = 'visual-group-theory/code/README.md'
+        name = views[raw]
+        text = blobs[raw].decode().split('## 校验', 1)[0]
+        generated[name] = document(name, '从群动作到 Galois 理论的程序',
+            '从位置交换、Cayley 图与运算表，到 Sylow 子群与分裂域的精确自同构，复现十组 C11/Python 程序。',
+            markdown(text, raw, views), raw)
+    if 'measure-probability/code/README.md' in blobs:
+        raw = 'measure-probability/code/README.md'
+        name = views[raw]
+        text = blobs[raw].decode().split('## 校验', 1)[0]
+        generated[name] = document(name, '集合、积分与条件期望程序',
+            '用三组 C11/Python 程序连接可测结构、简单函数逼近、积分、测度分解与条件均值。',
+            markdown(text, raw, views), raw)
     return generated, views

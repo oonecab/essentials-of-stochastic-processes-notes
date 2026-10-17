@@ -143,6 +143,34 @@ def main():
         csapp_paths.extend(csapp / p for p in csapp_programs.get('additional_sources', []))
         for path in csapp_paths:
             sources['csapp/' + path.relative_to(csapp).as_posix()] = path
+    if 'visual-group-theory' in BOOKS:
+        group_book = BOOKS['visual-group-theory']['root']
+        checked = subprocess.run([sys.executable, group_book / 'tools/check_notes.py', '--quick'],
+                                 capture_output=True, text=True, check=True)
+        book_validations['visual-group-theory'] = json.loads(checked.stdout)['structure']
+        group_source = json.loads((group_book / 'notes/source_manifest.json').read_text())
+        if group_source['publication']['include_source_pdf'] is not False:
+            raise ValueError('Visual Group Theory is registered for reference-only source use')
+        group_paths = sorted((group_book / 'notes').glob('*.html')) + sorted((group_book / 'notes').glob('*.json'))
+        group_paths += [group_book / 'code/README.md', group_book / 'code/programs.json']
+        for program in json.loads((group_book / 'code/programs.json').read_text())['programs']:
+            group_paths.extend(group_book / path for path in program['files'].values())
+        for path in group_paths:
+            sources['visual-group-theory/' + path.relative_to(group_book).as_posix()] = path
+    if 'measure-probability' in BOOKS:
+        measure_book = BOOKS['measure-probability']['root']
+        checked = subprocess.run([sys.executable, measure_book / 'tools/check_notes.py', '--quick'],
+                                 capture_output=True, text=True, check=True)
+        book_validations['measure-probability'] = json.loads(checked.stdout)['structure']
+        measure_source = json.loads((measure_book / 'notes/source_manifest.json').read_text())
+        if measure_source['publication']['include_source_pdf'] is not False:
+            raise ValueError('Measure and Probability is registered for reference-only source use')
+        measure_paths = sorted((measure_book / 'notes').glob('*.html')) + sorted((measure_book / 'notes').glob('*.json'))
+        measure_paths += [measure_book / 'code/README.md', measure_book / 'code/programs.json']
+        for program in json.loads((measure_book / 'code/programs.json').read_text())['programs']:
+            measure_paths.extend(measure_book / path for path in program['files'].values())
+        for path in measure_paths:
+            sources['measure-probability/' + path.relative_to(measure_book).as_posix()] = path
     for p in sorted((ROOT / 'portal').iterdir()):
         if p.is_file():
             sources[p.name] = p
@@ -168,6 +196,19 @@ def main():
             '<meta http-equiv="refresh" content="0;url=notes/book_overview.html">'
             '<title>CS:APP 读书笔记</title></head><body><p>'
             '<a href="notes/book_overview.html">进入 CS:APP 全书地图</a></p></body></html>\n').encode()
+    if 'visual-group-theory' in BOOKS:
+        blobs['visual-group-theory/index.html'] = ('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
+            '<meta name="viewport" content="width=device-width,initial-scale=1">'
+            '<meta http-equiv="refresh" content="0;url=notes/book_overview.html">'
+            '<title>视觉群论读书笔记</title></head><body><p>'
+            '<a href="notes/book_overview.html">进入视觉群论全书地图</a></p></body></html>\n').encode()
+
+    if 'measure-probability' in BOOKS:
+        blobs['measure-probability/index.html'] = ('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
+            '<meta name="viewport" content="width=device-width,initial-scale=1">'
+            '<meta http-equiv="refresh" content="0;url=notes/book_overview.html">'
+            '<title>测度论与概率论基础读书笔记</title></head><body><p>'
+            '<a href="notes/book_overview.html">进入测度论与概率论全书地图</a></p></body></html>\n').encode()
 
     scans, scripts, references = {}, set(), 0
     for name, blob in blobs.items():

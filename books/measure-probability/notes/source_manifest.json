@@ -1,0 +1,356 @@
+{
+  "schema_version": 1,
+  "book": {
+    "title": "测度论与概率论基础",
+    "author": "程士宏",
+    "publisher": "北京大学出版社",
+    "edition": "2004 年 2 月第 1 版、第 1 次印刷",
+    "isbn": "7-301-06345-8",
+    "series": "北京大学数学教学系列丛书"
+  },
+  "source_pdf": {
+    "path": "tmp/source.pdf",
+    "pages": 256,
+    "bytes": 6587216,
+    "sha256": "93fe7f0ca35155c2f58a5bca90ef6497da96ef1f0fc17660430114e9ccbe24f0",
+    "kind": "image-only scan; local OCR is a locator, not a mathematical authority"
+  },
+  "publication": {
+    "include_source_pdf": false,
+    "reason": "用户提供的本地对照原书；本任务交付原创伴读与必要题目材料"
+  },
+  "page_mapping": [
+    {
+      "pdf_start": 1,
+      "pdf_end": 5,
+      "printed": "封面、扉页、版权、编委与内容简介"
+    },
+    {
+      "pdf_start": 6,
+      "pdf_end": 7,
+      "printed": "丛书序言 I—II"
+    },
+    {
+      "pdf_start": 8,
+      "pdf_end": 9,
+      "printed": "作者前言 III—IV"
+    },
+    {
+      "pdf_start": 10,
+      "pdf_end": 10,
+      "printed": "符号索引（前置）"
+    },
+    {
+      "pdf_start": 11,
+      "pdf_end": 12,
+      "printed": "目录 V—VI"
+    },
+    {
+      "pdf_start": 13,
+      "pdf_end": 256,
+      "printed_start": 1,
+      "printed_end": 244,
+      "offset": 12
+    }
+  ],
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "可测空间和可测映射",
+      "printed_start": 1,
+      "printed_end": 22,
+      "pdf_start": 13,
+      "pdf_end": 34,
+      "file": "chapter01_measurable_spaces.html",
+      "status": "completed_locally",
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "集合及其运算",
+          "printed_start": 1,
+          "pdf_start": 13
+        },
+        {
+          "number": "1.2",
+          "title": "集合系",
+          "printed_start": 3,
+          "pdf_start": 15
+        },
+        {
+          "number": "1.3",
+          "title": "σ 域的生成",
+          "printed_start": 7,
+          "pdf_start": 19
+        },
+        {
+          "number": "1.4",
+          "title": "可测映射和可测函数",
+          "printed_start": 10,
+          "pdf_start": 22
+        },
+        {
+          "number": "1.5",
+          "title": "可测函数的运算",
+          "printed_start": 14,
+          "pdf_start": 26
+        }
+      ],
+      "exercise_printed_start": 20,
+      "source_exercise_count": 25
+    },
+    {
+      "chapter": 2,
+      "title": "测度空间",
+      "printed_start": 23,
+      "printed_end": 59,
+      "pdf_start": 35,
+      "pdf_end": 71,
+      "file": "chapter02_measure_spaces.html",
+      "status": "completed_locally",
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "测度的定义及性质",
+          "printed_start": 23,
+          "pdf_start": 35
+        },
+        {
+          "number": "2.2",
+          "title": "外测度",
+          "printed_start": 33,
+          "pdf_start": 45
+        },
+        {
+          "number": "2.3",
+          "title": "测度的扩张",
+          "printed_start": 37,
+          "pdf_start": 49
+        },
+        {
+          "number": "2.4",
+          "title": "测度空间的完全化",
+          "printed_start": 44,
+          "pdf_start": 56
+        },
+        {
+          "number": "2.5",
+          "title": "可测函数的收敛性",
+          "printed_start": 46,
+          "pdf_start": 58
+        }
+      ],
+      "exercise_printed_start": 56,
+      "source_exercise_count": 32
+    },
+    {
+      "chapter": 3,
+      "title": "积分",
+      "printed_start": 60,
+      "printed_end": 93,
+      "pdf_start": 72,
+      "pdf_end": 105,
+      "file": "chapter03_integration.html",
+      "status": "completed_locally",
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "积分的定义",
+          "printed_start": 60,
+          "pdf_start": 72
+        },
+        {
+          "number": "3.2",
+          "title": "积分的性质",
+          "printed_start": 69,
+          "pdf_start": 81
+        },
+        {
+          "number": "3.3",
+          "title": "空间 Lp",
+          "printed_start": 75,
+          "pdf_start": 87
+        },
+        {
+          "number": "3.4",
+          "title": "概率空间的积分",
+          "printed_start": 85,
+          "pdf_start": 97
+        }
+      ],
+      "exercise_printed_start": 90,
+      "source_exercise_count": 30
+    },
+    {
+      "chapter": 4,
+      "title": "符号测度",
+      "printed_start": 94,
+      "printed_end": 128,
+      "pdf_start": 106,
+      "pdf_end": 140,
+      "file": "chapter04_signed_measures.html",
+      "status": "completed_locally",
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "符号测度",
+          "printed_start": 94,
+          "pdf_start": 106
+        },
+        {
+          "number": "4.2",
+          "title": "Hahn 分解和 Jordan 分解",
+          "printed_start": 96,
+          "pdf_start": 108
+        },
+        {
+          "number": "4.3",
+          "title": "Radon–Nikodym 定理",
+          "printed_start": 101,
+          "pdf_start": 113
+        },
+        {
+          "number": "4.4",
+          "title": "Lebesgue 分解",
+          "printed_start": 108,
+          "pdf_start": 120
+        },
+        {
+          "number": "4.5",
+          "title": "*条件期望和条件概率",
+          "printed_start": 115,
+          "pdf_start": 127
+        }
+      ],
+      "exercise_printed_start": 125,
+      "source_exercise_count": 28
+    },
+    {
+      "chapter": 5,
+      "title": "乘积空间",
+      "printed_start": 129,
+      "printed_end": 166,
+      "pdf_start": 141,
+      "pdf_end": 178,
+      "file": null,
+      "status": "pending",
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "有限维乘积空间",
+          "printed_start": 129,
+          "pdf_start": 141
+        },
+        {
+          "number": "5.2",
+          "title": "多维 Lebesgue–Stieltjes 测度",
+          "printed_start": 142,
+          "pdf_start": 154
+        },
+        {
+          "number": "5.3",
+          "title": "*可列维乘积空间的概率测度",
+          "printed_start": 147,
+          "pdf_start": 159
+        },
+        {
+          "number": "5.4",
+          "title": "*任意无穷维乘积空间的概率测度",
+          "printed_start": 153,
+          "pdf_start": 165
+        }
+      ],
+      "exercise_printed_start": 163,
+      "source_exercise_count": 28
+    },
+    {
+      "chapter": 6,
+      "title": "*独立随机变量序列",
+      "printed_start": 167,
+      "printed_end": 216,
+      "pdf_start": 179,
+      "pdf_end": 228,
+      "file": null,
+      "status": "pending",
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "零壹律和三级数定理",
+          "printed_start": 167,
+          "pdf_start": 179
+        },
+        {
+          "number": "6.2",
+          "title": "强大数律",
+          "printed_start": 176,
+          "pdf_start": 188
+        },
+        {
+          "number": "6.3",
+          "title": "特征函数",
+          "printed_start": 183,
+          "pdf_start": 195
+        },
+        {
+          "number": "6.4",
+          "title": "弱大数律",
+          "printed_start": 196,
+          "pdf_start": 208
+        },
+        {
+          "number": "6.5",
+          "title": "中心极限定理",
+          "printed_start": 204,
+          "pdf_start": 216
+        }
+      ],
+      "exercise_printed_start": 213,
+      "source_exercise_count": 27
+    }
+  ],
+  "back_matter": [
+    {
+      "title": "习题解答与提示",
+      "printed_start": 217,
+      "pdf_start": 229
+    },
+    {
+      "title": "名词索引",
+      "printed_start": 240,
+      "pdf_start": 252
+    },
+    {
+      "title": "符号索引",
+      "printed_start": 244,
+      "pdf_start": 256
+    }
+  ],
+  "current_scope": {
+    "pages": [
+      "book_overview.html",
+      "preface.html",
+      "chapter01_measurable_spaces.html",
+      "chapter02_measure_spaces.html",
+      "chapter03_integration.html",
+      "chapter04_signed_measures.html"
+    ],
+    "exercises": 115,
+    "status": "completed_locally",
+    "chapters": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "reading_scope": "核对完整目录、前置页、各章开头与习题末页；细读前四章及对应附录提示。第 5—6 章未逐项通读。",
+  "supplementary_references": [
+    {
+      "topic": "习题 3.19 的全对偶弱收敛反例使用 Hahn–Banach 等范数延拓",
+      "title": "MIT 18.102, Spring 2021, Lecture 5",
+      "url": "https://ocw.mit.edu/courses/18-102-introduction-to-functional-analysis-spring-2021/resources/18102-sp21-lecture-5/",
+      "page": "chapter03_integration.html",
+      "anchor": "ex-3-19",
+      "kind": "external primary teaching source; additional result beyond the textbook definition"
+    }
+  ]
+}

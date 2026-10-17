@@ -44,6 +44,36 @@
       "scope": "preface and chapters 1–12, including Parts I, II and III",
       "code_authority": "standalone_sources",
       "checker": "tools/check_notes.py"
+    },
+    {
+      "id": "visual-group-theory",
+      "title": "Carter · 视觉群论",
+      "directory": "books/visual-group-theory",
+      "entry": "notes/book_overview.html",
+      "publish_prefix": "visual-group-theory",
+      "notes_directory": "notes",
+      "code_directory": "code",
+      "guidelines": "agent.md",
+      "expected_pages": 12,
+      "expected_exercises": 302,
+      "scope": "full-book map, preface, chapters 1–10 and all 302 exercises",
+      "code_authority": "standalone_sources",
+      "checker": "tools/check_notes.py"
+    },
+    {
+      "id": "measure-probability",
+      "title": "程士宏 · 测度论与概率论基础",
+      "directory": "books/measure-probability",
+      "entry": "notes/book_overview.html",
+      "publish_prefix": "measure-probability",
+      "notes_directory": "notes",
+      "code_directory": "code",
+      "guidelines": "agent.md",
+      "expected_pages": 6,
+      "expected_exercises": 115,
+      "scope": "full-book overview, series preface, author foreword, chapters 1–4 and all 115 exercises; chapters 5–6 pending",
+      "code_authority": "standalone_sources",
+      "checker": "tools/check_notes.py"
     }
   ]
 }

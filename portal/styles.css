@@ -6,3 +6,6 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.read-button{transition:none}}
 
 .csapp .cover{background:#e0e9e6}.csapp .cover-diagram rect{fill:none;stroke:currentColor;stroke-width:1.3}
+.group-theory .cover{background:#e5e6ed;color:#474d6c;border-color:#d7d8e2}.group-theory .cover-diagram circle{fill:#e5e6ed}.group-theory .topics li{background:#f0f0f5;color:#646981}
+
+.measure-probability .cover{background:#eae2d1;color:#54452e}.measure-probability .topics li{background:#f5f0e6;color:#746348}.measure-probability .cover-title{font-family:"Songti SC","Noto Serif CJK SC",serif;line-height:1.45}

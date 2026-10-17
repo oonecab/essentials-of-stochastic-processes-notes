@@ -1,6 +1,6 @@
 # Reading Notes · 读书笔记
 
-把一本书作为独立子项目，在同一个仓库中维护中文伴读笔记、习题解答、可运行程序、原书来源和验证记录。目前收录 Richard Durrett《Essentials of Stochastic Processes》第三版、Mark Allen Weiss《Data Structures and Algorithm Analysis in C》第二版（中国改编版），以及 Bryant / O’Hallaron《Computer Systems: A Programmer’s Perspective》第三版 Global Edition。
+把一本书作为独立子项目，在同一个仓库中维护中文伴读笔记、习题解答、可运行程序、原书来源和验证记录。目前收录 Richard Durrett《Essentials of Stochastic Processes》第三版、Mark Allen Weiss《Data Structures and Algorithm Analysis in C》第二版（中国改编版）、Bryant / O’Hallaron《Computer Systems: A Programmer’s Perspective》第三版 Global Edition、Nathan C. Carter《Visual Group Theory》（MAA 2009 版权电子版），以及程士宏《测度论与概率论基础》（北京大学出版社 2004 年第 1 版）。
 
 统一阅读站点为 [notes.zzzping.top](https://notes.zzzping.top/)。GitHub 仓库为 [oonecab/reading-notes](https://github.com/oonecab/reading-notes)，沿用随机过程项目的 Git 历史；本地项目目录继续沿用原名。
 
@@ -9,8 +9,12 @@
 | [Durrett 随机过程](books/stochastic/README.md) | [全书地图](books/stochastic/notes/book_overview.html) | 9 个 HTML 页面、236 道习题、7 组 C/Python 示例；独立源码同步到网页 |
 | [Weiss 数据结构与算法](books/weiss/README.md) | [全书地图](books/weiss/notes/book_overview.html) | 13 个 HTML 页面、362 道习题、205 组双语实现；从正式 HTML 提取代码验证，另有 171 个 C 图例入口 |
 | [CS:APP 计算机系统](books/csapp/README.md) | [全书地图](books/csapp/notes/book_overview.html) | 14 个 HTML 页面：序言及第 1—12 章，包含三个部分；117 个原书大节、419 道原书习题、36 道补充自测与 C/Python 实验；独立源码同步到网页 |
+| [Carter 视觉群论](books/visual-group-theory/README.md) | [全书地图](books/visual-group-theory/notes/book_overview.html) | 12 个 HTML 页面：地图、序言、第 1—10 章及全部 302 题；10 组 C/Python 程序 |
+| [程士宏 测度论与概率论](books/measure-probability/README.md) | [全书地图](books/measure-probability/notes/book_overview.html) | 6 个 HTML 页面：总览、序言与前言、前四章及全部 115 题；3 组 C/Python 程序。第 5—6 章待续写 |
 
 CS:APP 全书笔记已接入统一首页与构建：从首页点击“进入 CS:APP 笔记”，进入全书地图后选择序言或第 1—12 章；阅读页顶部可返回书架。统一包收录笔记、教学程序与原书 PDF，点击章节、来源和习题中的页码链接可打开对应 PDF 页序。线上生效另按发布授权和验收记录确认。
+
+视觉群论已接入本地构建与书架，来源清单保留原书身份和印刷页/PDF 页序，完整原 PDF 仅本地对照；首批见 [T021](test/T021-visual-group-theory.md)，第 2—4 章见 [T022](test/T022-visual-group-theory-ch02-04.md)，第 5—8 章见 [T024](test/T024-visual-group-theory-ch05-08.md)，第 9—10 章见 [T025](test/T025-visual-group-theory-ch09-10.md)。
 
 ## 阅读与本地运行
 
@@ -45,6 +49,8 @@ books/
   stochastic/                   # 随机过程：notes、code、assets、tools、review
   weiss/                        # Weiss：notes、c、原书 PDF、原图例源码包
   csapp/                        # CS:APP：notes、code、tools、原书 PDF
+  visual-group-theory/           # 视觉群论：notes、code、tools、review；原 PDF 仅本地对照
+  measure-probability/           # 测度与概率：notes、code、tools、review；原 PDF 仅本地对照
 portal/                         # 统一书架与发布阅读样式
 tools/project.py                # 环境、校验、构建、预览的统一入口
 deploy/                         # 统一构建、HTTPS 验证及 Nginx 模板
@@ -64,7 +70,7 @@ AGENTS.md、CLAUDE.md、TECH.md     # Agent 入口与技术事实
 # 快速检查：结构、链接、代码同步、当前审阅绑定
 python3 tools/project.py check --quick
 
-# 完整检查：三本书的数值/功能验证与全部已登记 C 程序
+# 完整检查：已登记书籍的数值/功能验证与全部已登记 C 程序
 python3 tools/project.py check
 
 # 可选按书检查，以及额外复核已登记的实验计数
@@ -84,7 +90,7 @@ python3 tools/project.py build
 python3 tools/project.py build --release-id YYYYMMDDTHHMMSS
 ```
 
-统一包位于 `deploy/portal-releases/<release-id>/`，构建从本仓库三本书取源，不需要外部 Weiss 目录。发布路径分别为 `/stochastic/`、`/weiss/` 和 `/csapp/`；原有两书的章节地址保持兼容。
+统一包位于 `deploy/portal-releases/<release-id>/`，构建从 `books/catalog.json` 登记的五本书取源，不需要外部 Weiss 目录。发布路径分别为 `/stochastic/`、`/weiss/`、`/csapp/`、`/visual-group-theory/` 和 `/measure-probability/`；原有书籍的章节地址保持兼容。
 
 包内包括站点归档、逐文件 SHA-256、版本清单和本版 CSP 对应的 Nginx 配置。服务器采用独立 `releases/<release-id>` 目录与 `current` 原子切换；回滚同时恢复站点链接与该版本的配置。完整步骤、证书维护、验收边界及回滚命令见[部署说明](deploy/README.md)。
 

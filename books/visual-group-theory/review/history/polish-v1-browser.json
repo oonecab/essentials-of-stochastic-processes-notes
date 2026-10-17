@@ -1,0 +1,1833 @@
+{
+  "status": "completed_locally",
+  "reviewed_at": "2026-10-17T14:20:26.093984+08:00",
+  "browser": "Ego Lite 0.5.1.13 / Chromium",
+  "task": {
+    "taskSpace": 20,
+    "finished": true,
+    "receipt": {
+      "spaceId": 20,
+      "closedSpace": true,
+      "keptManagedLabels": [],
+      "closedManagedLabels": [
+        "p1"
+      ],
+      "preservedUnmanagedCount": 0
+    }
+  },
+  "scope": "Whole-book V1–V8 polish; existing diagrams and mathematics retained",
+  "phone_boundary": "390×844 Chromium device emulation; no physical phone or actual screen-reader speech test",
+  "matrix_cases": 24,
+  "page_matrix": [
+    {
+      "page": "book_overview.html",
+      "screenshot": "book_overview-1440.png",
+      "width": 1440,
+      "documentWidth": 1425,
+      "anchor": "table",
+      "rail": {
+        "hidden": false,
+        "active": "thread"
+      },
+      "maths": [],
+      "mathCount": 1,
+      "title": "全书地图 · 视觉群论读书笔记"
+    },
+    {
+      "page": "book_overview.html",
+      "screenshot": "book_overview-390.png",
+      "width": 390,
+      "documentWidth": 390,
+      "anchor": "table",
+      "rail": {
+        "hidden": true
+      },
+      "maths": [],
+      "mathCount": 1,
+      "title": "全书地图 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter01_what_is_a_group.html",
+      "screenshot": "chapter01_what_is_a_group-1440.png",
+      "width": 1440,
+      "documentWidth": 1425,
+      "anchor": "#s1-3",
+      "rail": {
+        "hidden": false,
+        "active": "s1-2"
+      },
+      "maths": [],
+      "mathCount": 7,
+      "title": "第 1 章：什么是群 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter01_what_is_a_group.html",
+      "screenshot": "chapter01_what_is_a_group-390.png",
+      "width": 390,
+      "documentWidth": 390,
+      "anchor": "#s1-3",
+      "rail": {
+        "hidden": true
+      },
+      "maths": [],
+      "mathCount": 7,
+      "title": "第 1 章：什么是群 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter02_what_do_groups_look_like.html",
+      "screenshot": "chapter02_what_do_groups_look_like-1440.png",
+      "width": 1440,
+      "documentWidth": 1425,
+      "anchor": "#s2-3",
+      "rail": {
+        "hidden": false,
+        "active": "s2-3"
+      },
+      "maths": [],
+      "mathCount": 12,
+      "title": "第 2 章：群是什么样子 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter02_what_do_groups_look_like.html",
+      "screenshot": "chapter02_what_do_groups_look_like-390.png",
+      "width": 390,
+      "documentWidth": 390,
+      "anchor": "#s2-3",
+      "rail": {
+        "hidden": true
+      },
+      "maths": [],
+      "mathCount": 12,
+      "title": "第 2 章：群是什么样子 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter03_why_study_groups.html",
+      "screenshot": "chapter03_why_study_groups-1440.png",
+      "width": 1440,
+      "documentWidth": 1425,
+      "anchor": "#definition-3-1",
+      "rail": {
+        "hidden": false,
+        "active": "s3-1"
+      },
+      "maths": [],
+      "mathCount": 11,
+      "title": "第 3 章：为什么研究群 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter03_why_study_groups.html",
+      "screenshot": "chapter03_why_study_groups-390.png",
+      "width": 390,
+      "documentWidth": 390,
+      "anchor": "#definition-3-1",
+      "rail": {
+        "hidden": true
+      },
+      "maths": [],
+      "mathCount": 11,
+      "title": "第 3 章：为什么研究群 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter04_algebra_at_last.html",
+      "screenshot": "chapter04_algebra_at_last-1440.png",
+      "width": 1440,
+      "documentWidth": 1425,
+      "anchor": "#definition-4-2",
+      "rail": {
+        "hidden": false,
+        "active": "s4-4"
+      },
+      "maths": [],
+      "mathCount": 16,
+      "title": "第 4 章：终于进入代数 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter04_algebra_at_last.html",
+      "screenshot": "chapter04_algebra_at_last-390.png",
+      "width": 390,
+      "documentWidth": 390,
+      "anchor": "#definition-4-2",
+      "rail": {
+        "hidden": true
+      },
+      "maths": [],
+      "mathCount": 16,
+      "title": "第 4 章：终于进入代数 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter05_five_families.html",
+      "screenshot": "chapter05_five_families-1440.png",
+      "width": 1440,
+      "documentWidth": 1425,
+      "anchor": "#theorem-5-1",
+      "rail": {
+        "hidden": false,
+        "active": "s5-4"
+      },
+      "maths": [],
+      "mathCount": 27,
+      "title": "第 5 章 · 五类群 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter05_five_families.html",
+      "screenshot": "chapter05_five_families-390.png",
+      "width": 390,
+      "documentWidth": 390,
+      "anchor": "#theorem-5-1",
+      "rail": {
+        "hidden": true
+      },
+      "maths": [],
+      "mathCount": 27,
+      "title": "第 5 章 · 五类群 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter06_subgroups.html",
+      "screenshot": "chapter06_subgroups-1440.png",
+      "width": 1440,
+      "documentWidth": 1425,
+      "anchor": "#theorem-6-8",
+      "rail": {
+        "hidden": false,
+        "active": "s6-5"
+      },
+      "maths": [],
+      "mathCount": 22,
+      "title": "第 6 章 · 子群与陪集 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter06_subgroups.html",
+      "screenshot": "chapter06_subgroups-390.png",
+      "width": 390,
+      "documentWidth": 390,
+      "anchor": "#theorem-6-8",
+      "rail": {
+        "hidden": true
+      },
+      "maths": [],
+      "mathCount": 22,
+      "title": "第 6 章 · 子群与陪集 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter07_products_and_quotients.html",
+      "screenshot": "chapter07_products_and_quotients-1440.png",
+      "width": 1440,
+      "documentWidth": 1425,
+      "anchor": "#definition-7-5",
+      "rail": {
+        "hidden": false,
+        "active": "s7-3"
+      },
+      "maths": [],
+      "mathCount": 38,
+      "title": "第 7 章 · 积与商 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter07_products_and_quotients.html",
+      "screenshot": "chapter07_products_and_quotients-390.png",
+      "width": 390,
+      "documentWidth": 390,
+      "anchor": "#definition-7-5",
+      "rail": {
+        "hidden": true
+      },
+      "maths": [],
+      "mathCount": 38,
+      "title": "第 7 章 · 积与商 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter08_homomorphisms.html",
+      "screenshot": "chapter08_homomorphisms-1440.png",
+      "width": 1440,
+      "documentWidth": 1425,
+      "anchor": "#definition-8-9",
+      "rail": {
+        "hidden": false,
+        "active": "s8-6"
+      },
+      "maths": [],
+      "mathCount": 44,
+      "title": "第 8 章 · 同态的力量 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter08_homomorphisms.html",
+      "screenshot": "chapter08_homomorphisms-390.png",
+      "width": 390,
+      "documentWidth": 390,
+      "anchor": "#definition-8-9",
+      "rail": {
+        "hidden": true
+      },
+      "maths": [],
+      "mathCount": 44,
+      "title": "第 8 章 · 同态的力量 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter09_sylow_theory.html",
+      "screenshot": "chapter09_sylow_theory-1440.png",
+      "width": 1440,
+      "documentWidth": 1425,
+      "anchor": "#theorem-9-13",
+      "rail": {
+        "hidden": false,
+        "active": "s9-4"
+      },
+      "maths": [],
+      "mathCount": 79,
+      "title": "第 9 章 · Sylow 理论 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter09_sylow_theory.html",
+      "screenshot": "chapter09_sylow_theory-390.png",
+      "width": 390,
+      "documentWidth": 390,
+      "anchor": "#theorem-9-13",
+      "rail": {
+        "hidden": true
+      },
+      "maths": [],
+      "mathCount": 79,
+      "title": "第 9 章 · Sylow 理论 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter10_galois_theory.html",
+      "screenshot": "chapter10_galois_theory-1440.png",
+      "width": 1440,
+      "documentWidth": 1425,
+      "anchor": "#theorem-10-10",
+      "rail": {
+        "hidden": false,
+        "active": "s10-6"
+      },
+      "maths": [],
+      "mathCount": 99,
+      "title": "第 10 章 · Galois 理论 · 视觉群论读书笔记"
+    },
+    {
+      "page": "chapter10_galois_theory.html",
+      "screenshot": "chapter10_galois_theory-390.png",
+      "width": 390,
+      "documentWidth": 390,
+      "anchor": "#theorem-10-10",
+      "rail": {
+        "hidden": true
+      },
+      "maths": [],
+      "mathCount": 99,
+      "title": "第 10 章 · Galois 理论 · 视觉群论读书笔记"
+    },
+    {
+      "page": "preface.html",
+      "screenshot": "preface-1440.png",
+      "width": 1440,
+      "documentWidth": 1425,
+      "anchor": "#excerpt-preface",
+      "rail": {
+        "hidden": false,
+        "active": "purpose"
+      },
+      "maths": [],
+      "mathCount": 0,
+      "title": "序言导读 · 视觉群论读书笔记"
+    },
+    {
+      "page": "preface.html",
+      "screenshot": "preface-390.png",
+      "width": 390,
+      "documentWidth": 390,
+      "anchor": "#excerpt-preface",
+      "rail": {
+        "hidden": true
+      },
+      "maths": [],
+      "mathCount": 0,
+      "title": "序言导读 · 视觉群论读书笔记"
+    }
+  ],
+  "annotation_states": [
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 1800,
+      "id": "notes-s2-2",
+      "expected": "s2-2",
+      "active": "s2-2",
+      "railHidden": false,
+      "open": true,
+      "x": 1318.5,
+      "widthPx": 280,
+      "height": 265.3984375,
+      "title": "标签辨认的是整个动作",
+      "docWidth": 1785
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 1800,
+      "id": "notes-s2-3",
+      "expected": "s2-3",
+      "active": "s2-3",
+      "railHidden": false,
+      "open": true,
+      "x": 1318.5,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "队列耗尽为什么能证明完整",
+      "docWidth": 1785
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 1800,
+      "id": "notes-s2-4",
+      "expected": "s2-4",
+      "active": "s2-4",
+      "railHidden": false,
+      "open": true,
+      "x": 1318.5,
+      "widthPx": 280,
+      "height": 265.3984375,
+      "title": "无箭头表示什么",
+      "docWidth": 1785
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 1800,
+      "id": "notes-s2-5",
+      "expected": "s2-5",
+      "active": "s2-5",
+      "railHidden": false,
+      "open": true,
+      "x": 1318.5,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "比较图时先比较连接",
+      "docWidth": 1785
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 1800,
+      "id": "notes-program-cayley",
+      "expected": "program-cayley",
+      "active": "program-cayley",
+      "railHidden": false,
+      "open": true,
+      "x": 1318.5,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "有限枚举的边界",
+      "docWidth": 1785
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 1440,
+      "id": "notes-s2-2",
+      "expected": "s2-2",
+      "active": "s2-2",
+      "railHidden": false,
+      "open": true,
+      "x": 1121,
+      "widthPx": 280,
+      "height": 265.3984375,
+      "title": "标签辨认的是整个动作",
+      "docWidth": 1425
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 1440,
+      "id": "notes-s2-3",
+      "expected": "s2-3",
+      "active": "s2-3",
+      "railHidden": false,
+      "open": true,
+      "x": 1121,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "队列耗尽为什么能证明完整",
+      "docWidth": 1425
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 1440,
+      "id": "notes-s2-4",
+      "expected": "s2-4",
+      "active": "s2-4",
+      "railHidden": false,
+      "open": true,
+      "x": 1121,
+      "widthPx": 280,
+      "height": 265.3984375,
+      "title": "无箭头表示什么",
+      "docWidth": 1425
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 1440,
+      "id": "notes-s2-5",
+      "expected": "s2-5",
+      "active": "s2-5",
+      "railHidden": false,
+      "open": true,
+      "x": 1121,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "比较图时先比较连接",
+      "docWidth": 1425
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 1440,
+      "id": "notes-program-cayley",
+      "expected": "program-cayley",
+      "active": "program-cayley",
+      "railHidden": false,
+      "open": true,
+      "x": 1121,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "有限枚举的边界",
+      "docWidth": 1425
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 1024,
+      "id": "notes-s2-2",
+      "expected": "s2-2",
+      "railHidden": true,
+      "open": true,
+      "x": 98.5,
+      "widthPx": 812,
+      "height": 184.8828125,
+      "title": "标签辨认的是整个动作",
+      "docWidth": 1009
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 1024,
+      "id": "notes-s2-3",
+      "expected": "s2-3",
+      "railHidden": true,
+      "open": true,
+      "x": 98.5,
+      "widthPx": 812,
+      "height": 184.8828125,
+      "title": "队列耗尽为什么能证明完整",
+      "docWidth": 1009
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 1024,
+      "id": "notes-s2-4",
+      "expected": "s2-4",
+      "railHidden": true,
+      "open": true,
+      "x": 98.5,
+      "widthPx": 812,
+      "height": 184.8828125,
+      "title": "无箭头表示什么",
+      "docWidth": 1009
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 1024,
+      "id": "notes-s2-5",
+      "expected": "s2-5",
+      "railHidden": true,
+      "open": true,
+      "x": 98.5,
+      "widthPx": 812,
+      "height": 184.8828125,
+      "title": "比较图时先比较连接",
+      "docWidth": 1009
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 1024,
+      "id": "notes-program-cayley",
+      "expected": "program-cayley",
+      "railHidden": true,
+      "open": true,
+      "x": 98.5,
+      "widthPx": 812,
+      "height": 184.8828125,
+      "title": "有限枚举的边界",
+      "docWidth": 1009
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 390,
+      "id": "notes-s2-2",
+      "expected": "s2-2",
+      "railHidden": true,
+      "open": true,
+      "x": 18,
+      "widthPx": 354,
+      "height": 239.3359375,
+      "title": "标签辨认的是整个动作",
+      "docWidth": 390
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 390,
+      "id": "notes-s2-3",
+      "expected": "s2-3",
+      "railHidden": true,
+      "open": true,
+      "x": 18,
+      "widthPx": 354,
+      "height": 239.3359375,
+      "title": "队列耗尽为什么能证明完整",
+      "docWidth": 390
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 390,
+      "id": "notes-s2-4",
+      "expected": "s2-4",
+      "railHidden": true,
+      "open": true,
+      "x": 18,
+      "widthPx": 354,
+      "height": 239.3359375,
+      "title": "无箭头表示什么",
+      "docWidth": 390
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 390,
+      "id": "notes-s2-5",
+      "expected": "s2-5",
+      "railHidden": true,
+      "open": true,
+      "x": 18,
+      "widthPx": 354,
+      "height": 239.3359375,
+      "title": "比较图时先比较连接",
+      "docWidth": 390
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "width": 390,
+      "id": "notes-program-cayley",
+      "expected": "program-cayley",
+      "railHidden": true,
+      "open": true,
+      "x": 18,
+      "widthPx": 354,
+      "height": 239.3359375,
+      "title": "有限枚举的边界",
+      "docWidth": 390
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 1800,
+      "id": "notes-s3-1",
+      "expected": "s3-1",
+      "active": "s3-1",
+      "railHidden": false,
+      "open": true,
+      "x": 1318.5,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "先规定什么操作算作对称",
+      "docWidth": 1785
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 1800,
+      "id": "notes-s3-2",
+      "expected": "s3-2",
+      "active": "s3-2",
+      "railHidden": false,
+      "open": true,
+      "x": 1318.5,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "位置编号与舞者身份分开",
+      "docWidth": 1785
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 1800,
+      "id": "notes-s3-3",
+      "expected": "s3-3",
+      "active": "s3-3",
+      "railHidden": false,
+      "open": true,
+      "x": 1318.5,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "模型相同需要保存合成",
+      "docWidth": 1785
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 1800,
+      "id": "notes-s3-4",
+      "expected": "s3-4",
+      "active": "s3-4",
+      "railHidden": false,
+      "open": true,
+      "x": 1318.5,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "无限饰带不能接成一圈",
+      "docWidth": 1785
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 1800,
+      "id": "notes-program-frieze",
+      "expected": "program-frieze",
+      "active": "program-frieze",
+      "railHidden": false,
+      "open": true,
+      "x": 1318.5,
+      "widthPx": 280,
+      "height": 265.3984375,
+      "title": "反射会改变后续位移的方向",
+      "docWidth": 1785
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 1440,
+      "id": "notes-s3-1",
+      "expected": "s3-1",
+      "active": "s3-1",
+      "railHidden": false,
+      "open": true,
+      "x": 1121,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "先规定什么操作算作对称",
+      "docWidth": 1425
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 1440,
+      "id": "notes-s3-2",
+      "expected": "s3-2",
+      "active": "s3-2",
+      "railHidden": false,
+      "open": true,
+      "x": 1121,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "位置编号与舞者身份分开",
+      "docWidth": 1425
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 1440,
+      "id": "notes-s3-3",
+      "expected": "s3-3",
+      "active": "s3-3",
+      "railHidden": false,
+      "open": true,
+      "x": 1121,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "模型相同需要保存合成",
+      "docWidth": 1425
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 1440,
+      "id": "notes-s3-4",
+      "expected": "s3-4",
+      "active": "s3-4",
+      "railHidden": false,
+      "open": true,
+      "x": 1121,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "无限饰带不能接成一圈",
+      "docWidth": 1425
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 1440,
+      "id": "notes-program-frieze",
+      "expected": "program-frieze",
+      "active": "program-frieze",
+      "railHidden": false,
+      "open": true,
+      "x": 1121,
+      "widthPx": 280,
+      "height": 265.3984375,
+      "title": "反射会改变后续位移的方向",
+      "docWidth": 1425
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 1024,
+      "id": "notes-s3-1",
+      "expected": "s3-1",
+      "railHidden": true,
+      "open": true,
+      "x": 98.5,
+      "widthPx": 812,
+      "height": 184.8828125,
+      "title": "先规定什么操作算作对称",
+      "docWidth": 1009
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 1024,
+      "id": "notes-s3-2",
+      "expected": "s3-2",
+      "railHidden": true,
+      "open": true,
+      "x": 98.5,
+      "widthPx": 812,
+      "height": 184.8828125,
+      "title": "位置编号与舞者身份分开",
+      "docWidth": 1009
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 1024,
+      "id": "notes-s3-3",
+      "expected": "s3-3",
+      "railHidden": true,
+      "open": true,
+      "x": 98.5,
+      "widthPx": 812,
+      "height": 184.8828125,
+      "title": "模型相同需要保存合成",
+      "docWidth": 1009
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 1024,
+      "id": "notes-s3-4",
+      "expected": "s3-4",
+      "railHidden": true,
+      "open": true,
+      "x": 98.5,
+      "widthPx": 812,
+      "height": 184.8828125,
+      "title": "无限饰带不能接成一圈",
+      "docWidth": 1009
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 1024,
+      "id": "notes-program-frieze",
+      "expected": "program-frieze",
+      "railHidden": true,
+      "open": true,
+      "x": 98.5,
+      "widthPx": 812,
+      "height": 184.8828125,
+      "title": "反射会改变后续位移的方向",
+      "docWidth": 1009
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 390,
+      "id": "notes-s3-1",
+      "expected": "s3-1",
+      "railHidden": true,
+      "open": true,
+      "x": 18,
+      "widthPx": 354,
+      "height": 239.3359375,
+      "title": "先规定什么操作算作对称",
+      "docWidth": 390
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 390,
+      "id": "notes-s3-2",
+      "expected": "s3-2",
+      "railHidden": true,
+      "open": true,
+      "x": 18,
+      "widthPx": 354,
+      "height": 239.3359375,
+      "title": "位置编号与舞者身份分开",
+      "docWidth": 390
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 390,
+      "id": "notes-s3-3",
+      "expected": "s3-3",
+      "railHidden": true,
+      "open": true,
+      "x": 18,
+      "widthPx": 354,
+      "height": 239.3359375,
+      "title": "模型相同需要保存合成",
+      "docWidth": 390
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 390,
+      "id": "notes-s3-4",
+      "expected": "s3-4",
+      "railHidden": true,
+      "open": true,
+      "x": 18,
+      "widthPx": 354,
+      "height": 239.3359375,
+      "title": "无限饰带不能接成一圈",
+      "docWidth": 390
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter03_why_study_groups.html",
+      "width": 390,
+      "id": "notes-program-frieze",
+      "expected": "program-frieze",
+      "railHidden": true,
+      "open": true,
+      "x": 18,
+      "widthPx": 354,
+      "height": 239.3359375,
+      "title": "反射会改变后续位移的方向",
+      "docWidth": 390
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 1800,
+      "id": "notes-s4-1",
+      "expected": "s4-1",
+      "active": "s4-1",
+      "railHidden": false,
+      "open": true,
+      "x": 1318.5,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "起点与路径字词",
+      "docWidth": 1785
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 1800,
+      "id": "notes-s4-2",
+      "expected": "s4-2",
+      "active": "s4-2",
+      "railHidden": false,
+      "open": true,
+      "x": 1318.5,
+      "widthPx": 280,
+      "height": 265.3984375,
+      "title": "括号不交换动作",
+      "docWidth": 1785
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 1800,
+      "id": "notes-s4-3",
+      "expected": "s4-3",
+      "active": "s4-3",
+      "railHidden": false,
+      "open": true,
+      "x": 1318.5,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "拉丁方还差结合律",
+      "docWidth": 1785
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 1800,
+      "id": "notes-s4-4",
+      "expected": "s4-4",
+      "active": "s4-4",
+      "railHidden": false,
+      "open": true,
+      "x": 1318.5,
+      "widthPx": 280,
+      "height": 265.3984375,
+      "title": "逆元公式为什么要反序",
+      "docWidth": 1785
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 1800,
+      "id": "notes-program-tables",
+      "expected": "program-tables",
+      "active": "program-tables",
+      "railHidden": false,
+      "open": true,
+      "x": 1318.5,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "程序检查与一般证明",
+      "docWidth": 1785
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 1440,
+      "id": "notes-s4-1",
+      "expected": "s4-1",
+      "active": "s4-1",
+      "railHidden": false,
+      "open": true,
+      "x": 1121,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "起点与路径字词",
+      "docWidth": 1425
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 1440,
+      "id": "notes-s4-2",
+      "expected": "s4-2",
+      "active": "s4-2",
+      "railHidden": false,
+      "open": true,
+      "x": 1121,
+      "widthPx": 280,
+      "height": 265.3984375,
+      "title": "括号不交换动作",
+      "docWidth": 1425
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 1440,
+      "id": "notes-s4-3",
+      "expected": "s4-3",
+      "active": "s4-3",
+      "railHidden": false,
+      "open": true,
+      "x": 1121,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "拉丁方还差结合律",
+      "docWidth": 1425
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 1440,
+      "id": "notes-s4-4",
+      "expected": "s4-4",
+      "active": "s4-4",
+      "railHidden": false,
+      "open": true,
+      "x": 1121,
+      "widthPx": 280,
+      "height": 265.3984375,
+      "title": "逆元公式为什么要反序",
+      "docWidth": 1425
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 1440,
+      "id": "notes-program-tables",
+      "expected": "program-tables",
+      "active": "program-tables",
+      "railHidden": false,
+      "open": true,
+      "x": 1121,
+      "widthPx": 280,
+      "height": 292.03125,
+      "title": "程序检查与一般证明",
+      "docWidth": 1425
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 1024,
+      "id": "notes-s4-1",
+      "expected": "s4-1",
+      "railHidden": true,
+      "open": true,
+      "x": 98.5,
+      "widthPx": 812,
+      "height": 184.8828125,
+      "title": "起点与路径字词",
+      "docWidth": 1009
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 1024,
+      "id": "notes-s4-2",
+      "expected": "s4-2",
+      "railHidden": true,
+      "open": true,
+      "x": 98.5,
+      "widthPx": 812,
+      "height": 184.8828125,
+      "title": "括号不交换动作",
+      "docWidth": 1009
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 1024,
+      "id": "notes-s4-3",
+      "expected": "s4-3",
+      "railHidden": true,
+      "open": true,
+      "x": 98.5,
+      "widthPx": 812,
+      "height": 184.8828125,
+      "title": "拉丁方还差结合律",
+      "docWidth": 1009
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 1024,
+      "id": "notes-s4-4",
+      "expected": "s4-4",
+      "railHidden": true,
+      "open": true,
+      "x": 98.5,
+      "widthPx": 812,
+      "height": 184.8828125,
+      "title": "逆元公式为什么要反序",
+      "docWidth": 1009
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 1024,
+      "id": "notes-program-tables",
+      "expected": "program-tables",
+      "railHidden": true,
+      "open": true,
+      "x": 98.5,
+      "widthPx": 812,
+      "height": 184.8828125,
+      "title": "程序检查与一般证明",
+      "docWidth": 1009
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 390,
+      "id": "notes-s4-1",
+      "expected": "s4-1",
+      "railHidden": true,
+      "open": true,
+      "x": 18,
+      "widthPx": 354,
+      "height": 239.3359375,
+      "title": "起点与路径字词",
+      "docWidth": 390
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 390,
+      "id": "notes-s4-2",
+      "expected": "s4-2",
+      "railHidden": true,
+      "open": true,
+      "x": 18,
+      "widthPx": 354,
+      "height": 212.109375,
+      "title": "括号不交换动作",
+      "docWidth": 390
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 390,
+      "id": "notes-s4-3",
+      "expected": "s4-3",
+      "railHidden": true,
+      "open": true,
+      "x": 18,
+      "widthPx": 354,
+      "height": 239.3359375,
+      "title": "拉丁方还差结合律",
+      "docWidth": 390
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 390,
+      "id": "notes-s4-4",
+      "expected": "s4-4",
+      "railHidden": true,
+      "open": true,
+      "x": 18,
+      "widthPx": 354,
+      "height": 239.3359375,
+      "title": "逆元公式为什么要反序",
+      "docWidth": 390
+    },
+    {
+      "file": "/visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "width": 390,
+      "id": "notes-program-tables",
+      "expected": "program-tables",
+      "railHidden": true,
+      "open": true,
+      "x": 18,
+      "widthPx": 354,
+      "height": 239.3359375,
+      "title": "程序检查与一般证明",
+      "docWidth": 390
+    }
+  ],
+  "solution_steps": [
+    {
+      "id": "ex-4-1-c",
+      "title": "(c) R：最小正幂为 2。",
+      "open": true,
+      "top": 96.03125,
+      "bottom": 128.328125,
+      "docWidth": 1425,
+      "width": 1440,
+      "occluded": false
+    },
+    {
+      "id": "ex-6-4-a",
+      "title": "(a) C₂",
+      "open": true,
+      "top": 95.921875,
+      "bottom": 137.3828125,
+      "docWidth": 1425,
+      "width": 1440,
+      "occluded": false
+    },
+    {
+      "id": "ex-6-5-e",
+      "title": "(e) D₄：子群、阶与指数",
+      "open": true,
+      "top": 95.9296875,
+      "bottom": 126.328125,
+      "docWidth": 1425,
+      "width": 1440,
+      "occluded": false
+    },
+    {
+      "id": "ex-9-28-step-1",
+      "title": "1. Sylow 数分支与四个 Sylow 3 子群的情形",
+      "open": true,
+      "top": 95.8359375,
+      "bottom": 126.234375,
+      "docWidth": 1425,
+      "width": 1440,
+      "occluded": false
+    },
+    {
+      "id": "ex-9-28-step-2",
+      "title": "2. 唯一 Sylow 3 子群与四种半直积",
+      "open": true,
+      "top": 96.2109375,
+      "bottom": 126.609375,
+      "docWidth": 1425,
+      "width": 1440,
+      "occluded": false
+    },
+    {
+      "id": "ex-9-28-step-3",
+      "title": "3. 用元素阶和二阶元数量区分同构类",
+      "open": true,
+      "top": 95.7890625,
+      "bottom": 126.1875,
+      "docWidth": 1425,
+      "width": 1440,
+      "occluded": false
+    },
+    {
+      "id": "ex-10-26-step-2",
+      "title": "2. 从 24 节点接线识别群与正规链",
+      "open": true,
+      "top": 96.1484375,
+      "bottom": 126.546875,
+      "docWidth": 1425,
+      "width": 1440,
+      "occluded": false
+    },
+    {
+      "id": "ex-10-26-step-3",
+      "title": "3. 核对原题范围并补足 S₄ 与 D₅",
+      "open": true,
+      "top": 96.21875,
+      "bottom": 126.6171875,
+      "docWidth": 1425,
+      "width": 1440,
+      "occluded": false
+    },
+    {
+      "id": "ex-4-1-c",
+      "title": "(c) R：最小正幂为 2。",
+      "open": true,
+      "top": 128.1875,
+      "bottom": 160.484375,
+      "docWidth": 390,
+      "width": 390,
+      "occluded": false
+    },
+    {
+      "id": "ex-6-4-a",
+      "title": "(a) C₂",
+      "open": true,
+      "top": 127.765625,
+      "bottom": 169.2265625,
+      "docWidth": 390,
+      "width": 390,
+      "occluded": false
+    },
+    {
+      "id": "ex-6-5-e",
+      "title": "(e) D₄：子群、阶与指数",
+      "open": true,
+      "top": 127.8984375,
+      "bottom": 158.296875,
+      "docWidth": 390,
+      "width": 390,
+      "occluded": false
+    },
+    {
+      "id": "ex-9-28-step-1",
+      "title": "1. Sylow 数分支与四个 Sylow 3 子群的情形",
+      "open": true,
+      "top": 127.890625,
+      "bottom": 158.2890625,
+      "docWidth": 390,
+      "width": 390,
+      "occluded": false
+    },
+    {
+      "id": "ex-9-28-step-2",
+      "title": "2. 唯一 Sylow 3 子群与四种半直积",
+      "open": true,
+      "top": 128.046875,
+      "bottom": 158.4453125,
+      "docWidth": 390,
+      "width": 390,
+      "occluded": false
+    },
+    {
+      "id": "ex-9-28-step-3",
+      "title": "3. 用元素阶和二阶元数量区分同构类",
+      "open": true,
+      "top": 128.109375,
+      "bottom": 158.5078125,
+      "docWidth": 390,
+      "width": 390,
+      "occluded": false
+    },
+    {
+      "id": "ex-10-26-step-2",
+      "title": "2. 从 24 节点接线识别群与正规链",
+      "open": true,
+      "top": 128.203125,
+      "bottom": 158.6015625,
+      "docWidth": 390,
+      "width": 390,
+      "occluded": false
+    },
+    {
+      "id": "ex-10-26-step-3",
+      "title": "3. 核对原题范围并补足 S₄ 与 D₅",
+      "open": true,
+      "top": 128.1640625,
+      "bottom": 158.5625,
+      "docWidth": 390,
+      "width": 390,
+      "occluded": false
+    }
+  ],
+  "no_javascript": [
+    {
+      "chapter": 2,
+      "width": 1440,
+      "annotation": "notes-s2-3",
+      "scriptExecutionDisabled": true,
+      "toggles": [
+        false,
+        true
+      ]
+    },
+    {
+      "chapter": 3,
+      "width": 1440,
+      "annotation": "notes-s3-1",
+      "scriptExecutionDisabled": true,
+      "toggles": [
+        false,
+        true
+      ]
+    },
+    {
+      "chapter": 4,
+      "width": 1440,
+      "annotation": "notes-s4-4",
+      "scriptExecutionDisabled": true,
+      "toggles": [
+        false,
+        true
+      ]
+    },
+    {
+      "chapter": 2,
+      "width": 390,
+      "annotation": "notes-s2-3",
+      "scriptExecutionDisabled": true,
+      "toggles": [
+        false,
+        true
+      ]
+    },
+    {
+      "chapter": 3,
+      "width": 390,
+      "annotation": "notes-s3-1",
+      "scriptExecutionDisabled": true,
+      "toggles": [
+        false,
+        true
+      ]
+    },
+    {
+      "chapter": 4,
+      "width": 390,
+      "annotation": "notes-s4-4",
+      "scriptExecutionDisabled": true,
+      "toggles": [
+        false,
+        true
+      ]
+    }
+  ],
+  "interactions": {
+    "horizontal": [
+      {
+        "file": "book_overview.html",
+        "selector": "main table",
+        "index": 0,
+        "label": "map-status",
+        "x": 168,
+        "y": 269.9765625,
+        "before": 0,
+        "max": 266,
+        "left": 266,
+        "width": 390,
+        "docWidth": 390
+      },
+      {
+        "file": "chapter09_sylow_theory.html",
+        "selector": "#order12-tree svg",
+        "index": 0,
+        "label": "order12-diagram",
+        "x": 185,
+        "y": 269.984375,
+        "before": 0,
+        "max": 318,
+        "left": 318,
+        "width": 390,
+        "docWidth": 390
+      },
+      {
+        "file": "chapter04_algebra_at_last.html",
+        "selector": "#program-tables pre",
+        "index": 3,
+        "label": "program-code",
+        "x": 168,
+        "y": 270.1640625,
+        "before": 0,
+        "max": 518,
+        "left": 517.5,
+        "width": 390,
+        "docWidth": 390
+      }
+    ],
+    "mathAccessibility": [
+      {
+        "role": "MathMLMath",
+        "name": "nₚ∣|G|",
+        "ignored": false
+      }
+    ],
+    "selection": {
+      "plainTextSelection": "𝑛\n𝑝\n∣\n|\n𝐺\n|\n",
+      "sourceNotation": "nₚ∣|G|"
+    }
+  },
+  "copy_regression": {
+    "method": "ClipboardEvent + DataTransfer in the actual rendered page; no system clipboard access",
+    "final_results": [
+      {
+        "width": 1440,
+        "cases": [
+          {
+            "name": "whole formula",
+            "handled": true,
+            "text": "nₚ∣|G|",
+            "richMath": true,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "visible formula characters",
+            "handled": true,
+            "text": "nₚ∣|G|",
+            "richMath": true,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "whole paragraph",
+            "handled": true,
+            "text": "中文陈述：Sylow p 子群的个数 nₚ 满足 nₚ∣|G| 且 nₚ≡1 (mod p)。事实上 nₚ=[G:N_G(P)]，因 P⊆N_G(P)，还有更强的 nₚ∣m，其中 |G|=pⁿm、p∤m。",
+            "richMath": true,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "two paragraphs",
+            "handled": true,
+            "text": "中文陈述：Sylow p 子群的个数 nₚ 满足 nₚ∣|G| 且 nₚ≡1 (mod p)。事实上 nₚ=[G:N_G(P)]，因 P⊆N_G(P)，还有更强的 nₚ∣m，其中 |G|=pⁿm、p∤m。\n\n来源：印刷 215 / PDF 230",
+            "richMath": true,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "partial formula",
+            "handled": false,
+            "text": "",
+            "richMath": false,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "ordinary text",
+            "handled": false,
+            "text": "",
+            "richMath": false,
+            "temporaryHostRemoved": true
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "cases": [
+          {
+            "name": "whole formula",
+            "handled": true,
+            "text": "nₚ∣|G|",
+            "richMath": true,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "visible formula characters",
+            "handled": true,
+            "text": "nₚ∣|G|",
+            "richMath": true,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "whole paragraph",
+            "handled": true,
+            "text": "中文陈述：Sylow p 子群的个数 nₚ 满足 nₚ∣|G| 且 nₚ≡1 (mod p)。事实上 nₚ=[G:N_G(P)]，因 P⊆N_G(P)，还有更强的 nₚ∣m，其中 |G|=pⁿm、p∤m。",
+            "richMath": true,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "two paragraphs",
+            "handled": true,
+            "text": "中文陈述：Sylow p 子群的个数 nₚ 满足 nₚ∣|G| 且 nₚ≡1 (mod p)。事实上 nₚ=[G:N_G(P)]，因 P⊆N_G(P)，还有更强的 nₚ∣m，其中 |G|=pⁿm、p∤m。\n\n来源：印刷 215 / PDF 230",
+            "richMath": true,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "partial formula",
+            "handled": false,
+            "text": "",
+            "richMath": false,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "ordinary text",
+            "handled": false,
+            "text": "",
+            "richMath": false,
+            "temporaryHostRemoved": true
+          }
+        ]
+      }
+    ]
+  },
+  "final_package_checks": {
+    "release": "20261017T141653",
+    "origin": "http://127.0.0.1:53536",
+    "copy": [
+      {
+        "width": 1440,
+        "cases": [
+          {
+            "name": "whole formula",
+            "handled": true,
+            "text": "nₚ∣|G|",
+            "richMath": true,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "visible formula characters",
+            "handled": true,
+            "text": "nₚ∣|G|",
+            "richMath": true,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "whole paragraph",
+            "handled": true,
+            "text": "中文陈述：Sylow p 子群的个数 nₚ 满足 nₚ∣|G| 且 nₚ≡1 (mod p)。事实上 nₚ=[G:N_G(P)]，因 P⊆N_G(P)，还有更强的 nₚ∣m，其中 |G|=pⁿm、p∤m。",
+            "richMath": true,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "two paragraphs",
+            "handled": true,
+            "text": "中文陈述：Sylow p 子群的个数 nₚ 满足 nₚ∣|G| 且 nₚ≡1 (mod p)。事实上 nₚ=[G:N_G(P)]，因 P⊆N_G(P)，还有更强的 nₚ∣m，其中 |G|=pⁿm、p∤m。\n\n来源：印刷 215 / PDF 230",
+            "richMath": true,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "partial formula",
+            "handled": false,
+            "text": "",
+            "richMath": false,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "ordinary text",
+            "handled": false,
+            "text": "",
+            "richMath": false,
+            "temporaryHostRemoved": true
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "cases": [
+          {
+            "name": "whole formula",
+            "handled": true,
+            "text": "nₚ∣|G|",
+            "richMath": true,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "visible formula characters",
+            "handled": true,
+            "text": "nₚ∣|G|",
+            "richMath": true,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "whole paragraph",
+            "handled": true,
+            "text": "中文陈述：Sylow p 子群的个数 nₚ 满足 nₚ∣|G| 且 nₚ≡1 (mod p)。事实上 nₚ=[G:N_G(P)]，因 P⊆N_G(P)，还有更强的 nₚ∣m，其中 |G|=pⁿm、p∤m。",
+            "richMath": true,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "two paragraphs",
+            "handled": true,
+            "text": "中文陈述：Sylow p 子群的个数 nₚ 满足 nₚ∣|G| 且 nₚ≡1 (mod p)。事实上 nₚ=[G:N_G(P)]，因 P⊆N_G(P)，还有更强的 nₚ∣m，其中 |G|=pⁿm、p∤m。\n\n来源：印刷 215 / PDF 230",
+            "richMath": true,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "partial formula",
+            "handled": false,
+            "text": "",
+            "richMath": false,
+            "temporaryHostRemoved": true
+          },
+          {
+            "name": "ordinary text",
+            "handled": false,
+            "text": "",
+            "richMath": false,
+            "temporaryHostRemoved": true
+          }
+        ]
+      }
+    ],
+    "map": {
+      "statuses": 10,
+      "copyController": true
+    },
+    "navigation": {
+      "hash": "#s2-3",
+      "active": "s2-3",
+      "heading": "队列耗尽为什么能证明完整"
+    },
+    "download": {
+      "name": "tables.c",
+      "failure": null
+    }
+  },
+  "presentation_comparison": [
+    {
+      "page": "visual-group-theory/notes/book_overview.html",
+      "presentation_unchanged_except_copy_controller": true
+    },
+    {
+      "page": "visual-group-theory/notes/chapter01_what_is_a_group.html",
+      "presentation_unchanged_except_copy_controller": true
+    },
+    {
+      "page": "visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "presentation_unchanged_except_copy_controller": true
+    },
+    {
+      "page": "visual-group-theory/notes/chapter03_why_study_groups.html",
+      "presentation_unchanged_except_copy_controller": true
+    },
+    {
+      "page": "visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "presentation_unchanged_except_copy_controller": true
+    },
+    {
+      "page": "visual-group-theory/notes/chapter05_five_families.html",
+      "presentation_unchanged_except_copy_controller": true
+    },
+    {
+      "page": "visual-group-theory/notes/chapter06_subgroups.html",
+      "presentation_unchanged_except_copy_controller": true
+    },
+    {
+      "page": "visual-group-theory/notes/chapter07_products_and_quotients.html",
+      "presentation_unchanged_except_copy_controller": true
+    },
+    {
+      "page": "visual-group-theory/notes/chapter08_homomorphisms.html",
+      "presentation_unchanged_except_copy_controller": true
+    },
+    {
+      "page": "visual-group-theory/notes/chapter09_sylow_theory.html",
+      "presentation_unchanged_except_copy_controller": true
+    },
+    {
+      "page": "visual-group-theory/notes/chapter10_galois_theory.html",
+      "presentation_unchanged_except_copy_controller": true
+    },
+    {
+      "page": "visual-group-theory/notes/preface.html",
+      "presentation_unchanged_except_copy_controller": true
+    }
+  ],
+  "all_page_and_step_contact_sheets_opened": true,
+  "annotation_contact_sheets_opened": true,
+  "nojs_and_horizontal_screenshots_opened": true,
+  "final_screenshots_opened": true,
+  "fixes": [
+    "Missing chapter 2–4 annotations added with h2 section targets",
+    "MathML native plain-text selection split subscripts; full-expression and paragraph copy now uses source notation"
+  ],
+  "harness_notes": [
+    "Replaced arbitrary 100px anchor threshold with actual element occlusion check; desktop target at 96px is below the 57px bar",
+    "Initial code-scroll target was a short nonoverflowing input block; inspected dimensions and selected the actual C source",
+    "Initial package comparison assumed an unpacked site; corrected to tar members and required exactly 12 pages",
+    "Entry index.html is a declared redirect, so compare its destination rather than redirect stub bytes"
+  ],
+  "evidence_directory": "tmp/visual-group-theory-polish-20261017/browser",
+  "evidence_sha256": {
+    "annotations.json": "d719ce8be738cb948f2c51d38b449fd6bd1553722a4d1d68dbbf6cee31fddbba",
+    "book_overview-1440.png": "213753fa7d566b8da0f2c1b499f60cfa273081dbb417b93d96716394dd573de7",
+    "book_overview-390.png": "e3a05e118d8711ac2c102d3266a049b8878de0f12298c967510034cc59c2a734",
+    "ch04-1440-math.png": "0c374642c45ddc943b7ccfa0c3129a02f093faa712ccfc10c1f2ac3880460a65",
+    "ch04-390-math.png": "cbe23998486fca8637928f10faa5732230af24ae0105665a760936753f385351",
+    "chapter01_what_is_a_group-1440.png": "130beb74d1d792960e10e248a1432fa829faa088bf7cec2aff3f04877c7f10c1",
+    "chapter01_what_is_a_group-390.png": "bf84ddbad2f552bac6f0e2db0b9641c9aa856f6d89b2f9a30a0bb22468f6b8b8",
+    "chapter02-note-0-1024.png": "09eb3030de0360793ef305690557a6a2c0364e370c5d3e36e1966a2c9398c36a",
+    "chapter02-note-0-1440.png": "fc9e7d67279f56866c4ffc962b95edcf19c1bcf540b432b5927e57d363e17569",
+    "chapter02-note-0-1800.png": "19a64a103d19ad4c72ae9f9d6eabb45d1b67abade184f5daa0107023cf1f1b87",
+    "chapter02-note-0-390.png": "0b04d36915e9eaa17d6255acb3df87a987c363b394b6565bd06cc8d4649e61ed",
+    "chapter02-note-4-1024.png": "ddeada08194af2d95f69d8493d08219154067dcbd68cdf638adc3b9b19c238b7",
+    "chapter02-note-4-1440.png": "e7ec53501866b5277d62d36f3d74922b9f6013fbe919ea6c407fab4495b6301e",
+    "chapter02-note-4-1800.png": "59dedc040af7914229a4b4667c918e744b1a27431aad9abc898cb8bfe9f61f4f",
+    "chapter02-note-4-390.png": "7ad906421797391170c418ea69ca586d1aded88de9bdef5c020e6288bedc78ad",
+    "chapter02_what_do_groups_look_like-1440.png": "10b54d901961b4b2dee9dc9433336ae50843610f882971c8f5eebdd76851bfc8",
+    "chapter02_what_do_groups_look_like-390.png": "198761d58d6e22735de98d995f73a6e25f6008aff3f4d2217713651239ce417a",
+    "chapter03-note-0-1024.png": "b1d35eefbc59ec12e4007c4732238dce1a02c693e8308c39804115fcdb7e25ab",
+    "chapter03-note-0-1440.png": "7eeeb0a5338710697a18fac5716ed17365e039ab8dcf404eaf5d498bb0a252f0",
+    "chapter03-note-0-1800.png": "bf2f028d58d52b872fc941a8edd854df6b9f7cba45a50dbb3a0b3219b953f6e7",
+    "chapter03-note-0-390.png": "5feecba26350f9a27467043671fc0a25529c87b01e4f799d992cc848c29cc347",
+    "chapter03-note-4-1024.png": "94de2bfd9ef8f5e1ddb46f1ff801355c44b229e445060320e6f9dd79ef94ce8d",
+    "chapter03-note-4-1440.png": "d499296b00f6e86b99c9710435355f3578a22912da7f40adff3686f70e60344a",
+    "chapter03-note-4-1800.png": "f36fa942b52c2cd1e04e55394580817dca1385ec4776f4cd33e391848ec0df22",
+    "chapter03-note-4-390.png": "c20be687d4b62705740e65f16c40769350134aed0862688e31fa1e2e8502fd4e",
+    "chapter03_why_study_groups-1440.png": "0b56f48f9f64b2a7e7b3a05df0d739cce06b72e455a83af6f37522eb5095015e",
+    "chapter03_why_study_groups-390.png": "a621a30c0b0bf1bd02dfc4d3434b89d62675b406535e7a0def8add5030c1c5f9",
+    "chapter04-note-0-1024.png": "9e64dda13a7e4e7919636282a17e204d5a6c25e80f0c6560f53a833c4ea8ef52",
+    "chapter04-note-0-1440.png": "eeff2603c8336d2c04ba135cc9068089ecd5d2854e88dbc22c5e51dc4cc4985d",
+    "chapter04-note-0-1800.png": "d2aded5fd65a52ffafa754e9603dc124d0efda3bc9b318437e0f62ab25b93e7f",
+    "chapter04-note-0-390.png": "b544d5c9f08b2618e7d091565d2053935aab225f5183c41ba72c6446e96e01c6",
+    "chapter04-note-4-1024.png": "fe58d33d8008cfae95af8ebf0a0f47944e90e30219ef24fc45ba8c7dcae7c45c",
+    "chapter04-note-4-1440.png": "f79659cb1d785c51d571c287128ed24287cfc813dabffcc2f2c85de3bbcc00da",
+    "chapter04-note-4-1800.png": "a488c2b72e7bfad9288e9ecb6d5ca558d0b9c340e5ea2d2ce6550267140d4e6f",
+    "chapter04-note-4-390.png": "af50212dc4a6cbb9067a2ec175682967f2571dcc2778b62ab19aba245d0b2847",
+    "chapter04_algebra_at_last-1440.png": "9d5a737490d215e0e21ba64d70cf5efb85ca0be5c71b6c154879bece225163b4",
+    "chapter04_algebra_at_last-390.png": "b43203a70142e7e395d430be482ec18e56ecbe5ca5a62483bf6d173c3bb38fa6",
+    "chapter05_five_families-1440.png": "bc139c23050b23121acdd0611ed3c240b5044faedd5d6dadc02cb0f51ccdc5e2",
+    "chapter05_five_families-390.png": "a4bc99b9c4d4995433462a72e7db7c638717b60c4181b63d15b0af79ef826625",
+    "chapter06_subgroups-1440.png": "2b17fb5cc5d1dfc79a5b5014d0973243090cab5585a56e042c0a496356faba65",
+    "chapter06_subgroups-390.png": "4da9e7b7e2b58384a7d8e1779a55598c6cac18e163bef610bd3030817299441f",
+    "chapter07_products_and_quotients-1440.png": "df1a01a37d99e3345dbe8f2b673f374e05e39470696b42a3f74f75bc60f9d8aa",
+    "chapter07_products_and_quotients-390.png": "5a5718d751ddbd649e6550b18e50c9262dd3b08a43c8ada1d5f8db6ce45c6a65",
+    "chapter08_homomorphisms-1440.png": "b9545115eed078c0dcfa88dc803b580944d6b044eddfe379908183cc7b3e3a15",
+    "chapter08_homomorphisms-390.png": "1bae91ef2477f4b0882e87086ae1273f5daa3b1e64d5d20832f5a942d7858c59",
+    "chapter09_sylow_theory-1440.png": "49922e796e11b4f1d72e7dd3686ff5b93c21bede8a52876da35392ce17aacd76",
+    "chapter09_sylow_theory-390.png": "e29d893cf9fe95feebcb6126f906a11b3c951ea55ebec7246ea3e59779a17554",
+    "chapter10_galois_theory-1440.png": "d472804afbc8aa9058c43148a009c49ea8f6bcbe6b045278b27b764866067306",
+    "chapter10_galois_theory-390.png": "78acd561b04908056789bb0d0e1e5a35459bc4b969fb4bd55b82235e77316570",
+    "contact-1440-0.png": "7968769d504087434823c168a582af3ad90484a838ecc2a9a4a2e04b0175c724",
+    "contact-1440-1.png": "9a405e94982f4f6a43c2667f48d034415db18c73df639f05a64a3cc94aeff069",
+    "contact-1440-2.png": "78984262e0d85056ed8413c45744c72ea5972e6a0671eb56ebd56d38438fb329",
+    "contact-1440-3.png": "070169a8e6e727d46e904c27711eab2963b5ec866bb5b2c85d434f2977e000b1",
+    "contact-1440-4.png": "e20ce72f70fe27aca4613ec8b402396936bb9fce591c4a24a4d54a5ddf3a7b23",
+    "contact-1440-5.png": "883fca5d8eaf1ae186fde8413a352e8e9c15cef1c4520a374b8a021e886dc60a",
+    "contact-390-0.png": "a978e2e0eb97c8635a5226f3637c052ea26528f202c51a12ce7ed967c53ff486",
+    "contact-390-1.png": "67e1785b48a7ec61ebd610bcb0e771b7115ac38680a2ecd7b7b8432bfa9668cc",
+    "contact-390-2.png": "d3472757e1a26ec6675d5df8b21228a009cf3759e5626fdd1c8c723520c7300d",
+    "contact-390-3.png": "02465aaf9f2bb4cc204dd9c75f3897090ce281c21f77a8fa46ce9a6df5816296",
+    "copy.json": "aa5083a3f92dc56b2a81c365cf12f16a7d93212f3457d90682780d2e3bf82c59",
+    "ex-10-26-step-2-1440.png": "17c67ed4572ad927798a637f98b247731d0437194b5f4e476cc0cb3171ea389e",
+    "ex-10-26-step-2-390.png": "bd3a997fe79204d433f274e6c7751ace750a5c8712c350dd8e0cc7b40b424fca",
+    "ex-10-26-step-3-1440.png": "3502366d1ac03d015513e32e4b19b5667ab6e9a9e43c4e6c4fc42af2b2ca1bd8",
+    "ex-10-26-step-3-390.png": "0643d25fdb4b48762e623017160d0a52a66b98af771ecc6b1995c49a709b8e40",
+    "ex-4-1-c-1440.png": "f5e1c287046c4a605d8bf8a137d64aac502935d5f324a0efbca404fca367fc2e",
+    "ex-4-1-c-390.png": "f2e6a2ac65598eeb02cdc213e09e49cd404b991fce04a27d72e2d124592d8bc5",
+    "ex-6-4-a-1440.png": "157f9b8b04c2bbbf3f6e06cfe63a417dab72951b9c9533756f3ca93b431b5d89",
+    "ex-6-4-a-390.png": "520c0ee93cde293ae092da48f4f120f8ce24965f4368050549be7d62096ed853",
+    "ex-6-5-e-1440.png": "80e0b4d5722ea16069f5f6af4671763174a14f1fbcb0ae3cd6b3a130de0bc880",
+    "ex-6-5-e-390.png": "eaf7083e4b44f7f075b6ea8954c5ae8b4d3a4990f76f737df23770447533866d",
+    "ex-9-28-step-1-1440.png": "959cee8a07696104d7eca6d4603b2bc2ecc04758c41b48b313e98ddd53760687",
+    "ex-9-28-step-1-390.png": "e7d6762a122f367e7b42e794dbff899cb94cf8c18dc608e8c06400d8a1a1f6d0",
+    "ex-9-28-step-2-1440.png": "8d516e15cc368a32b1c06cd768549efbbcfae2822881bf216bfd0463bb1349ff",
+    "ex-9-28-step-2-390.png": "a921d8d6b465ae412fdbdd4c93a6219b108ab7c508743297cc3eb4feeeb0ec77",
+    "ex-9-28-step-3-1440.png": "18e7b1363508346d2101cf7f77d02671e1dfbcf8b9539611d2f0ef75acae7ed1",
+    "ex-9-28-step-3-390.png": "3d6ac38fe5be35b07e800b8ba1cc3325abd40abb37b917e12b91e20aa54b4d3c",
+    "final-ch02-1440.png": "26c41974a33b6c53fb2439754e9816bbd2adfcf632b3c6f0ed001ce4b44e8101",
+    "final-ch09-1440.png": "668f1cb8a8c057f3ba7adb0e0862d49eb9841373dbefc4343a7d0e2035137827",
+    "final-ch09-390.png": "83a1fd856e3835e9e4f964a21c5be99433ddc5f7d5e589840bbb8ba8b74d23dc",
+    "final.json": "bc935389ec0d33a644fb67df623e5fe33764d043961a599ae6518199e0ff50d6",
+    "finish.json": "aa4f72c9ba9193f4c903203ace28e26738b40ab2396d716adab0a9905e0ca57d",
+    "horizontal-contact.png": "d74d65dc2ac72623472047088f68717849f18e2b824e3bef98018792dc2bc266",
+    "horizontal-map-status.png": "19233fbc235ceb378624e363bd183a505c410a25f895ecb5eb2e863da996819a",
+    "horizontal-order12-diagram.png": "57e2249657cca8d19b99f0bee7c36ee3104d5657265789ee9a9e8f680c8b3b7d",
+    "horizontal-program-code.png": "ba6200403316839118d50cd24426926783262a810b40709938c092f9130dd261",
+    "interactions.json": "a3d449818eca9a35649cfb6b046503c3027678b5cd0082e51b1f5af826d6ae80",
+    "nojs-ch2-1440.png": "be10551630925a0a4568e806729ec8939c3c55d2c3936640e23a48e9e02b634d",
+    "nojs-ch2-390.png": "5129319a97caacb91772bd7f06022408610d57ee29e7d39a049fda9dad08947c",
+    "nojs-ch3-1440.png": "8b73c3f50a63254f145fe5387a5bbdd7e4632e7275925c7e0b94bb3e39b1445e",
+    "nojs-ch3-390.png": "23d2353ac0d97729cf9069bc5559bb56034a102eed4c85f5c68834df56d272d5",
+    "nojs-ch4-1440.png": "aaafcd10aa707ce71abc5e5fc8dd144a69a4ffeb152562e5193028664c0288c2",
+    "nojs-ch4-390.png": "3610a73524c00629d0297da65cb104f59c3266ac9aea063e239479fce59e1567",
+    "nojs-contact-1440.png": "9011759c23245b672c67e0ffc25d95365e851bd9353974468b25ff8f02dde670",
+    "nojs-contact-390.png": "e089405dc7ecf74ef0e60430d4a736eb15add9854ba6f65fb42f8df6cf7c1c1f",
+    "nojs.json": "a6e4b3d2bcfc4042d3527e063dab308d91c40ed690e266611eaa731964422823",
+    "notes-contact-1024-0.png": "115bc9c080549fa43a41829257a11b2cf92ed77e8648234685de1a2a87633486",
+    "notes-contact-1024-4.png": "7986b164dbb01a65b5e8180378f987bde0a2a124f32b0026cec8f37b65d90954",
+    "notes-contact-1440-0.png": "04f0a82be08bad1d8be74bfd0ae81715056f5dc4d05f8377ecca111d9874b67e",
+    "notes-contact-1440-4.png": "f1d339fd252192bfd30370e86a43cc7723b6f5083789709d798145fe55fdf230",
+    "notes-contact-1800-0.png": "379d9ccbde913e819e3db42c00fbfbfd51410ce4385ad2cdbbdad7e836d77471",
+    "notes-contact-1800-4.png": "950ee746438ba3db2392d32a694879ede0e180b44571e5050a98911cba139e27",
+    "notes-contact-390-0.png": "7ff2c203cc5e2a590f78e6610da026b69ab610a52e992a24f40865eb8ca843b9",
+    "notes-contact-390-4.png": "1de144c46fe8cdae4451b02325e098c6e991f9562805040dfd6ec18839dfa39f",
+    "pages.json": "38a32c188bd948a37800e3f94693eea7f13283a17f0ff37b364210a92f470501",
+    "pages.json.results": "a15eae86869025bd64bdd705c1f78207db5ea3fa68468fe50ff7caaed55df9c3",
+    "preface-1440.png": "d59c98cf5d7d432ba9486f6a6e1cb2446835c3183c374f476a010701db55dbd4",
+    "preface-390.png": "a72ea5cc764154e4d98b939346e8974ea1c5dd7a6afad24949006abad429af9f",
+    "steps-contact-1440-0.png": "27508ce3f4993c7f398a6fc88db0bc54e356ef3d85240e7f7c6f096bf530afd9",
+    "steps-contact-1440-1.png": "c902605595aa1af31d99e044e8c4fd58f980ff02c2e94721badcb958f206698b",
+    "steps-contact-1440-2.png": "d68740b83474076d74fe0ae2360222116afb1268cd4f6524778a5cf463eefefb",
+    "steps-contact-1440-3.png": "1007af7bb8b72581a708d46e33e582447a730214c1c4d56a792afae276fde86c",
+    "steps-contact-390-0.png": "c02448396468006a8c4800a169000b75eeafd2528464159eda8f12c5d2611ef0",
+    "steps-contact-390-1.png": "e08ecc7351479826161937a16f84677e64b9b74e392ddedbafcbda0d6dfe53f6",
+    "steps-contact-390-2.png": "d9af24420a67b6b06f81102ca1bdfbc7ec61d093cb31d59da338e1793a2b6c05",
+    "steps.json": "9dfd00dac4e3225ba72dab6ba43db48805212c3f4cdd01cec59915d1845aaa31"
+  },
+  "open_findings": [],
+  "previous_record": "review/history/batch04-browser.json"
+}

@@ -7,7 +7,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "deploy"))
-from reader_views import transform_reading_page
+from reader_views import build_reader_views, transform_reading_page
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -16,12 +16,15 @@ class Links(HTMLParser):
     def __init__(self, html):
         super().__init__()
         self.hrefs = []
+        self.downloads = []
         self.feed(html)
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         if tag == "a" and "href" in attrs:
             self.hrefs.append(attrs["href"])
+            if "download" in attrs:
+                self.downloads.append(attrs["href"])
 
 
 class SectionSources(HTMLParser):
@@ -55,6 +58,45 @@ def reading_page(book, source_link):
 
 
 class SourcePageNavigation(unittest.TestCase):
+    def test_visual_group_program_guide_keeps_every_registered_download(self):
+        # Exercise the published document, where an early maintenance section
+        # previously hid all later chapters despite intact raw Markdown links.
+        paths = ["stochastic/code/README.md", "stochastic/code/programs.json",
+                 "weiss/notes/README.md", "visual-group-theory/code/README.md"]
+        paths += [f"stochastic/notes/{name}.json" for name in
+                  ("source_manifest", "review_manifest", "validation")]
+        blobs = {name: (ROOT / "books" / name).read_bytes() for name in paths}
+        generated, _ = build_reader_views(blobs)
+        guide = generated["visual-group-theory/code/index.html"].decode()
+        registered = json.loads((ROOT / "books/visual-group-theory/code/programs.json").read_text())
+        downloads = set(Links(guide).downloads)
+        for program in registered["programs"]:
+            for source in program["files"].values():
+                with self.subTest(program=program["id"], source=source):
+                    self.assertIn(Path(source).name, downloads)
+
+    def test_measure_probability_source_ranges_and_download_survive_publication(self):
+        source = ('<a class="source-ref" href="book_overview.html#source">印刷 56—57 / PDF 68—69</a>'
+                  '<a href="../code/finite_spaces.c" download>下载 C 程序</a>')
+        html = transform_reading_page(reading_page('measure-probability', source),
+                                     'measure-probability/notes/chapter02_measure_spaces.html', {}).decode()
+        self.assertIn('程士宏 · 测度论与概率论基础', html)
+        self.assertIn('印刷 56—57 / PDF 68—69', html)
+        self.assertIn('book_overview.html#source', Links(html).hrefs)
+        self.assertIn('<a href="../code/finite_spaces.c" download>', html)
+        self.assertIn('wide.matches ? 100 : 132', html)
+        self.assertIn('href="../../" data-notes-home="true"', html)
+
+    def test_visual_group_theory_text_source_keeps_page_and_navigation(self):
+        source = '<a class="source-ref" href="book_overview.html#source">印刷 9 / PDF 24</a>'
+        html = transform_reading_page(reading_page('visual-group-theory', source),
+                                      'visual-group-theory/notes/chapter01_what_is_a_group.html', {}).decode()
+        self.assertIn('印刷 9 / PDF 24', html)
+        self.assertIn('Carter · 视觉群论', html)
+        self.assertIn('book_overview.html#source', Links(html).hrefs)
+        self.assertNotIn('.pdf#page=', html)
+        self.assertIn('wide.matches ? 100 : 132', html)
+
     def test_csapp_major_section_links_match_independent_source_manifest(self):
         notes = ROOT / "books/csapp/notes"
         manifest = json.loads((notes / "source_manifest.json").read_text())

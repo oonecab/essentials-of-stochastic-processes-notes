@@ -1,0 +1,783 @@
+{
+  "schema_version": 1,
+  "book_id": "visual-group-theory",
+  "title": "Visual Group Theory",
+  "author": "Nathan C. Carter",
+  "publisher": "Mathematical Association of America",
+  "copyright_year": 2009,
+  "edition_statement": "No numbered edition statement in the supplied source; MAA electronic edition",
+  "print_isbn": "978-0-88385-757-1",
+  "electronic_isbn": "978-1-61444-102-1",
+  "source_pdf": {
+    "path": "tmp/source.pdf",
+    "sha256": "f82d041ad301baa07b1ec17f495805e17c49852a772c770a28afeb29de7ecf2a",
+    "bytes": 7636742,
+    "pages": 312,
+    "provenance": "User-provided Zotero PDF; local reference copy only",
+    "typesetting_stamp": "2011-10-18",
+    "metadata_creation_year": 2012
+  },
+  "publication": {
+    "include_source_pdf": false,
+    "reason": "Source supplied for reading; redistribution not part of this task"
+  },
+  "page_mapping": [
+    {
+      "pdf_start": 1,
+      "pdf_end": 1,
+      "printed": "cover"
+    },
+    {
+      "pdf_start": 2,
+      "pdf_end": 14,
+      "printed": "i–xiii",
+      "offset": 1
+    },
+    {
+      "pdf_start": 15,
+      "pdf_end": 15,
+      "printed": "0 (blank)"
+    },
+    {
+      "pdf_start": 16,
+      "pdf_end": 312,
+      "printed_start": 1,
+      "printed_end": 297,
+      "offset": 15
+    }
+  ],
+  "front_matter": [
+    {
+      "title": "Preface",
+      "printed": "ix",
+      "pdf_start": 10,
+      "pdf_end": 10
+    },
+    {
+      "title": "Contents",
+      "printed": "xi–xiii",
+      "pdf_start": 12,
+      "pdf_end": 14
+    },
+    {
+      "title": "Overview",
+      "printed": "1–2",
+      "pdf_start": 16,
+      "pdf_end": 17
+    }
+  ],
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "What is a group?",
+      "title_zh": "什么是群",
+      "printed_start": 3,
+      "printed_end": 10,
+      "pdf_start": 18,
+      "pdf_end": 25,
+      "file": "chapter01_what_is_a_group.html",
+      "status": "completed_locally",
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "A famous toy",
+          "printed_start": 3,
+          "pdf_start": 18
+        },
+        {
+          "number": "1.2",
+          "title": "Considering the cube",
+          "printed_start": 4,
+          "pdf_start": 19
+        },
+        {
+          "number": "1.3",
+          "title": "The study of symmetry",
+          "printed_start": 5,
+          "pdf_start": 20
+        },
+        {
+          "number": "1.4",
+          "title": "Rules of a group",
+          "printed_start": 6,
+          "pdf_start": 21
+        },
+        {
+          "number": "1.5",
+          "title": "Exercises",
+          "printed_start": 7,
+          "pdf_start": 22
+        }
+      ],
+      "source_exercise_count": 14
+    },
+    {
+      "chapter": 2,
+      "title": "What do groups look like?",
+      "title_zh": "群是什么样子",
+      "printed_start": 11,
+      "printed_end": 24,
+      "pdf_start": 26,
+      "pdf_end": 39,
+      "file": "chapter02_what_do_groups_look_like.html",
+      "status": "completed_locally",
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Mapmaking",
+          "printed_start": 11,
+          "pdf_start": 26
+        },
+        {
+          "number": "2.2",
+          "title": "A not-so-famous toy",
+          "printed_start": 14,
+          "pdf_start": 29
+        },
+        {
+          "number": "2.3",
+          "title": "Mapping a group",
+          "printed_start": 15,
+          "pdf_start": 30
+        },
+        {
+          "number": "2.4",
+          "title": "Cayley diagrams",
+          "printed_start": 18,
+          "pdf_start": 33
+        },
+        {
+          "number": "2.5",
+          "title": "A touch more abstract",
+          "printed_start": 19,
+          "pdf_start": 34
+        },
+        {
+          "number": "2.6",
+          "title": "Exercises",
+          "printed_start": 21,
+          "pdf_start": 36
+        }
+      ],
+      "source_exercise_count": 19
+    },
+    {
+      "chapter": 3,
+      "title": "Why study groups?",
+      "title_zh": "为什么研究群",
+      "printed_start": 25,
+      "printed_end": 40,
+      "pdf_start": 40,
+      "pdf_end": 55,
+      "file": "chapter03_why_study_groups.html",
+      "status": "completed_locally",
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Groups of symmetries",
+          "printed_start": 25,
+          "pdf_start": 40
+        },
+        {
+          "number": "3.2",
+          "title": "Groups of actions",
+          "printed_start": 34,
+          "pdf_start": 49
+        },
+        {
+          "number": "3.3",
+          "title": "Groups everywhere",
+          "printed_start": 36,
+          "pdf_start": 51
+        },
+        {
+          "number": "3.4",
+          "title": "Exercises",
+          "printed_start": 37,
+          "pdf_start": 52
+        }
+      ],
+      "source_exercise_count": 16
+    },
+    {
+      "chapter": 4,
+      "title": "Algebra at last",
+      "title_zh": "终于进入代数",
+      "printed_start": 41,
+      "printed_end": 62,
+      "pdf_start": 56,
+      "pdf_end": 77,
+      "file": "chapter04_algebra_at_last.html",
+      "status": "completed_locally",
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Where have all the actions gone?",
+          "printed_start": 41,
+          "pdf_start": 56
+        },
+        {
+          "number": "4.2",
+          "title": "Combine, combine, combine",
+          "printed_start": 44,
+          "pdf_start": 59
+        },
+        {
+          "number": "4.3",
+          "title": "Multiplication tables",
+          "printed_start": 45,
+          "pdf_start": 60
+        },
+        {
+          "number": "4.4",
+          "title": "The classic definition",
+          "printed_start": 48,
+          "pdf_start": 63
+        },
+        {
+          "number": "4.5",
+          "title": "Exercises",
+          "printed_start": 52,
+          "pdf_start": 67
+        }
+      ],
+      "source_exercise_count": 33
+    },
+    {
+      "chapter": 5,
+      "title": "Five families",
+      "title_zh": "五类群",
+      "printed_start": 63,
+      "printed_end": 96,
+      "pdf_start": 78,
+      "pdf_end": 111,
+      "file": "chapter05_five_families.html",
+      "status": "completed_locally",
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Cyclic groups",
+          "printed_start": 64,
+          "pdf_start": 79
+        },
+        {
+          "number": "5.2",
+          "title": "Abelian groups",
+          "printed_start": 68,
+          "pdf_start": 83
+        },
+        {
+          "number": "5.3",
+          "title": "Dihedral groups",
+          "printed_start": 74,
+          "pdf_start": 89
+        },
+        {
+          "number": "5.4",
+          "title": "Symmetric and alternating groups",
+          "printed_start": 78,
+          "pdf_start": 93
+        },
+        {
+          "number": "5.5",
+          "title": "Exercises",
+          "printed_start": 87,
+          "pdf_start": 102
+        }
+      ],
+      "source_exercise_count": 44
+    },
+    {
+      "chapter": 6,
+      "title": "Subgroups",
+      "title_zh": "子群",
+      "printed_start": 97,
+      "printed_end": 116,
+      "pdf_start": 112,
+      "pdf_end": 131,
+      "file": "chapter06_subgroups.html",
+      "status": "completed_locally",
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "What multiplication tables say about Cayley diagrams",
+          "printed_start": 97,
+          "pdf_start": 112
+        },
+        {
+          "number": "6.2",
+          "title": "Seeing subgroups",
+          "printed_start": 99,
+          "pdf_start": 114
+        },
+        {
+          "number": "6.3",
+          "title": "Revealing subgroups",
+          "printed_start": 101,
+          "pdf_start": 116
+        },
+        {
+          "number": "6.4",
+          "title": "Cosets",
+          "printed_start": 102,
+          "pdf_start": 117
+        },
+        {
+          "number": "6.5",
+          "title": "Lagrange's theorem",
+          "printed_start": 105,
+          "pdf_start": 120
+        },
+        {
+          "number": "6.6",
+          "title": "Exercises",
+          "printed_start": 108,
+          "pdf_start": 123
+        }
+      ],
+      "source_exercise_count": 31
+    },
+    {
+      "chapter": 7,
+      "title": "Products and quotients",
+      "title_zh": "积与商",
+      "printed_start": 117,
+      "printed_end": 156,
+      "pdf_start": 132,
+      "pdf_end": 171,
+      "file": "chapter07_products_and_quotients.html",
+      "status": "completed_locally",
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "The direct product",
+          "printed_start": 117,
+          "pdf_start": 132
+        },
+        {
+          "number": "7.2",
+          "title": "Semidirect products",
+          "printed_start": 128,
+          "pdf_start": 143
+        },
+        {
+          "number": "7.3",
+          "title": "Normal subgroups and quotients",
+          "printed_start": 132,
+          "pdf_start": 147
+        },
+        {
+          "number": "7.4",
+          "title": "Normalizers",
+          "printed_start": 140,
+          "pdf_start": 155
+        },
+        {
+          "number": "7.5",
+          "title": "Conjugacy",
+          "printed_start": 142,
+          "pdf_start": 157
+        },
+        {
+          "number": "7.6",
+          "title": "Exercises",
+          "printed_start": 147,
+          "pdf_start": 162
+        }
+      ],
+      "source_exercise_count": 37
+    },
+    {
+      "chapter": 8,
+      "title": "The power of homomorphisms",
+      "title_zh": "同态的力量",
+      "printed_start": 157,
+      "printed_end": 192,
+      "pdf_start": 172,
+      "pdf_end": 207,
+      "file": "chapter08_homomorphisms.html",
+      "status": "completed_locally",
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Embeddings and quotient maps",
+          "printed_start": 157,
+          "pdf_start": 172
+        },
+        {
+          "number": "8.2",
+          "title": "The Fundamental Homomorphism Theorem",
+          "printed_start": 167,
+          "pdf_start": 182
+        },
+        {
+          "number": "8.3",
+          "title": "Modular arithmetic",
+          "printed_start": 169,
+          "pdf_start": 184
+        },
+        {
+          "number": "8.4",
+          "title": "Direct products and relatively prime numbers",
+          "printed_start": 172,
+          "pdf_start": 187
+        },
+        {
+          "number": "8.5",
+          "title": "The Fundamental Theorem of Abelian Groups",
+          "printed_start": 175,
+          "pdf_start": 190
+        },
+        {
+          "number": "8.6",
+          "title": "Semidirect products revisited",
+          "printed_start": 177,
+          "pdf_start": 192
+        },
+        {
+          "number": "8.7",
+          "title": "Exercises",
+          "printed_start": 179,
+          "pdf_start": 194
+        }
+      ],
+      "source_exercise_count": 50
+    },
+    {
+      "chapter": 9,
+      "title": "Sylow theory",
+      "title_zh": "Sylow 理论",
+      "printed_start": 193,
+      "printed_end": 220,
+      "pdf_start": 208,
+      "pdf_end": 235,
+      "file": "chapter09_sylow_theory.html",
+      "status": "completed_locally",
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Group actions",
+          "printed_start": 194,
+          "pdf_start": 209
+        },
+        {
+          "number": "9.2",
+          "title": "Approaching Sylow: Cauchy's Theorem",
+          "printed_start": 199,
+          "pdf_start": 214
+        },
+        {
+          "number": "9.3",
+          "title": "p-groups",
+          "printed_start": 205,
+          "pdf_start": 220
+        },
+        {
+          "number": "9.4",
+          "title": "Sylow Theorems",
+          "printed_start": 208,
+          "pdf_start": 223
+        },
+        {
+          "number": "9.5",
+          "title": "Exercises",
+          "printed_start": 217,
+          "pdf_start": 232
+        }
+      ],
+      "source_exercise_count": 28
+    },
+    {
+      "chapter": 10,
+      "title": "Galois theory",
+      "title_zh": "Galois 理论",
+      "printed_start": 221,
+      "printed_end": 260,
+      "pdf_start": 236,
+      "pdf_end": 275,
+      "file": "chapter10_galois_theory.html",
+      "status": "completed_locally",
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "The big question",
+          "printed_start": 221,
+          "pdf_start": 236
+        },
+        {
+          "number": "10.2",
+          "title": "More big questions",
+          "printed_start": 225,
+          "pdf_start": 240
+        },
+        {
+          "number": "10.3",
+          "title": "Visualizing field extensions",
+          "printed_start": 228,
+          "pdf_start": 243
+        },
+        {
+          "number": "10.4",
+          "title": "Irreducible polynomials",
+          "printed_start": 231,
+          "pdf_start": 246
+        },
+        {
+          "number": "10.5",
+          "title": "Galois groups",
+          "printed_start": 233,
+          "pdf_start": 248
+        },
+        {
+          "number": "10.6",
+          "title": "The heart of Galois theory",
+          "printed_start": 243,
+          "pdf_start": 258
+        },
+        {
+          "number": "10.7",
+          "title": "Unsolvability",
+          "printed_start": 247,
+          "pdf_start": 262
+        },
+        {
+          "number": "10.8",
+          "title": "Exercises",
+          "printed_start": 252,
+          "pdf_start": 267
+        }
+      ],
+      "source_exercise_count": 30
+    }
+  ],
+  "back_matter": [
+    {
+      "title": "Answers to selected Exercises",
+      "printed_start": 261,
+      "printed_end": 284,
+      "pdf_start": 276,
+      "pdf_end": 299
+    },
+    {
+      "title": "Bibliography",
+      "printed_start": 285,
+      "pdf_start": 300
+    },
+    {
+      "title": "Index of Symbols Used",
+      "printed_start": 287,
+      "pdf_start": 302
+    },
+    {
+      "title": "Index",
+      "printed_start": 289,
+      "pdf_start": 304
+    },
+    {
+      "title": "About the Author",
+      "printed_start": 297,
+      "pdf_start": 312
+    }
+  ],
+  "current_scope": {
+    "pages": [
+      "book_overview.html",
+      "chapter01_what_is_a_group.html",
+      "chapter02_what_do_groups_look_like.html",
+      "chapter03_why_study_groups.html",
+      "chapter04_algebra_at_last.html",
+      "chapter05_five_families.html",
+      "chapter06_subgroups.html",
+      "chapter07_products_and_quotients.html",
+      "chapter08_homomorphisms.html",
+      "chapter09_sylow_theory.html",
+      "chapter10_galois_theory.html",
+      "preface.html"
+    ],
+    "exercises": 302,
+    "numbered_statements": 62,
+    "status": "completed_locally"
+  },
+  "source_issues": [
+    {
+      "where": "Exercise 1.13, printed 9 / PDF 24",
+      "issue": "Text extraction drops the minus in add −17",
+      "resolution": "Checked rendered page; integers include negative values"
+    },
+    {
+      "where": "Exercise 1.14(d), printed 9 / PDF 24",
+      "issue": "Text extraction drops −1",
+      "resolution": "Checked rendered page; retained 1 and −1"
+    },
+    {
+      "where": "Exercise 10.10, printed 255 / PDF 270",
+      "issue": "Radical glyph splits label",
+      "resolution": "已复核并补解：PDF 270（印刷 255）确认 10.10 及 (a)—(c) 三问，根号造成文本层题号拆行；chapter10 的 ex-10-10 已给出 Q(√3) 的基底、共轭自同构、二次域互不包含与双二次域包含关系的完整解答。"
+    },
+    {
+      "where": "Exercise 3.11(f), printed 39 / PDF 54",
+      "issue": "The stated six different remaining frieze types are not all different in the supplied drawing",
+      "resolution": "The actual (f) has horizontal and inter-column vertical mirrors, repeating type (d); preserve drawing, prove the duplication, and separately construct the missing translation-plus-horizontal-reflection type."
+    },
+    {
+      "where": "Exercise 3.12, printed 40 / PDF 55",
+      "issue": "Abstract group matching and geometric frieze type are different comparisons",
+      "resolution": "MW matches the main example geometrically, while also isomorphic to (c)/(e) as an abstract group; H matches actual (d)/(f)."
+    },
+    {
+      "where": "Exercises 4.4-4.6, printed 53-54 / PDF 68-69",
+      "issue": "Source Q4 is the eight-element group and its diagram has ji=k",
+      "resolution": "All chapter tables and equations follow source arrows; explain the opposite-Hamilton convention and usual Q8 name."
+    },
+    {
+      "where": "Exercise 4.8, printed 55 / PDF 70",
+      "issue": "The phrase three groups cites exercises 2.4 through 2.8",
+      "resolution": "Cover every cited case, including the integer and even-integer infinite addition tables."
+    },
+    {
+      "where": "Exercises 4.26 and 4.29, printed 60-61 / PDF 75-76",
+      "issue": "Later subscripts a1,a2 replace diagram labels a,a squared; the displayed invalid product ending in x is inconsistent under that correspondence",
+      "resolution": "State a1=a,a2=a squared, etc.; graph-derived table gives correct t=x, while the invalid product b squared times a times y equals e; verify b x a squared=y."
+    },
+    {
+      "where": "5.4.2, printed 80 / PDF 95",
+      "issue": "原书把全部置换的平方集合视为 A_n，一般不成立",
+      "resolution": "S6 中 (1234)(56) 为偶置换但不是平方；所有平方生成 A_n，不能将生成子群与集合混用。"
+    },
+    {
+      "where": "5.33(e), printed 93 / PDF 108",
+      "issue": "实际关系为 bab=a^-1，最后的 b 无逆号",
+      "resolution": "由 a²=b² 推出 a,b 交换；所给表示为 C4×C2，不更改为四元数表示。"
+    },
+    {
+      "where": "5.44, printed 96 / PDF 111",
+      "issue": "C6 放入 C5 的文字误写",
+      "resolution": "按构造应是 S5；最小置换次数公式及 D1/D2 边界分别证明。"
+    },
+    {
+      "where": "6.26(b), Appendix printed 270 / PDF 285",
+      "issue": "原表行序 0,2,4,8 的末项不属标准 C8 元素",
+      "resolution": "正确为 0,2,4,6；按实际循环群算表。"
+    },
+    {
+      "where": "7.18(f)(g), printed 150 / PDF 165",
+      "issue": "原图上下层红蓝关系不一致",
+      "resolution": "手读全部箭头；生成的状态置换群阶 64，而节点只有 16；所问两次折叠均有多出口，不能定义商群。"
+    },
+    {
+      "where": "7.4, printed 140 / PDF 155",
+      "issue": "正规化子 N_V4(A4) 的母群下标写反",
+      "resolution": "改为 N_A4(V4)=A4，解释定义。"
+    },
+    {
+      "where": "7.37, printed 155 / PDF 170",
+      "issue": "题干描述 a,c 共轭与图中 cac^-1=b 不符",
+      "resolution": "保留实际等式；按明确要求找 b→d 的共轭，yby=d，并绘顶点状态。"
+    },
+    {
+      "where": "8.6(b), printed 181 / PDF 196; Appendix 273 / PDF 288",
+      "issue": "正规子群的像未必在整个目标群正规",
+      "resolution": "只能保证在 Im φ 正规；C2 嵌入 S3 的反射给反例，满射条件可补足。"
+    },
+    {
+      "where": "8.13–8.14, printed 182–183 / PDF 197–198",
+      "issue": "一般幂映射与求逆映射被称为任意群的同态",
+      "resolution": "用 S3 反例；阿贝尔条件保证幂映射，求逆为同态当且仅当群交换。"
+    },
+    {
+      "where": "8.24, printed 184 / PDF 199",
+      "issue": "文字要求 n 的倍数，公式误写 am=bm+1",
+      "resolution": "应为 an=bm+1；从 Cn×Cm 中 (0,1) 的可达步数推出。"
+    },
+    {
+      "where": "8.29–8.30; 8.38–8.39, printed 185–187 / PDF 200–202",
+      "issue": "部分半直积因子顺序与给定作用方向不一致",
+      "resolution": "始终按 α:H→Aut(G) 对应 G⋊αH；保留作用再修正符号次序。"
+    },
+    {
+      "where": "8.40, printed 187 / PDF 202",
+      "issue": "Q 加法 × C2 与非零有理数乘法群不同构",
+      "resolution": "前者每个元素可开三次根，后者 2 无有理三次根；给正确的正有理数乘法群版本。"
+    },
+    {
+      "where": "8.42(a)(b), printed 188 / PDF 203",
+      "issue": "矩阵两处负号容易丢失，影响群类型",
+      "resolution": "两矩阵分别生成 V4 和 C4×C2；使用实际矩阵乘法独立验证。"
+    },
+    {
+      "where": "8.43, printed 189 / PDF 204",
+      "issue": "只凭两子群正规不能先称相乘映射为同态；反问缺有限性",
+      "resolution": "(a) 交集平凡推出两因子交换；(b) 有限时用阶，无限抽象同构有直和 C2 反例。"
+    },
+    {
+      "where": "8.47(h), printed 191 / PDF 206",
+      "issue": "终点提示 H_n=K_n 不合终止条件",
+      "resolution": "G_n=C_n 时 H_n={e}，逐层 H_i=q_i^-1(H_(i+1)) 反向提升补因子。"
+    },
+    {
+      "where": "9.4 proof, printed 199 / PDF 214",
+      "issue": "左到右右作用却使用左陪集，并混淆一点取值与置换相等",
+      "resolution": "用右陪集 Hg↦s·g 证明；后续左乘和共轭明确标作左作用。"
+    },
+    {
+      "where": "9.22(d), printed 219 / PDF 234",
+      "issue": "称 p^n m、m<p 的阶全无简单群，漏掉 m=n=1",
+      "resolution": "保留原题，分别处理 m>1、m=1 n≥2，指出 C_p 为简单群的例外。"
+    },
+    {
+      "where": "9.27, Appendix printed 279 / PDF 294",
+      "issue": "半直积因子顺序与 C3 作用于 C7 的方向不符",
+      "resolution": "按本笔记统一约定写 C7⋊C3；m=2 与 4 同构。"
+    },
+    {
+      "where": "10.4 discussion, printed 232 / PDF 247",
+      "issue": "首项系数为 4 的二次式的复线性分解漏前因子",
+      "resolution": "保留 4(x−2−i/2)(x−2+i/2)，乘回验证最高次项。"
+    },
+    {
+      "where": "10.5.5, printed 242 / PDF 257",
+      "issue": "非实根下标写成 r1,r2；单根域与全部根的域容易混淆",
+      "resolution": "非实的是 r2,r3；Q(∛2) 自同构群平凡，完整六次分裂域的群为 S3。"
+    },
+    {
+      "where": "Figure 10.20, printed 247 / PDF 262",
+      "issue": "Q4 的三个四阶子群标作 V4",
+      "resolution": "三个均为 C4；商 Q4/C2 才是 V4，补明可解链和群的作用。"
+    },
+    {
+      "where": "10.7.1, printed 249 / PDF 264",
+      "issue": "包含 A5 的群不必第一步商去 A5",
+      "resolution": "用可解性对子群封闭推出不可解，给 A5×C2 反例说明原理由失效。"
+    },
+    {
+      "where": "10.4(a), printed 253 / PDF 268",
+      "issue": "原有理式通分分子错误",
+      "resolution": "实际得到 −(x²+x+2)/(x²+1)，保留定义域禁值并代回复核。"
+    },
+    {
+      "where": "10.6 worked example, printed 253 / PDF 268",
+      "issue": "长除法把 −6x+32x 写成 24x",
+      "resolution": "应为 26x，商 2x²+8x+26、余 109；全部习题另行逐项运算。"
+    },
+    {
+      "where": "10.17(b), printed 257 / PDF 272",
+      "issue": "整个复数集在乘法下不成群",
+      "resolution": "目标 C×，像 U(1)，核 2πZ；只有限制到像才是满的商映射。"
+    },
+    {
+      "where": "10.24, Appendix printed 282 / PDF 297",
+      "issue": "有理根提示符号为正",
+      "resolution": "实际为 −1/3，由 3x+1 与代入核验。"
+    },
+    {
+      "where": "10.26, printed 259 / PDF 274",
+      "issue": "S5 子群清单遗漏 D5、包含自身的措辞有误，24 点图实际非 S4",
+      "resolution": "保留节点和箭头，独立重建为 Dic6/Q24；解其实际可解链，并补 S4 与 D5。"
+    },
+    {
+      "where": "10.29, printed 259–260 / PDF 274–275",
+      "issue": "称左侧有限域为五阶，图实有四点",
+      "resolution": "按实际 F4 计算；另画 F3,F4,F7,F11 的加法与非零乘法。"
+    }
+  ]
+}

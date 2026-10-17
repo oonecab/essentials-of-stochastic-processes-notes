@@ -3,7 +3,7 @@
 <!-- project-governance:managed:start -->
 ## 项目目的
 
-统一管理 Durrett 随机过程、Weiss 数据结构与 CS:APP 系统笔记，保留正式 HTML、可运行示例、来源与验证记录，共用阅读入口和静态发布流程。
+统一管理 Durrett 随机过程、Weiss 数据结构、CS:APP 系统、Carter 视觉群论与程士宏测度概率笔记，保留正式 HTML、可运行示例、来源与验证记录，共用阅读入口和静态发布流程。
 
 ## 项目分类
 
@@ -37,6 +37,8 @@
 - books/stochastic
 - books/weiss
 - books/csapp
+- books/visual-group-theory
+- books/measure-probability
 - portal
 - deploy
 - tools
@@ -44,9 +46,9 @@
 ## 架构事实
 
 - books/catalog.json 登记书籍入口、目录和发布前缀；每本书保留一份全书总览及按章维护的独立 HTML。
-- 随机过程和 CS:APP 以 code/ 下 C/Python 为维护源并同步 HTML；Weiss 教学代码以正式 HTML 为维护源，c/ 为原书图例的独立 C 实现。
+- 随机过程、CS:APP、视觉群论和测度概率以 code/ 下 C/Python 为维护源并同步 HTML；Weiss 教学代码以正式 HTML 为维护源，c/ 为原书图例的独立 C 实现。
 - 根目录工具统一调用各书既有校验器，输出写入被忽略的 tmp/ 或 deploy/portal-releases/。
-- 统一构建保留 /stochastic/、/weiss/ 并接入 /csapp/ URL；部署使用独立版本目录和 current 原子切换，同时维护本版 CSP。
+- 统一构建保留 /stochastic/、/weiss/、/csapp/ 并接入 /visual-group-theory/、/measure-probability/ URL；部署使用独立版本目录和 current 原子切换，同时维护本版 CSP。
 - 根 Git 历史与远端沿用；原 Weiss 工作目录保留，合并后的维护入口为本仓库。
 
 ## 项目类型约束
@@ -103,3 +105,19 @@ CS:APP 图表与导航复核见 [I019](issues/I019-csapp-visual-navigation.md) /
 | 2026-10-13 | 两书登记边界 → 增加 CS:APP 子项目和 /csapp/ 本地构建路由 | 复用静态 HTML、C11、Python 与既有 Poppler；显式区分机器模型和宿主执行 | 原两书 URL 与内容保持；新增目录和路由可独立回退；完整书籍 PDF 仅本地对照 | [I002](issues/I002-csapp-part-one.md) |
 
 > 详细论证写入问题单或 ADR；本表保存可追踪索引，不得覆盖历史记录。
+
+## 视觉群论伴读范围
+
+Carter《Visual Group Theory》在 `books/visual-group-theory/` 维护，全书地图、序言与第 1—10 章十二页，覆盖原书 302 题与 62 条编号陈述。全书 302 题编号由原 PDF 独立枚举，各章按原节次维护推导和全部小问；`notes/source_manifest.json` 保存 312 页来源身份与分段页序。C11/Python 相邻交换、Dₙ BFS、无限饰带、运算表、置换、子群、半直积、同态、Sylow 与分裂域自同构十组示例的维护源在 `code/`，`tools/sync_code.py` 同步 HTML，书级检查器从根入口运行并使用独立顶点/四点置换、复矩阵、正则置换与反例基准。原 PDF 保留在本地忽略目录，仅笔记、程序和显式元数据进入统一包。新书路由、阅读资料及书架已接线；沿用既有工具链、静态页面与服务，无技术栈或环境变更。依据见 [I021](issues/I021-visual-group-theory.md) / [T021](test/T021-visual-group-theory.md)。
+
+第 2—4 章扩写依据为 [I022](issues/I022-visual-group-theory-ch02-04.md) / [T022](test/T022-visual-group-theory-ch02-04.md)。保持现有技术栈、离线 HTML 组件和源 PDF 发布边界；官方 Group Explorer 仅作忽略目录中的实验依赖，不进入笔记运行时或发布包。
+
+第 5—8 章扩写依据为 [I024](issues/I024-visual-group-theory-ch05-08.md) / [T024](test/T024-visual-group-theory-ch05-08.md)。独立有限核验新增四点置换、标记网格的忠实作用、全部函数穷举与原图邻接关系，源码在 `tools/check_structures.py`；图、源码和发布阅读副本分别验收。
+
+## 测度与概率伴读范围
+
+程士宏《测度论与概率论基础》在 `books/measure-probability/` 维护，当前六页为全书地图、序言与前言、前四章，覆盖 126 个编号陈述、21 个编号例子和 115 道习题。来源为 256 页图像扫描，正文印刷页到 PDF 页序偏移为 +12；原书校注独立登记，第五、六章保持待写。正式内容为单文件 HTML，静态 MathML/SVG；三组 C11/Python 程序以 code/ 为维护源，同步工具核对网页副本。原有独立集合闭包、覆盖子族穷举、有理数基准之外，本批增加层集积分、全子集 Jordan 极值、条件期望定义及 L2 投影检验；普通与 ASan/UBSan 构建分别执行。OCR 与公式转换仅用于忽略目录中的一次性编写，不增加阅读运行依赖。原 PDF 仅本地对照，技术栈与服务环境沿用原约定。首批记录保存在书级 review/history；当前批次依据为 [I024](issues/I024-measure-probability-ch03-04.md) / [T024](test/T024-measure-probability-ch03-04.md)。
+
+第 9—10 章扩写依据为 [I025](issues/I025-visual-group-theory-ch09-10.md) / [T025](test/T025-visual-group-theory-ch09-10.md)。独立检查加入全部小阶对称群子群、六维有理矩阵、Sturm 根数、A₅ 共轭类与有限域；工具为 `tools/check_sylow_galois.py`，未新增运行依赖或环境变量。
+
+视觉群论一致性修订 [I026](issues/I026-visual-group-theory-polish.md) / [T026](test/T026-visual-group-theory-polish.md) 为第 2—4 章补充阅读注解，并将关键行内公式改为静态 MathML；`tools/check_reading.py` 核对关键公式结构、节选范围与审阅元数据。全部行内与显示公式提供一致的静态名称和纯文本回退；复制控制器处理完整的两类公式，局部选区沿用浏览器行为。沿用现有 HTML/SVG/MathML 与浏览器组件，无技术栈、环境或服务变更。

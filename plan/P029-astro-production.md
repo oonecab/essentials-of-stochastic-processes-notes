@@ -9,3 +9,5 @@
 5. 使用真实 Linux flock/SHA256/rsync/systemd 执行发布；将现有 vhost 的静态 include 切到 root 拥有的 snippet，nginx -t 后重载，失败恢复旧 vhost。
 6. 验证源站与公网全部发布字节、CSP、重定向、MIME、Range 和访问边界；浏览器检查桌面、手机、五书导航、深链及 PDF。确认其他站点配置及 current 未变。
 7. 记录实际结果和回滚命令，同步权威文档，提交推送验收记录，再读回 Git 与线上状态。
+
+上述步骤已完成。实机发现并修复 systemd 中 Nginx PID 文件的精确写挂载例外；生产切换及验收结果见 [发布记录](../docs/astro-production-report.md)。timer 保持 disabled，旧站恢复单元保留。

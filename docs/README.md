@@ -43,3 +43,5 @@
 - [Ubuntu 静态发布](../deploy/UBUNTU.md)：安装、权限、不可变版本、原子切换与故障恢复。
 
 - [Astro 迁移交付报告](astro-migration-report.md)：全量命令、parity、浏览器、可复现发布与保留范围。
+
+- [Astro 生产发布记录](astro-production-report.md)：I029 的 Git、Ubuntu/systemd、公网验证与旧布局恢复点。

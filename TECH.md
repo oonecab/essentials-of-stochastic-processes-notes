@@ -134,4 +134,4 @@ Carter《Visual Group Theory》在 `books/visual-group-theory/` 维护，全书�
 
 构建架构选择见 [ADR-002](docs/decisions/ADR-002-static-first-astro.md)，当前实施与证据见 [I028](issues/I028-static-first-astro.md) / [T028](test/T028-static-first-astro.md)。固定版本由 package.json、pnpm-lock.yaml 和 .node-version 约束。五书 54 页及书架已迁移，保留 1434 道原书习题与 36 道自测；原数学与历史审阅保持。根 build 现在调用 deploy/build_astro.py → Node/Astro → Python 发布策略与确定性打包。dist 仅包含 allowlist 中的 303 个公开文件；旧审阅 JSON 的 37 个 URL 输出固定摘要，完整证据留在仓库。新增 CS:APP 定位岛独立登记，其余原脚本保持。
 
-新的 Ubuntu 模板采用 /srv/reading-notes/releases/<id>/site 与 current 原子切换，带 flock、SHA256、rsync、失败恢复、systemd 构建/发布单元和日志轮转。实际生产未部署；root 维护的 Nginx 配置与发布用户权限分离，CSP 更新需管理员审查。详见 deploy/UBUNTU.md。
+新的 Ubuntu 模板采用 /srv/reading-notes/releases/<id>/site 与 current 原子切换，带 flock、SHA256、rsync、失败恢复、systemd 构建/发布单元和日志轮转。2026-10-17 的 I029 已在 Ubuntu 22.04 / Nginx 1.18.0 上部署 release 20261017T174039。root 维护的 Nginx 配置与发布用户权限分离，CSP 更新需管理员审查；reading-notes-deploy.service 为非 root oneshot，timer 保持停用，构建在本地完成。旧布局 release 20261017T151424 与站点配置保留为首次迁移恢复单元。详见 deploy/UBUNTU.md 和 docs/astro-production-report.md。

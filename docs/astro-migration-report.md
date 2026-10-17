@@ -81,3 +81,5 @@ Weiss 原样导入 SVG 的 8529 处原行尾空白保留，整段导入的 Git w
 旧原 HTML、旧构建器、原 release 20261017T151424 和冻结基线仍可用。新布局若部署到 Ubuntu，按 UBUNTU.md 保存原生产目录/配置后执行切换；当前任务只交付经过本地演练的发布件。
 
 最终审阅记录与报告追加后，再运行 `python3 tools/project.py check --quick` 退出 0，报告 `tmp/project-check/20261017T172823-u8vpbh9r/report.json`；正文与程序输入未再变化。`tools/check_astro_records.py` 和最终五书证据绑定核验同样通过，记录为 `tmp/reading-notes-migration/final/final-binding.json`。
+
+后续生产发布与 Ubuntu 实机验证已在 [I029 发布记录](astro-production-report.md) 单独登记；本文保留本地迁移阶段的命令、来源与交付边界。

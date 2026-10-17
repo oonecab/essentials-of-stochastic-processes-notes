@@ -45,6 +45,6 @@ python3 tools/test_static_publish.py --release-dir deploy/portal-releases/YYYYMM
 
 [Ubuntu 安装与操作](UBUNTU.md) 规定 `/srv/reading-notes/releases/<id>/{site,SHA256SUMS,release.json}` 和 `current`。`publish.sh` 持 flock、验证归档及 allowlist，用 rsync 写新版本，再创建临时链接并 atomic rename 到 current。受限 root helper 只执行 Nginx test/reload，失败恢复旧链接。完整 Nginx 配置由 root 审核安装，发布用户不能修改；新增脚本须先安装相应 CSP。Web 主机无需 Node。
 
-本轮仅本地/临时目录验收，未改变实际服务器。现有生产仍采用之前配置；新 `/srv` 模板不能冒充已上线事实。首次迁移生产目录必须另按实际状态记录旧目录、配置、证书和恢复点。历史手工部署约定保存在 `docs/history/deployment-before-astro.md`；旧 builder 和单书工具保留。
+I028 完成本地迁移与演练后，用户在 I029 明确授权生产发布。2026-10-17 已在 Ubuntu 上部署 `20261017T174039`，静态根为 `/srv/reading-notes/current/site`。实际命令、实机验收与首次迁移回滚点见 [生产发布记录](../docs/astro-production-report.md)。旧布局 `20261017T151424`、站点配置、证书和续期约定保留；历史手工流程见 `docs/history/deployment-before-astro.md`，旧 builder 和单书工具保留。
 
 当前维护入口见 [Astro 编写说明](../docs/astro-authoring.md)，迁移验证见 [T028](../test/T028-static-first-astro.md)。本地浏览、静态检查、程序执行、发布模拟与公网验收各自独立。

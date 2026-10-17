@@ -44,7 +44,7 @@
       "根目录工具统一调用各书既有校验器，输出写入被忽略的 tmp/ 或 deploy/portal-releases/。",
       "统一构建保留 /stochastic/、/weiss/、/csapp/ 并接入 /visual-group-theory/、/measure-probability/ URL；部署使用独立版本目录和 current 原子切换，同时维护本版 CSP。",
       "根 Git 历史与远端沿用；原 Weiss 工作目录保留，合并后的维护入口为本仓库。",
-      "五书 Astro 迁移已逐批验收；根 build 生成纯静态 dist 与不可变包，旧 HTML、旧构建器和历史审阅保留。Ubuntu /srv 发布模板仅本地演练。"
+      "五书 Astro 迁移已逐批验收；根 build 生成纯静态 dist 与不可变包，旧 HTML、旧构建器和历史审阅保留。Ubuntu /srv/reading-notes 生产发布已在 I029 实机验收，Node 只用于本地构建。"
     ]
   },
   "commands": {
@@ -79,11 +79,11 @@
     "services": [
       "本地预览：Python 静态 HTTP 服务，绑定 127.0.0.1",
       "正式阅读站点：notes.zzzping.top，Nginx + TLS；部署步骤见 deploy/README.md",
-      "Ubuntu reading-notes-build.service（构建主机）与 reading-notes-deploy.service/.timer（发布主机）；模板交付，未安装到生产"
+      "Ubuntu reading-notes-deploy.service 已安装并以非 root 用户执行；deploy timer 保持 disabled；构建在本地执行，build service/timer 保留为独立构建主机模板。"
     ],
     "ports": [
       "本地预览默认 8000，仅 127.0.0.1；可用 --port 指定",
-      "生产 Nginx 80 / 443（模板约定；本次没有更改服务器）"
+      "生产 Nginx 80 / 443；HTTPS 已验收，源站 HTTP 返回 301，当前公网 HTTP 返回 403，见 I029。"
     ]
   },
   "security": {

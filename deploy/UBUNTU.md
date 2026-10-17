@@ -1,6 +1,6 @@
 # Ubuntu 静态发布
 
-构建主机使用 Node 24.21.0、pnpm 11.21.0、Python 3.10+、C/Make/Poppler；Web 主机只运行 Nginx。两台主机可以分开：Web 主机安装 Python、rsync 和 util-linux 仅用于一次性发布脚本，不启动 Node、Python HTTP 或数据库服务。下面是安装模板；本次只在 macOS 的临时目录执行了发布及 Nginx 验收，尚未在 Ubuntu/systemd 或生产证书上执行。
+构建主机使用 Node 24.21.0、pnpm 11.21.0、Python 3.10+、C/Make/Poppler；Web 主机只运行 Nginx。两台主机可以分开：Web 主机安装 Python、rsync 和 util-linux 仅用于一次性发布脚本，不启动 Node、Python HTTP 或数据库服务。下面的安装约定已在 I029 的 Ubuntu 22.04 上完成实机发布与验证；当前版本和证据见 [生产发布记录](../docs/astro-production-report.md)。独立构建主机仍为可选模板，本次构建在本地完成。
 
 ## 安装、目录与权限
 
@@ -64,4 +64,4 @@ sudo -u reading-notes /usr/local/lib/reading-notes/deploy/scripts/publish.sh --r
 
 因断电或 SIGKILL 留下 `.publish-transaction.json` 时，新发布会拒绝继续；检查日志后执行 `publish.sh --recover` 恢复日志记载的原版本。若旧版服务重载也失败，日志和事务记录保留，先排查配置再恢复。显式 rollback 只要求目标旧版本验证通过，因此当前版本的文件损坏不会阻断恢复。队列进程在成功发布后、移动回执前中断时，下次会校验已生效的同版身份后完成回执，不重复覆盖。构建被强杀时同理检查 `tmp/reading-notes-migration/build.lock/owner.json` 的进程是否已退出，然后只移除这个失效锁目录，不删除构建基线。
 
-本地演练使用 `tools/test_static_publish.py --release-dir deploy/portal-releases/<id>`，真实执行 SHA、rsync、锁、原子 rename、临时 Nginx HTTPS/HTTP 和故障回滚。`publish.sh --dry-run --root <临时目录>` 也实际写入临时 release，但没有 service hook 时明确跳过服务动作，不代表生产验收。完整线上验收用 `deploy/verify_portal.py --release-dir <本地包> --origin https://notes.zzzping.top --output <私有报告>`，并实际检查桌面/手机页面、深链及公式。此任务没有执行远端发布、DNS、证书安装或生产回滚。
+本地演练使用 `tools/test_static_publish.py --release-dir deploy/portal-releases/<id>`，真实执行 SHA、rsync、锁、原子 rename、临时 Nginx HTTPS/HTTP 和故障回滚。`publish.sh --dry-run --root <临时目录>` 也实际写入临时 release，但没有 service hook 时明确跳过服务动作，不代表生产验收。完整线上验收用 `deploy/verify_portal.py --release-dir <本地包> --origin https://notes.zzzping.top --output <私有报告>`，并实际检查桌面/手机页面、深链及公式。I029 已执行远端发布、真实 systemd/受限 helper 与生产证书 HTTPS 验证，并在 Ubuntu 隔离目录执行 13 项失败恢复测试。首次生产迁移保留旧站目录及配置，恢复命令见生产发布记录；没有为故障演练主动回退在线站点。

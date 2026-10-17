@@ -15,3 +15,5 @@
 执行状态与命令证据追加到 [T028](../test/T028-static-first-astro.md)；最后交付说明汇总未验证范围。
 
 最终报告见 [迁移交付](../docs/astro-migration-report.md)，结构化证据见 `docs/astro-migration-evidence.json`。
+
+后续生产授权与 Ubuntu 实机验收记录于 [I029](I029-astro-production.md)；本文件保留 I028 完成时的本地交付边界。

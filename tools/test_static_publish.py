@@ -203,7 +203,7 @@ ssl_certificate "{cert}"; ssl_certificate_key "{key}"; include "{work}/static.in
         except subprocess.TimeoutExpired: process.kill();process.wait()
         log.close()
     evidence.update(status='passed',nginx_stopped=True,platform=sys.platform,
-                    limitations=['Linux systemd and production certificate installation not executed on macOS'])
+                    limitations=['Isolated test does not exercise production systemd units or certificates'])
     (work/'report.json').write_text(json.dumps(evidence,indent=2)+'\n')
     print(json.dumps({'status':'passed','checks':len(evidence['checks']),'report':str((work/'report.json').relative_to(ROOT))}))
 

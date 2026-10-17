@@ -100,13 +100,16 @@ try {
   for(const item of config.pages){
     const requests=await navigate(item);
     const before=await page.evaluate(()=>{
+      const state={heading:document.querySelector('h1')?.textContent,
+        maths:document.querySelectorAll('math').length,svgs:document.querySelectorAll('svg').length,merrors:document.querySelectorAll('merror').length,
+        width:document.documentElement.scrollWidth,viewport:innerWidth};
       const e=document.querySelector('details.exercise')??document.querySelector('details');
-      if(!e)return {heading:document.querySelector('h1')?.textContent};
+      if(!e)return state;
       const s=e.querySelector('summary');s.scrollIntoView({block:'center',behavior:'instant'});const r=s.getBoundingClientRect();
-      return {heading:document.querySelector('h1')?.textContent,id:e.id,open:e.open,x:r.x+Math.min(50,r.width/2),y:r.y+r.height/2,
-        maths:document.querySelectorAll('math').length,svgs:document.querySelectorAll('svg').length,merrors:document.querySelectorAll('merror').length};
+      return {...state,id:e.id,open:e.open,x:r.x+Math.min(50,r.width/2),y:r.y+r.height/2};
     });
     requireTrue(before.heading,'No-JS heading missing');
+    requireTrue(before.width<=before.viewport+1,'No-JS page overflow');
     requireTrue(before.maths===item.counts.mathml&&before.svgs===item.counts.svg&&before.merrors===0,'No-JS static math/SVG inventory differs');
     let after=null;
     if(before.id){

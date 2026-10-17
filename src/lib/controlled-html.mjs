@@ -26,9 +26,19 @@ export function entries() {
   const state = JSON.parse(fs.readFileSync(path.join(root, 'scripts/migration-state.json'), 'utf8'));
   const mode = JSON.parse(fs.readFileSync(path.join(stage, 'build-state.json'), 'utf8'));
   if (mode.shell) return [];
+  const catalog=JSON.parse(fs.readFileSync(path.join(root,'books/catalog.json'),'utf8')).books;
   return state.migrated_books.flatMap(book => {
     const directory = path.join(root, 'src/content/books', book);
-    return fs.readdirSync(directory).filter(f => f.endsWith('.html')).sort().map(file => readSource(path.join(directory, file)));
+    const registered=catalog.find(b=>b.id===book);
+    if(!registered)throw new Error('Unregistered book: '+book);
+    const filenames=fs.readdirSync(directory).filter(f=>f.endsWith('.html')).sort();
+    const mirrors=fs.readdirSync(path.join(root,registered.directory,'notes')).filter(f=>f.endsWith('.html')).sort();
+    if(filenames.length!==registered.expected_pages||JSON.stringify(filenames)!==JSON.stringify(mirrors))throw new Error('Controlled source inventory differs: '+book);
+    return filenames.map(file=>{
+      const entry=readSource(path.join(directory,file));
+      if(entry.metadata.book!==book||entry.metadata.route!==registered.publish_prefix+'/notes/'+file||entry.metadata.legacy_path!==registered.directory+'/notes/'+file)throw new Error('Controlled route differs: '+file);
+      return entry;
+    });
   });
 }
 

@@ -1,0 +1,320 @@
+{
+  "schema_version": 1,
+  "kind": "additive_migration_baseline",
+  "baseline_ref": "b2aeff3",
+  "records": [
+    {
+      "page": "weiss/notes/book_overview.html",
+      "source_sha256": "d9affaad061d069ff234c7df10971336e66f35cb6e9f4e6166942fb61fcc4410",
+      "output_sha256": "145b3ad165b2cfabe378cd8b9ba4fa3fc84f17d11c07a4563c01aa674a23bb00",
+      "source_counts": {
+        "exercises": 0,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 8,
+        "svg": 1
+      },
+      "publication_counts": {
+        "exercises": 0,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 8,
+        "svg": 2
+      },
+      "differences": [],
+      "source_bytes": 86248,
+      "output_bytes": 92426,
+      "js_bytes": 1837,
+      "js_ratio": 1
+    },
+    {
+      "page": "weiss/notes/chapter01_introduction.html",
+      "source_sha256": "a05dcf3379c9b44e22744f7644e3d15dd2ff7c7c000c94201229a74f92f28371",
+      "output_sha256": "a3071a662d606377c4dbd8c758d8bb89f65f8e1bfe920d9ae43671f10909a826",
+      "source_counts": {
+        "exercises": 5,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 166,
+        "svg": 3
+      },
+      "publication_counts": {
+        "exercises": 5,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 166,
+        "svg": 4
+      },
+      "differences": [],
+      "source_bytes": 134999,
+      "output_bytes": 141170,
+      "js_bytes": 1837,
+      "js_ratio": 1
+    },
+    {
+      "page": "weiss/notes/chapter02_algorithm_analysis.html",
+      "source_sha256": "5a72251a6cb216a274fe6f6c97e2d5a7aca183a763b6a906f698307cf323cca6",
+      "output_sha256": "cbea838e3a1ce07b3295559e1619638142e1a28374085dde9f0c6eeb66c9bac3",
+      "source_counts": {
+        "exercises": 25,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 504,
+        "svg": 5
+      },
+      "publication_counts": {
+        "exercises": 25,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 504,
+        "svg": 6
+      },
+      "differences": [],
+      "source_bytes": 345219,
+      "output_bytes": 351390,
+      "js_bytes": 1837,
+      "js_ratio": 1
+    },
+    {
+      "page": "weiss/notes/chapter03_lists_stacks_queues.html",
+      "source_sha256": "fe455ada73c21041bed4c58307edb003f3c9d33443e9db64bb2afeea507c3753",
+      "output_sha256": "39f54111e98ecd6f774cec21de250407364917e4816002ab3604db062bfdf7fb",
+      "source_counts": {
+        "exercises": 26,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 493,
+        "svg": 2
+      },
+      "publication_counts": {
+        "exercises": 26,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 493,
+        "svg": 3
+      },
+      "differences": [],
+      "source_bytes": 322095,
+      "output_bytes": 328275,
+      "js_bytes": 1837,
+      "js_ratio": 1
+    },
+    {
+      "page": "weiss/notes/chapter04_trees.html",
+      "source_sha256": "bfea8f1feb4c561e8e94238511cf201be32a089f3e5bb294072ab0445b11365b",
+      "output_sha256": "9aa6ea2e74b973457c743a6ac74f23c325eed7eab7e246ca346be55225f19e32",
+      "source_counts": {
+        "exercises": 46,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 824,
+        "svg": 27
+      },
+      "publication_counts": {
+        "exercises": 46,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 824,
+        "svg": 28
+      },
+      "differences": [],
+      "source_bytes": 566184,
+      "output_bytes": 572355,
+      "js_bytes": 1837,
+      "js_ratio": 1
+    },
+    {
+      "page": "weiss/notes/chapter05_priority_queues.html",
+      "source_sha256": "a71a9d3eb4c6db1d1d93a7277da1652c0addef2efb4dce5affbf1417811fe78c",
+      "output_sha256": "30e6327211f4ef57c1d8333c151d86558879f8bb61ab7c2e09620c7f63a622db",
+      "source_counts": {
+        "exercises": 36,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 600,
+        "svg": 24
+      },
+      "publication_counts": {
+        "exercises": 36,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 600,
+        "svg": 25
+      },
+      "differences": [],
+      "source_bytes": 523743,
+      "output_bytes": 529908,
+      "js_bytes": 1837,
+      "js_ratio": 1
+    },
+    {
+      "page": "weiss/notes/chapter06_sorting.html",
+      "source_sha256": "bc0b051868aee4cfeacf261b66dea30ea861231abc305c44617c0f9a2353339d",
+      "output_sha256": "97782f07dea5f006aaf01613478085eeaab03bdd193a36d01222247bf593fadf",
+      "source_counts": {
+        "exercises": 44,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 311,
+        "svg": 21
+      },
+      "publication_counts": {
+        "exercises": 44,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 311,
+        "svg": 22
+      },
+      "differences": [],
+      "source_bytes": 1014793,
+      "output_bytes": 1020960,
+      "js_bytes": 1837,
+      "js_ratio": 1
+    },
+    {
+      "page": "weiss/notes/chapter07_hashing.html",
+      "source_sha256": "3254d029ed34f588b5f518f2d71bc9a54fdbf5cec7725235893e58c0b814905c",
+      "output_sha256": "537ec0d6c3730e4ad0b80ccdf635378151b571c73827a44466e3cd52832cb581",
+      "source_counts": {
+        "exercises": 15,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 269,
+        "svg": 21
+      },
+      "publication_counts": {
+        "exercises": 15,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 269,
+        "svg": 22
+      },
+      "differences": [],
+      "source_bytes": 464032,
+      "output_bytes": 470213,
+      "js_bytes": 1837,
+      "js_ratio": 1
+    },
+    {
+      "page": "weiss/notes/chapter08_disjoint_sets.html",
+      "source_sha256": "f857814b6a739938b0746170338a1b2edacb9bcd640625953ce2c870c64b8b59",
+      "output_sha256": "2cedc977bcedc53336850220d7cb616b87a1d2f568cc58ab2f1714708ce1a3e7",
+      "source_counts": {
+        "exercises": 14,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 231,
+        "svg": 15
+      },
+      "publication_counts": {
+        "exercises": 14,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 231,
+        "svg": 16
+      },
+      "differences": [],
+      "source_bytes": 309650,
+      "output_bytes": 315856,
+      "js_bytes": 1837,
+      "js_ratio": 1
+    },
+    {
+      "page": "weiss/notes/chapter09_graph_algorithms.html",
+      "source_sha256": "50bb2ae925b92a9981d6a3484d35ab05c80b16165216b184fe9ca69655825b06",
+      "output_sha256": "e36ee6a68720e6c358aae1c720ff3fbc4acd938465b1028101c2ad1ee87f359b",
+      "source_counts": {
+        "exercises": 41,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 270,
+        "svg": 15
+      },
+      "publication_counts": {
+        "exercises": 41,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 270,
+        "svg": 16
+      },
+      "differences": [],
+      "source_bytes": 321095,
+      "output_bytes": 327268,
+      "js_bytes": 1837,
+      "js_ratio": 1
+    },
+    {
+      "page": "weiss/notes/chapter10_algorithm_design.html",
+      "source_sha256": "38090454df465bd260d3dbc955ca09f06d7f7ac36bf376c946574c93a909e87d",
+      "output_sha256": "50007c6868aa553edb7d37fbc5444e8c9bd872931ba1081063eb63fcab00e6b8",
+      "source_counts": {
+        "exercises": 60,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 358,
+        "svg": 23
+      },
+      "publication_counts": {
+        "exercises": 60,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 358,
+        "svg": 24
+      },
+      "differences": [],
+      "source_bytes": 914780,
+      "output_bytes": 920953,
+      "js_bytes": 1837,
+      "js_ratio": 1
+    },
+    {
+      "page": "weiss/notes/chapter11_amortized_analysis.html",
+      "source_sha256": "125dfb580200b673a07590a09020e27381f354e1be65ccbdd403fee36725b355",
+      "output_sha256": "87f2a929bc21dd4a67a54c819ce7d1565a9470c1365416987b8de5113e6304b7",
+      "source_counts": {
+        "exercises": 14,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 352,
+        "svg": 16
+      },
+      "publication_counts": {
+        "exercises": 14,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 352,
+        "svg": 17
+      },
+      "differences": [],
+      "source_bytes": 376291,
+      "output_bytes": 382464,
+      "js_bytes": 1837,
+      "js_ratio": 1
+    },
+    {
+      "page": "weiss/notes/chapter12_advanced_data_structures.html",
+      "source_sha256": "ab22dcfc47bd830aadc0830500f858ee6c6596525b39f4750bc1c95a9c52bfef",
+      "output_sha256": "908faefe44b6bc92faa3a3220e947a46b7fcec3e8bbede53952e228b888300c4",
+      "source_counts": {
+        "exercises": 36,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 208,
+        "svg": 54
+      },
+      "publication_counts": {
+        "exercises": 36,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 208,
+        "svg": 55
+      },
+      "differences": [],
+      "source_bytes": 960284,
+      "output_bytes": 966457,
+      "js_bytes": 1837,
+      "js_ratio": 1
+    }
+  ],
+  "note": "原内容完整性基线保持；此文件追加原源文件与 Astro 输出的身份及逐页 parity。"
+}

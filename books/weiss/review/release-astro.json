@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "scope": "local_dist_reading_pages",
+  "files": {
+    "weiss/notes/book_overview.html": "145b3ad165b2cfabe378cd8b9ba4fa3fc84f17d11c07a4563c01aa674a23bb00",
+    "weiss/notes/chapter01_introduction.html": "a3071a662d606377c4dbd8c758d8bb89f65f8e1bfe920d9ae43671f10909a826",
+    "weiss/notes/chapter02_algorithm_analysis.html": "cbea838e3a1ce07b3295559e1619638142e1a28374085dde9f0c6eeb66c9bac3",
+    "weiss/notes/chapter03_lists_stacks_queues.html": "39f54111e98ecd6f774cec21de250407364917e4816002ab3604db062bfdf7fb",
+    "weiss/notes/chapter04_trees.html": "9aa6ea2e74b973457c743a6ac74f23c325eed7eab7e246ca346be55225f19e32",
+    "weiss/notes/chapter05_priority_queues.html": "30e6327211f4ef57c1d8333c151d86558879f8bb61ab7c2e09620c7f63a622db",
+    "weiss/notes/chapter06_sorting.html": "97782f07dea5f006aaf01613478085eeaab03bdd193a36d01222247bf593fadf",
+    "weiss/notes/chapter07_hashing.html": "537ec0d6c3730e4ad0b80ccdf635378151b571c73827a44466e3cd52832cb581",
+    "weiss/notes/chapter08_disjoint_sets.html": "2cedc977bcedc53336850220d7cb616b87a1d2f568cc58ab2f1714708ce1a3e7",
+    "weiss/notes/chapter09_graph_algorithms.html": "e36ee6a68720e6c358aae1c720ff3fbc4acd938465b1028101c2ad1ee87f359b",
+    "weiss/notes/chapter10_algorithm_design.html": "50007c6868aa553edb7d37fbc5444e8c9bd872931ba1081063eb63fcab00e6b8",
+    "weiss/notes/chapter11_amortized_analysis.html": "87f2a929bc21dd4a67a54c819ce7d1565a9470c1365416987b8de5113e6304b7",
+    "weiss/notes/chapter12_advanced_data_structures.html": "908faefe44b6bc92faa3a3220e947a46b7fcec3e8bbede53952e228b888300c4"
+  }
+}

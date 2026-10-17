@@ -7,7 +7,9 @@ import { offlineDependencies, fingerprint, sha } from './parity-lib.mjs';
 const i=process.argv.indexOf('--book'),book=i<0?undefined:process.argv[i+1];
 const selected=entries().filter(p=>!book||p.metadata.book===book);
 if(!selected.length)throw new Error('No migrated reading pages');
-const pages=selected.map(({metadata})=>{
+const candidates=selected.map(({metadata})=>metadata);
+if(!book)candidates.unshift({route:'index.html'});
+const pages=candidates.map(metadata=>{
   const file=path.join(root,'dist',metadata.route),html=fs.readFileSync(file,'utf8');
   const issues=offlineDependencies(html);
   if(issues.length)throw new Error(metadata.route+': '+issues.join(', '));

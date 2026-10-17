@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "book": "weiss",
+  "recorded_at_utc": "2026-10-17T08:34:13.250188+00:00",
+  "status": "Go",
+  "scope": "Astro 静态迁移；原正文、数学、代码和历史内容审阅保持。",
+  "baseline_ref": "b2aeff3",
+  "pages": 13,
+  "counts": {
+    "exercises": 362,
+    "self_checks": 0,
+    "statements": 0,
+    "mathml": 4594,
+    "svg": 227
+  },
+  "source_bytes": 6339413,
+  "output_bytes": 6419695,
+  "js_bytes": 23881,
+  "max_js_ratio": 1,
+  "parity_differences": [],
+  "external_requests": [],
+  "js_views": 52,
+  "no_js_views": 13,
+  "visual_review": "逐页查看十三页 1800/390 首屏、十二章末题和 no-JS 首题联系图，另读第十章 1440/1024 原图；代码、图表和长公式保留局部横滚，题干和解答可读，目录断点正常。",
+  "evidence_sha256": {
+    "tmp/reading-notes-migration/parity/weiss.json": "325bf3659ffb04a5324787c161becf01440cd5a7016e2b838e7472f22fdadd2c",
+    "tmp/reading-notes-migration/browser/weiss/report.json": "2e391e932d34299df424b81316355c30d90beeb91d3b91ac6f07c78c40360979",
+    "tmp/project-check/20261017T163237-h49kv28l/report.json": "9b725241160bec7eb1617b8c72141079641916efe0f2c1692d0ef12cfab1ceda"
+  },
+  "screenshots": [
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_book_overview-1800-top.png",
+      "sha256": "1b8abeaaebf8da98abc4a657b7caaa00c6ca697765a2a6576e0d4a7c205ad20a"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_book_overview-1440-top.png",
+      "sha256": "bfc48205c0b7d3fcb084dfd61d947d8d50841cdc792b85993df0e4c94047abee"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_book_overview-1024-top.png",
+      "sha256": "1eb6fc5ee53201010c8990afc3e9478e1cfca703eab72d3de55df0c44eb60b7a"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_book_overview-390-top.png",
+      "sha256": "3f459d6a522c4b69c4119296b6d2100b1c5993bc86093aa4bb80ccc8a9156f7b"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter01_introduction-1800-top.png",
+      "sha256": "a5b4263ed0b29d01819bf301c0941a5eeca1c21123138e7187acdb8effc3c229"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter01_introduction-1440-top.png",
+      "sha256": "2e906ac30621c89fe94a475f4904b9c907f6bd8863b750cc06e50c4fad44d8d9"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter01_introduction-1024-top.png",
+      "sha256": "6d966be10de77777f5420f180cabfaf0ed13af12b5cd4699e241f5b77b17edfb"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter01_introduction-390-top.png",
+      "sha256": "ef8312a4300c7c5910e3880e0cc519b1d39fc8e935863952c7a32557abb49505"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter01_introduction-390-answer.png",
+      "sha256": "62f4bd382402b65363cbaedbe64ac28018120205913b94557600a80f3c1c6f51"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter02_algorithm_analysis-1800-top.png",
+      "sha256": "b427423647b954391245a49923bbdcf9cbea0313ddd26ae3c62706e524ba8cb4"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter02_algorithm_analysis-1440-top.png",
+      "sha256": "9b0530bc536bfdd2cd4d9f7a1eec3f59cfc2e578f7ea0888ea4fe63e919e79b6"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter02_algorithm_analysis-1024-top.png",
+      "sha256": "be01fa20046dde402777e92f58009e2e7af414521019584d1bd2ca9322fbebfa"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter02_algorithm_analysis-390-top.png",
+      "sha256": "fe44fdbabdf73512626b76dd69899b21ca2ee0deed16652c1d971c16efe2ec82"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter02_algorithm_analysis-390-answer.png",
+      "sha256": "2f17c0d86e33debf999590fc2e5225ecb1dbe2787514ce654acc7ccda8c16e67"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter03_lists_stacks_queues-1800-top.png",
+      "sha256": "45c2ee41d52fe56b70d19bf07e16f71fd4d3c5f315ae88704a5fc3dcbc5a95f5"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter03_lists_stacks_queues-1440-top.png",
+      "sha256": "df072f77142dc328e04548dce97c2642cb927fb7b05084fb6a5f38dde71b073c"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter03_lists_stacks_queues-1024-top.png",
+      "sha256": "01e063b652509cecc98472ba2912e5dc231b6675fe809c54f25ef7f63a1f60ff"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter03_lists_stacks_queues-390-top.png",
+      "sha256": "38accbc1d48a1abc3fc6f101b1e172b3268569c69fc53e2b8165fe09cf29d6f4"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter03_lists_stacks_queues-390-answer.png",
+      "sha256": "4037f9950a03a7f1b9b556051143229f7dd2c5563db619b0270d7b7245369de6"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter04_trees-1800-top.png",
+      "sha256": "439bbe450ea084cea61386c17d042acb4f3f398e1720f4619a4fdf93dbc64c3f"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter04_trees-1440-top.png",
+      "sha256": "5aa4c0294a2876c79a2fc272059ff79ab80ac8c9a1604c66b3799111d791be62"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter04_trees-1024-top.png",
+      "sha256": "6589ccd88154de85a3b48e8961b5ce7a2b4e2327afb2885460667e14978b8c1a"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter04_trees-390-top.png",
+      "sha256": "9e7c84ff5c27593beb2f5b56e4b31f7fc20300d94d2b65020c50ddeedee6b08e"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter04_trees-390-answer.png",
+      "sha256": "456ec9189e2394a050cfae6d4c7e9200ca3dcd65c9214fa15cb0977f632430b7"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter05_priority_queues-1800-top.png",
+      "sha256": "9bce9885e153e28d2c629bb334938649780cfe87f6bd32070ead5ca5abc623dd"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter05_priority_queues-1440-top.png",
+      "sha256": "edbfb962fc74af343b766843d5974ffbb0ba15d52c6ba91025f014b729c2b26a"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter05_priority_queues-1024-top.png",
+      "sha256": "44ed560a3df0bbf812908b2be6e846451e028058e9a71cde814d884e877452f0"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter05_priority_queues-390-top.png",
+      "sha256": "0c0160a2e7e298c02384d3ff132032090304fa7043fe918716fdb66d016c814d"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter05_priority_queues-390-answer.png",
+      "sha256": "1428ba460f4a11d43546740eb35a4ea4139896f462ba61b3c7d2b8717cd8ad88"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter06_sorting-1800-top.png",
+      "sha256": "5e475dad1425d4600afa9172ee3ab5f215cd0e452f34cd93aa076ba274fe4fdc"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter06_sorting-1440-top.png",
+      "sha256": "b11f4de5d9a53459ec957c73400670bd42211ad0b50e6f064e3e6ed4672c03b8"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter06_sorting-1024-top.png",
+      "sha256": "0460f41403135d8b1dad98afaf364778beb0956672575cfe874bb6499a5e249d"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter06_sorting-390-top.png",
+      "sha256": "7d7238a824f01867bd0f5a9df0b660bf0d2b6de64dcc89ae7973fad8aa0caca9"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter06_sorting-390-answer.png",
+      "sha256": "b4fbb5254d59ad768f064ddaf8e8ec15dbdf9a00beda66f047c1fd0cc1fe5bd8"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter07_hashing-1800-top.png",
+      "sha256": "68d973c79dfde8e6daaa1959d691cc06fa1cd48f793eac3f307a4ca2408f5815"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter07_hashing-1440-top.png",
+      "sha256": "5bdad940c387a350da87d6df635f2716147c1def6484be593903a28ec1013404"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter07_hashing-1024-top.png",
+      "sha256": "09d2fe53ffff57206067acf126993ef76938a64480cd6c39b9c0edd5a587f9e8"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter07_hashing-390-top.png",
+      "sha256": "9f633c6e1df8e07a5e127258167bca4ca8979b947279952f32318e006dd2ddda"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter07_hashing-390-answer.png",
+      "sha256": "10ccf2d1b07b9ec771552305d513bf039fe1572ea3999c5d21432b3ab944ba1b"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter08_disjoint_sets-1800-top.png",
+      "sha256": "efac7d240cfdbf133c1fe19ebf446b0568094bdbbd725ce2b4fa0afca12c27a6"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter08_disjoint_sets-1440-top.png",
+      "sha256": "6e8a84514ca245944e8995a98e7750d79ca64fe1d5a02147af94be2d0ddb328d"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter08_disjoint_sets-1024-top.png",
+      "sha256": "0d4d1a043c745b17a595d6d5a9e55627f0af38a9d9641911537a907c5ac3bb32"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter08_disjoint_sets-390-top.png",
+      "sha256": "addb201b5d9d9f63d08a82be049010f2d639202e5cd029fa45675098bcad926e"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter08_disjoint_sets-390-answer.png",
+      "sha256": "7e4f0e525b6d9cab62c2060c5d8318d82e99d53cd7d507422299b721227fc755"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter09_graph_algorithms-1800-top.png",
+      "sha256": "4e2f6bcba7cf8d2ef9a4562bbc53c015e81776033d3c58f3d4e03d5851870305"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter09_graph_algorithms-1440-top.png",
+      "sha256": "c3450936da30fa2e4dc10b90d37db36bdb169394c4a4c85654c781f14e102eb7"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter09_graph_algorithms-1024-top.png",
+      "sha256": "5d742022f451d872837c8eb32c214f805140590635106094d8c9ce88142b0763"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter09_graph_algorithms-390-top.png",
+      "sha256": "5a3dcb994472dbc4566f174c6714394179287f6c64fac60f02f9f5d5c4d8acb1"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter09_graph_algorithms-390-answer.png",
+      "sha256": "e30189802fee97b35ee0f2b0108e541626752dd555c91b27e5861917e532ea67"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter10_algorithm_design-1800-top.png",
+      "sha256": "63b92b944cfd2c20697d9d2b6540bdc40d97faad2c746121fb97baa106a435d3"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter10_algorithm_design-1440-top.png",
+      "sha256": "66307a4ec36d9a7517ad7e10363ded8f6ff2d5f1e1bbec5217a2c4ccd98aaf6d"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter10_algorithm_design-1024-top.png",
+      "sha256": "85eccb9c31919483a6cffbbc59c79db585a369ba0119c244a736105391ad35d2"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter10_algorithm_design-390-top.png",
+      "sha256": "b81e739eab28497282648be84b6489587062603c1ff6bb84cbc08da05223fb30"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter10_algorithm_design-390-answer.png",
+      "sha256": "a8a627c025327e730b3f84dac2d9a0cd40d22e7bb37a174427274496798be408"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter11_amortized_analysis-1800-top.png",
+      "sha256": "d242e121d85ac8e9c16d346bc96b5f48038f4038ed5eb2fd6ab703bd2a203fd6"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter11_amortized_analysis-1440-top.png",
+      "sha256": "03c368a544c0011b425769d159f1200fdd2f36a5a4922bdb4bb7ca4d0ed472dc"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter11_amortized_analysis-1024-top.png",
+      "sha256": "8f890b9f127232f6d27174a1c654e7f4e9a2b65031aff23f8f64821b31d99b02"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter11_amortized_analysis-390-top.png",
+      "sha256": "6335df5f71c27a1d0f246c5713ce8e9df371782f7397cdbbb25f377071af3cd5"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter11_amortized_analysis-390-answer.png",
+      "sha256": "16dd867e86e0eecffe76c0cc76356cf362ee34c32392f7760b37dc5222dd9599"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter12_advanced_data_structures-1800-top.png",
+      "sha256": "f2d655a20f54946ba014b73fb9bee5a7578b566b5802a43211eb16502660a8f2"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter12_advanced_data_structures-1440-top.png",
+      "sha256": "cd73387747db723a248df685b02af4ba40c81dcd4faa04f4fc50b20aeda22c5d"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter12_advanced_data_structures-1024-top.png",
+      "sha256": "46d3254ab62fdbd971d18a9844a50321edf89027d3b188b9835d1ea9e43d9784"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter12_advanced_data_structures-390-top.png",
+      "sha256": "3b996caf75f42203c424e922732786c28e490c3f174af24974ed6ff33732160b"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter12_advanced_data_structures-390-answer.png",
+      "sha256": "6c9031b4e7175d028cbe59f7f558462fa4ab8fdc0a37c05414551f3b17dee4c9"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_book_overview-no-js.png",
+      "sha256": "15a7f4e1e70e0ac76d024101c141374bc48b2b878894ba0fe1ad77acd8ca7fa4"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter01_introduction-no-js.png",
+      "sha256": "fc2f2375a26408cf04d3f7de33ff46bd780c636008a66cd5c4cf00ca38851160"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter02_algorithm_analysis-no-js.png",
+      "sha256": "3fd69558651d004a14ae055cd7422dde092b246bb19b7afbec1dfe90a3dbaf34"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter03_lists_stacks_queues-no-js.png",
+      "sha256": "2f26629725b22e31adf4ed53cc5507c95d936e7c3e4a9e21b2a84da5d8d05248"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter04_trees-no-js.png",
+      "sha256": "79f3aae42c166a5e1de74f9f3016db213f920952b8d028039743239938e6ea26"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter05_priority_queues-no-js.png",
+      "sha256": "3549106dc90b395a2de2e6b6dc9c53a1e19dfa2cb44a5a4b7c18b4faf46f5577"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter06_sorting-no-js.png",
+      "sha256": "af425dae159f89f820f28f8a2f267a1aecedf19e0618c4ef66715f6905e58e4d"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter07_hashing-no-js.png",
+      "sha256": "f74d9629ccf09a10a050947b5ecfcf96665db4fae80c20463cb92e3df4909170"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter08_disjoint_sets-no-js.png",
+      "sha256": "16ebb0f01bb0dcb32b02ffc8c442a3c589c6955e634ceef7146883aa61de7a0d"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter09_graph_algorithms-no-js.png",
+      "sha256": "d2c76c6a28113060c8a33524cbbd53efdb253f32d06a68dad3645d736469b794"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter10_algorithm_design-no-js.png",
+      "sha256": "7a04a6e3ba31f2e25ddb77b81243b5b21f3a6671a9f3a07475473e94937f25f1"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter11_amortized_analysis-no-js.png",
+      "sha256": "e5bd807384f02b794c017851605e07034dc0eec2452bd752521fcba5a706756f"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/weiss/weiss_notes_chapter12_advanced_data_structures-no-js.png",
+      "sha256": "64a29a983ab307108fbb66b96f1cb9826771959859957a79326028c87fd86707"
+    }
+  ],
+  "open_findings": [],
+  "boundaries": [
+    "实体手机和真实读屏器未验证",
+    "本次只做本地迁移；生产未部署",
+    "原数学与程序审阅的历史范围不因迁移验收而扩大"
+  ]
+}

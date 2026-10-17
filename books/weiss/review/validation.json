@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "book": "weiss",
+  "status": "migration_verified",
+  "historical_review_entry": "notes/README.md",
+  "file_sha256": {
+    "agent.md": "92f5aeaa13733fb839552b3fe90a4dc3c1faa8b98d0f5547c5e355b9113f56d5",
+    "notes/README.md": "3bace74b4d42ab76e5a4d9f6569722c95aa6fae5603949760ee48f36a8d9210e"
+  },
+  "open_findings": [],
+  "astro_migration": {
+    "record": "review/astro-migration.json",
+    "sha256": "91601175022c5d838c6f96077d00488b25d6d8652830868dc48206146849e3a4",
+    "status": "Go",
+    "open_findings": [],
+    "source_sha256": {
+      "book_overview.html": "d9affaad061d069ff234c7df10971336e66f35cb6e9f4e6166942fb61fcc4410",
+      "chapter01_introduction.html": "a05dcf3379c9b44e22744f7644e3d15dd2ff7c7c000c94201229a74f92f28371",
+      "chapter02_algorithm_analysis.html": "5a72251a6cb216a274fe6f6c97e2d5a7aca183a763b6a906f698307cf323cca6",
+      "chapter03_lists_stacks_queues.html": "fe455ada73c21041bed4c58307edb003f3c9d33443e9db64bb2afeea507c3753",
+      "chapter04_trees.html": "bfea8f1feb4c561e8e94238511cf201be32a089f3e5bb294072ab0445b11365b",
+      "chapter05_priority_queues.html": "a71a9d3eb4c6db1d1d93a7277da1652c0addef2efb4dce5affbf1417811fe78c",
+      "chapter06_sorting.html": "bc0b051868aee4cfeacf261b66dea30ea861231abc305c44617c0f9a2353339d",
+      "chapter07_hashing.html": "3254d029ed34f588b5f518f2d71bc9a54fdbf5cec7725235893e58c0b814905c",
+      "chapter08_disjoint_sets.html": "f857814b6a739938b0746170338a1b2edacb9bcd640625953ce2c870c64b8b59",
+      "chapter09_graph_algorithms.html": "50bb2ae925b92a9981d6a3484d35ab05c80b16165216b184fe9ca69655825b06",
+      "chapter10_algorithm_design.html": "38090454df465bd260d3dbc955ca09f06d7f7ac36bf376c946574c93a909e87d",
+      "chapter11_amortized_analysis.html": "125dfb580200b673a07590a09020e27381f354e1be65ccbdd403fee36725b355",
+      "chapter12_advanced_data_structures.html": "ab22dcfc47bd830aadc0830500f858ee6c6596525b39f4750bc1c95a9c52bfef"
+    }
+  }
+}

@@ -871,5 +871,6 @@
     }
   ],
   "maintenance_entry": "notes/book_overview.html",
-  "code_authority": "Formal teaching implementations in notes/*.html; original figure conversions in c/."
+  "code_authority": "Formal teaching implementations in src/content/books/weiss/*.html; notes/*.html are expanded mirrors for independent Python checks; original figure conversions in c/.",
+  "astro_maintenance_entry": "src/content/books/weiss/book_overview.html"
 }

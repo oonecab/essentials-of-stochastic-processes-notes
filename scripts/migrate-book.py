@@ -58,9 +58,22 @@ def main():
         header = next((n.text() for n in nodes if n.tag=='header'),'')
         if match and pages['pdf_start'] is None:
             printed = re.search(r'印刷(?:页码?|页)?\s*(\d+)\s*[—–-]\s*(\d+)',header)
-            pdf = re.search(r'PDF(?:\s*页(?:序|码)?)?\s*(\d+)\s*[—–-]\s*(\d+)',header)
+            pdf = re.search(r'PDF\s*(?:第\s*)?(?:页(?:序|码)?\s*)?(\d+)\s*[—–-]\s*(\d+)',header)
             if printed:pages['printed_start'],pages['printed_end']=map(int,printed.groups())
             if pdf:pages['pdf_start'],pages['pdf_end']=map(int,pdf.groups())
+        if args.book == 'weiss' and match:
+            # Original chapter headers establish the +17 mapping; chapter 3 only
+            # states printed pages. Include all exercise source-page attributes.
+            assert pages['printed_start'] is not None, source.name
+            if pages['pdf_start'] is not None:
+                assert pages['pdf_start'] - pages['printed_start'] == 17, source.name
+            exercise_pages = [int(p) for n in nodes
+                              for p in re.findall(r'\d+', n.attrs.get('data-source-pdf-pages', ''))]
+            pages['pdf_start'] = pages['printed_start'] + 17
+            pages['pdf_end'] = max(pages['printed_end'] + 17, *exercise_pages)
+            pages['printed_end'] = pages['pdf_end'] - 17
+        if match and any(value is None for value in pages.values()):
+            raise ValueError('Unresolved chapter source range: ' + source.name)
         exercises=[n.attrs.get('data-exercise',n.attrs.get('id')) for n in nodes if n.has_class('exercise') and n.attrs.get('id','').startswith('ex')]
         metadata={'book':args.book,'chapter':chapter,'title':title,**pages,
                   'exercise_range':[exercises[0],exercises[-1]] if exercises else [],
@@ -70,6 +83,8 @@ def main():
                   'legacy_path':source.relative_to(ROOT).as_posix(),
                   'original_sha256':hashlib.sha256(raw).hexdigest(),
                   'source_scope_note':'章节范围按来源清单；总览跨全书，空范围表示不适用；序言的分段位置以原 HTML 来源说明为准。'}
+        if args.book == 'weiss':
+            metadata['source_scope_note'] = '按原 HTML 章首正文页和全部习题 data-source-pdf-pages 合并范围；各章页映射为印刷页加 17，参考文献范围另见原章首。总览跨全书，空范围表示不适用。'
         def extract(m):
             kind='styles' if m[1]=='style' else 'scripts'
             extension='css' if kind=='styles' else 'js'

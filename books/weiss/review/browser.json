@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "astro_migration": {
+    "status": "passed",
+    "record": "review/astro-migration.json",
+    "sha256": "91601175022c5d838c6f96077d00488b25d6d8652830868dc48206146849e3a4",
+    "widths": [
+      1800,
+      1440,
+      1024,
+      390
+    ],
+    "js_views": 52,
+    "no_js_views": 13,
+    "external_requests": [],
+    "visual_review": "逐页查看十三页 1800/390 首屏、十二章末题和 no-JS 首题联系图，另读第十章 1440/1024 原图；代码、图表和长公式保留局部横滚，题干和解答可读，目录断点正常。"
+  }
+}

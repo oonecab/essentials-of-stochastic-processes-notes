@@ -813,7 +813,7 @@
     ]
   },
   "file_sha256": {
-    "README.md": "29da49a66c427239ef69ebfcb63838773d92e5e1706aa333539fc5e44c3e46b1",
+    "README.md": "3fcebc7bb95778df1b336c51868a6b1ba120233ec1652c2a69a9f2d45a2ae53f",
     "agent.md": "d5bd5414ccef2cc7b61ca19fbd5bfe6965bfe994e71bf8378c239e7184268538",
     "code/README.md": "1edce4c57816ba26c02e5c90a8aecb958ab9a939dd2227850dee4eedda3ed5e9",
     "code/finite_integrals.c": "3f743432f9cf038833614b2294a59981bc11fe22ae807c9241b19aaa66931c1b",
@@ -823,30 +823,31 @@
     "code/programs.json": "6a6b36cdc783f521f63d15ddda2679485a7b694c8ad238ccf209feed482788fe",
     "code/simple_approx.c": "7b1c7d94efc3b1e51340860863c07e2ba2368a87ca4de91b310bf80322b831ce",
     "code/simple_approx.py": "397b091accdde866a7ccd628d5099660d7864dffd0a0d9fd1e895dd40c4e57f7",
-    "notes/README.md": "f66cdba18aceec2fe761e2c2a16ac59a23c8dd7d145df6d4742a2ab1d8b2d684",
-    "notes/book_overview.html": "4c06f69603787477296156976708b9ad0db5d9aac3904c4652c02409720d6f29",
-    "notes/chapter01_measurable_spaces.html": "f0b87df9aac7992572c8d1a266b2138a403490ddb583764fd0aaaa4bbf5ad80e",
-    "notes/chapter02_measure_spaces.html": "9ae1964dcbceb9d390058ee9466d75f3a6dce214937d2bfdf06b3c6b6121a70c",
-    "notes/chapter03_integration.html": "9d216e9dc3778cd16ad91cabc0b247c34a92180f3d047ccec4772bef62baaf2a",
-    "notes/chapter04_signed_measures.html": "269ebd8c4f8c0e048d838bc5327f3009d36538075c50f4f6020d65cf83c8e506",
+    "notes/README.md": "01a3ddf9df5bf94441f92876a6124626c5a21fb656c46277b519e73e84d3660e",
+    "notes/book_overview.html": "8817d275163e2547c5c9ce336ef45329f581ddaf992e97e3d44e422fd4fd14f5",
+    "notes/chapter01_measurable_spaces.html": "391a457250efae51eade24b213d07c1f69b23d699505ce88f5a3c7aabd1fa3f5",
+    "notes/chapter02_measure_spaces.html": "e888f61631e0a72efaeacfe39374a095ee731627583906a6eff55690983f6479",
+    "notes/chapter03_integration.html": "b5c81fe5b0aef108aa1cf625d656b0403fb9de854be717c579a853d90e7f316c",
+    "notes/chapter04_signed_measures.html": "1b95e728afa338bf1c220412a22685dfb7a8c7eae78c5a39239598bedb78d92b",
     "notes/exercise_manifest.json": "327d1af2bbde0525022b67191ab48165e34f5683dbca5650896f13e85a401292",
-    "notes/preface.html": "ca606f60da08e0d4229dcc3bda2896c980f3076efa6b2f68a841e3c659b0038b",
+    "notes/preface.html": "f32cdfb1be1ee3f2146e576bad3ebfecab0d412ba3c0bf059fa6b549cdde41b1",
     "notes/source_excerpts.json": "37717cadccc3cb7d5622b93c11efaa98344c77526a5d98ea42642afaa13e99d3",
     "notes/source_inventory.json": "edf64973dffe629b7a24ac9dea2e587daa901576f19dd84060cb0a40d8ed9f28",
     "notes/source_issues.json": "89611bc97aa274bb220c2a73c0f60e9467a5df5ecc50138b01f351b06d2a61f4",
-    "notes/source_manifest.json": "43bf8e5904bc8db8d6eaacda0dab02a2f6723d56ff98c3d5d06193af80f76a8a",
-    "reading-plan.md": "882660e8155ef81592c61dc1b478a02a52c96c9a59eb346c3ea88c91968830b0",
+    "notes/source_manifest.json": "9cdfe634115c960df490b6e7776b4ef47488e4fc73caba484fec9aa503d74913",
+    "reading-plan.md": "2e3719e21d185a9f2ab556fe45add1052e7ebd22c2f80c6dcea46df0c43b7a57",
     "review/README.md": "2b49798a6e54ebc1c6e293ed55c6eda13a8362ecf1ea5cfa4993ec4b6a9ce14c",
     "review/history/20261017-first-batch-source-reading.json": "ce12a90eead4af5dd906dc7b5186c65e617103ec69338bad29f5364900e9968e",
     "review/history/20261017-first-batch-validation.json": "017c0f6cbf2dfc479f99a248eb06a41dd39f771fc0a6b71f8ada1335cbf0a58a",
     "review/source-reading.json": "b38137f3ff6fab67aaee56e34ac46698ccece3150ac998f51253c6798f9ff825",
     "tools/check_integrals.py": "4009004a02c8aab319920b2d42bfc182a426cbdf94bc1155cd15b29b7a93d4ab",
     "tools/check_models.py": "7e2e5c2bffe527c18b27721d0e2e15a1f3f52b8ad4d9d5e59ec242c3c4b5a33a",
-    "tools/check_notes.py": "02d8c9101b51beef2ca7803e03b92dbc0740d9e0e072d8d00e18eb16507ad99b",
+    "tools/check_notes.py": "7df942a0454f9d2dc778e44dfdf8beb13cd5dcd59d6388c13aff8969348c3b9d",
     "tools/sync_code.py": "9eceb700c71f70462083b425ee9eed2ce9de905503253b60ce275fa83a1933a2",
-    "review/final-assessment.json": "c76f8f8246f7f8cbf929d2091da0f3fffdace03a59760211cfb7700e5a96cd2e",
+    "review/final-assessment.json": "093bd65dcb13da3d7e0f1975716d79d2a70ad9c6de2fdbb8778f96c24560d243",
     "tools/check_excerpts.py": "62466881d33533c8f9d9617afc8f30edd9df5c437c61c922c00101af20c70a50",
-    "review/example-index.json": "448e8232e11d0ddcac275a76bd2e6dbf44bf75dc2cd64fcbd49676162e88762e"
+    "review/example-index.json": "448e8232e11d0ddcac275a76bd2e6dbf44bf75dc2cd64fcbd49676162e88762e",
+    "review/mathml-accessibility.json": "9d2eea5fd4d24c45a04c1c60594a27bfadf94796b7054e33692db268ee827e49"
   },
   "evidence_sha256": {
     "tmp/measure-probability-ch34/baseline.json": "5e86be465874b20fb9aafc0a5791d808f8f006df71354c75e2cc0bbe40ceac95",
@@ -1280,11 +1281,93 @@
           "current_sha256": "02d8c9101b51beef2ca7803e03b92dbc0740d9e0e072d8d00e18eb16507ad99b"
         }
       ]
+    },
+    {
+      "issue": "I032",
+      "reason": "P2 范围标签及核心 MathML 文本回退检查",
+      "changes": [
+        {
+          "file": "README.md",
+          "previous_sha256": "29da49a66c427239ef69ebfcb63838773d92e5e1706aa333539fc5e44c3e46b1",
+          "current_sha256": "3fcebc7bb95778df1b336c51868a6b1ba120233ec1652c2a69a9f2d45a2ae53f"
+        },
+        {
+          "file": "notes/README.md",
+          "previous_sha256": "f66cdba18aceec2fe761e2c2a16ac59a23c8dd7d145df6d4742a2ab1d8b2d684",
+          "current_sha256": "01a3ddf9df5bf94441f92876a6124626c5a21fb656c46277b519e73e84d3660e"
+        },
+        {
+          "file": "notes/book_overview.html",
+          "previous_sha256": "4c06f69603787477296156976708b9ad0db5d9aac3904c4652c02409720d6f29",
+          "current_sha256": "8817d275163e2547c5c9ce336ef45329f581ddaf992e97e3d44e422fd4fd14f5"
+        },
+        {
+          "file": "notes/chapter01_measurable_spaces.html",
+          "previous_sha256": "f0b87df9aac7992572c8d1a266b2138a403490ddb583764fd0aaaa4bbf5ad80e",
+          "current_sha256": "391a457250efae51eade24b213d07c1f69b23d699505ce88f5a3c7aabd1fa3f5"
+        },
+        {
+          "file": "notes/chapter02_measure_spaces.html",
+          "previous_sha256": "9ae1964dcbceb9d390058ee9466d75f3a6dce214937d2bfdf06b3c6b6121a70c",
+          "current_sha256": "e888f61631e0a72efaeacfe39374a095ee731627583906a6eff55690983f6479"
+        },
+        {
+          "file": "notes/chapter03_integration.html",
+          "previous_sha256": "9d216e9dc3778cd16ad91cabc0b247c34a92180f3d047ccec4772bef62baaf2a",
+          "current_sha256": "b5c81fe5b0aef108aa1cf625d656b0403fb9de854be717c579a853d90e7f316c"
+        },
+        {
+          "file": "notes/chapter04_signed_measures.html",
+          "previous_sha256": "269ebd8c4f8c0e048d838bc5327f3009d36538075c50f4f6020d65cf83c8e506",
+          "current_sha256": "1b95e728afa338bf1c220412a22685dfb7a8c7eae78c5a39239598bedb78d92b"
+        },
+        {
+          "file": "notes/preface.html",
+          "previous_sha256": "ca606f60da08e0d4229dcc3bda2896c980f3076efa6b2f68a841e3c659b0038b",
+          "current_sha256": "f32cdfb1be1ee3f2146e576bad3ebfecab0d412ba3c0bf059fa6b549cdde41b1"
+        },
+        {
+          "file": "notes/source_manifest.json",
+          "previous_sha256": "43bf8e5904bc8db8d6eaacda0dab02a2f6723d56ff98c3d5d06193af80f76a8a",
+          "current_sha256": "9cdfe634115c960df490b6e7776b4ef47488e4fc73caba484fec9aa503d74913"
+        },
+        {
+          "file": "reading-plan.md",
+          "previous_sha256": "882660e8155ef81592c61dc1b478a02a52c96c9a59eb346c3ea88c91968830b0",
+          "current_sha256": "2e3719e21d185a9f2ab556fe45add1052e7ebd22c2f80c6dcea46df0c43b7a57"
+        },
+        {
+          "file": "review/final-assessment.json",
+          "previous_sha256": "c76f8f8246f7f8cbf929d2091da0f3fffdace03a59760211cfb7700e5a96cd2e",
+          "current_sha256": "b9987112fd96e2fd2e1b04170df1051a174c915dfe275322fa0e59211da6b83b"
+        },
+        {
+          "file": "review/mathml-accessibility.json",
+          "previous_sha256": "f58bf4b0762380446dc3701c92dc629a345db9e473b209ece87c3b99e5c8abcd",
+          "current_sha256": "9d2eea5fd4d24c45a04c1c60594a27bfadf94796b7054e33692db268ee827e49"
+        },
+        {
+          "file": "tools/check_notes.py",
+          "previous_sha256": "02d8c9101b51beef2ca7803e03b92dbc0740d9e0e072d8d00e18eb16507ad99b",
+          "current_sha256": "7df942a0454f9d2dc778e44dfdf8beb13cd5dcd59d6388c13aff8969348c3b9d"
+        }
+      ]
+    },
+    {
+      "issue": "I032",
+      "reason": "P2 范围说明与核心公式构建输出已通过全 DOM parity",
+      "changes": [
+        {
+          "file": "review/final-assessment.json",
+          "previous_sha256": "b9987112fd96e2fd2e1b04170df1051a174c915dfe275322fa0e59211da6b83b",
+          "current_sha256": "093bd65dcb13da3d7e0f1975716d79d2a70ad9c6de2fdbb8778f96c24560d243"
+        }
+      ]
     }
   ],
   "current_content_review": {
     "record": "review/final-assessment.json",
-    "sha256": "c76f8f8246f7f8cbf929d2091da0f3fffdace03a59760211cfb7700e5a96cd2e",
+    "sha256": "093bd65dcb13da3d7e0f1975716d79d2a70ad9c6de2fdbb8778f96c24560d243",
     "status": "source revisions checked; final browser and complete integration pending"
   },
   "example_scope": {
@@ -1301,5 +1384,6 @@
     "record": "review/source-reading.json",
     "boundary": "本轮逐项正文逻辑读回与前次扫描记录分开；8 条核心摘录另逐句复核扫描图。",
     "replaced_generic_exercise_records": 35
-  }
+  },
+  "companion_scope": "前四章伴读；第五章 28 题、第六章 27 题待续"
 }

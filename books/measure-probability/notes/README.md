@@ -1,6 +1,6 @@
-# 页面、来源与维护
+# 前四章伴读：页面、来源与维护
 
-入口为 [全书地图](book_overview.html)，另有 [序言与前言](preface.html)、[第一章](chapter01_measurable_spaces.html)、[第二章](chapter02_measure_spaces.html)、[第三章](chapter03_integration.html)与[第四章](chapter04_signed_measures.html)。原书印刷正文页加 12 即 PDF 页序；前置页另列于来源清单。
+入口为 [伴读总览](book_overview.html)，另有 [序言与前言](preface.html)、[第一章](chapter01_measurable_spaces.html)、[第二章](chapter02_measure_spaces.html)、[第三章](chapter03_integration.html)与[第四章](chapter04_signed_measures.html)。原书印刷正文页加 12 即 PDF 页序；前置页另列于来源清单。
 
 第一章印刷 1—22 / PDF 13—34，习题 1 共 25 题；第二章印刷 23—59 / PDF 35—71，习题 2 共 32 题。第三章印刷 60—93 / PDF 72—105，习题 3 共 30 题；第四章印刷 94—128 / PDF 106—140，习题 4 共 28 题。前言印刷 III—IV / PDF 8—9，丛书序言 PDF 6—7，目录 PDF 11—12。附录相关提示从印刷 217 页开始，仅供校核，解答以伴读中的展开论证为准。
 

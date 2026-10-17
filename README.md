@@ -10,7 +10,7 @@
 | [Weiss 数据结构与算法](books/weiss/README.md) | [全书地图](books/weiss/notes/book_overview.html) | 13 个 HTML 页面、362 道习题、205 组双语实现；从正式 HTML 提取代码验证，另有 171 个 C 图例入口 |
 | [CS:APP 计算机系统](books/csapp/README.md) | [全书地图](books/csapp/notes/book_overview.html) | 14 个 HTML 页面：序言及第 1—12 章，包含三个部分；117 个原书大节、419 道原书习题、36 道补充自测与 C/Python 实验；独立源码同步到网页 |
 | [Carter 视觉群论](books/visual-group-theory/README.md) | [全书地图](books/visual-group-theory/notes/book_overview.html) | 12 个 HTML 页面：地图、序言、第 1—10 章及全部 302 题；10 组 C/Python 程序 |
-| [程士宏 测度论与概率论](books/measure-probability/README.md) | [全书地图](books/measure-probability/notes/book_overview.html) | 6 个 HTML 页面：总览、序言与前言、前四章及全部 115 题；3 组 C/Python 程序。第 5—6 章待续写 |
+| [程士宏 测度论与概率论·前四章伴读](books/measure-probability/README.md) | [伴读总览](books/measure-probability/notes/book_overview.html) | 6 个 HTML 页面：总览、序言与前言、前四章及全部 115 题；3 组 C/Python 程序。第 5—6 章待续写 |
 
 CS:APP 全书笔记已接入统一首页与构建：从首页点击“进入 CS:APP 笔记”，进入全书地图后选择序言或第 1—12 章；阅读页顶部可返回书架。统一包收录笔记、教学程序与原书 PDF，点击章节、来源和习题中的页码链接可打开对应 PDF 页序。线上生效另按发布授权和验收记录确认。
 

@@ -1,6 +1,6 @@
-# 测度论与概率论基础 · 中文伴读
+# 测度论与概率论基础 · 前四章伴读
 
-程士宏编著，北京大学出版社 2004 年第 1 版。先从[全书总览](notes/book_overview.html)看六章之间的关系，再读[序言与前言](notes/preface.html)、[第一章：可测空间和可测映射](notes/chapter01_measurable_spaces.html)、[第二章：测度空间](notes/chapter02_measure_spaces.html)、[第三章：积分](notes/chapter03_integration.html)与[第四章：符号测度](notes/chapter04_signed_measures.html)。
+程士宏编著，北京大学出版社 2004 年第 1 版。先从[伴读总览](notes/book_overview.html)看六章之间的关系，再读[序言与前言](notes/preface.html)、[第一章：可测空间和可测映射](notes/chapter01_measurable_spaces.html)、[第二章：测度空间](notes/chapter02_measure_spaces.html)、[第三章：积分](notes/chapter03_integration.html)与[第四章：符号测度](notes/chapter04_signed_measures.html)。
 
 当前共六个独立 HTML，前四章沿原书十九个小节展开，包含 126 个编号定义/命题/定理/推论/引理、21 个编号例子（7 个完整例题、14 个定义性短说明，见[例子索引](notes/book_overview.html#example-index)）及全部 115 道习题的题干与解答。第三、四章本批新增 72 项编号内容与 58 道习题。公式采用静态 MathML，图示为内嵌 SVG；保留目录可见性、章节导航、习题深链接与源码下载。第 5—6 章在地图中规划，正文待续。
 

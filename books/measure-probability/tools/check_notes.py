@@ -123,6 +123,23 @@ def structure():
     paths = sorted((ROOT / 'notes').glob('*.html'))
     require([p.name for p in paths] == sorted(manifest['current_scope']['pages']) and len(paths) == 6, 'reading page scope changed')
     texts = {p.name: p.read_text() for p in paths}
+    require(manifest['current_scope']['label'] == '前四章伴读', 'companion scope label missing')
+    require(all('前四章伴读' in re.search(r'<title>(.*?)</title>', text).group(1) for text in texts.values()),
+            'reading title does not state current scope')
+    accessible = load('review/mathml-accessibility.json')['records']
+    ns = {'m': 'http://www.w3.org/1998/Math/MathML'}
+    for row in accessible:
+        candidates = [m for m in re.findall(r'<math\b.*?</math>', texts[row['page']], re.S)
+                      if f'data-accessibility-key="{row["anchor"]}"' in m]
+        require(len(candidates) == 1, 'accessible formula missing or duplicated')
+        element = ET.fromstring(candidates[0])
+        annotation = element.find('m:semantics/m:annotation', ns)
+        require(element.get('aria-label') == row['label'] and annotation is not None
+                and annotation.get('encoding') == 'text/plain' and annotation.text == row['label'],
+                'accessible formula label/annotation drift')
+        presentation = candidates[0].split('<semantics>', 1)[1].split('<annotation ', 1)[0]
+        require(hashlib.sha256(presentation.encode()).hexdigest() == row['presentation_sha256'],
+                'accessible formula changed presentation MathML')
     scans = {p.name: Scan(texts[p.name]) for p in paths}
     maths, links, diagrams = 0, 0, 0
     for path in paths:
@@ -233,6 +250,7 @@ def structure():
     return {'pages': len(paths), 'original_exercises': len(exercises), 'numbered_statements': 126,
             'numbered_examples': 21, 'mathml': maths, 'svg': diagrams, 'local_links': links,
             'quotation_status': quotation_status,
+            'annotated_core_formulae': len(accessible),
             'synchronized_sources': synchronize(), 'source_parser_mutations_rejected': parser_regressions(),
             'mutations_rejected': rejected,
             'source_pdf': 'local hash verified; page inventory read from scan' if pdf.exists() else 'recorded identity; local scan unavailable',

@@ -340,6 +340,17 @@
       2,
       3,
       4
+    ],
+    "label": "前四章伴读",
+    "pending_chapters": [
+      {
+        "chapter": 5,
+        "exercises": 28
+      },
+      {
+        "chapter": 6,
+        "exercises": 27
+      }
     ]
   },
   "reading_scope": "核对完整目录、前置页、各章开头与习题末页；细读前四章及对应附录提示。第 5—6 章未逐项通读。",

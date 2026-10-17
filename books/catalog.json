@@ -62,7 +62,7 @@
     },
     {
       "id": "measure-probability",
-      "title": "程士宏 · 测度论与概率论基础",
+      "title": "程士宏 · 测度论与概率论基础（前四章伴读）",
       "directory": "books/measure-probability",
       "entry": "notes/book_overview.html",
       "publish_prefix": "measure-probability",
@@ -71,7 +71,7 @@
       "guidelines": "agent.md",
       "expected_pages": 6,
       "expected_exercises": 115,
-      "scope": "full-book overview, series preface, author foreword, chapters 1–4 and all 115 exercises; chapters 5–6 pending",
+      "scope": "chapters 1–4 companion with overview, prefaces and all 115 exercises; original-book map includes pending chapters 5 (28 exercises) and 6 (27 exercises)",
       "code_authority": "standalone_sources",
       "checker": "tools/check_notes.py"
     }

@@ -48,3 +48,7 @@
 先实测旧 C 入口接受前导空白和加号（`tmp/final-assessment/cli-before/report.json`），所以在保留原数值算法、范围和负零边界的基础上，两种语言都增加 ASCII 词法检查；Python 同时对齐覆盖 mask 的 31 字符边界。非法输入在点数、生成元、覆盖 mask/费用和截断三个位置全部运行 Python、普通 C 与 ASan/UBSan C。证据 `models.json`、`integrals.json`。
 
 积分检查器拒绝积分、正负积分、Jordan 两侧、密度、块质量、AC 标志、配对改动 AC/奇异质量、二阶矩、总变差、期望等变异，保留零权重点破坏条件可测性的原变异。`sync_code.py` 用 HTMLParser 定位正文边界，按 `programs.json` 派生源数量；属性顺序/引号保留，未闭合、未转义标签、重复源和错源变异均拒绝。两个独立 checker 补上实际执行的 CLI 入口，工作单中的直接命令现在会运行而非静默退出。`pnpm build`/parity/CSP、结构与绑定检查通过；最终全量回归另记。
+
+### P2-4/P2-5 范围与第一批 MathML 文本
+
+六个页面标题、README、书目与地图统一标注“前四章伴读”，原书六章路线保留，第 5/6 章分别 28/27 题明确待续。本轮不扩写这两章。10 个核心公式人工编写 aria-label 和 text/plain annotation；原 presentation MathML 子树的字节哈希保持，检查器同时验证名称、注释与原子树。`pnpm build`/54 页 parity/CSP 和结构检查通过，证据 `build-scope-accessibility.log`、`scope-structure.json`。其余公式留待后续批次，未声称真实屏幕阅读器朗读验收已完成；本批浏览器渲染将在最终阅读检查核对。

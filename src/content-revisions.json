@@ -4,7 +4,7 @@
   "pages": {
     "measure-probability/notes/chapter01_measurable_spaces.html": {
       "original_sha256": "e42c667532b38baa9c910df41ff77342a14b0f9a49748fa44b1f0685823b06a2",
-      "source_sha256": "f0b87df9aac7992572c8d1a266b2138a403490ddb583764fd0aaaa4bbf5ad80e",
+      "source_sha256": "391a457250efae51eade24b213d07c1f69b23d699505ce88f5a3c7aabd1fa3f5",
       "review_record": "books/measure-probability/review/final-assessment.json",
       "history": [
         {
@@ -85,12 +85,23 @@
             "finite-model",
             "simple-model"
           ]
+        },
+        {
+          "revision": "I032-P2-4-P2-5",
+          "from_sha256": "f0b87df9aac7992572c8d1a266b2138a403490ddb583764fd0aaaa4bbf5ad80e",
+          "to_sha256": "391a457250efae51eade24b213d07c1f69b23d699505ce88f5a3c7aabd1fa3f5",
+          "reason": "明确前四章伴读范围，并给 10 个核心公式添加静态可朗读文本",
+          "reviewed_anchors": [
+            "top",
+            "theorem-1-3-3",
+            "theorem-1-5-5-proof"
+          ]
         }
       ]
     },
     "measure-probability/notes/chapter02_measure_spaces.html": {
       "original_sha256": "ee36adc70aafd5b556017e6b1ed494b8f92caddc3671601a8ed585779b834447",
-      "source_sha256": "9ae1964dcbceb9d390058ee9466d75f3a6dce214937d2bfdf06b3c6b6121a70c",
+      "source_sha256": "e888f61631e0a72efaeacfe39374a095ee731627583906a6eff55690983f6479",
       "review_record": "books/measure-probability/review/final-assessment.json",
       "history": [
         {
@@ -158,12 +169,23 @@
           "reviewed_anchors": [
             "example-2-3-1"
           ]
+        },
+        {
+          "revision": "I032-P2-4-P2-5",
+          "from_sha256": "9ae1964dcbceb9d390058ee9466d75f3a6dce214937d2bfdf06b3c6b6121a70c",
+          "to_sha256": "e888f61631e0a72efaeacfe39374a095ee731627583906a6eff55690983f6479",
+          "reason": "明确前四章伴读范围，并给 10 个核心公式添加静态可朗读文本",
+          "reviewed_anchors": [
+            "top",
+            "theorem-2-1-5",
+            "theorem-2-2-1"
+          ]
         }
       ]
     },
     "measure-probability/notes/chapter03_integration.html": {
       "original_sha256": "68883c73cf1e41066594031d2b5dc3780913ca5cd0e9941060e5617521a991d3",
-      "source_sha256": "9d216e9dc3778cd16ad91cabc0b247c34a92180f3d047ccec4772bef62baaf2a",
+      "source_sha256": "b5c81fe5b0aef108aa1cf625d656b0403fb9de854be717c579a853d90e7f316c",
       "review_record": "books/measure-probability/review/final-assessment.json",
       "history": [
         {
@@ -218,12 +240,34 @@
           "reviewed_anchors": [
             "theorem-3-2-1"
           ]
+        },
+        {
+          "revision": "I032-P2-4-P2-5",
+          "from_sha256": "9d216e9dc3778cd16ad91cabc0b247c34a92180f3d047ccec4772bef62baaf2a",
+          "to_sha256": "eb2876f28fe135c26968d4616bec1d57ccd0948fe11e8d1b9da09542ef0a29b7",
+          "reason": "明确前四章伴读范围，并给 10 个核心公式添加静态可朗读文本",
+          "reviewed_anchors": [
+            "top",
+            "theorem-3-2-4-proof",
+            "theorem-3-2-6-proof",
+            "theorem-3-3-4-proof",
+            "theorem-3-4-2-proof"
+          ]
+        },
+        {
+          "revision": "I032-P2-5",
+          "from_sha256": "eb2876f28fe135c26968d4616bec1d57ccd0948fe11e8d1b9da09542ef0a29b7",
+          "to_sha256": "b5c81fe5b0aef108aa1cf625d656b0403fb9de854be717c579a853d90e7f316c",
+          "reason": "矩比较朗读文本明确幂位于期望内",
+          "reviewed_anchors": [
+            "theorem-3-4-2-proof"
+          ]
         }
       ]
     },
     "measure-probability/notes/chapter04_signed_measures.html": {
       "original_sha256": "ebc05efd5d6517577b13ed564643a6d30dc4168ade61754fdaaa756daf00337b",
-      "source_sha256": "269ebd8c4f8c0e048d838bc5327f3009d36538075c50f4f6020d65cf83c8e506",
+      "source_sha256": "1b95e728afa338bf1c220412a22685dfb7a8c7eae78c5a39239598bedb78d92b",
       "review_record": "books/measure-probability/review/final-assessment.json",
       "history": [
         {
@@ -286,12 +330,23 @@
             "example-4-3-1",
             "example-4-5-1"
           ]
+        },
+        {
+          "revision": "I032-P2-4-P2-5",
+          "from_sha256": "269ebd8c4f8c0e048d838bc5327f3009d36538075c50f4f6020d65cf83c8e506",
+          "to_sha256": "1b95e728afa338bf1c220412a22685dfb7a8c7eae78c5a39239598bedb78d92b",
+          "reason": "明确前四章伴读范围，并给 10 个核心公式添加静态可朗读文本",
+          "reviewed_anchors": [
+            "top",
+            "theorem-4-3-5-proof",
+            "definition-4-5-1"
+          ]
         }
       ]
     },
     "measure-probability/notes/book_overview.html": {
       "original_sha256": "d373a539537e762e6f019dfa8f8784ccbad8a7f459f9253809496424be8575aa",
-      "source_sha256": "4c06f69603787477296156976708b9ad0db5d9aac3904c4652c02409720d6f29",
+      "source_sha256": "8817d275163e2547c5c9ce336ef45329f581ddaf992e97e3d44e422fd4fd14f5",
       "review_record": "books/measure-probability/review/final-assessment.json",
       "history": [
         {
@@ -310,6 +365,31 @@
           "reason": "例子索引放于页脚前，表格使用现有局部横滚容器",
           "reviewed_anchors": [
             "example-index"
+          ]
+        },
+        {
+          "revision": "I032-P2-4-P2-5",
+          "from_sha256": "4c06f69603787477296156976708b9ad0db5d9aac3904c4652c02409720d6f29",
+          "to_sha256": "8817d275163e2547c5c9ce336ef45329f581ddaf992e97e3d44e422fd4fd14f5",
+          "reason": "明确前四章伴读范围，并给 10 个核心公式添加静态可朗读文本",
+          "reviewed_anchors": [
+            "top"
+          ]
+        }
+      ]
+    },
+    "measure-probability/notes/preface.html": {
+      "original_sha256": "ca606f60da08e0d4229dcc3bda2896c980f3076efa6b2f68a841e3c659b0038b",
+      "source_sha256": "f32cdfb1be1ee3f2146e576bad3ebfecab0d412ba3c0bf059fa6b549cdde41b1",
+      "review_record": "books/measure-probability/review/final-assessment.json",
+      "history": [
+        {
+          "revision": "I032-P2-4-P2-5",
+          "from_sha256": "ca606f60da08e0d4229dcc3bda2896c980f3076efa6b2f68a841e3c659b0038b",
+          "to_sha256": "f32cdfb1be1ee3f2146e576bad3ebfecab0d412ba3c0bf059fa6b549cdde41b1",
+          "reason": "明确前四章伴读范围，并给 10 个核心公式添加静态可朗读文本",
+          "reviewed_anchors": [
+            "top"
           ]
         }
       ]

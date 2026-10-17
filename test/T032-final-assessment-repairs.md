@@ -34,3 +34,7 @@
 ### P1-7 原文状态
 
 126 条 statement 一一登记：8 条核心定义/定理逐页目视转录，118 条明确只做页码定位；原有两段序言引文独立保留。引文数学排版的规范化及摘录范围逐条说明。检查器新增锚点、原页、状态、可见文本对应断言，状态改变和 PDF 页码漂移两种变异均被拒绝。`pnpm build`（含 CSP 浏览器冒烟）与 54 页全 DOM parity 通过，结构结果 `tmp/final-assessment/excerpts-structure.json`，构建日志 `build-excerpts.log`。摘录视觉检查随最终四章读回完成。
+
+### P1-8 例子分级
+
+逐一读回 21 例，标明 7 个完整例题、14 个定义性短说明，新增可跳转索引。2.3.1 明列八个外测度值和六个失败切割；2.3.2 区分初始覆盖条件与扩张后的 σ 有限性；4.3.1 验证概率测度、绝对连续与密度矛盾；4.5.1 对全部四个信息事件代回积分定义。结构检查逐例绑定类型，`pnpm build`/54 页全 DOM parity/CSP smoke 通过。证据 `tmp/final-assessment/build-examples.log`、`examples-structure.json`；例子正文视觉检查并入最终读回。

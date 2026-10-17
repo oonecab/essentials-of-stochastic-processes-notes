@@ -28,6 +28,7 @@ class Scan(HTMLParser):
     def __init__(self, text):
         super().__init__(convert_charrefs=True)
         self.ids, self.refs, self.dependencies = set(), [], []
+        self.examples = {}
         self.feed(text)
         self.close()
 
@@ -36,6 +37,10 @@ class Scan(HTMLParser):
         if 'id' in attrs:
             require(attrs['id'] not in self.ids, 'duplicate anchor: ' + attrs['id'])
             self.ids.add(attrs['id'])
+        if attrs.get('data-source-item', '').startswith('例 '):
+            kind = attrs.get('data-example-kind')
+            require(kind in ('完整例题', '定义性短说明'), 'example lacks reading type')
+            self.examples[attrs['id']] = kind
         require(tag != 'base' and not any(a.startswith('on') for a in attrs), 'unsafe HTML handler')
         for key in ('href', 'src', 'data', 'poster'):
             if attrs.get(key):
@@ -138,6 +143,13 @@ def structure():
             diagrams += 1
     chapters = {c['chapter']: c['file'] for c in manifest['chapters'] if c['chapter'] <= 4}
     check_coverage(texts, source, exercises, chapters)
+    example_index = load('review/example-index.json')['examples']
+    expected_examples = {x['anchor'] for x in source['items'] if x['kind'] == '例'}
+    require(len(example_index) == len(expected_examples) and {r['anchor'] for r in example_index} == expected_examples,
+            'example index is not one-to-one')
+    for row in example_index:
+        require(scans[row['page']].examples.get(row['anchor']) == row['type'], 'example classification drift')
+        require(f'href="{row["page"]}#{row["anchor"]}"' in texts['book_overview.html'], 'example index target missing')
     excerpt_record = load('notes/source_excerpts.json')
     quotation_status = check_excerpts(texts, source, excerpt_record, chapters)
     for item in load('notes/source_excerpts.json')['excerpts']:

@@ -17,7 +17,7 @@
 - 本地预览默认 8000，仅 127.0.0.1；可用 --port 指定
 - 生产 Nginx 80 / 443；HTTPS 已验收，源站 HTTP 返回 301，当前公网 HTTP 返回 403（见 I029）
 - 原 MySQL 3306 / 33060 监听已随 I030 服务卸载关闭
-- Weiss 正式入口：[Reading Notes · Weiss](https://notes.zzzping.top/weiss/notes/book_overview.html)；原 weiss.zzzping.top 独立域名已由项目所有者停用并删除 DNS 解析
+- Weiss 正式入口：[Reading Notes · Weiss](https://notes.zzzping.top/weiss/notes/book_overview.html)；原 weiss.zzzping.top 独立域名已停用并删除 DNS，服务器旧站文件、Nginx vhost 和专属证书续期条目已于 2026-10-17 按 [I031](../issues/I031-retire-weiss-site.md) 清理
 
 本文件严禁写入凭据或生产数据。`.env.example` 必须与环境变量名清单同步。
 <!-- project-governance:managed:end -->

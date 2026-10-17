@@ -47,4 +47,6 @@ python3 tools/test_static_publish.py --release-dir deploy/portal-releases/YYYYMM
 
 I028 完成本地迁移与演练后，用户在 I029 明确授权生产发布。2026-10-17 已在 Ubuntu 上部署 `20261017T174039`，静态根为 `/srv/reading-notes/current/site`。实际命令、实机验收与首次迁移回滚点见 [生产发布记录](../docs/astro-production-report.md)。旧布局 `20261017T151424`、站点配置、证书和续期约定保留；历史手工流程见 `docs/history/deployment-before-astro.md`，旧 builder 和单书工具保留。
 
+Weiss 的正式阅读入口为 [主站 Weiss 笔记](https://notes.zzzping.top/weiss/notes/book_overview.html)。已退役的 `weiss.zzzping.top` 独立部署于 2026-10-17 按 [I031](../issues/I031-retire-weiss-site.md) 完成服务器清理：旧 web root、部署记录、Nginx vhost、日志和专属证书续期条目均已删除。主站当前版本及上述首次迁移回滚点保持。
+
 当前维护入口见 [Astro 编写说明](../docs/astro-authoring.md)，迁移验证见 [T028](../test/T028-static-first-astro.md)。本地浏览、静态检查、程序执行、发布模拟与公网验收各自独立。

@@ -22,5 +22,1670 @@
         8
       ]
     }
+  ],
+  "statement_policy": "每条编号陈述登记一种状态；摘录为扫描页人工转录，花体和下标在纯文本中统一表示，摘录范围单独注明。",
+  "statements": [
+    {
+      "anchor": "proposition-1-2-1",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "命题 1.2.1",
+      "printed_pages": [
+        5
+      ],
+      "pdf_pages": [
+        17
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-1-2-2",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "命题 1.2.2",
+      "printed_pages": [
+        6
+      ],
+      "pdf_pages": [
+        18
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-1-2-3",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "命题 1.2.3",
+      "printed_pages": [
+        6
+      ],
+      "pdf_pages": [
+        18
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-1-2-4",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "命题 1.2.4",
+      "printed_pages": [
+        7
+      ],
+      "pdf_pages": [
+        19
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-1-3-1",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "定义 1.3.1",
+      "printed_pages": [
+        7
+      ],
+      "pdf_pages": [
+        19
+      ],
+      "status": "excerpt",
+      "text": "由集合系 C 生成的环（或单调系，或 λ 系，或 σ 域），也就是包含 C 的最小的环（或单调系，或 λ 系，或 σ 域）。",
+      "excerpt_scope": "生成集合系的定义；C 对应原书花体集合系符号。",
+      "verification": "人工目视扫描页转录；非 OCR",
+      "scan_image": "tmp/final-assessment/source-pages/page-19.png"
+    },
+    {
+      "anchor": "proposition-1-3-1",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "命题 1.3.1",
+      "printed_pages": [
+        8
+      ],
+      "pdf_pages": [
+        20
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-1-3-2",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "定理 1.3.2",
+      "printed_pages": [
+        8
+      ],
+      "pdf_pages": [
+        20
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-1-3-3",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "定理 1.3.3",
+      "printed_pages": [
+        9
+      ],
+      "pdf_pages": [
+        21
+      ],
+      "status": "excerpt",
+      "text": "如果 A 是域，则 σ(A)=m(A)。",
+      "excerpt_scope": "单调类定理完整结论；A 对应原书花体域符号。",
+      "verification": "人工目视扫描页转录；非 OCR",
+      "scan_image": "tmp/final-assessment/source-pages/page-21.png"
+    },
+    {
+      "anchor": "corollary-1-3-4",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "推论 1.3.4",
+      "printed_pages": [
+        9
+      ],
+      "pdf_pages": [
+        21
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-1-3-5",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "定理 1.3.5",
+      "printed_pages": [
+        9
+      ],
+      "pdf_pages": [
+        21
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "corollary-1-3-6",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "推论 1.3.6",
+      "printed_pages": [
+        10
+      ],
+      "pdf_pages": [
+        22
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-1-4-1",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "命题 1.4.1",
+      "printed_pages": [
+        11
+      ],
+      "pdf_pages": [
+        23
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-1-4-2",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "命题 1.4.2",
+      "printed_pages": [
+        11
+      ],
+      "pdf_pages": [
+        23
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-1-4-3",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "定理 1.4.3",
+      "printed_pages": [
+        11
+      ],
+      "pdf_pages": [
+        23
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-1-4-4",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "定理 1.4.4",
+      "printed_pages": [
+        12
+      ],
+      "pdf_pages": [
+        24
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-1-4-5",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "命题 1.4.5",
+      "printed_pages": [
+        13
+      ],
+      "pdf_pages": [
+        25
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-1-4-1",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "定义 1.4.1",
+      "printed_pages": [
+        13
+      ],
+      "pdf_pages": [
+        25
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-1-4-6",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "定理 1.4.6",
+      "printed_pages": [
+        13
+      ],
+      "pdf_pages": [
+        25
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "corollary-1-4-7",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "推论 1.4.7",
+      "printed_pages": [
+        14
+      ],
+      "pdf_pages": [
+        26
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-1-5-1",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "定理 1.5.1",
+      "printed_pages": [
+        15
+      ],
+      "pdf_pages": [
+        27
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-1-5-2",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "定理 1.5.2",
+      "printed_pages": [
+        16
+      ],
+      "pdf_pages": [
+        28
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-1-5-3",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "定理 1.5.3",
+      "printed_pages": [
+        17
+      ],
+      "pdf_pages": [
+        29
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-1-5-4",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "定理 1.5.4",
+      "printed_pages": [
+        18
+      ],
+      "pdf_pages": [
+        30
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-1-5-5",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "定理 1.5.5",
+      "printed_pages": [
+        19
+      ],
+      "pdf_pages": [
+        31
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-1-5-6",
+      "page": "chapter01_measurable_spaces.html",
+      "key": "定理 1.5.6",
+      "printed_pages": [
+        20
+      ],
+      "pdf_pages": [
+        32
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-2-1-1",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定义 2.1.1",
+      "printed_pages": [
+        23
+      ],
+      "pdf_pages": [
+        35
+      ],
+      "status": "excerpt",
+      "text": "设 C 是 X 上的集合系且 ∅∈C。如果 C 上的非负集函数 μ 有可列可加性并且满足 μ(∅)=0，则称之为 C 上的测度。",
+      "excerpt_scope": "测度定义的关键句；C 对应原书花体集合系符号。",
+      "verification": "人工目视扫描页转录；非 OCR",
+      "scan_image": "tmp/final-assessment/source-pages/page-35.png"
+    },
+    {
+      "anchor": "proposition-2-1-1",
+      "page": "chapter02_measure_spaces.html",
+      "key": "命题 2.1.1",
+      "printed_pages": [
+        24
+      ],
+      "pdf_pages": [
+        36
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-2-1-2",
+      "page": "chapter02_measure_spaces.html",
+      "key": "命题 2.1.2",
+      "printed_pages": [
+        25
+      ],
+      "pdf_pages": [
+        37
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-2-1-3",
+      "page": "chapter02_measure_spaces.html",
+      "key": "命题 2.1.3",
+      "printed_pages": [
+        28
+      ],
+      "pdf_pages": [
+        40
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-2-1-4",
+      "page": "chapter02_measure_spaces.html",
+      "key": "命题 2.1.4",
+      "printed_pages": [
+        29
+      ],
+      "pdf_pages": [
+        41
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-2-1-5",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定理 2.1.5",
+      "printed_pages": [
+        31
+      ],
+      "pdf_pages": [
+        43
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-2-1-6",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定理 2.1.6",
+      "printed_pages": [
+        31
+      ],
+      "pdf_pages": [
+        43
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-2-2-1",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定义 2.2.1",
+      "printed_pages": [
+        33
+      ],
+      "pdf_pages": [
+        45
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-2-2-1",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定理 2.2.1",
+      "printed_pages": [
+        33
+      ],
+      "pdf_pages": [
+        45
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-2-2-2",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定义 2.2.2",
+      "printed_pages": [
+        34
+      ],
+      "pdf_pages": [
+        46
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-2-2-2",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定理 2.2.2",
+      "printed_pages": [
+        34
+      ],
+      "pdf_pages": [
+        46
+      ],
+      "status": "excerpt",
+      "text": "如果 τ 是外测度，则 Fτ 是一个 σ 域，(X,Fτ,τ) 是一个完全测度空间。",
+      "excerpt_scope": "Carathéodory 定理；Fτ 表示原书带下标 τ 的可测集族。",
+      "verification": "人工目视扫描页转录；非 OCR",
+      "scan_image": "tmp/final-assessment/source-pages/page-46.png"
+    },
+    {
+      "anchor": "proposition-2-3-1",
+      "page": "chapter02_measure_spaces.html",
+      "key": "命题 2.3.1",
+      "printed_pages": [
+        38
+      ],
+      "pdf_pages": [
+        50
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-2-3-2",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定理 2.3.2",
+      "printed_pages": [
+        39
+      ],
+      "pdf_pages": [
+        51
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "corollary-2-3-3",
+      "page": "chapter02_measure_spaces.html",
+      "key": "推论 2.3.3",
+      "printed_pages": [
+        41
+      ],
+      "pdf_pages": [
+        53
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-2-3-4",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定理 2.3.4",
+      "printed_pages": [
+        41
+      ],
+      "pdf_pages": [
+        53
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-2-3-5",
+      "page": "chapter02_measure_spaces.html",
+      "key": "命题 2.3.5",
+      "printed_pages": [
+        43
+      ],
+      "pdf_pages": [
+        55
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-2-3-6",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定理 2.3.6",
+      "printed_pages": [
+        44
+      ],
+      "pdf_pages": [
+        56
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-2-4-1",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定理 2.4.1",
+      "printed_pages": [
+        44
+      ],
+      "pdf_pages": [
+        56
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-2-4-2",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定理 2.4.2",
+      "printed_pages": [
+        46
+      ],
+      "pdf_pages": [
+        58
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-2-5-1",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定义 2.5.1",
+      "printed_pages": [
+        47
+      ],
+      "pdf_pages": [
+        59
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-2-5-2",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定义 2.5.2",
+      "printed_pages": [
+        48
+      ],
+      "pdf_pages": [
+        60
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-2-5-3",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定义 2.5.3",
+      "printed_pages": [
+        49
+      ],
+      "pdf_pages": [
+        61
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-2-5-4",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定义 2.5.4",
+      "printed_pages": [
+        52
+      ],
+      "pdf_pages": [
+        64
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-2-5-1",
+      "page": "chapter02_measure_spaces.html",
+      "key": "命题 2.5.1",
+      "printed_pages": [
+        47
+      ],
+      "pdf_pages": [
+        59
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-2-5-2",
+      "page": "chapter02_measure_spaces.html",
+      "key": "命题 2.5.2",
+      "printed_pages": [
+        48
+      ],
+      "pdf_pages": [
+        60
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-2-5-3",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定理 2.5.3",
+      "printed_pages": [
+        49
+      ],
+      "pdf_pages": [
+        61
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-2-5-4",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定理 2.5.4",
+      "printed_pages": [
+        49
+      ],
+      "pdf_pages": [
+        61
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "lemma-2-5-5",
+      "page": "chapter02_measure_spaces.html",
+      "key": "引理 2.5.5",
+      "printed_pages": [
+        52
+      ],
+      "pdf_pages": [
+        64
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-2-5-6",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定理 2.5.6",
+      "printed_pages": [
+        53
+      ],
+      "pdf_pages": [
+        65
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "lemma-2-5-7",
+      "page": "chapter02_measure_spaces.html",
+      "key": "引理 2.5.7",
+      "printed_pages": [
+        54
+      ],
+      "pdf_pages": [
+        66
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-2-5-8",
+      "page": "chapter02_measure_spaces.html",
+      "key": "定理 2.5.8",
+      "printed_pages": [
+        54
+      ],
+      "pdf_pages": [
+        66
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-3-1-1",
+      "page": "chapter03_integration.html",
+      "key": "命题 3.1.1",
+      "printed_pages": [
+        61
+      ],
+      "pdf_pages": [
+        73
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-3-1-2",
+      "page": "chapter03_integration.html",
+      "key": "命题 3.1.2",
+      "printed_pages": [
+        63
+      ],
+      "pdf_pages": [
+        75
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-3-1-1",
+      "page": "chapter03_integration.html",
+      "key": "定义 3.1.1",
+      "printed_pages": [
+        64
+      ],
+      "pdf_pages": [
+        76
+      ],
+      "status": "excerpt",
+      "text": "测度空间 (X,F,μ) 上的可测函数 f 如果满足 min{∫X f⁺dμ,∫X f⁻dμ}<∞，则称其积分存在或积分有意义；",
+      "excerpt_scope": "仅摘录积分存在条件；∫X 的 X 对应原式积分域下标，可积条件另见正文。",
+      "verification": "人工目视扫描页转录；非 OCR",
+      "scan_image": "tmp/final-assessment/source-pages/page-76.png"
+    },
+    {
+      "anchor": "theorem-3-1-3",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.1.3",
+      "printed_pages": [
+        66
+      ],
+      "pdf_pages": [
+        78
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-1-4",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.1.4",
+      "printed_pages": [
+        66
+      ],
+      "pdf_pages": [
+        78
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "corollary-3-1-5",
+      "page": "chapter03_integration.html",
+      "key": "推论 3.1.5",
+      "printed_pages": [
+        68
+      ],
+      "pdf_pages": [
+        80
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-2-1",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.2.1",
+      "printed_pages": [
+        69
+      ],
+      "pdf_pages": [
+        81
+      ],
+      "status": "excerpt",
+      "text": "如果 ∫X f dμ+∫X g dμ 有意义，则 f+g a.e. 有定义，其积分存在且 ∫X(f+g)dμ=∫X f dμ+∫X g dμ。",
+      "excerpt_scope": "摘录第 (2) 项；全定理的可测性、积分存在前提见正文，∫X 的 X 为积分域。",
+      "verification": "人工目视扫描页转录；非 OCR",
+      "scan_image": "tmp/final-assessment/source-pages/page-81.png"
+    },
+    {
+      "anchor": "theorem-3-2-2",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.2.2",
+      "printed_pages": [
+        71
+      ],
+      "pdf_pages": [
+        83
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-2-3",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.2.3",
+      "printed_pages": [
+        72
+      ],
+      "pdf_pages": [
+        84
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-2-4",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.2.4",
+      "printed_pages": [
+        72
+      ],
+      "pdf_pages": [
+        84
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "corollary-3-2-5",
+      "page": "chapter03_integration.html",
+      "key": "推论 3.2.5",
+      "printed_pages": [
+        73
+      ],
+      "pdf_pages": [
+        85
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-2-6",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.2.6",
+      "printed_pages": [
+        73
+      ],
+      "pdf_pages": [
+        85
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "corollary-3-2-7",
+      "page": "chapter03_integration.html",
+      "key": "推论 3.2.7",
+      "printed_pages": [
+        74
+      ],
+      "pdf_pages": [
+        86
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-2-8",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.2.8",
+      "printed_pages": [
+        74
+      ],
+      "pdf_pages": [
+        86
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "corollary-3-2-9",
+      "page": "chapter03_integration.html",
+      "key": "推论 3.2.9",
+      "printed_pages": [
+        75
+      ],
+      "pdf_pages": [
+        87
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-2-10",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.2.10",
+      "printed_pages": [
+        75
+      ],
+      "pdf_pages": [
+        87
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "lemma-3-3-1",
+      "page": "chapter03_integration.html",
+      "key": "引理 3.3.1",
+      "printed_pages": [
+        76
+      ],
+      "pdf_pages": [
+        88
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "lemma-3-3-2",
+      "page": "chapter03_integration.html",
+      "key": "引理 3.3.2",
+      "printed_pages": [
+        76
+      ],
+      "pdf_pages": [
+        88
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-3-3",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.3.3",
+      "printed_pages": [
+        77
+      ],
+      "pdf_pages": [
+        89
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-3-4",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.3.4",
+      "printed_pages": [
+        77
+      ],
+      "pdf_pages": [
+        89
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-3-5",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.3.5",
+      "printed_pages": [
+        79
+      ],
+      "pdf_pages": [
+        91
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "lemma-3-3-6",
+      "page": "chapter03_integration.html",
+      "key": "引理 3.3.6",
+      "printed_pages": [
+        79
+      ],
+      "pdf_pages": [
+        91
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-3-7",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.3.7",
+      "printed_pages": [
+        79
+      ],
+      "pdf_pages": [
+        91
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-3-8",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.3.8",
+      "printed_pages": [
+        80
+      ],
+      "pdf_pages": [
+        92
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-3-9",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.3.9",
+      "printed_pages": [
+        81
+      ],
+      "pdf_pages": [
+        93
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-3-3-1",
+      "page": "chapter03_integration.html",
+      "key": "定义 3.3.1",
+      "printed_pages": [
+        82
+      ],
+      "pdf_pages": [
+        94
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-3-10",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.3.10",
+      "printed_pages": [
+        82
+      ],
+      "pdf_pages": [
+        94
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-3-11",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.3.11",
+      "printed_pages": [
+        84
+      ],
+      "pdf_pages": [
+        96
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "corollary-3-3-12",
+      "page": "chapter03_integration.html",
+      "key": "推论 3.3.12",
+      "printed_pages": [
+        84
+      ],
+      "pdf_pages": [
+        96
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-3-4-1",
+      "page": "chapter03_integration.html",
+      "key": "定义 3.4.1",
+      "printed_pages": [
+        85
+      ],
+      "pdf_pages": [
+        97
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-4-1",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.4.1",
+      "printed_pages": [
+        85
+      ],
+      "pdf_pages": [
+        97
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-4-2",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.4.2",
+      "printed_pages": [
+        86
+      ],
+      "pdf_pages": [
+        98
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-3-4-2",
+      "page": "chapter03_integration.html",
+      "key": "定义 3.4.2",
+      "printed_pages": [
+        86
+      ],
+      "pdf_pages": [
+        98
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-4-3",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.4.3",
+      "printed_pages": [
+        87
+      ],
+      "pdf_pages": [
+        99
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "lemma-3-4-4",
+      "page": "chapter03_integration.html",
+      "key": "引理 3.4.4",
+      "printed_pages": [
+        87
+      ],
+      "pdf_pages": [
+        99
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-3-4-5",
+      "page": "chapter03_integration.html",
+      "key": "定理 3.4.5",
+      "printed_pages": [
+        89
+      ],
+      "pdf_pages": [
+        101
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-4-1-1",
+      "page": "chapter04_signed_measures.html",
+      "key": "定义 4.1.1",
+      "printed_pages": [
+        94
+      ],
+      "pdf_pages": [
+        106
+      ],
+      "status": "excerpt",
+      "text": "设 (X,F) 是一个可测空间。从 F 到 R̄ 的集函数 φ 称为符号测度，如果它满足 (1) φ(∅)=0；(2) 可列可加性：对任何两两不交的 {Aₙ,n=1,2,…}⊂F，有 φ(⋃ₙ≥₁ Aₙ)=∑ₙ≥₁ φ(Aₙ)。",
+      "excerpt_scope": "定义及两项条件；F 以普通体代替花体，R̄ 为广义实数，⋃ₙ≥₁、∑ₙ≥₁ 表示原式从 1 到无穷的并与和。",
+      "verification": "人工目视扫描页转录；非 OCR",
+      "scan_image": "tmp/final-assessment/source-pages/page-106.png"
+    },
+    {
+      "anchor": "proposition-4-1-1",
+      "page": "chapter04_signed_measures.html",
+      "key": "命题 4.1.1",
+      "printed_pages": [
+        95
+      ],
+      "pdf_pages": [
+        107
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-4-1-2",
+      "page": "chapter04_signed_measures.html",
+      "key": "命题 4.1.2",
+      "printed_pages": [
+        95
+      ],
+      "pdf_pages": [
+        107
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-4-1-3",
+      "page": "chapter04_signed_measures.html",
+      "key": "命题 4.1.3",
+      "printed_pages": [
+        95
+      ],
+      "pdf_pages": [
+        107
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "lemma-4-2-1",
+      "page": "chapter04_signed_measures.html",
+      "key": "引理 4.2.1",
+      "printed_pages": [
+        97
+      ],
+      "pdf_pages": [
+        109
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "lemma-4-2-2",
+      "page": "chapter04_signed_measures.html",
+      "key": "引理 4.2.2",
+      "printed_pages": [
+        98
+      ],
+      "pdf_pages": [
+        110
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-4-2-3",
+      "page": "chapter04_signed_measures.html",
+      "key": "定理 4.2.3",
+      "printed_pages": [
+        98
+      ],
+      "pdf_pages": [
+        110
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-4-2-4",
+      "page": "chapter04_signed_measures.html",
+      "key": "定理 4.2.4",
+      "printed_pages": [
+        101
+      ],
+      "pdf_pages": [
+        113
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-4-3-1",
+      "page": "chapter04_signed_measures.html",
+      "key": "定义 4.3.1",
+      "printed_pages": [
+        102
+      ],
+      "pdf_pages": [
+        114
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-4-3-2",
+      "page": "chapter04_signed_measures.html",
+      "key": "定义 4.3.2",
+      "printed_pages": [
+        102
+      ],
+      "pdf_pages": [
+        114
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "lemma-4-3-1",
+      "page": "chapter04_signed_measures.html",
+      "key": "引理 4.3.1",
+      "printed_pages": [
+        102
+      ],
+      "pdf_pages": [
+        114
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-4-3-2",
+      "page": "chapter04_signed_measures.html",
+      "key": "命题 4.3.2",
+      "printed_pages": [
+        103
+      ],
+      "pdf_pages": [
+        115
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-4-3-3",
+      "page": "chapter04_signed_measures.html",
+      "key": "命题 4.3.3",
+      "printed_pages": [
+        104
+      ],
+      "pdf_pages": [
+        116
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-4-3-4",
+      "page": "chapter04_signed_measures.html",
+      "key": "命题 4.3.4",
+      "printed_pages": [
+        105
+      ],
+      "pdf_pages": [
+        117
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-4-3-5",
+      "page": "chapter04_signed_measures.html",
+      "key": "定理 4.3.5",
+      "printed_pages": [
+        107
+      ],
+      "pdf_pages": [
+        119
+      ],
+      "status": "excerpt",
+      "text": "设 φ 和 μ 分别是 (X,F) 上的符号测度和 σ 有限测度。如果 φ≪μ，则存在 (X,F,μ) 上在 a.e. 意义下惟一的可测函数 f 使 (4.3.1) 和 (4.3.5) 式成立；如果 φ 是 σ 有限的，则 f a.e. 有限。",
+      "excerpt_scope": "完整定理句；公式编号指原书密度表示和负部有限条件，已在正文展开。",
+      "verification": "人工目视扫描页转录；非 OCR",
+      "scan_image": "tmp/final-assessment/source-pages/page-119.png"
+    },
+    {
+      "anchor": "definition-4-4-1",
+      "page": "chapter04_signed_measures.html",
+      "key": "定义 4.4.1",
+      "printed_pages": [
+        108
+      ],
+      "pdf_pages": [
+        120
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "lemma-4-4-1",
+      "page": "chapter04_signed_measures.html",
+      "key": "引理 4.4.1",
+      "printed_pages": [
+        109
+      ],
+      "pdf_pages": [
+        121
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "lemma-4-4-2",
+      "page": "chapter04_signed_measures.html",
+      "key": "引理 4.4.2",
+      "printed_pages": [
+        109
+      ],
+      "pdf_pages": [
+        121
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-4-4-3",
+      "page": "chapter04_signed_measures.html",
+      "key": "命题 4.4.3",
+      "printed_pages": [
+        110
+      ],
+      "pdf_pages": [
+        122
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "proposition-4-4-4",
+      "page": "chapter04_signed_measures.html",
+      "key": "命题 4.4.4",
+      "printed_pages": [
+        111
+      ],
+      "pdf_pages": [
+        123
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-4-4-5",
+      "page": "chapter04_signed_measures.html",
+      "key": "定理 4.4.5",
+      "printed_pages": [
+        111
+      ],
+      "pdf_pages": [
+        123
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "corollary-4-4-6",
+      "page": "chapter04_signed_measures.html",
+      "key": "推论 4.4.6",
+      "printed_pages": [
+        113
+      ],
+      "pdf_pages": [
+        125
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-4-5-1",
+      "page": "chapter04_signed_measures.html",
+      "key": "定义 4.5.1",
+      "printed_pages": [
+        115
+      ],
+      "pdf_pages": [
+        127
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "lemma-4-5-1",
+      "page": "chapter04_signed_measures.html",
+      "key": "引理 4.5.1",
+      "printed_pages": [
+        117
+      ],
+      "pdf_pages": [
+        129
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-4-5-2",
+      "page": "chapter04_signed_measures.html",
+      "key": "定理 4.5.2",
+      "printed_pages": [
+        117
+      ],
+      "pdf_pages": [
+        129
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-4-5-3",
+      "page": "chapter04_signed_measures.html",
+      "key": "定理 4.5.3",
+      "printed_pages": [
+        119
+      ],
+      "pdf_pages": [
+        131
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-4-5-4",
+      "page": "chapter04_signed_measures.html",
+      "key": "定理 4.5.4",
+      "printed_pages": [
+        119
+      ],
+      "pdf_pages": [
+        131
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "corollary-4-5-5",
+      "page": "chapter04_signed_measures.html",
+      "key": "推论 4.5.5",
+      "printed_pages": [
+        120
+      ],
+      "pdf_pages": [
+        132
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-4-5-2",
+      "page": "chapter04_signed_measures.html",
+      "key": "定义 4.5.2",
+      "printed_pages": [
+        121
+      ],
+      "pdf_pages": [
+        133
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-4-5-6",
+      "page": "chapter04_signed_measures.html",
+      "key": "定理 4.5.6",
+      "printed_pages": [
+        121
+      ],
+      "pdf_pages": [
+        133
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "theorem-4-5-7",
+      "page": "chapter04_signed_measures.html",
+      "key": "定理 4.5.7",
+      "printed_pages": [
+        122
+      ],
+      "pdf_pages": [
+        134
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-4-5-3",
+      "page": "chapter04_signed_measures.html",
+      "key": "定义 4.5.3",
+      "printed_pages": [
+        123
+      ],
+      "pdf_pages": [
+        135
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "definition-4-5-4",
+      "page": "chapter04_signed_measures.html",
+      "key": "定义 4.5.4",
+      "printed_pages": [
+        124
+      ],
+      "pdf_pages": [
+        136
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    },
+    {
+      "anchor": "corollary-4-5-8",
+      "page": "chapter04_signed_measures.html",
+      "key": "推论 4.5.8",
+      "printed_pages": [
+        124
+      ],
+      "pdf_pages": [
+        136
+      ],
+      "status": "location-only",
+      "text": "仅页码定位，无逐句摘录。"
+    }
   ]
 }

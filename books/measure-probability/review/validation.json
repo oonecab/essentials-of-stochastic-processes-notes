@@ -825,13 +825,13 @@
     "code/simple_approx.py": "ed4eff2e11569f54b4d6d9f47b9089a070d67e0cf74264c82d18a247e4666b89",
     "notes/README.md": "f66cdba18aceec2fe761e2c2a16ac59a23c8dd7d145df6d4742a2ab1d8b2d684",
     "notes/book_overview.html": "d373a539537e762e6f019dfa8f8784ccbad8a7f459f9253809496424be8575aa",
-    "notes/chapter01_measurable_spaces.html": "75a7a55e5ca3a636f2a6a814a3b06a779e64f73a9b48d1b6bead146d75d59ea3",
-    "notes/chapter02_measure_spaces.html": "ee36adc70aafd5b556017e6b1ed494b8f92caddc3671601a8ed585779b834447",
-    "notes/chapter03_integration.html": "68883c73cf1e41066594031d2b5dc3780913ca5cd0e9941060e5617521a991d3",
-    "notes/chapter04_signed_measures.html": "ebc05efd5d6517577b13ed564643a6d30dc4168ade61754fdaaa756daf00337b",
+    "notes/chapter01_measurable_spaces.html": "d98d3f89726b885f277201502775c66ef7117e8bee4b8554c4f9aaedba43d1ff",
+    "notes/chapter02_measure_spaces.html": "d019180b90e38cd3aa3791f20fa378f0f31077c657e2e6bed395fefb21f338ba",
+    "notes/chapter03_integration.html": "9d216e9dc3778cd16ad91cabc0b247c34a92180f3d047ccec4772bef62baaf2a",
+    "notes/chapter04_signed_measures.html": "64b6440db29c304e2b6667cdb9dcff7ae18989abee5f41eda65ef35f0e1d5b27",
     "notes/exercise_manifest.json": "327d1af2bbde0525022b67191ab48165e34f5683dbca5650896f13e85a401292",
     "notes/preface.html": "ca606f60da08e0d4229dcc3bda2896c980f3076efa6b2f68a841e3c659b0038b",
-    "notes/source_excerpts.json": "ac631a4012b039fc857bae372abf1686b7effed47c86e8bd61fe6b65aa99da97",
+    "notes/source_excerpts.json": "37717cadccc3cb7d5622b93c11efaa98344c77526a5d98ea42642afaa13e99d3",
     "notes/source_inventory.json": "edf64973dffe629b7a24ac9dea2e587daa901576f19dd84060cb0a40d8ed9f28",
     "notes/source_issues.json": "89611bc97aa274bb220c2a73c0f60e9467a5df5ecc50138b01f351b06d2a61f4",
     "notes/source_manifest.json": "43bf8e5904bc8db8d6eaacda0dab02a2f6723d56ff98c3d5d06193af80f76a8a",
@@ -842,9 +842,10 @@
     "review/source-reading.json": "8c1c3ea7bcff226f63254d4140ca1ab262435770098fb8f36938a5610721c7d7",
     "tools/check_integrals.py": "0743c00c140aa1773e018ec1b8651b00450469932c5587194fcd4b20cc3401df",
     "tools/check_models.py": "c9071293686062c1643400fab67b53afa6a04a75e959784c9d9647056299697b",
-    "tools/check_notes.py": "79c2ab7ecb6180173eb9749c1c340162ee6dc46633f3e6c93acd8c6aaf6bd3b5",
+    "tools/check_notes.py": "e9a2332e9eb03a42219e5725cba1cbd5bb5f4ea3c0e9dcc79b8a578cdea8e0ef",
     "tools/sync_code.py": "ea77e65f6fef389f5bcc274dcd926317e3f0c53f6dfbfac1beb069d0b0c9a0cc",
-    "review/final-assessment.json": "14cd0f4900ca28c701f80d32f070edcc9d954c8d34177f600cec5230b94ac2ec"
+    "review/final-assessment.json": "d0f31cd2b98535050bcbd769d15564c63640402f4797a3cf6dce83e71868e9f5",
+    "tools/check_excerpts.py": "62466881d33533c8f9d9617afc8f30edd9df5c437c61c922c00101af20c70a50"
   },
   "evidence_sha256": {
     "tmp/measure-probability-ch34/baseline.json": "5e86be465874b20fb9aafc0a5791d808f8f006df71354c75e2cc0bbe40ceac95",
@@ -1064,11 +1065,68 @@
           "current_sha256": "14cd0f4900ca28c701f80d32f070edcc9d954c8d34177f600cec5230b94ac2ec"
         }
       ]
+    },
+    {
+      "issue": "I032",
+      "reason": "P1-7 人工摘录、逐条状态与页码变异检查",
+      "changes": [
+        {
+          "file": "notes/chapter01_measurable_spaces.html",
+          "previous_sha256": "75a7a55e5ca3a636f2a6a814a3b06a779e64f73a9b48d1b6bead146d75d59ea3",
+          "current_sha256": "d98d3f89726b885f277201502775c66ef7117e8bee4b8554c4f9aaedba43d1ff"
+        },
+        {
+          "file": "notes/chapter02_measure_spaces.html",
+          "previous_sha256": "ee36adc70aafd5b556017e6b1ed494b8f92caddc3671601a8ed585779b834447",
+          "current_sha256": "d019180b90e38cd3aa3791f20fa378f0f31077c657e2e6bed395fefb21f338ba"
+        },
+        {
+          "file": "notes/chapter03_integration.html",
+          "previous_sha256": "68883c73cf1e41066594031d2b5dc3780913ca5cd0e9941060e5617521a991d3",
+          "current_sha256": "9d216e9dc3778cd16ad91cabc0b247c34a92180f3d047ccec4772bef62baaf2a"
+        },
+        {
+          "file": "notes/chapter04_signed_measures.html",
+          "previous_sha256": "ebc05efd5d6517577b13ed564643a6d30dc4168ade61754fdaaa756daf00337b",
+          "current_sha256": "64b6440db29c304e2b6667cdb9dcff7ae18989abee5f41eda65ef35f0e1d5b27"
+        },
+        {
+          "file": "notes/source_excerpts.json",
+          "previous_sha256": "ac631a4012b039fc857bae372abf1686b7effed47c86e8bd61fe6b65aa99da97",
+          "current_sha256": "37717cadccc3cb7d5622b93c11efaa98344c77526a5d98ea42642afaa13e99d3"
+        },
+        {
+          "file": "review/final-assessment.json",
+          "previous_sha256": "14cd0f4900ca28c701f80d32f070edcc9d954c8d34177f600cec5230b94ac2ec",
+          "current_sha256": "6a0aefb81d38eee78ec5c489d25446306d62b09c0dcdd632a6940be0c08f4850"
+        },
+        {
+          "file": "tools/check_excerpts.py",
+          "previous_sha256": null,
+          "current_sha256": "62466881d33533c8f9d9617afc8f30edd9df5c437c61c922c00101af20c70a50"
+        },
+        {
+          "file": "tools/check_notes.py",
+          "previous_sha256": "79c2ab7ecb6180173eb9749c1c340162ee6dc46633f3e6c93acd8c6aaf6bd3b5",
+          "current_sha256": "e9a2332e9eb03a42219e5725cba1cbd5bb5f4ea3c0e9dcc79b8a578cdea8e0ef"
+        }
+      ]
+    },
+    {
+      "issue": "I032",
+      "reason": "P1-7 全站构建和全 DOM parity 通过后的输出绑定",
+      "changes": [
+        {
+          "file": "review/final-assessment.json",
+          "previous_sha256": "6a0aefb81d38eee78ec5c489d25446306d62b09c0dcdd632a6940be0c08f4850",
+          "current_sha256": "d0f31cd2b98535050bcbd769d15564c63640402f4797a3cf6dce83e71868e9f5"
+        }
+      ]
     }
   ],
   "current_content_review": {
     "record": "review/final-assessment.json",
-    "sha256": "14cd0f4900ca28c701f80d32f070edcc9d954c8d34177f600cec5230b94ac2ec",
+    "sha256": "d0f31cd2b98535050bcbd769d15564c63640402f4797a3cf6dce83e71868e9f5",
     "status": "source revisions checked; final browser and complete integration pending"
   }
 }

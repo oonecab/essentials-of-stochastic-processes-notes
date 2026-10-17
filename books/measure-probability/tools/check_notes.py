@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check the registered source scope, reading files and executable finite models."""
 import argparse
+import copy
 import hashlib
 from html import unescape
 from html.parser import HTMLParser
@@ -13,6 +14,7 @@ import xml.etree.ElementTree as ET
 from sync_code import synchronize, check_displayed
 from check_models import run as check_models
 from check_integrals import run as check_integrals
+from check_excerpts import check_excerpts
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -136,6 +138,8 @@ def structure():
             diagrams += 1
     chapters = {c['chapter']: c['file'] for c in manifest['chapters'] if c['chapter'] <= 4}
     check_coverage(texts, source, exercises, chapters)
+    excerpt_record = load('notes/source_excerpts.json')
+    quotation_status = check_excerpts(texts, source, excerpt_record, chapters)
     for item in load('notes/source_excerpts.json')['excerpts']:
         require(item['text'] in unescape(texts[item['page']]) and f'id="{item["anchor"]}"' in texts[item['page']],
                 'preface quotation changed')
@@ -143,6 +147,19 @@ def structure():
         require(item['anchor'] in scans[item['page']].ids, 'source correction anchor omitted')
     # Sensitivity checks operate on copies, never modifying formal notes.
     rejected = []
+    for label in ('excerpt_status', 'excerpt_page'):
+        bad_texts, bad_record = dict(texts), copy.deepcopy(excerpt_record)
+        first = bad_record['statements'][0]
+        if label == 'excerpt_status':
+            bad_texts[first['page']] = bad_texts[first['page']].replace('data-source-status="location-only"', 'data-source-status="excerpt"', 1)
+        else:
+            first['pdf_pages'][0] += 1
+        try:
+            check_excerpts(bad_texts, source, bad_record, chapters)
+        except ValueError:
+            rejected.append(label)
+        else:
+            raise ValueError('accepted altered quotation record: ' + label)
     question = question_block(texts[chapters[2]].split('id="ex-2-6"', 1)[1])
     wrong_condition = question.replace('&lt;∞', '&lt;0', 1)
     require(wrong_condition != question, 'condition mutation did not alter question')
@@ -196,6 +213,7 @@ def structure():
         binding = 'current files match recorded review; semantic and browser evidence are separate'
     return {'pages': len(paths), 'original_exercises': len(exercises), 'numbered_statements': 126,
             'numbered_examples': 21, 'mathml': maths, 'svg': diagrams, 'local_links': links,
+            'quotation_status': quotation_status,
             'synchronized_sources': synchronize(), 'mutations_rejected': rejected,
             'source_pdf': 'local hash verified; page inventory read from scan' if pdf.exists() else 'recorded identity; local scan unavailable',
             'review_binding': binding}

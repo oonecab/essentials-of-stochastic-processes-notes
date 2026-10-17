@@ -36,3 +36,5 @@ golden master 分为旧维护源和旧发布视图：前者证明正文、数学
 随机过程批次 Go：9 页 / 236 题，13009 MathML / 7 SVG / 150 陈述，parity 差异 0；HTML 5,986,389 字节，JS 38,155 字节，比例 1.0。构建 35.570 秒；`stochastic-build`、`stochastic-parity`、`stochastic-offline-2`、`stochastic-python-2` 退出 0；独立报告 `tmp/project-check/20261017T162900-95_1u10w/report.json`。36 个 JS 视图和 9 个 no-JS 视图通过，逐页看图。初次 Python 检查拦住维护说明旧哈希，按依赖顺序保留旧值并更新文档及记录绑定后通过；初次深链检查取到了章节内隐藏摘要，旧页和新页矩形一致，修正为目标章节本身后通过。原失败日志和 `stochastic-deep-link-diagnosis.json` 保留。
 
 Weiss 批次 Go：13 页 / 362 题，4594 MathML / 227 SVG，原书未使用 statement 容器（计数 0）；parity 差异 0。HTML 6,419,695 字节，JS 23,881 字节，比例 1.0。构建 37.815 秒；`weiss-build`、`weiss-parity`、`weiss-offline`、`weiss-python` 退出 0；独立报告 `tmp/project-check/20261017T163237-h49kv28l/report.json`，包含原 C 图例和教学程序提取执行。52 个 JS 视图和 13 个 no-JS 视图通过，逐页看图；新增迁移审阅入口承接该书原来的散列证据结构。
+
+Weiss 原样导入的 SVG 含 8529 处原有行尾空白，`git show --check 1e145db` 退出非零并保留完整日志 `weiss-original-whitespace.log`；受控源展开字节与冻结原页相同，因此没有清理这些空白，未把该检查记为通过。后续完整构建检出了新维护文档链接未随读者资料页发布，已改为仓库路径说明；现有读者 URL 和 54 页正文链接保持。

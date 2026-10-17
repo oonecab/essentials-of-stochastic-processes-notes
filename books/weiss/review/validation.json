@@ -5,7 +5,7 @@
   "historical_review_entry": "notes/README.md",
   "file_sha256": {
     "agent.md": "92f5aeaa13733fb839552b3fe90a4dc3c1faa8b98d0f5547c5e355b9113f56d5",
-    "notes/README.md": "3bace74b4d42ab76e5a4d9f6569722c95aa6fae5603949760ee48f36a8d9210e"
+    "notes/README.md": "42dd6f4e1d2845c70d3a503a79ae591b80eb7d5fc402cbcfe74dea1b411a2029"
   },
   "open_findings": [],
   "astro_migration": {
@@ -28,5 +28,17 @@
       "chapter11_amortized_analysis.html": "125dfb580200b673a07590a09020e27381f354e1be65ccbdd403fee36725b355",
       "chapter12_advanced_data_structures.html": "ab22dcfc47bd830aadc0830500f858ee6c6596525b39f4750bc1c95a9c52bfef"
     }
-  }
+  },
+  "migration_binding_history": [
+    {
+      "scope": "资料网页不发布仓库维护文档；新维护说明以仓库路径标示，修复新添链接失效。",
+      "updates": [
+        {
+          "file": "notes/README.md",
+          "previous_sha256": "3bace74b4d42ab76e5a4d9f6569722c95aa6fae5603949760ee48f36a8d9210e",
+          "current_sha256": "42dd6f4e1d2845c70d3a503a79ae591b80eb7d5fc402cbcfe74dea1b411a2029"
+        }
+      ]
+    }
+  ]
 }

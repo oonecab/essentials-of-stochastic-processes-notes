@@ -7,6 +7,7 @@ import { entries, syncMirrors } from '../src/lib/controlled-html.mjs';
 import { verifyParity } from './verify-parity.mjs';
 import { sha, offlineDependencies } from './parity-lib.mjs';
 import { checkCsp } from './check-csp.mjs';
+import { checkSource } from '../src/lib/source-revisions.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 process.chdir(root);
@@ -32,13 +33,12 @@ function run(command,args) {
 let pages=[];
 if(!shell) {
   pages=entries();if(!pages.length)throw new Error('No migrated content');
-  for(const entry of pages)if(sha(entry.html)!==entry.metadata.original_sha256)throw new Error('Reconstructed source differs from golden master');
+  for(const entry of pages)checkSource(entry);
   syncMirrors(pages,{write:true});
   for(const folder of ['legacy','prepared','canonical'])fs.rmSync(path.join(stage,folder),{recursive:true,force:true});
   run('python3',['deploy/build_portal.py','--export-directory',path.join(stage,'legacy')]);
   fs.cpSync(path.join(stage,'legacy'),path.join(stage,'prepared'),{recursive:true});
   for(const entry of pages) {
-    if(sha(entry.html)!==entry.metadata.original_sha256)throw new Error('Reconstructed source differs from golden master');
     const destination=path.join(stage,'canonical',entry.metadata.route);fs.mkdirSync(path.dirname(destination),{recursive:true});fs.writeFileSync(destination,entry.html);
   }
   fs.writeFileSync(path.join(stage,'source-pages.json'),JSON.stringify(pages.map(e=>e.metadata)));

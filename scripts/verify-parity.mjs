@@ -5,6 +5,7 @@ import { pathToFileURL } from 'node:url';
 import { entries, root, stage } from '../src/lib/controlled-html.mjs';
 import { fingerprint, differences, sha, validateInternalAnchors } from './parity-lib.mjs';
 import { htmlFiles } from './inline-assets.mjs';
+import { checkSource } from '../src/lib/source-revisions.mjs';
 import { separateApprovedIsland,deepLinkSource,islandsFor } from '../src/lib/islands.mjs';
 
 export function verifyParity(directory=path.join(root,'dist'),book) {
@@ -18,16 +19,15 @@ export function verifyParity(directory=path.join(root,'dist'),book) {
   const records=[];
   validateInternalAnchors(new Map(htmlFiles(directory).map(file=>[path.relative(directory,file),fs.readFileSync(file,'utf8')])));
   for(const {metadata,html} of pages) {
-    const frozen=execFileSync('git',['show',`${state.baseline_ref}:${metadata.legacy_path}`],{maxBuffer:32*1024*1024});
-    if(sha(frozen)!==metadata.original_sha256 || !frozen.equals(Buffer.from(html)))throw new Error(`Reviewed source bytes changed: ${metadata.route}`);
-    if(!frozen.equals(fs.readFileSync(metadata.legacy_path)))throw new Error(`Legacy compatibility HTML changed: ${metadata.route}`);
+    const source=checkSource({metadata,html});
+    if(!Buffer.from(html).equals(fs.readFileSync(metadata.legacy_path)))throw new Error(`Legacy compatibility HTML changed: ${metadata.route}`);
     const expected=fs.readFileSync(path.join(stage,'legacy',metadata.route),'utf8').replace('<link rel="stylesheet" href="../../reader.css">',()=>'<style>'+readerCss.toString()+'</style>');
     const actual=fs.readFileSync(path.join(directory,metadata.route),'utf8');
     const before=fingerprint(expected),after=fingerprint(actual);
     const originalPart=fingerprint(separateApprovedIsland(actual,metadata.book));
     const additions=islandsFor(metadata.book)?[{name:'deep-link-settle',bytes:Buffer.byteLength(deepLinkSource),sha256:sha(deepLinkSource),reason:'CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留'}]:[];
     if(after.js_bytes>before.js_bytes*1.5)throw new Error('Inline JS budget exceeded: '+metadata.route);
-    records.push({page:metadata.route,source_sha256:sha(frozen),output_sha256:sha(actual),source_counts:fingerprint(html).counts,
+    records.push({page:metadata.route,source_sha256:source.source_sha256,original_source_sha256:source.original_sha256,review_revision:source.revision,output_sha256:sha(actual),source_counts:fingerprint(html).counts,
       publication_counts:after.counts,differences:differences(before,originalPart),script_additions:additions,source_bytes:Buffer.byteLength(html),output_bytes:Buffer.byteLength(actual),js_bytes:after.js_bytes,
       js_ratio:after.js_bytes/before.js_bytes});
   }

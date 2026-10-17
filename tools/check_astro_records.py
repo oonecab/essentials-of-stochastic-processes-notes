@@ -15,6 +15,8 @@ def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
     state=json.loads((ROOT/'scripts/migration-state.json').read_text())
     books=load_books();count=0
+    revision_file=ROOT/'src/content-revisions.json'
+    revisions=json.loads(revision_file.read_text())['pages'] if revision_file.exists() else {}
     for name in state['migrated_books']:
         book=books[name]['root'];review=book/'review'
         files=sorted((ROOT/'src/content/books'/name).glob('*.html'))
@@ -46,14 +48,27 @@ def main():
             expanded=re.sub(r'<!-- RN:include ((?:styles|scripts)/[a-f0-9]{20}\.(?:css|js)) -->',expand,body).encode()
             assert b'RN:include' not in expanded
             frozen=subprocess.check_output(['git','show',state['baseline_ref']+':'+legacy],cwd=ROOT)
-            assert expanded==frozen==(ROOT/legacy).read_bytes(),route
+            assert expanded==(ROOT/legacy).read_bytes(),route
             digest=hashlib.sha256(expanded).hexdigest()
-            assert digest==meta['original_sha256']==records[route]['source_sha256']==validation['astro_migration']['source_sha256'][file.name]
+            historical=hashlib.sha256(frozen).hexdigest()
+            assert historical==meta['original_sha256']==records[route]['source_sha256']==validation['astro_migration']['source_sha256'][file.name]
             assert release['files'][route]==records[route]['output_sha256']
-            if (ROOT/'dist'/route).exists():
-                assert sha(ROOT/'dist'/route)==release['files'][route],route
+            if digest!=historical:
+                revision=revisions[route]
+                assert revision['original_sha256']==historical and revision['source_sha256']==digest,route
+                prior=historical
+                for change in revision['history']:
+                    assert change['from_sha256']==prior and change['reason'] and change['reviewed_anchors']
+                    prior=change['to_sha256']
+                assert prior==digest
+                reviewed=json.loads((ROOT/revision['review_record']).read_text())
+                assert reviewed['source_sha256'][route]==digest
+                if (ROOT/'dist'/route).exists():assert sha(ROOT/'dist'/route)==reviewed['output_sha256'][route],route
+            else:
+                assert expanded==frozen,route
+                if (ROOT/'dist'/route).exists():assert sha(ROOT/'dist'/route)==release['files'][route],route
             count+=1
-    print(json.dumps({'status':'passed','controlled_pages':count,'current_review_bindings':'passed','frozen_source_bytes':'identical'}))
+    print(json.dumps({'status':'passed','controlled_pages':count,'current_review_bindings':'passed','historical_source_snapshot':'preserved','reviewed_revision_pages':len(revisions)}))
 
 
 if __name__=='__main__': main()

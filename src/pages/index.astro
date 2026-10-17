@@ -1,0 +1,8 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import { stage } from '../lib/controlled-html.mjs';
+const mode = JSON.parse(fs.readFileSync(path.join(stage, 'build-state.json'), 'utf8'));
+const html = mode.shell ? '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>Reading Notes 构建壳验收</title></head><body><main><h1>Reading Notes</h1><p>静态构建壳。</p></main></body></html>' : fs.readFileSync(path.join(stage, 'prepared/index.html'), 'utf8');
+---
+<Fragment set:html={html} />

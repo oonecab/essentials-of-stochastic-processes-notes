@@ -14,15 +14,17 @@
       "Python 3"
     ],
     "frameworks": [
-      "Python 标准库；页面不依赖外部前端框架"
+      "Python 标准库独立检查",
+      "Astro 7.4.0 静态构建；受控 HTML 与局部交互"
     ],
     "runtimes": [
       "Python 3.10+",
       "Clang（C11、AddressSanitizer、UndefinedBehaviorSanitizer）",
       "Make",
       "Poppler pdftotext / pdfinfo",
-      "Node.js（发布脚本语法校验）",
-      "Nginx（服务器静态 HTTPS 服务）"
+      "Nginx（服务器静态 HTTPS 服务）",
+      "Node.js 24.21.0 LTS（仅构建）",
+      "pnpm 11.21.0（锁定依赖）"
     ],
     "source_directories": [
       "books/stochastic",
@@ -32,14 +34,17 @@
       "books/measure-probability",
       "portal",
       "deploy",
-      "tools"
+      "tools",
+      "src",
+      "scripts"
     ],
     "architecture_notes": [
       "books/catalog.json 登记书籍入口、目录和发布前缀；每本书保留一份全书总览及按章维护的独立 HTML。",
       "随机过程、CS:APP、视觉群论和测度概率以 code/ 下 C/Python 为维护源并同步 HTML；Weiss 教学代码以正式 HTML 为维护源，c/ 为原书图例的独立 C 实现。",
       "根目录工具统一调用各书既有校验器，输出写入被忽略的 tmp/ 或 deploy/portal-releases/。",
       "统一构建保留 /stochastic/、/weiss/、/csapp/ 并接入 /visual-group-theory/、/measure-probability/ URL；部署使用独立版本目录和 current 原子切换，同时维护本版 CSP。",
-      "根 Git 历史与远端沿用；原 Weiss 工作目录保留，合并后的维护入口为本仓库。"
+      "根 Git 历史与远端沿用；原 Weiss 工作目录保留，合并后的维护入口为本仓库。",
+      "Astro 迁移按 ADR-002 分批实施；旧 HTML 与旧构建器保留，逐书门禁通过后登记迁移源。"
     ]
   },
   "commands": {

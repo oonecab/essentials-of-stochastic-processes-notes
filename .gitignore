@@ -15,6 +15,9 @@ tmp/
 deploy/releases/
 deploy/reports/
 deploy/portal-releases/
+node_modules/
+dist/
+.astro/
 
 # Book-local build artifacts and validation output
 books/*/code/build/

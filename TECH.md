@@ -21,7 +21,8 @@
 
 ### 框架与核心库
 
-- Python 标准库；页面不依赖外部前端框架
+- Python 标准库独立检查
+- Astro 7.4.0 静态构建；受控 HTML 与局部交互（迁移实施中，见 ADR-002）
 
 ### 运行时与工具链
 
@@ -29,7 +30,8 @@
 - Clang（C11、AddressSanitizer、UndefinedBehaviorSanitizer）
 - Make
 - Poppler pdftotext / pdfinfo
-- Node.js（发布脚本语法校验）
+- Node.js 24.21.0 LTS（仅构建）
+- pnpm 11.21.0（锁定依赖）
 - Nginx（服务器静态 HTTPS 服务）
 
 ## 源码边界
@@ -42,6 +44,8 @@
 - portal
 - deploy
 - tools
+- src
+- scripts
 
 ## 架构事实
 
@@ -104,6 +108,8 @@ CS:APP 图表与导航复核见 [I019](issues/I019-csapp-visual-navigation.md) /
 | 2026-10-12 | 分散笔记目录和外部 Weiss 构建来源 → 同仓库书籍子项目、统一标准库工具入口 | 一次克隆包含维护与验证所需源，保留原代码维护源 | 发布 URL 保持，原 Weiss 目录及迁移前快照保留；无新前端框架 | [I001](issues/I001-project-merge.md) / [ADR-001](docs/decisions/ADR-001-book-subprojects.md) |
 | 2026-10-13 | 两书登记边界 → 增加 CS:APP 子项目和 /csapp/ 本地构建路由 | 复用静态 HTML、C11、Python 与既有 Poppler；显式区分机器模型和宿主执行 | 原两书 URL 与内容保持；新增目录和路由可独立回退；完整书籍 PDF 仅本地对照 | [I002](issues/I002-csapp-part-one.md) |
 
+| 2026-10-17 | 直接维护单文件 HTML → Astro 7.4.0 静态构建、Node 24.21.0 LTS 与 pnpm 11.21.0 | 共享布局与确定性内联，原数学片段保持；Python 继续独立验证 | 分批门禁实施中；保留旧 HTML、旧构建器与原 URL，生产仅 Nginx | [I028](issues/I028-static-first-astro.md) / [ADR-002](docs/decisions/ADR-002-static-first-astro.md) |
+
 > 详细论证写入问题单或 ADR；本表保存可追踪索引，不得覆盖历史记录。
 
 ## 视觉群论伴读范围
@@ -121,3 +127,7 @@ Carter《Visual Group Theory》在 `books/visual-group-theory/` 维护，全书�
 第 9—10 章扩写依据为 [I025](issues/I025-visual-group-theory-ch09-10.md) / [T025](test/T025-visual-group-theory-ch09-10.md)。独立检查加入全部小阶对称群子群、六维有理矩阵、Sturm 根数、A₅ 共轭类与有限域；工具为 `tools/check_sylow_galois.py`，未新增运行依赖或环境变量。
 
 视觉群论一致性修订 [I026](issues/I026-visual-group-theory-polish.md) / [T026](test/T026-visual-group-theory-polish.md) 为第 2—4 章补充阅读注解，并将关键行内公式改为静态 MathML；`tools/check_reading.py` 核对关键公式结构、节选范围与审阅元数据。全部行内与显示公式提供一致的静态名称和纯文本回退；复制控制器处理完整的两类公式，局部选区沿用浏览器行为。沿用现有 HTML/SVG/MathML 与浏览器组件，无技术栈、环境或服务变更。
+
+## Astro 迁移状态
+
+构建架构选择见 [ADR-002](docs/decisions/ADR-002-static-first-astro.md)，当前实施与证据见 [I028](issues/I028-static-first-astro.md) / [T028](test/T028-static-first-astro.md)。固定版本由 package.json、pnpm-lock.yaml 和 .node-version 约束。本阶段先验收空壳，按书登记已迁移范围；既有正式 HTML 及审阅继续可用。

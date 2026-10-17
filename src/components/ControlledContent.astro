@@ -1,0 +1,14 @@
+---
+import { segments } from '../lib/controlled-html.mjs';
+import Header from './Header.astro';
+import Toc from './Toc.astro';
+import AnnotationRail from './AnnotationRail.astro';
+import Exercise from './Exercise.astro';
+import Figure from './Figure.astro';
+import CodePair from './CodePair.astro';
+import MathBlock from './MathBlock.astro';
+import ChapterNav from './ChapterNav.astro';
+const components = { Header, Toc, AnnotationRail, Exercise, Figure, CodePair, MathBlock, ChapterNav };
+const parts = segments(Astro.props.html);
+---
+{parts.map(part => { const Component = components[part.type]; return Component ? <Component html={part.html} /> : <Fragment set:html={part.html} />; })}

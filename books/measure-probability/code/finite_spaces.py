@@ -1,5 +1,6 @@
 """Finite sigma fields and cover outer measures; at most eight labelled points."""
 import json
+import re
 import sys
 
 
@@ -50,19 +51,25 @@ def outer_measure(n, offers):
             'measurable': measurable}
 
 
+def integer(token):
+    if not re.fullmatch(r'-?[0-9]+', token):
+        raise ValueError('expected ASCII integer without whitespace or plus')
+    return int(token)
+
+
 def main(argv):
     if len(argv) < 2:
         raise ValueError('usage: sigma n [mask ...] | outer n [mask:cost ...]')
-    mode, n = argv[0], int(argv[1])
+    mode, n = argv[0], integer(argv[1])
     if mode == 'sigma':
-        result = sigma_field(n, [int(x) for x in argv[2:]])
+        result = sigma_field(n, [integer(x) for x in argv[2:]])
     elif mode == 'outer':
         offers = []
         for item in argv[2:]:
             parts = item.split(':')
-            if len(parts) != 2:
+            if len(parts) != 2 or len(parts[0]) >= 32:
                 raise ValueError('expected mask:cost')
-            offers.append(tuple(map(int, parts)))
+            offers.append(tuple(map(integer, parts)))
         result = outer_measure(n, offers)
     else:
         raise ValueError('mode must be sigma or outer')

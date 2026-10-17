@@ -9,6 +9,10 @@
 #define INF (LLONG_MAX / 4)
 
 static int number(const char *s, int maximum, int *out) {
+    const char *digits = *s == '-' ? s + 1 : s;
+    if (!*digits) return 0;
+    for (const char *p = digits; *p; ++p)
+        if (*p < '0' || *p > '9') return 0;
     char *end = NULL;
     errno = 0;
     long value = strtol(s, &end, 10);

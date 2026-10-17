@@ -58,3 +58,5 @@ CS:APP 全书解释复核见 [I018](../../issues/I018-csapp-explanations.md) / [
 视觉群论第 9—10 章规则入口：[作用约定、轨道稳定子与 Sylow 定理](../../books/visual-group-theory/notes/chapter09_sylow_theory.html#s9-1)，[最小多项式、分裂域、自同构与反向对应](../../books/visual-group-theory/notes/chapter10_galois_theory.html#s10-5)，[根式可解性及有限域题解](../../books/visual-group-theory/notes/chapter10_galois_theory.html#s10-7)。原题条件和校注以正式页为准；独立源输入 `notes/sylow_galois_inputs.json`，验证设计见 [T025](../../test/T025-visual-group-theory-ch09-10.md)。
 
 2026-10-17 的 [I028](../../issues/I028-static-first-astro.md) 只改变构建及发布路径，教材计算规则、精度、题号和条件保持；逐字重建与 golden-master parity、原独立 Python 回归共同验证此边界。
+
+2026-10-17 的 [I032](../../issues/I032-final-assessment-repairs.md) 补全[定理 1.5.5 修正条件的证明](../../books/measure-probability/notes/chapter01_measurable_spaces.html#theorem-1-5-5-proof)，并展开四个例子的已登记模型；原书编号与结论保留。命令入口的 ASCII 词法、负零与覆盖 mask 长度由[测度书程序说明](../../books/measure-probability/code/README.md)维护。C/Python 的数值算法与范围保持，空白、加号、Unicode 数字等非法输入统一拒绝，验证设计与故障变异见 [T032](../../test/T032-final-assessment-repairs.md)。

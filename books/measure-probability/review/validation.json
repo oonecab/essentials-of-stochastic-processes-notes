@@ -815,17 +815,17 @@
   "file_sha256": {
     "README.md": "29da49a66c427239ef69ebfcb63838773d92e5e1706aa333539fc5e44c3e46b1",
     "agent.md": "d5bd5414ccef2cc7b61ca19fbd5bfe6965bfe994e71bf8378c239e7184268538",
-    "code/README.md": "54f4acdb53c6a5b852204fa2b2077fc16396aa337eff285148eb82bc68efd86e",
+    "code/README.md": "1edce4c57816ba26c02e5c90a8aecb958ab9a939dd2227850dee4eedda3ed5e9",
     "code/finite_integrals.c": "3f743432f9cf038833614b2294a59981bc11fe22ae807c9241b19aaa66931c1b",
     "code/finite_integrals.py": "3a598f0554c1497890df87dffe885e882ccfc912e8f446f466b11118ae97c5c7",
-    "code/finite_spaces.c": "bf0bdd33edcf8c32d7b1e8b9b0204d0d031c5a181520bf2454fcbdb040bd1613",
-    "code/finite_spaces.py": "08f5ecba1fa03d0e38dd553f1763965beedebdf9a6173d0dc8a0924d7d41886d",
+    "code/finite_spaces.c": "c2164e1263eceac5cbc4ab43b9c03437e7a42f379744b734c9551a1d76ee38e9",
+    "code/finite_spaces.py": "600bd304686b55227ca11928f5f08d9bf3cae6025ea0e36074357cc7f3e7d68c",
     "code/programs.json": "6a6b36cdc783f521f63d15ddda2679485a7b694c8ad238ccf209feed482788fe",
-    "code/simple_approx.c": "93fdfe1ac362cc025f1258511a231b58202efec7c1b27e987340cd4dff133b17",
-    "code/simple_approx.py": "ed4eff2e11569f54b4d6d9f47b9089a070d67e0cf74264c82d18a247e4666b89",
+    "code/simple_approx.c": "7b1c7d94efc3b1e51340860863c07e2ba2368a87ca4de91b310bf80322b831ce",
+    "code/simple_approx.py": "397b091accdde866a7ccd628d5099660d7864dffd0a0d9fd1e895dd40c4e57f7",
     "notes/README.md": "f66cdba18aceec2fe761e2c2a16ac59a23c8dd7d145df6d4742a2ab1d8b2d684",
     "notes/book_overview.html": "4c06f69603787477296156976708b9ad0db5d9aac3904c4652c02409720d6f29",
-    "notes/chapter01_measurable_spaces.html": "ce5125ef953e4bf2e39d74cd9ab5c7afd84263805b2d7dbd8ee470a244b03e9b",
+    "notes/chapter01_measurable_spaces.html": "f0b87df9aac7992572c8d1a266b2138a403490ddb583764fd0aaaa4bbf5ad80e",
     "notes/chapter02_measure_spaces.html": "9ae1964dcbceb9d390058ee9466d75f3a6dce214937d2bfdf06b3c6b6121a70c",
     "notes/chapter03_integration.html": "9d216e9dc3778cd16ad91cabc0b247c34a92180f3d047ccec4772bef62baaf2a",
     "notes/chapter04_signed_measures.html": "269ebd8c4f8c0e048d838bc5327f3009d36538075c50f4f6020d65cf83c8e506",
@@ -840,11 +840,11 @@
     "review/history/20261017-first-batch-source-reading.json": "ce12a90eead4af5dd906dc7b5186c65e617103ec69338bad29f5364900e9968e",
     "review/history/20261017-first-batch-validation.json": "017c0f6cbf2dfc479f99a248eb06a41dd39f771fc0a6b71f8ada1335cbf0a58a",
     "review/source-reading.json": "b38137f3ff6fab67aaee56e34ac46698ccece3150ac998f51253c6798f9ff825",
-    "tools/check_integrals.py": "0743c00c140aa1773e018ec1b8651b00450469932c5587194fcd4b20cc3401df",
-    "tools/check_models.py": "c9071293686062c1643400fab67b53afa6a04a75e959784c9d9647056299697b",
-    "tools/check_notes.py": "6ad0c5f462a96bac63e6affabd16add722bc8cc4c3d22ea3272c66422421237b",
-    "tools/sync_code.py": "ea77e65f6fef389f5bcc274dcd926317e3f0c53f6dfbfac1beb069d0b0c9a0cc",
-    "review/final-assessment.json": "2830ceb344422c19ecc7acc246515a45010dc101f513b28a137c81854fcbc915",
+    "tools/check_integrals.py": "4009004a02c8aab319920b2d42bfc182a426cbdf94bc1155cd15b29b7a93d4ab",
+    "tools/check_models.py": "7e2e5c2bffe527c18b27721d0e2e15a1f3f52b8ad4d9d5e59ec242c3c4b5a33a",
+    "tools/check_notes.py": "02d8c9101b51beef2ca7803e03b92dbc0740d9e0e072d8d00e18eb16507ad99b",
+    "tools/sync_code.py": "9eceb700c71f70462083b425ee9eed2ce9de905503253b60ce275fa83a1933a2",
+    "review/final-assessment.json": "c76f8f8246f7f8cbf929d2091da0f3fffdace03a59760211cfb7700e5a96cd2e",
     "tools/check_excerpts.py": "62466881d33533c8f9d9617afc8f30edd9df5c437c61c922c00101af20c70a50",
     "review/example-index.json": "448e8232e11d0ddcac275a76bd2e6dbf44bf75dc2cd64fcbd49676162e88762e"
   },
@@ -1208,11 +1208,83 @@
           "current_sha256": "b38137f3ff6fab67aaee56e34ac46698ccece3150ac998f51253c6798f9ff825"
         }
       ]
+    },
+    {
+      "issue": "I032",
+      "reason": "P1-10 CLI 词法、独立模型变异与 HTML 源码同步检查",
+      "changes": [
+        {
+          "file": "code/README.md",
+          "previous_sha256": "54f4acdb53c6a5b852204fa2b2077fc16396aa337eff285148eb82bc68efd86e",
+          "current_sha256": "1edce4c57816ba26c02e5c90a8aecb958ab9a939dd2227850dee4eedda3ed5e9"
+        },
+        {
+          "file": "code/finite_spaces.c",
+          "previous_sha256": "bf0bdd33edcf8c32d7b1e8b9b0204d0d031c5a181520bf2454fcbdb040bd1613",
+          "current_sha256": "c2164e1263eceac5cbc4ab43b9c03437e7a42f379744b734c9551a1d76ee38e9"
+        },
+        {
+          "file": "code/finite_spaces.py",
+          "previous_sha256": "08f5ecba1fa03d0e38dd553f1763965beedebdf9a6173d0dc8a0924d7d41886d",
+          "current_sha256": "600bd304686b55227ca11928f5f08d9bf3cae6025ea0e36074357cc7f3e7d68c"
+        },
+        {
+          "file": "code/simple_approx.c",
+          "previous_sha256": "93fdfe1ac362cc025f1258511a231b58202efec7c1b27e987340cd4dff133b17",
+          "current_sha256": "7b1c7d94efc3b1e51340860863c07e2ba2368a87ca4de91b310bf80322b831ce"
+        },
+        {
+          "file": "code/simple_approx.py",
+          "previous_sha256": "ed4eff2e11569f54b4d6d9f47b9089a070d67e0cf74264c82d18a247e4666b89",
+          "current_sha256": "397b091accdde866a7ccd628d5099660d7864dffd0a0d9fd1e895dd40c4e57f7"
+        },
+        {
+          "file": "notes/chapter01_measurable_spaces.html",
+          "previous_sha256": "ce5125ef953e4bf2e39d74cd9ab5c7afd84263805b2d7dbd8ee470a244b03e9b",
+          "current_sha256": "f0b87df9aac7992572c8d1a266b2138a403490ddb583764fd0aaaa4bbf5ad80e"
+        },
+        {
+          "file": "review/final-assessment.json",
+          "previous_sha256": "2830ceb344422c19ecc7acc246515a45010dc101f513b28a137c81854fcbc915",
+          "current_sha256": "0ee7adaf9c67b51fa87dea5f520df6c6bda6ec18e15e776f28402ab6d7b1ecaa"
+        },
+        {
+          "file": "tools/check_integrals.py",
+          "previous_sha256": "0743c00c140aa1773e018ec1b8651b00450469932c5587194fcd4b20cc3401df",
+          "current_sha256": "4009004a02c8aab319920b2d42bfc182a426cbdf94bc1155cd15b29b7a93d4ab"
+        },
+        {
+          "file": "tools/check_models.py",
+          "previous_sha256": "c9071293686062c1643400fab67b53afa6a04a75e959784c9d9647056299697b",
+          "current_sha256": "7e2e5c2bffe527c18b27721d0e2e15a1f3f52b8ad4d9d5e59ec242c3c4b5a33a"
+        },
+        {
+          "file": "tools/sync_code.py",
+          "previous_sha256": "ea77e65f6fef389f5bcc274dcd926317e3f0c53f6dfbfac1beb069d0b0c9a0cc",
+          "current_sha256": "9eceb700c71f70462083b425ee9eed2ce9de905503253b60ce275fa83a1933a2"
+        }
+      ]
+    },
+    {
+      "issue": "I032",
+      "reason": "P1-10 三路 CLI、13 类积分输出变异、4 类 HTML 同步变异均通过",
+      "changes": [
+        {
+          "file": "review/final-assessment.json",
+          "previous_sha256": "0ee7adaf9c67b51fa87dea5f520df6c6bda6ec18e15e776f28402ab6d7b1ecaa",
+          "current_sha256": "c76f8f8246f7f8cbf929d2091da0f3fffdace03a59760211cfb7700e5a96cd2e"
+        },
+        {
+          "file": "tools/check_notes.py",
+          "previous_sha256": "6ad0c5f462a96bac63e6affabd16add722bc8cc4c3d22ea3272c66422421237b",
+          "current_sha256": "02d8c9101b51beef2ca7803e03b92dbc0740d9e0e072d8d00e18eb16507ad99b"
+        }
+      ]
     }
   ],
   "current_content_review": {
     "record": "review/final-assessment.json",
-    "sha256": "2830ceb344422c19ecc7acc246515a45010dc101f513b28a137c81854fcbc915",
+    "sha256": "c76f8f8246f7f8cbf929d2091da0f3fffdace03a59760211cfb7700e5a96cd2e",
     "status": "source revisions checked; final browser and complete integration pending"
   },
   "example_scope": {

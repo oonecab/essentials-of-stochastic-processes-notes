@@ -122,6 +122,17 @@ def run(run_dir):
         'simple_approx': [[], ['1', '0', '2'], ['-1', '2', '2'], ['1', '2', '0'],
                           ['1', '2', '21'], ['1000001', '2', '2'], ['1.5', '2', '2'], ['1', '2', '2', '3']]
     }
+    lexical_tokens = ['1 ', ' 1', '\t1', '1\n', '１', '١', '1_0', '+1', '', '-', '−1']
+    for token in lexical_tokens:
+        invalid['finite_spaces'] += [['sigma', token, '1'], ['sigma', '3', token],
+                                     ['outer', token, '1:1'], ['outer', '3', token + ':1'],
+                                     ['outer', '3', '1:' + token]]
+        for position in range(3):
+            args = ['1', '2', '2']; args[position] = token
+            invalid['simple_approx'].append(args)
+    invalid['finite_spaces'].append(['outer', '2', '0' * 32 + ':1'])
+    invalid['simple_approx'].append(['-0', '2', '2'])
+    cli_cases['finite_spaces'].append((['sigma', '3', '-0'], sigma_oracle(3, [0])))
     builds, executions = [], 0
     for stem in cli_cases:
         drivers = [[sys.executable, str(ROOT / f'code/{stem}.py')]]
@@ -144,5 +155,21 @@ def run(run_dir):
                 executions += 1
     return {'sigma_closure_cases': len(sigma_cases), 'cover_subfamily_cases': len(outer_cases),
             'exact_rational_cases': len(simple_cases), 'cli_executions': executions, 'builds': builds,
+            'invalid_cases': {key: len(value) for key, value in invalid.items()},
+            'lexical_tokens': lexical_tokens,
             'correction_regressions': ['missing empty intersection', 'missing global cover', 'probability Cesaro counterexample'],
             'scope': 'finite models and numerical boundaries; general proofs are reviewed in HTML'}
+
+
+if __name__ == '__main__':
+    import argparse
+    import tempfile
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--run-dir', type=Path)
+    args = parser.parse_args()
+    (ROOT / 'tmp').mkdir(exist_ok=True)
+    directory = args.run_dir or Path(tempfile.mkdtemp(prefix='models-', dir=ROOT / 'tmp'))
+    directory.mkdir(parents=True, exist_ok=True)
+    report = run(directory)
+    (directory / 'report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+    print(json.dumps(report, ensure_ascii=False, indent=2))

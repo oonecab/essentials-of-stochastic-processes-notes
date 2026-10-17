@@ -36,6 +36,7 @@
 <p>程序的位掩码 3 表示 {0,1}，12 表示 {2,3}。它从全空间这个原子出发，遇到一个生成元就把每个原子切成“在生成元内”和“在生成元外”两份，丢弃空片；所有原子的并构成生成的 σ 域。循环不变量是：已处理的每个生成元都由当前原子拼成。</p>
 <div class="code-pair"><details class="code-version"><summary>Python 3 完整程序</summary><p><a href="../code/finite_spaces.py" download>下载 finite_spaces.py</a></p><pre><code data-source="code/finite_spaces.py">&quot;&quot;&quot;Finite sigma fields and cover outer measures; at most eight labelled points.&quot;&quot;&quot;
 import json
+import re
 import sys
 
 
@@ -86,19 +87,25 @@ def outer_measure(n, offers):
             &#x27;measurable&#x27;: measurable}
 
 
+def integer(token):
+    if not re.fullmatch(r&#x27;-?[0-9]+&#x27;, token):
+        raise ValueError(&#x27;expected ASCII integer without whitespace or plus&#x27;)
+    return int(token)
+
+
 def main(argv):
     if len(argv) &lt; 2:
         raise ValueError(&#x27;usage: sigma n [mask ...] | outer n [mask:cost ...]&#x27;)
-    mode, n = argv[0], int(argv[1])
+    mode, n = argv[0], integer(argv[1])
     if mode == &#x27;sigma&#x27;:
-        result = sigma_field(n, [int(x) for x in argv[2:]])
+        result = sigma_field(n, [integer(x) for x in argv[2:]])
     elif mode == &#x27;outer&#x27;:
         offers = []
         for item in argv[2:]:
             parts = item.split(&#x27;:&#x27;)
-            if len(parts) != 2:
+            if len(parts) != 2 or len(parts[0]) &gt;= 32:
                 raise ValueError(&#x27;expected mask:cost&#x27;)
-            offers.append(tuple(map(int, parts)))
+            offers.append(tuple(map(integer, parts)))
         result = outer_measure(n, offers)
     else:
         raise ValueError(&#x27;mode must be sigma or outer&#x27;)
@@ -122,6 +129,10 @@ if __name__ == &#x27;__main__&#x27;:
 #define INF (LLONG_MAX / 4)
 
 static int number(const char *s, int maximum, int *out) {
+    const char *digits = *s == &#x27;-&#x27; ? s + 1 : s;
+    if (!*digits) return 0;
+    for (const char *p = digits; *p; ++p)
+        if (*p &lt; &#x27;0&#x27; || *p &gt; &#x27;9&#x27;) return 0;
     char *end = NULL;
     errno = 0;
     long value = strtol(s, &amp;end, 10);
@@ -231,6 +242,7 @@ int main(int argc, char **argv) {
 <p>取 <span class="math-inline"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mn>13</mn><mo>&#x0002F;</mo><mn>10</mn></mrow></math></span>，n=1 时受上限限制，<span class="math-inline"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>&#x0003D;</mo><mn>1</mn></mrow></math></span>；n=2 时格宽 1/4，<span class="math-inline"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>s</mi><mn>2</mn></msub><mo>&#x0003D;</mo><mn>5</mn><mo>&#x0002F;</mo><mn>4</mn></mrow></math></span>；n=3、4 时仍为 5/4，n=5 时升为 41/32。非降不要求每一步严格增加。程序返回整数 grid 与 scale，其比值为精确答案，所有取整都在整数中完成。</p>
 <div class="code-pair"><details class="code-version"><summary>Python 3 完整程序</summary><p><a href="../code/simple_approx.py" download>下载 simple_approx.py</a></p><pre><code data-source="code/simple_approx.py">&quot;&quot;&quot;Exact dyadic lower approximation for a nonnegative rational input.&quot;&quot;&quot;
 import json
+import re
 import sys
 
 
@@ -242,11 +254,17 @@ def approximate(p, q, level):
     return {&#x27;grid&#x27;: grid, &#x27;scale&#x27;: scale}
 
 
+def integer(token):
+    if not re.fullmatch(r&#x27;[0-9]+&#x27;, token):
+        raise ValueError(&#x27;expected unsigned ASCII integer&#x27;)
+    return int(token)
+
+
 if __name__ == &#x27;__main__&#x27;:
     try:
         if len(sys.argv) != 4:
             raise ValueError(&#x27;usage: simple_approx.py numerator denominator level&#x27;)
-        print(json.dumps(approximate(*map(int, sys.argv[1:])), separators=(&#x27;,&#x27;, &#x27;:&#x27;)))
+        print(json.dumps(approximate(*map(integer, sys.argv[1:])), separators=(&#x27;,&#x27;, &#x27;:&#x27;)))
     except ValueError as error:
         print(str(error), file=sys.stderr)
         sys.exit(2)
@@ -257,7 +275,9 @@ if __name__ == &#x27;__main__&#x27;:
 
 static int integer(const char *text, unsigned long long maximum, unsigned long long *value) {
     char *end = NULL;
-    if (*text == &#x27;-&#x27;) return 0;
+    if (!*text) return 0;
+    for (const char *p = text; *p; ++p)
+        if (*p &lt; &#x27;0&#x27; || *p &gt; &#x27;9&#x27;) return 0;
     errno = 0;
     unsigned long long result = strtoull(text, &amp;end, 10);
     if (errno || end == text || *end || result &gt; maximum) return 0;

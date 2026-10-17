@@ -16,7 +16,7 @@ clang -std=c11 -Wall -Wextra -Werror -pedantic simple_approx.c -o simple_approx
 
 `simple_approx` 的输入为 p、q、n，计算非负有理数 p/q 在二进网格上的向下取整并截断到 n。输出 `grid/scale` 为精确值；例如 13/10、n=2 输出 5/4。无限值由正文单独解释，程序仅处理有限有理数。
 
-有限模型限制 1≤点数≤8、0≤费用≤1000000；C 版最多 256 个覆盖选项，Python 版沿用这一输入边界。截断模型限制 0≤p≤1000000、1≤q≤1000000、1≤n≤20，使 C 无符号整数中间结果安全。非法输入返回非零退出码并写标准错误。有限原子枚举和结果排序按常规 O(m log m) 排序计算，上界为 O(k·n+n·2^n)，外测度 DP 与判别为 O(k·2^n+4^n)，n 是点数、k 是选项数；空间 O(2^n)。计算检验具体模型，正文证明负责一般结论。
+有限模型限制 1≤点数≤8、0≤费用≤1000000；C 版最多 256 个覆盖选项，Python 版沿用这一输入边界。截断模型限制 0≤p≤1000000、1≤q≤1000000、1≤n≤20，使 C 无符号整数中间结果安全。两个入口只接受 ASCII 十进制整数，拒绝前后空白、加号、下划线和 Unicode 数字。`finite_spaces` 的词法允许负号，数值仍须非负（因此 `-0` 等同 0）；`simple_approx` 使用无符号十进制词法，连 `-0` 也拒绝，与 C 入口一致。覆盖选项的 mask 字段最多 31 字符。非法输入退出码为 2、无标准输出，错误写入 stderr。有限原子枚举和结果排序按常规 O(m log m) 排序计算，上界为 O(k·n+n·2^n)，外测度 DP 与判别为 O(k·2^n+4^n)，n 是点数、k 是选项数；空间 O(2^n)。计算检验具体模型，正文证明负责一般结论。
 
 源文件下载：[finite_spaces.py](finite_spaces.py)、[finite_spaces.c](finite_spaces.c)、[simple_approx.py](simple_approx.py)、[simple_approx.c](simple_approx.c)。
 
@@ -40,4 +40,4 @@ Jordan 正负质量是逐点的正负部分。Lebesgue 分解相对于输入权�
 
 ## 校验
 
-从仓库根使用 `python3 tools/project.py check --book measure-probability`。维护源在本目录，HTML 由 `tools/sync_code.py` 同步；独立基准、编译与执行日志写入忽略目录。
+从仓库根使用 `python3 tools/project.py check --book measure-probability`。维护源在本目录，受控 HTML 及兼容镜像由 `tools/sync_code.py --write` 按 `programs.json` 和 HTML 解析边界同步；不带 `--write` 时只校验；独立基准、编译与执行日志写入忽略目录。

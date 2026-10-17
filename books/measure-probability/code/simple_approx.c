@@ -5,7 +5,9 @@
 
 static int integer(const char *text, unsigned long long maximum, unsigned long long *value) {
     char *end = NULL;
-    if (*text == '-') return 0;
+    if (!*text) return 0;
+    for (const char *p = text; *p; ++p)
+        if (*p < '0' || *p > '9') return 0;
     errno = 0;
     unsigned long long result = strtoull(text, &end, 10);
     if (errno || end == text || *end || result > maximum) return 0;

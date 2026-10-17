@@ -11,7 +11,7 @@ import re
 import tempfile
 from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
-from sync_code import synchronize, check_displayed
+from sync_code import synchronize, check_displayed, parser_regressions
 from check_models import run as check_models
 from check_integrals import run as check_integrals
 from check_excerpts import check_excerpts
@@ -233,7 +233,8 @@ def structure():
     return {'pages': len(paths), 'original_exercises': len(exercises), 'numbered_statements': 126,
             'numbered_examples': 21, 'mathml': maths, 'svg': diagrams, 'local_links': links,
             'quotation_status': quotation_status,
-            'synchronized_sources': synchronize(), 'mutations_rejected': rejected,
+            'synchronized_sources': synchronize(), 'source_parser_mutations_rejected': parser_regressions(),
+            'mutations_rejected': rejected,
             'source_pdf': 'local hash verified; page inventory read from scan' if pdf.exists() else 'recorded identity; local scan unavailable',
             'review_binding': binding}
 

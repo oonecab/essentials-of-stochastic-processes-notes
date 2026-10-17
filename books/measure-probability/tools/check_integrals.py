@@ -133,7 +133,45 @@ def run(run_dir):
         require(str(error) == 'conditional measurability','wrong mutation reason')
     else:
         raise ValueError('accepted nonmeasurable conditional version')
+    rejected = ['zero-point conditional measurability']
+    mutations = {
+        'integral': lambda r: r.update(integral=r['integral'] + 1),
+        'positive_integral': lambda r: r.update(positive_integral=r['positive_integral'] + 1),
+        'negative_integral': lambda r: r.update(negative_integral=r['negative_integral'] + 1),
+        'jordan_positive': lambda r: r['jordan_positive'].__setitem__(0, 0),
+        'jordan_negative': lambda r: r['jordan_negative'].__setitem__(1, 0),
+        'density': lambda r: r['density'].__setitem__(0, [3, 1]),
+        'block_mass': lambda r: r['block_mass'].__setitem__(0, 4),
+        'AC_flag': lambda r: r.update(absolute_continuous=True),
+        'paired_decomposition': lambda r: (r['ac_masses'].__setitem__(2, 3), r['singular_masses'].__setitem__(2, 0)),
+        'second_moment': lambda r: r.update(second_moment_integral=21),
+        'variation_total': lambda r: r.update(variation_total=4),
+        'expectation': lambda r: r.update(expectation=[2, 1]),
+    }
+    for label, change in mutations.items():
+        mutant = json.loads(json.dumps(expected[0]))
+        change(mutant)
+        require(mutant != expected[0], 'mutation did not change output')
+        try:
+            verify(cases[0], mutant)
+        except ValueError:
+            rejected.append(label)
+        else:
+            raise ValueError('accepted integral output mutation: ' + label)
     return {'cases':len(cases),'invalid_cases':len(malformed),'cli_executions':executions,
             'builds':builds,'oracles':['level-set integral','all-subset Jordan extrema','all conditioning-event identities','RN defining integral','L2 projection'],
-            'mutations_rejected':['zero-point conditional measurability'],
+            'mutations_rejected': rejected,
             'scope':'finite exact models only; infinite-space proofs reviewed separately'}
+
+
+if __name__ == '__main__':
+    import argparse
+    import tempfile
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--run-dir', type=Path)
+    args = parser.parse_args()
+    (ROOT / 'tmp').mkdir(exist_ok=True)
+    directory = args.run_dir or Path(tempfile.mkdtemp(prefix='integrals-', dir=ROOT / 'tmp'))
+    report = run(directory)
+    (directory / 'report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+    print(json.dumps(report, ensure_ascii=False, indent=2))

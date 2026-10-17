@@ -2,14 +2,14 @@
   "issue": "I032",
   "scope": "前四章伴读的分项修订",
   "source_sha256": {
-    "measure-probability/notes/chapter01_measurable_spaces.html": "ce5125ef953e4bf2e39d74cd9ab5c7afd84263805b2d7dbd8ee470a244b03e9b",
+    "measure-probability/notes/chapter01_measurable_spaces.html": "f0b87df9aac7992572c8d1a266b2138a403490ddb583764fd0aaaa4bbf5ad80e",
     "measure-probability/notes/chapter02_measure_spaces.html": "9ae1964dcbceb9d390058ee9466d75f3a6dce214937d2bfdf06b3c6b6121a70c",
     "measure-probability/notes/chapter03_integration.html": "9d216e9dc3778cd16ad91cabc0b247c34a92180f3d047ccec4772bef62baaf2a",
     "measure-probability/notes/chapter04_signed_measures.html": "269ebd8c4f8c0e048d838bc5327f3009d36538075c50f4f6020d65cf83c8e506",
     "measure-probability/notes/book_overview.html": "4c06f69603787477296156976708b9ad0db5d9aac3904c4652c02409720d6f29"
   },
   "output_sha256": {
-    "measure-probability/notes/chapter01_measurable_spaces.html": "9f028aa26cbbfd40c7e4669ec37f832cc613f72f807d9ce5d51da3951ee3df99",
+    "measure-probability/notes/chapter01_measurable_spaces.html": "2efb9e50a0ec9966da626c98a66aa7747865bd20388c3af30a936a5b1bfc27c8",
     "measure-probability/notes/chapter02_measure_spaces.html": "77538f594f333b9c7f96250f9ac119039a86622bf78d0609ca105f0457da1acb",
     "measure-probability/notes/chapter03_integration.html": "1ca925ce30d784e49c8ccc69072011a24551db172e45b9a2be248da5b21b5c4e",
     "measure-probability/notes/chapter04_signed_measures.html": "e9ac47b9f05ca7f8fd9b69b587c916571239584eedbdbd729f07a4828fa87be6",
@@ -266,6 +266,22 @@
       },
       "observations": [
         "保留所有原有锚点的相对顺序；新增索引与表格统一已有样式。"
+      ],
+      "reviewer": "Codex；来源、逻辑推导与执行证据分别记录"
+    },
+    {
+      "revision": "I032-P1-10",
+      "reason": "严格 ASCII CLI 与源码展示同步；算法和数值范围保留",
+      "anchors": {
+        "chapter01_measurable_spaces.html": [
+          "finite-model",
+          "simple-model"
+        ]
+      },
+      "observations": [
+        "实测旧 C strtol/strtoull 接受空白和加号，所以 C、Python 都在解析前增加字符检查。",
+        "六个代码块按 programs.json 与 HTML 解析边界同步；属性顺序、引号和非代码字节保留。",
+        "保留 finite_spaces 的 -0 数值行为和 simple_approx 拒绝负号的原入口边界；覆盖 mask 字段长度与 C 缓冲边界一致。"
       ],
       "reviewer": "Codex；来源、逻辑推导与执行证据分别记录"
     }

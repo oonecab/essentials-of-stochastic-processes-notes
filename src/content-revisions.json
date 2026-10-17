@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "baseline_ref": "b2aeff3",
+  "pages": {
+    "measure-probability/notes/chapter01_measurable_spaces.html": {
+      "original_sha256": "e42c667532b38baa9c910df41ff77342a14b0f9a49748fa44b1f0685823b06a2",
+      "source_sha256": "75a7a55e5ca3a636f2a6a814a3b06a779e64f73a9b48d1b6bead146d75d59ea3",
+      "review_record": "books/measure-probability/review/final-assessment.json",
+      "history": [
+        {
+          "revision": "I032-P0-4",
+          "from_sha256": "e42c667532b38baa9c910df41ff77342a14b0f9a49748fa44b1f0685823b06a2",
+          "to_sha256": "bed9d54275489d3214d2de0fb0b41f916a8b7af136c273833b5ed46d5c70967c",
+          "reason": "补全定理 1.5.5 修正充分条件下的五步证明，保留原反例和既有陈述",
+          "reviewed_anchors": [
+            "theorem-1-5-5-proof",
+            "correction-monotone-class"
+          ]
+        },
+        {
+          "revision": "I032-P0-4",
+          "from_sha256": "bed9d54275489d3214d2de0fb0b41f916a8b7af136c273833b5ed46d5c70967c",
+          "to_sha256": "75a7a55e5ca3a636f2a6a814a3b06a779e64f73a9b48d1b6bead146d75d59ea3",
+          "reason": "明确有限值简单函数与允许无穷值时的截断边界",
+          "reviewed_anchors": [
+            "theorem-1-5-5-proof"
+          ]
+        }
+      ]
+    }
+  }
+}

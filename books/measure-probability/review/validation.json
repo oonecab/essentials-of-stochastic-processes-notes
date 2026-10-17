@@ -825,7 +825,7 @@
     "code/simple_approx.py": "ed4eff2e11569f54b4d6d9f47b9089a070d67e0cf74264c82d18a247e4666b89",
     "notes/README.md": "f66cdba18aceec2fe761e2c2a16ac59a23c8dd7d145df6d4742a2ab1d8b2d684",
     "notes/book_overview.html": "d373a539537e762e6f019dfa8f8784ccbad8a7f459f9253809496424be8575aa",
-    "notes/chapter01_measurable_spaces.html": "e42c667532b38baa9c910df41ff77342a14b0f9a49748fa44b1f0685823b06a2",
+    "notes/chapter01_measurable_spaces.html": "75a7a55e5ca3a636f2a6a814a3b06a779e64f73a9b48d1b6bead146d75d59ea3",
     "notes/chapter02_measure_spaces.html": "ee36adc70aafd5b556017e6b1ed494b8f92caddc3671601a8ed585779b834447",
     "notes/chapter03_integration.html": "68883c73cf1e41066594031d2b5dc3780913ca5cd0e9941060e5617521a991d3",
     "notes/chapter04_signed_measures.html": "ebc05efd5d6517577b13ed564643a6d30dc4168ade61754fdaaa756daf00337b",
@@ -839,11 +839,12 @@
     "review/README.md": "2b49798a6e54ebc1c6e293ed55c6eda13a8362ecf1ea5cfa4993ec4b6a9ce14c",
     "review/history/20261017-first-batch-source-reading.json": "ce12a90eead4af5dd906dc7b5186c65e617103ec69338bad29f5364900e9968e",
     "review/history/20261017-first-batch-validation.json": "017c0f6cbf2dfc479f99a248eb06a41dd39f771fc0a6b71f8ada1335cbf0a58a",
-    "review/source-reading.json": "21d6afe88b5540ba4984a3c72f2bd470d42eeac860b95b7c52c4dd173d830340",
+    "review/source-reading.json": "8c1c3ea7bcff226f63254d4140ca1ab262435770098fb8f36938a5610721c7d7",
     "tools/check_integrals.py": "0743c00c140aa1773e018ec1b8651b00450469932c5587194fcd4b20cc3401df",
     "tools/check_models.py": "c9071293686062c1643400fab67b53afa6a04a75e959784c9d9647056299697b",
     "tools/check_notes.py": "79c2ab7ecb6180173eb9749c1c340162ee6dc46633f3e6c93acd8c6aaf6bd3b5",
-    "tools/sync_code.py": "ea77e65f6fef389f5bcc274dcd926317e3f0c53f6dfbfac1beb069d0b0c9a0cc"
+    "tools/sync_code.py": "ea77e65f6fef389f5bcc274dcd926317e3f0c53f6dfbfac1beb069d0b0c9a0cc",
+    "review/final-assessment.json": "14cd0f4900ca28c701f80d32f070edcc9d954c8d34177f600cec5230b94ac2ec"
   },
   "evidence_sha256": {
     "tmp/measure-probability-ch34/baseline.json": "5e86be465874b20fb9aafc0a5791d808f8f006df71354c75e2cc0bbe40ceac95",
@@ -1019,5 +1020,55 @@
     "sha256": "3d2267f581a081d63c6513c821bb4969dfb1842c48dc9d85ad48a04ab3f17929",
     "release_id": "20261017T174039",
     "scope": "历史实机发布记录；不代表 I032 新代码已部署"
+  },
+  "content_revision_binding_history": [
+    {
+      "issue": "I032",
+      "reason": "P0-4 原页与五步证明读回；保留历史源 hash，当前正文绑定供独立结构检查",
+      "changes": [
+        {
+          "file": "notes/chapter01_measurable_spaces.html",
+          "previous_sha256": "e42c667532b38baa9c910df41ff77342a14b0f9a49748fa44b1f0685823b06a2",
+          "current_sha256": "75a7a55e5ca3a636f2a6a814a3b06a779e64f73a9b48d1b6bead146d75d59ea3"
+        },
+        {
+          "file": "review/final-assessment.json",
+          "previous_sha256": null,
+          "current_sha256": "98a3192f494b582e43ca93cce3aca3d72173ba9dba1d122fed5b729f41932506"
+        },
+        {
+          "file": "review/source-reading.json",
+          "previous_sha256": "21d6afe88b5540ba4984a3c72f2bd470d42eeac860b95b7c52c4dd173d830340",
+          "current_sha256": "8c1c3ea7bcff226f63254d4140ca1ab262435770098fb8f36938a5610721c7d7"
+        }
+      ]
+    },
+    {
+      "issue": "I032",
+      "reason": "P0-4 已通过构建、全 DOM parity 与 CSP；当前输出绑定，局部阅读检查随后记录",
+      "changes": [
+        {
+          "file": "review/final-assessment.json",
+          "previous_sha256": "98a3192f494b582e43ca93cce3aca3d72173ba9dba1d122fed5b729f41932506",
+          "current_sha256": "9673bf0475adec497477d43b5eafd81d083b33dac6e4e32a0ee1315ed278b14e"
+        }
+      ]
+    },
+    {
+      "issue": "I032",
+      "reason": "P0-4 证明、来源及双视口阅读记录绑定",
+      "changes": [
+        {
+          "file": "review/final-assessment.json",
+          "previous_sha256": "9673bf0475adec497477d43b5eafd81d083b33dac6e4e32a0ee1315ed278b14e",
+          "current_sha256": "14cd0f4900ca28c701f80d32f070edcc9d954c8d34177f600cec5230b94ac2ec"
+        }
+      ]
+    }
+  ],
+  "current_content_review": {
+    "record": "review/final-assessment.json",
+    "sha256": "14cd0f4900ca28c701f80d32f070edcc9d954c8d34177f600cec5230b94ac2ec",
+    "status": "source revisions checked; final browser and complete integration pending"
   }
 }

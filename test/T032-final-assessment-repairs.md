@@ -24,3 +24,9 @@
 - root 安装器的固定参数/路径边界、队列 symlink 拒绝、字节/inode 门限、保护 current/前版/事务和过期临时目录等 5 项回归通过。root 属主及真实 Ubuntu systemd/sudo 边界仍需运维应用后实测，不能由 macOS 单测代替。
 - 登记快速检查 13 项通过：`tmp/project-check/20261017T202028-ut52iqg9/report.json`。新本地测试 release `20261017T202235` 为 303 文件、74 HTML、54 正式页、28,854,317 字节；元数据已改为部署状态另记。临时 Nginx 验证通过，21 项发布演练通过：`tmp/release-check/20261017T202235-9q90zh1x/https-verification.json`、`tmp/publish-check/20261017T202235-o3peaf08/report.json`。此测试包记录了当时未提交的修复源状态，不作为已部署版本。
 - I028 根记录及五书迁移记录标明 local snapshot，并分别链接 I029 生产报告，旧摘要的哈希变更原因和原值保留。服务器 P0-3 与权限模板的应用/回滚/验收交给 `deploy/OPERATIONS-I032.md`，本轮未执行。
+
+### P0-4 定理 1.5.5
+
+人工核对印刷 19 / PDF 31 后补全 1216 字证明，保留反例及修正条件边界。工作单要求先证 D 对补封闭并不由所给条件直接推出；本次从上升并/下降交取得单调系，再用推论 1.3.4 得到 σ(A) 的指示函数、非负简单函数、二进上升逼近。有限值误差与无穷值情形均展开。来源核查、独立推导由本次 Codex 完成，不宣称另一个审阅人已签字。
+
+`pnpm build`、54 页全 DOM parity、测度结构检查与历史/当前绑定检查通过。1800/390 目视读回证明两段截图，公式可读，无整页溢出。证据位于 `tmp/final-assessment/build-proof.log`、`proof-browser.json`、`proof-{1800,390}-{start,limit}.png`。最终全站浏览器和发布包将在各分项完成后重新绑定。

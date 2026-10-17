@@ -1,0 +1,44 @@
+{
+  "issue": "I032",
+  "scope": "前四章伴读的分项修订",
+  "source_sha256": {
+    "measure-probability/notes/chapter01_measurable_spaces.html": "75a7a55e5ca3a636f2a6a814a3b06a779e64f73a9b48d1b6bead146d75d59ea3"
+  },
+  "output_sha256": {
+    "measure-probability/notes/chapter01_measurable_spaces.html": "2a4bfdf992dbc5093a1a13d7249369af3c00d294ba598eb5fc64105b70a0e80b"
+  },
+  "reviews": [
+    {
+      "revision": "I032-P0-4",
+      "reason": "补全定理 1.5.5 修正充分条件下的五步证明，保留原反例和既有陈述",
+      "anchors": {
+        "chapter01_measurable_spaces.html": [
+          "theorem-1-5-5-proof",
+          "correction-monotone-class"
+        ]
+      },
+      "observations": [
+        "目视核对印刷 19/PDF 31 的原条件确为上升极限；原文与修正条件区分保留。",
+        "独立从集合单调类推导指示函数、简单函数、二进上升逼近及无穷值情形；D 的补集闭包不能先验推出，改为对 σ(A) 内集合在单调类定理后取得。",
+        "二进逼近的有限值误差小于 2^-n，无穷值为 n；数学结论不依赖有限程序样本。"
+      ],
+      "reviewer": "Codex；来源、逻辑推导与执行证据分别记录"
+    },
+    {
+      "revision": "I032-P0-4",
+      "reason": "明确有限值简单函数与允许无穷值时的截断边界",
+      "anchors": {
+        "chapter01_measurable_spaces.html": [
+          "theorem-1-5-5-proof"
+        ]
+      },
+      "observations": [
+        "简单函数有限线性组合使用有限非负实系数；允许无穷值的版本另外由截断和上升闭包处理。",
+        "1800/390 两档实际读回证明起段、简单函数、二进逼近、结论与原书校注；公式完整、正文换行正常、没有整页横溢或 merror。证据 tmp/final-assessment/proof-browser.json 及四张 proof 截图。"
+      ],
+      "reviewer": "Codex；来源、逻辑推导与执行证据分别记录"
+    }
+  ],
+  "browser_status": "theorem 1.5.5 read at 1800/390; full revised-book acceptance pending",
+  "parity_report": "tmp/reading-notes-migration/parity/all.json"
+}

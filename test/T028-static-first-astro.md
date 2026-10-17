@@ -54,3 +54,5 @@ CS:APP 中间失败均留档：继承的页尾深链在 details 展开增加文�
 `publish-test-6` 退出 0，13 类发布集成检查通过，报告 `tmp/publish-check/20261017T170533-c3txdahi/report.json`；另验证队列在已生效后恢复回执，并拒绝同版本号但元数据不同的重复包。
 
 最终全量验证已通过：原 13 个命令加 Astro 绑定检查共 14 项，另分别重跑五书完整检查；doctor、冻结安装、构建、Node/PNPM parity/offline、发布打包与真实本地 Nginx/13 类发布演练全部退出 0。最终包 `20261017T172621`；SHA256SUMS 与三个静态归档一致。完整表格与报告路径见 [最终交付报告](../docs/astro-migration-report.md)，原日志保留在 `tmp/reading-notes-migration/final/`。
+
+最终证据追加后的完整结构/审阅复查：`python3 tools/project.py check --quick` 退出 0，报告 `tmp/project-check/20261017T172823-u8vpbh9r/report.json`；五书最终证据与 dist 当前散列的交叉核对通过。此收尾只追加文档和审阅绑定，数学内容、原回归输入及发布字节保持。

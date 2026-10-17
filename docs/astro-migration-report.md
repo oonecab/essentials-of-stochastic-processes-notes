@@ -61,7 +61,7 @@ Python 全量报告：`tmp/project-check/20261017T171328-afbgru05/report.json`�
 
 `node scripts/check-offline.mjs` 与 `pnpm check:offline` 两次完整运行均通过。前一轮原图保留在 `tmp/reading-notes-migration/browser/all-node-run/`，relocation.json 记录归档前缀；最终矩阵为 `tmp/reading-notes-migration/browser/all/report.json`。各书逐页首屏、各章题解/no-JS 联系图及代表性 1440/1024 原图均实际查看，书架五个视图另行看图。
 
-两个最终构建用时 41.222 / 40.399 秒，包含旧独立结构检查、Astro、内联、parity 与发布策略。303 个公开文件共 28,771,319 字节，其中 74 个 HTML，54 个正式阅读页共 18,318,585 字节；压缩包 10,695,615 字节。相同输入的逐文件清单与三个版本归档字节相同，记录为 `tmp/reading-notes-migration/final/reproducibility.json`。
+两个最终 Node 构建阶段用时 41.222 / 40.399 秒；含归档的根 build 命令为 45.423 秒。Node 阶段包含旧独立结构检查、Astro、内联、parity 与发布策略。303 个公开文件共 28,771,319 字节，其中 74 个 HTML，54 个正式阅读页共 18,318,585 字节；压缩包 10,695,615 字节。相同输入的逐文件清单与三个版本归档字节相同，记录为 `tmp/reading-notes-migration/final/reproducibility.json`。
 
 - SHA256SUMS 文件散列：`10ce03afae12150a07b051d70aa683e714ae0965bc7e43233215ac810dc4b025`。
 - site.tar.gz 散列：`c88c0ed6efb8db836d2adf8fdd93d2c6be2141e9aedc3a5cc868812985df5a8b`。
@@ -79,3 +79,5 @@ Weiss 原样导入 SVG 的 8529 处原行尾空白保留，整段导入的 Git w
 试点及中间失败、修复原因和原日志见 [T028](../test/T028-static-first-astro.md)：包括 head 内联丢失样式、旧深链展开定位、资料页相对链接、macOS 只读目录改名与测试端口变量遮蔽。没有改变数学期望、删除 fixture 或放宽原 Python 断言。
 
 旧原 HTML、旧构建器、原 release 20261017T151424 和冻结基线仍可用。新布局若部署到 Ubuntu，按 UBUNTU.md 保存原生产目录/配置后执行切换；当前任务只交付经过本地演练的发布件。
+
+最终审阅记录与报告追加后，再运行 `python3 tools/project.py check --quick` 退出 0，报告 `tmp/project-check/20261017T172823-u8vpbh9r/report.json`；正文与程序输入未再变化。`tools/check_astro_records.py` 和最终五书证据绑定核验同样通过，记录为 `tmp/reading-notes-migration/final/final-binding.json`。

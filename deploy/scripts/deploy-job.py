@@ -6,6 +6,7 @@ import re
 import subprocess
 import os
 from publish_release import verified
+from durability import sync_directory
 
 
 def process_queue(root, queue, done, publisher):
@@ -26,6 +27,8 @@ def process_queue(root, queue, done, publisher):
         else:
             subprocess.run([str(publisher), '--release-dir', str(package)], check=True)
         package.rename(done/package.name)
+        sync_directory(done)
+        sync_directory(queue)
         print(json.dumps({'published':package.name, 'recovered_receipt':already}))
 
 

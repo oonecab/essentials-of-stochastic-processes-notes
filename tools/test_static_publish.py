@@ -9,6 +9,7 @@ import json
 import os
 from pathlib import Path
 import shutil
+import signal
 import socket
 import ssl
 import subprocess
@@ -42,10 +43,12 @@ def main():
     def passed(name, **extra):
         evidence['checks'].append({'test':name,'status':'passed',**extra})
         (work/'report.json').write_text(json.dumps(evidence,indent=2)+'\n')
-    def publish(*args, expected=0, hook=None):
-        cmd=['bash',str(ROOT/'deploy/scripts/publish.sh'),'--root',str(root),'--dry-run',*map(str,args)]
+    def publish(*args, expected=0, hook=None, target_root=None, crash=None):
+        cmd=['bash',str(ROOT/'deploy/scripts/publish.sh'),'--root',str(target_root or root),'--dry-run',*map(str,args)]
         if hook: cmd+=['--service-hook',str(hook)]
-        result=subprocess.run(cmd,capture_output=True,text=True)
+        env = {k:v for k,v in os.environ.items() if k != 'READING_NOTES_TEST_CRASH'}
+        if crash: env['READING_NOTES_TEST_CRASH']=crash
+        result=subprocess.run(cmd,capture_output=True,text=True,env=env)
         with (work/'commands.log').open('a') as f:
             f.write(json.dumps({'command':cmd,'exit_code':result.returncode,'stdout':result.stdout,'stderr':result.stderr})+'\n')
         assert result.returncode==expected,(result.returncode,result.stderr[-2000:])
@@ -63,6 +66,34 @@ def main():
         meta['archive_sha256']=hashlib.sha256((package/'site.tar.gz').read_bytes()).hexdigest()
         (package/'release.json').write_text(json.dumps(meta))
         (package/'SHA256SUMS').write_text(sums(meta['files']))
+    sys.path.insert(0,str(ROOT/'deploy/scripts'))
+    from publish_release import verified
+    subprocess.run([sys.executable,ROOT/'tools/test_publish_durability.py'],check=True)
+    passed('durable file/directory barriers and atomic journal power-cut ordering model')
+    for phase in ['unpack','rsync','rename','journal-temp','journal','switch']:
+        crash_root=work/('crash-'+phase);crash_root.mkdir()
+        publish('--release-dir',packages[0],target_root=crash_root)
+        old=os.readlink(crash_root/'current')
+        publish('--release-dir',packages[1],target_root=crash_root,crash=phase,expected=-signal.SIGKILL)
+        active=os.readlink(crash_root/'current')
+        assert active in {old,'releases/20990101T000002'}
+        verified(crash_root/active)
+        publish('--recover',target_root=crash_root)
+        assert os.readlink(crash_root/'current')==old
+        verified(crash_root/old)
+        publish('--release-dir',packages[2],target_root=crash_root)
+        verified(crash_root/os.readlink(crash_root/'current'))
+        passed('SIGKILL at '+phase+' preserves a complete current and permits recovery/new publish')
+    damaged_root=work/'damaged-journal';damaged_root.mkdir()
+    publish('--release-dir',packages[0],target_root=damaged_root)
+    journal=damaged_root/'.publish-transaction.json';journal.write_text('{"previous":')
+    result=publish('--recover',target_root=damaged_root,expected=2)
+    assert 'journal-damaged' in result.stderr and 'Traceback' not in result.stderr
+    assert journal.read_text()=='{"previous":' and os.readlink(damaged_root/'current')=='releases/20990101T000001'
+    publish('--recover','--restore-release','20990101T000001',target_root=damaged_root)
+    assert not journal.exists() and len(list(damaged_root.glob('.publish-transaction.corrupt-*.json')))==1
+    publish('--release-dir',packages[1],target_root=damaged_root)
+    passed('truncated journal gives read-only diagnosis, controlled repair and unblocked next publication')
     # Independent allowlist failures: injected private path, symlink and raw summary.
     site=work/'policy-site';extract_release(a.release_dir,site)
     bad=site/'review';bad.mkdir();(bad/'private.json').write_text('{}')

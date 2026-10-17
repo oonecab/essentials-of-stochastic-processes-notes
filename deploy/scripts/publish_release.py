@@ -19,6 +19,7 @@ ROOT = DEPLOY.parent
 sys.path[:0] = [str(DEPLOY), str(ROOT/'tools')]
 from public_policy import inspect, sums, POLICY
 from release_support import extract_release
+from durability import atomic_json, durable_unlink, sync_directory, sync_tree
 
 
 def identity(value):
@@ -50,13 +51,9 @@ def verified(directory):
 def atomic_link(root, target):
     pending = root / ('.current-' + uuid.uuid4().hex)
     try:
-        subprocess.run(['ln', '-sfn', target, str(pending)], check=True)
+        os.symlink(target, pending)
         os.replace(pending, root/'current')
-        fd = os.open(root, os.O_RDONLY)
-        try:
-            os.fsync(fd)
-        finally:
-            os.close(fd)
+        sync_directory(root)
     finally:
         pending.unlink(missing_ok=True)
 
@@ -68,10 +65,13 @@ def main():
     mode.add_argument('--release-dir', type=Path)
     mode.add_argument('--rollback', type=identity)
     mode.add_argument('--recover', action='store_true')
+    ap.add_argument('--restore-release', type=identity, help='With --recover, explicitly select a verified release when the journal is damaged')
     ap.add_argument('--dry-run', action='store_true')
     ap.add_argument('--service-hook', type=Path, help='Only for local dry-run; executable called with test/reload')
     ap.add_argument('--lock-fd', type=int, help=argparse.SUPPRESS)
     a = ap.parse_args()
+    if a.restore_release and not a.recover:
+        ap.error('--restore-release requires --recover')
     root = a.root.resolve(strict=True)
     if a.root.is_symlink() or not root.is_dir() or root == Path('/'):
         raise ValueError('Unsafe root')
@@ -91,6 +91,7 @@ def main():
     if releases.is_symlink():
         raise ValueError('Untrusted releases symlink')
     releases.mkdir(exist_ok=True)
+    sync_directory(root)
     current = root/'current'
     if current.exists() and not current.is_symlink():
         raise ValueError('current must be a managed symlink')
@@ -103,6 +104,11 @@ def main():
             previous_meta = verified(root/previous)
     journal = root/'.publish-transaction.json'
 
+    def checkpoint(phase):
+        # Actual SIGKILL injection is confined to isolated dry-runs.
+        if a.dry_run and os.environ.get('READING_NOTES_TEST_CRASH') == phase:
+            os.kill(os.getpid(), signal.SIGKILL)
+
     def service(action):
         if a.service_hook:
             subprocess.run([str(a.service_hook), action], check=True)
@@ -110,18 +116,42 @@ def main():
             subprocess.run(['sudo', '-n', '/usr/local/sbin/reading-notes-nginx', action], check=True)
 
     if a.recover:
-        data = json.loads(journal.read_text())
-        target = data['previous']
+        if not journal.exists():
+            if previous:
+                verified(root/previous)
+            print(json.dumps({'status':'no-pending-transaction','current':previous}))
+            return 0
+        if journal.is_symlink() or not journal.is_file():
+            raise ValueError('Journal must be a regular file')
+        damaged = False
+        try:
+            data = json.loads(journal.read_text())
+            if not isinstance(data, dict) or set(data) != {'previous','candidate'}:
+                raise ValueError('Invalid journal fields')
+            for key, value in data.items():
+                if not (key == 'previous' and value is None) and not (isinstance(value, str) and re.fullmatch(r'releases/\d{8}T\d{6}', value)):
+                    raise ValueError('Invalid journal target')
+        except (ValueError, UnicodeError) as error:
+            damaged = True
+            if not a.restore_release:
+                print(json.dumps({'status':'journal-damaged','changed':False,'error':str(error),
+                    'recovery':'Inspect releases and run --recover --restore-release YYYYMMDDTHHMMSS; the selected payload is verified before switching and the damaged journal is retained outside the web root.'}), file=sys.stderr)
+                return 2
+        target = 'releases/'+a.restore_release if a.restore_release else data['previous']
         if target:
             if not re.fullmatch(r'releases/\d{8}T\d{6}', target):
                 raise ValueError('Bad recovery target')
             verified(root/target)
             atomic_link(root,target)
         else:
-            current.unlink(missing_ok=True)
+            durable_unlink(current)
         if target:
             service('test'); service('reload')
-        journal.unlink()
+        if damaged:
+            os.replace(journal, root/('.publish-transaction.corrupt-'+uuid.uuid4().hex+'.json'))
+            sync_directory(root)
+        else:
+            durable_unlink(journal)
         print(json.dumps({'status':'recovered','current':target}))
         return 0
     if journal.exists():
@@ -143,6 +173,7 @@ def main():
         with tempfile.TemporaryDirectory(prefix='.unpack-', dir=root) as temp:
             unpack = Path(temp)
             meta = extract_release(source, unpack/'site')
+            checkpoint('unpack')
             for name in ['release.json','SHA256SUMS']:
                 shutil.copyfile(source/name,unpack/name)
             verified(unpack)
@@ -154,11 +185,16 @@ def main():
             incoming.mkdir()
             try:
                 subprocess.run(['rsync','-rlt','--',str(unpack)+'/',str(incoming)+'/'],check=True)
+                checkpoint('rsync')
                 verified(incoming)
                 for p in incoming.rglob('*'):
                     p.chmod(0o555 if p.is_dir() else 0o444)
+                sync_tree(incoming)
                 incoming.rename(candidate)
                 candidate.chmod(0o555)
+                sync_directory(candidate)
+                sync_directory(releases)
+                checkpoint('rename')
             except BaseException:
                 # Keep any partially copied candidate out of current; operator may inspect it.
                 raise
@@ -168,17 +204,17 @@ def main():
         if not all(s in installed for s in required_sources):
             raise ValueError('New scripts require an administrator-reviewed CSP snippet update')
     target = 'releases/'+meta['release_id']
-    journal.write_text(json.dumps({'previous':previous,'candidate':target})+'\n')
-    with journal.open('rb') as f:
-        os.fsync(f.fileno())
+    atomic_json(journal, {'previous':previous,'candidate':target}, checkpoint)
+    checkpoint('journal')
     switched = False
     def interrupted(signum, frame):
         raise RuntimeError('Publish interrupted by signal '+str(signum))
     signal.signal(signal.SIGTERM, interrupted)
     signal.signal(signal.SIGINT, interrupted)
     try:
-        atomic_link(root,target)
         switched = True
+        atomic_link(root,target)
+        checkpoint('switch')
         service('test')
         service('reload')
     except BaseException as error:
@@ -186,7 +222,7 @@ def main():
             if previous:
                 atomic_link(root,previous)
             else:
-                current.unlink(missing_ok=True)
+                durable_unlink(current)
         rollback_error = None
         if previous:
             try:
@@ -194,11 +230,11 @@ def main():
             except BaseException as failure:
                 rollback_error = str(failure)
         if not rollback_error:
-            journal.unlink(missing_ok=True)
+            durable_unlink(journal)
         print(json.dumps({'status':'failed','restored_current':previous,
                           'error':str(error),'rollback_service_error':rollback_error}), file=sys.stderr)
         return 1
-    journal.unlink()
+    durable_unlink(journal)
     print(json.dumps({'status':'passed','mode':'dry-run' if a.dry_run else 'publish',
                       'release_id':meta['release_id'],'current':target,'previous':previous,
                       'service_validation':'hook' if a.service_hook else ('skipped' if a.dry_run else 'nginx/systemd')}))

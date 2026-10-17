@@ -3,7 +3,7 @@
 <!-- project-governance:managed:start -->
 ## 环境变量名
 
-- 尚未填写。
+- `ASTRO_TELEMETRY_DISABLED`：构建子进程强制为 `1`，禁用 Astro 遥测；`.env.example` 记录安全值。
 
 ## 服务
 

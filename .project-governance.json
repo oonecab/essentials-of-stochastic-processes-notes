@@ -68,7 +68,9 @@
     "opencode": true
   },
   "environment": {
-    "variables": [],
+    "variables": [
+      "ASTRO_TELEMETRY_DISABLED"
+    ],
     "services": [
       "本地预览：Python 静态 HTTP 服务，绑定 127.0.0.1",
       "正式阅读站点：notes.zzzping.top，Nginx + TLS；部署步骤见 deploy/README.md"

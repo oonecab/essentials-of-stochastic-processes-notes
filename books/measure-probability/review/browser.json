@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "astro_migration": {
+    "status": "passed",
+    "record": "review/astro-migration.json",
+    "sha256": "f56cfaf76afad2e0dc43e9e0e25ac4dd32d9428356dd502a34a4fee9391a1025",
+    "widths": [
+      1800,
+      1440,
+      1024,
+      390
+    ],
+    "js_views": 24,
+    "no_js_views": 6,
+    "external_requests": [],
+    "visual_review": "逐页查看六张联系图，包含 1800/1440/1024/390 首屏、手机末题和 no-JS 首题截图；目录、注解栏和正文边界正常，长公式保持局部滚动，原生题解可读。"
+  }
+}

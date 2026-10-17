@@ -814,7 +814,7 @@
   },
   "file_sha256": {
     "README.md": "432093cd4a78fcb512bc1ab957eff806c28b11f57bf155b252240e7c988b3345",
-    "agent.md": "74d93122623b8d0987dee9f59bef123e8de0d5a4972a15c7625487855bf741d6",
+    "agent.md": "d5bd5414ccef2cc7b61ca19fbd5bfe6965bfe994e71bf8378c239e7184268538",
     "code/README.md": "54f4acdb53c6a5b852204fa2b2077fc16396aa337eff285148eb82bc68efd86e",
     "code/finite_integrals.c": "3f743432f9cf038833614b2294a59981bc11fe22ae807c9241b19aaa66931c1b",
     "code/finite_integrals.py": "3a598f0554c1497890df87dffe885e882ccfc912e8f446f466b11118ae97c5c7",
@@ -823,7 +823,7 @@
     "code/programs.json": "6a6b36cdc783f521f63d15ddda2679485a7b694c8ad238ccf209feed482788fe",
     "code/simple_approx.c": "93fdfe1ac362cc025f1258511a231b58202efec7c1b27e987340cd4dff133b17",
     "code/simple_approx.py": "ed4eff2e11569f54b4d6d9f47b9089a070d67e0cf74264c82d18a247e4666b89",
-    "notes/README.md": "dab6dd33a6dba7790bd784c1ff036037c5628f6bfec70350997ad33dd3e87c29",
+    "notes/README.md": "f66cdba18aceec2fe761e2c2a16ac59a23c8dd7d145df6d4742a2ab1d8b2d684",
     "notes/book_overview.html": "d373a539537e762e6f019dfa8f8784ccbad8a7f459f9253809496424be8575aa",
     "notes/chapter01_measurable_spaces.html": "e42c667532b38baa9c910df41ff77342a14b0f9a49748fa44b1f0685823b06a2",
     "notes/chapter02_measure_spaces.html": "ee36adc70aafd5b556017e6b1ed494b8f92caddc3671601a8ed585779b834447",
@@ -955,5 +955,39 @@
     "git_commit": "not performed",
     "git_push": "not performed",
     "public_deployment": "not performed"
-  }
+  },
+  "migration_binding_history": [
+    {
+      "at": "2026-10-17T08:22:53.706400+00:00",
+      "updates": [
+        {
+          "file": "agent.md",
+          "previous_sha256": "74d93122623b8d0987dee9f59bef123e8de0d5a4972a15c7625487855bf741d6",
+          "current_sha256": "d5bd5414ccef2cc7b61ca19fbd5bfe6965bfe994e71bf8378c239e7184268538",
+          "reason": "Astro 迁移后维护路径说明；正文和计算规则保持"
+        },
+        {
+          "file": "notes/README.md",
+          "previous_sha256": "dab6dd33a6dba7790bd784c1ff036037c5628f6bfec70350997ad33dd3e87c29",
+          "current_sha256": "f66cdba18aceec2fe761e2c2a16ac59a23c8dd7d145df6d4742a2ab1d8b2d684",
+          "reason": "Astro 迁移后维护路径说明；正文和计算规则保持"
+        }
+      ]
+    }
+  ],
+  "astro_migration": {
+    "record": "review/astro-migration.json",
+    "sha256": "f56cfaf76afad2e0dc43e9e0e25ac4dd32d9428356dd502a34a4fee9391a1025",
+    "status": "Go",
+    "open_findings": [],
+    "source_sha256": {
+      "book_overview.html": "d373a539537e762e6f019dfa8f8784ccbad8a7f459f9253809496424be8575aa",
+      "chapter01_measurable_spaces.html": "e42c667532b38baa9c910df41ff77342a14b0f9a49748fa44b1f0685823b06a2",
+      "chapter02_measure_spaces.html": "ee36adc70aafd5b556017e6b1ed494b8f92caddc3671601a8ed585779b834447",
+      "chapter03_integration.html": "68883c73cf1e41066594031d2b5dc3780913ca5cd0e9941060e5617521a991d3",
+      "chapter04_signed_measures.html": "ebc05efd5d6517577b13ed564643a6d30dc4168ade61754fdaaa756daf00337b",
+      "preface.html": "ca606f60da08e0d4229dcc3bda2896c980f3076efa6b2f68a841e3c659b0038b"
+    }
+  },
+  "open_findings": []
 }

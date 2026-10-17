@@ -1,0 +1,11 @@
+# Astro 内容与独立检查
+
+受控正文位于 `src/content/books/<book>/`，一章一份 HTML，文件头为 JSON frontmatter。共享 CSS/JS 在 `src/styles/`、`src/scripts/`，由 `RN:include` 标记按原字节展开。`ReaderLayout` 提供 head/body 骨架，组件保留语义片段边界，静态 MathML/SVG 不经重排。目录、注解与复制是独立的渐进增强脚本；基础阅读和原生 details 使用静态 HTML。
+
+`books/<book>/notes/*.html` 是受控源展开后的兼容镜像，供原 Python 检查器独立读取。运行 `node scripts/sync-legacy.mjs` 检查两者一致；明确需要同步时使用 `--write`。C/Python 程序仍遵循各书原代码维护入口，先把显示块同步进受控章节，再展开镜像并运行原检查。Weiss 的教学程序维护于受控章节内。
+
+迁移期间 `scripts/migration-state.json` 固定起点，`original_sha256` 和 `git show` 双重守卫禁止正文变化。未来数学内容修订须另开受审阅的变更，连同原题/条件/代码、来源清单、Python 基线、当前审阅绑定与新 golden master 一起更新；不能以同步镜像命令自动认可内容变化。共享资源文件的哈希名称只为去重，不构成内容正确性的证明。
+
+`pnpm build` 在临时目录准备来源并构建，parity 和资源内联通过后才替换 `dist/`，保留上一份输出。`node scripts/verify-parity.mjs --book <book>` 比较冻结源和旧发布视图；`node scripts/check-offline.mjs --book <book>` 用 Ego Lite 实际断网打开页面，并验证无 JS、四种宽度、深链、目录和局部横滚。完整命令从仓库根执行，构建与浏览证据写入忽略目录 `tmp/reading-notes-migration/`。
+
+逐书 `review/astro-migration.json`、`content-baseline-astro.json` 和 `release-astro.json` 是新增的迁移证据。旧数学审阅、来源材料、内容完整性基线和程序记录保留原有含义。仅因维护说明改动而更新的当前文档哈希，必须同时保存旧值及原因。

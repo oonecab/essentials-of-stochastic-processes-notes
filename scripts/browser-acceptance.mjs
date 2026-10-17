@@ -1,0 +1,129 @@
+// Executed by ego-browser nodejs; config is injected by check-offline.mjs.
+const fs = await import('node:fs/promises');
+const path = await import('node:path');
+const crypto = await import('node:crypto');
+const { pathToFileURL } = await import('node:url');
+const task=await taskSpace(config.spaceId??'Reading Notes 离线验收');
+await fs.writeFile(config.sessionFile,JSON.stringify({spaceId:task.spaceId,page:config.page}));
+const page=task.page(config.page);
+const report={status:'running',tool:'ego-browser',space:task.spaceId,pages:config.pages,views:[],no_js:[],external_requests:[],screenshots:[],errors:[]};
+const save=()=>fs.writeFile(path.join(config.output,'report.json'),JSON.stringify(report,null,2)+'\n');
+const requireTrue=(condition,message)=>{if(!condition)throw new Error(message);};
+async function screenshot(name) {
+  const filename=path.join(config.output,name+'.png');
+  await page.screenshot({path:filename});
+  report.screenshots.push({file:path.relative(config.root,filename),sha256:crypto.createHash('sha256').update(await fs.readFile(filename)).digest('hex')});
+}
+async function navigate(item) {
+  await page.events();
+  const url=pathToFileURL(item.file).href;
+  await page.goto(url);
+  const events=await page.events();
+  const requests=events.filter(e=>e.method==='Network.requestWillBeSent').map(e=>({url:e.params.request.url,type:e.params.type}));
+  const external=requests.filter(r=>r.url.split('#')[0]!==url&&!r.url.startsWith('data:'));
+  report.external_requests.push(...external.map(r=>({page:item.route,...r})));
+  requireTrue(requests.some(r=>r.type==='Document'&&r.url.split('#')[0]===url),'Network observer did not record the document');
+  requireTrue(external.length===0,'Subresource request: '+JSON.stringify(external));
+  return requests;
+}
+try {
+  await page.cdp('Network.enable');
+  await page.cdp('Network.emulateNetworkConditions',{offline:true,latency:0,downloadThroughput:0,uploadThroughput:0});
+  await page.cdp('Emulation.setScriptExecutionDisabled',{value:false});
+  for(const item of config.pages)for(const width of config.widths) {
+    await page.cdp('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:false});
+    const requests=await navigate(item);
+    const state=await page.evaluate(()=>({title:document.querySelector('h1')?.textContent,
+      viewport:innerWidth,document_width:document.documentElement.scrollWidth,main:document.querySelector('main')?.innerText.length,
+      maths:[...document.querySelectorAll('math')].filter(n=>!n.closest('#annotation-content')).length,
+      svgs:[...document.querySelectorAll('svg')].filter(n=>!n.closest('#annotation-content')).length,merrors:document.querySelectorAll('merror').length,
+      mirror_math:document.querySelectorAll('#annotation-content math').length,
+      mirrors_match_source:[...document.querySelectorAll('#annotation-content math,#annotation-content svg')].every(n=>[...document.querySelectorAll('main .reading-notes '+n.tagName)].some(m=>m.outerHTML===n.outerHTML)),
+      exercises:[...document.querySelectorAll('details.exercise[id]')].map(e=>e.id),toc:[...document.querySelectorAll('#chapter-toc a[href^="#"]')].map(e=>e.getAttribute('href')),
+      annotations:document.querySelectorAll('details.reading-notes').length}));
+    requireTrue(state.title&&state.main>100,'Missing readable content');
+    requireTrue(state.document_width<=state.viewport+1,`Page overflow: ${item.route} @ ${width}`);
+    requireTrue(state.maths===item.counts.mathml&&state.svgs===item.counts.svg&&state.merrors===0&&state.mirrors_match_source,'Math/SVG rendering inventory or annotation mirror differs');
+    const view={page:item.route,width,state,requests,deep_links:[]};report.views.push(view);
+    const stem=item.route.replaceAll('/','_').replace('.html','')+'-'+width;
+    await screenshot(stem+'-top');
+    const targets=state.exercises.length?[state.exercises[0],state.exercises.at(-1)]:[state.toc.at(-1)?.slice(1)];
+    for(const id of [...new Set(targets)].filter(Boolean)) {
+      await page.evaluate(id=>{location.hash=id;},id);
+      await page.waitForFunction(id=>{
+        const e=document.getElementById(id);if(!e)return false;
+        for(let n=e;n;n=n.parentElement)if(n.tagName==='DETAILS'&&!n.open)return false;
+        const r=(e.querySelector('summary')??e).getBoundingClientRect();return r.top>=0&&r.top<innerHeight&&r.bottom>0;
+      },id,{timeout:10000});
+      await page.waitForFunction(id=>{
+        const links=[...document.querySelectorAll('#chapter-toc a[href^="#"]')];
+        let e=document.getElementById(id),expected;
+        for(;e&&!expected;e=e.parentElement)expected=links.find(a=>a.getAttribute('href')==='#'+e.id);
+        return !expected||expected.getAttribute('aria-current')==='location';
+      },id,{timeout:10000});
+      view.deep_links.push(await page.evaluate(id=>{const e=document.getElementById(id),r=(e.querySelector('summary')??e).getBoundingClientRect();return {id,hash:location.hash,open:e.open??null,top:r.top,active:document.querySelector('#chapter-toc [aria-current="location"]')?.getAttribute('href'),answer:e.querySelector('.answer')?.textContent.length??null};},id));
+    }
+    if(width===390&&state.exercises.length)await screenshot(stem+'-answer');
+    if(width>=1440&&state.annotations){
+      const section=await page.evaluate(()=>document.querySelector('details.reading-notes')?.closest('section[id]')?.id);
+      if(section){
+        await page.evaluate(id=>{location.hash=id;},section);
+        await page.waitForFunction(()=>{const r=document.getElementById('annotation-rail');return r&&!r.hidden&&r.getBoundingClientRect().width>0&&document.getElementById('annotation-content')?.textContent.trim().length>0;},undefined,{timeout:10000});
+        view.annotation=await page.evaluate(()=>({visible:!document.getElementById('annotation-rail').hidden,text:document.getElementById('annotation-content').textContent.slice(0,140)}));
+      }
+    }
+    if(width===390){
+      if(state.toc.length){
+        if(!await page.evaluate(()=>document.getElementById('toc-panel').open))await page.click('#toc-panel > summary',{label:'展开手机章节目录'});
+        await page.click('#chapter-toc a[href="'+state.toc[0]+'"]',{label:'跳转章节第一节'});
+        await page.waitForFunction(hash=>location.hash===hash&&!document.getElementById('toc-panel').open&&document.querySelector('#chapter-toc [aria-current="location"]')?.getAttribute('href')===hash,state.toc[0],{timeout:10000});
+        view.toc_click={target:state.toc[0],collapsed_after_click:true,active_after_click:true};
+      }
+      const scroll=await page.evaluate(()=>{
+        const candidates=[...document.querySelectorAll('main .scroll,main .equation,main pre,main .diagram')];
+        const e=candidates.find(e=>e.clientWidth>0&&e.scrollWidth>e.clientWidth+10&&['auto','scroll'].includes(getComputedStyle(e).overflowX));
+        if(!e)return null;e.scrollIntoView({block:'center',behavior:'instant'});const r=e.getBoundingClientRect();e.setAttribute('data-offline-scroll-test','');
+        // Tall tables extend beyond the viewport: target the visible intersection,
+        // below the persistent navigation, rather than the table's offscreen top.
+        return {x:(Math.max(0,r.left)+Math.min(innerWidth,r.right))/2,y:(Math.max(160,r.top)+Math.min(innerHeight-20,r.bottom))/2,before:e.scrollLeft,client:e.clientWidth,scroll:e.scrollWidth};
+      });
+      if(scroll){await page.mouse.move(scroll.x,scroll.y,{label:'定位局部滚动区域'});await page.mouse.wheel(220,0,{label:'检查公式图表横向滚动'});
+        const after=await page.evaluate(()=>document.querySelector('[data-offline-scroll-test]').scrollLeft);
+        requireTrue(after>scroll.before,'Local horizontal wheel did not move');view.local_scroll={...scroll,after};
+        await page.evaluate(()=>document.querySelector('[data-offline-scroll-test]').removeAttribute('data-offline-scroll-test'));
+      }else view.local_scroll={applicable:false};
+    }
+    await save();console.log(JSON.stringify({page:item.route,width,status:'passed'}));
+  }
+  await page.cdp('Emulation.setScriptExecutionDisabled',{value:true});
+  await page.cdp('Emulation.setDeviceMetricsOverride',{width:390,height:900,deviceScaleFactor:1,mobile:false});
+  for(const item of config.pages){
+    const requests=await navigate(item);
+    const before=await page.evaluate(()=>{
+      const e=document.querySelector('details.exercise')??document.querySelector('details');
+      if(!e)return {heading:document.querySelector('h1')?.textContent};
+      const s=e.querySelector('summary');s.scrollIntoView({block:'center',behavior:'instant'});const r=s.getBoundingClientRect();
+      return {heading:document.querySelector('h1')?.textContent,id:e.id,open:e.open,x:r.x+Math.min(50,r.width/2),y:r.y+r.height/2,
+        maths:document.querySelectorAll('math').length,svgs:document.querySelectorAll('svg').length,merrors:document.querySelectorAll('merror').length};
+    });
+    requireTrue(before.heading,'No-JS heading missing');
+    requireTrue(before.maths===item.counts.mathml&&before.svgs===item.counts.svg&&before.merrors===0,'No-JS static math/SVG inventory differs');
+    let after=null;
+    if(before.id){
+      await page.cdp('Input.dispatchMouseEvent',{type:'mousePressed',x:before.x,y:before.y,button:'left',clickCount:1});
+      await page.cdp('Input.dispatchMouseEvent',{type:'mouseReleased',x:before.x,y:before.y,button:'left',clickCount:1});
+      after=await page.evaluate(id=>{const e=document.getElementById(id),q=e.querySelector('.exercise-question'),a=e.querySelector('.answer');return {open:e.open,question:q?{length:q.textContent.length,height:q.getBoundingClientRect().height}:null,answer:a?{length:a.textContent.length,height:a.getBoundingClientRect().height}:null,width:document.documentElement.scrollWidth,viewport:innerWidth};},before.id);
+      requireTrue(after.open!==before.open,'No-JS native details did not toggle');
+      if(after.question)requireTrue(after.open&&after.question.length>0&&after.question.height>0&&after.answer.length>0&&after.answer.height>0,'No-JS exercise unreadable');
+      requireTrue(after.width<=after.viewport+1,'No-JS page overflow');
+    }
+    report.no_js.push({page:item.route,width:390,requests,before,after});
+    await screenshot(item.route.replaceAll('/','_').replace('.html','')+'-no-js');await save();
+  }
+  report.status='passed';
+}catch(error){report.status='failed';report.errors.push(String(error));throw error;}
+finally{
+  await save();
+  await page.cdp('Emulation.setScriptExecutionDisabled',{value:false});
+  await page.cdp('Network.emulateNetworkConditions',{offline:false,latency:0,downloadThroughput:-1,uploadThroughput:-1});
+}

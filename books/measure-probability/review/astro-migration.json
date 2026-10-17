@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "book": "measure-probability",
+  "recorded_at_utc": "2026-10-17T08:23:48.343761+00:00",
+  "status": "Go",
+  "scope": "Astro 静态迁移；原正文、数学、代码和历史内容审阅保持。",
+  "baseline_ref": "b2aeff3",
+  "pages": 6,
+  "counts": {
+    "exercises": 115,
+    "self_checks": 0,
+    "statements": 126,
+    "mathml": 2707,
+    "svg": 4
+  },
+  "source_bytes": 1161605,
+  "output_bytes": 1198698,
+  "js_bytes": 24924,
+  "max_js_ratio": 1,
+  "parity_differences": [],
+  "external_requests": [],
+  "js_views": 24,
+  "no_js_views": 6,
+  "visual_review": "逐页查看六张联系图，包含 1800/1440/1024/390 首屏、手机末题和 no-JS 首题截图；目录、注解栏和正文边界正常，长公式保持局部滚动，原生题解可读。",
+  "evidence_sha256": {
+    "tmp/reading-notes-migration/parity/measure-probability.json": "e91a071080796e1a41a40d711bb3ae8200a49047212cb806247239a62d26b142",
+    "tmp/reading-notes-migration/browser/measure-probability/report.json": "4c60b8baa2278d01c53112dc5838e95733be3cedbae611a309533dc7a2726a82",
+    "tmp/project-check/20261017T162314-9oiv5rvl/report.json": "cff416d547887a1a83c58b37753a1a103795c65b325ab0f3df113313aedd1e14"
+  },
+  "screenshots": [
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_book_overview-1800-top.png",
+      "sha256": "0d9dc339287b77b9db4bbcb1bba98721b7c1c8feb0367c06b2469eded4f42481"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_book_overview-1440-top.png",
+      "sha256": "826a11ec75eadd49b2b00cbce3dd421d8f34afc2a7f43fcc1c8d82cad4d8dab3"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_book_overview-1024-top.png",
+      "sha256": "31fb97a96f002be61a17619d7643a80823c5fa420fd23d2f7452a3ff35b9dcfa"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_book_overview-390-top.png",
+      "sha256": "3f57301fac7f911de1afe9ab052a751a69d3a0ef6d621ecd03d6c25b325019cc"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter01_measurable_spaces-1800-top.png",
+      "sha256": "f856eef99d7a062f707e7447a43255258d5757db55d2e0252991f1eb5cc6cd82"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter01_measurable_spaces-1440-top.png",
+      "sha256": "71cccdcdf62e2f7be0de30cb15e98c7800c29260da4638322e22343bfb3b0f15"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter01_measurable_spaces-1024-top.png",
+      "sha256": "6a7a6ad57a81fea3978eb5b4cc9dbbd0004a3d63e1b548767b9cb59678b36fd6"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter01_measurable_spaces-390-top.png",
+      "sha256": "84cd6f11c0d99f0171678a57295c7217e8e5826f1a74a276470937b876cd67b6"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter01_measurable_spaces-390-answer.png",
+      "sha256": "5866ea1a4eddac4ebae50b9c52303458ba4681c24b5d31c2408af5a5236db4dc"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter02_measure_spaces-1800-top.png",
+      "sha256": "c8d6e2240d768625ca689d4ab6a03f96c9d7b1ee89cc9ca31fa2a173d6da782f"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter02_measure_spaces-1440-top.png",
+      "sha256": "e85c15d3a22ca9216b88f4ccac86ed6547b5de51bd0dbbfaaf3a3c2094ae4d27"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter02_measure_spaces-1024-top.png",
+      "sha256": "aa5d782cf7b633dd89612942b0959ee1b2f7f946edbda0eeb7d4db97ed9f6283"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter02_measure_spaces-390-top.png",
+      "sha256": "1283a3065bc74959e0d527936f31173716cc9a130125f9df119b16124cdae754"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter02_measure_spaces-390-answer.png",
+      "sha256": "93bc125c0beaeb240d09170289601857b161ecb81b9e71e98880b317533be1d2"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter03_integration-1800-top.png",
+      "sha256": "a1ecd97834921961b3ebe28baf092cb26e03cabc29dca09b641258e3b4e73d87"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter03_integration-1440-top.png",
+      "sha256": "b79ff6bdaa6265f977a41b29160c8d63f66bf0fb129f817ef14d9a761e7c4544"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter03_integration-1024-top.png",
+      "sha256": "a97578a2cc1eb797d5985765f8e04afea22df47adc40deda06637ad1b051e219"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter03_integration-390-top.png",
+      "sha256": "52afa3cafa49445016475b839bac0c5b20ba2beb8c6edc7c78b8b4c2858bc96e"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter03_integration-390-answer.png",
+      "sha256": "156cf34bc6aa3051602bc7a12900506e9ccdc9ad7554be4d1c75ff99e8034981"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter04_signed_measures-1800-top.png",
+      "sha256": "3e26db3e226b434a425e8ba9375fb976fcaa5030debe4ebd38d43c6c73180db2"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter04_signed_measures-1440-top.png",
+      "sha256": "e39dbb18952d39c12fa90e73ac03b2bfaaafce8139c74a36ee20f7282d0a9bff"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter04_signed_measures-1024-top.png",
+      "sha256": "66b1cff162b0207bd41daff6797036f4540e0aad480c4cb12467fa31ba64f152"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter04_signed_measures-390-top.png",
+      "sha256": "2afda0d415d5d549501ee0f0e26ecfa83400f63bf27c30a85b6f147228c6773c"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter04_signed_measures-390-answer.png",
+      "sha256": "6c01d0ed9eec0c8ec6e797ce982d17571d510511559e57c23d6868e5dd9a9cd2"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_preface-1800-top.png",
+      "sha256": "cd4bc6f3b99e97d529bf2cced47fe067f28779d56aa9d9fa50713e45a47987a6"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_preface-1440-top.png",
+      "sha256": "c11d8f26b053d15783bdf3c8b9e2b9a16e07f62b4848cece33f8f023227a7df4"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_preface-1024-top.png",
+      "sha256": "c44e758ad40959259bdddba84a1f26fcf675072adcb7512b0c421b032801f417"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_preface-390-top.png",
+      "sha256": "e0d5249562188f28495ecbb01f82006a5b6ae7c908c0849edde4ef907421bad1"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_book_overview-no-js.png",
+      "sha256": "e8689143c6baee151a397007be83d949d9b0c251a60144dc0e1bc777506fd376"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter01_measurable_spaces-no-js.png",
+      "sha256": "6a08f017cbeea0612422f38db1cf502782d4b70d4c12ee8e0f1c949b430036d0"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter02_measure_spaces-no-js.png",
+      "sha256": "d8b7c13ebb4fd43a9e80f68011ef72905f89e11b570c8d1fbbc9a26beb3d51a8"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter03_integration-no-js.png",
+      "sha256": "9efaa69a0a77c77498114694320480d81a6eb8a7be3ea06754b00c62a95cbddb"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_chapter04_signed_measures-no-js.png",
+      "sha256": "2dbb86ccc50a17370e6e8fbb6a7579d2abbc6ebfdab24e38a29ca39413f10ddc"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/measure-probability/measure-probability_notes_preface-no-js.png",
+      "sha256": "a554e6fa7cbbdbf245a25263c7f115c653b1b2bdab8a6864948f01659333b104"
+    }
+  ],
+  "open_findings": [],
+  "boundaries": [
+    "实体手机和真实读屏器未验证",
+    "本次只做本地迁移；生产未部署",
+    "原数学与程序审阅的历史范围不因迁移验收而扩大"
+  ]
+}

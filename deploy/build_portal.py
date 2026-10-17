@@ -82,13 +82,14 @@ def import_checker(path):
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--release-id', default=datetime.now(ZoneInfo('Asia/Shanghai')).strftime('%Y%m%dT%H%M%S'))
+    ap.add_argument('--export-directory', type=Path, help='Export checked legacy blobs under ignored tmp/ for migration')
     args = ap.parse_args()
     if not re.fullmatch(r'\d{8}T\d{6}', args.release_id):
         ap.error('Release ID must be YYYYMMDDTHHMMSS')
     parent = ROOT / 'deploy/portal-releases'
     parent.mkdir(parents=True, exist_ok=True)
     out = parent / args.release_id
-    if out.exists():
+    if out.exists() and not args.export_directory:
         ap.error(f'Release already exists: {out}')
     checked = subprocess.run([sys.executable, STOCHASTIC / 'tools/check_notes.py', '--extract-only'],
                              capture_output=True, text=True, check=True)
@@ -263,6 +264,23 @@ def main():
                for name, blob in sorted(blobs.items())]
     config = (ROOT / 'deploy/nginx-portal-static.inc.template').read_text().replace('@@SCRIPT_SOURCES@@', ' '.join(hashes))
     server = (ROOT / 'deploy/nginx-notes.zzzping.top.conf.template').read_text().replace('@@RELEASE_ID@@', args.release_id)
+    if args.export_directory:
+        destination = args.export_directory.resolve()
+        if not destination.is_relative_to(ROOT / 'tmp') or destination.exists():
+            raise ValueError('Legacy export must be a new directory under ignored tmp/')
+        destination.mkdir(parents=True)
+        for name, blob in sorted(blobs.items()):
+            path = destination / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(blob)
+        (destination.parent / 'legacy-files.json').write_text(json.dumps({
+            'files': records, 'inline_script_csp_sources': hashes,
+            'document_views': document_views, 'validation': book_validations,
+            'entry_redirects': {f'/{book}{suffix}': f'/{book}/notes/book_overview.html'
+                                for book in BOOKS for suffix in ('', '/', '/index.html')}
+        }, ensure_ascii=False, indent=2) + '\n')
+        print(json.dumps({'mode':'legacy-export', 'files':len(records)}))
+        return
     with tempfile.TemporaryDirectory(prefix='.portal-release-', dir=parent) as directory:
         stage = Path(directory)
         write_archive(stage / 'site.tar.gz', blobs)

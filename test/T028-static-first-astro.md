@@ -19,3 +19,14 @@ golden master 分为旧维护源和旧发布视图：前者证明正文、数学
 后续阶段结果待实际执行后追加；这里的测试设计不代表已通过。
 
 空壳阶段：固定依赖安装与 `pnpm install --frozen-lockfile` 退出 0；`pnpm build --shell` 最终退出 0，构建输出一页，0.579 秒。此前两次配置适配失败分别是 Astro 7 CLI 入口变更及 publicDir 类型要求，日志保留为 `scaffold-build.log` 和 `scaffold-build-retry.log`；修复后使用包声明的入口和受控 public 目录。构建子进程显式设置 ASTRO_TELEMETRY_DISABLED=1；首次 CLI 提示默认遥测，后续执行已禁用。Ego Lite TaskSpace 23 实际打开构建壳，断网并关闭 JS 后标题和正文可读，图像 `tmp/reading-notes-migration/scaffold.png`。正式书籍尚未迁移。
+
+
+试点门禁：measure-probability 六页、115 题、2707 MathML、4 SVG 与冻结源一致。最终构建 `measure-build-4.log` / `measure-build-5.log` 退出 0；同输入 303 文件的 SHA256SUMS 完全一致（清单哈希 `ed3e84bd9d01018ed0130a6c33482af027c4d1d5d4f065687d8b5346fb21c3b5`）。总构建分别 31.139 / 30.885 秒，后者 Astro 294 ms。六页 HTML 共 1,198,698 字节，内联 JS 24,924 字节，为旧发布页的 1.0 倍。
+
+`measure-parity-verified.log`、`measure-offline-verified.log` 均退出 0。Ego Lite 对 6 页完成 24 个脚本开启视图与 6 个 no-JS 视图；全页静态资源检查及实际 CDP 请求观测均为零子资源。逐页查看联系图，确认桌面目录/注解、窄屏题解、长公式局部横滚和原生折叠可读；图像原件及哈希在 `browser/measure-probability/report.json`，迁移证据另存书级 `review/astro-migration.json`，历史审阅及数学内容基线保持。
+
+试点中检出的实际回归：ReaderLayout 的 head 特殊指令造成 CSS 丢失，手机整页宽 485px。修正显式 head 子节点后重新构建与浏览全矩阵；parity 新增标题、meta 和完整样式内容比较，`head-regression-rejected.log` 退出 1 证实能拒绝失败产物。另两次浏览驱动失败分别为注解镜像被重复计数，以及高表格横滚坐标落在固定顶栏；均与旧页面/真实输入复核后修正测量，原失败记录保留。原生交互、数学库存、宽度及滚动断言继续执行。
+
+试点结论：Go。未解决的迁移问题为空；历史内容审阅的范围、实体手机和真实读屏器边界保持。
+
+试点文档绑定更新后独立 Python 再验退出 0：`tmp/project-check/20261017T162314-9oiv5rvl/report.json`，四个命令均通过；`node --test scripts/parity.test.mjs` 三项测试通过。

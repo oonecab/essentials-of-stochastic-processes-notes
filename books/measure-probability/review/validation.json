@@ -1,19 +1,14 @@
 {
   "schema_version": 1,
-  "recorded_at_utc": "2026-10-17T04:04:47.813489+00:00",
-  "status": "completed_locally",
+  "recorded_at_utc": "2026-10-17T13:24:35.390565+00:00",
+  "status": "completed_locally; production_operations_pending",
   "scope": {
+    "label": "前四章伴读",
     "pages": 6,
     "source_numbered_statements": 126,
     "source_numbered_examples": 21,
     "original_exercises": 115,
-    "new_chapters": [
-      3,
-      4
-    ],
-    "new_source_items": 72,
-    "new_exercises": 58,
-    "later_chapters": "5–6 pending"
+    "later_chapters": "5–6 pending; 28+27 exercises"
   },
   "environment": {
     "platform": "macOS-15.8.1-arm64-arm-64bit-Mach-O",
@@ -33,11 +28,25 @@
     "original_exercises": 115,
     "numbered_statements": 126,
     "numbered_examples": 21,
-    "mathml": 2707,
+    "mathml": 2708,
     "svg": 4,
-    "local_links": 605,
+    "local_links": 628,
+    "quotation_status": {
+      "statements": 126,
+      "quoted": 8,
+      "location_only": 118
+    },
+    "annotated_core_formulae": 10,
     "synchronized_sources": 6,
+    "source_parser_mutations_rejected": [
+      "nested_tag",
+      "missing_end",
+      "duplicate_source",
+      "wrong_source"
+    ],
     "mutations_rejected": [
+      "excerpt_status",
+      "excerpt_page",
       "exercise_number",
       "question_condition",
       "chapter_3_question_condition",
@@ -52,7 +61,7 @@
     "sigma_closure_cases": 343,
     "cover_subfamily_cases": 47,
     "exact_rational_cases": 96,
-    "cli_executions": 579,
+    "cli_executions": 852,
     "builds": [
       [
         "clang",
@@ -109,13 +118,29 @@
         "simple_approx-sanitized"
       ]
     ],
+    "invalid_cases": {
+      "finite_spaces": 68,
+      "simple_approx": 42
+    },
+    "lexical_tokens": [
+      "1 ",
+      " 1",
+      "\t1",
+      "1\n",
+      "１",
+      "١",
+      "1_0",
+      "+1",
+      "",
+      "-",
+      "−1"
+    ],
     "correction_regressions": [
       "missing empty intersection",
       "missing global cover",
       "probability Cesaro counterexample"
     ],
-    "scope": "finite models and numerical boundaries; general proofs are reviewed in HTML",
-    "report": "tmp/measure-probability-ch34/book-final/report.json"
+    "scope": "finite models and numerical boundaries; general proofs are reviewed in HTML"
   },
   "integration_program": {
     "cases": 79,
@@ -130,9 +155,9 @@
         "-Werror",
         "-pedantic",
         "-O2",
-        "code/finite_integrals.c",
+        "/Users/chunwang/Code/all-books/Essentials-of-Stochastic-Processes/books/measure-probability/code/finite_integrals.c",
         "-o",
-        "tmp/measure-probability-ch34/book-final/integration/finite_integrals-release"
+        "/Users/chunwang/Code/all-books/Essentials-of-Stochastic-Processes/tmp/project-check/20261017T211513-z282iy8m/measure-probability/integration/finite_integrals-release"
       ],
       [
         "clang",
@@ -145,9 +170,9 @@
         "-g",
         "-fsanitize=address,undefined",
         "-fno-omit-frame-pointer",
-        "code/finite_integrals.c",
+        "/Users/chunwang/Code/all-books/Essentials-of-Stochastic-Processes/books/measure-probability/code/finite_integrals.c",
         "-o",
-        "tmp/measure-probability-ch34/book-final/integration/finite_integrals-sanitized"
+        "/Users/chunwang/Code/all-books/Essentials-of-Stochastic-Processes/tmp/project-check/20261017T211513-z282iy8m/measure-probability/integration/finite_integrals-sanitized"
       ]
     ],
     "oracles": [
@@ -158,547 +183,59 @@
       "L2 projection"
     ],
     "mutations_rejected": [
-      "zero-point conditional measurability"
+      "zero-point conditional measurability",
+      "integral",
+      "positive_integral",
+      "negative_integral",
+      "jordan_positive",
+      "jordan_negative",
+      "density",
+      "block_mass",
+      "AC_flag",
+      "paired_decomposition",
+      "second_moment",
+      "variation_total",
+      "expectation"
     ],
     "scope": "finite exact models only; infinite-space proofs reviewed separately"
   },
   "browser": {
-    "source_layout_views": 16,
-    "packaged_layout_views": 16,
-    "widths": [
-      1800,
-      1440,
-      1024,
-      390
-    ],
-    "source_exercise_deeplinks": 58,
-    "packaged_exercise_deeplinks": 58,
-    "scope": "总览、第二至第四章的布局；本批 58 道题解，旧章节证据另存 history",
-    "current_reading_release": "20261017T115130",
-    "guide_release": "20261017T115412",
-    "guide": {
-      "release": "20261017T115412",
-      "views": [
-        {
-          "width": 1440,
-          "scrollWidth": 1425,
-          "heading": "集合、积分与条件期望程序",
-          "hasThird": true,
-          "sourceLinks": [
-            "finite_spaces.py",
-            "finite_spaces.c",
-            "simple_approx.py",
-            "simple_approx.c",
-            "finite_integrals.py",
-            "finite_integrals.c"
-          ]
-        },
-        {
-          "width": 390,
-          "scrollWidth": 375,
-          "heading": "集合、积分与条件期望程序",
-          "hasThird": true,
-          "sourceLinks": [
-            "finite_spaces.py",
-            "finite_spaces.c",
-            "simple_approx.py",
-            "simple_approx.c",
-            "finite_integrals.py",
-            "finite_integrals.c"
-          ]
-        }
-      ],
-      "downloads": [
-        {
-          "name": "finite_spaces.py",
-          "sameBytes": true,
-          "sha256": "08f5ecba1fa03d0e38dd553f1763965beedebdf9a6173d0dc8a0924d7d41886d"
-        },
-        {
-          "name": "finite_spaces.c",
-          "sameBytes": true,
-          "sha256": "bf0bdd33edcf8c32d7b1e8b9b0204d0d031c5a181520bf2454fcbdb040bd1613"
-        },
-        {
-          "name": "simple_approx.py",
-          "sameBytes": true,
-          "sha256": "ed4eff2e11569f54b4d6d9f47b9089a070d67e0cf74264c82d18a247e4666b89"
-        },
-        {
-          "name": "simple_approx.c",
-          "sameBytes": true,
-          "sha256": "93fdfe1ac362cc025f1258511a231b58202efec7c1b27e987340cd4dff133b17"
-        },
-        {
-          "name": "finite_integrals.py",
-          "sameBytes": true,
-          "sha256": "3a598f0554c1497890df87dffe885e882ccfc912e8f446f466b11118ae97c5c7"
-        },
-        {
-          "name": "finite_integrals.c",
-          "sameBytes": true,
-          "sha256": "3f743432f9cf038833614b2294a59981bc11fe22ae807c9241b19aaa66931c1b"
-        }
-      ]
+    "issue": "I032",
+    "repository_record": "docs/final-assessment-evidence.json",
+    "sha256": "ec9475755e3c780b4b3f3933d1c9729416f9dbd98854b491207540e052f3ed00",
+    "release_id": "20261017T210828",
+    "public_html_pages": 8,
+    "js_views": 32,
+    "no_js_views": 16,
+    "external_requests": [],
+    "report": {
+      "source": "tmp/reading-notes-migration/browser/all/report.json",
+      "snapshot": "tmp/final-assessment/evidence/browser.json",
+      "sha256": "1ec6d5fe6b18738cf15fd73abd9c86cd990d6bd202f5f9c0d5c80ba0f41d9eed"
     },
-    "native_no_javascript_reading": {
-      "before": {
-        "open": false,
-        "toc": true
-      },
-      "after": {
-        "open": true,
-        "width": 390,
-        "scrollWidth": 375
-      }
-    },
-    "source_navigation": {
-      "second_third_fourth_overview": true,
-      "hash": "#integration-model",
-      "tocOpen": false,
-      "active": "#integration-model",
-      "top": 80.0078125
-    },
-    "packaged_navigation": {
-      "homes": {
-        "book_overview": [
-          {
-            "text": "笔记首页",
-            "href": "../../"
-          }
-        ],
-        "chapter02_measure_spaces": [
-          {
-            "text": "笔记首页",
-            "href": "../../"
-          }
-        ],
-        "chapter03_integration": [
-          {
-            "text": "笔记首页",
-            "href": "../../"
-          }
-        ],
-        "chapter04_signed_measures": [
-          {
-            "text": "笔记首页",
-            "href": "../../"
-          }
-        ]
-      },
-      "thirdToFourth": true,
-      "fourthToShelf": "http://127.0.0.1:57635/",
-      "note": "Initial inventory query expected ../../index.html; the actual supported home href is ../../. Rechecked all four header links and exercised the route."
-    },
-    "source_horizontal_reading": {
-      "width": 390,
-      "scrollWidth": 375,
-      "diagramScrollLeft": 299,
-      "diagramScrollWidth": 636,
-      "diagramClient": 337
-    },
-    "evidence_root": "tmp/measure-probability-ch34/browser",
-    "overview_final_recheck": {
-      "release": "20261017T120144",
-      "views": [
-        {
-          "width": 1800,
-          "scrollWidth": 1785,
-          "mathErrors": 0,
-          "indexLinks": [
-            {
-              "text": "集合上、下极限",
-              "href": "chapter01_measurable_spaces.html#s1-1"
-            },
-            {
-              "text": "π 系、半环、域和 σ 域",
-              "href": "chapter01_measurable_spaces.html#s1-2"
-            },
-            {
-              "text": "单调类与 π–λ 定理",
-              "href": "chapter01_measurable_spaces.html#s1-3"
-            },
-            {
-              "text": "可测函数判别",
-              "href": "chapter01_measurable_spaces.html#s1-4"
-            },
-            {
-              "text": "简单函数逼近",
-              "href": "chapter01_measurable_spaces.html#theorem-1-5-3"
-            },
-            {
-              "text": "测度连续性",
-              "href": "chapter02_measure_spaces.html#theorem-2-1-5"
-            },
-            {
-              "text": "Caratheodory 定理",
-              "href": "chapter02_measure_spaces.html#theorem-2-2-2"
-            },
-            {
-              "text": "扩张与唯一性",
-              "href": "chapter02_measure_spaces.html#s2-3"
-            },
-            {
-              "text": "完全化",
-              "href": "chapter02_measure_spaces.html#s2-4"
-            },
-            {
-              "text": "收敛性与分位数",
-              "href": "chapter02_measure_spaces.html#s2-5"
-            },
-            {
-              "text": "积分构造与单调收敛",
-              "href": "chapter03_integration.html#s3-1"
-            },
-            {
-              "text": "Fatou 引理与控制收敛",
-              "href": "chapter03_integration.html#s3-2"
-            },
-            {
-              "text": "Lp、不等式与完备性",
-              "href": "chapter03_integration.html#s3-3"
-            },
-            {
-              "text": "期望、矩与一致可积",
-              "href": "chapter03_integration.html#s3-4"
-            },
-            {
-              "text": "符号测度",
-              "href": "chapter04_signed_measures.html#s4-1"
-            },
-            {
-              "text": "Hahn 与 Jordan 分解",
-              "href": "chapter04_signed_measures.html#s4-2"
-            },
-            {
-              "text": "Radon–Nikodym 定理",
-              "href": "chapter04_signed_measures.html#s4-3"
-            },
-            {
-              "text": "Lebesgue 分解",
-              "href": "chapter04_signed_measures.html#s4-4"
-            },
-            {
-              "text": "条件期望与条件概率",
-              "href": "chapter04_signed_measures.html#s4-5"
-            }
-          ],
-          "sourceTable": "材料\t印刷页 / PDF 页序\n丛书序言\tI—II / 6—7\n作者前言\tIII—IV / 8—9\n完整目录\tV—VI / 11—12\n第一章与习题\t1—22 / 13—34\n第二章与习题\t23—59 / 35—71\n第三章与习题\t60—93 / 72—105\n第四章与习题\t94—128 / 106—140\n当前对应附录提示\t217—230 / 229—242"
-        },
-        {
-          "width": 1440,
-          "scrollWidth": 1425,
-          "mathErrors": 0,
-          "indexLinks": [
-            {
-              "text": "集合上、下极限",
-              "href": "chapter01_measurable_spaces.html#s1-1"
-            },
-            {
-              "text": "π 系、半环、域和 σ 域",
-              "href": "chapter01_measurable_spaces.html#s1-2"
-            },
-            {
-              "text": "单调类与 π–λ 定理",
-              "href": "chapter01_measurable_spaces.html#s1-3"
-            },
-            {
-              "text": "可测函数判别",
-              "href": "chapter01_measurable_spaces.html#s1-4"
-            },
-            {
-              "text": "简单函数逼近",
-              "href": "chapter01_measurable_spaces.html#theorem-1-5-3"
-            },
-            {
-              "text": "测度连续性",
-              "href": "chapter02_measure_spaces.html#theorem-2-1-5"
-            },
-            {
-              "text": "Caratheodory 定理",
-              "href": "chapter02_measure_spaces.html#theorem-2-2-2"
-            },
-            {
-              "text": "扩张与唯一性",
-              "href": "chapter02_measure_spaces.html#s2-3"
-            },
-            {
-              "text": "完全化",
-              "href": "chapter02_measure_spaces.html#s2-4"
-            },
-            {
-              "text": "收敛性与分位数",
-              "href": "chapter02_measure_spaces.html#s2-5"
-            },
-            {
-              "text": "积分构造与单调收敛",
-              "href": "chapter03_integration.html#s3-1"
-            },
-            {
-              "text": "Fatou 引理与控制收敛",
-              "href": "chapter03_integration.html#s3-2"
-            },
-            {
-              "text": "Lp、不等式与完备性",
-              "href": "chapter03_integration.html#s3-3"
-            },
-            {
-              "text": "期望、矩与一致可积",
-              "href": "chapter03_integration.html#s3-4"
-            },
-            {
-              "text": "符号测度",
-              "href": "chapter04_signed_measures.html#s4-1"
-            },
-            {
-              "text": "Hahn 与 Jordan 分解",
-              "href": "chapter04_signed_measures.html#s4-2"
-            },
-            {
-              "text": "Radon–Nikodym 定理",
-              "href": "chapter04_signed_measures.html#s4-3"
-            },
-            {
-              "text": "Lebesgue 分解",
-              "href": "chapter04_signed_measures.html#s4-4"
-            },
-            {
-              "text": "条件期望与条件概率",
-              "href": "chapter04_signed_measures.html#s4-5"
-            }
-          ],
-          "sourceTable": "材料\t印刷页 / PDF 页序\n丛书序言\tI—II / 6—7\n作者前言\tIII—IV / 8—9\n完整目录\tV—VI / 11—12\n第一章与习题\t1—22 / 13—34\n第二章与习题\t23—59 / 35—71\n第三章与习题\t60—93 / 72—105\n第四章与习题\t94—128 / 106—140\n当前对应附录提示\t217—230 / 229—242"
-        },
-        {
-          "width": 1024,
-          "scrollWidth": 1009,
-          "mathErrors": 0,
-          "indexLinks": [
-            {
-              "text": "集合上、下极限",
-              "href": "chapter01_measurable_spaces.html#s1-1"
-            },
-            {
-              "text": "π 系、半环、域和 σ 域",
-              "href": "chapter01_measurable_spaces.html#s1-2"
-            },
-            {
-              "text": "单调类与 π–λ 定理",
-              "href": "chapter01_measurable_spaces.html#s1-3"
-            },
-            {
-              "text": "可测函数判别",
-              "href": "chapter01_measurable_spaces.html#s1-4"
-            },
-            {
-              "text": "简单函数逼近",
-              "href": "chapter01_measurable_spaces.html#theorem-1-5-3"
-            },
-            {
-              "text": "测度连续性",
-              "href": "chapter02_measure_spaces.html#theorem-2-1-5"
-            },
-            {
-              "text": "Caratheodory 定理",
-              "href": "chapter02_measure_spaces.html#theorem-2-2-2"
-            },
-            {
-              "text": "扩张与唯一性",
-              "href": "chapter02_measure_spaces.html#s2-3"
-            },
-            {
-              "text": "完全化",
-              "href": "chapter02_measure_spaces.html#s2-4"
-            },
-            {
-              "text": "收敛性与分位数",
-              "href": "chapter02_measure_spaces.html#s2-5"
-            },
-            {
-              "text": "积分构造与单调收敛",
-              "href": "chapter03_integration.html#s3-1"
-            },
-            {
-              "text": "Fatou 引理与控制收敛",
-              "href": "chapter03_integration.html#s3-2"
-            },
-            {
-              "text": "Lp、不等式与完备性",
-              "href": "chapter03_integration.html#s3-3"
-            },
-            {
-              "text": "期望、矩与一致可积",
-              "href": "chapter03_integration.html#s3-4"
-            },
-            {
-              "text": "符号测度",
-              "href": "chapter04_signed_measures.html#s4-1"
-            },
-            {
-              "text": "Hahn 与 Jordan 分解",
-              "href": "chapter04_signed_measures.html#s4-2"
-            },
-            {
-              "text": "Radon–Nikodym 定理",
-              "href": "chapter04_signed_measures.html#s4-3"
-            },
-            {
-              "text": "Lebesgue 分解",
-              "href": "chapter04_signed_measures.html#s4-4"
-            },
-            {
-              "text": "条件期望与条件概率",
-              "href": "chapter04_signed_measures.html#s4-5"
-            }
-          ],
-          "sourceTable": "材料\t印刷页 / PDF 页序\n丛书序言\tI—II / 6—7\n作者前言\tIII—IV / 8—9\n完整目录\tV—VI / 11—12\n第一章与习题\t1—22 / 13—34\n第二章与习题\t23—59 / 35—71\n第三章与习题\t60—93 / 72—105\n第四章与习题\t94—128 / 106—140\n当前对应附录提示\t217—230 / 229—242"
-        },
-        {
-          "width": 390,
-          "scrollWidth": 375,
-          "mathErrors": 0,
-          "indexLinks": [
-            {
-              "text": "集合上、下极限",
-              "href": "chapter01_measurable_spaces.html#s1-1"
-            },
-            {
-              "text": "π 系、半环、域和 σ 域",
-              "href": "chapter01_measurable_spaces.html#s1-2"
-            },
-            {
-              "text": "单调类与 π–λ 定理",
-              "href": "chapter01_measurable_spaces.html#s1-3"
-            },
-            {
-              "text": "可测函数判别",
-              "href": "chapter01_measurable_spaces.html#s1-4"
-            },
-            {
-              "text": "简单函数逼近",
-              "href": "chapter01_measurable_spaces.html#theorem-1-5-3"
-            },
-            {
-              "text": "测度连续性",
-              "href": "chapter02_measure_spaces.html#theorem-2-1-5"
-            },
-            {
-              "text": "Caratheodory 定理",
-              "href": "chapter02_measure_spaces.html#theorem-2-2-2"
-            },
-            {
-              "text": "扩张与唯一性",
-              "href": "chapter02_measure_spaces.html#s2-3"
-            },
-            {
-              "text": "完全化",
-              "href": "chapter02_measure_spaces.html#s2-4"
-            },
-            {
-              "text": "收敛性与分位数",
-              "href": "chapter02_measure_spaces.html#s2-5"
-            },
-            {
-              "text": "积分构造与单调收敛",
-              "href": "chapter03_integration.html#s3-1"
-            },
-            {
-              "text": "Fatou 引理与控制收敛",
-              "href": "chapter03_integration.html#s3-2"
-            },
-            {
-              "text": "Lp、不等式与完备性",
-              "href": "chapter03_integration.html#s3-3"
-            },
-            {
-              "text": "期望、矩与一致可积",
-              "href": "chapter03_integration.html#s3-4"
-            },
-            {
-              "text": "符号测度",
-              "href": "chapter04_signed_measures.html#s4-1"
-            },
-            {
-              "text": "Hahn 与 Jordan 分解",
-              "href": "chapter04_signed_measures.html#s4-2"
-            },
-            {
-              "text": "Radon–Nikodym 定理",
-              "href": "chapter04_signed_measures.html#s4-3"
-            },
-            {
-              "text": "Lebesgue 分解",
-              "href": "chapter04_signed_measures.html#s4-4"
-            },
-            {
-              "text": "条件期望与条件概率",
-              "href": "chapter04_signed_measures.html#s4-5"
-            }
-          ],
-          "sourceTable": "材料\t印刷页 / PDF 页序\n丛书序言\tI—II / 6—7\n作者前言\tIII—IV / 8—9\n完整目录\tV—VI / 11—12\n第一章与习题\t1—22 / 13—34\n第二章与习题\t23—59 / 35—71\n第三章与习题\t60—93 / 72—105\n第四章与习题\t94—128 / 106—140\n当前对应附录提示\t217—230 / 229—242"
-        }
-      ]
-    },
-    "taskspace_lifecycle": {
-      "id": 17,
-      "finished": true,
-      "kept_tabs": []
-    },
-    "final_release": "20261017T120144",
-    "final_index_navigation": {
-      "url": "http://127.0.0.1:58574/measure-probability/notes/chapter04_signed_measures.html#s4-5",
-      "top": 127.78125,
-      "active": "#s4-5",
-      "width": 390,
-      "scrollWidth": 375
-    },
-    "final_downloads": {
-      "release": "20261017T120144",
-      "downloads": [
-        {
-          "name": "finite_integrals.py",
-          "sameBytes": true,
-          "sha256": "3a598f0554c1497890df87dffe885e882ccfc912e8f446f466b11118ae97c5c7"
-        },
-        {
-          "name": "finite_integrals.c",
-          "sameBytes": true,
-          "sha256": "3f743432f9cf038833614b2294a59981bc11fe22ae807c9241b19aaa66931c1b"
-        }
-      ]
-    },
-    "reading_page_equivalence": "tmp/measure-probability-ch34/final-release-equivalence.json"
+    "visual_scope": "Automated whole-site acceptance; targeted new measure content and auxiliary-page visual checks recorded separately"
   },
   "integration": {
-    "status": "passed",
-    "full_report": "tmp/project-check/20261017T114435-e2g4dsdn/report.json",
-    "full_checks": 13,
-    "quick_report": "tmp/project-check/20261017T115002-q2_jzhng/report.json",
-    "quick_checks": 10,
-    "guide_quick_report": "tmp/project-check/20261017T115411-25m7636t/report.json",
-    "content_release": "20261017T115130",
-    "content_release_https_report": "tmp/release-check/20261017T115130-7dj29w1t/https-verification.json",
-    "guide_release": "20261017T115412",
-    "final_package_verification": "passed",
-    "public_deployment": "not performed",
-    "post_binding_quick_report": "tmp/project-check/20261017T120138-nkvl4p4p/report.json",
-    "final_release": "20261017T120144",
-    "https_report": "tmp/release-check/20261017T120144-w054obrk/https-verification.json",
-    "final_release_counts": {
-      "release_id": "20261017T120144",
-      "files": 296,
-      "html_pages": 72,
-      "reading_pages": 52,
-      "bytes": 33439743,
-      "local_references_checked": 7297,
-      "inline_scripts": 10,
-      "document_pages": 14,
-      "navigation_links": 7271,
-      "https_files_checked": 291,
-      "entry_redirects_checked": 15
+    "status": "passed_locally",
+    "source_commit": "4acee863d6e52b5f7de7f99e651d66353a1d8988",
+    "release_id": "20261017T210828",
+    "archive_sha256": "7f6ec99ead09b35f0c2cf205812005b7efeb0e6a202d24c3d53b4c9d59cd2217",
+    "full_report": {
+      "source": "tmp/project-check/20261017T210828-q57darbs/report.json",
+      "snapshot": "tmp/final-assessment/evidence/project_full.json",
+      "sha256": "fcc9bb9b59ce04ab3b24cbb21aee25dc5088f3672955799ed06008f60d6c3893"
     },
-    "review_binding_note": "source-reading 逐项状态在最终归档时澄清；该维护记录不进入发布包，正文和程序字节不变",
-    "closure_quick_report": "tmp/project-check/20261017T120447-vxs0y0c5/report.json"
+    "https_report": {
+      "source": "tmp/release-check/20261017T210828-z4zf6qns/https-verification.json",
+      "snapshot": "tmp/final-assessment/evidence/https.json",
+      "sha256": "dd302008be0d655f743c68e6071b46f862903eb836264cc323c8276c17d3b57c"
+    },
+    "publish_report": {
+      "source": "tmp/publish-check/20261017T210828-80sbncht/report.json",
+      "snapshot": "tmp/final-assessment/evidence/publish.json",
+      "sha256": "0052af3b486faff6db09c81655c950c64a9ba59d34249d0c5ea87fe9dd26575e"
+    },
+    "production_operations": "pending operator acceptance; I029 remains historical"
   },
   "history": {
     "previous_validation": "review/history/20261017-first-batch-validation.json",
@@ -810,7 +347,705 @@
       "notes/preface.html",
       "notes/source_excerpts.json",
       "tools/check_models.py"
-    ]
+    ],
+    "I032_previous_top_level": {
+      "issue": "I032",
+      "scope": "I032 前的顶层审阅字段快照；原记录保留，当前结果另写",
+      "previous_fields": {
+        "recorded_at_utc": "2026-10-17T04:04:47.813489+00:00",
+        "status": "completed_locally",
+        "scope": {
+          "pages": 6,
+          "source_numbered_statements": 126,
+          "source_numbered_examples": 21,
+          "original_exercises": 115,
+          "new_chapters": [
+            3,
+            4
+          ],
+          "new_source_items": 72,
+          "new_exercises": 58,
+          "later_chapters": "5–6 pending"
+        },
+        "structure": {
+          "pages": 6,
+          "original_exercises": 115,
+          "numbered_statements": 126,
+          "numbered_examples": 21,
+          "mathml": 2707,
+          "svg": 4,
+          "local_links": 605,
+          "synchronized_sources": 6,
+          "mutations_rejected": [
+            "exercise_number",
+            "question_condition",
+            "chapter_3_question_condition",
+            "chapter_4_question_condition",
+            "source_page",
+            "displayed_source"
+          ],
+          "source_pdf": "local hash verified; page inventory read from scan",
+          "review_binding": "current files match recorded review; semantic and browser evidence are separate"
+        },
+        "programs": {
+          "sigma_closure_cases": 343,
+          "cover_subfamily_cases": 47,
+          "exact_rational_cases": 96,
+          "cli_executions": 579,
+          "builds": [
+            [
+              "clang",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-pedantic",
+              "-O2",
+              "code/finite_spaces.c",
+              "-o",
+              "finite_spaces-release"
+            ],
+            [
+              "clang",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-pedantic",
+              "-O1",
+              "-g",
+              "-fsanitize=address,undefined",
+              "-fno-omit-frame-pointer",
+              "code/finite_spaces.c",
+              "-o",
+              "finite_spaces-sanitized"
+            ],
+            [
+              "clang",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-pedantic",
+              "-O2",
+              "code/simple_approx.c",
+              "-o",
+              "simple_approx-release"
+            ],
+            [
+              "clang",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-pedantic",
+              "-O1",
+              "-g",
+              "-fsanitize=address,undefined",
+              "-fno-omit-frame-pointer",
+              "code/simple_approx.c",
+              "-o",
+              "simple_approx-sanitized"
+            ]
+          ],
+          "correction_regressions": [
+            "missing empty intersection",
+            "missing global cover",
+            "probability Cesaro counterexample"
+          ],
+          "scope": "finite models and numerical boundaries; general proofs are reviewed in HTML",
+          "report": "tmp/measure-probability-ch34/book-final/report.json"
+        },
+        "integration_program": {
+          "cases": 79,
+          "invalid_cases": 19,
+          "cli_executions": 294,
+          "builds": [
+            [
+              "clang",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-pedantic",
+              "-O2",
+              "code/finite_integrals.c",
+              "-o",
+              "tmp/measure-probability-ch34/book-final/integration/finite_integrals-release"
+            ],
+            [
+              "clang",
+              "-std=c11",
+              "-Wall",
+              "-Wextra",
+              "-Werror",
+              "-pedantic",
+              "-O1",
+              "-g",
+              "-fsanitize=address,undefined",
+              "-fno-omit-frame-pointer",
+              "code/finite_integrals.c",
+              "-o",
+              "tmp/measure-probability-ch34/book-final/integration/finite_integrals-sanitized"
+            ]
+          ],
+          "oracles": [
+            "level-set integral",
+            "all-subset Jordan extrema",
+            "all conditioning-event identities",
+            "RN defining integral",
+            "L2 projection"
+          ],
+          "mutations_rejected": [
+            "zero-point conditional measurability"
+          ],
+          "scope": "finite exact models only; infinite-space proofs reviewed separately"
+        },
+        "browser": {
+          "source_layout_views": 16,
+          "packaged_layout_views": 16,
+          "widths": [
+            1800,
+            1440,
+            1024,
+            390
+          ],
+          "source_exercise_deeplinks": 58,
+          "packaged_exercise_deeplinks": 58,
+          "scope": "总览、第二至第四章的布局；本批 58 道题解，旧章节证据另存 history",
+          "current_reading_release": "20261017T115130",
+          "guide_release": "20261017T115412",
+          "guide": {
+            "release": "20261017T115412",
+            "views": [
+              {
+                "width": 1440,
+                "scrollWidth": 1425,
+                "heading": "集合、积分与条件期望程序",
+                "hasThird": true,
+                "sourceLinks": [
+                  "finite_spaces.py",
+                  "finite_spaces.c",
+                  "simple_approx.py",
+                  "simple_approx.c",
+                  "finite_integrals.py",
+                  "finite_integrals.c"
+                ]
+              },
+              {
+                "width": 390,
+                "scrollWidth": 375,
+                "heading": "集合、积分与条件期望程序",
+                "hasThird": true,
+                "sourceLinks": [
+                  "finite_spaces.py",
+                  "finite_spaces.c",
+                  "simple_approx.py",
+                  "simple_approx.c",
+                  "finite_integrals.py",
+                  "finite_integrals.c"
+                ]
+              }
+            ],
+            "downloads": [
+              {
+                "name": "finite_spaces.py",
+                "sameBytes": true,
+                "sha256": "08f5ecba1fa03d0e38dd553f1763965beedebdf9a6173d0dc8a0924d7d41886d"
+              },
+              {
+                "name": "finite_spaces.c",
+                "sameBytes": true,
+                "sha256": "bf0bdd33edcf8c32d7b1e8b9b0204d0d031c5a181520bf2454fcbdb040bd1613"
+              },
+              {
+                "name": "simple_approx.py",
+                "sameBytes": true,
+                "sha256": "ed4eff2e11569f54b4d6d9f47b9089a070d67e0cf74264c82d18a247e4666b89"
+              },
+              {
+                "name": "simple_approx.c",
+                "sameBytes": true,
+                "sha256": "93fdfe1ac362cc025f1258511a231b58202efec7c1b27e987340cd4dff133b17"
+              },
+              {
+                "name": "finite_integrals.py",
+                "sameBytes": true,
+                "sha256": "3a598f0554c1497890df87dffe885e882ccfc912e8f446f466b11118ae97c5c7"
+              },
+              {
+                "name": "finite_integrals.c",
+                "sameBytes": true,
+                "sha256": "3f743432f9cf038833614b2294a59981bc11fe22ae807c9241b19aaa66931c1b"
+              }
+            ]
+          },
+          "native_no_javascript_reading": {
+            "before": {
+              "open": false,
+              "toc": true
+            },
+            "after": {
+              "open": true,
+              "width": 390,
+              "scrollWidth": 375
+            }
+          },
+          "source_navigation": {
+            "second_third_fourth_overview": true,
+            "hash": "#integration-model",
+            "tocOpen": false,
+            "active": "#integration-model",
+            "top": 80.0078125
+          },
+          "packaged_navigation": {
+            "homes": {
+              "book_overview": [
+                {
+                  "text": "笔记首页",
+                  "href": "../../"
+                }
+              ],
+              "chapter02_measure_spaces": [
+                {
+                  "text": "笔记首页",
+                  "href": "../../"
+                }
+              ],
+              "chapter03_integration": [
+                {
+                  "text": "笔记首页",
+                  "href": "../../"
+                }
+              ],
+              "chapter04_signed_measures": [
+                {
+                  "text": "笔记首页",
+                  "href": "../../"
+                }
+              ]
+            },
+            "thirdToFourth": true,
+            "fourthToShelf": "http://127.0.0.1:57635/",
+            "note": "Initial inventory query expected ../../index.html; the actual supported home href is ../../. Rechecked all four header links and exercised the route."
+          },
+          "source_horizontal_reading": {
+            "width": 390,
+            "scrollWidth": 375,
+            "diagramScrollLeft": 299,
+            "diagramScrollWidth": 636,
+            "diagramClient": 337
+          },
+          "evidence_root": "tmp/measure-probability-ch34/browser",
+          "overview_final_recheck": {
+            "release": "20261017T120144",
+            "views": [
+              {
+                "width": 1800,
+                "scrollWidth": 1785,
+                "mathErrors": 0,
+                "indexLinks": [
+                  {
+                    "text": "集合上、下极限",
+                    "href": "chapter01_measurable_spaces.html#s1-1"
+                  },
+                  {
+                    "text": "π 系、半环、域和 σ 域",
+                    "href": "chapter01_measurable_spaces.html#s1-2"
+                  },
+                  {
+                    "text": "单调类与 π–λ 定理",
+                    "href": "chapter01_measurable_spaces.html#s1-3"
+                  },
+                  {
+                    "text": "可测函数判别",
+                    "href": "chapter01_measurable_spaces.html#s1-4"
+                  },
+                  {
+                    "text": "简单函数逼近",
+                    "href": "chapter01_measurable_spaces.html#theorem-1-5-3"
+                  },
+                  {
+                    "text": "测度连续性",
+                    "href": "chapter02_measure_spaces.html#theorem-2-1-5"
+                  },
+                  {
+                    "text": "Caratheodory 定理",
+                    "href": "chapter02_measure_spaces.html#theorem-2-2-2"
+                  },
+                  {
+                    "text": "扩张与唯一性",
+                    "href": "chapter02_measure_spaces.html#s2-3"
+                  },
+                  {
+                    "text": "完全化",
+                    "href": "chapter02_measure_spaces.html#s2-4"
+                  },
+                  {
+                    "text": "收敛性与分位数",
+                    "href": "chapter02_measure_spaces.html#s2-5"
+                  },
+                  {
+                    "text": "积分构造与单调收敛",
+                    "href": "chapter03_integration.html#s3-1"
+                  },
+                  {
+                    "text": "Fatou 引理与控制收敛",
+                    "href": "chapter03_integration.html#s3-2"
+                  },
+                  {
+                    "text": "Lp、不等式与完备性",
+                    "href": "chapter03_integration.html#s3-3"
+                  },
+                  {
+                    "text": "期望、矩与一致可积",
+                    "href": "chapter03_integration.html#s3-4"
+                  },
+                  {
+                    "text": "符号测度",
+                    "href": "chapter04_signed_measures.html#s4-1"
+                  },
+                  {
+                    "text": "Hahn 与 Jordan 分解",
+                    "href": "chapter04_signed_measures.html#s4-2"
+                  },
+                  {
+                    "text": "Radon–Nikodym 定理",
+                    "href": "chapter04_signed_measures.html#s4-3"
+                  },
+                  {
+                    "text": "Lebesgue 分解",
+                    "href": "chapter04_signed_measures.html#s4-4"
+                  },
+                  {
+                    "text": "条件期望与条件概率",
+                    "href": "chapter04_signed_measures.html#s4-5"
+                  }
+                ],
+                "sourceTable": "材料\t印刷页 / PDF 页序\n丛书序言\tI—II / 6—7\n作者前言\tIII—IV / 8—9\n完整目录\tV—VI / 11—12\n第一章与习题\t1—22 / 13—34\n第二章与习题\t23—59 / 35—71\n第三章与习题\t60—93 / 72—105\n第四章与习题\t94—128 / 106—140\n当前对应附录提示\t217—230 / 229—242"
+              },
+              {
+                "width": 1440,
+                "scrollWidth": 1425,
+                "mathErrors": 0,
+                "indexLinks": [
+                  {
+                    "text": "集合上、下极限",
+                    "href": "chapter01_measurable_spaces.html#s1-1"
+                  },
+                  {
+                    "text": "π 系、半环、域和 σ 域",
+                    "href": "chapter01_measurable_spaces.html#s1-2"
+                  },
+                  {
+                    "text": "单调类与 π–λ 定理",
+                    "href": "chapter01_measurable_spaces.html#s1-3"
+                  },
+                  {
+                    "text": "可测函数判别",
+                    "href": "chapter01_measurable_spaces.html#s1-4"
+                  },
+                  {
+                    "text": "简单函数逼近",
+                    "href": "chapter01_measurable_spaces.html#theorem-1-5-3"
+                  },
+                  {
+                    "text": "测度连续性",
+                    "href": "chapter02_measure_spaces.html#theorem-2-1-5"
+                  },
+                  {
+                    "text": "Caratheodory 定理",
+                    "href": "chapter02_measure_spaces.html#theorem-2-2-2"
+                  },
+                  {
+                    "text": "扩张与唯一性",
+                    "href": "chapter02_measure_spaces.html#s2-3"
+                  },
+                  {
+                    "text": "完全化",
+                    "href": "chapter02_measure_spaces.html#s2-4"
+                  },
+                  {
+                    "text": "收敛性与分位数",
+                    "href": "chapter02_measure_spaces.html#s2-5"
+                  },
+                  {
+                    "text": "积分构造与单调收敛",
+                    "href": "chapter03_integration.html#s3-1"
+                  },
+                  {
+                    "text": "Fatou 引理与控制收敛",
+                    "href": "chapter03_integration.html#s3-2"
+                  },
+                  {
+                    "text": "Lp、不等式与完备性",
+                    "href": "chapter03_integration.html#s3-3"
+                  },
+                  {
+                    "text": "期望、矩与一致可积",
+                    "href": "chapter03_integration.html#s3-4"
+                  },
+                  {
+                    "text": "符号测度",
+                    "href": "chapter04_signed_measures.html#s4-1"
+                  },
+                  {
+                    "text": "Hahn 与 Jordan 分解",
+                    "href": "chapter04_signed_measures.html#s4-2"
+                  },
+                  {
+                    "text": "Radon–Nikodym 定理",
+                    "href": "chapter04_signed_measures.html#s4-3"
+                  },
+                  {
+                    "text": "Lebesgue 分解",
+                    "href": "chapter04_signed_measures.html#s4-4"
+                  },
+                  {
+                    "text": "条件期望与条件概率",
+                    "href": "chapter04_signed_measures.html#s4-5"
+                  }
+                ],
+                "sourceTable": "材料\t印刷页 / PDF 页序\n丛书序言\tI—II / 6—7\n作者前言\tIII—IV / 8—9\n完整目录\tV—VI / 11—12\n第一章与习题\t1—22 / 13—34\n第二章与习题\t23—59 / 35—71\n第三章与习题\t60—93 / 72—105\n第四章与习题\t94—128 / 106—140\n当前对应附录提示\t217—230 / 229—242"
+              },
+              {
+                "width": 1024,
+                "scrollWidth": 1009,
+                "mathErrors": 0,
+                "indexLinks": [
+                  {
+                    "text": "集合上、下极限",
+                    "href": "chapter01_measurable_spaces.html#s1-1"
+                  },
+                  {
+                    "text": "π 系、半环、域和 σ 域",
+                    "href": "chapter01_measurable_spaces.html#s1-2"
+                  },
+                  {
+                    "text": "单调类与 π–λ 定理",
+                    "href": "chapter01_measurable_spaces.html#s1-3"
+                  },
+                  {
+                    "text": "可测函数判别",
+                    "href": "chapter01_measurable_spaces.html#s1-4"
+                  },
+                  {
+                    "text": "简单函数逼近",
+                    "href": "chapter01_measurable_spaces.html#theorem-1-5-3"
+                  },
+                  {
+                    "text": "测度连续性",
+                    "href": "chapter02_measure_spaces.html#theorem-2-1-5"
+                  },
+                  {
+                    "text": "Caratheodory 定理",
+                    "href": "chapter02_measure_spaces.html#theorem-2-2-2"
+                  },
+                  {
+                    "text": "扩张与唯一性",
+                    "href": "chapter02_measure_spaces.html#s2-3"
+                  },
+                  {
+                    "text": "完全化",
+                    "href": "chapter02_measure_spaces.html#s2-4"
+                  },
+                  {
+                    "text": "收敛性与分位数",
+                    "href": "chapter02_measure_spaces.html#s2-5"
+                  },
+                  {
+                    "text": "积分构造与单调收敛",
+                    "href": "chapter03_integration.html#s3-1"
+                  },
+                  {
+                    "text": "Fatou 引理与控制收敛",
+                    "href": "chapter03_integration.html#s3-2"
+                  },
+                  {
+                    "text": "Lp、不等式与完备性",
+                    "href": "chapter03_integration.html#s3-3"
+                  },
+                  {
+                    "text": "期望、矩与一致可积",
+                    "href": "chapter03_integration.html#s3-4"
+                  },
+                  {
+                    "text": "符号测度",
+                    "href": "chapter04_signed_measures.html#s4-1"
+                  },
+                  {
+                    "text": "Hahn 与 Jordan 分解",
+                    "href": "chapter04_signed_measures.html#s4-2"
+                  },
+                  {
+                    "text": "Radon–Nikodym 定理",
+                    "href": "chapter04_signed_measures.html#s4-3"
+                  },
+                  {
+                    "text": "Lebesgue 分解",
+                    "href": "chapter04_signed_measures.html#s4-4"
+                  },
+                  {
+                    "text": "条件期望与条件概率",
+                    "href": "chapter04_signed_measures.html#s4-5"
+                  }
+                ],
+                "sourceTable": "材料\t印刷页 / PDF 页序\n丛书序言\tI—II / 6—7\n作者前言\tIII—IV / 8—9\n完整目录\tV—VI / 11—12\n第一章与习题\t1—22 / 13—34\n第二章与习题\t23—59 / 35—71\n第三章与习题\t60—93 / 72—105\n第四章与习题\t94—128 / 106—140\n当前对应附录提示\t217—230 / 229—242"
+              },
+              {
+                "width": 390,
+                "scrollWidth": 375,
+                "mathErrors": 0,
+                "indexLinks": [
+                  {
+                    "text": "集合上、下极限",
+                    "href": "chapter01_measurable_spaces.html#s1-1"
+                  },
+                  {
+                    "text": "π 系、半环、域和 σ 域",
+                    "href": "chapter01_measurable_spaces.html#s1-2"
+                  },
+                  {
+                    "text": "单调类与 π–λ 定理",
+                    "href": "chapter01_measurable_spaces.html#s1-3"
+                  },
+                  {
+                    "text": "可测函数判别",
+                    "href": "chapter01_measurable_spaces.html#s1-4"
+                  },
+                  {
+                    "text": "简单函数逼近",
+                    "href": "chapter01_measurable_spaces.html#theorem-1-5-3"
+                  },
+                  {
+                    "text": "测度连续性",
+                    "href": "chapter02_measure_spaces.html#theorem-2-1-5"
+                  },
+                  {
+                    "text": "Caratheodory 定理",
+                    "href": "chapter02_measure_spaces.html#theorem-2-2-2"
+                  },
+                  {
+                    "text": "扩张与唯一性",
+                    "href": "chapter02_measure_spaces.html#s2-3"
+                  },
+                  {
+                    "text": "完全化",
+                    "href": "chapter02_measure_spaces.html#s2-4"
+                  },
+                  {
+                    "text": "收敛性与分位数",
+                    "href": "chapter02_measure_spaces.html#s2-5"
+                  },
+                  {
+                    "text": "积分构造与单调收敛",
+                    "href": "chapter03_integration.html#s3-1"
+                  },
+                  {
+                    "text": "Fatou 引理与控制收敛",
+                    "href": "chapter03_integration.html#s3-2"
+                  },
+                  {
+                    "text": "Lp、不等式与完备性",
+                    "href": "chapter03_integration.html#s3-3"
+                  },
+                  {
+                    "text": "期望、矩与一致可积",
+                    "href": "chapter03_integration.html#s3-4"
+                  },
+                  {
+                    "text": "符号测度",
+                    "href": "chapter04_signed_measures.html#s4-1"
+                  },
+                  {
+                    "text": "Hahn 与 Jordan 分解",
+                    "href": "chapter04_signed_measures.html#s4-2"
+                  },
+                  {
+                    "text": "Radon–Nikodym 定理",
+                    "href": "chapter04_signed_measures.html#s4-3"
+                  },
+                  {
+                    "text": "Lebesgue 分解",
+                    "href": "chapter04_signed_measures.html#s4-4"
+                  },
+                  {
+                    "text": "条件期望与条件概率",
+                    "href": "chapter04_signed_measures.html#s4-5"
+                  }
+                ],
+                "sourceTable": "材料\t印刷页 / PDF 页序\n丛书序言\tI—II / 6—7\n作者前言\tIII—IV / 8—9\n完整目录\tV—VI / 11—12\n第一章与习题\t1—22 / 13—34\n第二章与习题\t23—59 / 35—71\n第三章与习题\t60—93 / 72—105\n第四章与习题\t94—128 / 106—140\n当前对应附录提示\t217—230 / 229—242"
+              }
+            ]
+          },
+          "taskspace_lifecycle": {
+            "id": 17,
+            "finished": true,
+            "kept_tabs": []
+          },
+          "final_release": "20261017T120144",
+          "final_index_navigation": {
+            "url": "http://127.0.0.1:58574/measure-probability/notes/chapter04_signed_measures.html#s4-5",
+            "top": 127.78125,
+            "active": "#s4-5",
+            "width": 390,
+            "scrollWidth": 375
+          },
+          "final_downloads": {
+            "release": "20261017T120144",
+            "downloads": [
+              {
+                "name": "finite_integrals.py",
+                "sameBytes": true,
+                "sha256": "3a598f0554c1497890df87dffe885e882ccfc912e8f446f466b11118ae97c5c7"
+              },
+              {
+                "name": "finite_integrals.c",
+                "sameBytes": true,
+                "sha256": "3f743432f9cf038833614b2294a59981bc11fe22ae807c9241b19aaa66931c1b"
+              }
+            ]
+          },
+          "reading_page_equivalence": "tmp/measure-probability-ch34/final-release-equivalence.json"
+        },
+        "integration": {
+          "status": "passed",
+          "full_report": "tmp/project-check/20261017T114435-e2g4dsdn/report.json",
+          "full_checks": 13,
+          "quick_report": "tmp/project-check/20261017T115002-q2_jzhng/report.json",
+          "quick_checks": 10,
+          "guide_quick_report": "tmp/project-check/20261017T115411-25m7636t/report.json",
+          "content_release": "20261017T115130",
+          "content_release_https_report": "tmp/release-check/20261017T115130-7dj29w1t/https-verification.json",
+          "guide_release": "20261017T115412",
+          "final_package_verification": "passed",
+          "public_deployment": "not performed",
+          "post_binding_quick_report": "tmp/project-check/20261017T120138-nkvl4p4p/report.json",
+          "final_release": "20261017T120144",
+          "https_report": "tmp/release-check/20261017T120144-w054obrk/https-verification.json",
+          "final_release_counts": {
+            "release_id": "20261017T120144",
+            "files": 296,
+            "html_pages": 72,
+            "reading_pages": 52,
+            "bytes": 33439743,
+            "local_references_checked": 7297,
+            "inline_scripts": 10,
+            "document_pages": 14,
+            "navigation_links": 7271,
+            "https_files_checked": 291,
+            "entry_redirects_checked": 15
+          },
+          "review_binding_note": "source-reading 逐项状态在最终归档时澄清；该维护记录不进入发布包，正文和程序字节不变",
+          "closure_quick_report": "tmp/project-check/20261017T120447-vxs0y0c5/report.json"
+        },
+        "delivery": {
+          "git_commit": "not performed",
+          "git_push": "not performed",
+          "public_deployment": "not performed"
+        }
+      }
+    }
   },
   "file_sha256": {
     "README.md": "3fcebc7bb95778df1b336c51868a6b1ba120233ec1652c2a69a9f2d45a2ae53f",
@@ -844,10 +1079,11 @@
     "tools/check_models.py": "7e2e5c2bffe527c18b27721d0e2e15a1f3f52b8ad4d9d5e59ec242c3c4b5a33a",
     "tools/check_notes.py": "7df942a0454f9d2dc778e44dfdf8beb13cd5dcd59d6388c13aff8969348c3b9d",
     "tools/sync_code.py": "9eceb700c71f70462083b425ee9eed2ce9de905503253b60ce275fa83a1933a2",
-    "review/final-assessment.json": "7c79525135b06af4d314f59043a7d285a5d35f31cb23610425b5abafbf9dbefb",
+    "review/final-assessment.json": "1d6ee5e6928a9ca24fdb61c318bb49a03fee2cb6f627ae9641d7213f78e2cedf",
     "tools/check_excerpts.py": "62466881d33533c8f9d9617afc8f30edd9df5c437c61c922c00101af20c70a50",
     "review/example-index.json": "448e8232e11d0ddcac275a76bd2e6dbf44bf75dc2cd64fcbd49676162e88762e",
-    "review/mathml-accessibility.json": "9d2eea5fd4d24c45a04c1c60594a27bfadf94796b7054e33692db268ee827e49"
+    "review/mathml-accessibility.json": "9d2eea5fd4d24c45a04c1c60594a27bfadf94796b7054e33692db268ee827e49",
+    "review/browser.json": "8bdfb0c8081710c46b66fafce782413f30eabd7496917e3572b24a444fb6cfc1"
   },
   "evidence_sha256": {
     "tmp/measure-probability-ch34/baseline.json": "5e86be465874b20fb9aafc0a5791d808f8f006df71354c75e2cc0bbe40ceac95",
@@ -956,9 +1192,9 @@
     "tmp/measure-probability-ch34/root-closure-quick.log": "dafacbd7bf591bd230c4389e56fda302bbaf4d3adefc0a4637ae373a57e2171b"
   },
   "delivery": {
-    "git_commit": "not performed",
-    "git_push": "not performed",
-    "public_deployment": "not performed"
+    "implementation_commit": "4acee863d6e52b5f7de7f99e651d66353a1d8988",
+    "git_publication": "Final evidence commit and remote readback recorded in repository history and task delivery",
+    "public_deployment": "I032 not performed; operator handoff is authoritative"
   },
   "migration_binding_history": [
     {
@@ -1015,6 +1251,13 @@
       "previous_sha256": "b61d55d39174999815709d3f844089adab69f5e02a1d8ef3c4529a13d341e556",
       "current_sha256": "013f706974f2bd767838b4f22de152e4dbbd2ba80b126e63bf453c63eb6db214",
       "reason": "I028 snapshot annotation; production recorded separately"
+    },
+    {
+      "issue": "I032",
+      "record": "review/browser.json",
+      "previous_sha256": "7109c727e177bd64630210923fcf527977a628425caa4bd49b2e0c08cd091ded",
+      "current_sha256": "8bdfb0c8081710c46b66fafce782413f30eabd7496917e3572b24a444fb6cfc1",
+      "reason": "绑定当前 74 页离线与 no-JS 验收；保留历史迁移及生产记录"
     }
   ],
   "production_record": {
@@ -1374,12 +1617,23 @@
           "current_sha256": "7c79525135b06af4d314f59043a7d285a5d35f31cb23610425b5abafbf9dbefb"
         }
       ]
+    },
+    {
+      "issue": "I032",
+      "reason": "I032 最终完整程序、浏览器读回、发布包与历史边界绑定",
+      "changes": [
+        {
+          "file": "review/final-assessment.json",
+          "previous_sha256": "7c79525135b06af4d314f59043a7d285a5d35f31cb23610425b5abafbf9dbefb",
+          "current_sha256": "1d6ee5e6928a9ca24fdb61c318bb49a03fee2cb6f627ae9641d7213f78e2cedf"
+        }
+      ]
     }
   ],
   "current_content_review": {
     "record": "review/final-assessment.json",
-    "sha256": "7c79525135b06af4d314f59043a7d285a5d35f31cb23610425b5abafbf9dbefb",
-    "status": "source revisions checked; final browser and complete integration pending"
+    "sha256": "1d6ee5e6928a9ca24fdb61c318bb49a03fee2cb6f627ae9641d7213f78e2cedf",
+    "status": "passed: source review, independent finite-model oracles, full integration, and current browser readback; production pending"
   },
   "example_scope": {
     "index": "review/example-index.json",
@@ -1396,5 +1650,21 @@
     "boundary": "本轮逐项正文逻辑读回与前次扫描记录分开；8 条核心摘录另逐句复核扫描图。",
     "replaced_generic_exercise_records": 35
   },
-  "companion_scope": "前四章伴读；第五章 28 题、第六章 27 题待续"
+  "companion_scope": "前四章伴读；第五章 28 题、第六章 27 题待续",
+  "final_assessment": {
+    "issue": "I032",
+    "repository_record": "docs/final-assessment-evidence.json",
+    "sha256": "ec9475755e3c780b4b3f3933d1c9729416f9dbd98854b491207540e052f3ed00",
+    "release_id": "20261017T210828",
+    "public_html_pages": 8,
+    "js_views": 32,
+    "no_js_views": 16,
+    "external_requests": [],
+    "report": {
+      "source": "tmp/reading-notes-migration/browser/all/report.json",
+      "snapshot": "tmp/final-assessment/evidence/browser.json",
+      "sha256": "1ec6d5fe6b18738cf15fd73abd9c86cd990d6bd202f5f9c0d5c80ba0f41d9eed"
+    },
+    "visual_scope": "Automated whole-site acceptance; targeted new measure content and auxiliary-page visual checks recorded separately"
+  }
 }

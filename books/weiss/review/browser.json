@@ -51,5 +51,21 @@
     "sha256": "3d2267f581a081d63c6513c821bb4969dfb1842c48dc9d85ad48a04ab3f17929",
     "release_id": "20261017T174039",
     "scope": "历史实机发布记录；不代表 I032 新代码已部署"
+  },
+  "final_assessment": {
+    "issue": "I032",
+    "repository_record": "docs/final-assessment-evidence.json",
+    "sha256": "ec9475755e3c780b4b3f3933d1c9729416f9dbd98854b491207540e052f3ed00",
+    "release_id": "20261017T210828",
+    "public_html_pages": 15,
+    "js_views": 60,
+    "no_js_views": 30,
+    "external_requests": [],
+    "report": {
+      "source": "tmp/reading-notes-migration/browser/all/report.json",
+      "snapshot": "tmp/final-assessment/evidence/browser.json",
+      "sha256": "1ec6d5fe6b18738cf15fd73abd9c86cd990d6bd202f5f9c0d5c80ba0f41d9eed"
+    },
+    "visual_scope": "Automated whole-site acceptance; targeted new measure content and auxiliary-page visual checks recorded separately"
   }
 }

@@ -5,7 +5,8 @@
   "historical_review_entry": "notes/validation.json",
   "file_sha256": {
     "agent.md": "1e0a672f9b5cd8a96c3d882d4afc8cbd2b36883cf35a229ae84930b23ae62bfd",
-    "notes/README.md": "bcdeee446050fba7f3dca3eeb59196c97ba6b98396b70623da5db3cd872227a1"
+    "notes/README.md": "bcdeee446050fba7f3dca3eeb59196c97ba6b98396b70623da5db3cd872227a1",
+    "review/browser.json": "c4de83ff3bdd37527a0950820d2f62cf81e04d5e2b4d124395ce33de945f6763"
   },
   "open_findings": [],
   "astro_migration": {
@@ -51,6 +52,13 @@
       "previous_sha256": "b61d55d39174999815709d3f844089adab69f5e02a1d8ef3c4529a13d341e556",
       "current_sha256": "013f706974f2bd767838b4f22de152e4dbbd2ba80b126e63bf453c63eb6db214",
       "reason": "I028 snapshot annotation; production recorded separately"
+    },
+    {
+      "issue": "I032",
+      "record": "review/browser.json",
+      "previous_sha256": "0a696988aaded05267b1b811b43f426b4b35e0d62817bfe3a5a0647a19f3ce1b",
+      "current_sha256": "c4de83ff3bdd37527a0950820d2f62cf81e04d5e2b4d124395ce33de945f6763",
+      "reason": "绑定当前 74 页离线与 no-JS 验收；保留历史迁移及生产记录"
     }
   ],
   "production_record": {
@@ -59,5 +67,21 @@
     "sha256": "3d2267f581a081d63c6513c821bb4969dfb1842c48dc9d85ad48a04ab3f17929",
     "release_id": "20261017T174039",
     "scope": "历史实机发布记录；不代表 I032 新代码已部署"
+  },
+  "final_assessment": {
+    "issue": "I032",
+    "repository_record": "docs/final-assessment-evidence.json",
+    "sha256": "ec9475755e3c780b4b3f3933d1c9729416f9dbd98854b491207540e052f3ed00",
+    "release_id": "20261017T210828",
+    "public_html_pages": 16,
+    "js_views": 64,
+    "no_js_views": 32,
+    "external_requests": [],
+    "report": {
+      "source": "tmp/reading-notes-migration/browser/all/report.json",
+      "snapshot": "tmp/final-assessment/evidence/browser.json",
+      "sha256": "1ec6d5fe6b18738cf15fd73abd9c86cd990d6bd202f5f9c0d5c80ba0f41d9eed"
+    },
+    "visual_scope": "Automated whole-site acceptance; targeted new measure content and auxiliary-page visual checks recorded separately"
   }
 }

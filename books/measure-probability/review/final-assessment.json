@@ -341,10 +341,59 @@
       "reviewer": "Codex；来源、逻辑推导与执行证据分别记录"
     }
   ],
-  "browser_status": "theorem 1.5.5 read at 1800/390; full revised-book acceptance pending",
+  "browser_status": "passed for current output; automated whole-site matrix and targeted visual readback are separate",
   "parity_report": "tmp/reading-notes-migration/parity/all.json",
   "publication_adapter": {
     "file": "deploy/publication.py",
     "change": "Reading Notes 导航和资料视图使用伴读总览标签；冻结的 I028 Transformer 字节仍保留。"
+  },
+  "final_acceptance": {
+    "release_id": "20261017T210828",
+    "source_commit": "4acee863d6e52b5f7de7f99e651d66353a1d8988",
+    "release_archive_sha256": "7f6ec99ead09b35f0c2cf205812005b7efeb0e6a202d24c3d53b4c9d59cd2217",
+    "browser": {
+      "source": "tmp/reading-notes-migration/browser/all/report.json",
+      "snapshot": "tmp/final-assessment/evidence/browser.json",
+      "sha256": "1ec6d5fe6b18738cf15fd73abd9c86cd990d6bd202f5f9c0d5c80ba0f41d9eed"
+    },
+    "targeted_browser": {
+      "source": "tmp/final-assessment/revised-browser/report.json",
+      "snapshot": "tmp/final-assessment/evidence/revised_browser.json",
+      "sha256": "7971e11a2b51353e7083d8d3448a0d303324a5ab092e99cab614293d4c66ecd8"
+    },
+    "formula_scroll": {
+      "source": "tmp/final-assessment/revised-browser/core-scroll.json",
+      "snapshot": "tmp/final-assessment/evidence/formula_scroll.json",
+      "sha256": "abd78c3268eac3e79007b5f2e8a0f3cdeeb1168dae65342b5ec0dd594088a34a"
+    },
+    "table_scroll": {
+      "source": "tmp/final-assessment/revised-browser/table-scroll.json",
+      "snapshot": "tmp/final-assessment/evidence/table_scroll.json",
+      "sha256": "faee729f042331e39f8ee57d6a26320434d1c4ab2cf879fd90aa726331a72d84"
+    },
+    "programs": {
+      "source": "tmp/project-check/20261017T211513-z282iy8m/measure-probability/report.json",
+      "snapshot": "tmp/final-assessment/evidence/measure_full.json",
+      "sha256": "69c2fd369fd31b3630e20745c66008c6c23655733813ffe379c7e1da1bc1301e"
+    },
+    "project": {
+      "source": "tmp/project-check/20261017T210828-q57darbs/report.json",
+      "snapshot": "tmp/final-assessment/evidence/project_full.json",
+      "sha256": "fcc9bb9b59ce04ab3b24cbb21aee25dc5088f3672955799ed06008f60d6c3893"
+    },
+    "visual_observations": [
+      "目视读回 8 个摘录块的 1800/390 截图：文字、来源页和数学符号规范化说明完整，摘录与讲解分层清楚。",
+      "目视读回 2.3.1、2.3.2、4.3.1、4.5.1 的桌面完整正文与手机连续截图：覆盖费用、非唯一扩张、密度反例及四个条件事件的计算与边界可读。",
+      "21 例索引可跳转，手机表格保留局部横滚；三张相关表用真实水平滚轮到达末列并查看截图。",
+      "10 个核心公式的 presentation 正常，annotation 隐藏而 aria-label 保留；7 个手机长公式用真实水平滚轮读至右端，页面宽度保持在视口内。",
+      "全站自动化矩阵覆盖 74 HTML、四档 JS 与两档 no-JS、深链/折叠/注解/滚动；没有把该矩阵称为全书数学人工复审。"
+    ],
+    "reviewer": "本次 Codex：独立推导、原图核对与实际浏览读回；未取得另一位人工或 Agent 审阅人的签字",
+    "math_boundary": "D 的全体补封闭不能先验推出；两点空间上非负 f(a)<=f(b) 的类已给出反例。正文使用集合单调类路线。",
+    "limitations": [
+      "第 5/6 章 28+27 题待续",
+      "仅第一批 10 公式补语义文本，真实屏幕阅读器未测试",
+      "本轮未执行生产服务器变更"
+    ]
   }
 }

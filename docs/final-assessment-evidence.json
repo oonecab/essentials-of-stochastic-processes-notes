@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "issue": "I032",
+  "recorded_at_utc": "2026-10-17T13:24:35.390565+00:00",
+  "status": "repository_repairs_and_local_acceptance_completed; production_operations_pending",
+  "source_commit": "4acee863d6e52b5f7de7f99e651d66353a1d8988",
+  "release_id": "20261017T210828",
+  "release_source_tree_dirty": false,
+  "release_archive_sha256": "7f6ec99ead09b35f0c2cf205812005b7efeb0e6a202d24c3d53b4c9d59cd2217",
+  "release_metadata_sha256": "17c2d5edfa547f7b2c96fe60492132bc816ba5d8b543311ee54a342a363f9028",
+  "counts": {
+    "books": 5,
+    "reading_pages": 54,
+    "public_html": 74,
+    "files": 303,
+    "bytes": 28888414,
+    "exercises": 1434,
+    "parity_differences": 0
+  },
+  "browser": {
+    "tool": "ego-browser",
+    "widths": [
+      1800,
+      1440,
+      1024,
+      390
+    ],
+    "no_js_widths": [
+      1440,
+      390
+    ],
+    "js_views": 296,
+    "no_js_views": 148,
+    "external_requests": 0,
+    "targeted_views": 46,
+    "targeted_screenshots": 53,
+    "long_formula_wheel_checks": 7,
+    "table_wheel_checks": 3,
+    "observations": [
+      "目视读回 8 个摘录块的 1800/390 截图：文字、来源页和数学符号规范化说明完整，摘录与讲解分层清楚。",
+      "目视读回 2.3.1、2.3.2、4.3.1、4.5.1 的桌面完整正文与手机连续截图：覆盖费用、非唯一扩张、密度反例及四个条件事件的计算与边界可读。",
+      "21 例索引可跳转，手机表格保留局部横滚；三张相关表用真实水平滚轮到达末列并查看截图。",
+      "10 个核心公式的 presentation 正常，annotation 隐藏而 aria-label 保留；7 个手机长公式用真实水平滚轮读至右端，页面宽度保持在视口内。",
+      "全站自动化矩阵覆盖 74 HTML、四档 JS 与两档 no-JS、深链/折叠/注解/滚动；没有把该矩阵称为全书数学人工复审。"
+    ]
+  },
+  "checks": {
+    "project_commands": 16,
+    "node_tests": 10,
+    "durability_tests": 5,
+    "policy_tests": 6,
+    "publish_scenarios": 21,
+    "sigkill_checkpoints": [
+      "unpack",
+      "rsync",
+      "rename",
+      "journal-temp",
+      "journal",
+      "switch"
+    ],
+    "https_direct_responses": 298,
+    "entry_redirects": 15,
+    "csp_pages": 9,
+    "csp_script_hashes": 12,
+    "tampered_csp_script": "blocked"
+  },
+  "new_book": {
+    "status": "passed",
+    "checkout": "tmp/new-book-build/run-t18sk7nw/checkout",
+    "added_pages": 2,
+    "reading_pages": 56,
+    "public_html": 77,
+    "files": 307,
+    "parity_differences": 0,
+    "generated_mirrors": 2,
+    "nginx_book_route": "dummy",
+    "csp_browser": "passed",
+    "release_archive_sha256": "fefd49c387b9ba6c602954bfaf19151ed95b27a4294c2027fe037116ef0bf93d",
+    "scope": "isolated full build/package; no production action",
+    "report": "tmp/new-book-build/run-t18sk7nw/report.json"
+  },
+  "measure": {
+    "scope": "前四章伴读",
+    "statements": 126,
+    "manual_excerpts": 8,
+    "location_only": 118,
+    "worked_examples": 7,
+    "definition_notes": 14,
+    "specific_item_reviews": 147,
+    "specific_exercise_reviews": 115,
+    "generic_exercise_reviews_replaced": 35,
+    "additional_exercise_readback": "3.14",
+    "mathml": 2708,
+    "annotated_core_mathml": 10,
+    "finite_model_cli": 852,
+    "integral_cli": 294,
+    "integral_mutations": 13,
+    "review_record": "books/measure-probability/review/final-assessment.json",
+    "review_record_sha256": "1d6ee5e6928a9ca24fdb61c318bb49a03fee2cb6f627ae9641d7213f78e2cedf"
+  },
+  "history": {
+    "migration": "I028; docs/astro-migration-evidence.json",
+    "production": "I029; docs/astro-production-report.md",
+    "source_parity": "48 original source pages unchanged; six measure pages have explicit reviewed revision chains; parity uses current reviewed source"
+  },
+  "production": {
+    "executed_this_task": false,
+    "handoff": "deploy/OPERATIONS-I032.md",
+    "pending": [
+      "SSH key and password policy",
+      "FTP/UFW/fail2ban",
+      "Certbot renewal",
+      "root-owned releases and helper/unit installation",
+      "new release deployment and public acceptance"
+    ],
+    "historic_release": "20261017T174039",
+    "historic_record_sha256": "3d2267f581a081d63c6513c821bb4969dfb1842c48dc9d85ad48a04ab3f17929"
+  },
+  "limitations": [
+    "fsync error/order model plus real process SIGKILL; no physical server power-cut experiment",
+    "macOS local filesystem and temporary Nginx tests do not establish Ubuntu root/systemd/sudo enforcement",
+    "Mathematical review by this Codex; no separate reviewer sign-off",
+    "48 original pages are preserved; six authorized measure revisions are not claimed byte-identical to I028",
+    "Node/Astro + Python helpers tested on the documented local toolchain; no fresh Ubuntu host provisioned",
+    "The release is anchored to the clean implementation commit; later evidence documents and EOF whitespace cleanup are not inside the published site"
+  ],
+  "evidence": {
+    "release": {
+      "source": "deploy/portal-releases/20261017T210828/release.json",
+      "snapshot": "tmp/final-assessment/evidence/release.json",
+      "sha256": "17c2d5edfa547f7b2c96fe60492132bc816ba5d8b543311ee54a342a363f9028"
+    },
+    "archive_checksum": {
+      "source": "deploy/portal-releases/20261017T210828/archive.sha256",
+      "snapshot": "tmp/final-assessment/evidence/archive_checksum.sha256",
+      "sha256": "26983b2a8262208ae3bc6a6c855eb4bf9230c005345ee27362c8c63feaa87a6b"
+    },
+    "build": {
+      "source": "tmp/reading-notes-migration/build.json",
+      "snapshot": "tmp/final-assessment/evidence/build.json",
+      "sha256": "57f8c4aeb6006fc4f3bf1637e9bdf22e718f54da086d2dd5d2d3d8277a4da039"
+    },
+    "parity": {
+      "source": "tmp/reading-notes-migration/parity/all.json",
+      "snapshot": "tmp/final-assessment/evidence/parity.json",
+      "sha256": "bee36a3f2c5b725a36c58db2c01d9c37e7406a8df4422e1996bfb9f172104c64"
+    },
+    "browser": {
+      "source": "tmp/reading-notes-migration/browser/all/report.json",
+      "snapshot": "tmp/final-assessment/evidence/browser.json",
+      "sha256": "1ec6d5fe6b18738cf15fd73abd9c86cd990d6bd202f5f9c0d5c80ba0f41d9eed"
+    },
+    "csp": {
+      "source": "tmp/reading-notes-migration/csp/report.json",
+      "snapshot": "tmp/final-assessment/evidence/csp.json",
+      "sha256": "aba0223a4d71c166b96d5feaee262b58e9932701d1bf16039c6f569f93b314e2"
+    },
+    "csp_manifest": {
+      "source": "tmp/reading-notes-migration/csp/manifest.json",
+      "snapshot": "tmp/final-assessment/evidence/csp_manifest.json",
+      "sha256": "db493f68558248ac2665bdd656edb968daa2e14f4d03e096de6db1ac37bdf39a"
+    },
+    "https": {
+      "source": "tmp/release-check/20261017T210828-z4zf6qns/https-verification.json",
+      "snapshot": "tmp/final-assessment/evidence/https.json",
+      "sha256": "dd302008be0d655f743c68e6071b46f862903eb836264cc323c8276c17d3b57c"
+    },
+    "publish": {
+      "source": "tmp/publish-check/20261017T210828-80sbncht/report.json",
+      "snapshot": "tmp/final-assessment/evidence/publish.json",
+      "sha256": "0052af3b486faff6db09c81655c950c64a9ba59d34249d0c5ea87fe9dd26575e"
+    },
+    "project_full": {
+      "source": "tmp/project-check/20261017T210828-q57darbs/report.json",
+      "snapshot": "tmp/final-assessment/evidence/project_full.json",
+      "sha256": "fcc9bb9b59ce04ab3b24cbb21aee25dc5088f3672955799ed06008f60d6c3893"
+    },
+    "measure_project": {
+      "source": "tmp/project-check/20261017T211513-z282iy8m/report.json",
+      "snapshot": "tmp/final-assessment/evidence/measure_project.json",
+      "sha256": "86f8da66ff2dabca07d478a45832860836111e8abae726a7654b9bc05132ae5e"
+    },
+    "measure_full": {
+      "source": "tmp/project-check/20261017T211513-z282iy8m/measure-probability/report.json",
+      "snapshot": "tmp/final-assessment/evidence/measure_full.json",
+      "sha256": "69c2fd369fd31b3630e20745c66008c6c23655733813ffe379c7e1da1bc1301e"
+    },
+    "models_cli": {
+      "source": "tmp/final-assessment/models-final.log",
+      "snapshot": "tmp/final-assessment/evidence/models_cli.log",
+      "sha256": "c8c378d713fc5e3550b859903477e1cd5f40f272840f646201cd42c472b15f9d"
+    },
+    "integrals_cli": {
+      "source": "tmp/final-assessment/integrals-final.log",
+      "snapshot": "tmp/final-assessment/evidence/integrals_cli.log",
+      "sha256": "cedf9ca88a89210a47429fcad518e09f907f18930b6f78ffeb5a74b8e776c266"
+    },
+    "sync_cli": {
+      "source": "tmp/final-assessment/sync-final.log",
+      "snapshot": "tmp/final-assessment/evidence/sync_cli.log",
+      "sha256": "717b1dc9feeb3d64133a749c87acab2f991b40628981e087579a382c51a29c5f"
+    },
+    "measure_notes_cli": {
+      "source": "tmp/final-assessment/measure-notes-final.log",
+      "snapshot": "tmp/final-assessment/evidence/measure_notes_cli.log",
+      "sha256": "a7c12e44d5632765109e25d171b30049ae917baf39b90502f3786ef63a8ca8f4"
+    },
+    "new_book": {
+      "source": "tmp/new-book-build/run-t18sk7nw/report.json",
+      "snapshot": "tmp/final-assessment/evidence/new_book.json",
+      "sha256": "a6e89618269b7195b6b8a4460e336feb990af32dad96700d29ed863fc92e4e8a"
+    },
+    "revised_browser": {
+      "source": "tmp/final-assessment/revised-browser/report.json",
+      "snapshot": "tmp/final-assessment/evidence/revised_browser.json",
+      "sha256": "7971e11a2b51353e7083d8d3448a0d303324a5ab092e99cab614293d4c66ecd8"
+    },
+    "formula_scroll": {
+      "source": "tmp/final-assessment/revised-browser/core-scroll.json",
+      "snapshot": "tmp/final-assessment/evidence/formula_scroll.json",
+      "sha256": "abd78c3268eac3e79007b5f2e8a0f3cdeeb1168dae65342b5ec0dd594088a34a"
+    },
+    "table_scroll": {
+      "source": "tmp/final-assessment/revised-browser/table-scroll.json",
+      "snapshot": "tmp/final-assessment/evidence/table_scroll.json",
+      "sha256": "faee729f042331e39f8ee57d6a26320434d1c4ab2cf879fd90aa726331a72d84"
+    },
+    "install_log": {
+      "source": "tmp/final-assessment/install-final.log",
+      "snapshot": "tmp/final-assessment/evidence/install_log.log",
+      "sha256": "b3a9df6468708a75e54b8cdce5f01806eeb50be0cd43aacd64f77cbf108ecc06"
+    },
+    "node_tests": {
+      "source": "tmp/final-assessment/node-tests-final.log",
+      "snapshot": "tmp/final-assessment/evidence/node_tests.log",
+      "sha256": "006ffba323f7510431191cc78834955f27632ffccd19893ce861d5aa50360ffb"
+    },
+    "gitleaks_implementation": {
+      "source": "tmp/final-assessment/gitleaks-final.json",
+      "snapshot": "tmp/final-assessment/evidence/gitleaks_implementation.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    }
+  }
+}

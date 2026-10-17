@@ -53,5 +53,3 @@ def add_catalog_links(blob):
     links = ''.join(f'<a href="{name}/{escape(registered[name]["entry"], quote=True)}">'
                     f'{escape(registered[name]["title"])}</a> ' for name in sorted(new))
     return blob.replace(b'</main>', ('<aside class="reading-hint"><p>新增书籍：' + links + '</p></aside></main>').encode(), 1)
-
-

@@ -58,3 +58,17 @@
 `tools/test_new_book_build.py` 在独立 Git 副本新增 dummy 两页，删除兼容 HTML 后完成真实 `pnpm build --release-id ...`。结果为 56 个阅读页、77 个公开 HTML、307 文件、0 DOM 差异；两份镜像自动再生，Python checker、CSP 浏览器和精确发布清单均通过，Nginx 入口自动包含 dummy。报告 `tmp/new-book-build/run-t18sk7nw/report.json`（汇总 `tmp/final-assessment/new-book-build.json`）。这补足了此前只做 entries/mirrors fixture 的证据边界。正式仓库仍为五书 54/74 页。
 
 冻结的 `reader_views.py` 保留，目录适配层承接新增书与测度范围标签。新书和新页可登记各自 Git 原始快照，避免假装它们存在于 I028。发布器在 production 的正常、回滚、恢复和清理路径再次验证整棵已安装 release 的 root 属主和只读权限；本机权限策略测试 6 项通过。生产配置仍由运维应用并实机验收。
+
+## 最终统一验收
+
+干净实现提交 `4acee863d6e52b5f7de7f99e651d66353a1d8988` 构建 release `20261017T210828`：303 文件、74 HTML、54 阅读页、28,888,414 字节，archive SHA256 `7f6ec99ead09b35f0c2cf205812005b7efeb0e6a202d24c3d53b4c9d59cd2217`。随后只补证据记录及 publication.py 末尾空行，AST 相同，303 个 dist 文件逐一与该清单相符。
+
+- 锁文件安装、pnpm test（10 项）、构建与完整 DOM parity 通过；54 页差异为 0。完整项目检查 16 项命令通过：`tmp/project-check/20261017T210828-q57darbs/report.json`。
+- 全站 `pnpm check:offline` 通过 74 页、296 JS 视图、148 no-JS 视图、0 外部请求；JS 四档与 no-JS 两档完整覆盖。CSP 实际浏览覆盖 9 页/12 脚本，篡改脚本被阻止。
+- 修订正文补做 46 个视图、53 张截图；目视读回 8 个摘录块、4 个计算例、21 例索引和 10 个核心公式；手机上 7 个长公式和 3 个表使用真实水平滚轮读到末端。首次表格探针误把 `outer-model` 当作例题内部第二张表，读取 DOM 后修正 selector 并通过，站点未因此改动。定点记录见 `tmp/final-assessment/revised-browser/`。
+- 本地 HTTPS 通过：`tmp/release-check/20261017T210828-z4zf6qns/https-verification.json`。发布演练 21 项通过：`tmp/publish-check/20261017T210828-80sbncht/report.json`。
+- 按书完整检查、独立 check_notes、check_models、check_integrals、sync_code 均执行并通过。书级报告 `tmp/project-check/20261017T211513-z282iy8m/report.json`；直接命令日志为 `tmp/final-assessment/{measure-notes,models,integrals,sync}-final.log`。结果包含 852 + 294 次 CLI、13 类积分变异及 4 类源码边界变异。
+- 最终审阅记录更新后，13 项 quick 命令通过：`tmp/project-check/20261017T212619-ldae486q/report.json`。23 份原始证据快照、十处书级证据链接、发布载荷与浏览器输出哈希核对通过；548 张主浏览器/定点/长公式截图和另 3 张表格截图逐一核验哈希。
+- 实现阶段 10 个提交经 Gitleaks 扫描未发现秘密；最终证据的暂存差异扫描同样未发现秘密。`git diff --check` 的末尾空行已修正，未改运行语义。
+
+最终结果见 [修复报告](../docs/final-assessment-report.md)和[机器可读证据](../docs/final-assessment-evidence.json)。旧 I028/I029 证据继续保留；服务器 P0-3、新权限安装及本轮上线仍是运维待执行项。

@@ -57,7 +57,8 @@
     "tools/check_structures.py": "84d2e7fff7586a0dabff9c248a91dac0b529262cea2f5e123ce95ec4bef91f8c",
     "tools/check_sylow_galois.py": "a9ac26f18cdf4510825bdfb0bdfc268d667bf325603bb2ae79b167499d04d007",
     "tools/inventory_source.py": "7e24b80d53275bd890080b88cd7f0869a768afe363f1135f0ebb075abc122817",
-    "tools/sync_code.py": "4a80aaf7162a9ed1d954069a27ab22e97b2de1ec2a9123823e76dc2b53ceab1e"
+    "tools/sync_code.py": "4a80aaf7162a9ed1d954069a27ab22e97b2de1ec2a9123823e76dc2b53ceab1e",
+    "review/browser.json": "7ddf05ad38dc1790cf743178beb090f01385807caab2a58345627e6ba7aa965a"
   },
   "evidence": {
     "previous_completed_review": "review/history/polish-v1-validation.json",
@@ -154,6 +155,13 @@
       "previous_sha256": "b61d55d39174999815709d3f844089adab69f5e02a1d8ef3c4529a13d341e556",
       "current_sha256": "013f706974f2bd767838b4f22de152e4dbbd2ba80b126e63bf453c63eb6db214",
       "reason": "I028 snapshot annotation; production recorded separately"
+    },
+    {
+      "issue": "I032",
+      "record": "review/browser.json",
+      "previous_sha256": "1aa6f6493d0d5ba00316bcbb217c70e53c89e4fc6e2cc4fefd7f030a496102f6",
+      "current_sha256": "7ddf05ad38dc1790cf743178beb090f01385807caab2a58345627e6ba7aa965a",
+      "reason": "绑定当前 74 页离线与 no-JS 验收；保留历史迁移及生产记录"
     }
   ],
   "production_record": {
@@ -162,5 +170,21 @@
     "sha256": "3d2267f581a081d63c6513c821bb4969dfb1842c48dc9d85ad48a04ab3f17929",
     "release_id": "20261017T174039",
     "scope": "历史实机发布记录；不代表 I032 新代码已部署"
+  },
+  "final_assessment": {
+    "issue": "I032",
+    "repository_record": "docs/final-assessment-evidence.json",
+    "sha256": "ec9475755e3c780b4b3f3933d1c9729416f9dbd98854b491207540e052f3ed00",
+    "release_id": "20261017T210828",
+    "public_html_pages": 14,
+    "js_views": 56,
+    "no_js_views": 28,
+    "external_requests": [],
+    "report": {
+      "source": "tmp/reading-notes-migration/browser/all/report.json",
+      "snapshot": "tmp/final-assessment/evidence/browser.json",
+      "sha256": "1ec6d5fe6b18738cf15fd73abd9c86cd990d6bd202f5f9c0d5c80ba0f41d9eed"
+    },
+    "visual_scope": "Automated whole-site acceptance; targeted new measure content and auxiliary-page visual checks recorded separately"
   }
 }

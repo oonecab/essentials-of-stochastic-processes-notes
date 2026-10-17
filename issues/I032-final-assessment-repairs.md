@@ -1,6 +1,6 @@
 # I032：最终评估工作单修复
 
-日期：2026-10-17。状态：执行中。依据：项目所有者提供的《Reading Notes 最终评估与修复工作单》。负责人：Codex。
+日期：2026-10-17。状态：仓库修复与本地验收完成；生产运维验收待执行。依据：项目所有者提供的《Reading Notes 最终评估与修复工作单》。负责人：Codex。
 
 按工作单顺序修复发布耐久性、journal、全部公开 HTML 的离线契约、DOM parity、动态页数、发布权限、证据关系及测度书前四章。服务器 P0-3 按最新指令仅交付运维命令与验收标准，不使用密码；实机状态继续以 I029–I031 已发生的操作记录为历史证据。旧 Weiss 独立部署已按 I031 退役，保留对象为 Reading Notes 当前版本与首次迁移回滚单元。
 
@@ -9,3 +9,5 @@
 关联 [P032](../plan/P032-final-assessment-repairs.md)、[T032](../test/T032-final-assessment-repairs.md)、[M032](../milestone/M032-final-assessment-repairs.md)。行为修改先补失败回归，输出保存在忽略目录 `tmp/final-assessment/`。部署脚本、构建与教材分批提交；教材的 P0-4/P1-7/P1-8/P1-9/P1-10 各项独立提交。
 
 文档影响：部署契约、权限与服务模板同步 deploy/、TECH、环境登记；构建契约同步根 README 与 Astro 编写说明；教材条件与 CLI 规则仍由受控正文/书级程序说明维护，更新规则索引、来源和审阅记录。历史证据不覆盖，新增验收只声称实际执行范围。
+
+最终结果见[修复报告](../docs/final-assessment-report.md)及[哈希证据](../docs/final-assessment-evidence.json)。54 页 parity、74 页浏览器矩阵、全仓 16 项命令及 21 项发布演练通过；修订后的教材另作具体内容读回。服务器 P0-3、权限模板应用及新版本上线由运维按交接执行，整体生产验收未在本问题单中关闭。

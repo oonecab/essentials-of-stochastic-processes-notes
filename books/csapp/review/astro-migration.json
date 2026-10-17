@@ -1,0 +1,480 @@
+{
+  "schema_version": 1,
+  "book": "csapp",
+  "recorded_at_utc": "2026-10-17T08:55:43.296334+00:00",
+  "status": "Go",
+  "scope": "Astro 静态迁移；原正文、数学、代码和历史内容审阅保持。",
+  "baseline_ref": "b2aeff3",
+  "pages": 14,
+  "counts": {
+    "exercises": 419,
+    "self_checks": 36,
+    "statements": 114,
+    "mathml": 656,
+    "svg": 50
+  },
+  "source_bytes": 2717265,
+  "output_bytes": 2812864,
+  "js_bytes": 88830,
+  "max_js_ratio": 1.10251954821894,
+  "parity_differences": [],
+  "external_requests": [],
+  "script_additions": {
+    "csapp/notes/book_overview.html": [
+      {
+        "name": "deep-link-settle",
+        "bytes": 590,
+        "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+        "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+      }
+    ],
+    "csapp/notes/chapter01_tour.html": [
+      {
+        "name": "deep-link-settle",
+        "bytes": 590,
+        "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+        "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+      }
+    ],
+    "csapp/notes/chapter02_information.html": [
+      {
+        "name": "deep-link-settle",
+        "bytes": 590,
+        "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+        "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+      }
+    ],
+    "csapp/notes/chapter03_machine_level.html": [
+      {
+        "name": "deep-link-settle",
+        "bytes": 590,
+        "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+        "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+      }
+    ],
+    "csapp/notes/chapter04_architecture.html": [
+      {
+        "name": "deep-link-settle",
+        "bytes": 590,
+        "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+        "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+      }
+    ],
+    "csapp/notes/chapter05_optimization.html": [
+      {
+        "name": "deep-link-settle",
+        "bytes": 590,
+        "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+        "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+      }
+    ],
+    "csapp/notes/chapter06_memory.html": [
+      {
+        "name": "deep-link-settle",
+        "bytes": 590,
+        "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+        "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+      }
+    ],
+    "csapp/notes/chapter07_linking.html": [
+      {
+        "name": "deep-link-settle",
+        "bytes": 590,
+        "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+        "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+      }
+    ],
+    "csapp/notes/chapter08_exceptional.html": [
+      {
+        "name": "deep-link-settle",
+        "bytes": 590,
+        "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+        "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+      }
+    ],
+    "csapp/notes/chapter09_virtual_memory.html": [
+      {
+        "name": "deep-link-settle",
+        "bytes": 590,
+        "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+        "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+      }
+    ],
+    "csapp/notes/chapter10_system_io.html": [
+      {
+        "name": "deep-link-settle",
+        "bytes": 590,
+        "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+        "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+      }
+    ],
+    "csapp/notes/chapter11_network.html": [
+      {
+        "name": "deep-link-settle",
+        "bytes": 590,
+        "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+        "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+      }
+    ],
+    "csapp/notes/chapter12_concurrency.html": [
+      {
+        "name": "deep-link-settle",
+        "bytes": 590,
+        "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+        "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+      }
+    ],
+    "csapp/notes/preface.html": [
+      {
+        "name": "deep-link-settle",
+        "bytes": 590,
+        "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+        "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+      }
+    ]
+  },
+  "js_views": 56,
+  "no_js_views": 14,
+  "visual_review": "逐页查看 14 页桌面与 390 首屏，12 章末题及 no-JS 原生折叠截图，并查看第 9 章 1440/1024 原图：目录、题干、公式、代码及局部滚动区域可读。真实 56 个 JS 和 14 个 no-JS 视图通过。追加定位岛修复展开后页尾深链位置，原脚本保持。",
+  "evidence_sha256": {
+    "tmp/reading-notes-migration/parity/csapp.json": "1d486e65f2cfbe8e3e4c3b648a984801776a9a0bae60e514ce5a670328e41b71",
+    "tmp/reading-notes-migration/browser/csapp/report.json": "8e278836845955e47e1fdd9020fcad884ed78ad7e2fa29ecebc9879229916cc1",
+    "tmp/project-check/20261017T163622-tcal2v6u/report.json": "5157f061a5a1fefca69c5d89c33bab26cfe6fb9f9c16bc9eb7b8f7864e2c3483"
+  },
+  "screenshots": [
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_book_overview-1800-top.png",
+      "sha256": "fde3b8b656d742586258cada6ef5331f068bd34912112fd93c666d8ec4ff98ca"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_book_overview-1440-top.png",
+      "sha256": "e964ebcae7f4231a4a0fcc8a5094ec854fe8dec8194fa7a95015d7a0f2a0b8d3"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_book_overview-1024-top.png",
+      "sha256": "116ff31c354ffe87eeb6f7bdf7ab2129ba29a806c595d6e398b6eb94487cc10a"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_book_overview-390-top.png",
+      "sha256": "1e32c32673e65aae72b798617849a9b974b9f4689cb464ea0eeed0a627839665"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter01_tour-1800-top.png",
+      "sha256": "b9174a4d597d0db3997184ec1e6428e03174bd393eefe9ce73bf9adc084f2d33"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter01_tour-1440-top.png",
+      "sha256": "d8a94c0162144ef9809d67b8b4e18d63e2f165a907487a0249262e2a6cad1ae5"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter01_tour-1024-top.png",
+      "sha256": "943de97981f47e07fced52a1d358ef2b50f1a1062e0bd6e8e17bd14d0d57548a"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter01_tour-390-top.png",
+      "sha256": "476fc683ceb3762f471c1fe9406c396596a72957736621ba4ea26a7ccdac3717"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter01_tour-390-answer.png",
+      "sha256": "64d0863620c7c09e4c3acac4a6495ecc46264c3c452f36be6a7660c7a09c94ae"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter02_information-1800-top.png",
+      "sha256": "1349ab4b0a7eef6f125df07fe8334a97372c9821fd8ec984094c72be9f18ca44"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter02_information-1440-top.png",
+      "sha256": "562cf910a04638943e59b34cac5af060f208b3ed6803ecb8239490576d529538"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter02_information-1024-top.png",
+      "sha256": "31890424d4575aac9fafdf6b48bef3f4023f1334ae35c88ac1fae44072e1e1b4"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter02_information-390-top.png",
+      "sha256": "218ad66ec58497910d097744751860b7528daffb6d2ee3f662427563b7f537a8"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter02_information-390-answer.png",
+      "sha256": "ecf81b743f91b3f99d390f94528c804047203f38119445c7b3aa8a90a6ec6287"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter03_machine_level-1800-top.png",
+      "sha256": "0ce93c8ad283b5d6cb61458e8bcf63bcd433c70fc4cf217e2607ba468e9bbcb9"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter03_machine_level-1440-top.png",
+      "sha256": "3e51f212bf90d85333afcb5c119702d5146a357b55c88d63d0e868ab5c1c6045"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter03_machine_level-1024-top.png",
+      "sha256": "ab43ed9bad6df4af464452bcb94c28e1f66ac0a44b90ac8f27bb1448aaa5a27f"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter03_machine_level-390-top.png",
+      "sha256": "226f4fb427dd4b9d3fa69fcb4e1584aad579e7b7902d2b1626e1b398faf6d2c6"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter03_machine_level-390-answer.png",
+      "sha256": "79daf8379593473a07bd9b22e3f7ed0c9b1e9791e2f33a98845675cba5b0c972"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter04_architecture-1800-top.png",
+      "sha256": "d14e3e993c6fd41c6721d1be0c72f0935301f288ca8ee76b1456d415c8438dfb"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter04_architecture-1440-top.png",
+      "sha256": "4e935ea4806563bcec73a78a6bffc8c12d5bd0a875559223cc0ee5ea907837cd"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter04_architecture-1024-top.png",
+      "sha256": "a5b25630bad7cd6b1b60e5bd203ec8348d0459205fd51d81037b45d4bd44ac08"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter04_architecture-390-top.png",
+      "sha256": "0201a9d5bd1d0640006172c503955b817b21962f43184a6d9a6b78c2fb010cf9"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter04_architecture-390-answer.png",
+      "sha256": "9da17bf41bb0acc6f03053ca53ffb7828ccb4a7151f7e3e02bb95f495ea75b59"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter05_optimization-1800-top.png",
+      "sha256": "7115394151660388b9d7caa75b5cf1d5b32795fe3e0e777cd7dd4068c86629ca"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter05_optimization-1440-top.png",
+      "sha256": "e599b81e51e23036c359ea590641e38b76e006ad6ddf49370895a1ea16d66ba9"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter05_optimization-1024-top.png",
+      "sha256": "b9f2a40d7041779f26ba2140e29635bee44eb2b06fe5174c78e56f160ae815f8"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter05_optimization-390-top.png",
+      "sha256": "94a0149474fd3a879b07cf296f124a38c734169ac6ad5f9c2f376d7a955645b4"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter05_optimization-390-answer.png",
+      "sha256": "ad07fd87ec0e291747126f6c9b6a98cc3c5e87788ac85012aab7087ccd9fe91f"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter06_memory-1800-top.png",
+      "sha256": "14356f3c709037d8f39b682a9634e53911aed2a88a6f6b9c379c1006d78bb587"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter06_memory-1440-top.png",
+      "sha256": "85f90e8f245117152f768cde475e7c1a916d16e7a049b03ee7e399299dbd4e8e"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter06_memory-1024-top.png",
+      "sha256": "2c86f047e8dea1d5bfa9efbdfb4a5c2b1baf073b933252c79566b8fc994f53ce"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter06_memory-390-top.png",
+      "sha256": "5d23001bf08d9e53891865c692703062843e2d2f3b1ee58ee96cc7f60270e411"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter06_memory-390-answer.png",
+      "sha256": "2bf43e6591c84e57211ce810276d48b57004a8412caf1248c156a0f844700fbe"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter07_linking-1800-top.png",
+      "sha256": "6b785fb286bbdb6b733b3d098ba8d70b743687eba11c5cde4c6d2dff4ce5a2d0"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter07_linking-1440-top.png",
+      "sha256": "b8cbabeb9eaa5d8b48f37cb209902c659a735e8d1544671f1a27f6f168a1e89e"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter07_linking-1024-top.png",
+      "sha256": "27a06b935ccdad752b53e20b9cc78e014d761dae5571007b4fcd2b8fb9db990c"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter07_linking-390-top.png",
+      "sha256": "3573a768adc730a687dd036289befa3cef37f6b9d2faca7e8e38bdd9f2fd991e"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter07_linking-390-answer.png",
+      "sha256": "60190b86952cf0a77c1a2724e4dfa6a236e2b2ecae33814a900e2553ee3ce75e"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter08_exceptional-1800-top.png",
+      "sha256": "c6a84c73c8f724c1c6d0260b824e05218f49a379a05d07c691761de784af8230"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter08_exceptional-1440-top.png",
+      "sha256": "63757f861eda3de2091ed26ab7f4406d154112add77438b4eb717cc701ba96e5"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter08_exceptional-1024-top.png",
+      "sha256": "6eccc7f22fe78939c8bbbc25c044b73a33ffb7c48ed26a857b0a58943d6f3588"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter08_exceptional-390-top.png",
+      "sha256": "2b6c891063b3a5647e5be2f3e3aba1dc92651ae1ed798af1532520877ea2aaa0"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter08_exceptional-390-answer.png",
+      "sha256": "98c79aa73a7b899f78502d6d03e016c259aea49d86ae682172bfe50e61548175"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter09_virtual_memory-1800-top.png",
+      "sha256": "3fece324e8e59d680d6d74dedf3de27113806ee205a432b4fdabc95989ea4014"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter09_virtual_memory-1440-top.png",
+      "sha256": "c6ad223d8a97dd5ab8ee4558d03b080d6232f9a0ed405f397c9a4d2c71fc09de"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter09_virtual_memory-1024-top.png",
+      "sha256": "4a90f54d9bb7d8eca2b615c417b8ea3cdcb41ce4ec0bbfcef1b8d2e17ff67b60"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter09_virtual_memory-390-top.png",
+      "sha256": "2a7691ea36bbb8de526f90da3cf0d4fd1ee82b69cc71125231ad65d5462924e9"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter09_virtual_memory-390-answer.png",
+      "sha256": "896bada07de69ec986adb554b766618955418e9d752b1b7a61420d6bdf54ea86"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter10_system_io-1800-top.png",
+      "sha256": "4e14ff9f6545cac51a8fb642f76cdd9a77a70ef08f6ce87fe9bdf590b9e3e6e3"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter10_system_io-1440-top.png",
+      "sha256": "bcb5d3a567ec56f0f1b9c75b2b8b4d58902172b4c717614a6e3bdbf3826fd691"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter10_system_io-1024-top.png",
+      "sha256": "99cec3901aa74c151c361a2e68ff206991ac42d2bea5845a77ba988f1c311e0e"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter10_system_io-390-top.png",
+      "sha256": "c6c4c079e29063ba7ab04e75c8c644ae50e00a3f196e31d05ada133d86ce97f4"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter10_system_io-390-answer.png",
+      "sha256": "84c948946bec7d5f7ce2a584d5a8023e92b96b860c9a71c7155dab4ecae77bad"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter11_network-1800-top.png",
+      "sha256": "21ba6ceb0e75fd3dedaf7613b194e927ed121d477dd27277650e37cb5e816d19"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter11_network-1440-top.png",
+      "sha256": "c47c437d1b3328b6936bcfc6c358e4fae74dce7c9efb0bd9b01df9350e510fd3"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter11_network-1024-top.png",
+      "sha256": "70a1b9aa30af7a51ad1c61ae025d2d4fd4ade582da655e40004849d66d8df913"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter11_network-390-top.png",
+      "sha256": "a1c1dd1ad4ec8a9b21c78f72c089143dfcdee151f129bf585f25c8033a118dbc"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter11_network-390-answer.png",
+      "sha256": "6fa2f7e16293828a35a99af0501cdd519e65718ba9a749de88f4c840b3932545"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter12_concurrency-1800-top.png",
+      "sha256": "0ca15ef05df2bac36c105073600782fea96118566a2a8d69913f6ff53b863b6b"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter12_concurrency-1440-top.png",
+      "sha256": "b8c6321ba2de652b416ea2d9f09dc7cc472559a3b56cf22b058f3e8acc00c506"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter12_concurrency-1024-top.png",
+      "sha256": "e17c3cd1939e721f811e245dab58478069c2b81faccc93974741c74c2dec08e9"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter12_concurrency-390-top.png",
+      "sha256": "c428d3bcf6c43da17db164c9e066681bda8312e882be8d56209b141f992bfc38"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter12_concurrency-390-answer.png",
+      "sha256": "421b496ef1ec75cffc6533cf2804fb8ed87fd03b99a347e421236820125da426"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_preface-1800-top.png",
+      "sha256": "47ff281478f5a85b1f3dca1a54925c3bd51e0f5ec4ecd14bb3f7286dbe1b5b75"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_preface-1440-top.png",
+      "sha256": "1165f7e4e1b20bb79617427e961601d50c0f6c4c14d84f1b49f620dfa037df68"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_preface-1024-top.png",
+      "sha256": "9513da76efa1a5474c90df416fec43c721c1684acb4460c19b13bd84ab1ebdb1"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_preface-390-top.png",
+      "sha256": "b8673e72f50c83c41f36be34a1ee0cbabb8b9921b4796c9554b2a0220d5aec24"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_book_overview-no-js.png",
+      "sha256": "399ea9e2e90689fed2b18557965069f85ed23a03d588d3a32e1b74927838aa0f"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter01_tour-no-js.png",
+      "sha256": "7ccbd7fff071a2422e08afdb07fda9223992693863a4f3f1c8d3c99e07916104"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter02_information-no-js.png",
+      "sha256": "839d17ebb871bd02a8da6ca24c815ff9fb30cac73e7767780ac5213c53666a2e"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter03_machine_level-no-js.png",
+      "sha256": "4754755a5610ddd8069210177b4e420b933c121b478d27b25daf237ad9a01c0c"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter04_architecture-no-js.png",
+      "sha256": "9d6a630ddc037cb04b354ea4755f75741a8063ff6d4f61fc72301711be409b76"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter05_optimization-no-js.png",
+      "sha256": "a915503b74f05455d052ca987b379cc99ff85581fd2e1c9bc8b1d3a772dd523b"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter06_memory-no-js.png",
+      "sha256": "b596ba632f44faad3f1f8d9cfba8ba4c32fe1dad476e2376bf0c6256732e2dc8"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter07_linking-no-js.png",
+      "sha256": "0ef33fac3a87acfb5039348e28b3ea1734ddd3e5ea4fafe4d47a302ae3caa700"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter08_exceptional-no-js.png",
+      "sha256": "676f6749905adf2a84c420799a29d9d3528d5be749eeb72d943e6f3c181d69bc"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter09_virtual_memory-no-js.png",
+      "sha256": "8d13aee3f44266a0b6337e7e38d743c2d5a0f1bc2f1b720344dd19de92f1fe3a"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter10_system_io-no-js.png",
+      "sha256": "56250b6af1450171d4e5cf116771b2417285501675a5bdd3e1a7b135d57a2705"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter11_network-no-js.png",
+      "sha256": "c0e7de4790eb57330d5276373b1959a1a0f76da7bb721898293a522a8a2313d9"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_chapter12_concurrency-no-js.png",
+      "sha256": "4fff600853c13d3535dd3bf697551e50e4bf6bbead333c5e43a0a536edc38c40"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/csapp/csapp_notes_preface-no-js.png",
+      "sha256": "8ee3080b5cde1a663e83cc30d8e2a36e3743ffb4c83554c7a0e52322b16b2c48"
+    }
+  ],
+  "open_findings": [],
+  "boundaries": [
+    "实体手机和真实读屏器未验证",
+    "本次只做本地迁移；生产未部署",
+    "原数学与程序审阅的历史范围不因迁移验收而扩大"
+  ]
+}

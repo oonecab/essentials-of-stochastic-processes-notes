@@ -1,0 +1,1655 @@
+---
+{
+  "book": "csapp",
+  "chapter": 12,
+  "title": "第12章：并发编程 · CS:APP 中文伴读",
+  "printed_start": 1007,
+  "printed_end": 1076,
+  "pdf_start": 1008,
+  "pdf_end": 1077,
+  "exercise_range": [
+    "ex-12-1",
+    "ex-12-39"
+  ],
+  "statement_count": 4,
+  "source_manifest": "books/csapp/notes/source_manifest.json",
+  "route": "csapp/notes/chapter12_concurrency.html",
+  "legacy_path": "books/csapp/notes/chapter12_concurrency.html",
+  "original_sha256": "bc85d93c6859d8981a6e9668b7f1a4e4779397cdcbf13e4461c94eb91dc24e14",
+  "source_scope_note": "章节范围按来源清单；总览跨全书，空范围表示不适用；序言的分段位置以原 HTML 来源说明为准。"
+}
+---
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第12章：并发编程 · CS:APP 中文伴读</title><style><!-- RN:include styles/5555d6ddbd6230a0d13e.css --></style></head><body><a class="skip-link" href="#top">跳到正文</a><div class="reading-layout"><aside class="chapter-sidebar"><details class="toc-panel" id="toc-panel" open><summary>本章目录</summary><nav class="chapter-toc" id="chapter-toc" aria-label="本章目录"><a class="toc-home" href="book_overview.html">← 全书地图</a><ul><li><a href="#top">本章导读</a></li><li><a href="#s12-1">12.1 · 用进程隔开每个客户</a></li><li><a href="#s12-2">12.2 · 让一次就绪只推进有限一步</a></li><li><a href="#s12-3">12.3 · 共享进程，但单独管理执行与回收</a></li><li><a href="#s12-4">12.4 · 先找到对象，再判断是否需要同步</a></li><li><a href="#s12-5">12.5 · 同步必须保护不变量并安排等待</a></li><li><a href="#s12-6">12.6 · 先消除共享写，再测量并行收益</a></li><li><a href="#s12-7">12.7 · 把安全性、生存期、公平性和死锁分开</a></li><li><a href="#s12-8">12.8 · 把并发设计落到资源与状态</a></li><li><a href="#experiment">可执行实验</a></li><li><a href="#source-programs">题用原书程序</a></li><li><a href="#exercises">本版39道题</a></li><li><a href="#self-check">原创自测</a></li></ul></nav></details></aside><main id="top"><header><p class="overline">CS:APP · 第三版 GLOBAL EDITION · PART III</p><h1>第12章：并发编程</h1><p class="intro">从一个慢客户出发，把进程、事件循环与线程放进同一条资源生命周期：创建、共享、等待、唤醒、完成与回收。</p><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1008">来源：印刷 1007—1076 页 / PDF 1008—1077 页</a></p><p class="chapter-nav"><a href="book_overview.html">全书地图</a><a href="chapter11_network.html">← 第11章：网络编程</a><a href="book_overview.html">回到全书地图 →</a></p></header><details class="statement-index" id="source-index"><summary>本页原书摘录 · 4 处</summary><ul class="statement-links"><li><a href="#classic-12-shared">共享的判据是实例</a></li><li><a href="#classic-12-speedup">先定义比较的工作量</a></li><li><a href="#classic-12-reentrant">调用者也是条件的一部分</a></li><li><a href="#classic-12-lock-order">锁的统一顺序</a></li></ul></details><section id="s12-1"><h2>12.1 · 用进程隔开每个客户<span class="english-title" lang="en">Concurrent Programming with Processes</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1010">来源：印刷 1009—1012 页 / PDF 1010—1013 页</a></p><p>第11章迭代echo在accept之后一直服务同一客户。客户A只连上却不发完一行，客户B即使已经准备好也无法得到服务。本章从这个具体困难出发：让A等待I/O的时间与B的处理重叠。并发是逻辑流在时间上重叠；并行还要求它们确实在不同计算资源上同时执行。</p><h3 id="ss12-1-1">12.1.1 · 让每条连接有一个进程<span class="english-title" lang="en">A Concurrent Server Based on Processes</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1011">来源：印刷 1010 页 / PDF 1011 页</a></p><p>父进程保留listenfd=3，accept得到connfd=4。fork后两张描述符表都引用同一个连接文件表项；父关4、子关3，子独占服务职责。第二次accept可以复用父进程的4，它与第一个孩子的4属于不同描述符表，数值相同不冲突。孩子服务后close并exit，父进程持续accept。</p><figure><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 120" role="img" aria-label="连接引用计数：accept、fork、两次close"><title>连接引用计数：accept、fork、两次close</title><rect class="n" x="10.0" y="25" width="170.0" height="70" rx="4"/><text x="95.0" y="51">accept</text><text class="hint" x="95.0" y="77">引用 0 → 1</text><text x="188.0" y="65">→</text><rect class="n" x="195.0" y="25" width="170.0" height="70" rx="4"/><text x="280.0" y="51">fork</text><text class="hint" x="280.0" y="77">引用 1 → 2</text><text x="373.0" y="65">→</text><rect class="n" x="380.0" y="25" width="170.0" height="70" rx="4"/><text x="465.0" y="51">父 close</text><text class="hint" x="465.0" y="77">引用 2 → 1</text><text x="558.0" y="65">→</text><rect class="n" x="565.0" y="25" width="170.0" height="70" rx="4"/><text x="650.0" y="51">子 close</text><text class="hint" x="650.0" y="77">引用 1 → 0</text></svg></div><figcaption>连接引用计数：accept、fork、两次close</figcaption></figure><p>服务器必须用waitpid循环回收所有已退出孩子，因为标准信号可能合并，一次SIGCHLD不对应恰好一个孩子。处理函数保存恢复errno，只调用异步信号安全的waitpid。12.35的维护源在父进程安装回收函数，孩子关闭监听描述符，父关闭已接入描述符；有限连接实验结束时再等待尚在运行的孩子。</p><h3 id="ss12-1-2">12.1.2 · 隔离让共享必须显式发生<span class="english-title" lang="en">Pros and Cons of Processes</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1012">来源：印刷 1011 页 / PDF 1012 页</a></p><p>两个孩子各有自己的可写虚拟空间，局部计数器不会自然合成总数；需要管道、共享内存或其他IPC。好处是一个孩子写错用户空间通常不直接覆写另一个孩子的堆；代价是进程创建、调度与IPC。共享的是文件表等内核对象，不是“fork后父子任何东西都私有”。</p><p>本版12.2把删除父进程Close(connfd)称为不会泄漏，与本节正文冲突。父进程长期运行时每条连接都留下引用，孩子退出也无法让引用归零；只有父进程最终退出时内核才回收。这一条件在题解保留并明确校注。</p><details class="reading-notes" id="notes-s12-1" data-notes-for="s12-1"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">资源</span><h3>父子各关自己的一份</h3><p>fork复制描述符表项；底层连接引用仍共享。父进程关连接，子进程关监听，才能把各自责任落实。</p></div><div class="annotation-card"><span class="annotation-kind">边界</span><h3>回收是持续工作</h3><p>有限实验在结束前回收；长期服务器还须及时回收，不能等待父进程退出。</p></div></div></details></section><section id="s12-2"><h2>12.2 · 让一次就绪只推进有限一步<span class="english-title" lang="en">Concurrent Programming with I/O Multiplexing</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1014">来源：印刷 1013—1021 页 / PDF 1014—1022 页</a></p><p>select把“先等键盘还是先等新连接”改成“等任意一个可读事件”。fd_set是输入输出参数：输入集合表示感兴趣的fd；返回集合只保留本次已就绪fd，所以每轮必须从持久read_set重新复制。第一个参数是最大fd+1，而不是集合中的fd数量；EOF也属于可读，因为read可立即返回0。</p>
+<div class="explanation" id="explain-s12-2"><p>例如兴趣集合为 <code>{0,4,9}</code>，本轮只有 4 可读，select 返回的就绪集合便为 <code>{4}</code>。若下轮直接沿用这个结果作为输入，0 和 9 就被无意间取消监听；所以要从持久兴趣集合重新复制。参数应是 <code>9+1=10</code>，因为内核需要检查编号 0 到 9 的位置，而不是只检查集合中有几个元素。</p></div>
+<h3 id="ss12-2-1">12.2.1 · 把每条连接改写为可暂停的状态机<span class="english-title" lang="en">A Concurrent Event-Driven Server Based on I/O Multiplexing</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1017">来源：印刷 1016 页 / PDF 1017 页</a></p><p>每个连接至少保存fd、已收字节、解析位置、待发字节与发送偏移。A发“he”后没有换行：状态变成输入缓冲2 B，回到select；B发“ok\n”后马上完成一行并进入输出状态。下次A发“llo\n”时，把它拼成“hello\n”。socket可读只保证某次读取能推进，不保证rio_readlineb能收齐整个应用层消息。</p><figure><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 435" role="img" aria-labelledby="event-loop-state-title" style="min-width:680px;width:100%;height:auto"><title id="event-loop-state-title">非阻塞 echo 连接的等待、发送与结束分支</title><defs><marker id="event-loop-state-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 Z" fill="#7b8f85"/></marker></defs><rect x="20" y="170" width="220" height="75" rx="4" fill="#fffefa" stroke="#285a4e" stroke-width="1.3"/><text x="130.0" y="203.5" style="text-anchor:middle;font-size:16px">等待可读</text><text x="130.0" y="226.5" style="text-anchor:middle;font-size:14px">非阻塞 read，保存新字节</text><rect x="280" y="170" width="200" height="75" rx="4" fill="#fffefa" stroke="#285a4e" stroke-width="1.3"/><text x="380.0" y="203.5" style="text-anchor:middle;font-size:16px">检查持久输入</text><text x="380.0" y="226.5" style="text-anchor:middle;font-size:14px">完整行、EOF 与剩余字节</text><path d="M240 207 H280" fill="none" stroke="#7b8f85" stroke-width="1.6" marker-end="url(#event-loop-state-arrow)"/><path d="M380 170 V100 H130 V170" fill="none" stroke="#7b8f85" stroke-width="1.6" marker-end="url(#event-loop-state-arrow)"/><text x="252" y="88" style="text-anchor:middle;font-size:14px">未完整且未 EOF：回到 select</text><rect x="530" y="170" width="210" height="75" rx="4" fill="#fffefa" stroke="#285a4e" stroke-width="1.3"/><text x="635.0" y="203.5" style="text-anchor:middle;font-size:16px">等待可写并 write</text><text x="635.0" y="226.5" style="text-anchor:middle;font-size:14px">发送本行，保存已发偏移</text><path d="M480 207 H530" fill="none" stroke="#7b8f85" stroke-width="1.6" marker-end="url(#event-loop-state-arrow)"/><text x="507" y="153" style="text-anchor:middle;font-size:14px">完整行 / EOF 尾部</text><path d="M740 207 H752 V45 H635 V170" fill="none" stroke="#7b8f85" stroke-width="1.6" marker-end="url(#event-loop-state-arrow)"/><text x="600" y="32" style="text-anchor:middle;font-size:14px">尚未发完：再等可写</text><rect x="530" y="340" width="210" height="65" rx="4" fill="#fffefa" stroke="#285a4e" stroke-width="1.3"/><text x="635.0" y="368.5" style="text-anchor:middle;font-size:16px">本段发送完毕</text><text x="635.0" y="391.5" style="text-anchor:middle;font-size:14px">消费对应输入，继续检查</text><path d="M635 245 V340" fill="none" stroke="#7b8f85" stroke-width="1.6" marker-end="url(#event-loop-state-arrow)"/><text x="685" y="297" style="text-anchor:middle;font-size:14px">本段发完</text><path d="M530 372 H510 V270 H430 V245" fill="none" stroke="#7b8f85" stroke-width="1.6" marker-end="url(#event-loop-state-arrow)"/><rect x="280" y="340" width="200" height="65" rx="4" fill="#fffefa" stroke="#285a4e" stroke-width="1.3"/><text x="380.0" y="377.5" style="text-anchor:middle;font-size:16px">关闭连接</text><path d="M380 245 V340" fill="none" stroke="#7b8f85" stroke-width="1.6" marker-end="url(#event-loop-state-arrow)"/><text x="287" y="300" style="text-anchor:middle;font-size:14px">EOF 且无剩余数据</text></svg></div><figcaption>按本页逐行 echo 的状态划分绘制。输入未形成完整行时回到事件循环；已有完整行则直接准备输出，不必等待新一次 socket 可读。短写或 EAGAIN 保留待发数据和偏移，随后再等可写；读到 EOF 时，缓冲为空可直接关闭，有尾部则先发完再关闭。EINTR 重试及其他错误清理从图中省略，详见实现。</figcaption></figure><p>原书图12.11先把clientrio[i]复制到局部rio，却没有写回它；RIO预读缓冲的消费位置会丢失。另外，多行已进入RIO用户缓冲而socket暂时不可读时，单靠select不会发现剩余行。本页echo实现直接维护持久字节缓冲；每轮最多发送一个客户的一行，并在准备fd集合前处理已缓冲完整行。read/write都使用非阻塞fd并保存短写进度，连接fd达到FD_SETSIZE会拒绝，避免FD_SET越界。</p><h3 id="ss12-2-2">12.2.2 · 显式调度提高控制，也增加状态负担<span class="english-title" lang="en">Pros and Cons of I/O Multiplexing</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1022">来源：印刷 1021 页 / PDF 1022 页</a></p><p>同一线程完成一段状态更新后才轮到下一个连接，因此这些回调之间无需再为普通局部表加线程锁；它也能决定轮询次序与每轮预算。代价是栈上的“函数调用到一半”必须转成显式状态。若一个回调做阻塞磁盘读取、长计算或阻塞写入，其他连接仍会停住。</p><p>单线程事件循环只能在一个核上执行这一条CPU控制流；多事件循环进程、线程池或异步I/O可以进一步组合。本页select HTTP模式将网络读写拆成非阻塞状态，内容生成仍同步读取最多64 KiB本地普通文件，所以并发验收覆盖慢网络客户，不把它报告成全异步磁盘服务器。</p><details class="reading-notes" id="notes-s12-2" data-notes-for="s12-2"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">先猜</span><h3>可读是否等于一整行？</h3><p>对端只发一个字节，select已经可读。第二次read若等换行仍会堵住所有客户。</p></div><div class="annotation-card"><span class="annotation-kind">状态</span><h3>用户缓冲也是事件源</h3><p>一口气读入两行后，第二行已在用户内存；不能只等内核再次报告可读。</p></div></div></details></section><section id="s12-3"><h2>12.3 · 共享进程，但单独管理执行与回收<span class="english-title" lang="en">Concurrent Programming with Threads</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1022">来源：印刷 1021—1028 页 / PDF 1022—1029 页</a></p><p>线程像进程一样由内核调度，又像同一事件循环里的流一样共享地址空间。它省下显式IPC的同时，也把“哪个线程可以写这个对象、谁负责结束它的生存期”变成应用必须回答的问题。</p><h3 id="ss12-3-1">12.3.1 · 线程之间是同伴关系<span class="english-title" lang="en">Thread Execution Model</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1023">来源：印刷 1022 页 / PDF 1023 页</a></p><p>线程有自己的寄存器现场、程序计数器和栈，但共享整个进程的地址空间及打开的文件描述符。创建者不天然拥有子线程的全部生命周期权限：可join的线程由指定同伴回收，所有线程都必须遵守对象访问约定。原文把TID说成整数是Linux教学视角；可移植Pthreads的pthread_t是抽象类型，应以pthread_equal比较，不能假定可用%d打印。</p><h3 id="ss12-3-2">12.3.2 · 先从创建与等待配对开始<span class="english-title" lang="en">Posix Threads</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1024">来源：印刷 1023 页 / PDF 1024 页</a></p><p>最小程序的关键顺序是create → peer执行 → join返回 → main结束。线程入口类型是void *(*)(void *)；多个参数放在结构体中，返回值也可以指向明确由接收者释放的堆对象。Pthreads多数函数直接返回错误码，不能把非零返回值一律当作errno已设置。实验中的check(error)用返回码构造诊断。</p><h3 id="ss12-3-3">12.3.3 · 发布参数前完成初始化<span class="english-title" lang="en">Creating Threads</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1025">来源：印刷 1024 页 / PDF 1025 页</a></p><p>pthread_create成功后，新线程可能在创建者从该函数返回前就运行。先填写args[i].id，再把&amp;args[i]传入；直到join后才回收数组。这给每个线程稳定且不同的对象，避免共享循环变量i。create失败时根本没有新线程接管参数，调用者必须清理；服务器源中失败分支close并free连接对象。</p><h3 id="ss12-3-4">12.3.4 · 结束线程与结束进程不同<span class="english-title" lang="en">Terminating Threads</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1025">来源：印刷 1024 页 / PDF 1025 页</a></p><p>线程入口return或pthread_exit只结束调用线程；exit以及main中的return结束整个进程及其所有线程。因此创建后立即exit会让尚在sleep的同伴没机会输出。pthread_exit不是主线程等待其他线程再退出：调用线程当即结束，进程在仍有线程时继续运行；最后一个线程结束后进程结束。</p><p>pthread_cancel是取消请求，何时响应取决于取消状态、类型和取消点，不能当作立即强杀。取消可能留下应用锁或资源，必须设计cleanup。本文的有界服务器和tfgets采用协作结束、join及明确回收，避免依赖异步取消。</p><h3 id="ss12-3-5">12.3.5 · join既等待也回收<span class="english-title" lang="en">Reaping Terminated Threads</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1026">来源：印刷 1025 页 / PDF 1026 页</a></p><p>pthread_join(tid,&result)指定一个joinable线程，成功后才能安全读取它已完成写入的结果并回收参数区；不要同时让两个线程join同一个tid，也不要join自身。没有“任意一个线程”的Pthreads join接口，工作队列常用条件变量通知完成，再由拥有者明确回收。</p><h3 id="ss12-3-6">12.3.6 · 自动回收不代替资源所有权<span class="english-title" lang="en">Detaching Threads</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1026">来源：印刷 1025 页 / PDF 1026 页</a></p><p>detached线程结束时线程资源自动回收，不能再join。detach不会自动close连接或free用户分配的参数；它也不保证main会等待。原文说detached线程不能被其他线程“killed”不宜等同为禁止pthread_cancel：取消能力与join/detach状态不是同一个开关，而且只能对仍有效的tid操作。有限实验保留joinable线程，在交付结果前逐一join，便于证明所有请求已完成。</p><h3 id="ss12-3-7">12.3.7 · 把共享初始化也同步起来<span class="english-title" lang="en">Initializing Threads</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1027">来源：印刷 1026 页 / PDF 1027 页</a></p><p>pthread_once_t once=PTHREAD_ONCE_INIT；每个调用者先执行pthread_once(&once,init)。同一控制对象保证初始化例程只完成一次，其他调用者等初始化完成才继续。单独写if(!initialized){init(); initialized=1;}会让两个线程同时初始化互斥量；只把标志改volatile也不修复。静态PTHREAD_MUTEX_INITIALIZER则适用于本页固定的锁。</p><h3 id="ss12-3-8">12.3.8 · 把连接描述符的所有权交给线程<span class="english-title" lang="en">A Concurrent Server Based on Threads</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1028">来源：印刷 1027 页 / PDF 1028 页</a></p><p>主线程不能把反复被accept覆盖的connfd地址交给多个线程；即使数值是整数，指针指向的仍是同一个可变存储。原书为每个连接malloc一个int，线程先复制值再free参数，最后close连接。线程共享描述符表，所以主线程在移交后不能像fork方案那样再close同一个fd，否则工作线程会失去它或误碰复用后的连接。</p><p>本页C服务器把fd、root和proxy标志装入单独的connection；create成功后线程唯一负责close与free，失败则主线程负责。这个成功/失败分界就是所有权转移点。</p>
+<div class="explanation" id="explain-s12-3"><p>对比 fork 与线程的 close：fork 后父 fd 4 与子 fd 4 是两张表中的两条引用，父删掉自己那条，子那条还在；线程则共用一张表，主线程和工作线程说的 fd 4 指同一条表项，主线程 close 会直接删掉工作线程要用的引用。把连接交给线程，是移交这条引用的处理责任，不是像 fork 那样多得到一份可各自关闭的引用。</p></div>
+<details class="reading-notes" id="notes-s12-3" data-notes-for="s12-3"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">生存期</span><h3>参数不是只传一个地址</h3><p>地址对应的对象必须活到线程用完。create返回不能证明新线程已经读取参数。</p></div><div class="annotation-card"><span class="annotation-kind">回收</span><h3>join与detach二选一</h3><p>join负责明确收回；detach负责退出时自动回收。二者不替应用关闭socket或free参数。</p></div></div></details></section><section id="s12-4"><h2>12.4 · 先找到对象，再判断是否需要同步<span class="english-title" lang="en">Shared Variables in Threaded Programs</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1029">来源：印刷 1028—1031 页 / PDF 1029—1032 页</a></p><h3 id="ss12-4-1">12.4.1 · 私有栈不意味着别人不能通过指针访问<span class="english-title" lang="en">Threads Memory Model</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1030">来源：印刷 1029 页 / PDF 1030 页</a></p><p>每个线程栈通常由它自己使用，但栈位于共享的虚拟地址空间。main里char *msgs[2]若通过全局ptr发布给同伴，同伴就间接读到main的局部数组。只要对象存活且访问被正确同步，这种访问可以合法；如果main先pthread_exit，依赖其局部对象继续存活就不可靠。教学实现将数组保留到join之后。</p><h3 id="ss12-4-2">12.4.2 · 按存储期枚举实例<span class="english-title" lang="en">Mapping Variables to Memory</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1031">来源：印刷 1030 页 / PDF 1031 页</a></p><p>全局变量ptr只有一个实例；线程函数内static int cnt也只有一个实例，作用域限制名称在哪段代码可见，不会为每次调用复制存储。自动变量myid在每次线程调用里有独立实例；main的i只有main自己的那一个。把变量名与对象实例分开，才能讨论到底是哪两次访问发生冲突。</p><h3 id="ss12-4-3">12.4.3 · 多个线程引用同一个实例才叫共享<span class="english-title" lang="en">Shared Variables</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1032">来源：印刷 1031 页 / PDF 1032 页</a></p><div class="source-statement" id="classic-12-shared" data-source-kind="classic-passage"><h4>原文伴读 · 共享的判据是实例</h4><blockquote class="original-excerpt" lang="en"><p>We say that a variable v is shared if and only if one of its instances is referenced by more than one thread.</p></blockquote><div class="statement-body"><p><strong>中文：</strong>当且仅当变量v的某个实例被多于一个线程引用时，称v为共享变量。</p><p>“所有全局都共享、所有局部都私有”只是常见情况，不是这个定义。对每个实例画出引用者，就能解释12.6的msgs为何共享。</p></div><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1032">来源：印刷 1031 页 / PDF 1032 页</a></p></div><p>C11边界还要继续检查：若两个线程冲突访问同一非原子对象、至少一个为写且没有happens-before，构成数据竞争，行为未定义。原书badcnt的load/update/store用于解释一种机器交错；不能据此声称实际有数据竞争的C程序只会在1或2中选结果。本页错误交错由单线程状态模型穷举，真正pthread程序对共享计数加锁。</p>
+<div class="explanation" id="explain-s12-4"><p>“局部”说明名字的作用域或自动对象的建立位置，不说明访问权限。若 main 有 <code>int value=7;</code> 并把 <code>&amp;value</code> 传给线程，线程参数中保存的地址仍指向 main 的那个对象；通过它读取就是共享访问。只读且保持 value 存活可以安全，若 main 同时无同步地写 value，就发生冲突。判断对象是否共享，要像第 5 章别名例子一样沿指针找到同一个存储位置。</p></div>
+<details class="reading-notes" id="notes-s12-4" data-notes-for="s12-4"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">判据</span><h3>看对象实例，不看变量名</h3><p>一个局部数组可经指针被多个线程访问；每个线程的同名局部标量则可各有一个实例。</p></div><div class="annotation-card"><span class="annotation-kind">语言</span><h3>共享不代表任意访问合法</h3><p>C中冲突的非原子访问必须有同步；volatile既不提供互斥，也不建立happens-before。</p></div></div></details></section><section id="s12-5"><h2>12.5 · 同步必须保护不变量并安排等待<span class="english-title" lang="en">Synchronizing Threads with Semaphores</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1032">来源：印刷 1031—1048 页 / PDF 1032—1049 页</a></p><p>两个线程各做cnt++并不等于一次不可分割的更新。先在明确定义的机器模型中把它拆成L（读cnt到寄存器）、U（寄存器加1）、S（写回）。从cnt=0出发，L1,L2,U1,U2,S1,S2让两个寄存器都变成1，最终cnt=1；修复的目标是禁止导致丢失更新的交错。</p><h3 id="ss12-5-1">12.5.1 · 二维位置表示一条可行交错<span class="english-title" lang="en">Progress Graphs</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1036">来源：印刷 1035 页 / PDF 1036 页</a></p><p>横轴是线程1已完成到哪条指令，纵轴是线程2的位置。每次只执行一个线程的一条原子模型指令，因此轨迹向右或向上，不能倒退。两个读改写临界区相交的内部区域是不安全区域；安全轨迹让一个线程完成S后，另一个线程才做L。</p><div class="scroll"><table><thead><tr><th scope="col">步骤</th><th scope="col">线程1寄存器</th><th scope="col">线程2寄存器</th><th scope="col">cnt</th></tr></thead><tbody><tr><td>L1</td><td>0</td><td>—</td><td>0</td></tr><tr><td>L2</td><td>0</td><td>0</td><td>0</td></tr><tr><td>U1</td><td>1</td><td>0</td><td>0</td></tr><tr><td>U2</td><td>1</td><td>1</td><td>0</td></tr><tr><td>S1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>S2</td><td>1</td><td>1</td><td>1</td></tr></tbody></table></div><p>ch12_models穷举两组三指令保序交错，共C(6,3)=20条；18条最终1，2条最终2。这里没有C数据竞争，因为模型只是依次修改普通整数来模拟不同线程的寄存器。图是证明一种模型的工具，不是一次实际运行轨迹的照片。</p>
+<div class="explanation" id="explain-s12-5"><p>20 条交错的计数来自“六个位置中选三个给线程 1”，剩下三个自然给线程 2；各线程内部只能按 L、U、S 排列，所以是 <code>C(6,3)=20</code>。最终值为 2 要求后一个 L 读到前一个 S 已写入的 1；三步程序中这只有整段 <code>L1,U1,S1,L2,U2,S2</code> 或完全对调线程两种。其余 18 种两个 L 都先读到 0，最后的写回都只能是 1。这是在逐条给定指令的模型内数路径，并没有假设操作系统均匀随机选择这 20 条路径。</p></div>
+<h3 id="ss12-5-2">12.5.2 · 许可计数与阻塞必须原子结合<span class="english-title" lang="en">Semaphores</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1038">来源：印刷 1037 页 / PDF 1038 页</a></p><p>P(s)等待s&gt;0后原子减1；V(s)加1并允许等待者继续。s初值1可作二元互斥许可，初值0可表示还没有生产出的数据。只有计数非负这个不变量不够：检查s和减1若拆成两个未同步操作，两个线程可能同时拿到最后一个许可。POSIX sem_wait还可能被信号中断，封装需在EINTR时重试。</p><p>macOS不支持本章使用的进程内未命名sem_init，因此本页实际队列使用pthread_mutex与pthread_cond。互斥量保护count/数组/游标；条件变量只唤醒等待者，不能代替持久count。pthread_cond_wait原子释放锁并等待，返回时重新持锁；while循环应对虚假唤醒以及别的线程先消费资源。</p>
+<div class="explanation" id="explain-cond-recheck"><p>条件变量等待要用 while，还可看两个消费者的例子：A 等待时释放了锁，生产者放入一个元素并唤醒 A；A 真正重新获得锁之前，B 可能已经取走它。A 醒来时 count 又是 0，必须再等，不能把“曾经被通知”当成“现在仍有一个属于我的元素”。判断 count、决定等待及实际出队都围绕同一把锁，才能让这条规则在各种调度下成立。</p></div>
+<h3 id="ss12-5-3">12.5.3 · 把整次读改写放进临界区<span class="english-title" lang="en">Using Semaphores for Mutual Exclusion</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1039">来源：印刷 1038 页 / PDF 1039 页</a></p><p>用mutex初值1包装P(mutex);cnt++;V(mutex)，禁止第二个线程在第一个线程完成S之前取得许可。锁只包load或者只包store仍可能丢失更新。实际代码每次pthread_mutex_lock后递增counter、再unlock，3个线程各10000次，join后严格检查30000；检查在普通条件语句里，不依赖assert是否被禁用。</p><p>互斥解决共享状态的正确性，不能自动带来并行加速。若大量时间花在这一个锁里，三个线程只是在轮流执行同一条串行通道；12.6会把小计移到线程私有变量中。</p><h3 id="ss12-5-4">12.5.4 · 空槽、数据项与读写资格<span class="english-title" lang="en">Using Semaphores to Schedule Shared Resources</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1041">来源：印刷 1040 页 / PDF 1041 页</a></p><p>生产者先P(slots)取得一个空槽，再P(mutex)修改环形缓冲，释放mutex后V(items)发布新项。消费者对称地先P(items)，取走后V(slots)。若生产者先拿mutex再等slots，缓冲满时它持锁睡眠，消费者又无法拿锁清空一个槽，便可能死锁。</p><div class="scroll"><table><thead><tr><th scope="col">动作</th><th scope="col">slots</th><th scope="col">items</th><th scope="col">队列内容（容量2）</th></tr></thead><tbody><tr><td>初始</td><td>2</td><td>0</td><td>[]</td></tr><tr><td>放A完成</td><td>1</td><td>1</td><td>[A]</td></tr><tr><td>放B完成</td><td>0</td><td>2</td><td>[A,B]</td></tr><tr><td>取A完成</td><td>1</td><td>1</td><td>[B]</td></tr><tr><td>放C完成</td><td>0</td><td>2</td><td>[B,C]</td></tr></tbody></table></div><p>表中的slots+items=2描述操作完成后的稳定状态；生产者已经取得slot但尚未发布item时，许可暂时在途，和可以小于2。程序不可把这个稳定等式当作每条指令都成立的断言。</p><p>读者—写者把“谁能进入”换成：可有多个读者，或一个写者。读者计数readcnt本身仍是共享写，必须加锁；第一个读者取得资源锁，最后一个读者释放它。读者优先会让新读者绕过等待写者，可能使写者饥饿；12.19—21分别给出更强读者优先、统一入口和写者优先的完整协议。</p>
+<div class="explanation" id="explain-inflight-slot"><p>容量 2 的队列初始 <code>slots=2,items=0</code>。生产者刚执行 <code>P(slots)</code> 但还没写入时，变成 <code>slots=1,items=0</code>：少掉的一个许可由这个生产者暂时持有，不能立即被另一个生产者使用，也还不能被消费者取走。完成写入后 <code>V(items)</code> 才变成 <code>1,1</code>。这样解释“在途许可”，就不会误把中间的和为 1 当成容量凭空消失。</p></div>
+<h3 id="ss12-5-5">12.5.5 · 用有界队列连接接收者与工作线程<span class="english-title" lang="en">Putting It Together: A Concurrent Server Based on Prethreading</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1045">来源：印刷 1044 页 / PDF 1045 页</a></p><p>master只负责accept并把connfd入队；固定或动态工作线程反复出队、服务、close。队列满时master等待形成背压，不再无限创建线程。队列出队即转移连接所有权；缩减工作线程只能让空闲线程退出，不能中途杀死持有连接的线程。</p><figure><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 120" role="img" aria-label="本页动态池的一次负载变化"><title>本页动态池的一次负载变化</title><rect class="n" x="10.0" y="25" width="170.0" height="70" rx="4"/><text x="95.0" y="51">初始</text><text class="hint" x="95.0" y="77">1 worker / 4槽</text><text x="188.0" y="65">→</text><rect class="n" x="195.0" y="25" width="170.0" height="70" rx="4"/><text x="280.0" y="51">队列满</text><text class="hint" x="280.0" y="77">倍增到2，最多8</text><text x="373.0" y="65">→</text><rect class="n" x="380.0" y="25" width="170.0" height="70" rx="4"/><text x="465.0" y="51">处理结束</text><text class="hint" x="465.0" y="77">空队列下减半目标</text><text x="558.0" y="65">→</text><rect class="n" x="565.0" y="25" width="170.0" height="70" rx="4"/><text x="650.0" y="51">关闭实验</text><text class="hint" x="650.0" y="77">排空 + join全部</text></svg></div><figcaption>本页动态池的一次负载变化</figcaption></figure><p>动态池维护live、target与created三种计数：live是还活着的线程，target是当前期望容量，created用于最后join所有曾经创建的线程，包含已经退休的线程。工作者在同一锁内判断count==0及live&gt;target并减少live，防止多人同时退休到0。原书echo_cnt的pthread_once负责共享计数初始化；本页静态初始化锁，资源状态仍在服务前建立。</p><details class="reading-notes" id="notes-s12-5" data-notes-for="s12-5"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">不变量</span><h3>条件变化与锁配合</h3><p>条件变量本身不记“有一个item”；count才是条件。wait必须在while里重查。</p></div><div class="annotation-card"><span class="annotation-kind">调度</span><h3>安全不等于公平</h3><p>互斥能阻止同时进入，却未必防止一个等待者永远得不到机会。</p></div></div></details></section><section id="s12-6"><h2>12.6 · 先消除共享写，再测量并行收益<span class="english-title" lang="en">Using Threads for Parallelism</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1050">来源：印刷 1049—1056 页 / PDF 1050—1057 页</a></p><p>书中把0到n−1求和拆给多个线程，展示三次改写。第一版每加一个数就锁全局sum：正确但基本串行。第二版每个线程写psum[tid]：去掉共享计数锁，但相邻psum项可能在同一cache line中，核间仍反复争夺该行。第三版在线程局部变量里累加，最后只写一次psum[tid]，减少共享写与伪共享。</p><p>分配区间必须覆盖全部输入且不重叠。本页矩阵乘法给线程t分配行区间[⌊Nt/P⌋,⌊N(t+1)/P⌋)，对5行3线程得到[0,1)、[1,3)、[3,5)。每个输出C[i,j]只有一个写者，A与B只读；join之后主线程才能把并行结果与串行结果逐项比较。一般N×M输出由N×K与K×M相乘，本实现核接收n,k,m三个维度。</p><div class="equation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>S</mi><mi>p</mi></msub><mo>=</mo><mfrac><msub><mi>T</mi><mn>1</mn></msub><msub><mi>T</mi><mi>p</mi></msub></mfrac><mo>,</mo><mspace width="1em"/><msub><mi>E</mi><mi>p</mi></msub><mo>=</mo><mfrac><msub><mi>S</mi><mi>p</mi></msub><mi>p</mi></mfrac></mrow></math></div><p>强扩展固定总问题规模；绝对加速比的T₁来自串行实现，相对加速比的T₁来自并行程序只用一个核。后者可被并行框架自身开销抬高。弱扩展随核数增加工作量，保持每核工作量近似不变，回答的是吞吐量能否随资源增长。不要把“线程数t”与“核数p”混为一谈，也不要把作者旧机器的时间写成本机结果。</p><div class="source-statement" id="classic-12-speedup" data-source-kind="classic-passage"><h4>原文伴读 · 先定义比较的工作量</h4><blockquote class="original-excerpt" lang="en"><p>Absolute speedup is a truer measure of the benefits of parallelism than relative speedup.</p></blockquote><div class="statement-body"><p><strong>中文：</strong>绝对加速比比相对加速比更直接地衡量并行带来的收益。</p><p>原因是相对比较的一核并行版本可能已经包含额外同步与框架开销。这里仍应给出相同输入、编译条件和计时范围；不能仅凭一个比值推断算法普遍更快。</p></div><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1056">来源：印刷 1055 页 / PDF 1056 页</a></p></div><p>12.34给出这台宿主机的96×96整数值double矩阵测量，单次启动三线程并包含create/join。输入恰可精确表示，串行与并行对每个输出按相同k顺序累加，所以本测试要求逐位一致。对任意浮点重结合或不同归约树不能照搬这一要求。</p>
+<div class="explanation" id="explain-s12-6"><p>伪共享的“共享”发生在缓存行粒度：假设两个 8 B 小计相邻放在同一个 64 B 缓存行，各线程只写自己的小计，C 对象没有重叠；但两个核都要取得这一整行的写权限，仍可能来回转移它。把小计先放在本线程局部累加，最后各写一次，就把频繁争夺变成少量发布。具体行宽和编译器是否已把小计保存在寄存器里仍要按实际机器与生成代码检查。</p><p>行分配式也有直接依据：第 t 段的终点恰是第 t+1 段的起点，半开区间不重叠；第一段从 0 开始，最后一段在 N 结束，所以既不漏行也不重算。N=5、P=3 的分界依次为 <code>0,1,3,5</code>，长度为 1、2、2；取整只让工作量最多相差一行。</p></div>
+<details class="reading-notes" id="notes-s12-6" data-notes-for="s12-6"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">单位</span><h3>分母是核数</h3><p>E=S/p，p是参与的核数；线程数超出核数不会自动增加可用计算资源。</p></div><div class="annotation-card"><span class="annotation-kind">性能</span><h3>计数器不是工作本身</h3><p>每次累加都加锁会把并行问题重新串行化；先局部归约再合并。</p></div></div></details></section><section id="s12-7"><h2>12.7 · 把安全性、生存期、公平性和死锁分开<span class="english-title" lang="en">Other Concurrency Issues</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1057">来源：印刷 1056—1066 页 / PDF 1057—1067 页</a></p><h3 id="ss12-7-1">12.7.1 · 锁住操作，还要保护返回值的使用<span class="english-title" lang="en">Thread Safety</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1057">来源：印刷 1056 页 / PDF 1057 页</a></p><p>原书列出四类问题：不保护共享变量、跨调用保留状态、返回静态区指针、调用不安全函数。返回静态区指针的ctime等函数，即使调用本身串行，若解锁后才复制结果，另一线程仍能抢先覆盖它。正确lock-and-copy必须在锁内调用并把整个结果复制到调用者私有区。</p><p>“跨调用保留状态只能重写”是本书针对每个线程需要独立可重复序列的语义。若契约允许所有线程共享一个总序列，给生成器加锁可以消除数据竞争，但各线程得到哪些项仍取决于调度；若要各自可复现序列，就必须把种子作为各自的上下文传入。</p><h3 id="ss12-7-2">12.7.2 · 可重入还取决于调用方有没有共享实参<span class="english-title" lang="en">Reentrancy</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1060">来源：印刷 1059 页 / PDF 1060 页</a></p><div class="source-statement" id="classic-12-reentrant" data-source-kind="classic-passage"><h4>原文伴读 · 调用者也是条件的一部分</h4><blockquote class="original-excerpt" lang="en"><p>However, it is important to realize that reentrancy is sometimes a property of both the caller and the callee, and not just the callee alone.</p></blockquote><div class="statement-body"><p><strong>中文：</strong>可重入有时是调用者和被调用者共同决定的性质，不能只检查被调用函数。</p><p>rand_r(&seed)用调用者提供的状态；两个线程若传同一个seed地址，仍会共享写。分别提供独立seed才满足本书“隐式可重入”的条件。</p></div><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1061">来源：印刷 1060 页 / PDF 1061 页</a></p></div><p>本章可重入指多线程调用不访问共享可变数据的类别；异步信号安全是另一套更严格的上下文要求。一个使用malloc并返回私有结果的包装器可能线程安全，但不能因此在信号处理函数里调用。互斥包装通常也不满足本书的可重入定义。</p><h3 id="ss12-7-3">12.7.3 · 检查接口的状态与所有权契约<span class="english-title" lang="en">Using Existing Library Functions in Threaded Programs</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1061">来源：印刷 1060 页 / PDF 1061 页</a></p><p>同名函数在不同平台、标准版本上的线程安全承诺可能不同。本页不把图12.41的历史Linux表当作所有系统的当前保证。地址解析优先衔接第11章getaddrinfo/getnameinfo；作业12.26按题意保留gethostbyname，统一加锁并深拷贝h_name、aliases指针数组及每条字符串、addr_list指针数组及每段h_length字节。</p><p>所有旧接口调用者必须使用同一把锁；只包装某一处调用并不能保护仍直接调用原函数的线程。返回对象归调用方，hostent_free逐层释放；失败释放已分配的部分并解锁。宿主解析器曾返回未对齐的指针向量，本实现以memcpy读出指针表示，再保存进正常对齐的自有数组。</p><h3 id="ss12-7-4">12.7.4 · 生存期与描述符复用也会竞争<span class="english-title" lang="en">Races</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1062">来源：印刷 1061 页 / PDF 1062 页</a></p><p>共享循环变量地址的错误依赖新线程何时读取；提前free参数则变成use-after-free。另一类发生在文件描述符：两个FILE流包装同一整数fd，第一次fclose释放fd，别的线程的accept恰好复用这个号码，第二次fclose便可能关闭新客户。锁住printf不会修复这些所有权错误。</p><p>稳定参数数组保留到join是12.14的可移植解法；或者为每线程分配参数并由接收线程释放。若使用整数经void*传递的教材技巧，需要实现提供并明确满足转换约定，不能把原书(void*)i与(int)vargp直接当作严格C11跨平台保证。</p><h3 id="ss12-7-5">12.7.5 · 画持有等待环，而不是只看出现过哪些锁<span class="english-title" lang="en">Deadlocks</span></h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1064">来源：印刷 1063 页 / PDF 1064 页</a></p><div class="source-statement" id="classic-12-lock-order" data-source-kind="classic-passage"><h4>原文伴读 · 锁的统一顺序</h4><blockquote class="original-excerpt" lang="en"><p>Given a total ordering of all mutexes, a program is deadlock-free if each thread acquires its mutexes in order and releases them in reverse order.</p></blockquote><div class="statement-body"><p><strong>中文：</strong>给全部互斥量规定全序，每个线程按此顺序取得锁并逆序释放，就能避免这种锁顺序造成的死锁。</p><p>这是对互斥量持有等待的充分规则，不涵盖所有程序阻塞原因。12.28说明释放顺序不是防止循环等待的必要条件；取得顺序才约束持有等待图的方向。</p></div><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1066">来源：印刷 1065 页 / PDF 1066 页</a></p></div><p>线程1持s等t、线程2持t等s时形成环；没有人能到达V。若两者都先P(s)再P(t)，一个线程在入口等s，另一个能取得t并完成，不会形成环。饥饿不同：系统整体还在推进，但某个等待者永远没获准进入。信号量一般语义没有规定FIFO，所以算法的安全性与特定实现的公平性要分别论证。</p><p>本版12.29虽然整体出现a→b、c→b和a→c，但线程1先释放b才获取c；不存在b→c的同时持有等待边，因此不会死锁。12.30第三个线程新增持b等a，与线程1的持a等b形成闭环；有限状态模型实际枚举到4种死锁终态。</p><details class="reading-notes" id="notes-s12-7" data-notes-for="s12-7"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">错误</span><h3>一次成功无法覆盖所有交错</h3><p>确定的状态模型可以找到反例；实际并发实验说明本次路径而不能穷尽调度。</p></div><div class="annotation-card"><span class="annotation-kind">顺序</span><h3>只排序同时持有的锁</h3><p>先释放b再获取c，不会形成b→c持有等待边；读完整临界区后再画等待图。</p></div></div></details></section><section id="s12-8"><h2>12.8 · 把并发设计落到资源与状态<span class="english-title" lang="en">Summary</span></h2><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1067">来源：印刷 1066 页 / PDF 1067 页</a></p><p>进程隔离可写地址空间，事件循环显式保存与推进状态，线程共享空间并由内核调度。三者都需要清楚的资源所有权：谁持有连接引用、谁读写哪个对象、谁等待、谁唤醒、谁结束并回收。把这些动作写成状态转换和不变量，才有办法解释一个慢客户、一次提前退出或一次错误close为何影响别人。</p><p>学习顺序可以是：先运行交错模型预测cnt结果；再运行加锁计数与有界队列；随后以同一个HTTP核心切换process/select/thread/pool；最后用慢客户和分段输入检查真正的用户路径。下面保留本版全部39题，源码和原书输入互相链接，题解中的校注也保留原版说法。</p><details class="reading-notes" id="notes-s12-8" data-notes-for="s12-8"><summary>阅读注解</summary><div class="reading-notes-body"><div class="annotation-card"><span class="annotation-kind">串联</span><h3>所有权贯穿三章</h3><p>第10章的文件表、第11章的连接和本章的线程生命周期共同决定谁能读、写和close。</p></div><div class="annotation-card"><span class="annotation-kind">复现</span><h3>先跑有界实验</h3><p>默认程序结束并回收所有资源；服务器显式给出连接数与环回端口，再观察慢客户行为。</p></div></div></details></section><section id="experiment"><h2>可执行实验：从交错模型到真实并发</h2><p>普通C程序以严格C11编译，POSIX接口由特性宏显式请求；pthread程序加-pthread。下面的代码块逐字来自code/维护源。ASan/UBSan检查实际执行路径；它们不能证明不存在所有可能的数据竞争，模型也不声称覆盖实际操作系统全部调度。</p><h3 id="models-code">交错、锁顺序与死锁的有限状态模型</h3><p>输入是本章固定的P/V序列，状态是每线程程序计数器与可用许可位。explore只推进能取得许可的P或当前V，并去重；所有线程结束记completed，未结束却无可推进线程记deadlock。计数器部分枚举L/U/S全部20条交错。</p><p>默认固定输出；12.30有4种死锁终态和1种全部完成终态，说明“可能死锁”不等于“每次死锁”。这只是有限二元锁模型，无真实阻塞。</p><p><a href="../code/ch12_models.c" download>下载 ch12_models.c</a></p><details class="code-details"><summary>C · 完整维护源</summary><pre><code id="ch12_models-c" data-language="c" class="language-c">/* Sequential C11 state model. It never executes a C data race or blocks on locks.
+ * P(x) consumes an available token; V(x) returns it. Explore reachable states.
+ * Input is fixed textbook programs: finite binary locks, at most three threads. */
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+typedef struct { int pc[3]; unsigned tokens; } state;
+static unsigned char visited[7][7][7][8];
+static const char *program[3];
+static int threads, lengths[3], deadlocks, finishes;
+static void explore(state s) {
+    if (visited[s.pc[0]][s.pc[1]][s.pc[2]][s.tokens]) return;
+    visited[s.pc[0]][s.pc[1]][s.pc[2]][s.tokens] = 1;
+    int enabled = 0, complete = 1;
+    for (int t = 0; t &lt; threads; ++t) {
+        if (s.pc[t] == lengths[t]) continue;
+        complete = 0;
+        char op = program[t][s.pc[t]];
+        unsigned bit = 1u &lt;&lt; (unsigned)((op &gt;= &#x27;a&#x27; ? op-&#x27;a&#x27; : op-&#x27;A&#x27;));
+        int take = op &gt;= &#x27;a&#x27;;
+        if (take &amp;&amp; !(s.tokens &amp; bit)) continue;
+        if (!take &amp;&amp; (s.tokens &amp; bit)) { fputs(&quot;non-binary release\n&quot;,stderr); exit(1); }
+        state next = s; next.pc[t]++;
+        next.tokens = take ? s.tokens &amp; ~bit : s.tokens | bit;
+        enabled = 1; explore(next);
+    }
+    if (complete) finishes++;
+    else if (!enabled) deadlocks++;
+}
+static void locks(const char *name, const char *a, const char *b,
+                  const char *c, unsigned initial, int expected) {
+    program[0]=a;program[1]=b;program[2]=c;threads=c?3:2;
+    for (int i=0;i&lt;threads;++i) lengths[i]=(int)strlen(program[i]);
+    memset(visited,0,sizeof(visited));deadlocks=finishes=0;
+    explore((state){{0,0,0},initial});
+    if ((deadlocks&gt;0)!=expected) exit(1);
+    printf(&quot;%s deadlocks=%d completed=%d\n&quot;,name,deadlocks,finishes);
+}
+static int outcomes[3];
+static void counter(int p0,int p1,int r0,int r1,int value) {
+    if (p0==3 &amp;&amp; p1==3) { outcomes[value]++; return; }
+    if (p0&lt;3) counter(p0+1,p1,p0==0?value:p0==1?r0+1:r0,r1,p0==2?r0:value);
+    if (p1&lt;3) counter(p0,p1+1,r0,p1==0?value:p1==1?r1+1:r1,p1==2?r1:value);
+}
+int main(void) {
+    counter(0,0,0,0,0);
+    if (outcomes[1]!=18 || outcomes[2]!=2) return 1;
+    printf(&quot;counter schedules=20 final1=%d final2=%d\n&quot;,outcomes[1],outcomes[2]);
+    locks(&quot;12.15-original&quot;,&quot;aAbB&quot;,&quot;aAbB&quot;,NULL,1,1);
+    locks(&quot;12.15-fixed&quot;,&quot;aAbB&quot;,&quot;aAbB&quot;,NULL,3,0);
+    locks(&quot;12.28-case1&quot;,&quot;abAB&quot;,&quot;abAB&quot;,NULL,3,0);
+    locks(&quot;12.28-case2&quot;,&quot;abAB&quot;,&quot;abBA&quot;,NULL,3,0);
+    locks(&quot;12.28-case3&quot;,&quot;abBA&quot;,&quot;abAB&quot;,NULL,3,0);
+    locks(&quot;12.28-case4&quot;,&quot;abBA&quot;,&quot;abBA&quot;,NULL,3,0);
+    locks(&quot;12.29&quot;,&quot;abBcCA&quot;,&quot;cbBC&quot;,NULL,7,0);
+    locks(&quot;12.30&quot;,&quot;abBcCA&quot;,&quot;cbBCaA&quot;,&quot;cCbaAB&quot;,7,1);
+    return 0;
+}
+</code></pre></details><p><a href="../code/ch12_models.py" download>下载 ch12_models.py</a></p><details class="code-details"><summary>PYTHON · 完整维护源</summary><pre><code id="ch12_models-python" data-language="python" class="language-python">"""Finite interleaving model; no Python threading/GIL conclusions are inferred."""
+from functools import lru_cache
+
+
+def count_updates():
+    outcomes = [0, 0, 0]
+    def step(pc, registers, value):
+        if pc == (3, 3):
+            outcomes[value] += 1
+            return
+        for t in range(2):
+            if pc[t] == 3:
+                continue
+            p, r = list(pc), list(registers)
+            new = value
+            if p[t] == 0:
+                r[t] = value
+            elif p[t] == 1:
+                r[t] += 1
+            else:
+                new = r[t]
+            p[t] += 1
+            step(tuple(p), tuple(r), new)
+    step((0, 0), (0, 0), 0)
+    return outcomes
+
+
+def lock_states(programs, tokens):
+    """lowercase acquires, uppercase releases; return distinct terminal states."""
+    dead, done = set(), set()
+    @lru_cache(None)
+    def visit(pc, free):
+        enabled = False
+        if all(i == len(p) for i, p in zip(pc, programs)):
+            done.add((pc, free))
+            return
+        for t, p in enumerate(programs):
+            if pc[t] == len(p):
+                continue
+            op = p[pc[t]]
+            bit = 1 &lt;&lt; (ord(op.lower()) - ord('a'))
+            if op.islower() and not free &amp; bit:
+                continue
+            if op.isupper() and free &amp; bit:
+                raise ValueError('release without ownership')
+            nxt = list(pc)
+            nxt[t] += 1
+            enabled = True
+            visit(tuple(nxt), free ^ bit)
+        if not enabled:
+            dead.add((pc, free))
+    visit((0,) * len(programs), tokens)
+    return dead, done
+
+
+def main():
+    outcomes = count_updates()
+    if outcomes != [0, 18, 2]:
+        raise RuntimeError(f'counter outcome mismatch: {outcomes}')
+    print(f'counter schedules={sum(outcomes)} final1={outcomes[1]} final2={outcomes[2]}')
+    cases = [
+        ('12.15-original', ('aAbB', 'aAbB'), 1, True),
+        ('12.15-fixed', ('aAbB', 'aAbB'), 3, False),
+        ('12.28-case1', ('abAB', 'abAB'), 3, False),
+        ('12.28-case2', ('abAB', 'abBA'), 3, False),
+        ('12.28-case3', ('abBA', 'abAB'), 3, False),
+        ('12.28-case4', ('abBA', 'abBA'), 3, False),
+        ('12.29', ('abBcCA', 'cbBC'), 7, False),
+        ('12.30', ('abBcCA', 'cbBCaA', 'cCbaAB'), 7, True),
+    ]
+    for name, programs, initial, expected in cases:
+        dead, done = lock_states(programs, initial)
+        if bool(dead) != expected:
+            raise RuntimeError(f'lock outcome mismatch: {name}')
+        print(f'{name} deadlocks={len(dead)} completed={len(done)}')
+
+
+if __name__ == '__main__':
+    main()
+</code></pre></details><h3 id="threads-code">安全计数、有界队列、线程参数与矩阵乘法</h3><p>increment以锁包住counter++；put/take在同一锁下修改count和环形游标；每个consumer只写自己的seen数组，join后主线程核对每个1..1000恰好出现一次。0仅用作退出标志，因此数据契约不把0当作正常项。</p><p>matrix_job给每个线程不同输出行；hello_n先完整初始化参数，再create，最后join及释放。--hello N只接受1..64；--bench另外报告本机时间，默认仅正确性结果。</p><p><a href="../code/ch12_threads.c" download>下载 ch12_threads.c</a></p><details class="code-details"><summary>C · 完整维护源</summary><pre><code id="ch12_threads-c" data-language="c" class="language-c">/* C11 + POSIX. clang -std=c11 -Wall -Wextra -Werror -pedantic -pthread
+ * -fsanitize=address,undefined ch12_threads.c -o ch12_threads
+ * No deliberately racing C accesses: bad schedules live in ch12_models.
+ * --hello N joins N peers; --bench measures the same matrix kernel. */
+#define _POSIX_C_SOURCE 200809L
+#include &lt;pthread.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;time.h&gt;
+#include &lt;errno.h&gt;
+
+enum { CAP = 7, ITEMS = 1000, WORKERS = 3, DIM = 96 };
+static void check(int error) {
+    if (error) { fprintf(stderr, &quot;pthread: %s\n&quot;, strerror(error)); exit(1); }
+}
+static void require(int ok) { if (!ok) { fputs(&quot;invariant failed\n&quot;, stderr); exit(1); } }
+typedef struct {
+    int data[CAP]; size_t head, tail, count;
+    pthread_mutex_t lock;
+    pthread_cond_t not_empty, not_full;
+} queue;
+static queue q = { .lock = PTHREAD_MUTEX_INITIALIZER,
+    .not_empty = PTHREAD_COND_INITIALIZER, .not_full = PTHREAD_COND_INITIALIZER };
+static void put(int value) {
+    check(pthread_mutex_lock(&amp;q.lock));
+    while (q.count == CAP) check(pthread_cond_wait(&amp;q.not_full, &amp;q.lock));
+    q.data[q.tail] = value; q.tail = (q.tail + 1) % CAP; q.count++;
+    require(q.count &lt;= CAP);
+    check(pthread_cond_signal(&amp;q.not_empty));
+    check(pthread_mutex_unlock(&amp;q.lock));
+}
+static int take(void) {
+    check(pthread_mutex_lock(&amp;q.lock));
+    while (!q.count) check(pthread_cond_wait(&amp;q.not_empty, &amp;q.lock));
+    int value = q.data[q.head]; q.head = (q.head + 1) % CAP; q.count--;
+    check(pthread_cond_signal(&amp;q.not_full));
+    check(pthread_mutex_unlock(&amp;q.lock));
+    return value;
+}
+typedef struct { long sum; unsigned seen[ITEMS + 1]; } consumer_state;
+static void *consume(void *arg) {
+    consumer_state *s = arg;
+    for (;;) {
+        int value = take();
+        if (!value) break;
+        require(value &gt;= 1 &amp;&amp; value &lt;= ITEMS);
+        s-&gt;sum += value; s-&gt;seen[value]++;
+    }
+    return NULL;
+}
+static pthread_mutex_t counter_lock = PTHREAD_MUTEX_INITIALIZER;
+static long counter;
+static void *increment(void *unused) {
+    (void)unused;
+    for (int i = 0; i &lt; 10000; ++i) {
+        check(pthread_mutex_lock(&amp;counter_lock));
+        counter++;
+        check(pthread_mutex_unlock(&amp;counter_lock));
+    }
+    return NULL;
+}
+typedef struct { size_t id; size_t result; } hello_arg;
+static void *hello(void *arg) {
+    hello_arg *a = arg; a-&gt;result = a-&gt;id;
+    if (printf(&quot;Hello from thread %zu\n&quot;, a-&gt;id) &lt; 0) exit(1);
+    return NULL;
+}
+static void hello_n(size_t n) {
+    pthread_t *ids = calloc(n, sizeof(*ids));
+    hello_arg *args = calloc(n, sizeof(*args));
+    require(ids &amp;&amp; args);
+    for (size_t i = 0; i &lt; n; ++i) {
+        args[i].id = i;
+        check(pthread_create(&amp;ids[i], NULL, hello, &amp;args[i]));
+    }
+    for (size_t i = 0; i &lt; n; ++i) {
+        check(pthread_join(ids[i], NULL)); require(args[i].result == i);
+    }
+    free(args); free(ids);
+}
+/* A: N x K, B: K x M, C: N x M. Each worker owns disjoint rows of C. */
+typedef struct {
+    const double *a, *b; double *c;
+    size_t m, k, first, limit;
+} matrix_job;
+static void *multiply(void *arg) {
+    matrix_job *j = arg;
+    for (size_t row = j-&gt;first; row &lt; j-&gt;limit; ++row)
+        for (size_t col = 0; col &lt; j-&gt;m; ++col) {
+            double sum = 0;
+            for (size_t k = 0; k &lt; j-&gt;k; ++k)
+                sum += j-&gt;a[row*j-&gt;k+k] * j-&gt;b[k*j-&gt;m+col];
+            j-&gt;c[row*j-&gt;m+col] = sum;
+        }
+    return NULL;
+}
+static void parallel_matrix(const double *a, const double *b, double *c,
+                            size_t n, size_t k, size_t m, size_t workers) {
+    pthread_t ids[WORKERS]; matrix_job jobs[WORKERS];
+    require(workers &gt;= 1 &amp;&amp; workers &lt;= WORKERS);
+    for (size_t i = 0; i &lt; workers; ++i) {
+        jobs[i] = (matrix_job){a,b,c,m,k,n*i/workers,n*(i+1)/workers};
+        check(pthread_create(&amp;ids[i], NULL, multiply, &amp;jobs[i]));
+    }
+    for (size_t i = 0; i &lt; workers; ++i) check(pthread_join(ids[i], NULL));
+}
+static double now(void) {
+    struct timespec t; require(clock_gettime(CLOCK_MONOTONIC, &amp;t) == 0);
+    return (double)t.tv_sec + (double)t.tv_nsec / 1e9;
+}
+static void matrix_test(int bench) {
+    static double a[DIM*DIM], b[DIM*DIM], reference[DIM*DIM], result[DIM*DIM];
+    for (size_t i=0; i&lt;DIM*DIM; ++i) { a[i]=(double)(i%7); b[i]=(double)(i%5); }
+    /* Non-square case: 5 x 7 multiplied by 7 x 4, remainder rows included. */
+    matrix_job small = {a,b,reference,4,7,0,5}; (void)multiply(&amp;small);
+    parallel_matrix(a,b,result,5,7,4,3);
+    require(memcmp(reference,result,20*sizeof(double)) == 0);
+    matrix_job full = {a,b,reference,DIM,DIM,0,DIM};
+    double t0=now(); (void)multiply(&amp;full); double serial=now()-t0;
+    t0=now(); parallel_matrix(a,b,result,DIM,DIM,DIM,3); double parallel=now()-t0;
+    require(memcmp(reference,result,sizeof(reference)) == 0);
+    puts(&quot;matrix cases=2 exact=YES workers=3&quot;);
+    if (bench) printf(&quot;matrix=96x96x96 serial_seconds=%.9f parallel_seconds=%.9f speedup=%.3f\n&quot;,
+                      serial,parallel,serial/parallel);
+}
+int main(int argc, char **argv) {
+    if (argc == 3 &amp;&amp; strcmp(argv[1],&quot;--hello&quot;) == 0) {
+        char *end; errno=0; unsigned long n=strtoul(argv[2],&amp;end,10);
+        if (errno || !*argv[2] || *end || argv[2][0]==&#x27;-&#x27; || n&lt;1 || n&gt;64) return 2;
+        hello_n((size_t)n); return 0;
+    }
+    int bench=argc==2 &amp;&amp; strcmp(argv[1],&quot;--bench&quot;)==0;
+    if (argc!=1 &amp;&amp; !bench) return 2;
+    pthread_t threads[WORKERS];
+    for (int i=0;i&lt;WORKERS;++i) check(pthread_create(&amp;threads[i],NULL,increment,NULL));
+    for (int i=0;i&lt;WORKERS;++i) check(pthread_join(threads[i],NULL));
+    require(counter==30000); printf(&quot;mutex counter=%ld\n&quot;,counter);
+    consumer_state states[WORKERS] = {{0,{0}}};
+    for (int i=0;i&lt;WORKERS;++i) check(pthread_create(&amp;threads[i],NULL,consume,&amp;states[i]));
+    for (int i=1;i&lt;=ITEMS;++i) put(i);
+    for (int i=0;i&lt;WORKERS;++i) put(0);
+    long sum=0;
+    for (int i=0;i&lt;WORKERS;++i) { check(pthread_join(threads[i],NULL)); sum+=states[i].sum; }
+    for (int value=1;value&lt;=ITEMS;++value) {
+        unsigned count=0; for (int i=0;i&lt;WORKERS;++i) count+=states[i].seen[value];
+        require(count==1);
+    }
+    require(sum==500500 &amp;&amp; q.count==0);
+    printf(&quot;queue items=%d sum=%ld exactly_once=YES\n&quot;,ITEMS,sum);
+    matrix_test(bench);
+    check(pthread_mutex_destroy(&amp;counter_lock)); check(pthread_mutex_destroy(&amp;q.lock));
+    check(pthread_cond_destroy(&amp;q.not_empty)); check(pthread_cond_destroy(&amp;q.not_full));
+    return 0;
+}
+</code></pre></details><h3 id="sbuf-code">12.9的槽位所有权与mutex省略条件</h3><p>down/up只实现原子的计数信号量；put/take之间没有公共buffer mutex。SPSC时rear只有生产者写、front只有消费者写，每个槽经items和slots完成所有权交接；n=1时许可进一步使生产或消费各自最多一个执行者。</p><p>只运行(容量7,1生产者,1消费者)、(1,1,1)、(1,3,3)。不提供“n>1且多个生产者/消费者无mutex”模式，避免把真正的数据竞争作为演示。</p><p><a href="../code/ch12_sbuf.c" download>下载 ch12_sbuf.c</a></p><details class="code-details"><summary>C · 完整维护源</summary><pre><code id="ch12_sbuf-c" data-language="c" class="language-c">/* Exercise 12.9: remove only the sbuf buffer mutex. Independent counting
+ * semaphores still synchronize slot ownership. Valid cases: SPSC any n,
+ * or n=1 with any producer/consumer counts. No unsynchronized shared count.
+ * C11/POSIX; counting semaphores use mutex+condition for macOS portability. */
+#define _POSIX_C_SOURCE 200809L
+#include &lt;pthread.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+enum { TOTAL=1000, MAX_CAP=7, PEERS=3 };
+typedef struct {unsigned value;pthread_mutex_t m;pthread_cond_t cv;} semaphore;
+static semaphore slots,items;
+static int buffer[MAX_CAP],capacity,front,rear;
+static void check(int e){if(e){fprintf(stderr,&quot;pthread: %s\n&quot;,strerror(e));exit(1);}}
+static void init(semaphore *s,unsigned v){s-&gt;value=v;check(pthread_mutex_init(&amp;s-&gt;m,NULL));check(pthread_cond_init(&amp;s-&gt;cv,NULL));}
+static void down(semaphore *s){check(pthread_mutex_lock(&amp;s-&gt;m));while(!s-&gt;value)check(pthread_cond_wait(&amp;s-&gt;cv,&amp;s-&gt;m));--s-&gt;value;check(pthread_mutex_unlock(&amp;s-&gt;m));}
+static void up(semaphore *s){check(pthread_mutex_lock(&amp;s-&gt;m));++s-&gt;value;check(pthread_cond_signal(&amp;s-&gt;cv));check(pthread_mutex_unlock(&amp;s-&gt;m));}
+static void destroy(semaphore *s){check(pthread_cond_destroy(&amp;s-&gt;cv));check(pthread_mutex_destroy(&amp;s-&gt;m));}
+static void put(int value){down(&amp;slots);rear=(rear+1)%capacity;buffer[rear]=value;up(&amp;items);}
+static int take(void){down(&amp;items);front=(front+1)%capacity;int v=buffer[front];up(&amp;slots);return v;}
+typedef struct {int first,last;unsigned seen[TOTAL+1];} job;
+static void *producer(void *arg){job *j=arg;for(int i=j-&gt;first;i&lt;j-&gt;last;++i)put(i);return NULL;}
+static void *consumer(void *arg){job *j=arg;for(;;){int v=take();if(!v)break;if(v&lt;1||v&gt;TOTAL)exit(1);++j-&gt;seen[v];}return NULL;}
+static void run(int n,int count){
+    capacity=n;front=rear=0;init(&amp;slots,(unsigned)n);init(&amp;items,0);
+    pthread_t producers[PEERS],consumers[PEERS];job p[PEERS]={0},c[PEERS]={0};
+    for(int i=0;i&lt;count;++i){p[i].first=1+TOTAL*i/count;p[i].last=1+TOTAL*(i+1)/count;
+        check(pthread_create(&amp;consumers[i],NULL,consumer,&amp;c[i]));check(pthread_create(&amp;producers[i],NULL,producer,&amp;p[i]));}
+    for(int i=0;i&lt;count;++i)check(pthread_join(producers[i],NULL));
+    for(int i=0;i&lt;count;++i)put(0);
+    for(int i=0;i&lt;count;++i)check(pthread_join(consumers[i],NULL));
+    for(int v=1;v&lt;=TOTAL;++v){unsigned seen=0;for(int i=0;i&lt;count;++i)seen+=c[i].seen[v];if(seen!=1)exit(1);}
+    destroy(&amp;slots);destroy(&amp;items);
+    printf(&quot;sbuf no_buffer_mutex capacity=%d producers=%d consumers=%d items=%d exactly_once=YES\n&quot;,n,count,count,TOTAL);
+}
+int main(void){run(7,1);run(1,1);run(1,3);return 0;}
+</code></pre></details><h3 id="tfgets-code">进程/信号/非局部跳转、select与线程超时输入</h3><p>三个函数都覆盖整行的5秒期限、EOF尾行和缓冲区上界。proc用计时子进程发送SIGUSR1，处理函数siglongjmp；调用方先阻塞通知并用pselect原子开放。读取结束后，向本函数创建且尚未回收的计时子进程发送SIGKILL，再用waitpid回收，随后消费已挂起的通知并恢复原处理函数、掩码。这样即使调用者忽略或屏蔽SIGTERM，完整输入也不会因取消无效而额外等待计时器自然结束。select用绝对单调时钟期限重复计算剩余时间；thread由工作线程运行限时读取、条件变量通知并join。</p><p>契约：size≥2、文本无NUL、FILE独占底层fd且无尚未消费的stdio预读数据；驱动将stdin设为无缓冲。超时前读走的部分输入不能回滚。proc只用于单线程进程且独占SIGUSR1；线程版本不遗留继续写调用者栈的后台线程。</p><p><a href="../code/ch12_tfgets.c" download>下载 ch12_tfgets.c</a></p><details class="code-details"><summary>C · 完整维护源</summary><pre><code id="ch12_tfgets-c" data-language="c" class="language-c">/* C11/POSIX, three bounded tfgets implementations for Exercises 12.31--33.
+ * Contract: size &gt;= 2; stream exclusively owns an unbuffered descriptor, with
+ * no unread stdio buffer; not mixed with other stdio reads. Text excludes NUL.
+ * EOF after bytes returns that partial final line; timeout discards the partial
+ * result but cannot undo consumed bytes. proc requires a single-threaded caller
+ * and exclusive SIGUSR1 use. It exclusively reaps its timer child: the caller
+ * must not auto-reap via SIGCHLD or use another handler/wait to reap it.
+ * All helper threads/children are joined/reaped.
+ * Build: clang -std=c11 -Wall -Wextra -Werror -pedantic -pthread
+ * -fsanitize=address,undefined ch12_tfgets.c -o ch12_tfgets
+ * Run: ch12_tfgets proc|select|thread &lt; input (five-second absolute deadline). */
+#define _POSIX_C_SOURCE 200809L
+#include &lt;errno.h&gt;
+#include &lt;pthread.h&gt;
+#include &lt;setjmp.h&gt;
+#include &lt;signal.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;sys/select.h&gt;
+#include &lt;sys/wait.h&gt;
+#include &lt;time.h&gt;
+#include &lt;unistd.h&gt;
+
+static double monotonic(void) {
+    struct timespec t;
+    if (clock_gettime(CLOCK_MONOTONIC,&amp;t)&lt;0) return -1;
+    return (double)t.tv_sec+(double)t.tv_nsec/1e9;
+}
+static char *read_deadline(char *s,int size,int fd,const sigset_t *mask) {
+    if (size&lt;2 || fd&lt;0 || fd&gt;=FD_SETSIZE) { errno=EINVAL; return NULL; }
+    double end=monotonic()+5.0; int used=0; s[0]='\0';
+    while (used&lt;size-1) {
+        double left=end-monotonic();
+        if (left&lt;=0) { errno=ETIMEDOUT; return NULL; }
+        struct timespec delay={(time_t)left,(long)((left-(double)(time_t)left)*1e9)};
+        fd_set ready; FD_ZERO(&amp;ready);FD_SET(fd,&amp;ready);
+        int rc=pselect(fd+1,&amp;ready,NULL,NULL,&amp;delay,mask);
+        if (rc&lt;0) { if(errno==EINTR) continue; return NULL; }
+        if (!rc) { errno=ETIMEDOUT; return NULL; }
+        char ch; ssize_t n=read(fd,&amp;ch,1);
+        if (n&lt;0) { if(errno==EINTR) continue; return NULL; }
+        if (!n) return used?s:NULL;
+        s[used++]=ch;s[used]='\0';
+        if(ch=='\n') break;
+    }
+    return s;
+}
+/* select version uses the same absolute deadline but actual select(2). */
+char *tfgets_select(char *s,int size,FILE *stream) {
+    int fd=fileno(stream),used=0;
+    if(size&lt;2 || fd&lt;0 || fd&gt;=FD_SETSIZE) { errno=EINVAL; return NULL; }
+    double end=monotonic()+5.0;s[0]='\0';
+    while(used&lt;size-1) {
+        double left=end-monotonic();
+        if(left&lt;=0) { errno=ETIMEDOUT;return NULL; }
+        struct timeval tv={(time_t)left,(suseconds_t)((left-(double)(time_t)left)*1e6)};
+        fd_set set;FD_ZERO(&amp;set);FD_SET(fd,&amp;set);
+        int n=select(fd+1,&amp;set,NULL,NULL,&amp;tv);
+        if(n&lt;0) { if(errno==EINTR) continue; return NULL; }
+        if(!n) {errno=ETIMEDOUT;return NULL;}
+        char ch;ssize_t got=read(fd,&amp;ch,1);
+        if(got&lt;0){if(errno==EINTR)continue;return NULL;}
+        if(!got)return used?s:NULL;
+        s[used++]=ch;s[used]='\0';if(ch=='\n')break;
+    }
+    return s;
+}
+static sigjmp_buf timeout_env;
+static void timeout_signal(int sig) { (void)sig; siglongjmp(timeout_env,1); }
+char *tfgets_proc(char *s,int size,FILE *stream) {
+    sigset_t block,old,waiting,pending; struct sigaction action,previous;
+    sigemptyset(&amp;block);sigaddset(&amp;block,SIGUSR1);
+    if(sigprocmask(SIG_BLOCK,&amp;block,&amp;old)&lt;0)return NULL;
+    if(sigpending(&amp;pending)&lt;0 || sigismember(&amp;pending,SIGUSR1)) {
+        (void)sigprocmask(SIG_SETMASK,&amp;old,NULL);errno=EBUSY;return NULL;
+    }
+    memset(&amp;action,0,sizeof(action));action.sa_handler=timeout_signal;sigemptyset(&amp;action.sa_mask);
+    if(sigaction(SIGUSR1,&amp;action,&amp;previous)&lt;0){(void)sigprocmask(SIG_SETMASK,&amp;old,NULL);return NULL;}
+    pid_t parent=getpid(), timer=fork();
+    if(timer&lt;0){(void)sigaction(SIGUSR1,&amp;previous,NULL);(void)sigprocmask(SIG_SETMASK,&amp;old,NULL);return NULL;}
+    if(!timer){
+        struct timespec delay={5,0};while(nanosleep(&amp;delay,&amp;delay)&lt;0 &amp;&amp; errno==EINTR){}
+        (void)kill(parent,SIGUSR1);_exit(0);
+    }
+    /* s is caller storage; only volatile locals may change across siglongjmp. */
+    char *volatile result=NULL;volatile int saved=0;
+    waiting=old;sigdelset(&amp;waiting,SIGUSR1);
+    if(sigsetjmp(timeout_env,1)==0){result=read_deadline(s,size,fileno(stream),&amp;waiting);saved=errno;}
+    else saved=ETIMEDOUT;
+    /* SIGUSR1 is blocked here, including after normal pselect return.
+     * This function owns the unreaped timer child. SIGKILL cancels it even
+     * when the caller ignores or blocks SIGTERM; waitpid still reaps it. */
+    if(kill(timer,SIGKILL)&lt;0 &amp;&amp; errno!=ESRCH)saved=errno;
+    while(waitpid(timer,NULL,0)&lt;0){if(errno!=EINTR){saved=errno;break;}}
+    if(sigpending(&amp;pending)==0 &amp;&amp; sigismember(&amp;pending,SIGUSR1)){
+        int signo;int e=sigwait(&amp;block,&amp;signo);if(e)saved=e;
+    }
+    (void)sigaction(SIGUSR1,&amp;previous,NULL);(void)sigprocmask(SIG_SETMASK,&amp;old,NULL);
+    errno=saved;return result;
+}
+typedef struct {
+    char *s;int size;FILE *stream;char *result;int error,done;
+    pthread_mutex_t mutex;pthread_cond_t complete;
+} reader_job;
+static void *reader(void *arg) {
+    reader_job *j=arg;char *value=tfgets_select(j-&gt;s,j-&gt;size,j-&gt;stream);int error=errno;
+    (void)pthread_mutex_lock(&amp;j-&gt;mutex);
+    j-&gt;result=value;j-&gt;error=error;j-&gt;done=1;
+    (void)pthread_cond_signal(&amp;j-&gt;complete);(void)pthread_mutex_unlock(&amp;j-&gt;mutex);
+    return NULL;
+}
+char *tfgets_thread(char *s,int size,FILE *stream) {
+    reader_job job={.s=s,.size=size,.stream=stream,.mutex=PTHREAD_MUTEX_INITIALIZER,
+                    .complete=PTHREAD_COND_INITIALIZER};
+    pthread_t tid;int error=pthread_create(&amp;tid,NULL,reader,&amp;job);
+    if(error){errno=error;return NULL;}
+    /* The worker owns the five-second deadline. Join prevents any later write
+     * to the caller's stack or buffer; no detached timeout thread survives. */
+    (void)pthread_mutex_lock(&amp;job.mutex);
+    while(!job.done)(void)pthread_cond_wait(&amp;job.complete,&amp;job.mutex);
+    (void)pthread_mutex_unlock(&amp;job.mutex);
+    error=pthread_join(tid,NULL);
+    (void)pthread_cond_destroy(&amp;job.complete);(void)pthread_mutex_destroy(&amp;job.mutex);
+    errno=error?error:job.error;return error?NULL:job.result;
+}
+int main(int argc,char **argv) {
+    if(argc==1){puts("usage: ch12_tfgets proc|select|thread (five-second stdin deadline)");return 0;}
+    if(argc!=2)return 2;
+    char *(*fn)(char *,int,FILE *)=NULL;
+    if(strcmp(argv[1],"proc")==0)fn=tfgets_proc;
+    if(strcmp(argv[1],"select")==0)fn=tfgets_select;
+    if(strcmp(argv[1],"thread")==0)fn=tfgets_thread;
+    if(!fn)return 2;
+    if(setvbuf(stdin,NULL,_IONBF,0)!=0)return 1;
+    char buf[256];errno=0;
+    if(fn(buf,sizeof(buf),stdin))fputs(buf,stdout);
+    else puts("BOOM!");
+    return ferror(stdout)?1:0;
+}
+</code></pre></details><h3 id="resolver-code">旧式地址解析的锁内深拷贝</h3><p>锁在gethostbyname之前取得，一直保持到所有指针指向的数据复制完毕。目标对象有独立name、aliases、addresses及空指针终止数组，失败分支递归释放已建部分；hostent_free由结果拥有者调用。</p><p>默认3线程对localhost创建96个结果，修改其中一份不会改变另一份。只要仍有其他代码绕过此锁直接调用旧接口，就不能声称整个程序已受保护；真实远程DNS和异步信号环境不在该样本内。</p><p><a href="../code/ch12_resolver.c" download>下载 ch12_resolver.c</a></p><details class="code-details"><summary>C · 完整维护源</summary><pre><code id="ch12_resolver-c" data-language="c" class="language-c">/* Exercise 12.26: POSIX gethostbyname lock + deep copy.
+ * All accesses to this legacy resolver must use the same lock. Each caller owns
+ * the returned copy, freed with hostent_free. A mutex makes this thread-safe,
+ * but it is not reentrant in the textbook sense and not signal-handler safe.
+ * New programs should normally use getaddrinfo/getnameinfo instead. */
+#define _POSIX_C_SOURCE 200809L
+#include &lt;netdb.h&gt;
+#include &lt;pthread.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+static pthread_mutex_t resolver_lock=PTHREAD_MUTEX_INITIALIZER;
+void hostent_free(struct hostent *h) {
+    if(!h)return;
+    free(h-&gt;h_name);
+    if(h-&gt;h_aliases){for(size_t i=0;h-&gt;h_aliases[i];++i)free(h-&gt;h_aliases[i]);free(h-&gt;h_aliases);}
+    if(h-&gt;h_addr_list){for(size_t i=0;h-&gt;h_addr_list[i];++i)free(h-&gt;h_addr_list[i]);free(h-&gt;h_addr_list);}
+    free(h);
+}
+static char *string_copy(const char *s){
+    size_t n=strlen(s)+1;char *p=malloc(n);if(p)memcpy(p,s,n);return p;
+}
+/* Some host resolver implementations return packed pointer vectors. Byte-copy
+ * each pointer representation before accessing it; destination vectors are aligned. */
+static char *vector_at(char *const *vector,size_t i){
+    char *value;memcpy(&amp;value,(const unsigned char *)vector+i*sizeof(value),sizeof(value));return value;
+}
+struct hostent *gethostbyname_ts(const char *name) {
+    if(pthread_mutex_lock(&amp;resolver_lock)!=0)return NULL;
+    const struct hostent *src=gethostbyname(name);
+    struct hostent *dst=NULL;
+    if(!src || src-&gt;h_length&lt;=0)goto out;
+    dst=calloc(1,sizeof(*dst));if(!dst)goto out;
+    dst-&gt;h_addrtype=src-&gt;h_addrtype;dst-&gt;h_length=src-&gt;h_length;
+    dst-&gt;h_name=string_copy(src-&gt;h_name);if(!dst-&gt;h_name)goto fail;
+    size_t na=0,nd=0;
+    while(vector_at(src-&gt;h_aliases,na))++na;
+    while(vector_at(src-&gt;h_addr_list,nd))++nd;
+    dst-&gt;h_aliases=calloc(na+1,sizeof(char *));
+    dst-&gt;h_addr_list=calloc(nd+1,sizeof(char *));
+    if(!dst-&gt;h_aliases || !dst-&gt;h_addr_list)goto fail;
+    for(size_t i=0;i&lt;na;++i){dst-&gt;h_aliases[i]=string_copy(vector_at(src-&gt;h_aliases,i));if(!dst-&gt;h_aliases[i])goto fail;}
+    for(size_t i=0;i&lt;nd;++i){
+        dst-&gt;h_addr_list[i]=malloc((size_t)src-&gt;h_length);
+        if(!dst-&gt;h_addr_list[i])goto fail;
+        memcpy(dst-&gt;h_addr_list[i],vector_at(src-&gt;h_addr_list,i),(size_t)src-&gt;h_length);
+    }
+    goto out;
+fail:hostent_free(dst);dst=NULL;
+out:(void)pthread_mutex_unlock(&amp;resolver_lock);return dst;
+}
+static void *probe(void *unused){
+    (void)unused;
+    for(int i=0;i&lt;16;++i){
+        struct hostent *a=gethostbyname_ts(&quot;localhost&quot;);
+        struct hostent *b=gethostbyname_ts(&quot;localhost&quot;);
+        if(!a || !b || !a-&gt;h_addr_list[0] || !b-&gt;h_addr_list[0] || a-&gt;h_name==b-&gt;h_name ||
+           a-&gt;h_addr_list[0]==b-&gt;h_addr_list[0]){fputs(&quot;resolver copy failure\n&quot;,stderr);exit(1);}
+        /* Mutating one owned copy must not affect another result. */
+        unsigned char original=(unsigned char)b-&gt;h_addr_list[0][0];
+        a-&gt;h_addr_list[0][0]=(char)((unsigned char)a-&gt;h_addr_list[0][0]^255u);
+        if((unsigned char)b-&gt;h_addr_list[0][0]!=original)exit(1);
+        hostent_free(a);hostent_free(b);
+    }
+    return NULL;
+}
+int main(void){
+    pthread_t t[3];
+    for(int i=0;i&lt;3;++i)if(pthread_create(&amp;t[i],NULL,probe,NULL))return 1;
+    for(int i=0;i&lt;3;++i)if(pthread_join(t[i],NULL))return 1;
+    if(pthread_mutex_destroy(&amp;resolver_lock))return 1;
+    puts(&quot;resolver threads=3 copies=96 independent=YES&quot;);return 0;
+}
+</code></pre></details><h3 id="servers-code">四种并发Tiny、部分行echo与过滤日志proxy</h3><p>复用ch11_http.c的request_size/build_response/handle，四模式使用同一HTTP含义。process每连接fork；thread每连接create及独立参数；select保存输入与输出偏移；pool以有界队列和live/target/created维护扩缩容。echo额外监听stdin命令，EOF后移除stdin兴趣，保留客户处理。</p><p>仅环回监听，PORT=0可自动选端口；连接预算1..128，接受连接窗口120秒。接入窗口或连接预算用尽后停止接入，已有连接继续按完成、EOF和各自的等待超时规则处理。例如第119秒接入、第120.4秒补齐的请求，只要仍在该连接的等待期限内，就应得到完整响应。select/echo把接入状态与活动客户数量分开；3秒等待期限在读到新字节时更新，接入窗口不表示整个进程在第120秒退出。静态文件单层白名单、≤64KiB，GET/HEAD与GET/POST adder由第11章核心提供；这些并发模式的C adder直接计算，第11章C异步入口另行展示实际CGI fork/exec与SIGCHLD回收，Python保留同步参考。proxy只转发环回http GET，精确URL过滤并锁住日志；不支持TLS、CONNECT或任意公网代理。</p><p><a href="../code/ch12_servers.c" download>下载 ch12_servers.c</a></p><details class="code-details"><summary>C · 完整维护源</summary><pre><code id="ch12_servers-c" data-language="c" class="language-c">/* C11/POSIX concurrent Tiny and proxy laboratory (Exercises 12.22--23,35--39).
+ * Reuses the Chapter 11 bounded HTTP parser/response builder as one translation
+ * unit. This concurrency lab computes adder in the core; Chapter 11
+ * --serve-cgi separately demonstrates actual CGI fork/exec and SIGCHLD reaping. Network event I/O is nonblocking; small local file
+ * reads in build_response remain synchronous. This is a teaching boundary.
+ * Only 127.0.0.1 listeners and loopback HTTP proxy destinations; no TLS/CONNECT.
+ * --serve MODE ROOT PORT CONNECTIONS [FILTER LOG], PORT=0 selects ephemeral port.
+ * MODE: process/select/thread/pool/echo/proxy/proxy-serial. Limit 1..128;
+ * 120-second acceptance window, then drain accepted connections. Event clients
+ * have a 3-second deadline refreshed by each successful read; blocking sockets
+ * have 2-second I/O deadlines. A full pool queue can defer the next window check.
+ * clang -std=c11 -Wall -Wextra -Werror -pedantic -pthread -fsanitize=address,undefined
+ * books/csapp/code/ch12_servers.c -o tmp/csapp/part3/ch12/servers
+ */
+#define main ch11_http_example_main
+#include "ch11_http.c"
+#undef main
+#include &lt;arpa/inet.h&gt;
+#include &lt;netinet/in.h&gt;
+#include &lt;pthread.h&gt;
+#include &lt;sys/select.h&gt;
+
+enum { MAX_CLIENTS=128, QUEUE_CAPACITY=4, MAX_WORKERS=8, MAX_THREAD_IDS=256 };
+static void pcheck(int e){if(e){fprintf(stderr,"pthread: %s\n",strerror(e));exit(1);}}
+static pthread_mutex_t log_mutex=PTHREAD_MUTEX_INITIALIZER;
+static const char *filter_path,*log_path;
+static void socket_deadline(int fd){
+    int flags=fcntl(fd,F_GETFL,0);
+    if(flags&gt;=0)(void)fcntl(fd,F_SETFL,flags &amp; ~O_NONBLOCK);
+    struct timeval timeout={2,0};
+    (void)setsockopt(fd,SOL_SOCKET,SO_RCVTIMEO,&amp;timeout,sizeof(timeout));
+    (void)setsockopt(fd,SOL_SOCKET,SO_SNDTIMEO,&amp;timeout,sizeof(timeout));
+}
+static int listen_loopback(int port){
+    int fd=socket(AF_INET,SOCK_STREAM,0);if(fd&lt;0)return -1;
+    int yes=1;(void)setsockopt(fd,SOL_SOCKET,SO_REUSEADDR,&amp;yes,sizeof(yes));
+    struct sockaddr_in addr;memset(&amp;addr,0,sizeof(addr));addr.sin_family=AF_INET;
+    addr.sin_addr.s_addr=htonl(INADDR_LOOPBACK);addr.sin_port=htons((unsigned short)port);
+    if(bind(fd,(struct sockaddr *)&amp;addr,sizeof(addr)) || listen(fd,32)){close(fd);return -1;}
+    int flags=fcntl(fd,F_GETFL,0);
+    if(flags&lt;0 || fcntl(fd,F_SETFL,flags|O_NONBLOCK)&lt;0){close(fd);return -1;}
+    socklen_t size=sizeof(addr);if(getsockname(fd,(struct sockaddr *)&amp;addr,&amp;size)){close(fd);return -1;}
+    printf("LISTEN 127.0.0.1 %u\n",(unsigned)ntohs(addr.sin_port));fflush(stdout);return fd;
+}
+static void proxy_error(int fd,int code){
+    char response[256];const char *msg=code==403?"Forbidden":"Bad Gateway";
+    int n=snprintf(response,sizeof(response),"HTTP/1.0 %d %s\r\nContent-Length: %zu\r\nConnection: close\r\n\r\n%s",code,msg,strlen(msg),msg);
+    if(n&gt;0 &amp;&amp; (size_t)n&lt;sizeof(response))(void)write_all(fd,response,(size_t)n);
+}
+static int blocked_and_log(const char *url){
+    int blocked=0;char line[2048];
+    /* Both paths are caller-selected lab files; filter is read-only. */
+    pcheck(pthread_mutex_lock(&amp;log_mutex));
+    FILE *filter=fopen(filter_path,"r");
+    if(!filter){pcheck(pthread_mutex_unlock(&amp;log_mutex));return -1;}
+    while(fgets(line,sizeof(line),filter)){
+        line[strcspn(line,"\r\n")]=0;if(!strcmp(line,url))blocked=1;
+    }
+    if(ferror(filter))blocked=-1;
+    fclose(filter);
+    FILE *log=fopen(log_path,"a");
+    if(!log)blocked=-1;
+    else {if(fprintf(log,"%s %s\n",blocked==1?"BLOCK":"ALLOW",url)&lt;0)blocked=-1;if(fclose(log))blocked=-1;}
+    pcheck(pthread_mutex_unlock(&amp;log_mutex));return blocked;
+}
+static int proxy_handle(int fd){
+    char input[CH11_REQUEST_LIMIT+1];size_t used=0,expected=0;long long incoming_end=now_ms()+2000;
+    while(used&lt;CH11_REQUEST_LIMIT){
+        if(!io_ready(fd,POLLIN,incoming_end))return -1;
+        ssize_t n=read(fd,input+used,CH11_REQUEST_LIMIT-used);
+        if(n&lt;0 &amp;&amp; errno==EINTR)continue;if(n&lt;=0)return -1;
+        used+=(size_t)n;int framing=request_size(input,used,&amp;expected);
+        if(framing&lt;0){proxy_error(fd,502);return -1;}
+        if(framing==1)break;
+    }
+    if(request_size(input,used,&amp;expected)!=1 || expected!=used){proxy_error(fd,502);return -1;}
+    input[used]=0;char method[16],url[2048],version[16],extra;
+    char *line_end=strstr(input,"\r\n");if(!line_end)return -1;*line_end=0;
+    if(sscanf(input,"%15s %2047s %15s %c",method,url,version,&amp;extra)!=3 || strcmp(method,"GET") ||
+       strncmp(url,"http://",7) || (strcmp(version,"HTTP/1.0") &amp;&amp; strcmp(version,"HTTP/1.1"))){proxy_error(fd,502);return -1;}
+    for(const char *p=url;*p;++p)if((unsigned char)*p&lt;=32 || (unsigned char)*p&gt;=127){proxy_error(fd,502);return -1;}
+    int blocked=blocked_and_log(url);if(blocked){proxy_error(fd,blocked==1?403:502);return 0;}
+    char host[128],path[2048];const char *slash=strchr(url+7,'/');
+    size_t hn=slash?(size_t)(slash-(url+7)):strlen(url+7);
+    if(hn&gt;=sizeof(host)){proxy_error(fd,502);return -1;}
+    memcpy(host,url+7,hn);host[hn]=0;strcpy(path,slash?slash:"/");
+    int port=80;char *colon=strchr(host,':');
+    if(colon){*colon++=0;char *end;long p=strtol(colon,&amp;end,10);if(!*colon||*end||p&lt;1||p&gt;65535){proxy_error(fd,502);return -1;}port=(int)p;}
+    if(strcmp(host,"127.0.0.1") &amp;&amp; strcmp(host,"localhost")){proxy_error(fd,403);return 0;}
+    int upstream=socket(AF_INET,SOCK_STREAM,0);if(upstream&lt;0){proxy_error(fd,502);return -1;}
+    socket_deadline(upstream);struct sockaddr_in address;memset(&amp;address,0,sizeof(address));
+    address.sin_family=AF_INET;address.sin_addr.s_addr=htonl(INADDR_LOOPBACK);address.sin_port=htons((unsigned short)port);
+    int flags=fcntl(upstream,F_GETFL,0);if(flags&lt;0 || fcntl(upstream,F_SETFL,flags|O_NONBLOCK)&lt;0){close(upstream);return -1;}
+    int rc=connect(upstream,(struct sockaddr *)&amp;address,sizeof(address));
+    if(rc&lt;0 &amp;&amp; errno==EINPROGRESS){
+        int error=0;socklen_t n=sizeof(error);
+        rc=io_ready(upstream,POLLOUT,now_ms()+2000) &amp;&amp; !getsockopt(upstream,SOL_SOCKET,SO_ERROR,&amp;error,&amp;n) &amp;&amp; !error?0:-1;
+    }
+    if(rc&lt;0 || fcntl(upstream,F_SETFL,flags)&lt;0){close(upstream);proxy_error(fd,502);return -1;}
+    char request[2304];int n=snprintf(request,sizeof(request),"GET %s HTTP/1.0\r\nHost: %s:%d\r\nConnection: close\r\n\r\n",path,host,port);
+    if(n&lt;0 || (size_t)n&gt;=sizeof(request) || write_all(upstream,request,(size_t)n)){close(upstream);proxy_error(fd,502);return -1;}
+    char response[131072];size_t total=0;long long deadline=now_ms()+2000;
+    for(;;){
+        if(total==sizeof(response) || !io_ready(upstream,POLLIN,deadline)){close(upstream);proxy_error(fd,502);return -1;}
+        ssize_t got=read(upstream,response+total,sizeof(response)-total);
+        if(got&lt;0 &amp;&amp; errno==EINTR)continue;
+        if(got&lt;0){close(upstream);proxy_error(fd,502);return -1;}
+        if(!got)break;total+=(size_t)got;
+    }
+    close(upstream);return write_all(fd,response,total);
+}
+typedef struct {int fd;const char *root;int proxy;} connection;
+static void *serve_thread(void *arg){
+    connection *c=arg;socket_deadline(c-&gt;fd);
+    if(c-&gt;proxy)(void)proxy_handle(c-&gt;fd);else(void)handle(c-&gt;fd,c-&gt;root);
+    close(c-&gt;fd);free(c);return NULL;
+}
+/* Dynamic bounded pool. Threads never disappear while holding a connection. */
+typedef struct {
+    int fd[QUEUE_CAPACITY],head,count,live,target,stopping;
+    const char *root;pthread_mutex_t lock;pthread_cond_t ready,space;
+    pthread_t ids[MAX_THREAD_IDS];int created;
+} worker_pool;
+static void *pool_worker(void *arg){
+    worker_pool *p=arg;
+    for(;;){
+        pcheck(pthread_mutex_lock(&amp;p-&gt;lock));
+        while(!p-&gt;count &amp;&amp; !p-&gt;stopping &amp;&amp; p-&gt;live&lt;=p-&gt;target)pcheck(pthread_cond_wait(&amp;p-&gt;ready,&amp;p-&gt;lock));
+        if(!p-&gt;count &amp;&amp; (p-&gt;stopping || p-&gt;live&gt;p-&gt;target)){
+            p-&gt;live--;pcheck(pthread_mutex_unlock(&amp;p-&gt;lock));return NULL;
+        }
+        int fd=p-&gt;fd[p-&gt;head];p-&gt;head=(p-&gt;head+1)%QUEUE_CAPACITY;p-&gt;count--;
+        pcheck(pthread_cond_signal(&amp;p-&gt;space));pcheck(pthread_mutex_unlock(&amp;p-&gt;lock));
+        socket_deadline(fd);(void)handle(fd,p-&gt;root);close(fd);
+        pcheck(pthread_mutex_lock(&amp;p-&gt;lock));
+        if(!p-&gt;count &amp;&amp; p-&gt;live&gt;1){
+            int target=p-&gt;live/2;if(target&lt;1)target=1;
+            if(target&lt;p-&gt;target){fprintf(stderr,"pool shrink target=%d\n",target);p-&gt;target=target;}
+            pcheck(pthread_cond_broadcast(&amp;p-&gt;ready));
+        }
+        pcheck(pthread_mutex_unlock(&amp;p-&gt;lock));
+    }
+}
+static void pool_grow(worker_pool *p,int target){
+    if(target&gt;MAX_WORKERS)target=MAX_WORKERS;p-&gt;target=target;
+    int before=p-&gt;live;
+    while(p-&gt;live&lt;target &amp;&amp; p-&gt;created&lt;MAX_THREAD_IDS){
+        pcheck(pthread_create(&amp;p-&gt;ids[p-&gt;created++],NULL,pool_worker,p));p-&gt;live++;
+    }
+    if(before!=p-&gt;live)fprintf(stderr,"pool grow %d -&gt; %d\n",before,p-&gt;live);
+}
+static void pool_enqueue(worker_pool *p,int fd){
+    pcheck(pthread_mutex_lock(&amp;p-&gt;lock));
+    if(p-&gt;count==QUEUE_CAPACITY)pool_grow(p,p-&gt;live*2);
+    while(p-&gt;count==QUEUE_CAPACITY)pcheck(pthread_cond_wait(&amp;p-&gt;space,&amp;p-&gt;lock));
+    p-&gt;fd[(p-&gt;head+p-&gt;count)%QUEUE_CAPACITY]=fd;p-&gt;count++;
+    if(p-&gt;count==QUEUE_CAPACITY)pool_grow(p,p-&gt;live*2);
+    pcheck(pthread_cond_signal(&amp;p-&gt;ready));pcheck(pthread_mutex_unlock(&amp;p-&gt;lock));
+}
+typedef struct {
+    int fd,eof;char in[CH11_REQUEST_LIMIT];size_t used;
+    char *out;size_t length,sent;long long deadline;
+} event_client;
+static void event_close(event_client *c){close(c-&gt;fd);free(c-&gt;out);memset(c,0,sizeof(*c));c-&gt;fd=-1;}
+/* Owns listener, including closing it when accepting ends. stop is an absolute
+ * acceptance deadline, independent of existing clients' progress deadlines. */
+static int event_loop(int listener,const char *root,int limit,int echo,long long stop){
+    event_client c[MAX_CLIENTS];memset(c,0,sizeof(c));for(int i=0;i&lt;MAX_CLIENTS;++i)c[i].fd=-1;
+    int accepted=0,active=0,commands=echo;
+    char command[1024];size_t command_used=0;
+    for(;;){
+        if(listener&gt;=0 &amp;&amp; (accepted&gt;=limit || now_ms()&gt;=stop)){close(listener);listener=-1;}
+        if(listener&lt;0 &amp;&amp; !active)break;
+        fd_set rd,wr;FD_ZERO(&amp;rd);FD_ZERO(&amp;wr);int maximum=-1;
+        if(listener&gt;=0){FD_SET(listener,&amp;rd);maximum=listener;}
+        if(commands){FD_SET(STDIN_FILENO,&amp;rd);if(STDIN_FILENO&gt;maximum)maximum=STDIN_FILENO;}
+        for(int i=0;i&lt;MAX_CLIENTS;++i)if(c[i].fd&gt;=0){
+            event_client *x=&amp;c[i];
+            if(now_ms()&gt;=x-&gt;deadline){event_close(x);active--;continue;}
+            if(!x-&gt;out){
+                size_t expected=0;int ready=0;
+                if(echo){char *nl=memchr(x-&gt;in,'\n',x-&gt;used);expected=nl?(size_t)(nl-x-&gt;in)+1:x-&gt;used;ready=nl!=NULL || (x-&gt;eof &amp;&amp; x-&gt;used);}
+                else ready=request_ready(x-&gt;in,x-&gt;used) || x-&gt;eof;
+                if(ready){
+                    if(echo){x-&gt;out=malloc(expected);if(x-&gt;out)memcpy(x-&gt;out,x-&gt;in,expected);x-&gt;length=expected;memmove(x-&gt;in,x-&gt;in+expected,x-&gt;used-expected);x-&gt;used-=expected;}
+                    else {if(build_response(x-&gt;in,x-&gt;used,root,&amp;x-&gt;out,&amp;x-&gt;length))x-&gt;out=NULL;}
+                    if(!x-&gt;out){event_close(x);active--;continue;}
+                }else if(x-&gt;eof || x-&gt;used==sizeof(x-&gt;in)){event_close(x);active--;continue;}
+            }
+            if(x-&gt;out)FD_SET(x-&gt;fd,&amp;wr);else FD_SET(x-&gt;fd,&amp;rd);
+            if(x-&gt;fd&gt;maximum)maximum=x-&gt;fd;
+        }
+        if(listener&lt;0 &amp;&amp; !active)break;
+        struct timeval wait={0,100000};int ready=select(maximum+1,&amp;rd,&amp;wr,NULL,&amp;wait);
+        if(ready&lt;0){if(errno==EINTR)continue;break;}
+        /* The readiness wait may cross stop; recheck before any accept. */
+        if(listener&gt;=0 &amp;&amp; now_ms()&gt;=stop){close(listener);listener=-1;}
+        if(commands &amp;&amp; FD_ISSET(STDIN_FILENO,&amp;rd)){
+            char input[256];ssize_t n=read(STDIN_FILENO,input,sizeof(input));
+            if(n&lt;=0)commands=0;
+            else for(ssize_t k=0;k&lt;n;++k){
+                if(command_used+1&lt;sizeof(command))command[command_used++]=input[k];
+                if(input[k]=='\n'){command[command_used]=0;printf("command: %s",command);fflush(stdout);command_used=0;}
+            }
+        }
+        if(listener&gt;=0 &amp;&amp; FD_ISSET(listener,&amp;rd)){
+            int fd=accept(listener,NULL,NULL);if(fd&gt;=0){
+                int flags=fcntl(fd,F_GETFL,0);
+                if(fd&gt;=FD_SETSIZE || flags&lt;0 || fcntl(fd,F_SETFL,flags|O_NONBLOCK)&lt;0){close(fd);continue;}
+                int i;for(i=0;i&lt;MAX_CLIENTS &amp;&amp; c[i].fd&gt;=0;++i){}
+                if(i==MAX_CLIENTS){close(fd);continue;}
+                c[i].fd=fd;c[i].deadline=now_ms()+3000;accepted++;active++;
+            }
+        }
+        int echoed=0;
+        for(int i=0;i&lt;MAX_CLIENTS;++i)if(c[i].fd&gt;=0){
+            event_client *x=&amp;c[i];
+            if(FD_ISSET(x-&gt;fd,&amp;rd)){
+                ssize_t n=read(x-&gt;fd,x-&gt;in+x-&gt;used,sizeof(x-&gt;in)-x-&gt;used);
+                if(n&gt;0){x-&gt;used+=(size_t)n;x-&gt;deadline=now_ms()+3000;}
+                else if(!n)x-&gt;eof=1;
+                else if(errno!=EAGAIN &amp;&amp; errno!=EWOULDBLOCK &amp;&amp; errno!=EINTR){event_close(x);active--;continue;}
+            }
+            if(x-&gt;fd&gt;=0 &amp;&amp; x-&gt;out &amp;&amp; FD_ISSET(x-&gt;fd,&amp;wr) &amp;&amp; (!echo || !echoed)){
+                ssize_t n=write(x-&gt;fd,x-&gt;out+x-&gt;sent,x-&gt;length-x-&gt;sent);
+                if(n&gt;0){x-&gt;sent+=(size_t)n;echoed=1;}
+                else if(n&lt;0 &amp;&amp; errno!=EAGAIN &amp;&amp; errno!=EWOULDBLOCK &amp;&amp; errno!=EINTR){event_close(x);active--;continue;}
+                if(x-&gt;sent==x-&gt;length){
+                    if(!echo){event_close(x);active--;}
+                    else{free(x-&gt;out);x-&gt;out=NULL;x-&gt;sent=x-&gt;length=0;}
+                }
+            }
+        }
+    }
+    if(listener&gt;=0)close(listener);
+    for(int i=0;i&lt;MAX_CLIENTS;++i)if(c[i].fd&gt;=0)event_close(&amp;c[i]);
+    return accepted==limit?0:1;
+}
+/* The regression harness names this entry separately to call event_loop. */
+#ifndef CH12_SERVER_MAIN
+#define CH12_SERVER_MAIN main
+#endif
+int CH12_SERVER_MAIN(int argc,char **argv){
+    if(argc==1){puts("usage: ch12_servers --serve process|select|thread|pool|echo|proxy|proxy-serial ROOT PORT LIMIT [FILTER LOG]");return 0;}
+    if((argc!=6 &amp;&amp; argc!=8)||strcmp(argv[1],"--serve"))return 2;
+    const char *mode=argv[2],*root=argv[3];char *end;long port=strtol(argv[4],&amp;end,10);
+    if(!*argv[4]||*end||port&lt;0||port&gt;65535)return 2;
+    long limit=strtol(argv[5],&amp;end,10);if(!*argv[5]||*end||limit&lt;1||limit&gt;MAX_CLIENTS)return 2;
+    int proxy=!strcmp(mode,"proxy")||!strcmp(mode,"proxy-serial");
+    if(strcmp(mode,"process")&amp;&amp;strcmp(mode,"select")&amp;&amp;strcmp(mode,"thread")&amp;&amp;strcmp(mode,"pool")&amp;&amp;strcmp(mode,"echo")&amp;&amp;!proxy)return 2;
+    if(proxy){if(argc!=8)return 2;filter_path=argv[6];log_path=argv[7];}
+    (void)signal(SIGPIPE,SIG_IGN);int listener=listen_loopback((int)port);if(listener&lt;0)return 1;
+    if(listener&gt;=FD_SETSIZE){close(listener);return 1;}
+    if(!strcmp(mode,"select")||!strcmp(mode,"echo")){
+        return event_loop(listener,root,(int)limit,!strcmp(mode,"echo"),now_ms()+120000);
+    }
+    if(!strcmp(mode,"process")){
+        struct sigaction action;memset(&amp;action,0,sizeof(action));action.sa_handler=child_handler;
+        sigemptyset(&amp;action.sa_mask);action.sa_flags=SA_RESTART;
+        if(sigaction(SIGCHLD,&amp;action,NULL)){close(listener);return 1;}
+    }
+    pthread_t ids[MAX_CLIENTS];pid_t children[MAX_CLIENTS];int count=0;
+    worker_pool pool={.root=root,.lock=PTHREAD_MUTEX_INITIALIZER,.ready=PTHREAD_COND_INITIALIZER,.space=PTHREAD_COND_INITIALIZER};
+    if(!strcmp(mode,"pool")){pcheck(pthread_mutex_lock(&amp;pool.lock));pool_grow(&amp;pool,1);pcheck(pthread_mutex_unlock(&amp;pool.lock));}
+    long long stop=now_ms()+120000;
+    while(count&lt;limit &amp;&amp; io_ready(listener,POLLIN,stop)){
+        int fd=accept(listener,NULL,NULL);if(fd&lt;0){if(errno==EINTR||errno==EAGAIN||errno==EWOULDBLOCK)continue;break;}socket_deadline(fd);
+        if(!strcmp(mode,"process")){
+            pid_t pid=fork();
+            if(!pid){close(listener);int rc=handle(fd,root);close(fd);_exit(rc?1:0);}
+            close(fd);if(pid&lt;0)break;children[count]=pid;
+        }else if(!strcmp(mode,"pool"))pool_enqueue(&amp;pool,fd);
+        else if(!strcmp(mode,"proxy-serial")){(void)proxy_handle(fd);close(fd);}
+        else{
+            connection *c=malloc(sizeof(*c));if(!c){close(fd);break;}
+            *c=(connection){fd,root,proxy};int e=pthread_create(&amp;ids[count],NULL,serve_thread,c);
+            if(e){close(fd);free(c);break;}
+        }
+        count++;
+    }
+    close(listener);
+    if(!strcmp(mode,"process")){
+        for(int i=0;i&lt;count;++i)while(waitpid(children[i],NULL,0)&lt;0 &amp;&amp; errno==EINTR){}
+    }else if(!strcmp(mode,"pool")){
+        pcheck(pthread_mutex_lock(&amp;pool.lock));pool.stopping=1;pcheck(pthread_cond_broadcast(&amp;pool.ready));pcheck(pthread_mutex_unlock(&amp;pool.lock));
+        for(int i=0;i&lt;pool.created;++i)pcheck(pthread_join(pool.ids[i],NULL));
+        pcheck(pthread_mutex_destroy(&amp;pool.lock));pcheck(pthread_cond_destroy(&amp;pool.ready));pcheck(pthread_cond_destroy(&amp;pool.space));
+    }else if(strcmp(mode,"proxy-serial")){for(int i=0;i&lt;count;++i)pcheck(pthread_join(ids[i],NULL));}
+    return count==limit?0:1;
+}
+</code></pre></details><h3 id="server-checks-code">环回协议验证、动态扩缩容与慢客户</h3><p>测试在临时目录编译实际C服务器，创建环回临时端口。分别让慢客户停在半个请求头，检查其他客户能推进；12客户突发压力要求动态池实际grow和shrink；echo一次发两行并测试EOF尾部；proxy分别验证串行/线程、403过滤和ALLOW/BLOCK日志。</p><p>它是维护用协议/进程测试，不是浏览器验收。真实浏览器的页面、HEAD/表单与多连接观察由整批阅读验收另记；Python不替代C执行证据。</p><p><a href="../code/ch12_server_checks.py" download>下载 ch12_server_checks.py</a></p><details class="code-details"><summary>PYTHON · 完整维护源</summary><pre><code id="ch12_server_checks-python" data-language="python" class="language-python">"""Bounded loopback acceptance of the actual C concurrency implementations.
+Uses temporary files and ephemeral ports. No dependency on outside HTTP/DNS.
+This is protocol/socket evidence; real-browser evidence is recorded separately.
+"""
+from pathlib import Path
+import concurrent.futures
+import os
+import socket
+import subprocess
+import tempfile
+import time
+
+CODE = Path(__file__).resolve().parent
+
+
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(f'server check failed: {message!r}')
+
+
+def read_all(sock):
+    data = b''
+    while True:
+        chunk = sock.recv(65536)
+        if not chunk:
+            return data
+        data += chunk
+        if len(data) &gt; 200000:
+            raise AssertionError('unbounded response')
+
+
+def check_complete_home_response(answer):
+    header, separator, body = answer.partition(b'\r\n\r\n')
+    require(separator, answer)
+    lines = header.split(b'\r\n')
+    require(lines[0] == b'HTTP/1.0 200 OK', lines[0])
+    lengths = [line.split(b':', 1)[1].strip() for line in lines[1:]
+               if line.split(b':', 1)[0].lower() == b'content-length']
+    require(len(lengths) == 1 and int(lengths[0]) == len(body), (lengths, body))
+    require(body == b'&lt;h1&gt;Concurrent Tiny&lt;/h1&gt;\n', body)
+
+
+def connect(port):
+    s = socket.create_connection(('127.0.0.1', port), timeout=6)
+    s.settimeout(6)
+    return s
+
+
+def launch(binary, mode, root, count, extra=()):
+    p = subprocess.Popen([str(binary), '--serve', mode, str(root), '0', str(count), *map(str, extra)],
+                         stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    line = p.stdout.readline().split()
+    if line[:2] != ['LISTEN', '127.0.0.1']:
+        raise AssertionError((mode, line, p.communicate(timeout=3)))
+    return p, int(line[2])
+
+
+def finish(p):
+    out, err = p.communicate(timeout=12)
+    require(p.returncode == 0, (p.returncode, out, err))
+    require('Sanitizer' not in err and 'runtime error:' not in err, err)
+    return err
+
+
+def compile_window_server(root):
+    """Exercise the real event loop with an explicit short acceptance deadline.
+
+    The normal command still passes now_ms()+120000. No source substitution or
+    environment setting changes that default; only this harness supplies 700 ms.
+    """
+    source = root / 'window_server.c'
+    source.write_text(r'''
+#define CH12_SERVER_MAIN chapter12_example_main
+#include "SOURCE"
+int main(int argc,char **argv) {
+    if(argc!=6)return 2;
+    (void)signal(SIGPIPE,SIG_IGN);
+    int listener=listen_loopback(0);if(listener&lt;0)return 2;
+    int rc=event_loop(listener,argv[3],atoi(argv[5]),!strcmp(argv[2],"echo"),now_ms()+700);
+    if(fcntl(listener,F_GETFD)!=-1 || errno!=EBADF)return 3;
+    return rc;
+}
+'''.replace('SOURCE', str(CODE/'ch12_servers.c')))
+    binary = root / 'window_server'
+    subprocess.run(['clang', '-std=c11', '-Wall', '-Wextra', '-Werror', '-pedantic',
+                    '-pthread', '-fsanitize=address,undefined', str(source),
+                    '-o', str(binary)], check=True)
+    return binary
+
+
+def check_window_cases(binary, root):
+    """Keep one accepted client alive across window expiry, then drain it."""
+    results = []
+    for mode, stalled in [('select', False), ('echo', False), ('select', True)]:
+        p, port = launch(binary, mode, root, 2)
+        client = connect(port)
+        started = time.monotonic()
+        try:
+            prefix = b'partial' if mode == 'echo' else b'GET / HTTP/1.0\r\n'
+            client.sendall(prefix)
+            time.sleep(.95)
+            require(p.poll() is None, (mode, 'accepted client discarded at window expiry'))
+            try:
+                late = socket.create_connection(('127.0.0.1', port), timeout=1)
+            except ConnectionRefusedError:
+                pass
+            else:
+                late.close()
+                raise AssertionError((mode, 'listener still accepts after its window'))
+            if not stalled:
+                client.sendall(b' line\n' if mode == 'echo' else b'Host: localhost\r\n\r\n')
+                if mode == 'echo':
+                    client.shutdown(socket.SHUT_WR)
+                answer = read_all(client)
+                if mode == 'echo':
+                    require(answer == b'partial line\n', answer)
+                else:
+                    check_complete_home_response(answer)
+            else:
+                answer = read_all(client)
+                require(answer == b'', answer)
+                require(2.5 &lt;= time.monotonic()-started &lt;= 6, 'client deadline lost')
+            out, err = p.communicate(timeout=5)
+            # Expiry before the requested count remains a partial-run result.
+            require(p.returncode == 1, (p.returncode, out, err))
+            require(not err, err)
+            results.append({'mode': mode, 'stalled': stalled,
+                            'seconds': round(time.monotonic()-started, 3),
+                            'late_connection_refused': True, 'returncode': p.returncode})
+        finally:
+            client.close()
+            if p.poll() is None:
+                p.kill()
+            p.communicate(timeout=5)
+    return results
+
+
+def main():
+    with tempfile.TemporaryDirectory(prefix='csapp-ch12-') as directory:
+        root = Path(directory)
+        (root / 'home.html').write_text('&lt;h1&gt;Concurrent Tiny&lt;/h1&gt;\n')
+        binary = root / 'servers'
+        subprocess.run(['clang', '-std=c11', '-Wall', '-Wextra', '-Werror', '-pedantic',
+                        '-pthread', '-fsanitize=address,undefined', str(CODE/'ch12_servers.c'),
+                        '-o', str(binary)], check=True)
+        request = b'GET / HTTP/1.0\r\nHost: localhost\r\n\r\n'
+        completed_modes = slow_client_cases = 0
+        for mode in ['process', 'select', 'thread', 'pool']:
+            p, port = launch(binary, mode, root, 2)
+            slow = connect(port)
+            slow.sendall(b'GET / HTTP/1.0\r\n')
+            # The one-worker pool deliberately needs queue pressure to grow;
+            # its first test completes both requests together.
+            fast = connect(port)
+            fast.sendall(request)
+            if mode != 'pool':
+                answer = read_all(fast)
+                check_complete_home_response(answer)
+                slow.sendall(b'Host: localhost\r\n\r\n')
+            else:
+                slow.sendall(b'Host: localhost\r\n\r\n')
+                answer = read_all(fast)
+                check_complete_home_response(answer)
+            answer = read_all(slow)
+            check_complete_home_response(answer)
+            slow.close(); fast.close(); finish(p)
+            completed_modes += 1
+            slow_client_cases += mode != 'pool'
+        p, port = launch(binary, 'pool', root, 12)
+        clients = [connect(port) for _ in range(12)]
+        for client in clients:
+            client.sendall(b'GET / HTTP/1.0\r\n')
+        time.sleep(.15)
+        for client in clients:
+            client.sendall(b'Host: localhost\r\n\r\n')
+        for client in clients:
+            answer = read_all(client)
+            check_complete_home_response(answer)
+            client.close()
+        events = finish(p)
+        require('pool grow 1 -&gt; 2' in events and 'pool shrink target=' in events, events)
+        p, port = launch(binary, 'echo', root, 2)
+        a, b = connect(port), connect(port)
+        a.sendall(b'partial')
+        b.sendall(b'one\ntwo\n')
+        b.shutdown(socket.SHUT_WR)
+        answer = read_all(b)
+        require(answer == b'one\ntwo\n', answer)
+        a.sendall(b' line\nlast')
+        a.shutdown(socket.SHUT_WR)
+        answer = read_all(a)
+        require(answer == b'partial line\nlast', answer)
+        a.close(); b.close(); finish(p)
+        for mode in ['proxy-serial', 'proxy']:
+            upstream, origin_port = launch(binary, 'thread', root, 1)
+            url = f'http://127.0.0.1:{origin_port}/'
+            blocked = url + 'blocked'
+            filt, log = root/'filter.txt', root/'proxy.log'
+            filt.write_text(blocked+'\n')
+            p, port = launch(binary, mode, root, 2, (filt, log))
+            for target, status in [(blocked,b'403 Forbidden'),(url,b'200 OK')]:
+                with connect(port) as client:
+                    client.sendall(f'GET {target} HTTP/1.0\r\nHost: localhost\r\n\r\n'.encode())
+                    answer = read_all(client)
+                    require(status in answer, answer)
+            finish(p); finish(upstream)
+            records = log.read_text()
+            require('BLOCK '+blocked in records and 'ALLOW '+url in records, records)
+        check_window_cases(compile_window_server(root), root)
+        print(f'servers modes={completed_modes} slow_client={slow_client_cases} pool_growth_shrink=YES')
+        print('echo partial_lines=YES buffered_lines=YES eof_tail=YES')
+        print('proxy sequential_and_threads=YES filter=YES log=YES')
+
+
+if __name__ == '__main__':
+    main()
+</code></pre></details><pre><code data-language="shell" class="language-shell">mkdir -p tmp/csapp/part3/ch12
+clang -std=c11 -Wall -Wextra -Werror -pedantic -pthread -fsanitize=address,undefined books/csapp/code/ch12_threads.c -o tmp/csapp/part3/ch12/threads
+./tmp/csapp/part3/ch12/threads
+./tmp/csapp/part3/ch12/threads --hello 4
+python3 books/csapp/code/ch12_models.py
+python3 books/csapp/code/ch12_server_checks.py</code></pre></section><section id="source-programs"><h2>题用原书程序：保留输入与行号</h2><p>以下是题面引用的原书代码行转录，保留csapp.h包装器名称、原行号和原版错误；它们用于读题，不作为可直接编译的安全示例。可运行修订以实验区维护源为准。对于原书依赖前章的echo/RIO，语义是按行读到EOF并逐字节回送；本页第12.2节解释这个假设的阻塞边界。</p><details class="code-details" id="fig-12-5"><summary>图 12.5 · 基于进程的echo</summary><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1013">来源：印刷 1012 页 / PDF 1013 页</a></p><pre><code data-language="c" class="language-c">1     #include &quot;csapp.h&quot;
+2     void echo(int connfd);
+3
+4     void sigchld_handler(int sig)
+5     {
+6         while (waitpid(-1, 0, WNOHANG) &gt; 0)
+7             ;
+8         return;
+9     }
+10
+11     int main(int argc, char **argv)
+12     {
+13         int listenfd, connfd;
+14         socklen_t clientlen;
+15         struct sockaddr_storage clientaddr;
+16
+17           if (argc != 2) {
+18               fprintf(stderr, &quot;usage: %s &lt;port&gt;\n&quot;, argv[0]);
+19               exit(0);
+20           }
+21
+22           Signal(SIGCHLD, sigchld_handler);
+23           listenfd = Open_listenfd(argv[1]);
+24           while (1) {
+25               clientlen = sizeof(struct sockaddr_storage);
+26               connfd = Accept(listenfd, (SA *) &amp;clientaddr, &amp;clientlen);
+27               if (Fork() == 0) {
+28                   Close(listenfd); /* Child closes its listening socket */
+29                   echo(connfd);    /* Child services client */
+30                   Close(connfd);   /* Child closes connection with client */
+31                   exit(0);         /* Child exits */
+32               }
+33               Close(connfd); /* Parent closes connected socket (important!) */
+34           }
+35     }
+</code></pre></details><details class="code-details" id="fig-12-6"><summary>图 12.6 · 同时监听stdin与listenfd</summary><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1016">来源：印刷 1015 页 / PDF 1016 页</a></p><pre><code data-language="c" class="language-c">1   #include &quot;csapp.h&quot;
+2   void echo(int connfd);
+3   void command(void);
+4
+5   int main(int argc, char **argv)
+6   {
+7       int listenfd, connfd;
+8       socklen_t clientlen;
+9       struct sockaddr_storage clientaddr;
+10       fd_set read_set, ready_set;
+11
+12       if (argc != 2) {
+13           fprintf(stderr, &quot;usage: %s &lt;port&gt;\n&quot;, argv[0]);
+14           exit(0);
+15       }
+16       listenfd = Open_listenfd(argv[1]);
+17
+18       FD_ZERO(&amp;read_set);              /* Clear read set */
+19       FD_SET(STDIN_FILENO, &amp;read_set); /* Add stdin to read set */
+20       FD_SET(listenfd, &amp;read_set);     /* Add listenfd to read set */
+21
+22       while (1) {
+23           ready_set = read_set;
+24           Select(listenfd+1, &amp;ready_set, NULL, NULL, NULL);
+25           if (FD_ISSET(STDIN_FILENO, &amp;ready_set))
+26               command(); /* Read command line from stdin */
+27           if (FD_ISSET(listenfd, &amp;ready_set)) {
+28               clientlen = sizeof(struct sockaddr_storage);
+29               connfd = Accept(listenfd, (SA *)&amp;clientaddr, &amp;clientlen);
+30               echo(connfd); /* Echo client input until EOF */
+31               Close(connfd);
+32           }
+33       }
+34   }
+35
+36   void command(void) {
+37       char buf[MAXLINE];
+38       if (!Fgets(buf, MAXLINE, stdin))
+39           exit(0); /* EOF */
+40       printf(&quot;%s&quot;, buf); /* Process the input command */
+41   }
+</code></pre></details><details class="code-details" id="fig-12-8"><summary>图 12.8 · 客户端池与辅助函数（图12.8—12.11）</summary><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1019">来源：印刷 1018—1020 页 / PDF 1019—1021 页</a></p><pre><code data-language="c" class="language-c">1     #include &quot;csapp.h&quot;
+2
+3     typedef struct { /* Represents a pool of connected descriptors */
+4         int maxfd;        /* Largest descriptor in read_set */
+5         fd_set read_set; /* Set of all active descriptors */
+6         fd_set ready_set; /* Subset of descriptors ready for reading */
+7         int nready;       /* Number of ready descriptors from select */
+8         int maxi;         /* High water index into client array */
+9         int clientfd[FD_SETSIZE];    /* Set of active descriptors */
+10         rio_t clientrio[FD_SETSIZE]; /* Set of active read buffers */
+11     } pool;
+12
+13     int byte_cnt = 0; /* Counts total bytes received by server */
+14
+15     int main(int argc, char **argv)
+16     {
+17         int listenfd, connfd;
+18         socklen_t clientlen;
+19         struct sockaddr_storage clientaddr;
+20         static pool pool;
+21
+22          if (argc != 2) {
+23              fprintf(stderr, &quot;usage: %s &lt;port&gt;\n&quot;, argv[0]);
+24              exit(0);
+25          }
+26          listenfd = Open_listenfd(argv[1]);
+27          init_pool(listenfd, &amp;pool);
+28
+29          while (1) {
+30              /* Wait for listening/connected descriptor(s) to become ready */
+31              pool.ready_set = pool.read_set;
+32              pool.nready = Select(pool.maxfd+1, &amp;pool.ready_set, NULL, NULL, NULL);
+33
+34               /* If listening descriptor ready, add new client to pool */
+35               if (FD_ISSET(listenfd, &amp;pool.ready_set)) {
+36                   clientlen = sizeof(struct sockaddr_storage);
+37                   connfd = Accept(listenfd, (SA *)&amp;clientaddr, &amp;clientlen);
+38                   add_client(connfd, &amp;pool);
+39               }
+40
+41               /* Echo a text line from each ready connected descriptor */
+42               check_clients(&amp;pool);
+43          }
+44     }
+1   void init_pool(int listenfd, pool *p)
+2   {
+3       /* Initially, there are no connected descriptors */
+4       int i;
+5       p-&gt;maxi = -1;
+6       for (i=0; i&lt; FD_SETSIZE; i++)
+7           p-&gt;clientfd[i] = -1;
+8
+9        /* Initially, listenfd is only member of select read set */
+10        p-&gt;maxfd = listenfd;
+11        FD_ZERO(&amp;p-&gt;read_set);
+12        FD_SET(listenfd, &amp;p-&gt;read_set);
+13   }
+1   void add_client(int connfd, pool *p)
+2   {
+3       int i;
+4       p-&gt;nready--;
+5       for (i = 0; i &lt; FD_SETSIZE; i++) /* Find an available slot */
+6           if (p-&gt;clientfd[i] &lt; 0) {
+7               /* Add connected descriptor to the pool */
+8               p-&gt;clientfd[i] = connfd;
+9               Rio_readinitb(&amp;p-&gt;clientrio[i], connfd);
+10
+11                  /* Add the descriptor to descriptor set */
+12                  FD_SET(connfd, &amp;p-&gt;read_set);
+13
+14                  /* Update max descriptor and pool high water mark */
+15                  if (connfd &gt; p-&gt;maxfd)
+16                      p-&gt;maxfd = connfd;
+17                  if (i &gt; p-&gt;maxi)
+18                      p-&gt;maxi = i;
+19                  break;
+20            }
+21        if (i == FD_SETSIZE) /* Couldn’t find an empty slot */
+22            app_error(&quot;add_client error: Too many clients&quot;);
+23   }
+1     void check_clients(pool *p)
+2     {
+3         int i, connfd, n;
+4         char buf[MAXLINE];
+5         rio_t rio;
+6
+7           for (i = 0; (i &lt;= p-&gt;maxi) &amp;&amp; (p-&gt;nready &gt; 0); i++) {
+8               connfd = p-&gt;clientfd[i];
+9               rio = p-&gt;clientrio[i];
+10
+11               /* If the descriptor is ready, echo a text line from it */
+12               if ((connfd &gt; 0) &amp;&amp; (FD_ISSET(connfd, &amp;p-&gt;ready_set))) {
+13                   p-&gt;nready--;
+14                   if ((n = Rio_readlineb(&amp;rio, buf, MAXLINE)) != 0) {
+15                       byte_cnt += n;
+16                       printf(&quot;Server received %d (%d total) bytes on fd %d\n&quot;,
+17                              n, byte_cnt, connfd);
+18                       Rio_writen(connfd, buf, n);
+19                   }
+20
+21                      /* EOF detected, remove descriptor from pool */
+22                      else {
+23                          Close(connfd);
+24                          FD_CLR(connfd, &amp;p-&gt;read_set);
+25                          p-&gt;clientfd[i] = -1;
+26                      }
+27               }
+28           }
+29     }
+</code></pre></details><details class="code-details" id="fig-12-13"><summary>图 12.13 · 创建并等待一个线程的hello</summary><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1024">来源：印刷 1023 页 / PDF 1024 页</a></p><pre><code data-language="c" class="language-c">1   #include &quot;csapp.h&quot;
+2   void *thread(void *vargp);
+3
+4   int main()
+5   {
+6       pthread_t tid;
+7       Pthread_create(&amp;tid, NULL, thread, NULL);
+8       Pthread_join(tid, NULL);
+9       exit(0);
+10   }
+11
+12   void *thread(void *vargp) /* Thread routine */
+13   {
+14       printf(&quot;Hello, world!\n&quot;);
+15       return NULL;
+16   }
+</code></pre></details><details class="code-details" id="fig-12-14"><summary>图 12.14 · 逐连接线程</summary><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1028">来源：印刷 1027 页 / PDF 1028 页</a></p><pre><code data-language="c" class="language-c">1   #include &quot;csapp.h&quot;
+2
+3   void echo(int connfd);
+4   void *thread(void *vargp);
+5
+6   int main(int argc, char **argv)
+7   {
+8       int listenfd, *connfdp;
+9       socklen_t clientlen;
+10       struct sockaddr_storage clientaddr;
+11       pthread_t tid;
+12
+13       if (argc != 2) {
+14           fprintf(stderr, &quot;usage: %s &lt;port&gt;\n&quot;, argv[0]);
+15           exit(0);
+16       }
+17       listenfd = Open_listenfd(argv[1]);
+18
+19       while (1) {
+20           clientlen=sizeof(struct sockaddr_storage);
+21           connfdp = Malloc(sizeof(int));
+22           *connfdp = Accept(listenfd, (SA *) &amp;clientaddr, &amp;clientlen);
+23           Pthread_create(&amp;tid, NULL, thread, connfdp);
+24       }
+25   }
+26
+27   /* Thread routine */
+28   void *thread(void *vargp)
+29   {
+30       int connfd = *((int *)vargp);
+31       Pthread_detach(pthread_self());
+32       Free(vargp);
+33       echo(connfd);
+34       Close(connfd);
+35       return NULL;
+36   }
+</code></pre></details><details class="code-details" id="fig-12-15"><summary>图 12.15 · 共享变量实例</summary><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1030">来源：印刷 1029 页 / PDF 1030 页</a></p><pre><code data-language="c" class="language-c">1   #include &quot;csapp.h&quot;
+2   #define N 2
+3   void *thread(void *vargp);
+4
+5   char **ptr;   /* Global variable */
+6
+7   int main()
+8   {
+9       int i;
+10       pthread_t tid;
+11       char *msgs[N] = {
+12           &quot;Hello from foo&quot;,
+13           &quot;Hello from bar&quot;
+14       };
+15
+16        ptr = msgs;
+17        for (i = 0; i &lt; N; i++)
+18            Pthread_create(&amp;tid, NULL, thread, (void *)i);
+19        Pthread_exit(NULL);
+20   }
+21
+22   void *thread(void *vargp)
+23   {
+24       int myid = (int)vargp;
+25       static int cnt = 0;
+26       printf(&quot;[%d]: %s (cnt=%d)\n&quot;, myid, ptr[myid], ++cnt);
+27       return NULL;
+28   }
+</code></pre></details><details class="code-details" id="fig-12-25"><summary>图 12.25 · sbuf完整函数</summary><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1044">来源：印刷 1043 页 / PDF 1044 页</a></p><pre><code data-language="c" class="language-c">1   #include &quot;csapp.h&quot;
+2   #include &quot;sbuf.h&quot;
+3
+4   /* Create an empty, bounded, shared FIFO buffer with n slots */
+5   void sbuf_init(sbuf_t *sp, int n)
+6   {
+7       sp-&gt;buf = Calloc(n, sizeof(int));
+8       sp-&gt;n = n;                        /* Buffer holds max of n items */
+9       sp-&gt;front = sp-&gt;rear = 0;         /* Empty buffer iff front == rear */
+10       Sem_init(&amp;sp-&gt;mutex, 0, 1);       /* Binary semaphore for locking */
+11       Sem_init(&amp;sp-&gt;slots, 0, n);       /* Initially, buf has n empty slots */
+12       Sem_init(&amp;sp-&gt;items, 0, 0);       /* Initially, buf has zero data items */
+13   }
+14
+15   /* Clean up buffer sp */
+16   void sbuf_deinit(sbuf_t *sp)
+17   {
+18       Free(sp-&gt;buf);
+19   }
+20
+21   /* Insert item onto the rear of shared buffer sp */
+22   void sbuf_insert(sbuf_t *sp, int item)
+23   {
+24       P(&amp;sp-&gt;slots);                          /* Wait for available slot */
+25       P(&amp;sp-&gt;mutex);                          /* Lock the buffer */
+26       sp-&gt;buf[(++sp-&gt;rear)%(sp-&gt;n)] = item;   /* Insert the item */
+27       V(&amp;sp-&gt;mutex);                          /* Unlock the buffer */
+28       V(&amp;sp-&gt;items);                          /* Announce available item */
+29   }
+30
+31   /* Remove and return the first item from buffer sp */
+32   int sbuf_remove(sbuf_t *sp)
+33   {
+34       int item;
+35       P(&amp;sp-&gt;items);                          /* Wait for available item */
+36       P(&amp;sp-&gt;mutex);                          /* Lock the buffer */
+37       item = sp-&gt;buf[(++sp-&gt;front)%(sp-&gt;n)]; /* Remove the item */
+38       V(&amp;sp-&gt;mutex);                          /* Unlock the buffer */
+39       V(&amp;sp-&gt;slots);                          /* Announce available slot */
+40       return item;
+41   }
+</code></pre></details><details class="code-details" id="fig-12-26"><summary>图 12.26 · 第一类读者—写者</summary><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1046">来源：印刷 1045 页 / PDF 1046 页</a></p><pre><code data-language="c" class="language-c">/* Global variables */
+int readcnt;    /* Initially = 0 */
+sem_t mutex, w; /* Both initially = 1 */
+
+void reader(void)
+{
+    while (1) {
+        P(&amp;mutex);
+        readcnt++;
+        if (readcnt == 1) /* First in */
+            P(&amp;w);
+        V(&amp;mutex);
+
+         /* Critical section */
+         /* Reading happens */
+
+         P(&amp;mutex);
+         readcnt--;
+         if (readcnt == 0) /* Last out */
+             V(&amp;w);
+         V(&amp;mutex);
+    }
+}
+void writer(void)
+{
+    while (1) {
+        P(&amp;w);
+
+         /* Critical section */
+         /* Writing happens */
+
+         V(&amp;w);
+    }
+}
+</code></pre></details><details class="code-details" id="fig-12-28"><summary>图 12.28 · 预线程服务器</summary><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1048">来源：印刷 1047 页 / PDF 1048 页</a></p><pre><code data-language="c" class="language-c">1   #include &quot;csapp.h&quot;
+2   #include &quot;sbuf.h&quot;
+3   #define NTHREADS 4
+4   #define SBUFSIZE 16
+5
+6   void echo_cnt(int connfd);
+7   void *thread(void *vargp);
+8
+9   sbuf_t sbuf; /* Shared buffer of connected descriptors */
+10
+11   int main(int argc, char **argv)
+12   {
+13       int i, listenfd, connfd;
+14       socklen_t clientlen;
+15       struct sockaddr_storage clientaddr;
+16       pthread_t tid;
+17
+18       if (argc != 2) {
+19           fprintf(stderr, &quot;usage: %s &lt;port&gt;\n&quot;, argv[0]);
+20           exit(0);
+21       }
+22       listenfd = Open_listenfd(argv[1]);
+23
+24       sbuf_init(&amp;sbuf, SBUFSIZE);
+25       for (i = 0; i &lt; NTHREADS; i++) /* Create worker threads */
+26           Pthread_create(&amp;tid, NULL, thread, NULL);
+27
+28       while (1) {
+29           clientlen = sizeof(struct sockaddr_storage);
+30           connfd = Accept(listenfd, (SA *) &amp;clientaddr, &amp;clientlen);
+31           sbuf_insert(&amp;sbuf, connfd); /* Insert connfd in buffer */
+32       }
+33   }
+34
+35   void *thread(void *vargp)
+36   {
+37       Pthread_detach(pthread_self());
+38       while (1) {
+39           int connfd = sbuf_remove(&amp;sbuf); /* Remove connfd from buffer */
+40           echo_cnt(connfd);                /* Service client */
+41           Close(connfd);
+42       }
+43   }
+</code></pre></details><details class="code-details" id="fig-12-29"><summary>图 12.29 · echo_cnt共享计数</summary><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1049">来源：印刷 1048 页 / PDF 1049 页</a></p><pre><code data-language="c" class="language-c">1   #include &quot;csapp.h&quot;
+2
+3   static int byte_cnt;      /* Byte counter */
+4   static sem_t mutex;       /* and the mutex that protects it */
+5
+6   static void init_echo_cnt(void)
+7   {
+8       Sem_init(&amp;mutex, 0, 1);
+9       byte_cnt = 0;
+10   }
+11
+12   void echo_cnt(int connfd)
+13   {
+14       int n;
+15       char buf[MAXLINE];
+16       rio_t rio;
+17       static pthread_once_t once = PTHREAD_ONCE_INIT;
+18
+19        Pthread_once(&amp;once, init_echo_cnt);
+20        Rio_readinitb(&amp;rio, connfd);
+21        while((n = Rio_readlineb(&amp;rio, buf, MAXLINE)) != 0) {
+22            P(&amp;mutex);
+23            byte_cnt += n;
+24            printf(&quot;server received %d (%d total) bytes on fd %d\n&quot;,
+25                   n, byte_cnt, connfd);
+26            V(&amp;mutex);
+27            Rio_writen(connfd, buf, n);
+28        }
+29   }
+</code></pre></details><details class="code-details" id="fig-12-40"><summary>图 12.40 · 调用者传入种子的rand_r</summary><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1060">来源：印刷 1059 页 / PDF 1060 页</a></p><pre><code data-language="c" class="language-c">1    /* rand_r - return a pseudorandom integer on 0..32767 */
+2    int rand_r(unsigned int *nextp)
+3    {
+4        *nextp = *nextp * 1103515245 + 12345;
+5        return (unsigned int)(*nextp / 65536) % 32768;
+6    }
+</code></pre></details><details class="code-details" id="fig-12-43"><summary>图 12.43 · 独立堆参数消除竞争</summary><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1064">来源：印刷 1063 页 / PDF 1064 页</a></p><pre><code data-language="c" class="language-c">1        #include &quot;csapp.h&quot;
+2        #define N 4
+3
+4        void *thread(void *vargp);
+5
+6        int main()
+7        {
+8            pthread_t tid[N];
+9            int i, *ptr;
+10
+11             for (i = 0; i &lt; N; i++) {
+12                 ptr = Malloc(sizeof(int));
+13                 *ptr = i;
+14                 Pthread_create(&amp;tid[i], NULL, thread, ptr);
+15             }
+16             for (i = 0; i &lt; N; i++)
+17                 Pthread_join(tid[i], NULL);
+18             exit(0);
+19        }
+20
+21        /* Thread routine */
+22        void *thread(void *vargp)
+23        {
+24            int myid = *((int *)vargp);
+25            Free(vargp);
+26            printf(&quot;Hello from thread %d\n&quot;, myid);
+27            return NULL;
+28        }
+</code></pre></details><details class="code-details" id="fig-12-46"><summary>图 12.46 · 创建线程后立即exit</summary><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1068">来源：印刷 1067 页 / PDF 1068 页</a></p><pre><code data-language="c" class="language-c">1   /* WARNING: This code is buggy! */
+2   #include &quot;csapp.h&quot;
+3   void *thread(void *vargp);
+4
+5   int main()
+6   {
+7       pthread_t tid;
+8
+9        Pthread_create(&amp;tid, NULL, thread, NULL);
+10        exit(0);
+11   }
+12
+13   /* Thread routine */
+14   void *thread(void *vargp)
+15   {
+16       Sleep(1);
+17       printf(&quot;Hello, world!\n&quot;);
+18       return NULL;
+19   }
+</code></pre></details><details class="code-details" id="fig-12-47"><summary>图 12.47 · tfgets测试驱动</summary><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1071">来源：印刷 1070 页 / PDF 1071 页</a></p><pre><code data-language="c" class="language-c">1   #include &quot;csapp.h&quot;
+2
+3   char *tfgets(char *s, int size, FILE *stream);
+4
+5   int main()
+6   {
+7       char buf[MAXLINE];
+8
+9        if (tfgets(buf, MAXLINE, stdin) == NULL)
+10            printf(&quot;BOOM!\n&quot;);
+11        else
+12            printf(&quot;%s&quot;, buf);
+13
+14        exit(0);
+15   }
+</code></pre></details></section><section id="exercises"><h2>本版练习与作业：12.1—12.39</h2><p>12.1—12.15为practice，12.16—12.39为homework。题号与起始页独立从本地Global Edition PDF枚举；与本版答案冲突的地方保留原说法、纠正和理由。</p><div class="exercise-index"><a href="#ex-12-1">12.1</a><a href="#ex-12-2">12.2</a><a href="#ex-12-3">12.3</a><a href="#ex-12-4">12.4</a><a href="#ex-12-5">12.5</a><a href="#ex-12-6">12.6</a><a href="#ex-12-7">12.7</a><a href="#ex-12-8">12.8</a><a href="#ex-12-9">12.9</a><a href="#ex-12-10">12.10</a><a href="#ex-12-11">12.11</a><a href="#ex-12-12">12.12</a><a href="#ex-12-13">12.13</a><a href="#ex-12-14">12.14</a><a href="#ex-12-15">12.15</a><a href="#ex-12-16">12.16</a><a href="#ex-12-17">12.17</a><a href="#ex-12-18">12.18</a><a href="#ex-12-19">12.19</a><a href="#ex-12-20">12.20</a><a href="#ex-12-21">12.21</a><a href="#ex-12-22">12.22</a><a href="#ex-12-23">12.23</a><a href="#ex-12-24">12.24</a><a href="#ex-12-25">12.25</a><a href="#ex-12-26">12.26</a><a href="#ex-12-27">12.27</a><a href="#ex-12-28">12.28</a><a href="#ex-12-29">12.29</a><a href="#ex-12-30">12.30</a><a href="#ex-12-31">12.31</a><a href="#ex-12-32">12.32</a><a href="#ex-12-33">12.33</a><a href="#ex-12-34">12.34</a><a href="#ex-12-35">12.35</a><a href="#ex-12-36">12.36</a><a href="#ex-12-37">12.37</a><a href="#ex-12-38">12.38</a><a href="#ex-12-39">12.39</a></div><details class="exercise" id="ex-12-1" data-original-exercise="12.1" data-source-pdf-pages="1012"><summary>12.1 · 跟踪连接文件表引用计数</summary><div class="exercise-question" data-original-exercise="12.1" data-source-pdf-pages="1012"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1012">来源：印刷 1011 页 / PDF 1012 页</a></p><p>图12.5的并发服务器由父进程为每个新连接创建子进程。跟踪与该连接关联的文件表项的引用计数变化。<a href="#fig-12-5">图12.5完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>accept成功建立该连接描述符时为1；fork把它复制到子进程描述符表后为2；父进程执行第33行close后为1；子进程第30行close后为0，最后引用释放。两次close的先后次序可以颠倒，数列仍是1→2→1→0。计数对象是单条连接的文件表项，不是整个进程的所有fd总数。</p></div></details><details class="exercise" id="ex-12-2" data-original-exercise="12.2" data-source-pdf-pages="1012"><summary>12.2 · 父进程漏关连接的原版矛盾</summary><div class="exercise-question" data-original-exercise="12.2" data-source-pdf-pages="1012"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1012">来源：印刷 1011 页 / PDF 1012 页</a></p><p>如果删去图12.5第33行关闭连接描述符的语句，原题声称代码仍正确，亦即不会内存泄漏。为什么？<a href="#fig-12-5">图12.5完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p><strong>校注：</strong>对图中的长期运行服务器，该前提不成立。父进程保留每条连接的引用，孩子关闭/退出后计数只从2到1；父进程随后accept又覆盖局部connfd数值，旧描述符仍打开。长期运行会耗尽描述符及相关内核资源，也可能延迟对端观察到EOF。</p><p>本版印刷1072页答案说“父进程退出时内核自动关闭描述符”，这是进程终止时的清理事实，不能证明服务器运行期间没有泄漏。若删除的是孩子第30行，紧接着exit确实会关闭孩子那一份；但题面明确写的是33行。</p></div></details><details class="exercise" id="ex-12-3" data-original-exercise="12.3" data-source-pdf-pages="1017"><summary>12.3 · 服务远端时本地Ctrl+D会怎样</summary><div class="exercise-question" data-original-exercise="12.3" data-source-pdf-pages="1017"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1017">来源：印刷 1016 页 / PDF 1017 页</a></p><p>在Linux中键入Ctrl+D表示标准输入EOF。如果图12.6程序正逐行回送客户数据，这时在该服务器的标准输入键入Ctrl+D，会发生什么？<a href="#fig-12-6">图12.6完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>当前控制流正陷在echo(connfd)，它读的是客户socket而不是服务器stdin，所以此时不会立即执行command，也不会因此认定远端socket EOF。等远端关闭使echo返回后，主循环再次select，stdin的EOF可读，command中的Fgets返回NULL，程序才exit。终端行规程中Ctrl+D在有待发字符时可先交付字符；题目所说EOF对应空输入条件。</p><p>本版答案把本地Ctrl+D直接当成echo所读连接的EOF，混淆了两个描述符。若Ctrl+D按在客户自己的终端，客户程序如何关闭或半关闭连接还取决于客户实现；那是另一条事件路径。</p></div></details><details class="exercise" id="ex-12-4" data-original-exercise="12.4" data-source-pdf-pages="1021"><summary>12.4 · 每轮重新取得nready</summary><div class="exercise-question" data-original-exercise="12.4" data-source-pdf-pages="1021"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1021">来源：印刷 1020 页 / PDF 1021 页</a></p><p>在图12.8服务器中，pool.nready为什么每轮都重新赋为select返回值？<a href="#fig-12-8">图12.8完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>nready记录当前ready_set内本次就绪的描述符数，用于让add_client/check_clients在已处理全部就绪事件时停止扫描。一次accept或服务一个就绪客户会递减它；下一次select给出新的快照，旧计数既不再对应新的集合，也可能已为0。read_set是持久兴趣集，ready_set与nready是一轮的临时结果。</p></div></details><details class="exercise" id="ex-12-5" data-original-exercise="12.5" data-source-pdf-pages="1029"><summary>12.5 · 线程参数与线程资源的两种泄漏</summary><div class="exercise-question" data-original-exercise="12.5" data-source-pdf-pages="1029"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1029">来源：印刷 1028 页 / PDF 1029 页</a></p><p>原题先声称图12.5删除第33行仍无泄漏。再问：图12.14的线程服务器删去第31行或第32行，是否可能泄漏，为什么？<a href="#fig-12-5">图12.5完整题用代码</a>；<a href="#fig-12-14">图12.14完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>删除31行detach而仍没有任何join，会保留已终止joinable线程的回收资源；删除32行Free(vargp)，会使每个新连接分配的int块失去释放机会。二者是独立的资源种类，不能靠close(connfd)修复。对应修复是对每线程选择join或detach，以及明确由工作线程free其参数。题面第一句继承12.2的错误，父进程遗漏close仍是运行期泄漏，校注见上一题。</p></div></details><details class="exercise" id="ex-12-6" data-original-exercise="12.6" data-source-pdf-pages="1032"><summary>12.6 · 按实例填写共享表</summary><div class="exercise-question" data-original-exercise="12.6" data-source-pdf-pages="1032"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1032">来源：印刷 1031 页 / PDF 1032 页</a></p><p>A. 对图12.15填写下表Yes/No。v.t表示变量v在线程t的局部栈实例，m为主线程，p0/p1为两个同伴。B. ptr、cnt、i、msgs、myid哪些共享？<a href="#fig-12-15">图12.15完整题用代码</a></p><div class="scroll"><table><thead><tr><th scope="col">实例</th><th scope="col">main引用？</th><th scope="col">peer0引用？</th><th scope="col">peer1引用？</th></tr></thead><tbody><tr><td>ptr</td><td>?</td><td>?</td><td>?</td></tr><tr><td>cnt</td><td>?</td><td>?</td><td>?</td></tr><tr><td>i.m</td><td>?</td><td>?</td><td>?</td></tr><tr><td>msgs.m</td><td>?</td><td>?</td><td>?</td></tr><tr><td>myid.p0</td><td>?</td><td>?</td><td>?</td></tr><tr><td>myid.p1</td><td>?</td><td>?</td><td>?</td></tr></tbody></table></div></div><div class="answer"><h3 class="answer-title">解答与推导</h3><div class="scroll"><table><thead><tr><th scope="col">实例</th><th scope="col">main</th><th scope="col">peer0</th><th scope="col">peer1</th></tr></thead><tbody><tr><td>ptr</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>cnt</td><td>No</td><td>Yes</td><td>Yes</td></tr><tr><td>i.m</td><td>Yes</td><td>No</td><td>No</td></tr><tr><td>msgs.m</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>myid.p0</td><td>No</td><td>Yes</td><td>No</td></tr><tr><td>myid.p1</td><td>No</td><td>No</td><td>Yes</td></tr></tbody></table></div><p>B：ptr、cnt、msgs共享。i的数值在创建时被转换为参数，并未把&amp;i交给同伴，所以同伴不引用i.m；myid的两个实例各归本线程。msgs虽是main局部数组，却经ptr间接被两同伴读取。</p><p>表回答的是教材的实例引用关系，不代表该示例C可安全运行：++cnt没有同步；整型/指针转换依赖实现；main执行pthread_exit后其他线程继续用main局部对象的生存期也有风险。安全实现使用稳定参数数组、join以及计数锁。</p></div></details><details class="exercise" id="ex-12-7" data-original-exercise="12.7" data-source-pdf-pages="1035,1036"><summary>12.7 · 逐步填写丢失更新轨迹</summary><div class="exercise-question" data-original-exercise="12.7" data-source-pdf-pages="1035,1036"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1035">来源：印刷 1034—1035 页 / PDF 1035—1036 页</a></p><p>对badcnt.c的以下指令顺序，填写每步的%rdx₁、%rdx₂、cnt。初始cnt=0；H/T是循环前后指令，L把cnt读入本线程寄存器，U把该寄存器加1，S写回cnt。首行为H1且寄存器尚未定义。这个顺序是否得到cnt的正确值？</p><div class="scroll"><table><thead><tr><th scope="col">步骤</th><th scope="col">指令</th><th scope="col">%rdx₁</th><th scope="col">%rdx₂</th><th scope="col">cnt</th></tr></thead><tbody><tr><td>1</td><td>H1</td><td>?</td><td>?</td><td>0</td></tr><tr><td>2</td><td>L1</td><td>?</td><td>?</td><td>?</td></tr><tr><td>3</td><td>H2</td><td>?</td><td>?</td><td>?</td></tr><tr><td>4</td><td>L2</td><td>?</td><td>?</td><td>?</td></tr><tr><td>5</td><td>U2</td><td>?</td><td>?</td><td>?</td></tr><tr><td>6</td><td>S2</td><td>?</td><td>?</td><td>?</td></tr><tr><td>7</td><td>U1</td><td>?</td><td>?</td><td>?</td></tr><tr><td>8</td><td>S1</td><td>?</td><td>?</td><td>?</td></tr><tr><td>9</td><td>T1</td><td>?</td><td>?</td><td>?</td></tr><tr><td>10</td><td>T2</td><td>?</td><td>?</td><td>?</td></tr></tbody></table></div></div><div class="answer"><h3 class="answer-title">解答与推导</h3><div class="scroll"><table><thead><tr><th scope="col">步骤</th><th scope="col">指令</th><th scope="col">%rdx₁</th><th scope="col">%rdx₂</th><th scope="col">cnt</th></tr></thead><tbody><tr><td>1</td><td>H1</td><td>—</td><td>—</td><td>0</td></tr><tr><td>2</td><td>L1</td><td>0</td><td>—</td><td>0</td></tr><tr><td>3</td><td>H2</td><td>0</td><td>—</td><td>0</td></tr><tr><td>4</td><td>L2</td><td>0</td><td>0</td><td>0</td></tr><tr><td>5</td><td>U2</td><td>0</td><td>1</td><td>0</td></tr><tr><td>6</td><td>S2</td><td>0</td><td>1</td><td>1</td></tr><tr><td>7</td><td>U1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>8</td><td>S1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>9</td><td>T1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>10</td><td>T2</td><td>1</td><td>1</td><td>1</td></tr></tbody></table></div><p>最终cnt=1。另一线程运行时，已经保存的寄存器值不会消失；表保留两个寄存器以清楚展示状态，原书答案用“—”省略当前未运行线程的寄存器。它是指定指令的抽象模型，不是有数据竞争C的全部可能行为。</p><p><strong>源图校注：</strong>印刷1033页图12.17把U写成<code>addq %eax</code>，把S写成<code>movq %eax,cnt(%rip)</code>；前者缺少操作数，后者与q后缀所需64位寄存器不符。按紧邻文字“读取到%rdx、加1、写回%rdx”，正确的L/U/S应如下。本题依文字定义做状态推演，不运行排版错误的汇编。</p><pre><code data-language="asm" class="language-asm">movq cnt(%rip), %rdx
+addq $1, %rdx
+movq %rdx, cnt(%rip)</code></pre><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1034">来源：印刷 1033 页 / PDF 1034 页</a></p></div></details><details class="exercise" id="ex-12-8" data-original-exercise="12.8" data-source-pdf-pages="1038"><summary>12.8 · 分类安全与不安全轨迹</summary><div class="exercise-question" data-original-exercise="12.8" data-source-pdf-pages="1038"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1038">来源：印刷 1037 页 / PDF 1038 页</a></p><p>使用图12.21的进度图，将以下轨迹分别判为安全或不安全。初始cnt=0；H/T不改变计数，L/U/S分别是读取、寄存器加1、写回；每线程L到S之间为临界区。</p><div class="scroll"><table><thead><tr><th scope="col">轨迹</th><th scope="col">指令顺序</th></tr></thead><tbody><tr><td>A</td><td>H1,L1,U1,S1,H2,L2,U2,S2,T2,T1</td></tr><tr><td>B</td><td>H2,L2,H1,L1,U1,S1,T1,U2,S2,T2</td></tr><tr><td>C</td><td>H1,H2,L2,U2,S2,L1,U1,S1,T1,T2</td></tr></tbody></table></div></div><div class="answer"><h3 class="answer-title">解答与推导</h3><div class="scroll"><table><thead><tr><th scope="col">轨迹</th><th scope="col">分类</th><th scope="col">最终cnt</th><th scope="col">依据</th></tr></thead><tbody><tr><td>A</td><td>安全</td><td>2</td><td>S1先于L2</td></tr><tr><td>B</td><td>不安全</td><td>1</td><td>L1/L2都读0，两个S都写1</td></tr><tr><td>C</td><td>安全</td><td>2</td><td>S2先于L1</td></tr></tbody></table></div></div></details><details class="exercise" id="ex-12-9" data-original-exercise="12.9" data-source-pdf-pages="1043"><summary>12.9 · 图中mutex是否真的必要</summary><div class="exercise-question" data-original-exercise="12.9" data-source-pdf-pages="1043"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1043">来源：印刷 1042 页 / PDF 1043 页</a></p><p>p为生产者数，c为消费者数，n为缓冲区项数。对sbuf_insert/sbuf_remove的mutex分别判断是否必要：A. p=1,c=1,n&gt;1；B. p=1,c=1,n=1；C. p&gt;1,c&gt;1,n=1。缓冲为int数组，独立front/rear，下标分别由消费者/生产者推进，初始slots=n、items=0。<a href="#fig-12-25">图12.25完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p><strong>按图12.25的精确数据访问，A、B、C都可省略这把额外buffer mutex。</strong>A只有一个生产者写rear、一个消费者写front，二者不能同时访问同一槽：消费者必须拿到已经发布的items，生产者必须拿到消费者读完后归还的slots。不同数组元素是不同C对象，允许同时读写。这里没有额外的共享count字段。</p><p>B中一个槽在“可生产”和“可消费”之间交替。C虽然同类线程有多个，唯一slot许可使同一时刻最多一个生产者进入；唯一item许可同样限制消费者，而且槽位只在发布后才能交接。</p><p><strong>原解校注：</strong>本版1074页把A答为“需要，因为生产与消费可同时访问buffer”，但同时访问不同槽不构成冲突；把“数组共享”直接当作“每次访问冲突”过强。<a href="#sbuf-code">ch12_sbuf.c</a>保留slots/items的同步、仅删除buffer mutex，执行三种条件各1000项exactly-once验证；安全性依据是上述所有权交接，而不是一次运行成功。若n&gt;1且多个生产者或多个消费者，会同时写rear或front，此时不能这样删锁。</p></div></details><details class="exercise" id="ex-12-10" data-original-exercise="12.10" data-source-pdf-pages="1045"><summary>12.10 · 弱读者优先怎样仍使读者饥饿</summary><div class="exercise-question" data-original-exercise="12.10" data-source-pdf-pages="1045"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1045">来源：印刷 1044 页 / PDF 1045 页</a></p><p>图12.26偏向读者，但一个写者离开临界区时，可能唤醒等待写者而不是读者。描述这种弱优先让一组写者饿死一个读者的场景。<a href="#fig-12-26">图12.26完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>假设w的等待者按LIFO唤醒。写者W1占w时，首位读者R先阻塞在w；W2随后阻塞成为栈顶。W1释放w唤醒W2，接着W1再申请w成为新栈顶；W2释放时又唤醒W1。二者不断交替，R一直压在下面。P/V语义并未强制FIFO，所以这是合法的反例；称为读者优先不等于对每个读者提供公平。</p></div></details><details class="exercise" id="ex-12-11" data-original-exercise="12.11" data-source-pdf-pages="1057"><summary>12.11 · 强扩展的加速比与效率</summary><div class="exercise-question" data-original-exercise="12.11" data-source-pdf-pages="1057"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1057">来源：印刷 1056 页 / PDF 1057 页</a></p><p>按强扩展假设补全表格。</p><div class="scroll"><table><thead><tr><th scope="col">线程t</th><th scope="col">1</th><th scope="col">4</th><th scope="col">8</th></tr></thead><tbody><tr><td>核p</td><td>1</td><td>4</td><td>8</td></tr><tr><td>时间Tₚ</td><td>16</td><td>8</td><td>4</td></tr><tr><td>加速比Sₚ</td><td>1</td><td>?</td><td>?</td></tr><tr><td>效率Eₚ</td><td>100%</td><td>?</td><td>?</td></tr></tbody></table></div></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>S=T₁/Tₚ，三列是1、16/8=2、16/4=4；E=S/p，分别100%、2/4=50%、4/8=50%。</p><p>本版1074页解答的最后一格写25%，与定义及同列4/8矛盾；应为50%。线程与核数此题刚好相同，不意味着一般能直接用线程数作效率分母。</p></div></details><details class="exercise" id="ex-12-12" data-original-exercise="12.12" data-source-pdf-pages="1061"><summary>12.12 · rand_r隐式可重入的条件</summary><div class="exercise-question" data-original-exercise="12.12" data-source-pdf-pages="1061"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1061">来源：印刷 1060 页 / PDF 1061 页</a></p><p>解释为什么图12.40的rand_r是隐式可重入函数。<a href="#fig-12-40">图12.40完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>函数把可变seed存储交给调用者，通过nextp指针读改写，内部没有共享静态种子。只有各并发调用传入互不共享的seed对象时，其可变访问才相互独立，因此是隐式而非仅凭函数文本就能断言的显式可重入。传指针本身不保证独立；本版解答“因为按引用传参”须加上这个调用者条件。</p></div></details><details class="exercise" id="ex-12-13" data-original-exercise="12.13" data-source-pdf-pages="1063"><summary>12.13 · 为何不能由创建者立即free参数</summary><div class="exercise-question" data-original-exercise="12.13" data-source-pdf-pages="1063"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1063">来源：印刷 1062 页 / PDF 1063 页</a></p><p>图12.43中，能否把Free从peer线程移到main的第14行pthread_create之后立即执行？为什么这不是好主意？<a href="#fig-12-43">图12.43完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>create返回只表明线程创建成功，不表明新线程已执行第24行解引用。main可能先free，peer才读，就形成悬空访问；分配器若复用该块，还可能读到另一个对象。应由peer复制参数后free，或由main保留参数到join完成。</p>
+<div class="explanation" id="explain-ex-12-13"><p>一种错误时序是：主线程申请参数块并创建线程 → create 返回 → 主线程 free 参数块 → 新线程首次获得 CPU 并解引用参数。create 返回没有给“新线程已经读完”建立先后保证。把 free 移到新线程复制值之后，或让主线程等 join 后再释放，才从程序结构上消除这条路径。</p></div>
+</div></details><details class="exercise" id="ex-12-14" data-original-exercise="12.14" data-source-pdf-pages="1063"><summary>12.14 · 不用malloc/free传入稳定ID</summary><div class="exercise-question" data-original-exercise="12.14" data-source-pdf-pages="1063"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1063">来源：印刷 1062 页 / PDF 1063 页</a></p><p>A. 图12.43通过给每个整数ID独立分配块消除了竞争。给出一种不调用malloc/free的不同做法。B. 说明其优缺点。<a href="#fig-12-43">图12.43完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><pre><code data-language="c" class="language-c">int ids[N]; pthread_t threads[N];
+for (int i = 0; i &lt; N; ++i) {
+    ids[i] = i;
+    Pthread_create(&amp;threads[i], NULL, thread, &amp;ids[i]);
+}
+for (int i = 0; i &lt; N; ++i) Pthread_join(threads[i], NULL);
+/* thread copies *(const int *)arg, and does not free it. */</code></pre><p>B：无需逐线程堆分配，地址类型与C对象生存期明确；缺点是数组必须保留至全部线程结束，规模过大不宜放栈上，不能让创建函数提前返回。本版答案建议(void*)i再(int)arg，虽然常见实现支持某些整型/指针转换，这不是任意严格C11实现的可移植保证；固定N的参数数组避免该假设。</p></div></details><details class="exercise" id="ex-12-15" data-original-exercise="12.15" data-source-pdf-pages="1066,1067"><summary>12.15 · 零许可导致必然死锁</summary><div class="exercise-question" data-original-exercise="12.15" data-source-pdf-pages="1066,1067"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1066">来源：印刷 1065—1066 页 / PDF 1066—1067 页</a></p><p>初始s=1,t=0，两个线程都依次执行P(s);V(s);P(t);V(t)。A. 画进度图；B. 是否总死锁？C. 若是，怎样只改初值消除死锁？D. 画改后进度图。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><div class="scroll"><table><thead><tr><th scope="col">线程1</th><th scope="col">线程2</th></tr></thead><tbody><tr><td>P(s)</td><td>P(s)</td></tr><tr><td>V(s)</td><td>V(s)</td></tr><tr><td>P(t)</td><td>P(t)</td></tr><tr><td>V(t)</td><td>V(t)</td></tr></tbody></table></div><figure><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 410" role="img" aria-label="12.15 A：初始s=1,t=0"><title>12.15 A：初始s=1,t=0</title><rect x="40" y="15" width="320" height="320" fill="#fffdf5" stroke="#bdb7a5"/><path d="M60,315 L130,315" stroke="#91a99c" fill="none"/><path d="M60,315 L60,245" stroke="#91a99c" fill="none"/><path d="M60,245 L60,175" stroke="#91a99c" fill="none"/><path d="M60,175 L130,175" stroke="#91a99c" fill="none"/><path d="M130,175 L200,175" stroke="#91a99c" fill="none"/><path d="M130,315 L200,315" stroke="#91a99c" fill="none"/><path d="M200,315 L200,245" stroke="#91a99c" fill="none"/><path d="M200,245 L200,175" stroke="#91a99c" fill="none"/><circle cx="60" cy="315" r="4" fill="#206a4c"/><circle cx="60" cy="245" r="4" fill="#206a4c"/><circle cx="60" cy="175" r="4" fill="#206a4c"/><circle cx="60" cy="105" r="4" fill="#d4cdbc"/><circle cx="60" cy="35" r="4" fill="#d4cdbc"/><circle cx="130" cy="315" r="4" fill="#206a4c"/><circle cx="130" cy="245" r="4" fill="#d4cdbc"/><circle cx="130" cy="175" r="4" fill="#206a4c"/><circle cx="130" cy="105" r="4" fill="#d4cdbc"/><circle cx="130" cy="35" r="4" fill="#d4cdbc"/><circle cx="200" cy="315" r="4" fill="#206a4c"/><circle cx="200" cy="245" r="4" fill="#206a4c"/><circle cx="200" cy="175" r="7" fill="#a03628"/><circle cx="200" cy="105" r="4" fill="#d4cdbc"/><circle cx="200" cy="35" r="4" fill="#d4cdbc"/><circle cx="270" cy="315" r="4" fill="#d4cdbc"/><circle cx="270" cy="245" r="4" fill="#d4cdbc"/><circle cx="270" cy="175" r="4" fill="#d4cdbc"/><circle cx="270" cy="105" r="4" fill="#d4cdbc"/><circle cx="270" cy="35" r="4" fill="#d4cdbc"/><circle cx="340" cy="315" r="4" fill="#d4cdbc"/><circle cx="340" cy="245" r="4" fill="#d4cdbc"/><circle cx="340" cy="175" r="4" fill="#d4cdbc"/><circle cx="340" cy="105" r="4" fill="#d4cdbc"/><circle cx="340" cy="35" r="4" fill="#d4cdbc"/><text class="hint" x="60" y="355">0</text><text class="hint" x="20" y="320">0</text><text class="hint" x="130" y="355">1</text><text class="hint" x="20" y="250">1</text><text class="hint" x="200" y="355">2</text><text class="hint" x="20" y="180">2</text><text class="hint" x="270" y="355">3</text><text class="hint" x="20" y="110">3</text><text class="hint" x="340" y="355">4</text><text class="hint" x="20" y="40">4</text><text class="hint" x="210" y="390">线程1：已完成操作数 →</text><text class="hint" x="190" y="12">线程2：已完成操作数 ↑</text></svg></div><figcaption>12.15 A：初始s=1,t=0。绿色点可达，线段是允许的一步；红点为未完成且无可执行操作的死锁，浅点不可达。横纵坐标均从0到4；操作序列见紧邻表格。</figcaption></figure><p>B：总会停在两线程都完成前两步、等待P(t)的位置(2,2)。t初始0，没有线程能越过P(t)到达首次V(t)。C：保持s=1，把t改成1。D如下，所有可达未完成状态都存在可继续的一步。</p><figure><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 410" role="img" aria-label="12.15 D：初始s=1,t=1"><title>12.15 D：初始s=1,t=1</title><rect x="40" y="15" width="320" height="320" fill="#fffdf5" stroke="#bdb7a5"/><path d="M60,315 L130,315" stroke="#91a99c" fill="none"/><path d="M60,315 L60,245" stroke="#91a99c" fill="none"/><path d="M60,245 L60,175" stroke="#91a99c" fill="none"/><path d="M60,175 L130,175" stroke="#91a99c" fill="none"/><path d="M60,175 L60,105" stroke="#91a99c" fill="none"/><path d="M60,105 L130,105" stroke="#91a99c" fill="none"/><path d="M60,105 L60,35" stroke="#91a99c" fill="none"/><path d="M60,35 L130,35" stroke="#91a99c" fill="none"/><path d="M130,35 L200,35" stroke="#91a99c" fill="none"/><path d="M200,35 L270,35" stroke="#91a99c" fill="none"/><path d="M270,35 L340,35" stroke="#91a99c" fill="none"/><path d="M130,105 L200,105" stroke="#91a99c" fill="none"/><path d="M130,105 L130,35" stroke="#91a99c" fill="none"/><path d="M200,105 L200,35" stroke="#91a99c" fill="none"/><path d="M130,175 L200,175" stroke="#91a99c" fill="none"/><path d="M130,175 L130,105" stroke="#91a99c" fill="none"/><path d="M200,175 L270,175" stroke="#91a99c" fill="none"/><path d="M200,175 L200,105" stroke="#91a99c" fill="none"/><path d="M270,175 L340,175" stroke="#91a99c" fill="none"/><path d="M340,175 L340,105" stroke="#91a99c" fill="none"/><path d="M340,105 L340,35" stroke="#91a99c" fill="none"/><path d="M130,315 L200,315" stroke="#91a99c" fill="none"/><path d="M200,315 L270,315" stroke="#91a99c" fill="none"/><path d="M200,315 L200,245" stroke="#91a99c" fill="none"/><path d="M200,245 L270,245" stroke="#91a99c" fill="none"/><path d="M200,245 L200,175" stroke="#91a99c" fill="none"/><path d="M270,245 L340,245" stroke="#91a99c" fill="none"/><path d="M270,245 L270,175" stroke="#91a99c" fill="none"/><path d="M340,245 L340,175" stroke="#91a99c" fill="none"/><path d="M270,315 L340,315" stroke="#91a99c" fill="none"/><path d="M270,315 L270,245" stroke="#91a99c" fill="none"/><path d="M340,315 L340,245" stroke="#91a99c" fill="none"/><circle cx="60" cy="315" r="4" fill="#206a4c"/><circle cx="60" cy="245" r="4" fill="#206a4c"/><circle cx="60" cy="175" r="4" fill="#206a4c"/><circle cx="60" cy="105" r="4" fill="#206a4c"/><circle cx="60" cy="35" r="4" fill="#206a4c"/><circle cx="130" cy="315" r="4" fill="#206a4c"/><circle cx="130" cy="245" r="4" fill="#d4cdbc"/><circle cx="130" cy="175" r="4" fill="#206a4c"/><circle cx="130" cy="105" r="4" fill="#206a4c"/><circle cx="130" cy="35" r="4" fill="#206a4c"/><circle cx="200" cy="315" r="4" fill="#206a4c"/><circle cx="200" cy="245" r="4" fill="#206a4c"/><circle cx="200" cy="175" r="4" fill="#206a4c"/><circle cx="200" cy="105" r="4" fill="#206a4c"/><circle cx="200" cy="35" r="4" fill="#206a4c"/><circle cx="270" cy="315" r="4" fill="#206a4c"/><circle cx="270" cy="245" r="4" fill="#206a4c"/><circle cx="270" cy="175" r="4" fill="#206a4c"/><circle cx="270" cy="105" r="4" fill="#d4cdbc"/><circle cx="270" cy="35" r="4" fill="#206a4c"/><circle cx="340" cy="315" r="4" fill="#206a4c"/><circle cx="340" cy="245" r="4" fill="#206a4c"/><circle cx="340" cy="175" r="4" fill="#206a4c"/><circle cx="340" cy="105" r="4" fill="#206a4c"/><circle cx="340" cy="35" r="4" fill="#206a4c"/><text class="hint" x="60" y="355">0</text><text class="hint" x="20" y="320">0</text><text class="hint" x="130" y="355">1</text><text class="hint" x="20" y="250">1</text><text class="hint" x="200" y="355">2</text><text class="hint" x="20" y="180">2</text><text class="hint" x="270" y="355">3</text><text class="hint" x="20" y="110">3</text><text class="hint" x="340" y="355">4</text><text class="hint" x="20" y="40">4</text><text class="hint" x="210" y="390">线程1：已完成操作数 →</text><text class="hint" x="190" y="12">线程2：已完成操作数 ↑</text></svg></div><figcaption>12.15 D：初始s=1,t=1。绿色点可达，线段是允许的一步；红点为未完成且无可执行操作的死锁，浅点不可达。横纵坐标均从0到4；操作序列见紧邻表格。</figcaption></figure></div></details><details class="exercise" id="ex-12-16" data-original-exercise="12.16" data-source-pdf-pages="1068"><summary>12.16 · 创建并回收n个同伴</summary><div class="exercise-question" data-original-exercise="12.16" data-source-pdf-pages="1068"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1068">来源：印刷 1067 页 / PDF 1068 页</a></p><p>编写hello.c（图12.13）的一个版本，创建并回收n个joinable同伴线程，n通过命令行参数给出。原hello创建一个线程打印Hello, world!，main随后pthread_join并exit。<a href="#fig-12-13">图12.13完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>完整实现为<a href="#threads-code">ch12_threads.c的hello_n与--hello N分支</a>。先为tid及参数数组分配空间；create循环与join循环分开，确保同伴可以并发存在；每个参数槽直到相应join完成都有效。每个peer自己输出ID，行的先后由调度决定；main在join后核对每个结果。不能把输出按0到n−1排序当成正确性条件。</p><pre><code data-language="shell" class="language-shell">./tmp/csapp/part3/ch12/threads --hello 4
+# Four peer greetings; their order may vary.</code></pre><p>教学命令限制1≤n≤64以保证默认实验有界；空字符串、负数、尾随垃圾、0及超限返回2。创建错误有明确诊断，不能把未创建线程作为已完成来join。</p></div></details><details class="exercise" id="ex-12-17" data-original-exercise="12.17" data-source-pdf-pages="1068"><summary>12.17 · exit终止了整个进程</summary><div class="exercise-question" data-original-exercise="12.17" data-source-pdf-pages="1068"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1068">来源：印刷 1067 页 / PDF 1068 页</a></p><p>图12.46有bug：peer本应sleep(1)再输出字符串，但运行没有任何输出。A. 为什么？B. 把第10行exit换成哪两种Pthreads调用之一可以修复？<a href="#fig-12-46">图12.46完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>A：main创建peer后立即exit(0)，结束进程包括睡眠中的peer；调度没有承诺peer先打印。B：用pthread_join(tid,NULL)等待并回收peer，main随后正常返回；或者用pthread_exit(NULL)只结束main线程，让peer继续。后者不等于join，在一般程序里还要解决joinable同伴资源回收及main局部数据生存期。</p></div></details><details class="exercise" id="ex-12-18" data-original-exercise="12.18" data-source-pdf-pages="1069"><summary>12.18 · 分类安全与不安全轨迹</summary><div class="exercise-question" data-original-exercise="12.18" data-source-pdf-pages="1069"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1069">来源：印刷 1068 页 / PDF 1069 页</a></p><p>使用图12.21的进度图，将以下轨迹分别判为安全或不安全。初始cnt=0；H/T不改变计数，L/U/S分别是读取、寄存器加1、写回；每线程L到S之间为临界区。</p><div class="scroll"><table><thead><tr><th scope="col">轨迹</th><th scope="col">指令顺序</th></tr></thead><tbody><tr><td>A</td><td>H2,L2,U2,H1,L1,S2,U1,S1,T1,T2</td></tr><tr><td>B</td><td>H2,H1,L1,U1,S1,L2,T1,U2,S2,T2</td></tr><tr><td>C</td><td>H1,L1,H2,L2,U2,S2,U1,S1,T1,T2</td></tr></tbody></table></div></div><div class="answer"><h3 class="answer-title">解答与推导</h3><div class="scroll"><table><thead><tr><th scope="col">轨迹</th><th scope="col">分类</th><th scope="col">最终cnt</th><th scope="col">依据</th></tr></thead><tbody><tr><td>A</td><td>不安全</td><td>1</td><td>L1在S2之前读取0</td></tr><tr><td>B</td><td>安全</td><td>2</td><td>S1已经提交后L2才读1</td></tr><tr><td>C</td><td>不安全</td><td>1</td><td>L1/L2均读取0</td></tr></tbody></table></div></div></details><details class="exercise" id="ex-12-19" data-original-exercise="12.19" data-source-pdf-pages="1069"><summary>12.19 · 让等待读者真正先于写者进入</summary><div class="exercise-question" data-original-exercise="12.19" data-source-pdf-pages="1069"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1069">来源：印刷 1068 页 / PDF 1069 页</a></p><p>图12.26的第一类读者—写者解法只是弱读者优先：写者离开时可能先恢复另一个写者。推导更强的读者优先方案：只要存在等待读者，写者退出时总应恢复等待读者。<a href="#fig-12-26">图12.26完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>以下monitor伪代码给出完整进入/退出协议：lock/unlock操作同一互斥量m；wait(cv,m)原子释放m并等待，返回时重新持有m；signal/broadcast只唤醒等待者，谓词必须在while中重查。read/write正文在协议之外执行，退出时按对应函数更新状态。初始化在创建任何工作线程之前完成。</p><pre><code data-language="text" class="language-text">state: active_readers = 0, waiting_readers = 0, writing = false
+       mutex m; conditions can_read, can_write
+reader_enter:
+    lock(m); waiting_readers++
+    while writing: wait(can_read, m)
+    waiting_readers--; active_readers++
+    unlock(m)
+reader_leave:
+    lock(m); active_readers--
+    if active_readers == 0: signal(can_write)
+    unlock(m)
+writer_enter:
+    lock(m)
+    while writing or active_readers &gt; 0 or waiting_readers &gt; 0:
+        wait(can_write, m)
+    writing = true; unlock(m)
+writer_leave:
+    lock(m); writing = false
+    if waiting_readers &gt; 0: broadcast(can_read)
+    else: signal(can_write)
+    unlock(m)
+</code></pre><p>关键不是只把signal换成broadcast，而是writer_enter还检查waiting_readers&gt;0。写者退出时即使另一个写者抢先取得m，它也无法越过此谓词；被唤醒读者先把waiting_readers减掉并增加active_readers。最后读者退出后写者才有机会。无限到来的读者仍可能使写者饥饿，这正是读者优先的取舍。</p>
+<div class="explanation" id="explain-ex-12-19"><p><code>waiting_readers</code> 与 <code>active_readers</code> 不能合并成一个含糊计数：前者表示已经排队、尚未开始读取的人，后者表示正在读的人。写者刚结束时，可能两者为 <code>1,0</code>；若只检查 active_readers，后来到的写者就可能抢先进入。连 waiting_readers 一起检查，才能保证那位已经等候的读者先获得资格。</p></div>
+</div></details><details class="exercise" id="ex-12-20" data-original-exercise="12.20" data-source-pdf-pages="1069"><summary>12.20 · 至多N个读者的统一入口</summary><div class="exercise-question" data-original-exercise="12.20" data-source-pdf-pages="1069"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1069">来源：印刷 1068 页 / PDF 1069 页</a></p><p>考虑简化的读者—写者问题，至多N个读者。推导读者和写者同等优先的解法：等待的读者与写者获得资源的机会相同。提示：只用一个计数信号量和一个mutex。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><pre><code data-language="text" class="language-text">initially: semaphore slots = N; mutex gate = 1
+reader:
+    P(gate); P(slots); V(gate)
+    read shared object
+    V(slots)
+writer:
+    P(gate)
+    repeat N times: P(slots)
+    V(gate)
+    write shared object
+    repeat N times: V(slots)
+</code></pre><p>slots初值N，读者拿1个许可，写者在同一gate保护下拿齐N个许可。writer持gate等待时，已经在读的线程释放slots不需要gate，所以能排空许可；新读者不能插队。若两个writer不经gate便各取部分slots，可能各持一部分而永远等不到剩余许可，因此gate必须覆盖整次N许可收集。</p><p>类别上没有读者/写者专用优先分支，都竞争同一gate。若题目把“equal chance”理解为严格概率相等或饥饿自由，仅凭普通P/V及POSIX mutex语义无法保证：需额外假定gate公平调度（例如FIFO入口），或另实现公平队列。上述解法满足不偏向某一类别的资源协议；有限运行不能证明调度公平。</p></div></details><details class="exercise" id="ex-12-21" data-original-exercise="12.21" data-source-pdf-pages="1069"><summary>12.21 · 写者等待后关闭新读者入口</summary><div class="exercise-question" data-original-exercise="12.21" data-source-pdf-pages="1069"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1069">来源：印刷 1068 页 / PDF 1069 页</a></p><p>推导第二类读者—写者问题的解法：偏向写者而不是读者。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>以下monitor伪代码给出完整进入/退出协议：lock/unlock操作同一互斥量m；wait(cv,m)原子释放m并等待，返回时重新持有m；signal/broadcast只唤醒等待者，谓词必须在while中重查。read/write正文在协议之外执行，退出时按对应函数更新状态。初始化在创建任何工作线程之前完成。</p><pre><code data-language="text" class="language-text">state: active_readers = 0, waiting_writers = 0, writing = false
+       mutex m; conditions can_read, can_write
+reader_enter:
+    lock(m)
+    while writing or waiting_writers &gt; 0: wait(can_read, m)
+    active_readers++; unlock(m)
+reader_leave:
+    lock(m); active_readers--
+    if active_readers == 0: signal(can_write)
+    unlock(m)
+writer_enter:
+    lock(m); waiting_writers++
+    while writing or active_readers &gt; 0: wait(can_write, m)
+    waiting_writers--; writing = true; unlock(m)
+writer_leave:
+    lock(m); writing = false
+    if waiting_writers &gt; 0: signal(can_write)
+    else: broadcast(can_read)
+    unlock(m)
+</code></pre><p>writer在等待前先增加waiting_writers，新reader即使当前尚无写者在写，也会等can_read；已经进入的读者可以完成。最后读者唤醒writer，writer退出时优先继续唤醒writer，直到等待写者清空才放读者。互斥性来自writing与active_readers的同锁谓词；源源不断的写者仍可能饿死读者，不能称为无饥饿公平锁。</p></div></details><details class="exercise" id="ex-12-22" data-original-exercise="12.22" data-source-pdf-pages="1069"><summary>12.22 · 每轮至多回送一行</summary><div class="exercise-question" data-original-exercise="12.22" data-source-pdf-pages="1069"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1069">来源：印刷 1068 页 / PDF 1069 页</a></p><p>修改图12.6的服务器，使主服务器循环每轮至多回送一行文本，以检验对select的理解。<a href="#fig-12-6">图12.6完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>完整可编译版本在<a href="#servers-code">ch12_servers.c的echo模式</a>：监听fd、stdin与已连接fd都进入读兴趣集；接受连接后回主循环，不再一次调用echo服务到EOF。连接对象持久保存输入，找出一条换行结束的消息后才建立输出。每轮echoed最多允许一个客户做一次输出推进，因此本轮不可能回送第二条文本行；短写保留sent到下轮。</p><p>stdin通过read收集命令到换行后打印command；stdin EOF后删除其兴趣并继续服务当前客户，避免永久可读的EOF造成忙循环。这个有界实验的退出由连接预算或接收窗口及收尾决定，区别于原例command遇EOF立刻exit；题目要求的逐轮回送行为保持。</p><pre><code data-language="shell" class="language-shell">clang -std=c11 -Wall -Wextra -Werror -pedantic -pthread books/csapp/code/ch12_servers.c -o tmp/csapp/part3/ch12/servers
+./tmp/csapp/part3/ch12/servers --serve echo . 0 2</code></pre></div></details><details class="exercise" id="ex-12-23" data-original-exercise="12.23" data-source-pdf-pages="1069"><summary>12.23 · 部分行不能堵住事件循环</summary><div class="exercise-question" data-original-exercise="12.23" data-source-pdf-pages="1069"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1069">来源：印刷 1068 页 / PDF 1069 页</a></p><p>图12.8的事件驱动并发echo存在缺陷：恶意客户只发送部分文本行便可阻止其他客户获得服务。编写改进版，使部分行不会造成阻塞。<a href="#fig-12-8">图12.8完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>同一<a href="#servers-code">echo完整实现</a>已落实这个要求：accepted socket显式O_NONBLOCK，read一次后立刻记录字节并回到调度；没有换行就只等待下次可读。可写集合与sent保存短写进度，慢接收者也不能让其他客户阻塞。输入上限为12288 B；超过且没有完整行则关闭该连接，不能无限增长内存。</p><p>三个关键测试在<a href="#server-checks-code">实际C协议驱动</a>：A只发partial，B发one\ntwo\n，B两行均及时返回；A随后补“ line\nlast”并半关闭，收到“partial line\nlast”；EOF尾部不丢。多行已在用户缓冲时在下一轮主动处理，不依赖socket还可读。</p></div></details><details class="exercise" id="ex-12-24" data-original-exercise="12.24" data-source-pdf-pages="1069"><summary>12.24 · RIO何时可重入</summary><div class="exercise-question" data-original-exercise="12.24" data-source-pdf-pages="1069"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1069">来源：印刷 1068 页 / PDF 1069 页</a></p><p>RIO包（10.5节）中的函数是线程安全的。它们也是可重入的吗？</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>按本章定义，在每个并发调用使用独立rio_t状态、输出缓冲且正确分配fd读写职责的条件下，是隐式可重入的。rio_readn/rio_writen只用局部控制状态和调用者区域；rio_readinitb/readlineb/readnb的缓冲与位置都在调用者的rio_t里，不依赖一个公共静态缓冲。</p><p>若两个线程传同一个rio_t，缓冲计数和指针成为共享写，结论不再成立；若虽用不同rio_t却竞争读取同一字节流，应用层消息仍可能被拆给不同线程。因此“包本身可重入”不能替代调用者独占状态与协议边界。</p></div></details><details class="exercise" id="ex-12-25" data-original-exercise="12.25" data-source-pdf-pages="1069"><summary>12.25 · echo_cnt安全但不属于可重入子集</summary><div class="exercise-question" data-original-exercise="12.25" data-source-pdf-pages="1069"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1069">来源：印刷 1068 页 / PDF 1069 页</a></p><p>在图12.28预线程echo服务器中，各线程调用图12.29的echo_cnt。echo_cnt是否线程安全、是否可重入，为什么？<a href="#fig-12-28">图12.28完整题用代码</a>；<a href="#fig-12-29">图12.29完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>在原题每条连接由一个worker独占、计数不溢出的契约下，它是线程安全的：pthread_once保护初始化；byte_cnt的更新及相关打印由mutex保护；buf/rio为各调用的自动变量。它不符合本章可重入定义，因为仍访问共享byte_cnt、mutex、once，只是用同步使这些共享访问安全。</p><p>原例byte_cnt为int，长期无限累计存在有符号溢出风险；锁不能防止算术范围错误。实际长期服务器应使用足够宽的无符号计数并定义回绕/饱和/溢出处理，或者在更新前检查。本题关注并发分类，不把无限运行正确性额外假定进去。</p></div></details><details class="exercise" id="ex-12-26" data-original-exercise="12.26" data-source-pdf-pages="1070"><summary>12.26 · hostent必须逐层深拷贝</summary><div class="exercise-question" data-original-exercise="12.26" data-source-pdf-pages="1070"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1070">来源：印刷 1069 页 / PDF 1070 页</a></p><p>使用lock-and-copy实现gethostbyname的线程安全、非可重入版本gethostbyname_ts。正确方案应在mutex保护下对hostent结构作深拷贝。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>完整接口与实现见<a href="#resolver-code">ch12_resolver.c</a>：gethostbyname_ts(name)返回调用者独占的struct hostent *，hostent_free(result)释放。锁覆盖旧函数调用、统计数组长度、分配和复制所有成员；h_name按字符串复制；h_aliases复制指针数组和各字符串；h_addr_list复制指针数组和每个h_length字节地址。空指针终止也保留。</p><p>只做*dst=*src是浅复制，指针仍指向旧函数共享区；只复制h_name也会漏掉别名与地址。失败从统一出口释放部分结果并unlock。返回私有副本让调用者可在锁外使用；包装器内部仍有全局mutex，且调用旧函数，所以不是本章可重入函数。默认localhost并发用例不代表已测试外部DNS可用性。</p>
+<div class="explanation" id="explain-ex-12-26"><p>浅拷贝可以画成两个盒子里的箭头仍指向同一字符串：复制 <code>h_name</code> 只复制地址，不复制名字字节；复制 <code>h_addr_list</code> 只复制数组地址，连数组本身都还共享。深拷贝则要创建新 hostent、新指针数组以及各指针所指的数据，使从新对象出发的每条拥有关系都留在自己的分配范围中。锁必须持续到这张新引用关系完整建立之后，才能防止原结果在复制中途被覆盖。</p></div>
+</div></details><details class="exercise" id="ex-12-27" data-original-exercise="12.27" data-source-pdf-pages="1070"><summary>12.27 · 同一fd被fclose两次</summary><div class="exercise-question" data-original-exercise="12.27" data-source-pdf-pages="1070"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1070">来源：印刷 1069 页 / PDF 1070 页</a></p><p>一些网络教材建议对同一个socket描述符打开两个标准I/O流：</p><pre><code data-language="c" class="language-c">FILE *fpin, *fpout;
+fpin = fdopen(sockfd, &quot;r&quot;);
+fpout = fdopen(sockfd, &quot;w&quot;);
+/* interact with client */
+fclose(fpin);
+fclose(fpout);</code></pre><p>在基于线程的并发服务器里，这会制造危险竞争。解释原因。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>两个FILE都保存同一fd号码，fdopen并不dup。线程A第一次fclose(fpin)关闭fd=4；线程B此时accept新客户，内核复用4；A再fclose(fpout)可能先flush到新的连接，然后把新客户的4关掉。这不是第二次close必然EBADF，而是时间窗口内编号可复用。</p><p>修复：给两个流真正独立的描述符引用，例如读流用原fd、写流用dup(sockfd)，建立失败分支要回收已经取得的引用；成功后分别fclose各自一次。协议仍应按I/O顺序显式fflush，并保证同一方向的流不与RIO/read/write混用。另一种更简单的设计是始终用一套无缓冲socket读写并只close一次。</p></div></details><details class="exercise" id="ex-12-28" data-original-exercise="12.28" data-source-pdf-pages="1070"><summary>12.28 · 四种释放次序的进度图</summary><div class="exercise-question" data-original-exercise="12.28" data-source-pdf-pages="1070"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1070">来源：印刷 1069 页 / PDF 1070 页</a></p><p>在图12.45中交换两个V操作，会不会影响是否死锁？为以下四种情况分别画进度图并论证。所有s=t=1，两个线程取得次序都为P(s),P(t)。</p><div class="scroll"><table><thead><tr><th scope="col">情况</th><th scope="col">线程1完整次序</th><th scope="col">线程2完整次序</th></tr></thead><tbody><tr><td>1</td><td>P(s) P(t) V(s) V(t) </td><td>P(s) P(t) V(s) V(t) </td></tr><tr><td>2</td><td>P(s) P(t) V(s) V(t) </td><td>P(s) P(t) V(t) V(s) </td></tr><tr><td>3</td><td>P(s) P(t) V(t) V(s) </td><td>P(s) P(t) V(s) V(t) </td></tr><tr><td>4</td><td>P(s) P(t) V(t) V(s) </td><td>P(s) P(t) V(t) V(s) </td></tr></tbody></table></div></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>四种都不会死锁。两个线程统一先P(s)再P(t)，拿不到s的线程不持有t；持s者因此能取得t并推进。释放次序变化改变可并发的尾部位置，但不会凭空生成循环持有等待。原文“逆序释放”是容易遵循的充分纪律，不是防止该死锁的必要条件。</p><figure><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 410" role="img" aria-label="12.28 case 1"><title>12.28 case 1</title><rect x="40" y="15" width="320" height="320" fill="#fffdf5" stroke="#bdb7a5"/><path d="M60,315 L130,315" stroke="#91a99c" fill="none"/><path d="M60,315 L60,245" stroke="#91a99c" fill="none"/><path d="M60,245 L60,175" stroke="#91a99c" fill="none"/><path d="M60,175 L60,105" stroke="#91a99c" fill="none"/><path d="M60,105 L130,105" stroke="#91a99c" fill="none"/><path d="M60,105 L60,35" stroke="#91a99c" fill="none"/><path d="M60,35 L130,35" stroke="#91a99c" fill="none"/><path d="M130,35 L200,35" stroke="#91a99c" fill="none"/><path d="M200,35 L270,35" stroke="#91a99c" fill="none"/><path d="M270,35 L340,35" stroke="#91a99c" fill="none"/><path d="M130,105 L130,35" stroke="#91a99c" fill="none"/><path d="M130,315 L200,315" stroke="#91a99c" fill="none"/><path d="M200,315 L270,315" stroke="#91a99c" fill="none"/><path d="M270,315 L340,315" stroke="#91a99c" fill="none"/><path d="M270,315 L270,245" stroke="#91a99c" fill="none"/><path d="M270,245 L340,245" stroke="#91a99c" fill="none"/><path d="M340,245 L340,175" stroke="#91a99c" fill="none"/><path d="M340,175 L340,105" stroke="#91a99c" fill="none"/><path d="M340,105 L340,35" stroke="#91a99c" fill="none"/><path d="M340,315 L340,245" stroke="#91a99c" fill="none"/><circle cx="60" cy="315" r="4" fill="#206a4c"/><circle cx="60" cy="245" r="4" fill="#206a4c"/><circle cx="60" cy="175" r="4" fill="#206a4c"/><circle cx="60" cy="105" r="4" fill="#206a4c"/><circle cx="60" cy="35" r="4" fill="#206a4c"/><circle cx="130" cy="315" r="4" fill="#206a4c"/><circle cx="130" cy="245" r="4" fill="#d4cdbc"/><circle cx="130" cy="175" r="4" fill="#d4cdbc"/><circle cx="130" cy="105" r="4" fill="#206a4c"/><circle cx="130" cy="35" r="4" fill="#206a4c"/><circle cx="200" cy="315" r="4" fill="#206a4c"/><circle cx="200" cy="245" r="4" fill="#d4cdbc"/><circle cx="200" cy="175" r="4" fill="#d4cdbc"/><circle cx="200" cy="105" r="4" fill="#d4cdbc"/><circle cx="200" cy="35" r="4" fill="#206a4c"/><circle cx="270" cy="315" r="4" fill="#206a4c"/><circle cx="270" cy="245" r="4" fill="#206a4c"/><circle cx="270" cy="175" r="4" fill="#d4cdbc"/><circle cx="270" cy="105" r="4" fill="#d4cdbc"/><circle cx="270" cy="35" r="4" fill="#206a4c"/><circle cx="340" cy="315" r="4" fill="#206a4c"/><circle cx="340" cy="245" r="4" fill="#206a4c"/><circle cx="340" cy="175" r="4" fill="#206a4c"/><circle cx="340" cy="105" r="4" fill="#206a4c"/><circle cx="340" cy="35" r="4" fill="#206a4c"/><text class="hint" x="60" y="355">0</text><text class="hint" x="20" y="320">0</text><text class="hint" x="130" y="355">1</text><text class="hint" x="20" y="250">1</text><text class="hint" x="200" y="355">2</text><text class="hint" x="20" y="180">2</text><text class="hint" x="270" y="355">3</text><text class="hint" x="20" y="110">3</text><text class="hint" x="340" y="355">4</text><text class="hint" x="20" y="40">4</text><text class="hint" x="210" y="390">线程1：已完成操作数 →</text><text class="hint" x="190" y="12">线程2：已完成操作数 ↑</text></svg></div><figcaption>12.28 case 1。绿色点可达，线段是允许的一步；红点为未完成且无可执行操作的死锁，浅点不可达。横纵坐标均从0到4；操作序列见紧邻表格。</figcaption></figure><figure><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 410" role="img" aria-label="12.28 case 2"><title>12.28 case 2</title><rect x="40" y="15" width="320" height="320" fill="#fffdf5" stroke="#bdb7a5"/><path d="M60,315 L130,315" stroke="#91a99c" fill="none"/><path d="M60,315 L60,245" stroke="#91a99c" fill="none"/><path d="M60,245 L60,175" stroke="#91a99c" fill="none"/><path d="M60,175 L60,105" stroke="#91a99c" fill="none"/><path d="M60,105 L60,35" stroke="#91a99c" fill="none"/><path d="M60,35 L130,35" stroke="#91a99c" fill="none"/><path d="M130,35 L200,35" stroke="#91a99c" fill="none"/><path d="M200,35 L270,35" stroke="#91a99c" fill="none"/><path d="M270,35 L340,35" stroke="#91a99c" fill="none"/><path d="M130,315 L200,315" stroke="#91a99c" fill="none"/><path d="M200,315 L270,315" stroke="#91a99c" fill="none"/><path d="M270,315 L340,315" stroke="#91a99c" fill="none"/><path d="M270,315 L270,245" stroke="#91a99c" fill="none"/><path d="M270,245 L340,245" stroke="#91a99c" fill="none"/><path d="M340,245 L340,175" stroke="#91a99c" fill="none"/><path d="M340,175 L340,105" stroke="#91a99c" fill="none"/><path d="M340,105 L340,35" stroke="#91a99c" fill="none"/><path d="M340,315 L340,245" stroke="#91a99c" fill="none"/><circle cx="60" cy="315" r="4" fill="#206a4c"/><circle cx="60" cy="245" r="4" fill="#206a4c"/><circle cx="60" cy="175" r="4" fill="#206a4c"/><circle cx="60" cy="105" r="4" fill="#206a4c"/><circle cx="60" cy="35" r="4" fill="#206a4c"/><circle cx="130" cy="315" r="4" fill="#206a4c"/><circle cx="130" cy="245" r="4" fill="#d4cdbc"/><circle cx="130" cy="175" r="4" fill="#d4cdbc"/><circle cx="130" cy="105" r="4" fill="#d4cdbc"/><circle cx="130" cy="35" r="4" fill="#206a4c"/><circle cx="200" cy="315" r="4" fill="#206a4c"/><circle cx="200" cy="245" r="4" fill="#d4cdbc"/><circle cx="200" cy="175" r="4" fill="#d4cdbc"/><circle cx="200" cy="105" r="4" fill="#d4cdbc"/><circle cx="200" cy="35" r="4" fill="#206a4c"/><circle cx="270" cy="315" r="4" fill="#206a4c"/><circle cx="270" cy="245" r="4" fill="#206a4c"/><circle cx="270" cy="175" r="4" fill="#d4cdbc"/><circle cx="270" cy="105" r="4" fill="#d4cdbc"/><circle cx="270" cy="35" r="4" fill="#206a4c"/><circle cx="340" cy="315" r="4" fill="#206a4c"/><circle cx="340" cy="245" r="4" fill="#206a4c"/><circle cx="340" cy="175" r="4" fill="#206a4c"/><circle cx="340" cy="105" r="4" fill="#206a4c"/><circle cx="340" cy="35" r="4" fill="#206a4c"/><text class="hint" x="60" y="355">0</text><text class="hint" x="20" y="320">0</text><text class="hint" x="130" y="355">1</text><text class="hint" x="20" y="250">1</text><text class="hint" x="200" y="355">2</text><text class="hint" x="20" y="180">2</text><text class="hint" x="270" y="355">3</text><text class="hint" x="20" y="110">3</text><text class="hint" x="340" y="355">4</text><text class="hint" x="20" y="40">4</text><text class="hint" x="210" y="390">线程1：已完成操作数 →</text><text class="hint" x="190" y="12">线程2：已完成操作数 ↑</text></svg></div><figcaption>12.28 case 2。绿色点可达，线段是允许的一步；红点为未完成且无可执行操作的死锁，浅点不可达。横纵坐标均从0到4；操作序列见紧邻表格。</figcaption></figure><figure><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 410" role="img" aria-label="12.28 case 3"><title>12.28 case 3</title><rect x="40" y="15" width="320" height="320" fill="#fffdf5" stroke="#bdb7a5"/><path d="M60,315 L130,315" stroke="#91a99c" fill="none"/><path d="M60,315 L60,245" stroke="#91a99c" fill="none"/><path d="M60,245 L60,175" stroke="#91a99c" fill="none"/><path d="M60,175 L60,105" stroke="#91a99c" fill="none"/><path d="M60,105 L130,105" stroke="#91a99c" fill="none"/><path d="M60,105 L60,35" stroke="#91a99c" fill="none"/><path d="M60,35 L130,35" stroke="#91a99c" fill="none"/><path d="M130,35 L200,35" stroke="#91a99c" fill="none"/><path d="M200,35 L270,35" stroke="#91a99c" fill="none"/><path d="M270,35 L340,35" stroke="#91a99c" fill="none"/><path d="M130,105 L130,35" stroke="#91a99c" fill="none"/><path d="M130,315 L200,315" stroke="#91a99c" fill="none"/><path d="M200,315 L270,315" stroke="#91a99c" fill="none"/><path d="M270,315 L340,315" stroke="#91a99c" fill="none"/><path d="M340,315 L340,245" stroke="#91a99c" fill="none"/><path d="M340,245 L340,175" stroke="#91a99c" fill="none"/><path d="M340,175 L340,105" stroke="#91a99c" fill="none"/><path d="M340,105 L340,35" stroke="#91a99c" fill="none"/><circle cx="60" cy="315" r="4" fill="#206a4c"/><circle cx="60" cy="245" r="4" fill="#206a4c"/><circle cx="60" cy="175" r="4" fill="#206a4c"/><circle cx="60" cy="105" r="4" fill="#206a4c"/><circle cx="60" cy="35" r="4" fill="#206a4c"/><circle cx="130" cy="315" r="4" fill="#206a4c"/><circle cx="130" cy="245" r="4" fill="#d4cdbc"/><circle cx="130" cy="175" r="4" fill="#d4cdbc"/><circle cx="130" cy="105" r="4" fill="#206a4c"/><circle cx="130" cy="35" r="4" fill="#206a4c"/><circle cx="200" cy="315" r="4" fill="#206a4c"/><circle cx="200" cy="245" r="4" fill="#d4cdbc"/><circle cx="200" cy="175" r="4" fill="#d4cdbc"/><circle cx="200" cy="105" r="4" fill="#d4cdbc"/><circle cx="200" cy="35" r="4" fill="#206a4c"/><circle cx="270" cy="315" r="4" fill="#206a4c"/><circle cx="270" cy="245" r="4" fill="#d4cdbc"/><circle cx="270" cy="175" r="4" fill="#d4cdbc"/><circle cx="270" cy="105" r="4" fill="#d4cdbc"/><circle cx="270" cy="35" r="4" fill="#206a4c"/><circle cx="340" cy="315" r="4" fill="#206a4c"/><circle cx="340" cy="245" r="4" fill="#206a4c"/><circle cx="340" cy="175" r="4" fill="#206a4c"/><circle cx="340" cy="105" r="4" fill="#206a4c"/><circle cx="340" cy="35" r="4" fill="#206a4c"/><text class="hint" x="60" y="355">0</text><text class="hint" x="20" y="320">0</text><text class="hint" x="130" y="355">1</text><text class="hint" x="20" y="250">1</text><text class="hint" x="200" y="355">2</text><text class="hint" x="20" y="180">2</text><text class="hint" x="270" y="355">3</text><text class="hint" x="20" y="110">3</text><text class="hint" x="340" y="355">4</text><text class="hint" x="20" y="40">4</text><text class="hint" x="210" y="390">线程1：已完成操作数 →</text><text class="hint" x="190" y="12">线程2：已完成操作数 ↑</text></svg></div><figcaption>12.28 case 3。绿色点可达，线段是允许的一步；红点为未完成且无可执行操作的死锁，浅点不可达。横纵坐标均从0到4；操作序列见紧邻表格。</figcaption></figure><figure><div class="scroll"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 410" role="img" aria-label="12.28 case 4"><title>12.28 case 4</title><rect x="40" y="15" width="320" height="320" fill="#fffdf5" stroke="#bdb7a5"/><path d="M60,315 L130,315" stroke="#91a99c" fill="none"/><path d="M60,315 L60,245" stroke="#91a99c" fill="none"/><path d="M60,245 L60,175" stroke="#91a99c" fill="none"/><path d="M60,175 L60,105" stroke="#91a99c" fill="none"/><path d="M60,105 L60,35" stroke="#91a99c" fill="none"/><path d="M60,35 L130,35" stroke="#91a99c" fill="none"/><path d="M130,35 L200,35" stroke="#91a99c" fill="none"/><path d="M200,35 L270,35" stroke="#91a99c" fill="none"/><path d="M270,35 L340,35" stroke="#91a99c" fill="none"/><path d="M130,315 L200,315" stroke="#91a99c" fill="none"/><path d="M200,315 L270,315" stroke="#91a99c" fill="none"/><path d="M270,315 L340,315" stroke="#91a99c" fill="none"/><path d="M340,315 L340,245" stroke="#91a99c" fill="none"/><path d="M340,245 L340,175" stroke="#91a99c" fill="none"/><path d="M340,175 L340,105" stroke="#91a99c" fill="none"/><path d="M340,105 L340,35" stroke="#91a99c" fill="none"/><circle cx="60" cy="315" r="4" fill="#206a4c"/><circle cx="60" cy="245" r="4" fill="#206a4c"/><circle cx="60" cy="175" r="4" fill="#206a4c"/><circle cx="60" cy="105" r="4" fill="#206a4c"/><circle cx="60" cy="35" r="4" fill="#206a4c"/><circle cx="130" cy="315" r="4" fill="#206a4c"/><circle cx="130" cy="245" r="4" fill="#d4cdbc"/><circle cx="130" cy="175" r="4" fill="#d4cdbc"/><circle cx="130" cy="105" r="4" fill="#d4cdbc"/><circle cx="130" cy="35" r="4" fill="#206a4c"/><circle cx="200" cy="315" r="4" fill="#206a4c"/><circle cx="200" cy="245" r="4" fill="#d4cdbc"/><circle cx="200" cy="175" r="4" fill="#d4cdbc"/><circle cx="200" cy="105" r="4" fill="#d4cdbc"/><circle cx="200" cy="35" r="4" fill="#206a4c"/><circle cx="270" cy="315" r="4" fill="#206a4c"/><circle cx="270" cy="245" r="4" fill="#d4cdbc"/><circle cx="270" cy="175" r="4" fill="#d4cdbc"/><circle cx="270" cy="105" r="4" fill="#d4cdbc"/><circle cx="270" cy="35" r="4" fill="#206a4c"/><circle cx="340" cy="315" r="4" fill="#206a4c"/><circle cx="340" cy="245" r="4" fill="#206a4c"/><circle cx="340" cy="175" r="4" fill="#206a4c"/><circle cx="340" cy="105" r="4" fill="#206a4c"/><circle cx="340" cy="35" r="4" fill="#206a4c"/><text class="hint" x="60" y="355">0</text><text class="hint" x="20" y="320">0</text><text class="hint" x="130" y="355">1</text><text class="hint" x="20" y="250">1</text><text class="hint" x="200" y="355">2</text><text class="hint" x="20" y="180">2</text><text class="hint" x="270" y="355">3</text><text class="hint" x="20" y="110">3</text><text class="hint" x="340" y="355">4</text><text class="hint" x="20" y="40">4</text><text class="hint" x="210" y="390">线程1：已完成操作数 →</text><text class="hint" x="190" y="12">线程2：已完成操作数 ↑</text></svg></div><figcaption>12.28 case 4。绿色点可达，线段是允许的一步；红点为未完成且无可执行操作的死锁，浅点不可达。横纵坐标均从0到4；操作序列见紧邻表格。</figcaption></figure></div></details><details class="exercise" id="ex-12-29" data-original-exercise="12.29" data-source-pdf-pages="1070"><summary>12.29 · 不持有b等待c，就没有那个环</summary><div class="exercise-question" data-original-exercise="12.29" data-source-pdf-pages="1070"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1070">来源：印刷 1069 页 / PDF 1070 页</a></p><p>下面程序是否可能死锁？为什么？初始a=b=c=1。</p><div class="scroll"><table><thead><tr><th scope="col">线程1</th><th scope="col">线程2</th></tr></thead><tbody><tr><td>P(a)</td><td>P(c)</td></tr><tr><td>P(b)</td><td>P(b)</td></tr><tr><td>V(b)</td><td>V(b)</td></tr><tr><td>P(c)</td><td>V(c)</td></tr><tr><td>V(c)</td><td></td></tr><tr><td>V(a)</td><td></td></tr></tbody></table></div></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>不会。线程1如果在P(b)等待，持b的线程2会直接V(b)、V(c)完成，不等a；线程1如果在P(c)等待，已经执行V(b)，所以线程2仍能取得b并释放c。等待图的可能边是a→b、a→c、c→b，按a&lt;c&lt;b可统一排序，无环。有限模型穷举结果deadlocks=0、completed=1，与这个证明一致。</p></div></details><details class="exercise" id="ex-12-30" data-original-exercise="12.30" data-source-pdf-pages="1071"><summary>12.30 · 找出同时持有的锁并重新排序</summary><div class="exercise-question" data-original-exercise="12.30" data-source-pdf-pages="1071"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1071">来源：印刷 1070 页 / PDF 1071 页</a></p><p>以下程序会死锁，初始a=b=c=1。A. 分别列出各线程同时持有的mutex对。B. 若规定a&lt;b&lt;c，哪些线程违反取得顺序？C. 给这些线程新的锁取得次序，保证不会死锁。</p><div class="scroll"><table><thead><tr><th scope="col">线程1</th><th scope="col">线程2</th><th scope="col">线程3</th></tr></thead><tbody><tr><td>P(a)</td><td>P(c)</td><td>P(c)</td></tr><tr><td>P(b)</td><td>P(b)</td><td>V(c)</td></tr><tr><td>V(b)</td><td>V(b)</td><td>P(b)</td></tr><tr><td>P(c)</td><td>V(c)</td><td>P(a)</td></tr><tr><td>V(c)</td><td>P(a)</td><td>V(a)</td></tr><tr><td>V(a)</td><td>V(a)</td><td>V(b)</td></tr></tbody></table></div></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>A：线程1同时持有(a,b)或(a,c)；线程2同时持有(c,b)；线程3同时持有(b,a)，其c在取得b前已释放。B：线程2的c→b、线程3的b→a违反a&lt;b&lt;c；线程1符合。</p><pre><code data-language="text" class="language-text">/* Thread 2: preserve the b+c critical operation, acquire in order */
+P(b); P(c); /* former b+c work */ V(c); V(b); P(a); V(a);
+/* Thread 3: its c phase remains separate */
+P(c); V(c); P(a); P(b); /* former a+b work */ V(b); V(a);</code></pre><p>C：所有实际同时持有关系都按a→b→c递增，释放逆序；不能只交换字母而把原来要同时保护的工作移出临界区。一个原程序反例是T1:P(a)，T3:P(c),V(c),P(b)，此时T1等b、T3等a，T2最终也无法使它们解环。模型列出4种死锁PC：(1,1,3)、(1,4,3)、(1,6,3)、(3,1,3)，PC为该线程已完成操作数。</p></div></details><details class="exercise" id="ex-12-31" data-original-exercise="12.31" data-source-pdf-pages="1071"><summary>12.31 · 进程、信号与非局部跳转实现tfgets</summary><div class="exercise-question" data-original-exercise="12.31" data-source-pdf-pages="1071"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1071">来源：印刷 1070 页 / PDF 1071 页</a></p><p>实现标准fgets的限时版本tfgets：若5秒内没有从标准输入取得一行，返回NULL。包名tfgets-proc.c，必须使用进程、信号与非局部跳转，禁止使用Linux alarm。使用图12.47驱动测试。 <a href="#fig-12-47">图12.47完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>完整实现是<a href="#tfgets-code">ch12_tfgets.c的tfgets_proc</a>，驱动的进程、信号与非局部跳转分支与图12.47一样：成功输出缓冲，否则输出BOOM!。三方案合在一个可编译维护源中，以函数和命令行模式区分，便于用同一组输入比较；按作业包名提交时可以从该源抽出对应函数及公共依赖。</p><p>先阻塞独占SIGUSR1并检查原先无挂起通知，保存旧handler和mask；fork计时孩子nanosleep五秒后kill父进程；父sigsetjmp保存阻塞状态，pselect等待时原子暂时解屏蔽SIGUSR1。处理函数只siglongjmp，不在处理函数中做stdio。返回清理处后，用SIGKILL取消本函数拥有且尚未回收的计时孩子，再waitpid回收；取消不受调用方忽略或屏蔽SIGTERM的影响。随后消费属于本次计时器的已挂起通知，再恢复旧环境。即使调用前SIGUSR1已屏蔽，等待掩码也显式开放它，退出后仍恢复原屏蔽。</p><p>不能从异步处理函数longjmp跳出任意stdio内部再继续调用不安全函数；本实现读取路径采用read/pselect，并要求FILE无预读且独占底层fd。调用者原有其他信号和处理函数保持其原语义，proc契约限单线程且独占SIGUSR1，计时孩子由本函数独占回收；调用者不能设置SIGCHLD自动回收或用其他wait抢先回收该孩子。</p><pre><code data-language="shell" class="language-shell">./tmp/csapp/part3/ch12/tfgets proc &lt; input.txt</code></pre><p>边界：size至少2；缓冲满会返回本次片段，符合有限缓冲fgets行为；文本排除内嵌NUL。超时会丢弃作为返回值的部分行，但已经消费的字节不会重新塞回流。5秒是操作截止期限，实际函数返回还包含调度与回收时间，不作硬实时保证。</p></div></details><details class="exercise" id="ex-12-32" data-original-exercise="12.32" data-source-pdf-pages="1072"><summary>12.32 · select实现tfgets</summary><div class="exercise-question" data-original-exercise="12.32" data-source-pdf-pages="1072"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1072">来源：印刷 1071 页 / PDF 1072 页</a></p><p>实现12.31的tfgets，使用select函数，包名tfgets-select.c；可假定stdin的描述符为0。仍使用12.31图12.47的驱动测试。 <a href="#fig-12-47">图12.47完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>完整实现是<a href="#tfgets-code">ch12_tfgets.c的tfgets_select</a>，驱动的select分支与图12.47一样：成功输出缓冲，否则输出BOOM!。三方案合在一个可编译维护源中，以函数和命令行模式区分，便于用同一组输入比较；按作业包名提交时可以从该源抽出对应函数及公共依赖。</p><p>每次只读一个字节；select报告可读后read，换行、满size−1或EOF结束。对端先发半行时再回select，剩余时间从固定单调时钟截止点计算，不重置成另一个五秒；否则每4秒来一个字符就能永远拖延。EOF前已有字符按fgets返回末行，完全空EOF返回NULL。</p><pre><code data-language="shell" class="language-shell">./tmp/csapp/part3/ch12/tfgets select &lt; input.txt</code></pre><p>边界：size至少2；缓冲满会返回本次片段，符合有限缓冲fgets行为；文本排除内嵌NUL。超时会丢弃作为返回值的部分行，但已经消费的字节不会重新塞回流。5秒是操作截止期限，实际函数返回还包含调度与回收时间，不作硬实时保证。</p></div></details><details class="exercise" id="ex-12-33" data-original-exercise="12.33" data-source-pdf-pages="1072"><summary>12.33 · 线程实现tfgets</summary><div class="exercise-question" data-original-exercise="12.33" data-source-pdf-pages="1072"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1072">来源：印刷 1071 页 / PDF 1072 页</a></p><p>实现12.31的tfgets，使用线程，包名tfgets-thread.c。仍使用12.31图12.47的驱动测试。 <a href="#fig-12-47">图12.47完整题用代码</a></p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>完整实现是<a href="#tfgets-code">ch12_tfgets.c的tfgets_thread</a>，驱动的线程分支与图12.47一样：成功输出缓冲，否则输出BOOM!。三方案合在一个可编译维护源中，以函数和命令行模式区分，便于用同一组输入比较；按作业包名提交时可以从该源抽出对应函数及公共依赖。</p><p>工作线程独占执行五秒deadline读取，把result/error/done在mutex内发布并signal；主线程while(!done)等待，再join。时间限制由工作线程的select剩余时限执行，不使用pthread_cancel中断一个可能持有stdio内部锁的线程。join保证返回后没有线程还在写调用者buf或访问栈上的job。</p><pre><code data-language="shell" class="language-shell">./tmp/csapp/part3/ch12/tfgets thread &lt; input.txt</code></pre><p>边界：size至少2；缓冲满会返回本次片段，符合有限缓冲fgets行为；文本排除内嵌NUL。超时会丢弃作为返回值的部分行，但已经消费的字节不会重新塞回流。5秒是操作截止期限，实际函数返回还包含调度与回收时间，不作硬实时保证。</p></div></details><details class="exercise" id="ex-12-34" data-original-exercise="12.34" data-source-pdf-pages="1072"><summary>12.34 · 按输出行并行矩阵乘法并测量</summary><div class="exercise-question" data-original-exercise="12.34" data-source-pdf-pages="1072"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1072">来源：印刷 1071 页 / PDF 1072 页</a></p><p>编写N×M矩阵乘法核的并行线程版本，并把性能与串行版本比较。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>完整实现见<a href="#threads-code">matrix_job/multiply/parallel_matrix</a>。对一般A(N×K)×B(K×M)=C(N×M)，按输出行等分，每个C[i,j]由一个线程按k从0到K−1累加，不需要结果锁。默认检查5×7乘7×4，覆盖行数不能被3整除；再检查96×96方阵。</p><pre><code data-language="shell" class="language-shell">clang -O2 -std=c11 -Wall -Wextra -Werror -pedantic -pthread books/csapp/code/ch12_threads.c -o tmp/csapp/part3/ch12/threads-release
+./tmp/csapp/part3/ch12/threads-release --bench</code></pre><p>2026-10-14本机一次优化构建观测如下。CLOCK_MONOTONIC计墙钟，串行直接调multiply，三线程计时包含create/join；先做非方阵正确性用例，再测同一96方阵。</p><pre><code data-language="text" class="language-text">mutex counter=30000
+queue items=1000 sum=500500 exactly_once=YES
+matrix cases=2 exact=YES workers=3
+matrix=96x96x96 serial_seconds=0.001137000 parallel_seconds=0.000555000 speedup=2.049
+</code></pre><p>该次观测S约2.05，不能据此推断所有规模都加速：小矩阵会被线程启动开销支配，更多线程可能争用内存带宽，重复测量也会波动。没有固定CPU亲和性、独占机器或统计置信区间；本结果只证明这个输入上的执行和一次时间比较。</p></div></details><details class="exercise" id="ex-12-35" data-original-exercise="12.35" data-source-pdf-pages="1072"><summary>12.35 · 每连接一个进程的Tiny</summary><div class="exercise-question" data-original-exercise="12.35" data-source-pdf-pages="1072"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1072">来源：印刷 1071 页 / PDF 1072 页</a></p><p>实现Tiny Web服务器的并发版本，采用每连接一个进程。每个新连接请求创建一个子进程。用真实Web浏览器测试你的实现。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>完整C实现为<a href="#servers-code">ch12_servers.c的process模式</a>，共用第11章HTTP请求/响应核心，接口和静态文件限制在源码头及实验说明中明确。</p><p>accept成功后fork；孩子关listener、处理本连接、close、_exit；父关已接入fd并继续accept。SIGCHLD处理循环waitpid(WNOHANG)，避免持续服务时积累僵尸，结束时再等待未完成孩子。进程隔离让本地计数不自动汇总，不能把线程模式的普通全局计数直接复用。</p><pre><code data-language="shell" class="language-shell">./tmp/csapp/part3/ch12/servers --serve process /path/to/lab-root 0 128
+# Read LISTEN line, then open http://127.0.0.1:PORT/ in a browser.</code></pre><p>原书Tiny的GET静态/动态主线保留，实验根目录放home.html；GET/HEAD及GET/POST /cgi-bin/adder由同一有限核心处理。这些并发模式的C adder直接计算；第11章C异步CGI入口另行展示fork/exec、环境传递和SIGCHLD回收，Python保留同步参考。自动驱动验证字节协议与慢客户；2026-10-14真实ego-browser已对四种模式分别打开home.html，并用原生表单验证GET 20+22=42、POST -8+50=42，共8次表单交互；动态池扩缩容仍以单独负载测试为证据。具体浏览器证据保存在本批验收记录。</p></div></details><details class="exercise" id="ex-12-36" data-original-exercise="12.36" data-source-pdf-pages="1072"><summary>12.36 · I/O多路复用的Tiny</summary><div class="exercise-question" data-original-exercise="12.36" data-source-pdf-pages="1072"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1072">来源：印刷 1071 页 / PDF 1072 页</a></p><p>实现Tiny Web服务器的并发版本，采用I/O多路复用。用真实Web浏览器测试你的实现。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>完整C实现为<a href="#servers-code">ch12_servers.c的select模式</a>，共用第11章HTTP请求/响应核心，接口和静态文件限制在源码头及实验说明中明确。</p><p>event_client保存request字节、response分配区、发送偏移与期限。read只取当前可用字节，request_size判断完整头和正文后才构建响应；write按select可写推进，完成后close。字节到达、EOF、超限、语法失败与超时都有分支。网络读写不阻塞；响应生成对≤64KiB普通文件的读取仍同步，因此慢磁盘或长CGI不是这个实验声称解决的范围。</p><pre><code data-language="shell" class="language-shell">./tmp/csapp/part3/ch12/servers --serve select /path/to/lab-root 0 128
+# Read LISTEN line, then open http://127.0.0.1:PORT/ in a browser.</code></pre><p>原书Tiny的GET静态/动态主线保留，实验根目录放home.html；GET/HEAD及GET/POST /cgi-bin/adder由同一有限核心处理。这些并发模式的C adder直接计算；第11章C异步CGI入口另行展示fork/exec、环境传递和SIGCHLD回收，Python保留同步参考。自动驱动验证字节协议与慢客户；2026-10-14真实ego-browser已对四种模式分别打开home.html，并用原生表单验证GET 20+22=42、POST -8+50=42，共8次表单交互；动态池扩缩容仍以单独负载测试为证据。具体浏览器证据保存在本批验收记录。</p></div></details><details class="exercise" id="ex-12-37" data-original-exercise="12.37" data-source-pdf-pages="1072"><summary>12.37 · 每连接一个线程的Tiny</summary><div class="exercise-question" data-original-exercise="12.37" data-source-pdf-pages="1072"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1072">来源：印刷 1071 页 / PDF 1072 页</a></p><p>实现Tiny Web服务器的并发版本，采用每连接一个线程。每个新连接请求创建一个新线程。用真实Web浏览器测试你的实现。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>完整C实现为<a href="#servers-code">ch12_servers.c的thread模式</a>，共用第11章HTTP请求/响应核心，接口和静态文件限制在源码头及实验说明中明确。</p><p>主线程单独malloc connection，create成功才转移fd所有权；peer负责handle、close与free。tid保留给有限实验结束后的join；参数不引用反复覆盖的accept局部变量。创建失败立刻close和free。本实现按题意每连接一个peer，不把固定线程池当作同一种实现。</p><pre><code data-language="shell" class="language-shell">./tmp/csapp/part3/ch12/servers --serve thread /path/to/lab-root 0 128
+# Read LISTEN line, then open http://127.0.0.1:PORT/ in a browser.</code></pre><p>原书Tiny的GET静态/动态主线保留，实验根目录放home.html；GET/HEAD及GET/POST /cgi-bin/adder由同一有限核心处理。这些并发模式的C adder直接计算；第11章C异步CGI入口另行展示fork/exec、环境传递和SIGCHLD回收，Python保留同步参考。自动驱动验证字节协议与慢客户；2026-10-14真实ego-browser已对四种模式分别打开home.html，并用原生表单验证GET 20+22=42、POST -8+50=42，共8次表单交互；动态池扩缩容仍以单独负载测试为证据。具体浏览器证据保存在本批验收记录。</p></div></details><details class="exercise" id="ex-12-38" data-original-exercise="12.38" data-source-pdf-pages="1072"><summary>12.38 · 动态预线程池的Tiny</summary><div class="exercise-question" data-original-exercise="12.38" data-source-pdf-pages="1072"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1072">来源：印刷 1071 页 / PDF 1072 页</a></p><p>实现Tiny Web服务器的并发版本，采用动态预线程池。线程数应根据当前负载动态增加或减少。一种策略是在缓冲满时把线程数加倍，在缓冲空时减半。用真实Web浏览器测试你的实现。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>完整C实现为<a href="#servers-code">ch12_servers.c的pool模式</a>，共用第11章HTTP请求/响应核心，接口和静态文件限制在源码头及实验说明中明确。</p><p>队列容量4，初始1个worker，最多8。队列达到满状态时在同一锁下把目标数设为min(2×live,8)并创建缺额；一次请求完成且队列空时设target=max(1,live/2)，唤醒空闲worker，让它们各自在持锁检查后退出。持有连接的worker完成当前请求才参与缩减；连接预算128保证曾创建线程总数有界，全部tid最终join。测试确实观察到grow 1→2及shrink事件，非只检查配置字段。</p><pre><code data-language="shell" class="language-shell">./tmp/csapp/part3/ch12/servers --serve pool /path/to/lab-root 0 128
+# Read LISTEN line, then open http://127.0.0.1:PORT/ in a browser.</code></pre><p>原书Tiny的GET静态/动态主线保留，实验根目录放home.html；GET/HEAD及GET/POST /cgi-bin/adder由同一有限核心处理。这些并发模式的C adder直接计算；第11章C异步CGI入口另行展示fork/exec、环境传递和SIGCHLD回收，Python保留同步参考。自动驱动验证字节协议与慢客户；2026-10-14真实ego-browser已对四种模式分别打开home.html，并用原生表单验证GET 20+22=42、POST -8+50=42，共8次表单交互；动态池扩缩容仍以单独负载测试为证据。具体浏览器证据保存在本批验收记录。</p></div></details><details class="exercise" id="ex-12-39" data-original-exercise="12.39" data-source-pdf-pages="1072,1073"><summary>12.39 · 会过滤、记录并并发转发的Web代理</summary><div class="exercise-question" data-original-exercise="12.39" data-source-pdf-pages="1072,1073"><h3 class="question-title">原题（中文翻译）</h3><p class="source"><a class="source-pdf" href="../csapp.pdf#page=1072">来源：印刷 1071—1072 页 / PDF 1072—1073 页</a></p><p>Web代理位于Web服务器和浏览器之间：浏览器先联系代理，由代理转发请求并把服务器响应交回浏览器。编写一个能过滤并记录请求的简单代理。A. 首先接受请求、解析HTTP、转发给服务器并把结果返回浏览器；把所有请求的URL写入磁盘日志，并阻止磁盘过滤文件中包含的URL。B. 随后升级为每个请求创建独立线程，使等待一个远程服务器响应时仍能处理另一个浏览器的待办请求。用真实Web浏览器检查代理。</p></div><div class="answer"><h3 class="answer-title">解答与推导</h3><p>完整实现为<a href="#servers-code">proxy_handle、blocked_and_log与proxy-serial/proxy模式</a>。proxy-serial顺序处理对应A，proxy按连接创建thread对应B；解析绝对形式GET http://host:port/path，检查请求边界、版本与字符，再按原URL精确匹配过滤文件；日志记录ALLOW/BLOCK及URL。被过滤请求返回403，不建立上游连接；允许请求转换为origin-form GET /path并设置Host及Connection: close，收完整有限响应后写回。</p><p>日志以同一个mutex保护打开—追加—关闭，避免多个线程交错行；过滤读取也在此临界区，文件读取失败按错误返回。每条上游socket有独立生命周期，非阻塞connect等待完成后检查SO_ERROR，读写均有期限。响应限128KiB；不依赖DNS缓存或全局hostent。</p><pre><code data-language="shell" class="language-shell">./tmp/csapp/part3/ch12/servers --serve proxy-serial . 0 2 filter.txt proxy.log
+./tmp/csapp/part3/ch12/servers --serve proxy . 0 128 filter.txt proxy.log</code></pre><p>本地可重复实验限定明文HTTP GET和环回上游，便于真实浏览器经代理访问同一回环地址上运行的Tiny；不支持TLS/CONNECT、任意公网主机、认证透传、缓存或通用HTTP分帧转换。它实现题中的过滤、日志、串行到线程并发主机制，范围属于可检验的本地代理，不宣称可替代日常公网代理。协议驱动已实测两种模式的允许/拒绝与日志。浏览器实验时，把HTTP代理设为程序输出的监听地址，依次访问允许与过滤的回环URL，核对页面正文、403状态和日志；须确认浏览器没有绕过本地地址的代理。本题的协议与并发测试已完成，真实浏览器经代理验收仍待完成；前述四种Tiny的表单结果只验证直接访问。验收时使用专用浏览器配置，将回环地址的代理绕过规则关闭：允许URL须显示上游正文并产生ALLOW日志；过滤URL须显示403、产生BLOCK日志且上游没有对应请求；慢上游尚未返回时，另一页面的快速请求应先完成。三项同时成立后再关闭本题的浏览器验收项。</p></div></details></section><section id="self-check"><h2>原创自测：先判断谁拥有资源</h2><details class="exercise" id="q12-1"><summary>原创自测 1 · 线程能照抄fork后的close吗？</summary><div class="exercise-question"><p>主线程accept得fd=7，create工作线程后立即close(7)，工作线程稍后read(7)。为何这与fork版不同？</p></div><div class="answer"><p>线程共享同一描述符表，主线程close撤销的就是工作线程要用的引用；号码还可能被另一accept复用。fork复制描述符表，父子各有一份引用，因此各close自己那份才正确。</p></div></details><details class="exercise" id="q12-2"><summary>原创自测 2 · 条件变量通知早到了会丢数据吗？</summary><div class="exercise-question"><p>生产者在消费者执行wait之前已经put一个元素并signal。消费者后来是否必然睡死？</p></div><div class="answer"><p>正确实现先在mutex下检查count。此时count>0便直接take，不会wait；通知不是数据本身，受锁保护的谓词才记住事实。若不检查谓词就直接wait，才会丢失唤醒效果。</p></div></details><details class="exercise" id="q12-3"><summary>原创自测 3 · 20条轨迹能证明实际badcnt只有两个结果吗？</summary><div class="exercise-question"><p>模型枚举20条L/U/S交错，结果只有1和2。能否据此宣称所有C编译器上的未加锁cnt++都只会输出1或2？</p></div><div class="answer"><p>不能。模型前提是给定三条原子指令且保留线程内顺序；C非原子数据竞争属于未定义行为，优化器不受这套枚举结论约束。实际执行用同步，错误模型用顺序模拟。</p></div></details></section><footer><p>依据 Bryant / O’Hallaron 第三版 Global Edition（Pearson 2016）。有限状态模型、C11/POSIX语义与macOS宿主执行分别记录；真实浏览器与独立验收见本批测试记录。</p><p class="chapter-nav"><a href="#top">返回页首 ↑</a><a href="book_overview.html">全书地图</a><a href="chapter11_network.html">← 第11章：网络编程</a><a href="book_overview.html">回到全书地图 →</a></p></footer></main><aside class="annotation-sidebar" id="annotation-rail" aria-label="阅读注解" hidden><p class="annotation-label">阅读注解</p><p class="annotation-context"><a id="annotation-context-link" href="#top"></a></p><div id="annotation-content"></div></aside></div><script><!-- RN:include scripts/65baddecd4cd62c3e734.js --></script></body></html>

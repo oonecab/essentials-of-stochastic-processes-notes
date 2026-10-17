@@ -2,7 +2,7 @@
 
 来源为本目录 `csapp.pdf`：第三版 Global Edition（Pearson 2016），版本、哈希、页序与正文范围见 `notes/source_manifest.json`。统一构建按该清单的 `publication.include_source_pdf` 收录原 PDF，保留章首、小节、原文及习题的 `#page=` 跳转；当前已启用。构建包准备与实际部署分别验收。
 
-- 正式入口 `notes/book_overview.html`；序言和每章独立 HTML。当前交付序言、第 1 章、Part I 第 2—6 章、Part II 第 7—9 章与 Part III 第 10—12 章，共十四页，章节清单见 `notes/README.md`。
+- 正式入口 `notes/book_overview.html`；序言和每章的受控 HTML 维护于 `src/content/books/csapp/`，`notes/*.html` 保留为独立检查用兼容镜像。当前交付序言、第 1 章、Part I 第 2—6 章、Part II 第 7—9 章与 Part III 第 10—12 章，共十四页，章节清单见 `notes/README.md`。
 - 按原书大节顺序伴读，保留英文节名、来源的印刷页与 PDF 页序。讲清作者提出的问题、表示/执行机制、关键推导、具体输入输出、成立条件和边界。
 - 全书地图区分本批章节笔记与后续原书章节；依赖图是笔记作者归纳。序言以中文释读组织，引用明确标示。
 - 第 1—12 章全部 419 道本版 practice/homework 按题号连续呈现，清单由原 PDF 独立枚举，见 `notes/exercise_manifest.json`。每题先完整中文题干（小问、输入、表图与程序），再写确定解答、关键推导或完整实现；原题错误保留原说法、校注与依据。原创自测单独标明，保留已有锚点。
@@ -21,3 +21,5 @@
 - Part II 的 ELF 重定位、POSIX 进程/信号、虚拟内存与分配器分别写明模型输入、状态、失败契约和目标环境。Python 模型不作为真实信号调度或系统调用执行的证明；宿主 POSIX 实验不冒充 Linux/x86-64 运行。第二部分源码、校注与复核范围见根 I005/T005。
 
 - Part III 的短计数/EOF/EINTR、描述符所有权、网络字节序、HTTP 消息边界、共享状态及同步条件由对应正文定义；默认实验使用临时回环连接和有界线程/子进程。Python 模型不代替 C 内存模型证明；故意错误的交错用模型展示。第三部分来源与验证范围见根 I007/T007。
+
+Astro 维护、镜像同步与冻结基线规则见 [构建维护说明](../../docs/astro-authoring.md)。

@@ -38,3 +38,7 @@ golden master 分为旧维护源和旧发布视图：前者证明正文、数学
 Weiss 批次 Go：13 页 / 362 题，4594 MathML / 227 SVG，原书未使用 statement 容器（计数 0）；parity 差异 0。HTML 6,419,695 字节，JS 23,881 字节，比例 1.0。构建 37.815 秒；`weiss-build`、`weiss-parity`、`weiss-offline`、`weiss-python` 退出 0；独立报告 `tmp/project-check/20261017T163237-h49kv28l/report.json`，包含原 C 图例和教学程序提取执行。52 个 JS 视图和 13 个 no-JS 视图通过，逐页看图；新增迁移审阅入口承接该书原来的散列证据结构。
 
 Weiss 原样导入的 SVG 含 8529 处原有行尾空白，`git show --check 1e145db` 退出非零并保留完整日志 `weiss-original-whitespace.log`；受控源展开字节与冻结原页相同，因此没有清理这些空白，未把该检查记为通过。后续完整构建检出了新维护文档链接未随读者资料页发布，已改为仓库路径说明；现有读者 URL 和 54 页正文链接保持。
+
+CS:APP 批次 Go：14 页 / 419 道原书题 + 36 道自测，656 MathML / 50 SVG / 114 陈述。原正文、数学、链接和脚本 parity 差异为 0；每页单独登记新增 deep-link-settle 导航岛，HTML 合计 2812864 字节、JS 88830 字节，最高比例 1.10252。`csapp-build-4`（40.200 秒）、`csapp-parity-final`、`csapp-offline-4`、`csapp-python`、`csapp-node-tests-final` 退出 0；独立报告 `tmp/project-check/20261017T163622-tcal2v6u/report.json`。实际查看全部首屏与各章题解截图；56 个 JS 和 14 个 no-JS 视图通过。
+
+CS:APP 中间失败均留档：继承的页尾深链在 details 展开增加文档高度后，目录可能仍停上一节；增加稳定等待仍能复现，最终新增两帧后重新定位的独立小岛，未改变原脚本。迁移 parity 只分离逐字节核验的新增岛，其他脚本仍严格比较，新增反例测试拒绝缺失、变更或错误书籍的岛。浏览驱动不支持 Browser.getVersion，改采实际 navigator.userAgent；一次 Astro 打包路径解析错误改为构建根路径后通过。原 CS:APP 12.39 的代理浏览器实验边界保持，不由页面迁移验收替代。

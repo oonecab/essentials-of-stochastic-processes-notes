@@ -2,7 +2,7 @@
 import ControlledContent from '../components/ControlledContent.astro';
 import { parse } from 'parse5';
 import { walk } from '../lib/controlled-html.mjs';
-const { html } = Astro.props;
+const { html, island = '' } = Astro.props;
 const nodes = walk(parse(html, { sourceCodeLocationInfo: true }));
 const document = nodes.find(n => n.tagName === 'html');
 const head = nodes.find(n => n.tagName === 'head');
@@ -11,4 +11,4 @@ if (!document || !head?.sourceCodeLocation || !body?.sourceCodeLocation) throw n
 const attributes = node => Object.fromEntries(node.attrs.map(a => [a.name, a.value]));
 const inner = node => html.slice(node.sourceCodeLocation.startTag.endOffset, node.sourceCodeLocation.endTag.startOffset);
 ---
-<!doctype html><html {...attributes(document)}><head {...attributes(head)}><Fragment set:html={inner(head)} /></head><body {...attributes(body)}><ControlledContent html={inner(body)} /></body></html>
+<!doctype html><html {...attributes(document)}><head {...attributes(head)}><Fragment set:html={inner(head)} /></head><body {...attributes(body)}><ControlledContent html={inner(body)} /><Fragment set:html={island} /></body></html>

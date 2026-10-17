@@ -18,6 +18,7 @@ async function navigate(item) {
   await page.events();
   const url=pathToFileURL(item.file).href;
   await page.goto(url);
+  if(!report.user_agent)report.user_agent=await page.evaluate(()=>navigator.userAgent);
   const events=await page.events();
   const requests=events.filter(e=>e.method==='Network.requestWillBeSent').map(e=>({url:e.params.request.url,type:e.params.type}));
   const external=requests.filter(r=>r.url.split('#')[0]!==url&&!r.url.startsWith('data:'));
@@ -49,12 +50,19 @@ try {
     await screenshot(stem+'-top');
     const targets=state.exercises.length?[state.exercises[0],state.exercises.at(-1)]:[state.toc.at(-1)?.slice(1)];
     for(const id of [...new Set(targets)].filter(Boolean)) {
-      await page.evaluate(id=>{location.hash=id;},id);
+      await page.evaluate(id=>{location.hash=id;window.__rnMotion=null;},id);
       await page.waitForFunction(id=>{
         const e=document.getElementById(id);if(!e)return false;
         for(let n=e;n;n=n.parentElement)if(n.tagName==='DETAILS'&&!n.open)return false;
         const r=(e.tagName==='DETAILS'?e.querySelector(':scope > summary'):e).getBoundingClientRect();return r.top>=0&&r.top<innerHeight&&r.bottom>0;
       },id,{timeout:10000});
+      // A revealed details changes the document height. Wait for native anchor
+      // scrolling and layout to settle before evaluating the next interaction.
+      await page.waitForFunction(()=>{
+        const key=scrollY+':'+document.documentElement.scrollHeight,previous=window.__rnMotion;
+        window.__rnMotion={key,count:previous?.key===key?previous.count+1:0};
+        return window.__rnMotion.count>=5;
+      },undefined,{timeout:10000});
       await page.waitForFunction(id=>{
         const links=[...document.querySelectorAll('#chapter-toc a[href^="#"]')];
         let e=document.getElementById(id),expected;

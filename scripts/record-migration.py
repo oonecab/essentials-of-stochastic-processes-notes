@@ -39,7 +39,8 @@ def main():
     assert not browser['external_requests'] and not browser['errors']
     assert len(browser['views']) == 4 * parity['pages']
     assert len(browser['no_js']) == parity['pages']
-    assert python['status'] == 'passed', python.keys()
+    assert python['status'] == 'passed' and not python['quick'], python.keys()
+    assert python['book'] in [args.book, 'all']
     for r in parity['records']:
         assert digest(ROOT / 'dist' / r['page']) == r['output_sha256']
     for shot in browser['screenshots']:
@@ -58,6 +59,7 @@ def main():
         'js_bytes': sum(r['js_bytes'] for r in parity['records']),
         'max_js_ratio': max(r['js_ratio'] for r in parity['records']),
         'parity_differences': [], 'external_requests': [],
+        'script_additions': {r['page']: r['script_additions'] for r in parity['records'] if r.get('script_additions')},
         'js_views': len(browser['views']), 'no_js_views': len(browser['no_js']),
         'visual_review': args.visual_note,
         'evidence_sha256': evidence, 'screenshots': browser['screenshots'],

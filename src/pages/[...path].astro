@@ -3,9 +3,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import ReaderLayout from '../layouts/ReaderLayout.astro';
 import { entries, stage } from '../lib/controlled-html.mjs';
+import { islandsFor } from '../lib/islands.mjs';
 export function getStaticPaths() {
   return entries().map(entry => ({ params: { path: entry.metadata.route.replace(/\.html$/, '') }, props: { route: entry.metadata.route } }));
 }
 const html = fs.readFileSync(path.join(stage, 'prepared', Astro.props.route), 'utf8');
 ---
-<ReaderLayout html={html} />
+<ReaderLayout html={html} island={islandsFor(Astro.props.route.split('/')[0])} />

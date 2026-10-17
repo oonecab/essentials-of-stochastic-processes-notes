@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "astro_migration": {
+    "status": "passed",
+    "record": "review/astro-migration.json",
+    "sha256": "86740fe795a703c31e14b370e925858d0a365588179f7a97e068528c211d41aa",
+    "widths": [
+      1800,
+      1440,
+      1024,
+      390
+    ],
+    "js_views": 56,
+    "no_js_views": 14,
+    "external_requests": [],
+    "visual_review": "逐页查看 14 页桌面与 390 首屏，12 章末题及 no-JS 原生折叠截图，并查看第 9 章 1440/1024 原图：目录、题干、公式、代码及局部滚动区域可读。真实 56 个 JS 和 14 个 no-JS 视图通过。追加定位岛修复展开后页尾深链位置，原脚本保持。"
+  }
+}

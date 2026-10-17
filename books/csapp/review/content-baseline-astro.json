@@ -1,0 +1,456 @@
+{
+  "schema_version": 1,
+  "kind": "additive_migration_baseline",
+  "baseline_ref": "b2aeff3",
+  "records": [
+    {
+      "page": "csapp/notes/book_overview.html",
+      "source_sha256": "4d2e6495e2caba77b6321b12b5eef854eafa6f1477926ae88ef38e370c87c50d",
+      "output_sha256": "9b05c89bebaf75c90d119904922c307ba35b27d02e4659e7bf0b61002ddb876b",
+      "source_counts": {
+        "exercises": 0,
+        "self_checks": 0,
+        "statements": 3,
+        "mathml": 0,
+        "svg": 1
+      },
+      "publication_counts": {
+        "exercises": 0,
+        "self_checks": 0,
+        "statements": 3,
+        "mathml": 0,
+        "svg": 2
+      },
+      "differences": [],
+      "script_additions": [
+        {
+          "name": "deep-link-settle",
+          "bytes": 590,
+          "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+          "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+        }
+      ],
+      "source_bytes": 79490,
+      "output_bytes": 86310,
+      "js_bytes": 6345,
+      "js_ratio": 1.10251954821894
+    },
+    {
+      "page": "csapp/notes/chapter01_tour.html",
+      "source_sha256": "05f2121c0f6c2ca0e8e177252855f508eca9f0c21ab7b2d5cb123fb88dce276e",
+      "output_sha256": "154346cbbe8a61208318849d3622f7f38657f12ef3816c1f23e37f98de273d6d",
+      "source_counts": {
+        "exercises": 2,
+        "self_checks": 3,
+        "statements": 9,
+        "mathml": 16,
+        "svg": 4
+      },
+      "publication_counts": {
+        "exercises": 2,
+        "self_checks": 3,
+        "statements": 9,
+        "mathml": 16,
+        "svg": 5
+      },
+      "differences": [],
+      "script_additions": [
+        {
+          "name": "deep-link-settle",
+          "bytes": 590,
+          "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+          "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+        }
+      ],
+      "source_bytes": 96220,
+      "output_bytes": 103039,
+      "js_bytes": 6345,
+      "js_ratio": 1.10251954821894
+    },
+    {
+      "page": "csapp/notes/chapter02_information.html",
+      "source_sha256": "8c45e5730f6c6e985e0463f9aec882ce078ca2e4514bd6f31fdcdec0d99362a4",
+      "output_sha256": "204fc043d586665fa87aef9998e2cd99da20514321c0b6a9ea2e8b7d7e4d508e",
+      "source_counts": {
+        "exercises": 97,
+        "self_checks": 3,
+        "statements": 28,
+        "mathml": 538,
+        "svg": 7
+      },
+      "publication_counts": {
+        "exercises": 97,
+        "self_checks": 3,
+        "statements": 28,
+        "mathml": 538,
+        "svg": 8
+      },
+      "differences": [],
+      "script_additions": [
+        {
+          "name": "deep-link-settle",
+          "bytes": 590,
+          "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+          "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+        }
+      ],
+      "source_bytes": 522234,
+      "output_bytes": 529053,
+      "js_bytes": 6345,
+      "js_ratio": 1.10251954821894
+    },
+    {
+      "page": "csapp/notes/chapter03_machine_level.html",
+      "source_sha256": "ac840fb8cf74fa81b88f81ac3568da82831d05e20b9b0ab19e0245863977c73d",
+      "output_sha256": "ac0c0d1de97a02ccae851549abde25e30bad9c2b04239fadfcd11323557097ef",
+      "source_counts": {
+        "exercises": 75,
+        "self_checks": 3,
+        "statements": 16,
+        "mathml": 47,
+        "svg": 3
+      },
+      "publication_counts": {
+        "exercises": 75,
+        "self_checks": 3,
+        "statements": 16,
+        "mathml": 47,
+        "svg": 4
+      },
+      "differences": [],
+      "script_additions": [
+        {
+          "name": "deep-link-settle",
+          "bytes": 590,
+          "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+          "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+        }
+      ],
+      "source_bytes": 312097,
+      "output_bytes": 318997,
+      "js_bytes": 6345,
+      "js_ratio": 1.10251954821894
+    },
+    {
+      "page": "csapp/notes/chapter04_architecture.html",
+      "source_sha256": "602f162d79e0fea454916f45817181113108e84bc1fbc22acc87ce44d74dec66",
+      "output_sha256": "398ec36a0ead80c68f0da0c6eb8f1388ff70ed51e4c0a325a1fc836e168764eb",
+      "source_counts": {
+        "exercises": 59,
+        "self_checks": 3,
+        "statements": 6,
+        "mathml": 10,
+        "svg": 6
+      },
+      "publication_counts": {
+        "exercises": 59,
+        "self_checks": 3,
+        "statements": 6,
+        "mathml": 10,
+        "svg": 7
+      },
+      "differences": [],
+      "script_additions": [
+        {
+          "name": "deep-link-settle",
+          "bytes": 590,
+          "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+          "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+        }
+      ],
+      "source_bytes": 232793,
+      "output_bytes": 239612,
+      "js_bytes": 6345,
+      "js_ratio": 1.10251954821894
+    },
+    {
+      "page": "csapp/notes/chapter05_optimization.html",
+      "source_sha256": "611f7c57d8b01b73cd892d0e38ef1c5d176adc0da5a2383798d1bebf46ad523b",
+      "output_sha256": "dce866a1176d23eee31aa3168d14ac04aeccd0ecb2fe860fac190bcbfd0e7d0c",
+      "source_counts": {
+        "exercises": 19,
+        "self_checks": 3,
+        "statements": 6,
+        "mathml": 16,
+        "svg": 9
+      },
+      "publication_counts": {
+        "exercises": 19,
+        "self_checks": 3,
+        "statements": 6,
+        "mathml": 16,
+        "svg": 10
+      },
+      "differences": [],
+      "script_additions": [
+        {
+          "name": "deep-link-settle",
+          "bytes": 590,
+          "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+          "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+        }
+      ],
+      "source_bytes": 156521,
+      "output_bytes": 163340,
+      "js_bytes": 6345,
+      "js_ratio": 1.10251954821894
+    },
+    {
+      "page": "csapp/notes/chapter06_memory.html",
+      "source_sha256": "a396a64df9c0731b3debd690cd179cb25ca39d829c76a279b5685ba5cff301d3",
+      "output_sha256": "09b272cace4f32931b9ef5c9efdb4c99be301139ea96a58c03406dacdb204bdd",
+      "source_counts": {
+        "exercises": 46,
+        "self_checks": 3,
+        "statements": 7,
+        "mathml": 21,
+        "svg": 4
+      },
+      "publication_counts": {
+        "exercises": 46,
+        "self_checks": 3,
+        "statements": 7,
+        "mathml": 21,
+        "svg": 5
+      },
+      "differences": [],
+      "script_additions": [
+        {
+          "name": "deep-link-settle",
+          "bytes": 590,
+          "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+          "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+        }
+      ],
+      "source_bytes": 257881,
+      "output_bytes": 264700,
+      "js_bytes": 6345,
+      "js_ratio": 1.10251954821894
+    },
+    {
+      "page": "csapp/notes/chapter07_linking.html",
+      "source_sha256": "c8e12a0d44d570b29d9733dedbc93f3bf790eb60ca19d868b3261e3373a3003b",
+      "output_sha256": "2efc77a9369b97d74004689ff3b8ea2edfc1390645a1c826f7f6ac3ce2224801",
+      "source_counts": {
+        "exercises": 13,
+        "self_checks": 3,
+        "statements": 5,
+        "mathml": 3,
+        "svg": 0
+      },
+      "publication_counts": {
+        "exercises": 13,
+        "self_checks": 3,
+        "statements": 5,
+        "mathml": 3,
+        "svg": 1
+      },
+      "differences": [],
+      "script_additions": [
+        {
+          "name": "deep-link-settle",
+          "bytes": 590,
+          "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+          "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+        }
+      ],
+      "source_bytes": 139390,
+      "output_bytes": 146210,
+      "js_bytes": 6345,
+      "js_ratio": 1.10251954821894
+    },
+    {
+      "page": "csapp/notes/chapter08_exceptional.html",
+      "source_sha256": "5c73e2644b34d07f4483664a1d10a657e10917675e264f6b5f130b28030f8083",
+      "output_sha256": "dbb971a274234d57dd8b3c51b7125a1cda2dc561ac7eda1361682d045a0f1ea7",
+      "source_counts": {
+        "exercises": 26,
+        "self_checks": 3,
+        "statements": 5,
+        "mathml": 0,
+        "svg": 1
+      },
+      "publication_counts": {
+        "exercises": 26,
+        "self_checks": 3,
+        "statements": 5,
+        "mathml": 0,
+        "svg": 2
+      },
+      "differences": [],
+      "script_additions": [
+        {
+          "name": "deep-link-settle",
+          "bytes": 590,
+          "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+          "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+        }
+      ],
+      "source_bytes": 146727,
+      "output_bytes": 153547,
+      "js_bytes": 6345,
+      "js_ratio": 1.10251954821894
+    },
+    {
+      "page": "csapp/notes/chapter09_virtual_memory.html",
+      "source_sha256": "43a342f6d35e3466001e5872f2ce0d77425a99f24ae5dd24126f7f683a87f9ad",
+      "output_sha256": "e6ea5cb9f5d563d0b263f7d471815a9d896f3ec695b5c30084e743c43a8b349d",
+      "source_counts": {
+        "exercises": 20,
+        "self_checks": 3,
+        "statements": 4,
+        "mathml": 4,
+        "svg": 3
+      },
+      "publication_counts": {
+        "exercises": 20,
+        "self_checks": 3,
+        "statements": 4,
+        "mathml": 4,
+        "svg": 4
+      },
+      "differences": [],
+      "script_additions": [
+        {
+          "name": "deep-link-settle",
+          "bytes": 590,
+          "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+          "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+        }
+      ],
+      "source_bytes": 171907,
+      "output_bytes": 178772,
+      "js_bytes": 6345,
+      "js_ratio": 1.10251954821894
+    },
+    {
+      "page": "csapp/notes/chapter10_system_io.html",
+      "source_sha256": "c2a4e6c9921aa9ef5443304c924d04d5973dfcb0fa2aa638cfa0fbde4d443f42",
+      "output_sha256": "6ac01907dce9ac3f62a72951c3634a5078f86d6d31bc36fd9fc1e6fca14a6b6d",
+      "source_counts": {
+        "exercises": 10,
+        "self_checks": 3,
+        "statements": 10,
+        "mathml": 0,
+        "svg": 0
+      },
+      "publication_counts": {
+        "exercises": 10,
+        "self_checks": 3,
+        "statements": 10,
+        "mathml": 0,
+        "svg": 1
+      },
+      "differences": [],
+      "script_additions": [
+        {
+          "name": "deep-link-settle",
+          "bytes": 590,
+          "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+          "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+        }
+      ],
+      "source_bytes": 130831,
+      "output_bytes": 137651,
+      "js_bytes": 6345,
+      "js_ratio": 1.10251954821894
+    },
+    {
+      "page": "csapp/notes/chapter11_network.html",
+      "source_sha256": "53c0efb1485c8d7d47ea9b8303f32facf3bc56c90b308a1f189ad0985040bccb",
+      "output_sha256": "9a8c565bb9a0781bb21239a2904eac642a74ec9dca6aa77a6475b1e88981ba50",
+      "source_counts": {
+        "exercises": 13,
+        "self_checks": 3,
+        "statements": 6,
+        "mathml": 0,
+        "svg": 3
+      },
+      "publication_counts": {
+        "exercises": 13,
+        "self_checks": 3,
+        "statements": 6,
+        "mathml": 0,
+        "svg": 4
+      },
+      "differences": [],
+      "script_additions": [
+        {
+          "name": "deep-link-settle",
+          "bytes": 590,
+          "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+          "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+        }
+      ],
+      "source_bytes": 170663,
+      "output_bytes": 177483,
+      "js_bytes": 6345,
+      "js_ratio": 1.10251954821894
+    },
+    {
+      "page": "csapp/notes/chapter12_concurrency.html",
+      "source_sha256": "bc85d93c6859d8981a6e9668b7f1a4e4779397cdcbf13e4461c94eb91dc24e14",
+      "output_sha256": "345291eee62c54ed5a3c26b39050e2dfbca3b40291cc675871e721eae13f0a5a",
+      "source_counts": {
+        "exercises": 39,
+        "self_checks": 3,
+        "statements": 4,
+        "mathml": 1,
+        "svg": 9
+      },
+      "publication_counts": {
+        "exercises": 39,
+        "self_checks": 3,
+        "statements": 4,
+        "mathml": 1,
+        "svg": 10
+      },
+      "differences": [],
+      "script_additions": [
+        {
+          "name": "deep-link-settle",
+          "bytes": 590,
+          "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+          "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+        }
+      ],
+      "source_bytes": 246095,
+      "output_bytes": 252915,
+      "js_bytes": 6345,
+      "js_ratio": 1.10251954821894
+    },
+    {
+      "page": "csapp/notes/preface.html",
+      "source_sha256": "6ac27be90cd0d914a57b48734422ef3df1a8cfbb363b99fccd575be798efc977",
+      "output_sha256": "f1732560c7791748cd97fac4c0f1eddfae876752c92f29aef08f86deac0a0266",
+      "source_counts": {
+        "exercises": 0,
+        "self_checks": 0,
+        "statements": 5,
+        "mathml": 0,
+        "svg": 0
+      },
+      "publication_counts": {
+        "exercises": 0,
+        "self_checks": 0,
+        "statements": 5,
+        "mathml": 0,
+        "svg": 1
+      },
+      "differences": [],
+      "script_additions": [
+        {
+          "name": "deep-link-settle",
+          "bytes": 590,
+          "sha256": "7eb36a483b57a786acc25c1dbaf739c912f5a41767a6af6c70aa3c5948e340e8",
+          "reason": "CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留"
+        }
+      ],
+      "source_bytes": 54416,
+      "output_bytes": 61235,
+      "js_bytes": 6345,
+      "js_ratio": 1.10251954821894
+    }
+  ],
+  "note": "原内容完整性基线保持；此文件追加原源文件与 Astro 输出的身份及逐页 parity。"
+}

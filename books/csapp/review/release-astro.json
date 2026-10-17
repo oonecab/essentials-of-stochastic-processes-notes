@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "scope": "local_dist_reading_pages",
+  "files": {
+    "csapp/notes/book_overview.html": "9b05c89bebaf75c90d119904922c307ba35b27d02e4659e7bf0b61002ddb876b",
+    "csapp/notes/chapter01_tour.html": "154346cbbe8a61208318849d3622f7f38657f12ef3816c1f23e37f98de273d6d",
+    "csapp/notes/chapter02_information.html": "204fc043d586665fa87aef9998e2cd99da20514321c0b6a9ea2e8b7d7e4d508e",
+    "csapp/notes/chapter03_machine_level.html": "ac0c0d1de97a02ccae851549abde25e30bad9c2b04239fadfcd11323557097ef",
+    "csapp/notes/chapter04_architecture.html": "398ec36a0ead80c68f0da0c6eb8f1388ff70ed51e4c0a325a1fc836e168764eb",
+    "csapp/notes/chapter05_optimization.html": "dce866a1176d23eee31aa3168d14ac04aeccd0ecb2fe860fac190bcbfd0e7d0c",
+    "csapp/notes/chapter06_memory.html": "09b272cace4f32931b9ef5c9efdb4c99be301139ea96a58c03406dacdb204bdd",
+    "csapp/notes/chapter07_linking.html": "2efc77a9369b97d74004689ff3b8ea2edfc1390645a1c826f7f6ac3ce2224801",
+    "csapp/notes/chapter08_exceptional.html": "dbb971a274234d57dd8b3c51b7125a1cda2dc561ac7eda1361682d045a0f1ea7",
+    "csapp/notes/chapter09_virtual_memory.html": "e6ea5cb9f5d563d0b263f7d471815a9d896f3ec695b5c30084e743c43a8b349d",
+    "csapp/notes/chapter10_system_io.html": "6ac01907dce9ac3f62a72951c3634a5078f86d6d31bc36fd9fc1e6fca14a6b6d",
+    "csapp/notes/chapter11_network.html": "9a8c565bb9a0781bb21239a2904eac642a74ec9dca6aa77a6475b1e88981ba50",
+    "csapp/notes/chapter12_concurrency.html": "345291eee62c54ed5a3c26b39050e2dfbca3b40291cc675871e721eae13f0a5a",
+    "csapp/notes/preface.html": "f1732560c7791748cd97fac4c0f1eddfae876752c92f29aef08f86deac0a0266"
+  }
+}

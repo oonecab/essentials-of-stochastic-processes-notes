@@ -4,6 +4,7 @@ import { execFileSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import { entries, root, stage } from '../src/lib/controlled-html.mjs';
 import { fingerprint, differences, sha } from './parity-lib.mjs';
+import { separateApprovedIsland,deepLinkSource,islandsFor } from '../src/lib/islands.mjs';
 
 export function verifyParity(directory=path.join(root,'dist'),book) {
   const state=JSON.parse(fs.readFileSync('scripts/migration-state.json'));
@@ -21,8 +22,11 @@ export function verifyParity(directory=path.join(root,'dist'),book) {
     const expected=fs.readFileSync(path.join(stage,'legacy',metadata.route),'utf8').replace('<link rel="stylesheet" href="../../reader.css">',()=>'<style>'+readerCss.toString()+'</style>');
     const actual=fs.readFileSync(path.join(directory,metadata.route),'utf8');
     const before=fingerprint(expected),after=fingerprint(actual);
+    const originalPart=fingerprint(separateApprovedIsland(actual,metadata.book));
+    const additions=islandsFor(metadata.book)?[{name:'deep-link-settle',bytes:Buffer.byteLength(deepLinkSource),sha256:sha(deepLinkSource),reason:'CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留'}]:[];
+    if(after.js_bytes>before.js_bytes*1.5)throw new Error('Inline JS budget exceeded: '+metadata.route);
     records.push({page:metadata.route,source_sha256:sha(frozen),output_sha256:sha(actual),source_counts:fingerprint(html).counts,
-      publication_counts:after.counts,differences:differences(before,after),source_bytes:Buffer.byteLength(html),output_bytes:Buffer.byteLength(actual),js_bytes:after.js_bytes,
+      publication_counts:after.counts,differences:differences(before,originalPart),script_additions:additions,source_bytes:Buffer.byteLength(html),output_bytes:Buffer.byteLength(actual),js_bytes:after.js_bytes,
       js_ratio:after.js_bytes/before.js_bytes});
   }
   const report={status:records.every(r=>r.differences.length===0)?'passed':'failed',baseline_ref:state.baseline_ref,book:book??'all',pages:records.length,records};

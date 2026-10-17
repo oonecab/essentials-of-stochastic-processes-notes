@@ -3,7 +3,7 @@
 set -eu
 [ "$#" -eq 1 ] || exit 2
 case "$1" in
-  test) exec /usr/sbin/nginx -t ;;
+  test) exec /usr/bin/systemd-run --quiet --wait --pipe --collect /usr/sbin/nginx -t ;;
   reload) exec /usr/bin/systemctl reload nginx ;;
   *) exit 2 ;;
 esac

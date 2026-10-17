@@ -62,6 +62,7 @@ def main():
             blobs={m.name:archive.extractfile(m).read() for m in archive.getmembers()}
         if i>1: blobs['index.html']+=f'\n<!-- publication fixture {i} -->\n'.encode()
         meta['files']=[{'path':n,'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest()} for n,b in sorted(blobs.items())]
+        meta['total_bytes']=sum(row['bytes'] for row in meta['files'])
         write_archive(package/'site.tar.gz',blobs)
         meta['archive_sha256']=hashlib.sha256((package/'site.tar.gz').read_bytes()).hexdigest()
         (package/'release.json').write_text(json.dumps(meta))

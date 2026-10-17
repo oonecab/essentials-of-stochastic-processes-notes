@@ -1,4 +1,8 @@
 {
+  "snapshot_kind": "I028 local snapshot",
+  "production_record": "docs/astro-production-report.md",
+  "record_scope_note": "I028 的本地范围与局限按原时点保留；后续生产发布由 I029 独立记录。I032 修复与新验收另行登记。",
+  "prior_record_sha256": "b61d55d39174999815709d3f844089adab69f5e02a1d8ef3c4529a13d341e556",
   "schema_version": 1,
   "status": "带保留完成",
   "decision": "Go for local static build and release rehearsal",

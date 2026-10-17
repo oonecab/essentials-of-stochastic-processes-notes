@@ -1,4 +1,8 @@
 {
+  "snapshot_kind": "I028 local snapshot",
+  "production_record": "docs/astro-production-report.md",
+  "record_scope_note": "本记录保留 I028 当时的本地迁移证据；后续 I029 生产发布及 I032 修复分别记录。",
+  "prior_record_sha256": "91601175022c5d838c6f96077d00488b25d6d8652830868dc48206146849e3a4",
   "schema_version": 1,
   "book": "weiss",
   "recorded_at_utc": "2026-10-17T08:34:13.250188+00:00",

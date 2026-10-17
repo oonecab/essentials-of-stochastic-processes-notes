@@ -15,3 +15,12 @@
 ## 发布耐久性批次
 
 新增回归先因缺失 durability 模块失败，完成实现后 5 个文件/目录屏障与原子写单测通过。`tools/test_static_publish.py --release-dir deploy/portal-releases/20261017T174039` 的 21 项演练通过（`tmp/publish-check/20261017T174039-4k2i7xfp/report.json`）：六个实际 SIGKILL 点、截断 journal 只读诊断与显式恢复、后续发布、既有并发/回滚/幂等回执、真实临时 Nginx HTTPS 与 298 个直接响应文件、15 个旧入口和 PDF Range。目录 rename 前将顶层目录设为 0555 在 macOS 失败；已改为先持久化内容、rename 后锁定并同步目录，再持久化父目录。落盘失败使用 fsync 错误及顺序模型，未声称物理服务器断电实测。
+
+## 全站构建与发布模板批次
+
+- `pnpm install --frozen-lockfile`、`pnpm test`（9 项）、`pnpm build`、`pnpm check:parity` 通过。DOM 变异测试在加入 DOM 指纹前失败；修复后标签、hidden、role/aria/class、转义 set:html、数学标签与失效锚点均能检出。新增 dummy 书/页可从 catalog 枚举并生成缺失镜像。
+- `pnpm check:offline`：74 个 HTML、296 个 JS 视图、148 个 no-JS 视图全部通过，0 外部请求；正式 54 页仍为 0 parity 差异。实际查看了 14 个辅助页桌面/手机的四张联系图，首屏、代码局部滚动及排版正常；未重新声称全书数学内容审阅。
+- 真实 CSP 浏览器冒烟覆盖 9 页中的全部 12 种内联脚本；正常无 CSP/runtime 错误，故意修改脚本后浏览器阻止执行；打包同时核对验收后 HTML 与 hash。记录位于 `tmp/reading-notes-migration/csp/`。
+- root 安装器的固定参数/路径边界、队列 symlink 拒绝、字节/inode 门限、保护 current/前版/事务和过期临时目录等 5 项回归通过。root 属主及真实 Ubuntu systemd/sudo 边界仍需运维应用后实测，不能由 macOS 单测代替。
+- 登记快速检查 13 项通过：`tmp/project-check/20261017T202028-ut52iqg9/report.json`。新本地测试 release `20261017T202235` 为 303 文件、74 HTML、54 正式页、28,854,317 字节；元数据已改为部署状态另记。临时 Nginx 验证通过，21 项发布演练通过：`tmp/release-check/20261017T202235-9q90zh1x/https-verification.json`、`tmp/publish-check/20261017T202235-o3peaf08/report.json`。此测试包记录了当时未提交的修复源状态，不作为已部署版本。
+- I028 根记录及五书迁移记录标明 local snapshot，并分别链接 I029 生产报告，旧摘要的哈希变更原因和原值保留。服务器 P0-3 与权限模板的应用/回滚/验收交给 `deploy/OPERATIONS-I032.md`，本轮未执行。

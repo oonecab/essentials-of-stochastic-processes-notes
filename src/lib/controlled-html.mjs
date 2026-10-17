@@ -5,10 +5,10 @@ import { parse } from 'parse5';
 export const root = process.cwd();
 export const stage = path.join(root, 'tmp/reading-notes-migration');
 export function walk(node) {
-  return [node, ...(node.childNodes ?? []).flatMap(walk)];
+  return [node, ...(node.content?.childNodes ?? node.childNodes ?? []).flatMap(walk)];
 }
 export function attr(node, name) { return node.attrs?.find(a => a.name === name)?.value; }
-export function readSource(filename) {
+export function readSource(filename, base=root) {
   const source = fs.readFileSync(filename, 'utf8');
   const match = source.match(/^---\n([\s\S]*?)\n---\n/);
   if (!match) throw new Error(`Missing controlled JSON frontmatter: ${filename}`);
@@ -18,28 +18,39 @@ export function readSource(filename) {
   }
   const html = source.slice(match[0].length).replace(/<!-- RN:include ([\w/.-]+) -->/g, (_, name) => {
     if (!/^(styles|scripts)\/[a-z0-9-]+\.(css|js)$/.test(name)) throw new Error('Invalid shared asset');
-    return fs.readFileSync(path.join(root, 'src', name), 'utf8');
+    return fs.readFileSync(path.join(base, 'src', name), 'utf8');
   });
   return { metadata, html, filename };
 }
-export function entries() {
-  const state = JSON.parse(fs.readFileSync(path.join(root, 'scripts/migration-state.json'), 'utf8'));
-  const mode = JSON.parse(fs.readFileSync(path.join(stage, 'build-state.json'), 'utf8'));
+export function entries(base=root) {
+  const state = JSON.parse(fs.readFileSync(path.join(base, 'scripts/migration-state.json'), 'utf8'));
+  const modeFile=path.join(base,'tmp/reading-notes-migration/build-state.json');
+  const mode = fs.existsSync(modeFile)?JSON.parse(fs.readFileSync(modeFile, 'utf8')):{shell:false};
   if (mode.shell) return [];
-  const catalog=JSON.parse(fs.readFileSync(path.join(root,'books/catalog.json'),'utf8')).books;
+  const catalog=JSON.parse(fs.readFileSync(path.join(base,'books/catalog.json'),'utf8')).books;
   return state.migrated_books.flatMap(book => {
-    const directory = path.join(root, 'src/content/books', book);
+    const directory = path.join(base, 'src/content/books', book);
     const registered=catalog.find(b=>b.id===book);
     if(!registered)throw new Error('Unregistered book: '+book);
     const filenames=fs.readdirSync(directory).filter(f=>f.endsWith('.html')).sort();
-    const mirrors=fs.readdirSync(path.join(root,registered.directory,'notes')).filter(f=>f.endsWith('.html')).sort();
-    if(filenames.length!==registered.expected_pages||JSON.stringify(filenames)!==JSON.stringify(mirrors))throw new Error('Controlled source inventory differs: '+book);
+    if(filenames.length!==registered.expected_pages)throw new Error('Controlled source inventory differs: '+book);
     return filenames.map(file=>{
-      const entry=readSource(path.join(directory,file));
+      const entry=readSource(path.join(directory,file),base);
       if(entry.metadata.book!==book||entry.metadata.route!==registered.publish_prefix+'/notes/'+file||entry.metadata.legacy_path!==registered.directory+'/notes/'+file)throw new Error('Controlled route differs: '+file);
       return entry;
     });
   });
+}
+
+export function syncMirrors(pages, {write=false,base=root}={}) {
+  for(const {metadata,html} of pages){
+    const file=path.join(base,metadata.legacy_path);
+    const current=fs.existsSync(file)?fs.readFileSync(file,'utf8'):null;
+    if(current!==html){
+      if(!write)throw new Error('Compatibility mirror differs: '+metadata.legacy_path);
+      fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,html);
+    }
+  }
 }
 
 // Locations preserve the reviewed bytes, including MathML and SVG namespaces.

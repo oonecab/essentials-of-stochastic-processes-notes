@@ -1,5 +1,7 @@
 # Ubuntu 静态发布
 
+I029 记录的生产版本保持为历史已验证基线；I032 的 root 安装器、权限/保留策略和新服务模板尚需运维应用，步骤与回滚见 [I032 运维交接](OPERATIONS-I032.md)。下文保留 I029 流程用于解释既有部署；新安装以运维交接和仓库最新 unit/helper 为准。I032 将受控 `reading-notes-publish` 作为唯一生产写入口，原发布用户直接运行 publish.sh 的命令只适用于旧权限布局。
+
 构建主机使用 Node 24.21.0、pnpm 11.21.0、Python 3.10+、C/Make/Poppler；Web 主机只运行 Nginx。两台主机可以分开：Web 主机安装 Python、rsync 和 util-linux 仅用于一次性发布脚本，不启动 Node、Python HTTP 或数据库服务。下面的安装约定已在 I029 的 Ubuntu 22.04 上完成实机发布与验证；当前版本和证据见 [生产发布记录](../docs/astro-production-report.md)。独立构建主机仍为可选模板，本次构建在本地完成。
 
 ## 安装、目录与权限
@@ -18,7 +20,7 @@ Web 主机管理员安装 `nginx python3 rsync util-linux openssl certbot`，创
 /var/spool/reading-notes/{ready,done}/
 ```
 
-发布脚本把新目录改为目录 0555、文件 0444；拒绝重用版本号。`current` 与 release 位于同一文件系统。没有自动删除 release 或旧证据的任务，回滚版本由运维明确保留。
+发布脚本把新目录改为目录 0555、文件 0444；拒绝重用版本号。`current` 与 release 位于同一文件系统。I032 新树由 root 持有；安装器预检字节与 inode 余量，持锁清理超过 24 小时的临时残留。正式版本 cleanup 默认只列计划，显式 apply 才删除超过七天且不在保护集合中的版本，至少保留最近三个版本、current 与最近成功发布的前版；首次迁移旧布局在该树外，保留不动。
 
 ## 构建、证书与首次上线
 

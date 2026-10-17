@@ -1,0 +1,61 @@
+#!/usr/bin/python3 -I
+"""Root-owned, fixed-command installer; publisher can provide only an action and ID."""
+import os
+from pathlib import Path
+import re
+import stat
+import subprocess
+import sys
+import tempfile
+
+INSTALL=Path('/usr/local/lib/reading-notes/deploy/scripts/publish.sh')
+ROOT=Path('/srv/reading-notes')
+QUEUE=Path('/var/spool/reading-notes/ready')
+
+
+def arguments(args):
+    if args==['recover']:return ['--recover']
+    if args==['status']:return ['--status']
+    if args==['cleanup']:return ['--cleanup']
+    if args==['cleanup','apply']:return ['--cleanup','--apply-cleanup']
+    if len(args)==2 and args[0] in {'publish','rollback','recover'} and re.fullmatch(r'\d{8}T\d{6}',args[1]):
+        return {'publish':['--release-dir',str(QUEUE/args[1])],
+                'rollback':['--rollback',args[1]],'recover':['--recover','--restore-release',args[1]]}[args[0]]
+    raise ValueError('Expected publish|rollback|recover RELEASE_ID, recover, status, or cleanup [apply]')
+
+
+def snapshot(package, destination):
+    # Directory FDs and O_NOFOLLOW keep mutable queue paths from redirecting root reads.
+    parent_fd=os.open(QUEUE,os.O_RDONLY|os.O_DIRECTORY|os.O_NOFOLLOW)
+    try:
+        fd=os.open(package.name,os.O_RDONLY|os.O_DIRECTORY|os.O_NOFOLLOW,dir_fd=parent_fd)
+    finally:os.close(parent_fd)
+    try:
+        for name in ['release.json','SHA256SUMS','site.tar.gz']:
+            source=os.open(name,os.O_RDONLY|os.O_NOFOLLOW,dir_fd=fd)
+            with os.fdopen(source,'rb') as src:
+                info=os.fstat(src.fileno())
+                if not stat.S_ISREG(info.st_mode) or info.st_size>1024*1024*1024:
+                    raise ValueError('Unsafe queued package file')
+                with (destination/name).open('xb') as target:
+                    remaining=info.st_size
+                    while remaining:
+                        chunk=src.read(min(1024*1024,remaining))
+                        if not chunk:raise ValueError('Queue file truncated during snapshot')
+                        target.write(chunk);remaining-=len(chunk)
+                    if src.read(1):raise ValueError('Queue file grew during snapshot')
+    finally:os.close(fd)
+
+
+def main():
+    command=arguments(sys.argv[1:])
+    if os.geteuid()!=0:raise PermissionError('Root installer required')
+    env={'PATH':'/usr/sbin:/usr/bin:/sbin:/bin','LANG':'C.UTF-8'}
+    if command[0]=='--release-dir':
+        with tempfile.TemporaryDirectory(prefix='.package-',dir=ROOT) as temp:
+            snapshot(Path(command[1]),Path(temp))
+            return subprocess.run([str(INSTALL),'--release-dir',temp],env=env).returncode
+    return subprocess.run([str(INSTALL),*command],env=env).returncode
+
+
+if __name__=='__main__':raise SystemExit(main())

@@ -93,6 +93,8 @@ python3 tools/project.py build --release-id YYYYMMDDTHHMMSS
 
 统一包位于 `deploy/portal-releases/<release-id>/`，Astro 从 `src/content/books/` 构建登记的五本书，原 Python 检查继续读取同步镜像。发布路径分别为 `/stochastic/`、`/weiss/`、`/csapp/`、`/visual-group-theory/` 和 `/measure-probability/`；原有书籍的章节地址保持兼容。
 
+构建依赖 Node/Astro 与 Python 辅助脚本，完整工具准备见 [Astro 编写说明](docs/astro-authoring.md)。全部公开 HTML 内联阅读资源（当前 74 页），正式页做全 DOM parity；代码/PDF 下载继续作为链接。`pnpm build` 包含使用生产 CSP 的真实浏览器冒烟和脚本哈希变异检查，`pnpm check:offline` 覆盖全部页面的四档视口及桌面/手机 no-JS。
+
 包内包括站点归档、逐文件 SHA-256、版本清单和本版 CSP 对应的 Nginx 配置。服务器采用独立 `releases/<release-id>` 目录与 `current` 原子切换；回滚同时恢复站点链接与该版本的配置。完整步骤、证书维护、验收边界及回滚命令见[部署说明](deploy/README.md)。
 
 可用 `python3 tools/project.py verify-release --release-id YYYYMMDDTHHMMSS` 在临时本地 Nginx 上验证 HTTPS 响应、文件哈希、MIME、CSP、旧入口和 PDF Range；需要本机 Nginx 与 OpenSSL。该检查不会修改系统 Nginx 配置。生产上传、生效与公网浏览器验收在明确的发布任务中执行并单独记录。

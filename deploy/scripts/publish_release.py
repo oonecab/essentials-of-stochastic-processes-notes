@@ -20,6 +20,7 @@ sys.path[:0] = [str(DEPLOY), str(ROOT/'tools')]
 from public_policy import inspect, sums, POLICY
 from release_support import extract_release
 from durability import atomic_json, durable_unlink, sync_directory, sync_tree
+from retention import capacity, retention_plan, stale_temporaries, remove_tree
 
 
 def identity(value):
@@ -65,6 +66,10 @@ def main():
     mode.add_argument('--release-dir', type=Path)
     mode.add_argument('--rollback', type=identity)
     mode.add_argument('--recover', action='store_true')
+    mode.add_argument('--cleanup', action='store_true')
+    mode.add_argument('--status', action='store_true')
+    ap.add_argument('--apply-cleanup', action='store_true')
+    ap.add_argument('--keep-last-n', type=int, default=3)
     ap.add_argument('--restore-release', type=identity, help='With --recover, explicitly select a verified release when the journal is damaged')
     ap.add_argument('--dry-run', action='store_true')
     ap.add_argument('--service-hook', type=Path, help='Only for local dry-run; executable called with test/reload')
@@ -72,6 +77,7 @@ def main():
     a = ap.parse_args()
     if a.restore_release and not a.recover:
         ap.error('--restore-release requires --recover')
+    if a.apply_cleanup and not a.cleanup:ap.error('--apply-cleanup requires --cleanup')
     root = a.root.resolve(strict=True)
     if a.root.is_symlink() or not root.is_dir() or root == Path('/'):
         raise ValueError('Unsafe root')
@@ -79,6 +85,10 @@ def main():
         raise ValueError('Dry-run requires a temporary directory')
     if not a.dry_run and (root != Path('/srv/reading-notes') or a.service_hook):
         raise ValueError('Production uses the fixed root and installed root-owned service helper')
+    if not a.dry_run and os.geteuid()!=0:
+        raise PermissionError('Production releases must be installed by the root-owned reading-notes-publish helper')
+    if not a.dry_run and (root.stat().st_uid!=0 or root.stat().st_mode & 0o022):
+        raise ValueError('Production root must be root-owned and not group/other writable')
     if a.service_hook:
         a.service_hook = a.service_hook.resolve(strict=True)
     lock_fd = a.lock_fd if a.lock_fd is not None else os.open(root/'.publish.lock', os.O_CREAT|os.O_RDWR|os.O_NOFOLLOW, 0o600)
@@ -91,6 +101,8 @@ def main():
     if releases.is_symlink():
         raise ValueError('Untrusted releases symlink')
     releases.mkdir(exist_ok=True)
+    if not a.dry_run and (releases.stat().st_uid!=0 or releases.stat().st_mode & 0o022):
+        raise ValueError('Production releases directory must be root-owned')
     sync_directory(root)
     current = root/'current'
     if current.exists() and not current.is_symlink():
@@ -100,7 +112,7 @@ def main():
     if previous:
         if not re.fullmatch(r'releases/\d{8}T\d{6}', previous) or ((not a.recover and not a.rollback) and not (root/previous).is_dir()):
             raise ValueError('Untrusted or broken current')
-        if not a.rollback and not a.recover:
+        if not any([a.rollback,a.recover,a.status,a.cleanup]):
             previous_meta = verified(root/previous)
     journal = root/'.publish-transaction.json'
 
@@ -113,7 +125,22 @@ def main():
         if a.service_hook:
             subprocess.run([str(a.service_hook), action], check=True)
         elif not a.dry_run:
-            subprocess.run(['sudo', '-n', '/usr/local/sbin/reading-notes-nginx', action], check=True)
+            subprocess.run(['/usr/local/sbin/reading-notes-nginx', action], check=True)
+
+    if a.status:
+        fs=os.statvfs(root)
+        print(json.dumps({'current':previous,'available_bytes':fs.f_bavail*fs.f_frsize,'available_inodes':fs.f_favail,
+                          'release_count':len(list(releases.glob('[0-9]*'))),'pending_transaction':journal.exists()}))
+        return 0
+    if a.cleanup:
+        if journal.exists():raise ValueError('Recover the pending transaction before cleanup')
+        targets=retention_plan(root,a.keep_last_n)
+        for path in targets:verified(path)
+        if a.apply_cleanup:
+            for path in targets:remove_tree(path)
+        print(json.dumps({'mode':'applied' if a.apply_cleanup else 'plan','releases':[p.name for p in targets],
+                          'keep_last_n':a.keep_last_n,'minimum_age_days':7}))
+        return 0
 
     if a.recover:
         if not journal.exists():
@@ -156,6 +183,7 @@ def main():
         return 0
     if journal.exists():
         raise ValueError('Interrupted transaction: run --recover before publishing')
+    stale_temporaries(root)
     if a.rollback:
         candidate = releases/a.rollback
         meta = verified(candidate)
@@ -167,6 +195,10 @@ def main():
             if (source/n).is_symlink() or not (source/n).is_file():
                 raise ValueError('Release package must contain regular files')
         release_id = identity(json.loads((source/'release.json').read_text())['release_id'])
+        proposed=json.loads((source/'release.json').read_text())
+        if any(type(r.get('bytes')) is not int or r['bytes']<0 for r in proposed['files']) or type(proposed.get('total_bytes')) is not int or proposed['total_bytes']!=sum(r['bytes'] for r in proposed['files']):
+            raise ValueError('Invalid declared release size')
+        capacity(root,payload_bytes=proposed['total_bytes'],files=len(proposed['files']))
         candidate = releases/release_id
         if candidate.exists() or candidate.is_symlink():
             raise ValueError('Immutable release already exists: '+release_id)
@@ -234,6 +266,7 @@ def main():
         print(json.dumps({'status':'failed','restored_current':previous,
                           'error':str(error),'rollback_service_error':rollback_error}), file=sys.stderr)
         return 1
+    atomic_json(root/'.last-publish.json',{'previous':previous,'current':target})
     durable_unlink(journal)
     print(json.dumps({'status':'passed','mode':'dry-run' if a.dry_run else 'publish',
                       'release_id':meta['release_id'],'current':target,'previous':previous,

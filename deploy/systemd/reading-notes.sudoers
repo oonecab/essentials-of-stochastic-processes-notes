@@ -1,1 +1,1 @@
-reading-notes ALL=(root) NOPASSWD: /usr/local/sbin/reading-notes-nginx test, /usr/local/sbin/reading-notes-nginx reload
+reading-notes ALL=(root) NOPASSWD: /usr/local/sbin/reading-notes-publish

@@ -23,6 +23,12 @@ test('detects content, math, figure, anchor, PDF and executable-copy mutations',
   }
   assert.deepEqual(differences(baseline,fingerprint(page)),[]);
 });
+test('full DOM detects disclosure, visibility, accessibility, namespace and class mutations',()=>{
+  for(const [before,after] of [['<details','<div'],['class="exercise"','class="exercise" hidden'],['class="exercise"','class="exercise" role="presentation"'],['class="exercise"','class="exercise" aria-hidden="true"'],['class="exercise"','class="question"'],['<mi>x</mi>','<mtext>x</mtext>']]){
+    assert.ok(differences(fingerprint(page),fingerprint(page.replace(before,after))).includes('dom'),after);
+  }
+  assert.notDeepEqual(fingerprint(page).exercise_ids,fingerprint(page.replace('id="ex-1-1"','id="ex-9-9"')).exercise_ids);
+});
 test('offline gate rejects local, remote and script-loaded files; keeps fragment paint servers',()=>{
   assert.deepEqual(offlineDependencies(page),[]);
   for(const extra of ['<link rel="stylesheet" href="reader.css">','<script src="/app.js"></script>','<img src="https://example.invalid/pixel">','<style>@import "x.css";</style>','<style>p{background:url(x.png)}</style>'])assert.ok(offlineDependencies(page.replace('</head>',extra+'</head>')).length);

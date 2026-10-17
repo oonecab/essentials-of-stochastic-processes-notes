@@ -3,7 +3,7 @@
   "astro_migration": {
     "status": "passed",
     "record": "review/astro-migration.json",
-    "sha256": "91601175022c5d838c6f96077d00488b25d6d8652830868dc48206146849e3a4",
+    "sha256": "c48c8f363808aa9438925a1c69ebb5e90555f7e3f45e98a394eee442912f852d",
     "widths": [
       1800,
       1440,
@@ -17,7 +17,7 @@
   },
   "final_static_migration": {
     "repository_record": "docs/astro-migration-evidence.json",
-    "sha256": "b61d55d39174999815709d3f844089adab69f5e02a1d8ef3c4529a13d341e556",
+    "sha256": "013f706974f2bd767838b4f22de152e4dbbd2ba80b126e63bf453c63eb6db214",
     "widths": [
       1800,
       1440,
@@ -26,6 +26,30 @@
     ],
     "js_views": 52,
     "no_js_views": 13,
-    "external_requests": []
+    "external_requests": [],
+    "snapshot_kind": "I028 local snapshot"
+  },
+  "maintenance_binding_history": [
+    {
+      "issue": "I032",
+      "record": "review/astro-migration.json",
+      "previous_sha256": "91601175022c5d838c6f96077d00488b25d6d8652830868dc48206146849e3a4",
+      "current_sha256": "c48c8f363808aa9438925a1c69ebb5e90555f7e3f45e98a394eee442912f852d",
+      "reason": "补充历史快照与生产证据的关系，保留原数据及局限"
+    },
+    {
+      "issue": "I032",
+      "record": "docs/astro-migration-evidence.json",
+      "previous_sha256": "b61d55d39174999815709d3f844089adab69f5e02a1d8ef3c4529a13d341e556",
+      "current_sha256": "013f706974f2bd767838b4f22de152e4dbbd2ba80b126e63bf453c63eb6db214",
+      "reason": "I028 snapshot annotation; production recorded separately"
+    }
+  ],
+  "production_record": {
+    "issue": "I029",
+    "repository_record": "docs/astro-production-report.md",
+    "sha256": "3d2267f581a081d63c6513c821bb4969dfb1842c48dc9d85ad48a04ab3f17929",
+    "release_id": "20261017T174039",
+    "scope": "历史实机发布记录；不代表 I032 新代码已部署"
   }
 }

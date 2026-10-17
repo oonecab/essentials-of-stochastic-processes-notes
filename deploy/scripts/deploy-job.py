@@ -9,7 +9,7 @@ from publish_release import verified
 from durability import sync_directory
 
 
-def process_queue(root, queue, done, publisher):
+def process_queue(root, queue, done, publisher, privileged=False):
     for package in sorted(queue.iterdir()):
         if not re.fullmatch(r'\d{8}T\d{6}', package.name):
             continue
@@ -25,7 +25,8 @@ def process_queue(root, queue, done, publisher):
             if installed != json.loads((package/'release.json').read_text()):
                 raise ValueError('Queued release identity differs from installed current')
         else:
-            subprocess.run([str(publisher), '--release-dir', str(package)], check=True)
+            command=['sudo','-n',str(publisher),'publish',package.name] if privileged else [str(publisher),'--release-dir',str(package)]
+            subprocess.run(command,check=True)
         package.rename(done/package.name)
         sync_directory(done)
         sync_directory(queue)
@@ -35,4 +36,4 @@ def process_queue(root, queue, done, publisher):
 if __name__ == '__main__':
     process_queue(Path('/srv/reading-notes'), Path('/var/spool/reading-notes/ready'),
                   Path('/var/spool/reading-notes/done'),
-                  Path('/usr/local/lib/reading-notes/deploy/scripts/publish.sh'))
+                  Path('/usr/local/sbin/reading-notes-publish'), privileged=True)

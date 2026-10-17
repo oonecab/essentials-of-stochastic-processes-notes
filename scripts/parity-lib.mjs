@@ -8,19 +8,22 @@ function textOf(node) {
   if (['script','style'].includes(node.tagName)) return '';
   return node.nodeName==='#text' ? node.value : (node.childNodes??[]).map(textOf).join('');
 }
-function canonical(node) {
-  if (node.nodeName==='#text') return node.value.replace(/\s+/g,' ');
+export function canonical(node) {
+  if (node.nodeName==='#text') return normalize(node.value) || null;
   if (node.nodeName==='#comment') return null;
-  return [node.tagName ?? node.nodeName,node.namespaceURI??'',Object.fromEntries((node.attrs??[]).map(a=>[`${a.prefix??''}:${a.name}`,a.value]).sort()),(node.childNodes??[]).map(canonical).filter(n=>n!==null)];
+  return [node.tagName ?? node.nodeName,node.namespaceURI??'',(node.attrs??[]).map(a=>[a.namespace??'',a.prefix??'',a.name,a.value]).sort(),(node.content?.childNodes??node.childNodes??[]).map(canonical).filter(n=>n!==null)];
 }
 export function fingerprint(html) {
-  const nodes = walk(parse(html,{sourceCodeLocationInfo:true}));
+  const tree = parse(html,{sourceCodeLocationInfo:true});
+  const nodes = walk(tree);
   const classes=n=>(attr(n,'class')??'').split(/\s+/);
   const originals=nodes.filter(n=>classes(n).includes('exercise')&&(attr(n,'id')??'').startsWith('ex'));
   const maths=nodes.filter(n=>n.tagName==='math'); const svgs=nodes.filter(n=>n.tagName==='svg');
   const raw=n=>{const l=n.sourceCodeLocation;return html.slice(l.startOffset,l.endOffset);};
   const body=nodes.find(n=>n.tagName==='body');
   return {
+    dom:sha(JSON.stringify(canonical(tree))),
+    exercise_ids:originals.map(n=>attr(n,'id')),
     head_metadata:sha(JSON.stringify(nodes.filter(n=>['meta','title','base'].includes(n.tagName)).map(canonical))),
     styles:sha(JSON.stringify(nodes.filter(n=>n.tagName==='style').map(n=>(n.childNodes??[]).map(c=>c.value??'').join('')))),
     body_text: sha(normalize(textOf(body))),
@@ -37,6 +40,17 @@ export function fingerprint(html) {
       statements:nodes.filter(n=>classes(n).includes('statement')||classes(n).includes('source-statement')).length,mathml:maths.length,svg:svgs.length},
     js_bytes:nodes.filter(n=>n.tagName==='script').reduce((sum,n)=>sum+Buffer.byteLength(n.childNodes.map(c=>c.value??'').join('')),0),
   };
+}
+export function validateInternalAnchors(pages) {
+  const parsed=new Map([...pages].map(([route,html])=>[route,walk(parse(html))]));
+  const ids=new Map([...parsed].map(([route,nodes])=>[route,new Set(nodes.map(n=>attr(n,'id')).filter(Boolean))]));
+  for(const [route,nodes] of parsed)for(const n of nodes){
+    if(n.tagName!=='a'||!attr(n,'href'))continue;
+    const url=new URL(attr(n,'href'),'https://reading-notes.invalid/'+route);
+    if(url.origin!=='https://reading-notes.invalid'||!url.hash)continue;
+    let target=decodeURIComponent(url.pathname).slice(1);if(target.endsWith('/'))target+='index.html';
+    if(target.endsWith('.html')&&(!ids.has(target)||!ids.get(target).has(decodeURIComponent(url.hash.slice(1)))))throw new Error(`Missing internal anchor: ${route} -> ${attr(n,'href')}`);
+  }
 }
 export function differences(expected,actual) {
   return Object.keys(expected).filter(key=>JSON.stringify(expected[key])!==JSON.stringify(actual[key]));

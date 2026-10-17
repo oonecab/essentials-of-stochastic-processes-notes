@@ -15,7 +15,9 @@ ProtectSystem=strict
 ProtectHome=true
 # nginx -t opens its existing PID file even when only validating configuration.
 # Keep the exception at this root-owned file; the publisher still cannot write it.
-ReadWritePaths=/srv/reading-notes /var/spool/reading-notes /var/log/nginx /run/nginx.pid
+ReadWritePaths=/srv/reading-notes /var/spool/reading-notes /run/nginx.pid
 StandardOutput=journal
 StandardError=journal
-# NoNewPrivileges is intentionally omitted: the fixed sudo helper tests/reloads Nginx.
+# Filesystem ownership keeps the service user out of /srv; the fixed sudo installer writes it.
+# Nginx validation runs in a fixed transient root unit, outside this unit's read-only log mount.
+# NoNewPrivileges is omitted for the fixed sudo installer.

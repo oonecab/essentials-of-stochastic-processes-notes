@@ -33,6 +33,7 @@
 - Node.js 24.21.0 LTS（仅构建）
 - pnpm 11.21.0（锁定依赖）
 - Nginx（服务器静态 HTTPS 服务）
+- Ego Lite / ego-browser（构建 CSP 冒烟与离线浏览器验收）
 
 ## 源码边界
 
@@ -111,6 +112,7 @@ CS:APP 图表与导航复核见 [I019](issues/I019-csapp-visual-navigation.md) /
 | 2026-10-13 | 两书登记边界 → 增加 CS:APP 子项目和 /csapp/ 本地构建路由 | 复用静态 HTML、C11、Python 与既有 Poppler；显式区分机器模型和宿主执行 | 原两书 URL 与内容保持；新增目录和路由可独立回退；完整书籍 PDF 仅本地对照 | [I002](issues/I002-csapp-part-one.md) |
 
 | 2026-10-17 | 直接维护单文件 HTML → Astro 7.4.0 静态构建、Node 24.21.0 LTS 与 pnpm 11.21.0 | 共享布局与确定性内联，原数学片段保持；Python 继续独立验证 | 五书分批门禁通过；保留旧 HTML、旧构建器与原 URL，生产仅 Nginx | [I028](issues/I028-static-first-astro.md) / [ADR-002](docs/decisions/ADR-002-static-first-astro.md) |
+| 2026-10-17 | 构建后独立浏览验收 → 构建内必须通过真实浏览器 CSP 冒烟；发布用户持有版本 → root 安装器模板 | 防止脚本 hash 与验证对象漂移，明确版本写权限边界 | 构建需要 Ego Lite/ego-browser；正式 URL 与 Python 验证保持，服务器应用另交运维 | [I032](issues/I032-final-assessment-repairs.md) / [ADR-005](docs/decisions/ADR-005-root-release-installer.md) |
 
 > 详细论证写入问题单或 ADR；本表保存可追踪索引，不得覆盖历史记录。
 
@@ -131,6 +133,8 @@ Carter《Visual Group Theory》在 `books/visual-group-theory/` 维护，全书�
 视觉群论一致性修订 [I026](issues/I026-visual-group-theory-polish.md) / [T026](test/T026-visual-group-theory-polish.md) 为第 2—4 章补充阅读注解，并将关键行内公式改为静态 MathML；`tools/check_reading.py` 核对关键公式结构、节选范围与审阅元数据。全部行内与显示公式提供一致的静态名称和纯文本回退；复制控制器处理完整的两类公式，局部选区沿用浏览器行为。沿用现有 HTML/SVG/MathML 与浏览器组件，无技术栈、环境或服务变更。
 
 ## Astro 迁移状态
+
+I032 修复后的仓库构建仍是 Node/Astro + Python helpers，全部公开 HTML 内联资源，正式页增加全 DOM/锚点 parity，页数从受控条目派生，兼容镜像由构建生成并暂时保留 Git 快照。Ego Lite/ego-browser 为构建中的真实 CSP 冒烟及完整离线验收依赖。新发布模板由 root 安装器持有版本树，fsync 屏障、原子 journal、损坏日志受控恢复、容量预检与保留策略见 [ADR-005](docs/decisions/ADR-005-root-release-installer.md)。I029–I031 是既有实机事实，新权限/服务器安全应用按 [运维交接](deploy/OPERATIONS-I032.md)待执行。
 
 构建架构选择见 [ADR-002](docs/decisions/ADR-002-static-first-astro.md)，当前实施与证据见 [I028](issues/I028-static-first-astro.md) / [T028](test/T028-static-first-astro.md)。固定版本由 package.json、pnpm-lock.yaml 和 .node-version 约束。五书 54 页及书架已迁移，保留 1434 道原书习题与 36 道自测；原数学与历史审阅保持。根 build 现在调用 deploy/build_astro.py → Node/Astro → Python 发布策略与确定性打包。dist 仅包含 allowlist 中的 303 个公开文件；旧审阅 JSON 的 37 个 URL 输出固定摘要，完整证据留在仓库。新增 CS:APP 定位岛独立登记，其余原脚本保持。
 

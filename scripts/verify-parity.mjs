@@ -3,7 +3,8 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import { entries, root, stage } from '../src/lib/controlled-html.mjs';
-import { fingerprint, differences, sha } from './parity-lib.mjs';
+import { fingerprint, differences, sha, validateInternalAnchors } from './parity-lib.mjs';
+import { htmlFiles } from './inline-assets.mjs';
 import { separateApprovedIsland,deepLinkSource,islandsFor } from '../src/lib/islands.mjs';
 
 export function verifyParity(directory=path.join(root,'dist'),book) {
@@ -15,6 +16,7 @@ export function verifyParity(directory=path.join(root,'dist'),book) {
   const readerCss=execFileSync('git',['show',`${state.baseline_ref}:portal/reader.css`]);
   if(!readerCss.equals(fs.readFileSync(path.join(stage,'legacy/reader.css'))))throw new Error('Golden reader CSS changed');
   const records=[];
+  validateInternalAnchors(new Map(htmlFiles(directory).map(file=>[path.relative(directory,file),fs.readFileSync(file,'utf8')])));
   for(const {metadata,html} of pages) {
     const frozen=execFileSync('git',['show',`${state.baseline_ref}:${metadata.legacy_path}`],{maxBuffer:32*1024*1024});
     if(sha(frozen)!==metadata.original_sha256 || !frozen.equals(Buffer.from(html)))throw new Error(`Reviewed source bytes changed: ${metadata.route}`);

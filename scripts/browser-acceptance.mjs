@@ -18,10 +18,12 @@ async function navigate(item) {
   await page.events();
   const url=pathToFileURL(item.file).href;
   await page.goto(url);
+  const destination=item.redirect_file?pathToFileURL(item.redirect_file).href:url;
+  if(item.redirect_file)await page.waitForURL(destination);
   if(!report.user_agent)report.user_agent=await page.evaluate(()=>navigator.userAgent);
   const events=await page.events();
   const requests=events.filter(e=>e.method==='Network.requestWillBeSent').map(e=>({url:e.params.request.url,type:e.params.type}));
-  const external=requests.filter(r=>r.url.split('#')[0]!==url&&!r.url.startsWith('data:'));
+  const external=requests.filter(r=>!([url,destination].includes(r.url.split('#')[0])&&r.type==='Document')&&!r.url.startsWith('data:'));
   report.external_requests.push(...external.map(r=>({page:item.route,...r})));
   requireTrue(requests.some(r=>r.type==='Document'&&r.url.split('#')[0]===url),'Network observer did not record the document');
   requireTrue(external.length===0,'Subresource request: '+JSON.stringify(external));
@@ -104,8 +106,8 @@ try {
     await save();console.log(JSON.stringify({page:item.route,width,status:'passed'}));
   }
   await page.cdp('Emulation.setScriptExecutionDisabled',{value:true});
-  await page.cdp('Emulation.setDeviceMetricsOverride',{width:390,height:900,deviceScaleFactor:1,mobile:false});
-  for(const item of config.pages){
+  for(const width of [1440,390])for(const item of config.pages){
+    await page.cdp('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:false});
     const requests=await navigate(item);
     const before=await page.evaluate(()=>{
       const state={heading:document.querySelector('h1')?.textContent,
@@ -128,8 +130,8 @@ try {
       if(after.question)requireTrue(after.open&&after.question.length>0&&after.question.height>0&&after.answer.length>0&&after.answer.height>0,'No-JS exercise unreadable');
       requireTrue(after.width<=after.viewport+1,'No-JS page overflow');
     }
-    report.no_js.push({page:item.route,width:390,requests,before,after});
-    await screenshot(item.route.replaceAll('/','_').replace('.html','')+'-no-js');await save();
+    report.no_js.push({page:item.route,width,requests,before,after});
+    await screenshot(item.route.replaceAll('/','_').replace('.html','')+'-no-js-'+width);await save();
   }
   report.status='passed';
 }catch(error){report.status='failed';report.errors.push(String(error));throw error;}

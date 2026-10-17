@@ -2,10 +2,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { inlineAssets } from './inline-assets.mjs';
-import { entries } from '../src/lib/controlled-html.mjs';
+import { inlineAssets, htmlFiles } from './inline-assets.mjs';
+import { entries, syncMirrors } from '../src/lib/controlled-html.mjs';
 import { verifyParity } from './verify-parity.mjs';
 import { sha, offlineDependencies } from './parity-lib.mjs';
+import { checkCsp } from './check-csp.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 process.chdir(root);
@@ -31,6 +32,8 @@ function run(command,args) {
 let pages=[];
 if(!shell) {
   pages=entries();if(!pages.length)throw new Error('No migrated content');
+  for(const entry of pages)if(sha(entry.html)!==entry.metadata.original_sha256)throw new Error('Reconstructed source differs from golden master');
+  syncMirrors(pages,{write:true});
   for(const folder of ['legacy','prepared','canonical'])fs.rmSync(path.join(stage,folder),{recursive:true,force:true});
   run('python3',['deploy/build_portal.py','--export-directory',path.join(stage,'legacy')]);
   fs.cpSync(path.join(stage,'legacy'),path.join(stage,'prepared'),{recursive:true});
@@ -51,17 +54,18 @@ const target = path.join(stage,shell?'shell-dist':'candidate-dist');
 fs.rmSync(target,{recursive:true,force:true});
 if(!shell)fs.cpSync(path.join(stage,'prepared'),target,{recursive:true});
 fs.cpSync(output,target,{recursive:true});
-const routes=['index.html',...pages.map(p=>p.metadata.route)];
+const routes=htmlFiles(target).map(file=>path.relative(target,file));
 inlineAssets(target,routes.map(r=>path.join(target,r)));
 for(const route of routes){const issues=offlineDependencies(fs.readFileSync(path.join(target,route),'utf8'));if(issues.length)throw new Error(`${route}: ${issues.join(', ')}`);}
 if(!shell){
   run('python3',['deploy/public_policy.py',target,'--transform','--sums',path.join(stage,'dist-SHA256SUMS')]);
   verifyParity(target);
+  await checkCsp(target);
   const previous=path.join(stage,'previous-dist');fs.rmSync(previous,{recursive:true,force:true});
   if(fs.existsSync(path.join(root,'dist')))fs.renameSync(path.join(root,'dist'),previous);
   fs.renameSync(target,path.join(root,'dist'));
 }
-const report = { status: 'passed', mode: shell?'empty_scaffold':'book_migration', books:[...new Set(pages.map(p=>p.metadata.book))],pages:pages.length,seconds: (performance.now()-start)/1000, output: shell?path.relative(root,target):'dist' };
+const report = { status: 'passed', mode: shell?'empty_scaffold':'book_migration', books:[...new Set(pages.map(p=>p.metadata.book))],pages:pages.length,public_html:routes.length,seconds: (performance.now()-start)/1000, output: shell?path.relative(root,target):'dist' };
 fs.writeFileSync(path.join(stage, shell?'scaffold-build.json':'build.json'), JSON.stringify(report,null,2)+'\n');
 if(releaseId)run('python3',['deploy/build_astro.py','--package-dist','--release-id',releaseId]);
 console.log(JSON.stringify(report));

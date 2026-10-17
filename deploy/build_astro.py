@@ -27,7 +27,16 @@ def package(release_id):
     if out.exists():
         raise ValueError('Release already exists: ' + release_id)
     rows = inspect(ROOT / 'dist')
+    source_pages = json.loads((ROOT/'tmp/reading-notes-migration/source-pages.json').read_text())
+    reading_pages = len(source_pages)
+    routes = {page['route'] for page in source_pages}
+    if reading_pages != len(routes) or not routes.issubset({row['path'] for row in rows}):
+        raise ValueError('Controlled reading inventory differs from public output')
     blobs = {r['path']: (ROOT / 'dist' / r['path']).read_bytes() for r in rows}
+    csp_proof=json.loads((ROOT/'tmp/reading-notes-migration/csp/manifest.json').read_text())
+    actual_html={name:hashlib.sha256(blob).hexdigest() for name,blob in blobs.items() if name.endswith('.html')}
+    if actual_html != csp_proof['files']:
+        raise ValueError('HTML changed after browser CSP validation')
     scans, scripts, navigation = {}, set(), []
     for name, blob in blobs.items():
         if name.endswith('.html'):
@@ -58,6 +67,8 @@ def package(release_id):
             navigation.append({'source': name, **item, 'target': u.path.lstrip('/'),
                                'fragment': unquote(u.fragment), 'external': u.netloc != 'notes.zzzping.top'})
     hashes = ["'sha256-" + base64.b64encode(hashlib.sha256(s.encode()).digest()).decode() + "'" for s in sorted(scripts)]
+    if sorted(hashes) != csp_proof['sources']:
+        raise ValueError('Inline script hashes changed after browser CSP validation')
     with tempfile.TemporaryDirectory(prefix='.astro-release-', dir=parent) as temp:
         stage = Path(temp)
         for i, script in enumerate(sorted(scripts)):
@@ -71,7 +82,7 @@ def package(release_id):
             'source_commit': subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
             'source_tree_dirty': bool(subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip()),
             'toolchain': {'node':'24.21.0','pnpm':'11.21.0','astro':'7.4.0'}, 'files': rows, 'total_bytes': sum(r['bytes'] for r in rows),
-            'html_pages': len(scans), 'reading_pages': 54, 'local_references_checked': refs,
+            'html_pages': len(scans), 'reading_pages': reading_pages, 'local_references_checked': refs,
             'archive_sha256': hashlib.sha256((stage/'site.tar.gz').read_bytes()).hexdigest(),
             'inline_script_csp_sources': hashes, 'inline_script_syntax_check': 'pass',
             'entry_redirects': {f'/{b}{s}': f'/{b}/notes/book_overview.html' for b in BOOKS for s in ('','/','/index.html')},
@@ -79,7 +90,7 @@ def package(release_id):
             'navigation_inventory_file': 'navigation.json', 'navigation_links': len(navigation),
             'publish_policy_sha256': hashlib.sha256(POLICY.read_bytes()).hexdigest(),
             'build_report': 'tmp/reading-notes-migration/build.json',
-            'scope': 'Static release; original Python checks remain independent. Production not deployed.'}
+            'scope': 'Static release; original Python checks remain independent. Production deployment status recorded separately.'}
         (stage / 'release.json').write_text(json.dumps(metadata, ensure_ascii=False, indent=2)+'\n')
         (stage / 'navigation.json').write_text(json.dumps(navigation, ensure_ascii=False, indent=2)+'\n')
         (stage / 'SHA256SUMS').write_text(sums(rows))
@@ -88,7 +99,7 @@ def package(release_id):
         (stage / 'nginx-notes.zzzping.top.conf').write_bytes((ROOT/'deploy/nginx/notes.conf.template').read_bytes())
         stage.rename(out)
     return {'release_id': release_id, 'directory': str(out), 'files': len(rows),
-            'html_pages': len(scans), 'reading_pages':54, 'bytes': metadata['total_bytes']}
+            'html_pages': len(scans), 'reading_pages':reading_pages, 'bytes': metadata['total_bytes']}
 
 
 if __name__ == '__main__':

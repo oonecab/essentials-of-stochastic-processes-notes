@@ -1,0 +1,318 @@
+{
+  "schema_version": 1,
+  "book": "visual-group-theory",
+  "recorded_at_utc": "2026-10-17T08:26:30.995510+00:00",
+  "status": "Go",
+  "scope": "Astro 静态迁移；原正文、数学、代码和历史内容审阅保持。",
+  "baseline_ref": "b2aeff3",
+  "pages": 12,
+  "counts": {
+    "exercises": 302,
+    "self_checks": 0,
+    "statements": 62,
+    "mathml": 387,
+    "svg": 198
+  },
+  "source_bytes": 1826948,
+  "output_bytes": 1900939,
+  "js_bytes": 81475,
+  "max_js_ratio": 1,
+  "parity_differences": [],
+  "external_requests": [],
+  "js_views": 48,
+  "no_js_views": 12,
+  "visual_review": "逐页查看十二页 1800/390 首屏、十章末题与 no-JS 首题联系图，并查看第五章 1440/1024 原图；正文、公式、Cayley 图和题解可读，三栏与折叠目录断点正常。",
+  "evidence_sha256": {
+    "tmp/reading-notes-migration/parity/visual-group-theory.json": "735bd218976af1914071458749ceda3a5237aab9b1aecfb1af31ae0b297b8290",
+    "tmp/reading-notes-migration/browser/visual-group-theory/report.json": "9ed38afc22c5e4ddd0d79243546c8772b9756714f7d0efa6c5b9db12b2323964",
+    "tmp/project-check/20261017T162448-4ryv1zvk/report.json": "f72b499c615a5633208e48f2e3ffe18f96bbba61ec962997eb419544c02dfd61"
+  },
+  "screenshots": [
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_book_overview-1800-top.png",
+      "sha256": "07f4e860c0f119ef1e7f568300206b09a61492ee33c7e43b0edd34017ec9997b"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_book_overview-1440-top.png",
+      "sha256": "f96c21de565871b292996234bb83157e1544ba9cd11403e87ba1c3363b934fe4"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_book_overview-1024-top.png",
+      "sha256": "577ac70ed032d51ed92384059f27e268002b76037b969ef1a7b5cc7fe1fe26f6"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_book_overview-390-top.png",
+      "sha256": "145ede4a3635c778aa0b2e015ebd1606dc4c5b3a8975d954f08c97595e0223a6"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter01_what_is_a_group-1800-top.png",
+      "sha256": "1fdcdb6a11f32acd8654bf427272d7bd9cd1443ebf2d7afbef3b3767da49ef2a"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter01_what_is_a_group-1440-top.png",
+      "sha256": "a55cf6a9639dbb1bfd1b9dc30c07b2890adda3e9df2c1642b7e30a4128698580"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter01_what_is_a_group-1024-top.png",
+      "sha256": "d964a3f53c6a7c2a0cc8508e22662b32b788a1f070e0c93c6b7081e28b57ff8c"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter01_what_is_a_group-390-top.png",
+      "sha256": "382f2d273328bbaae54693d833ef2e6ea7eee1880af7436e518c957e8cec9bf5"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter01_what_is_a_group-390-answer.png",
+      "sha256": "1efc7b7f89cfcd9c2f99f27b9b13c91ac80b336981b2805cece70d319ae7d2d0"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter02_what_do_groups_look_like-1800-top.png",
+      "sha256": "e7625cbb47147d349225815044e3686f695802c5fedc4d2994b88ab868d51461"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter02_what_do_groups_look_like-1440-top.png",
+      "sha256": "17f6d60144c7f2672447816b278104aa957e29f7897ab0bb2e31c80d5e7fceaa"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter02_what_do_groups_look_like-1024-top.png",
+      "sha256": "930bcb4fc269e2e7c3b1a6d612c5e5a2356e5f13f93f7e7427c29157be0e8820"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter02_what_do_groups_look_like-390-top.png",
+      "sha256": "7091af45b36de088ee4a216edb46de18f7446442ce900f9a5ed07b5b600d2a28"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter02_what_do_groups_look_like-390-answer.png",
+      "sha256": "3eb24b2871bf4d0f049edbcc9b6b25e3e41b92240c30fd811dc168b03db7ad51"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter03_why_study_groups-1800-top.png",
+      "sha256": "267d1d8057038698a92dd84fd19ec359d85a2ecd1e55d52aef465bf851c5de12"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter03_why_study_groups-1440-top.png",
+      "sha256": "135f8476b0a71dbfe787fa98c9c6349d185e3b0249656fad32294f99e48cf846"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter03_why_study_groups-1024-top.png",
+      "sha256": "94dbbb2f323b686e3e4da7624b8b71a9c9ed5d375a906ba39bd0327f0f59b629"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter03_why_study_groups-390-top.png",
+      "sha256": "ebc52494ca1b47e4fa704b926216d2302ab8a06799e13ec103ee77cf74a65fd6"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter03_why_study_groups-390-answer.png",
+      "sha256": "a2f4483b0c7c682e06a06faff4c6d866c9fa1eb75134d55447e0078e2d8d2e36"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter04_algebra_at_last-1800-top.png",
+      "sha256": "112929fc0c7894e20fb0ec15f5a183f4c6d2e49bc8e4fa9181d83eb5893ab01d"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter04_algebra_at_last-1440-top.png",
+      "sha256": "44afc3536774c496b4531788b020655d4c7b4f8f1ee0d144e0fa2e079e0edf80"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter04_algebra_at_last-1024-top.png",
+      "sha256": "5064c4c4bbb4eb91accce8c206d3e82573f0583ac185a442e6c62779edf13b4e"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter04_algebra_at_last-390-top.png",
+      "sha256": "5ba933e906159b8a09206e63043af8f5f9fd4a3ab539bdf712fef95b59824d98"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter04_algebra_at_last-390-answer.png",
+      "sha256": "4bc09877dcaefeca9851600221cd6b5340cce0c0a9f92ce69fe89e0d63b09d2a"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter05_five_families-1800-top.png",
+      "sha256": "09bb7b164c8fbded3823cea2156011aef5918ea674bbb1faa216a13c7e692ad1"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter05_five_families-1440-top.png",
+      "sha256": "47d99542d60fe8c5323c3104879d16b589f46c4fdbf6dc18c79c2ca5fde1beff"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter05_five_families-1024-top.png",
+      "sha256": "d5d69fa768cb7a2d62ae2b33511896261e39b31c88749421cf27778dafc8ed02"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter05_five_families-390-top.png",
+      "sha256": "214053220d18f04eaf1f60625380103f0ef1874f4e90094a09fedca666bfacad"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter05_five_families-390-answer.png",
+      "sha256": "42bf8ebd933b3b6ba1c392ecc65a56085f2f45f70a35492fe8f57d17187e75b0"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter06_subgroups-1800-top.png",
+      "sha256": "b6e2dcf1fa30c403c0f99c53f4848f9235b9ad3e02f9c53cfc2261f261d0911f"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter06_subgroups-1440-top.png",
+      "sha256": "4be916c6bf1c7cd2173a558c8933957d9149d8d27100dd518e01a2e3089da068"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter06_subgroups-1024-top.png",
+      "sha256": "4fc1fb3dadc38655064fdf1dd2185f8371ef73b397c135f1059f33f730865fb6"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter06_subgroups-390-top.png",
+      "sha256": "da28cb44a64fcae937119722461d6efc18bdf5bf594f060aac4363c0ec80e642"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter06_subgroups-390-answer.png",
+      "sha256": "12cacdb8a4fbd6e33d6433d6b51b25055da9e2afed13c53270453fb944787d3e"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter07_products_and_quotients-1800-top.png",
+      "sha256": "b325c95687a42ddf0358e973cc45dffb846cda1f8b934324c4f7066af1203181"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter07_products_and_quotients-1440-top.png",
+      "sha256": "60864ab23ccefacb856eff69f88182c854a025c5fe4b457b3c514d2b1140ccb3"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter07_products_and_quotients-1024-top.png",
+      "sha256": "3f0225af58e2ab7770ab37f2fda86cac64a4063d5a66424ad1c148717b3e813d"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter07_products_and_quotients-390-top.png",
+      "sha256": "ff92756ebc4410b69a5b7007a5f868ec1cda60414a24ec02023845189761f2e3"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter07_products_and_quotients-390-answer.png",
+      "sha256": "4009562c106051599f30ff9e1ecd2c88b73f1a936b2bb1a4c18470cf9ee50605"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter08_homomorphisms-1800-top.png",
+      "sha256": "b1a4adc5122517ad1e501074c838ce0a8f4ddbfd66626cd1206e1089041c2f0f"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter08_homomorphisms-1440-top.png",
+      "sha256": "ce4ccb669c025eb44e8a25297dc6928547c6eee29fb0f45376846426609cad30"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter08_homomorphisms-1024-top.png",
+      "sha256": "741375e53c7a7a95194096cf41b5d5c0e917ccfee47a2a17c3f46262829d2691"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter08_homomorphisms-390-top.png",
+      "sha256": "8b98ea44979158c3c38ebb3ff36e7c085b1bd93d7d067dd2375a0379dfbaf76f"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter08_homomorphisms-390-answer.png",
+      "sha256": "b2597bfe6a09ab3f6262167331cdb31d0cce26128632642dca7c26276ed73265"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter09_sylow_theory-1800-top.png",
+      "sha256": "306101c17f847dd1843ccdbdb066c4c8588bade375d52c9a15d5f45690b05a85"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter09_sylow_theory-1440-top.png",
+      "sha256": "3af368aac86ae005324873dc2988e3485330a5e41e32051b797380ac9646af90"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter09_sylow_theory-1024-top.png",
+      "sha256": "99f2d8acfe5f7fb8e8837ad652e125442dc21080be86f2b69d3dd6a4287b846a"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter09_sylow_theory-390-top.png",
+      "sha256": "0bb435938cb1d7128b10684ad7cb9f0c2f646d96e54d241ccbc6e2c8f5a9b87e"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter09_sylow_theory-390-answer.png",
+      "sha256": "2ac7fadc58b4828c112af30bd0e80e2ee68950c3ef5eb324ad1e87d1a7029768"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter10_galois_theory-1800-top.png",
+      "sha256": "df6e7c51ca4900cda026bbd1010e02152262b0026e9005e98ef4be12cc546129"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter10_galois_theory-1440-top.png",
+      "sha256": "d1ef6e5d8157e2ba7932b78e51adf165e84bfade655dc41d968c6d716b1872b3"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter10_galois_theory-1024-top.png",
+      "sha256": "938a0d8b70fc6f366bd61d12ab992d6f9df87de319660639be7e31cbdda935e7"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter10_galois_theory-390-top.png",
+      "sha256": "ecf1c3a96d108b43697f1906473bb56530857a5b0e03a81d5f3ba36c732718d1"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter10_galois_theory-390-answer.png",
+      "sha256": "4297348e3e4e78f77efcdc5238b680f4a309db98c10760e960fe514ad2b09ae4"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_preface-1800-top.png",
+      "sha256": "cc838254f75a534d5e340ed67ac7ad64f5e7134bff381665cc2f19a1abda0780"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_preface-1440-top.png",
+      "sha256": "7ceb054ca3ac4e4483760e830dea1d479de868a3e3009d59227646e06511617f"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_preface-1024-top.png",
+      "sha256": "4b1fcc634e0ed83f25f25731fa8e39f2209d673d44dedeb4f7fa923335544a25"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_preface-390-top.png",
+      "sha256": "12893b5923a57181889467fe7663b74e69c19734ca321f91d2fb326c9de92db6"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_book_overview-no-js.png",
+      "sha256": "7109cf550c9ebf4c3ddbcc02b2524c57e1fe43a7197abb4b8813606434ce4f13"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter01_what_is_a_group-no-js.png",
+      "sha256": "9bd8f13e133e28bb44abc8bc33caf5aab2db5b7d56ab5fd3d194800cb7c31a10"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter02_what_do_groups_look_like-no-js.png",
+      "sha256": "09838bbd4c8fdbac78b870ae9febee01236d970b32d7a7d915e063214ad02a34"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter03_why_study_groups-no-js.png",
+      "sha256": "cbf1936f7ee8e0c40d2756d3e1548a6ed768dc63b2dcf649e1c190ca2cdece82"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter04_algebra_at_last-no-js.png",
+      "sha256": "691235dce115e236bf30a4fdec6624dd25d6da337e490ece90a2d879553a1f10"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter05_five_families-no-js.png",
+      "sha256": "8ef23a121e7d6f5638d7f23caca781c4797bafd158798259c09cd9162191bf32"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter06_subgroups-no-js.png",
+      "sha256": "33294d42fa061c1aefa90aa30e2fd21a4ee089d91abc709fa4da8c358ee80a10"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter07_products_and_quotients-no-js.png",
+      "sha256": "306286c0a20336c792823498f10449122817a6216085223bba45ae3e723810b1"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter08_homomorphisms-no-js.png",
+      "sha256": "974a2f333115e10abda46b0f3bb40bdf3053b677fb7d7859b03f0bffcd61265d"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter09_sylow_theory-no-js.png",
+      "sha256": "63fda4e1f8b8491691070c7a3cd042448d9c7d51351ac079804c50bbc5b63a37"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_chapter10_galois_theory-no-js.png",
+      "sha256": "ee07bab6deda24502b20abc1258db44d7a46345c3d79901f76c6e45772f2a08c"
+    },
+    {
+      "file": "tmp/reading-notes-migration/browser/visual-group-theory/visual-group-theory_notes_preface-no-js.png",
+      "sha256": "c430acf2032959b009604e9a417e8958c0f1526dc81ba0e6939ce3ff478d0faa"
+    }
+  ],
+  "open_findings": [],
+  "boundaries": [
+    "实体手机和真实读屏器未验证",
+    "本次只做本地迁移；生产未部署",
+    "原数学与程序审阅的历史范围不因迁移验收而扩大"
+  ]
+}

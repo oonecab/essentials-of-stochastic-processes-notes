@@ -17,7 +17,7 @@
 | [第 9 章](chapter09_sylow_theory.html) | 193—220 / PDF 208—235 | 28 题全部小问；作用、Sylow 三定理、阶 12 分类 |
 | [第 10 章](chapter10_galois_theory.html) | 221—260 / PDF 236—275 | 30 题全部小问；域、自同构、Galois 对应、根式可解性 |
 
-原 PDF 只作本地对照，来源标签保留印刷页与 PDF 页序并链接地图的来源说明。源码维护于 `../code/`；执行 `python3 books/visual-group-theory/tools/sync_code.py --write` 同步 HTML 阅读副本。图表、正文与数学陈述在 HTML 维护，不另留生成正文。
+原 PDF 只作本地对照，来源标签保留印刷页与 PDF 页序并链接地图的来源说明。源码维护于 `../code/`；执行 `python3 books/visual-group-theory/tools/sync_code.py --write` 同步 HTML 阅读副本。图表、正文与数学陈述在 `src/content/books/visual-group-theory/` 的受控 HTML 维护，本目录是独立检查用兼容镜像。维护与同步见 [Astro 说明](../../../docs/astro-authoring.md)。
 
 样式和导航复用 `books/stochastic/notes/preface.html` 的纸色、绿色、17px/1.9、860px 主栏、240px 左目录和 280px 阅读注解栏；保留 1100/1440 断点和窄屏局部横滚。编号项有独立锚点；习题使用 `details.exercise`、`div.exercise-question`、`div.answer`；来源摘录和中文解释分别标明。
 

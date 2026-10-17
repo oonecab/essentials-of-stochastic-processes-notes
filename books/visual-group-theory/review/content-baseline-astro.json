@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "kind": "additive_migration_baseline",
+  "baseline_ref": "b2aeff3",
+  "records": [
+    {
+      "page": "visual-group-theory/notes/book_overview.html",
+      "source_sha256": "7f62f2bc3ee92441a274bed9395747b2fa8da57b481a83b346eb38094b6e2afb",
+      "output_sha256": "a54e41d1f77d07d60f5bc21b84c023fa0ee926f909496a6290c3d44cd868c202",
+      "source_counts": {
+        "exercises": 0,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 1,
+        "svg": 1
+      },
+      "publication_counts": {
+        "exercises": 0,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 1,
+        "svg": 2
+      },
+      "differences": [],
+      "source_bytes": 43398,
+      "output_bytes": 49564,
+      "js_bytes": 6702,
+      "js_ratio": 1
+    },
+    {
+      "page": "visual-group-theory/notes/chapter01_what_is_a_group.html",
+      "source_sha256": "eb199f9c4e18d8798a1a2b3b857a4d167597ef865240210882109226ffb2075b",
+      "output_sha256": "6d4f130d21c87ab455dcf9712886d08cc438b7088dc659efc2faadee56964c80",
+      "source_counts": {
+        "exercises": 14,
+        "self_checks": 0,
+        "statements": 9,
+        "mathml": 11,
+        "svg": 2
+      },
+      "publication_counts": {
+        "exercises": 14,
+        "self_checks": 0,
+        "statements": 9,
+        "mathml": 11,
+        "svg": 3
+      },
+      "differences": [],
+      "source_bytes": 80900,
+      "output_bytes": 87066,
+      "js_bytes": 7753,
+      "js_ratio": 1
+    },
+    {
+      "page": "visual-group-theory/notes/chapter02_what_do_groups_look_like.html",
+      "source_sha256": "683005e2729eb40b9ba13e3958c4159b61e7d29b44718cf2f7042a4e358c02a7",
+      "output_sha256": "656917786d438d23f0c4220be96f615b78933f89fcfd856ba3dfeda9ad1a67f1",
+      "source_counts": {
+        "exercises": 19,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 13,
+        "svg": 13
+      },
+      "publication_counts": {
+        "exercises": 19,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 13,
+        "svg": 14
+      },
+      "differences": [],
+      "source_bytes": 91009,
+      "output_bytes": 97175,
+      "js_bytes": 6702,
+      "js_ratio": 1
+    },
+    {
+      "page": "visual-group-theory/notes/chapter03_why_study_groups.html",
+      "source_sha256": "677d4c58de3f14c4870d85377946e7d7c1b55a2eaf7cb3ea40d101b792d86a4b",
+      "output_sha256": "91e220c4dc435a4f18b24347e52c211b5ce2c2adde700eb52ee05e2f4a57e259",
+      "source_counts": {
+        "exercises": 16,
+        "self_checks": 0,
+        "statements": 1,
+        "mathml": 14,
+        "svg": 22
+      },
+      "publication_counts": {
+        "exercises": 16,
+        "self_checks": 0,
+        "statements": 1,
+        "mathml": 14,
+        "svg": 23
+      },
+      "differences": [],
+      "source_bytes": 134667,
+      "output_bytes": 140833,
+      "js_bytes": 6702,
+      "js_ratio": 1
+    },
+    {
+      "page": "visual-group-theory/notes/chapter04_algebra_at_last.html",
+      "source_sha256": "0392ed264f748ae1466b39544acf82f56bcf2b0f5805e2e06b81c27377ed1f24",
+      "output_sha256": "0eed0492ae9372122d8f5b09c2c55087faacc853674cd40fc36cc53ae28e2611",
+      "source_counts": {
+        "exercises": 33,
+        "self_checks": 0,
+        "statements": 2,
+        "mathml": 20,
+        "svg": 5
+      },
+      "publication_counts": {
+        "exercises": 33,
+        "self_checks": 0,
+        "statements": 2,
+        "mathml": 20,
+        "svg": 6
+      },
+      "differences": [],
+      "source_bytes": 139757,
+      "output_bytes": 145923,
+      "js_bytes": 6702,
+      "js_ratio": 1
+    },
+    {
+      "page": "visual-group-theory/notes/chapter05_five_families.html",
+      "source_sha256": "2516e98357384a6d37047d2dcfc0f82e66402e6f4a41af7cca8a4b846d1171a2",
+      "output_sha256": "60784ed34ec25ada19a309b930325fe939a8d3e48f9f7a236f8c90c4542ad780",
+      "source_counts": {
+        "exercises": 44,
+        "self_checks": 0,
+        "statements": 1,
+        "mathml": 34,
+        "svg": 25
+      },
+      "publication_counts": {
+        "exercises": 44,
+        "self_checks": 0,
+        "statements": 1,
+        "mathml": 34,
+        "svg": 26
+      },
+      "differences": [],
+      "source_bytes": 224277,
+      "output_bytes": 230443,
+      "js_bytes": 6702,
+      "js_ratio": 1
+    },
+    {
+      "page": "visual-group-theory/notes/chapter06_subgroups.html",
+      "source_sha256": "637260be65ade2b64f3f21fe4a86a108d2aeef4d78ed42469a88ff20b5218324",
+      "output_sha256": "0b2627fcd884ef9949151b991db30434f88e90f2d169c3aa63d4553ccd7ef8a2",
+      "source_counts": {
+        "exercises": 31,
+        "self_checks": 0,
+        "statements": 9,
+        "mathml": 23,
+        "svg": 23
+      },
+      "publication_counts": {
+        "exercises": 31,
+        "self_checks": 0,
+        "statements": 9,
+        "mathml": 23,
+        "svg": 24
+      },
+      "differences": [],
+      "source_bytes": 190633,
+      "output_bytes": 196799,
+      "js_bytes": 6702,
+      "js_ratio": 1
+    },
+    {
+      "page": "visual-group-theory/notes/chapter07_products_and_quotients.html",
+      "source_sha256": "5cba664803e8489f96a290ec257024e519038961498b258b84e0f7e508c33758",
+      "output_sha256": "2053ad4ce55ee211b345c07ad6db78b209d691837d47e6afbc0962891cf4200a",
+      "source_counts": {
+        "exercises": 37,
+        "self_checks": 0,
+        "statements": 7,
+        "mathml": 42,
+        "svg": 38
+      },
+      "publication_counts": {
+        "exercises": 37,
+        "self_checks": 0,
+        "statements": 7,
+        "mathml": 42,
+        "svg": 39
+      },
+      "differences": [],
+      "source_bytes": 268145,
+      "output_bytes": 274311,
+      "js_bytes": 6702,
+      "js_ratio": 1
+    },
+    {
+      "page": "visual-group-theory/notes/chapter08_homomorphisms.html",
+      "source_sha256": "aaeca980fc8e8c32a2126188e997fac2fca704b2ff1745f2474220b2a1b746b5",
+      "output_sha256": "95b26de956a2738db28dcfb7b5fa1055496ed6c3efab8ea79c6427d936add4cd",
+      "source_counts": {
+        "exercises": 50,
+        "self_checks": 0,
+        "statements": 9,
+        "mathml": 48,
+        "svg": 25
+      },
+      "publication_counts": {
+        "exercises": 50,
+        "self_checks": 0,
+        "statements": 9,
+        "mathml": 48,
+        "svg": 26
+      },
+      "differences": [],
+      "source_bytes": 226374,
+      "output_bytes": 232540,
+      "js_bytes": 6702,
+      "js_ratio": 1
+    },
+    {
+      "page": "visual-group-theory/notes/chapter09_sylow_theory.html",
+      "source_sha256": "090ad2053310e455d4938b1e166dbbbc3cd5eacc6d62352ee792b1e43cad11db",
+      "output_sha256": "ccdecfa757eb15dc5c29d42be5961cbe1ee90f15add2b20f657701281932e203",
+      "source_counts": {
+        "exercises": 28,
+        "self_checks": 0,
+        "statements": 13,
+        "mathml": 80,
+        "svg": 16
+      },
+      "publication_counts": {
+        "exercises": 28,
+        "self_checks": 0,
+        "statements": 13,
+        "mathml": 80,
+        "svg": 17
+      },
+      "differences": [],
+      "source_bytes": 158865,
+      "output_bytes": 165031,
+      "js_bytes": 6702,
+      "js_ratio": 1
+    },
+    {
+      "page": "visual-group-theory/notes/chapter10_galois_theory.html",
+      "source_sha256": "f95c10f25b53fe6eba4e4cb536bd59b5f43b42aa0b51d8316aa5c1ccdb862471",
+      "output_sha256": "536efabc215a1531b27f70490c02a3a8ddce61416754c2bd75b06343289066f8",
+      "source_counts": {
+        "exercises": 30,
+        "self_checks": 0,
+        "statements": 11,
+        "mathml": 101,
+        "svg": 28
+      },
+      "publication_counts": {
+        "exercises": 30,
+        "self_checks": 0,
+        "statements": 11,
+        "mathml": 101,
+        "svg": 29
+      },
+      "differences": [],
+      "source_bytes": 233759,
+      "output_bytes": 239925,
+      "js_bytes": 6702,
+      "js_ratio": 1
+    },
+    {
+      "page": "visual-group-theory/notes/preface.html",
+      "source_sha256": "fd91a9f873822512937b889c2fe84a7c128502bf3f2130fa3f09a48e374ca99b",
+      "output_sha256": "76321bddbe0835cf7b4e7422727f90098831e91d7d3b90e1ebf12d2b063a8ce9",
+      "source_counts": {
+        "exercises": 0,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 0,
+        "svg": 0
+      },
+      "publication_counts": {
+        "exercises": 0,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 0,
+        "svg": 1
+      },
+      "differences": [],
+      "source_bytes": 35164,
+      "output_bytes": 41329,
+      "js_bytes": 6702,
+      "js_ratio": 1
+    }
+  ],
+  "note": "原内容完整性基线保持；此文件追加原源文件与 Astro 输出的身份及逐页 parity。"
+}

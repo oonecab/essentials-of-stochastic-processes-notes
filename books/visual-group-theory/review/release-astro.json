@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "scope": "local_dist_reading_pages",
+  "files": {
+    "visual-group-theory/notes/book_overview.html": "a54e41d1f77d07d60f5bc21b84c023fa0ee926f909496a6290c3d44cd868c202",
+    "visual-group-theory/notes/chapter01_what_is_a_group.html": "6d4f130d21c87ab455dcf9712886d08cc438b7088dc659efc2faadee56964c80",
+    "visual-group-theory/notes/chapter02_what_do_groups_look_like.html": "656917786d438d23f0c4220be96f615b78933f89fcfd856ba3dfeda9ad1a67f1",
+    "visual-group-theory/notes/chapter03_why_study_groups.html": "91e220c4dc435a4f18b24347e52c211b5ce2c2adde700eb52ee05e2f4a57e259",
+    "visual-group-theory/notes/chapter04_algebra_at_last.html": "0eed0492ae9372122d8f5b09c2c55087faacc853674cd40fc36cc53ae28e2611",
+    "visual-group-theory/notes/chapter05_five_families.html": "60784ed34ec25ada19a309b930325fe939a8d3e48f9f7a236f8c90c4542ad780",
+    "visual-group-theory/notes/chapter06_subgroups.html": "0b2627fcd884ef9949151b991db30434f88e90f2d169c3aa63d4553ccd7ef8a2",
+    "visual-group-theory/notes/chapter07_products_and_quotients.html": "2053ad4ce55ee211b345c07ad6db78b209d691837d47e6afbc0962891cf4200a",
+    "visual-group-theory/notes/chapter08_homomorphisms.html": "95b26de956a2738db28dcfb7b5fa1055496ed6c3efab8ea79c6427d936add4cd",
+    "visual-group-theory/notes/chapter09_sylow_theory.html": "ccdecfa757eb15dc5c29d42be5961cbe1ee90f15add2b20f657701281932e203",
+    "visual-group-theory/notes/chapter10_galois_theory.html": "536efabc215a1531b27f70490c02a3a8ddce61416754c2bd75b06343289066f8",
+    "visual-group-theory/notes/preface.html": "76321bddbe0835cf7b4e7422727f90098831e91d7d3b90e1ebf12d2b063a8ce9"
+  }
+}

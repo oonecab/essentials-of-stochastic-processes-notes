@@ -6,7 +6,7 @@
   "status": "completed_locally",
   "file_sha256": {
     "README.md": "638803a5a112f4725dc306210d07b4e528b51adb727a2a9fb1d531768ae90bbf",
-    "agent.md": "e8f47d62543290cfc4e6f2f79198b6dcf2e74afb1e144f0c99eab08a8591563a",
+    "agent.md": "84eb18ed220945b3c8b727d0f569810a4055c2b5353f8dc6de5b2f2255039024",
     "code/README.md": "da295413d10016da5b85cd5377d3de4784b0cbe3be3c2f396fdf714b1996d9fd",
     "code/actions.c": "10c2675329943b96563a463ba692bc6665563c0e2bb92640b28b64086533e0dd",
     "code/actions.py": "724f6b0d89fb58636a13f113d59fb0825ded258909894d8305e7a63fb05fd1ee",
@@ -29,7 +29,7 @@
     "code/sylow.py": "a912c93325b8d76b9c358148481f12e25420cfe7993b49eff5237b240714942c",
     "code/tables.c": "94fc3d207985dbda78ca3f4e53b7300a5decac14d505d688d675aa5206b4eeb3",
     "code/tables.py": "9e5755dfdb90ccc2d04f28a27ab4c430893469730a15dc075c79aa7994b62d83",
-    "notes/README.md": "421ed1479510abfd39d38cdd717882cf48f89e7bd21bcc40fb4b2b8e33bfd3c5",
+    "notes/README.md": "30b6c4582f3b22d7b0803909a39b13fbe747270ca78ba6d8713bfe53390b5c9d",
     "notes/algebra_inputs.json": "0f9d1ca881822af32e01db131019fb91192f0570fa1b366946f5dd192cd770ce",
     "notes/book_overview.html": "7f62f2bc3ee92441a274bed9395747b2fa8da57b481a83b346eb38094b6e2afb",
     "notes/chapter01_what_is_a_group.html": "eb199f9c4e18d8798a1a2b3b857a4d167597ef865240210882109226ffb2075b",
@@ -94,5 +94,43 @@
     "plan/P026-visual-group-theory-polish.md": "80db76a955e5c097dc664e18d5fca393dce07fd166dcd9f6a85752c4beb4b06a",
     "test/T026-visual-group-theory-polish.md": "73d1e8f2ddb71306a545708e7caf395180828842c9130c9d4f2ee4ad79dfccec",
     "milestone/M026-visual-group-theory-polish.md": "89dbc81b6fde2b25e8459d2d4990b454d25b3566f03650d8afd529f606867225"
+  },
+  "migration_binding_history": [
+    {
+      "updates": [
+        {
+          "file": "agent.md",
+          "previous_sha256": "e8f47d62543290cfc4e6f2f79198b6dcf2e74afb1e144f0c99eab08a8591563a",
+          "current_sha256": "84eb18ed220945b3c8b727d0f569810a4055c2b5353f8dc6de5b2f2255039024",
+          "reason": "Astro 维护路径说明，正文和计算规则保持"
+        },
+        {
+          "file": "notes/README.md",
+          "previous_sha256": "421ed1479510abfd39d38cdd717882cf48f89e7bd21bcc40fb4b2b8e33bfd3c5",
+          "current_sha256": "30b6c4582f3b22d7b0803909a39b13fbe747270ca78ba6d8713bfe53390b5c9d",
+          "reason": "Astro 维护路径说明，正文和计算规则保持"
+        }
+      ]
+    }
+  ],
+  "astro_migration": {
+    "record": "review/astro-migration.json",
+    "sha256": "59c25ab8bf16f7c2c9d28a996e0047dd4a81977d92f9e37f4a1e4122095f6ade",
+    "status": "Go",
+    "open_findings": [],
+    "source_sha256": {
+      "book_overview.html": "7f62f2bc3ee92441a274bed9395747b2fa8da57b481a83b346eb38094b6e2afb",
+      "chapter01_what_is_a_group.html": "eb199f9c4e18d8798a1a2b3b857a4d167597ef865240210882109226ffb2075b",
+      "chapter02_what_do_groups_look_like.html": "683005e2729eb40b9ba13e3958c4159b61e7d29b44718cf2f7042a4e358c02a7",
+      "chapter03_why_study_groups.html": "677d4c58de3f14c4870d85377946e7d7c1b55a2eaf7cb3ea40d101b792d86a4b",
+      "chapter04_algebra_at_last.html": "0392ed264f748ae1466b39544acf82f56bcf2b0f5805e2e06b81c27377ed1f24",
+      "chapter05_five_families.html": "2516e98357384a6d37047d2dcfc0f82e66402e6f4a41af7cca8a4b846d1171a2",
+      "chapter06_subgroups.html": "637260be65ade2b64f3f21fe4a86a108d2aeef4d78ed42469a88ff20b5218324",
+      "chapter07_products_and_quotients.html": "5cba664803e8489f96a290ec257024e519038961498b258b84e0f7e508c33758",
+      "chapter08_homomorphisms.html": "aaeca980fc8e8c32a2126188e997fac2fca704b2ff1745f2474220b2a1b746b5",
+      "chapter09_sylow_theory.html": "090ad2053310e455d4938b1e166dbbbc3cd5eacc6d62352ee792b1e43cad11db",
+      "chapter10_galois_theory.html": "f95c10f25b53fe6eba4e4cb536bd59b5f43b42aa0b51d8316aa5c1ccdb862471",
+      "preface.html": "fd91a9f873822512937b889c2fe84a7c128502bf3f2130fa3f09a48e374ca99b"
+    }
   }
 }

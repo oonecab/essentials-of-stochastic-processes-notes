@@ -30,3 +30,5 @@ golden master 分为旧维护源和旧发布视图：前者证明正文、数学
 试点结论：Go。未解决的迁移问题为空；历史内容审阅的范围、实体手机和真实读屏器边界保持。
 
 试点文档绑定更新后独立 Python 再验退出 0：`tmp/project-check/20261017T162314-9oiv5rvl/report.json`，四个命令均通过；`node --test scripts/parity.test.mjs` 三项测试通过。
+
+视觉群论批次 Go：12 页 / 302 题，源计数 387 MathML / 198 SVG / 62 陈述，全部 parity 差异为 0；HTML 1,900,939 字节，JS 81,475 字节，比例 1。构建 31.691 秒；`vgt-build`、`vgt-parity`、`vgt-offline`、`vgt-python` 日志的退出码全部为 0。独立检查报告 `tmp/project-check/20261017T162448-4ryv1zvk/report.json`；48 个 JS 视图和 12 个 no-JS 视图通过，逐页首屏与各章题解截图实际看图。原审阅及原 HTML 保持，文档维护路径的旧哈希与新值追加记录。

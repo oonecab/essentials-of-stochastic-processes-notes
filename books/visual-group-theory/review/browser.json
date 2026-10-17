@@ -3075,5 +3075,20 @@
   },
   "open_findings": [],
   "previous_record": "review/history/polish-v1-browser.json",
-  "reused_evidence": "V1–V8 annotations, exercise steps, diagram/source-download checks remain in polish-v1-browser.json. All non-display page content and all display presentation trees were compared byte-for-byte before this follow-up; only the copy controller and fallback wrappers changed."
+  "reused_evidence": "V1–V8 annotations, exercise steps, diagram/source-download checks remain in polish-v1-browser.json. All non-display page content and all display presentation trees were compared byte-for-byte before this follow-up; only the copy controller and fallback wrappers changed.",
+  "astro_migration": {
+    "status": "passed",
+    "record": "review/astro-migration.json",
+    "sha256": "59c25ab8bf16f7c2c9d28a996e0047dd4a81977d92f9e37f4a1e4122095f6ade",
+    "widths": [
+      1800,
+      1440,
+      1024,
+      390
+    ],
+    "js_views": 48,
+    "no_js_views": 12,
+    "external_requests": [],
+    "visual_review": "逐页查看十二页 1800/390 首屏、十章末题与 no-JS 首题联系图，并查看第五章 1440/1024 原图；正文、公式、Cayley 图和题解可读，三栏与折叠目录断点正常。"
+  }
 }

@@ -41,3 +41,5 @@
 
 - [Astro 内容维护](astro-authoring.md)：受控源、旧检查镜像、冻结基线及分阶段证据。
 - [Ubuntu 静态发布](../deploy/UBUNTU.md)：安装、权限、不可变版本、原子切换与故障恢复。
+
+- [Astro 迁移交付报告](astro-migration-report.md)：全量命令、parity、浏览器、可复现发布与保留范围。

@@ -132,5 +132,11 @@
       "chapter10_galois_theory.html": "f95c10f25b53fe6eba4e4cb536bd59b5f43b42aa0b51d8316aa5c1ccdb862471",
       "preface.html": "fd91a9f873822512937b889c2fe84a7c128502bf3f2130fa3f09a48e374ca99b"
     }
+  },
+  "final_static_migration": {
+    "repository_record": "docs/astro-migration-evidence.json",
+    "sha256": "b61d55d39174999815709d3f844089adab69f5e02a1d8ef3c4529a13d341e556",
+    "release_id": "20261017T172621",
+    "open_findings": []
   }
 }

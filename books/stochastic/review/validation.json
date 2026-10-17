@@ -24,5 +24,11 @@
       "chapter06_mathematical_finance.html": "abdb3e6c1c7bcee20a443671dac19190b9160dc40280db2ec926098ad5caaece",
       "preface.html": "e85f3baf68c3f319fa47dd49e70be94af47709405b37ed7b44e96b54f967b3ba"
     }
+  },
+  "final_static_migration": {
+    "repository_record": "docs/astro-migration-evidence.json",
+    "sha256": "b61d55d39174999815709d3f844089adab69f5e02a1d8ef3c4529a13d341e556",
+    "release_id": "20261017T172621",
+    "open_findings": []
   }
 }

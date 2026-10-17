@@ -29,5 +29,11 @@
       "chapter12_concurrency.html": "bc85d93c6859d8981a6e9668b7f1a4e4779397cdcbf13e4461c94eb91dc24e14",
       "preface.html": "6ac27be90cd0d914a57b48734422ef3df1a8cfbb363b99fccd575be798efc977"
     }
+  },
+  "final_static_migration": {
+    "repository_record": "docs/astro-migration-evidence.json",
+    "sha256": "b61d55d39174999815709d3f844089adab69f5e02a1d8ef3c4529a13d341e556",
+    "release_id": "20261017T172621",
+    "open_findings": []
   }
 }

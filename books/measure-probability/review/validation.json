@@ -989,5 +989,11 @@
       "preface.html": "ca606f60da08e0d4229dcc3bda2896c980f3076efa6b2f68a841e3c659b0038b"
     }
   },
-  "open_findings": []
+  "open_findings": [],
+  "final_static_migration": {
+    "repository_record": "docs/astro-migration-evidence.json",
+    "sha256": "b61d55d39174999815709d3f844089adab69f5e02a1d8ef3c4529a13d341e556",
+    "release_id": "20261017T172621",
+    "open_findings": []
+  }
 }

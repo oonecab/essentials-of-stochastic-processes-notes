@@ -15,5 +15,7 @@
     "weiss/notes/chapter10_algorithm_design.html": "50007c6868aa553edb7d37fbc5444e8c9bd872931ba1081063eb63fcab00e6b8",
     "weiss/notes/chapter11_amortized_analysis.html": "87f2a929bc21dd4a67a54c819ce7d1565a9470c1365416987b8de5113e6304b7",
     "weiss/notes/chapter12_advanced_data_structures.html": "908faefe44b6bc92faa3a3220e947a46b7fcec3e8bbede53952e228b888300c4"
-  }
+  },
+  "packaged_release_id": "20261017T172621",
+  "site_SHA256SUMS_sha256": "10ce03afae12150a07b051d70aa683e714ae0965bc7e43233215ac810dc4b025"
 }

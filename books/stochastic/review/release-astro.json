@@ -11,5 +11,7 @@
     "stochastic/notes/chapter05_martingales.html": "333d9bf2de4abae3ab55e7c563361de6d8eb225210c6378ef1acfb54955180df",
     "stochastic/notes/chapter06_mathematical_finance.html": "a670dcea84b837b4a18cda9fbf33b102dcb63a536307dc4ecf4cff52d403687e",
     "stochastic/notes/preface.html": "100e28ac857ecc8d8da3496fe725c7ae038481f265ef9ab265b03d3aaf7a3bbb"
-  }
+  },
+  "packaged_release_id": "20261017T172621",
+  "site_SHA256SUMS_sha256": "10ce03afae12150a07b051d70aa683e714ae0965bc7e43233215ac810dc4b025"
 }

@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "status": "带保留完成",
+  "decision": "Go for local static build and release rehearsal",
+  "baseline_ref": "b2aeff3",
+  "release_id": "20261017T172621",
+  "source_commit": "f35efd0c7b548369321805781fbf81bce71df686",
+  "release_source_tree_dirty": false,
+  "toolchain": {
+    "node": "24.21.0",
+    "pnpm": "11.21.0",
+    "astro": "7.4.0"
+  },
+  "books": {
+    "measure-probability": {
+      "pages": 6,
+      "source_bytes": 1161605,
+      "output_bytes": 1198698,
+      "js_bytes": 24924,
+      "differences": 0,
+      "counts": {
+        "exercises": 115,
+        "self_checks": 0,
+        "statements": 126,
+        "mathml": 2707,
+        "svg": 4
+      }
+    },
+    "visual-group-theory": {
+      "pages": 12,
+      "source_bytes": 1826948,
+      "output_bytes": 1900939,
+      "js_bytes": 81475,
+      "differences": 0,
+      "counts": {
+        "exercises": 302,
+        "self_checks": 0,
+        "statements": 62,
+        "mathml": 387,
+        "svg": 198
+      }
+    },
+    "stochastic": {
+      "pages": 9,
+      "source_bytes": 5931053,
+      "output_bytes": 5986389,
+      "js_bytes": 38155,
+      "differences": 0,
+      "counts": {
+        "exercises": 236,
+        "self_checks": 0,
+        "statements": 150,
+        "mathml": 13009,
+        "svg": 7
+      }
+    },
+    "weiss": {
+      "pages": 13,
+      "source_bytes": 6339413,
+      "output_bytes": 6419695,
+      "js_bytes": 23881,
+      "differences": 0,
+      "counts": {
+        "exercises": 362,
+        "self_checks": 0,
+        "statements": 0,
+        "mathml": 4594,
+        "svg": 227
+      }
+    },
+    "csapp": {
+      "pages": 14,
+      "source_bytes": 2717265,
+      "output_bytes": 2812864,
+      "js_bytes": 88830,
+      "differences": 0,
+      "counts": {
+        "exercises": 419,
+        "self_checks": 36,
+        "statements": 114,
+        "mathml": 656,
+        "svg": 50
+      }
+    }
+  },
+  "commands": [
+    {
+      "name": "doctor",
+      "command": [
+        "python3",
+        "tools/project.py",
+        "doctor"
+      ],
+      "exit_code": 0,
+      "seconds": 0.33675595800741576,
+      "log": "tmp/reading-notes-migration/final/doctor.log"
+    },
+    {
+      "name": "install",
+      "command": [
+        "pnpm",
+        "install",
+        "--frozen-lockfile"
+      ],
+      "exit_code": 0,
+      "seconds": 0.24821487501321826,
+      "log": "tmp/reading-notes-migration/final/install.log"
+    },
+    {
+      "name": "build-1",
+      "command": [
+        "pnpm",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 41.54755366600875,
+      "log": "tmp/reading-notes-migration/final/build-1.log"
+    },
+    {
+      "name": "parity",
+      "command": [
+        "node",
+        "scripts/verify-parity.mjs"
+      ],
+      "exit_code": 0,
+      "seconds": 6.400435167000978,
+      "log": "tmp/reading-notes-migration/final/parity.log"
+    },
+    {
+      "name": "parity-alias",
+      "command": [
+        "pnpm",
+        "check:parity"
+      ],
+      "exit_code": 0,
+      "seconds": 6.543782000007923,
+      "log": "tmp/reading-notes-migration/final/parity-alias.log"
+    },
+    {
+      "name": "node-tests",
+      "command": [
+        "node",
+        "--test",
+        "scripts/parity.test.mjs"
+      ],
+      "exit_code": 0,
+      "seconds": 0.0991169170010835,
+      "log": "tmp/reading-notes-migration/final/node-tests.log"
+    },
+    {
+      "name": "python-all",
+      "command": [
+        "python3",
+        "tools/project.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "seconds": 373.70282329199836,
+      "log": "tmp/reading-notes-migration/final/python-all.log"
+    },
+    {
+      "name": "python-measure-probability",
+      "command": [
+        "python3",
+        "tools/project.py",
+        "check",
+        "--book",
+        "measure-probability"
+      ],
+      "exit_code": 0,
+      "seconds": 31.082301915987046,
+      "log": "tmp/reading-notes-migration/final/python-measure-probability.log"
+    },
+    {
+      "name": "python-visual-group-theory",
+      "command": [
+        "python3",
+        "tools/project.py",
+        "check",
+        "--book",
+        "visual-group-theory"
+      ],
+      "exit_code": 0,
+      "seconds": 82.63184970899601,
+      "log": "tmp/reading-notes-migration/final/python-visual-group-theory.log"
+    },
+    {
+      "name": "python-stochastic",
+      "command": [
+        "python3",
+        "tools/project.py",
+        "check",
+        "--book",
+        "stochastic"
+      ],
+      "exit_code": 0,
+      "seconds": 118.93034504099342,
+      "log": "tmp/reading-notes-migration/final/python-stochastic.log"
+    },
+    {
+      "name": "python-weiss",
+      "command": [
+        "python3",
+        "tools/project.py",
+        "check",
+        "--book",
+        "weiss"
+      ],
+      "exit_code": 0,
+      "seconds": 34.85653629200533,
+      "log": "tmp/reading-notes-migration/final/python-weiss.log"
+    },
+    {
+      "name": "python-csapp",
+      "command": [
+        "python3",
+        "tools/project.py",
+        "check",
+        "--book",
+        "csapp"
+      ],
+      "exit_code": 0,
+      "seconds": 131.2415783329925,
+      "log": "tmp/reading-notes-migration/final/python-csapp.log"
+    },
+    {
+      "name": "release-build",
+      "command": [
+        "python3",
+        "tools/project.py",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 45.422905458006426,
+      "log": "tmp/reading-notes-migration/final/release-build.log"
+    },
+    {
+      "name": "verify-release",
+      "command": [
+        "python3",
+        "tools/project.py",
+        "verify-release",
+        "--release-id",
+        "20261017T172621"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0948291670065373,
+      "log": "tmp/reading-notes-migration/final/verify-release.log"
+    },
+    {
+      "name": "publish",
+      "command": [
+        "python3",
+        "tools/test_static_publish.py",
+        "--release-dir",
+        "deploy/portal-releases/20261017T172621"
+      ],
+      "exit_code": 0,
+      "seconds": 8.573200375001761,
+      "log": "tmp/reading-notes-migration/final/publish.log"
+    },
+    {
+      "name": "offline-direct",
+      "command": [
+        "node",
+        "scripts/check-offline.mjs"
+      ],
+      "exit_code": 0,
+      "log": "tmp/reading-notes-migration/final-offline.log"
+    },
+    {
+      "name": "offline-alias",
+      "command": [
+        "pnpm",
+        "check:offline"
+      ],
+      "exit_code": 0,
+      "log": "tmp/reading-notes-migration/final/offline-alias.log"
+    }
+  ],
+  "python_reports": {
+    "python-all": "tmp/project-check/20261017T171328-afbgru05/report.json",
+    "python-measure-probability": "tmp/project-check/20261017T171942-xcb0xb46/report.json",
+    "python-visual-group-theory": "tmp/project-check/20261017T172013-m51jiwg1/report.json",
+    "python-stochastic": "tmp/project-check/20261017T172136-37swyq2k/report.json",
+    "python-weiss": "tmp/project-check/20261017T172334-heiv13vo/report.json",
+    "python-csapp": "tmp/project-check/20261017T172409-1wvfae5x/report.json"
+  },
+  "browser": {
+    "pages": 55,
+    "js_views": 220,
+    "no_js_views": 55,
+    "external_requests": [],
+    "screenshots": 319,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+    "visual_review": "逐书实际查看桌面/手机首屏、章节题解与 no-JS 截图，另查看书架五个截图；保留原图及哈希。"
+  },
+  "reproducibility": {
+    "status": "passed",
+    "releases": [
+      "20261017T170156",
+      "20261017T170533",
+      "20261017T172621"
+    ],
+    "files": 303,
+    "SHA256SUMS_sha256": "10ce03afae12150a07b051d70aa683e714ae0965bc7e43233215ac810dc4b025",
+    "archive_sha256": "c88c0ed6efb8db836d2adf8fdd93d2c6be2141e9aedc3a5cc868812985df5a8b",
+    "archive_bytes": 10695615,
+    "note": "Identical public inputs; timestamps and release IDs are outside site/SHA256SUMS/archive."
+  },
+  "site_bytes": 28771319,
+  "reading_html_bytes": 18318585,
+  "build_seconds": [
+    41.221920292,
+    40.398661708
+  ],
+  "publish_tests": "tmp/publish-check/20261017T172621-zge0662j/report.json",
+  "https_verification": "tmp/release-check/20261017T172621-yexqb_ax/https-verification.json",
+  "open_migration_findings": [],
+  "limitations": [
+    "Ubuntu/systemd 与 util-linux flock 命令分支未在 Linux 实机运行；本机使用 fcntl.flock 与真实 Nginx。",
+    "实体手机、真实读屏器未验证。",
+    "原 CS:APP 12.39 代理浏览器实验边界保留。",
+    "旧源码 SVG 行尾空白保留，整段原样导入的 git whitespace 检查仍非零。",
+    "未执行远程推送、真实部署、DNS 或生产证书变更。"
+  ],
+  "evidence_sha256": {
+    "tmp/reading-notes-migration/parity/all.json": "d306543022079df8870884c2a5ff09878484bba6dd284db2b1ea199257f2ed66",
+    "tmp/reading-notes-migration/browser/all/report.json": "7b603b99bc6be9628cdd71d6c22eb334af9310dac86f52517a4151bf1f217b26",
+    "tmp/reading-notes-migration/final/preservation.json": "dfc21fa5a8de7e6a35f26bd7bbbae2a4cf7d631deacd9e832c225675b9c769ea",
+    "tmp/reading-notes-migration/final/reproducibility.json": "db8778d139ce6e533ae9b613d096efb92d629c90e632988ed171816bbfe3922b",
+    "tmp/publish-check/20261017T172621-zge0662j/report.json": "ad56b917560b591f946e771e5f61640cb48ab4407ee4bc59abdf2973ae191148",
+    "tmp/release-check/20261017T172621-yexqb_ax/https-verification.json": "99b3c30d5a331a55064ae4c97d019c9ff73da85da76db23189cb2770aae96a6e",
+    "tmp/project-check/20261017T171328-afbgru05/report.json": "288873c906e67c53ac1d45f67273c95e6102f846739b1e392ba390cbe850095c",
+    "tmp/project-check/20261017T171942-xcb0xb46/report.json": "c0c94b39e830be09268f6357fe54ad26ea55959d379393b84683ffb9905eb9fe",
+    "tmp/project-check/20261017T172013-m51jiwg1/report.json": "3bc03d1d5402aa1ad8d3f697b410fcf0ce54838fadf2fe38384dda56f6d0080a",
+    "tmp/project-check/20261017T172136-37swyq2k/report.json": "3aa1015eab552440a7f70ba101536cd499dffa939a263a5b6267b7f02f14a9bd",
+    "tmp/project-check/20261017T172334-heiv13vo/report.json": "7b080b91f05d8c15cc0206edd6c981a66e2c5f31d6ee42d25f981f914551672a",
+    "tmp/project-check/20261017T172409-1wvfae5x/report.json": "1891d2eddda80caccfc2c09a95cf52a47b22145f73c556179cbfe1b72b3ebd2f"
+  }
+}

@@ -14,5 +14,18 @@
     "no_js_views": 9,
     "external_requests": [],
     "visual_review": "逐页查看九页 1800/390 首屏、六章末题和 no-JS 首题联系图，另读第一章 1440/1024 原图及序言手机原图；正文、题号、公式横滚与注解正常。"
+  },
+  "final_static_migration": {
+    "repository_record": "docs/astro-migration-evidence.json",
+    "sha256": "b61d55d39174999815709d3f844089adab69f5e02a1d8ef3c4529a13d341e556",
+    "widths": [
+      1800,
+      1440,
+      1024,
+      390
+    ],
+    "js_views": 36,
+    "no_js_views": 9,
+    "external_requests": []
   }
 }

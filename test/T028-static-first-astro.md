@@ -52,3 +52,5 @@ CS:APP 中间失败均留档：继承的页尾深链在 details 展开增加文�
 发布恢复补充：`publish-test-4` / `publish-test-5` 退出 0；分别验证残留事务阻断新发布并恢复旧版，以及活动文件被破坏后仍能显式回滚。报告分别位于 `tmp/publish-check/20261017T170533-8t6bzrqd/report.json` 与 `tmp/publish-check/20261017T170533-r8km6feu/report.json`。回滚验证目标旧版本完整性，不让损坏的当前版本阻断恢复；生产 CSP 预检同时覆盖当前和候选脚本哈希。
 
 `publish-test-6` 退出 0，13 类发布集成检查通过，报告 `tmp/publish-check/20261017T170533-c3txdahi/report.json`；另验证队列在已生效后恢复回执，并拒绝同版本号但元数据不同的重复包。
+
+最终全量验证已通过：原 13 个命令加 Astro 绑定检查共 14 项，另分别重跑五书完整检查；doctor、冻结安装、构建、Node/PNPM parity/offline、发布打包与真实本地 Nginx/13 类发布演练全部退出 0。最终包 `20261017T172621`；SHA256SUMS 与三个静态归档一致。完整表格与报告路径见 [最终交付报告](../docs/astro-migration-report.md)，原日志保留在 `tmp/reading-notes-migration/final/`。

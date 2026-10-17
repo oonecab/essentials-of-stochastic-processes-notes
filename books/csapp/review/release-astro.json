@@ -16,5 +16,7 @@
     "csapp/notes/chapter11_network.html": "9a8c565bb9a0781bb21239a2904eac642a74ec9dca6aa77a6475b1e88981ba50",
     "csapp/notes/chapter12_concurrency.html": "345291eee62c54ed5a3c26b39050e2dfbca3b40291cc675871e721eae13f0a5a",
     "csapp/notes/preface.html": "f1732560c7791748cd97fac4c0f1eddfae876752c92f29aef08f86deac0a0266"
-  }
+  },
+  "packaged_release_id": "20261017T172621",
+  "site_SHA256SUMS_sha256": "10ce03afae12150a07b051d70aa683e714ae0965bc7e43233215ac810dc4b025"
 }

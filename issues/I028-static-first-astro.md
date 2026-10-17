@@ -1,6 +1,6 @@
 # I028：静态优先 Astro 迁移
 
-日期：2026-10-17。状态：实施中。负责人：Codex；范围和本地执行授权来自本次用户附件。关联 [P028](../plan/P028-static-first-astro.md)、[T028](../test/T028-static-first-astro.md)、[M028](../milestone/M028-static-first-astro.md)、[ADR-002](../docs/decisions/ADR-002-static-first-astro.md)。
+日期：2026-10-17。状态：带保留完成。本地迁移及发布演练 Go，目标 Ubuntu/systemd 实机验收保留。负责人：Codex；范围和本地执行授权来自本次用户附件。关联 [P028](../plan/P028-static-first-astro.md)、[T028](../test/T028-static-first-astro.md)、[M028](../milestone/M028-static-first-astro.md)、[ADR-002](../docs/decisions/ADR-002-static-first-astro.md)。
 
 目标是让五书正式笔记由 Astro 构建为可离线打开的单文件 HTML，生产继续只提供静态文件。数学、题号、小问、来源、锚点及 PDF 页码链接保持。构建依赖和运行时边界、逐书迁移及失败恢复遵循用户 Phase 0–8；本轮授权包括本地提交，不包含远程部署。
 
@@ -13,3 +13,5 @@
 风险：模板空白影响行内文字、资源内联遗漏、元数据误发布、离线链接依赖、依赖版本漂移和切换失败。以逐页语义/原始片段对比、禁止外部资源、重复构建、浏览器操作与失败回滚测试控制。若用户列出的停止条件成立，停止全量迁移并保留旧站。
 
 执行状态与命令证据追加到 [T028](../test/T028-static-first-astro.md)；最后交付说明汇总未验证范围。
+
+最终报告见 [迁移交付](../docs/astro-migration-report.md)，结构化证据见 `docs/astro-migration-evidence.json`。

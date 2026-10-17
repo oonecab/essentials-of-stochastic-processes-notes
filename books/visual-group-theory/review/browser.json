@@ -3090,5 +3090,18 @@
     "no_js_views": 12,
     "external_requests": [],
     "visual_review": "逐页查看十二页 1800/390 首屏、十章末题与 no-JS 首题联系图，并查看第五章 1440/1024 原图；正文、公式、Cayley 图和题解可读，三栏与折叠目录断点正常。"
+  },
+  "final_static_migration": {
+    "repository_record": "docs/astro-migration-evidence.json",
+    "sha256": "b61d55d39174999815709d3f844089adab69f5e02a1d8ef3c4529a13d341e556",
+    "widths": [
+      1800,
+      1440,
+      1024,
+      390
+    ],
+    "js_views": 48,
+    "no_js_views": 12,
+    "external_requests": []
   }
 }

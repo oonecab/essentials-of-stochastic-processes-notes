@@ -171,11 +171,32 @@ ssl_certificate "{cert}"; ssl_certificate_key "{key}"; include "{work}/static.in
         assert os.readlink(root/'current')==second and hashlib.sha256(get()[2]).hexdigest()==secondhash
         publish('--rollback','20990101T000001',hook=hook)
         passed('interrupted transaction blocks new deploy and recovers previous release')
+        publish('--rollback','20990101T000002',hook=hook)
+        corrupted=root/second/'site/index.html'
+        corrupted.chmod(0o644);corrupted.write_bytes(b'corrupted active fixture');corrupted.chmod(0o444)
+        publish('--rollback','20990101T000001',hook=hook)
+        assert os.readlink(root/'current')==first and hashlib.sha256(get()[2]).hexdigest()==oldhash
+        passed('verified rollback remains available after active payload corruption')
         # Full existing verifier runs against installed site, including both PDF byte ranges and 15 old routes.
         env={**os.environ,'SSL_CERT_FILE':str(cert)}
         subprocess.run([sys.executable,ROOT/'deploy/verify_portal.py','--release-dir',a.release_dir,
                         '--origin',f'https://localhost:{https}','--output',work/'https-verification.json'],check=True,env=env)
         passed('all public file hashes, MIME, CSP, both PDF ranges and old URL/query/HEAD/POST behavior')
+        import importlib.util
+        sys.path.insert(0,str(ROOT/'deploy/scripts'))
+        spec=importlib.util.spec_from_file_location('deploy_job',ROOT/'deploy/scripts/deploy-job.py')
+        job=importlib.util.module_from_spec(spec);spec.loader.exec_module(job)
+        ready,done=work/'ready',work/'done';ready.mkdir();done.mkdir()
+        shutil.copytree(packages[0],ready/'20990101T000001')
+        job.process_queue(root,ready,done,work/'must-not-call-missing-publisher')
+        assert not list(ready.iterdir()) and (done/'20990101T000001').is_dir()
+        shutil.copytree(packages[0],ready/'20990101T000001')
+        bad=ready/'20990101T000001/release.json';data=json.loads(bad.read_text());data['total_bytes']+=1;bad.write_text(json.dumps(data))
+        try:
+            job.process_queue(root,ready,done,work/'must-not-call-missing-publisher')
+            raise AssertionError('Different queue identity accepted')
+        except ValueError: pass
+        passed('queue recovers a completed receipt and rejects same-ID different metadata')
     finally:
         process.terminate()
         try: process.wait(timeout=10)

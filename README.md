@@ -65,7 +65,7 @@ AGENTS.md、CLAUDE.md、TECH.md     # Agent 入口与技术事实
 
 新增书籍按[接入步骤](docs/adding-a-book.md)，使用[阅读计划、书级约定和逐章审阅模板](docs/templates/reading-notes/README.md)：核实原书与覆盖清单，建立全书地图和序言，完成代表章并实际验收，然后分批写作、接入统一书架。可直接提出：“按项目 RN-001 标准接入这本书，资料在……，本次完成……。”共享 Agent 入口已把该标准列为必读。
 
-修改随机过程程序后执行 `python3 books/stochastic/tools/sync_code.py --write`，再运行检查。Weiss 的教学算法在受控章节 HTML 内维护，展开检查镜像后提取验证；`books/weiss/c/` 保留原图例的 C 转换，两者的职责见子项目说明。VS Code 从本仓库根目录打开，使用 `.vscode/` 中的“调试指定图例”或“调试 TestKit 指定用例”。
+修改程序与网页代码副本时，先按 [Astro 内容维护](docs/astro-authoring.md) 更新受控源和检查镜像，再运行原源码同步检查与完整验证。Weiss 的教学算法在受控章节 HTML 内维护，展开检查镜像后提取验证；`books/weiss/c/` 保留原图例的 C 转换，两者的职责见子项目说明。VS Code 从本仓库根目录打开，使用 `.vscode/` 中的“调试指定图例”或“调试 TestKit 指定用例”。
 
 ```sh
 # 快速检查：结构、链接、代码同步、当前审阅绑定

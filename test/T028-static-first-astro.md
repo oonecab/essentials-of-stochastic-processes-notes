@@ -48,3 +48,7 @@ CS:APP 中间失败均留档：继承的页尾深链在 details 展开增加文�
 最初两次发布演练失败日志 `publish-test.log`、`publish-test-2.log` 保留：macOS 不允许重命名已经只读的候选根目录，改为先改名再冻结权限；测试中的 HTTP 端口变量遮蔽模块名，修正命名。失败候选从未进入 current。归档旧部署说明时相对链接错误由原结构检查检出，调整归档链接后 `governance-quick-2` 退出 0。
 
 新增 `tools/check_astro_records.py` 使用 Python 独立展开受控源、比较冻结 Git 字节、检查所有当前文档和迁移审阅绑定；原 13 个全量命令保持，并追加这一项。完整发布集成测试的 Linux 分支与 systemd 运行需在 Ubuntu 上另验，本机运行平台是 macOS。
+
+发布恢复补充：`publish-test-4` / `publish-test-5` 退出 0；分别验证残留事务阻断新发布并恢复旧版，以及活动文件被破坏后仍能显式回滚。报告分别位于 `tmp/publish-check/20261017T170533-8t6bzrqd/report.json` 与 `tmp/publish-check/20261017T170533-r8km6feu/report.json`。回滚验证目标旧版本完整性，不让损坏的当前版本阻断恢复；生产 CSP 预检同时覆盖当前和候选脚本哈希。
+
+`publish-test-6` 退出 0，13 类发布集成检查通过，报告 `tmp/publish-check/20261017T170533-c3txdahi/report.json`；另验证队列在已生效后恢复回执，并拒绝同版本号但元数据不同的重复包。

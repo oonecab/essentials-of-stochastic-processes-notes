@@ -67,7 +67,10 @@ def package(release_id):
         p.unlink(missing_ok=True)
         write_archive(stage / 'site.tar.gz', blobs)
         metadata = {'schema_version': 2, 'builder': 'Astro static 7.4.0', 'release_id': release_id,
-            'domain': 'notes.zzzping.top', 'files': rows, 'total_bytes': sum(r['bytes'] for r in rows),
+            'domain': 'notes.zzzping.top',
+            'source_commit': subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
+            'source_tree_dirty': bool(subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip()),
+            'toolchain': {'node':'24.21.0','pnpm':'11.21.0','astro':'7.4.0'}, 'files': rows, 'total_bytes': sum(r['bytes'] for r in rows),
             'html_pages': len(scans), 'reading_pages': 54, 'local_references_checked': refs,
             'archive_sha256': hashlib.sha256((stage/'site.tar.gz').read_bytes()).hexdigest(),
             'inline_script_csp_sources': hashes, 'inline_script_syntax_check': 'pass',

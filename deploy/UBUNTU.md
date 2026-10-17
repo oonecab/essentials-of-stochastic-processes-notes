@@ -60,6 +60,6 @@ Nginx 日志可沿用发行版 logrotate；若安装提供的 `reading-notes.log
 sudo -u reading-notes /usr/local/lib/reading-notes/deploy/scripts/publish.sh --rollback YYYYMMDDTHHMMSS
 ```
 
-因断电或 SIGKILL 留下 `.publish-transaction.json` 时，新发布会拒绝继续；检查日志后执行 `publish.sh --recover` 恢复日志记载的原版本。若旧版服务重载也失败，日志和事务记录保留，先排查配置再恢复。构建被强杀时同理检查 `tmp/reading-notes-migration/build.lock/owner.json` 的进程是否已退出，然后只移除这个失效锁目录，不删除构建基线。
+因断电或 SIGKILL 留下 `.publish-transaction.json` 时，新发布会拒绝继续；检查日志后执行 `publish.sh --recover` 恢复日志记载的原版本。若旧版服务重载也失败，日志和事务记录保留，先排查配置再恢复。显式 rollback 只要求目标旧版本验证通过，因此当前版本的文件损坏不会阻断恢复。队列进程在成功发布后、移动回执前中断时，下次会校验已生效的同版身份后完成回执，不重复覆盖。构建被强杀时同理检查 `tmp/reading-notes-migration/build.lock/owner.json` 的进程是否已退出，然后只移除这个失效锁目录，不删除构建基线。
 
 本地演练使用 `tools/test_static_publish.py --release-dir deploy/portal-releases/<id>`，真实执行 SHA、rsync、锁、原子 rename、临时 Nginx HTTPS/HTTP 和故障回滚。`publish.sh --dry-run --root <临时目录>` 也实际写入临时 release，但没有 service hook 时明确跳过服务动作，不代表生产验收。完整线上验收用 `deploy/verify_portal.py --release-dir <本地包> --origin https://notes.zzzping.top --output <私有报告>`，并实际检查桌面/手机页面、深链及公式。此任务没有执行远端发布、DNS、证书安装或生产回滚。

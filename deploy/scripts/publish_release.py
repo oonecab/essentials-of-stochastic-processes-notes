@@ -97,9 +97,10 @@ def main():
     previous = os.readlink(current) if current.is_symlink() else None
     previous_meta = None
     if previous:
-        if not re.fullmatch(r'releases/\d{8}T\d{6}', previous) or not (root/previous).is_dir():
+        if not re.fullmatch(r'releases/\d{8}T\d{6}', previous) or ((not a.recover and not a.rollback) and not (root/previous).is_dir()):
             raise ValueError('Untrusted or broken current')
-        previous_meta = verified(root/previous)
+        if not a.rollback and not a.recover:
+            previous_meta = verified(root/previous)
     journal = root/'.publish-transaction.json'
 
     def service(action):

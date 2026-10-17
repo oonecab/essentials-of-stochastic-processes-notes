@@ -107,6 +107,13 @@ def check_coverage(texts, source, exercises, chapters):
 def structure():
     manifest, source = load('notes/source_manifest.json'), load('notes/source_inventory.json')
     exercises = load('notes/exercise_manifest.json')['exercises']
+    reading_review = load('review/source-reading.json')
+    for name, inventory in [('items', source['items']), ('exercises', exercises)]:
+        rows = reading_review[name]
+        require(len(rows) == len(inventory) and {r['anchor'] for r in rows} == {r['anchor'] for r in inventory},
+                'review does not match source anchors: ' + name)
+        require(len({r['review'] for r in rows}) == len(rows), 'repeated review placeholder: ' + name)
+        require(all(len(r['review']) >= 16 and '论证见对应题目' not in r['review'] for r in rows), 'generic review placeholder')
     require(manifest['source_pdf']['pages'] == 256 and len(manifest['chapters']) == 6, 'edition identity changed')
     require([c['source_exercise_count'] for c in manifest['chapters']] == [25, 32, 30, 28, 28, 27], 'source chapter totals changed')
     require(manifest['publication']['include_source_pdf'] is False, 'full source PDF is outside publication scope')

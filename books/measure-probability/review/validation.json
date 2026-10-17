@@ -839,10 +839,10 @@
     "review/README.md": "2b49798a6e54ebc1c6e293ed55c6eda13a8362ecf1ea5cfa4993ec4b6a9ce14c",
     "review/history/20261017-first-batch-source-reading.json": "ce12a90eead4af5dd906dc7b5186c65e617103ec69338bad29f5364900e9968e",
     "review/history/20261017-first-batch-validation.json": "017c0f6cbf2dfc479f99a248eb06a41dd39f771fc0a6b71f8ada1335cbf0a58a",
-    "review/source-reading.json": "8c1c3ea7bcff226f63254d4140ca1ab262435770098fb8f36938a5610721c7d7",
+    "review/source-reading.json": "b38137f3ff6fab67aaee56e34ac46698ccece3150ac998f51253c6798f9ff825",
     "tools/check_integrals.py": "0743c00c140aa1773e018ec1b8651b00450469932c5587194fcd4b20cc3401df",
     "tools/check_models.py": "c9071293686062c1643400fab67b53afa6a04a75e959784c9d9647056299697b",
-    "tools/check_notes.py": "0e0b1d7178f4654c4f49a7ae04f426ee2f249ba99280dceffcf739fe3f24949f",
+    "tools/check_notes.py": "6ad0c5f462a96bac63e6affabd16add722bc8cc4c3d22ea3272c66422421237b",
     "tools/sync_code.py": "ea77e65f6fef389f5bcc274dcd926317e3f0c53f6dfbfac1beb069d0b0c9a0cc",
     "review/final-assessment.json": "2830ceb344422c19ecc7acc246515a45010dc101f513b28a137c81854fcbc915",
     "tools/check_excerpts.py": "62466881d33533c8f9d9617afc8f30edd9df5c437c61c922c00101af20c70a50",
@@ -1175,6 +1175,39 @@
           "current_sha256": "2830ceb344422c19ecc7acc246515a45010dc101f513b28a137c81854fcbc915"
         }
       ]
+    },
+    {
+      "issue": "I032",
+      "reason": "P1-9 147 项内容与 35 题的具体读回记录；保留另 80 题历史具体记录",
+      "changes": [
+        {
+          "file": "review/source-reading.json",
+          "previous_sha256": "8c1c3ea7bcff226f63254d4140ca1ab262435770098fb8f36938a5610721c7d7",
+          "current_sha256": "56a90d83c6a18089a7290d1cb15b517c964074621a9a354f0d45782baf960755"
+        }
+      ]
+    },
+    {
+      "issue": "I032",
+      "reason": "P1-9 审阅锚点和占位文本回归门禁",
+      "changes": [
+        {
+          "file": "tools/check_notes.py",
+          "previous_sha256": "0e0b1d7178f4654c4f49a7ae04f426ee2f249ba99280dceffcf739fe3f24949f",
+          "current_sha256": "6ad0c5f462a96bac63e6affabd16add722bc8cc4c3d22ea3272c66422421237b"
+        }
+      ]
+    },
+    {
+      "issue": "I032",
+      "reason": "P1-9 门禁发现并补足习题 3.14 两小问的具体审阅点",
+      "changes": [
+        {
+          "file": "review/source-reading.json",
+          "previous_sha256": "56a90d83c6a18089a7290d1cb15b517c964074621a9a354f0d45782baf960755",
+          "current_sha256": "b38137f3ff6fab67aaee56e34ac46698ccece3150ac998f51253c6798f9ff825"
+        }
+      ]
     }
   ],
   "current_content_review": {
@@ -1187,5 +1220,14 @@
     "worked_examples": 7,
     "definition_notes": 14,
     "meaning": "完整例题与定义性短说明分开记录，不能笼统称 21 例都有完整过程"
+  },
+  "I032_readback": {
+    "items": 147,
+    "exercise_records": 115,
+    "new_exercise_readbacks": 36,
+    "retained_specific_exercise_records": 79,
+    "record": "review/source-reading.json",
+    "boundary": "本轮逐项正文逻辑读回与前次扫描记录分开；8 条核心摘录另逐句复核扫描图。",
+    "replaced_generic_exercise_records": 35
   }
 }

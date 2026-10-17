@@ -54,6 +54,8 @@ sudo -u reading-notes /usr/local/lib/reading-notes/deploy/scripts/publish.sh \
 
 Nginx 日志可沿用发行版 logrotate；若安装提供的 `reading-notes.logrotate`，先从发行版通配规则排除同名日志，避免重复轮转。tmpfiles 只创建目录，不清理版本。
 
+发布 unit 的 `ProtectSystem=strict` 保持启用。Ubuntu Nginx 的 `nginx -t` 会以写方式打开已有 `/run/nginx.pid`，因此 `ReadWritePaths` 单独列出这个 root 拥有的文件；发布用户仍受文件权限限制，只有受限 sudo helper 能完成检查。未列出该例外时，实机预检返回 `Read-only file system`。如果发行版使用不同 PID 路径，先核对有效 Nginx 配置，再精确调整该文件路径并重新执行 unit 内预检。
+
 回滚仍需持锁、验证旧版哈希，并实际 test/reload：
 
 ```sh

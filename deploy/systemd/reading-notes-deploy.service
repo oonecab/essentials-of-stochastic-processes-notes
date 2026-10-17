@@ -13,7 +13,9 @@ TimeoutStartSec=15min
 PrivateTmp=true
 ProtectSystem=strict
 ProtectHome=true
-ReadWritePaths=/srv/reading-notes /var/spool/reading-notes /var/log/nginx
+# nginx -t opens its existing PID file even when only validating configuration.
+# Keep the exception at this root-owned file; the publisher still cannot write it.
+ReadWritePaths=/srv/reading-notes /var/spool/reading-notes /var/log/nginx /run/nginx.pid
 StandardOutput=journal
 StandardError=journal
 # NoNewPrivileges is intentionally omitted: the fixed sudo helper tests/reloads Nginx.

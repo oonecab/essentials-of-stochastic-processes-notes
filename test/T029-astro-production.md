@@ -13,3 +13,5 @@
 - 已保存旧配置/current/版本及可执行恢复步骤；Nginx 配置检查失败不得留下错误配置；其他虚拟主机状态保持。
 
 执行报告写入被忽略的 deploy/reports/<release-id>/；验收完成后在本文件追加命令、退出码及证据路径。此前 macOS 故障注入证据仍见 T028，不将其冒充 Ubuntu 故障演练。
+
+实机反例：2026-10-17 在与发布 unit 相同的沙箱中运行受限 helper，旧 unit 的 `nginx -t` 因 `/run/nginx.pid` 为只读挂载而退出 1；旧站未切换。修订仅为 root 拥有的 PID 文件增加 `ReadWritePaths`，不开放整个 /run，不改变文件属主或权限。修订前日志保存为 `systemd-preflight.log` 与 journal 摘录，修订后以相同预检及真实发布服务验收。

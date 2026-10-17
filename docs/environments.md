@@ -10,11 +10,13 @@
 - 本地预览：Python 静态 HTTP 服务，绑定 127.0.0.1
 - 正式阅读站点：notes.zzzping.top，Nginx + TLS；部署步骤见 deploy/README.md
 - Ubuntu reading-notes-deploy.service 已安装并以 reading-notes 用户完成一次性发布；deploy timer 保持 disabled，构建服务模板留给独立构建主机
+- 宿主机历史 MySQL 服务及数据已于 2026-10-17 按 I030 卸载；mailutils 依赖的 mysql-common 与 libmysqlclient21 保留为共享客户端组件
 
 ## 端口与端点
 
 - 本地预览默认 8000，仅 127.0.0.1；可用 --port 指定
 - 生产 Nginx 80 / 443；HTTPS 已验收，源站 HTTP 返回 301，当前公网 HTTP 返回 403（见 I029）
+- 原 MySQL 3306 / 33060 监听已随 I030 服务卸载关闭
 
 本文件严禁写入凭据或生产数据。`.env.example` 必须与环境变量名清单同步。
 <!-- project-governance:managed:end -->

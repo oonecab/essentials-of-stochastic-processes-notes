@@ -21,7 +21,7 @@
 - 14 项服务/数据/专属配置路径均已消失，mysql unit 为 not-found，mysqld 进程、系统 mysql 账号和 3306/33060 监听均不存在。
 - dpkg --audit、apt-get check、nginx -t 均退出 0；Nginx 32 份配置哈希、四个 current、源站状态与操作前一致。运行服务只减少 mysql.service。
 - 公网 Reading Notes 首页及五书入口均 200；五书入口与原 dist 内容哈希一致。SICP 跟随重定向为 200，com 为既有 401 鉴权。
-- 旧独立 weiss 域名普通 DNS 查询失败；指定公网 IP、保持证书和主机名验证后为 200。该 DNS 状态本轮未修改，不能据此声称正常域名访问通过。
+- 旧独立 weiss 域名普通 DNS 查询未返回地址；指定公网 IP、保持证书和主机名验证后为 200。项目所有者随后确认该域名已停用并删除解析，这一观测符合退役状态；正式入口为 Reading Notes 主站中的 Weiss 页面，已在五书入口核查中通过。
 - 本地 curl 路径出现 TLS 错误，Python 直接 TLS 请求和服务器端 curl 交叉验证完成；原失败结果保留。停止服务后本地 TCP connect 仍可被中间网络接受，但没有 MySQL 握手，因此不以 TCP connect 单项判定服务存活；服务器监听为空，服务器到公网 IP 的 3306 为拒绝连接、33060 超时。
 - 根分区可用空间净增 400,457,728 字节（381.91 MiB），使用率由 37% 降至 36%；内存可用量前后为 524,902,400 / 1,286,217,728 字节，属于全机瞬时观测。
 - `python3 tools/project.py check --quick` 退出 0，11 项通过；报告为 tmp/project-check/20261017T191008-pybv6q42/report.json。

@@ -1,0 +1,22 @@
+[Unit]
+Description=Build and independently check Reading Notes static release (build host only)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=reading-notes-build
+Group=reading-notes
+WorkingDirectory=/opt/reading-notes-builder
+Environment=ASTRO_TELEMETRY_DISABLED=1
+Environment=PATH=/opt/node/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=/opt/reading-notes-builder/deploy/scripts/build-job.sh
+UMask=0002
+TimeoutStartSec=45min
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/reading-notes-builder /var/spool/reading-notes/ready /var/lock/reading-notes
+StandardOutput=journal
+StandardError=journal

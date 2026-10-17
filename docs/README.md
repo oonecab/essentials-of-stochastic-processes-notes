@@ -38,3 +38,6 @@
 - [测度论与概率论基础伴读](../books/measure-probability/README.md)：全书总览、序言与前言、前四章和 115 题；本批 [I024](../issues/I024-measure-probability-ch03-04.md) / [T024](../test/T024-measure-probability-ch03-04.md)，首批 [I023](../issues/I023-measure-probability.md)、[P023](../plan/P023-measure-probability.md)、[T023](../test/T023-measure-probability.md)、[M023](../milestone/M023-measure-probability.md)。
 
 - [Astro 静态构建决策](decisions/ADR-002-static-first-astro.md)：技术事实见 TECH.md，实施 [I028](../issues/I028-static-first-astro.md)，测试与停止条件 [T028](../test/T028-static-first-astro.md)。
+
+- [Astro 内容维护](astro-authoring.md)：受控源、旧检查镜像、冻结基线及分阶段证据。
+- [Ubuntu 静态发布](../deploy/UBUNTU.md)：安装、权限、不可变版本、原子切换与故障恢复。

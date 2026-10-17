@@ -1,0 +1,208 @@
+#!/usr/bin/env python3
+"""Locked, validated immutable release installation and atomic current switch."""
+import argparse
+import fcntl
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import shutil
+import signal
+import subprocess
+import sys
+import tempfile
+import uuid
+
+DEPLOY = Path(__file__).resolve().parents[1]
+ROOT = DEPLOY.parent
+sys.path[:0] = [str(DEPLOY), str(ROOT/'tools')]
+from public_policy import inspect, sums, POLICY
+from release_support import extract_release
+
+
+def identity(value):
+    if not re.fullmatch(r'\d{8}T\d{6}', value):
+        raise ValueError('Release ID must be YYYYMMDDTHHMMSS')
+    return value
+
+
+def verified(directory):
+    if directory.is_symlink():
+        raise ValueError('Release must be a real directory')
+    for name in ['release.json', 'SHA256SUMS']:
+        if (directory/name).is_symlink() or not (directory/name).is_file():
+            raise ValueError('Non-regular release metadata')
+    meta = json.loads((directory/'release.json').read_text())
+    identity(meta['release_id'])
+    if meta.get('publish_policy_sha256') != hashlib.sha256(POLICY.read_bytes()).hexdigest():
+        raise ValueError('Release allowlist version is not installed')
+    rows = inspect(directory/'site')
+    if rows != meta['files'] or (directory/'SHA256SUMS').read_text() != sums(rows):
+        raise ValueError('Release inventory or SHA256SUMS differs')
+    # GNU sha256sum on Ubuntu; macOS has shasum. Both validate the supplied list.
+    sha = shutil.which('sha256sum')
+    command = [sha, '-c', str(directory/'SHA256SUMS')] if sha else ['shasum', '-a', '256', '-c', str(directory/'SHA256SUMS')]
+    subprocess.run(command, cwd=directory/'site', check=True, stdout=subprocess.DEVNULL)
+    return meta
+
+
+def atomic_link(root, target):
+    pending = root / ('.current-' + uuid.uuid4().hex)
+    try:
+        subprocess.run(['ln', '-sfn', target, str(pending)], check=True)
+        os.replace(pending, root/'current')
+        fd = os.open(root, os.O_RDONLY)
+        try:
+            os.fsync(fd)
+        finally:
+            os.close(fd)
+    finally:
+        pending.unlink(missing_ok=True)
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--root', type=Path, default=Path('/srv/reading-notes'))
+    mode = ap.add_mutually_exclusive_group(required=True)
+    mode.add_argument('--release-dir', type=Path)
+    mode.add_argument('--rollback', type=identity)
+    mode.add_argument('--recover', action='store_true')
+    ap.add_argument('--dry-run', action='store_true')
+    ap.add_argument('--service-hook', type=Path, help='Only for local dry-run; executable called with test/reload')
+    ap.add_argument('--lock-fd', type=int, help=argparse.SUPPRESS)
+    a = ap.parse_args()
+    root = a.root.resolve(strict=True)
+    if a.root.is_symlink() or not root.is_dir() or root == Path('/'):
+        raise ValueError('Unsafe root')
+    if a.dry_run and not (root.is_relative_to(ROOT/'tmp') or root.is_relative_to(Path(tempfile.gettempdir()).resolve())):
+        raise ValueError('Dry-run requires a temporary directory')
+    if not a.dry_run and (root != Path('/srv/reading-notes') or a.service_hook):
+        raise ValueError('Production uses the fixed root and installed root-owned service helper')
+    if a.service_hook:
+        a.service_hook = a.service_hook.resolve(strict=True)
+    lock_fd = a.lock_fd if a.lock_fd is not None else os.open(root/'.publish.lock', os.O_CREAT|os.O_RDWR|os.O_NOFOLLOW, 0o600)
+    try:
+        fcntl.flock(lock_fd, fcntl.LOCK_EX|fcntl.LOCK_NB)
+    except BlockingIOError:
+        print('Another publish holds the lock', file=sys.stderr)
+        return 75
+    releases = root/'releases'
+    if releases.is_symlink():
+        raise ValueError('Untrusted releases symlink')
+    releases.mkdir(exist_ok=True)
+    current = root/'current'
+    if current.exists() and not current.is_symlink():
+        raise ValueError('current must be a managed symlink')
+    previous = os.readlink(current) if current.is_symlink() else None
+    previous_meta = None
+    if previous:
+        if not re.fullmatch(r'releases/\d{8}T\d{6}', previous) or not (root/previous).is_dir():
+            raise ValueError('Untrusted or broken current')
+        previous_meta = verified(root/previous)
+    journal = root/'.publish-transaction.json'
+
+    def service(action):
+        if a.service_hook:
+            subprocess.run([str(a.service_hook), action], check=True)
+        elif not a.dry_run:
+            subprocess.run(['sudo', '-n', '/usr/local/sbin/reading-notes-nginx', action], check=True)
+
+    if a.recover:
+        data = json.loads(journal.read_text())
+        target = data['previous']
+        if target:
+            if not re.fullmatch(r'releases/\d{8}T\d{6}', target):
+                raise ValueError('Bad recovery target')
+            verified(root/target)
+            atomic_link(root,target)
+        else:
+            current.unlink(missing_ok=True)
+        if target:
+            service('test'); service('reload')
+        journal.unlink()
+        print(json.dumps({'status':'recovered','current':target}))
+        return 0
+    if journal.exists():
+        raise ValueError('Interrupted transaction: run --recover before publishing')
+    if a.rollback:
+        candidate = releases/a.rollback
+        meta = verified(candidate)
+        if meta['release_id'] != a.rollback:
+            raise ValueError('Rollback directory identity differs')
+    else:
+        source = a.release_dir.resolve(strict=True)
+        for n in ['release.json','SHA256SUMS','site.tar.gz']:
+            if (source/n).is_symlink() or not (source/n).is_file():
+                raise ValueError('Release package must contain regular files')
+        release_id = identity(json.loads((source/'release.json').read_text())['release_id'])
+        candidate = releases/release_id
+        if candidate.exists() or candidate.is_symlink():
+            raise ValueError('Immutable release already exists: '+release_id)
+        with tempfile.TemporaryDirectory(prefix='.unpack-', dir=root) as temp:
+            unpack = Path(temp)
+            meta = extract_release(source, unpack/'site')
+            for name in ['release.json','SHA256SUMS']:
+                shutil.copyfile(source/name,unpack/name)
+            verified(unpack)
+            for value in meta['inline_script_csp_sources']:
+                if not re.fullmatch(r"'sha256-[A-Za-z0-9+/]{43}='", value):
+                    raise ValueError('Invalid CSP source')
+            (unpack/'nginx-static.inc').write_text((DEPLOY/'nginx/static.inc.template').read_text().replace('@@SCRIPT_SOURCES@@',' '.join(meta['inline_script_csp_sources'])))
+            incoming = releases/('.incoming-'+uuid.uuid4().hex)
+            incoming.mkdir()
+            try:
+                subprocess.run(['rsync','-rlt','--',str(unpack)+'/',str(incoming)+'/'],check=True)
+                verified(incoming)
+                for p in incoming.rglob('*'):
+                    p.chmod(0o555 if p.is_dir() else 0o444)
+                incoming.rename(candidate)
+                candidate.chmod(0o555)
+            except BaseException:
+                # Keep any partially copied candidate out of current; operator may inspect it.
+                raise
+    if not a.dry_run:
+        installed = Path('/etc/nginx/snippets/reading-notes-static.inc').read_text()
+        required_sources = set(meta['inline_script_csp_sources']) | set((previous_meta or {}).get('inline_script_csp_sources', []))
+        if not all(s in installed for s in required_sources):
+            raise ValueError('New scripts require an administrator-reviewed CSP snippet update')
+    target = 'releases/'+meta['release_id']
+    journal.write_text(json.dumps({'previous':previous,'candidate':target})+'\n')
+    with journal.open('rb') as f:
+        os.fsync(f.fileno())
+    switched = False
+    def interrupted(signum, frame):
+        raise RuntimeError('Publish interrupted by signal '+str(signum))
+    signal.signal(signal.SIGTERM, interrupted)
+    signal.signal(signal.SIGINT, interrupted)
+    try:
+        atomic_link(root,target)
+        switched = True
+        service('test')
+        service('reload')
+    except BaseException as error:
+        if switched:
+            if previous:
+                atomic_link(root,previous)
+            else:
+                current.unlink(missing_ok=True)
+        rollback_error = None
+        if previous:
+            try:
+                service('test'); service('reload')
+            except BaseException as failure:
+                rollback_error = str(failure)
+        if not rollback_error:
+            journal.unlink(missing_ok=True)
+        print(json.dumps({'status':'failed','restored_current':previous,
+                          'error':str(error),'rollback_service_error':rollback_error}), file=sys.stderr)
+        return 1
+    journal.unlink()
+    print(json.dumps({'status':'passed','mode':'dry-run' if a.dry_run else 'publish',
+                      'release_id':meta['release_id'],'current':target,'previous':previous,
+                      'service_validation':'hook' if a.service_hook else ('skipped' if a.dry_run else 'nginx/systemd')}))
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

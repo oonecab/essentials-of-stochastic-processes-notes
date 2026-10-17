@@ -1,0 +1,13 @@
+/var/log/nginx/reading-notes.*.log {
+    daily
+    rotate 14
+    compress
+    delaycompress
+    missingok
+    notifempty
+    sharedscripts
+    create 0640 www-data adm
+    postrotate
+        /usr/bin/systemctl kill --kill-whom=main --signal=USR1 nginx.service >/dev/null 2>&1 || true
+    endscript
+}

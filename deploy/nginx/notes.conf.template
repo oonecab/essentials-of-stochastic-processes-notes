@@ -1,0 +1,18 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name notes.zzzping.top;
+    location ^~ /.well-known/acme-challenge/ { root /var/lib/letsencrypt; }
+    location / { return 301 https://notes.zzzping.top$request_uri; }
+}
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name notes.zzzping.top;
+    ssl_certificate /etc/letsencrypt/live/notes.zzzping.top/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/notes.zzzping.top/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    access_log /var/log/nginx/reading-notes.access.log;
+    error_log /var/log/nginx/reading-notes.error.log;
+    include /etc/nginx/snippets/reading-notes-static.inc;
+}

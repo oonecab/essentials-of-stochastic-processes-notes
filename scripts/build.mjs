@@ -13,6 +13,15 @@ if (process.versions.node !== '24.21.0') throw new Error('Build requires pinned 
 const shell = process.argv.includes('--shell');
 const stage = path.join(root, 'tmp/reading-notes-migration');
 fs.mkdirSync(stage, { recursive: true });
+const lock=path.join(stage,'build.lock');
+try { fs.mkdirSync(lock); } catch (error) { throw new Error('Build already running or interrupted; inspect tmp/reading-notes-migration/build.lock before recovery', {cause:error}); }
+fs.writeFileSync(path.join(lock,'owner.json'),JSON.stringify({pid:process.pid}));
+process.on('exit',()=>fs.rmSync(lock,{recursive:true,force:true}));
+process.on('SIGINT',()=>process.exit(130));
+process.on('SIGTERM',()=>process.exit(143));
+const releaseIndex=process.argv.indexOf('--release-id');
+const releaseId=releaseIndex<0?null:process.argv[releaseIndex+1];
+if(releaseIndex>=0 && (!/^\d{8}T\d{6}$/.test(releaseId??'') || shell)) throw new Error('Invalid release build');
 fs.writeFileSync(path.join(stage, 'build-state.json'), JSON.stringify({ shell }));
 const start = performance.now();
 function run(command,args) {
@@ -46,6 +55,7 @@ const routes=['index.html',...pages.map(p=>p.metadata.route)];
 inlineAssets(target,routes.map(r=>path.join(target,r)));
 for(const route of routes){const issues=offlineDependencies(fs.readFileSync(path.join(target,route),'utf8'));if(issues.length)throw new Error(`${route}: ${issues.join(', ')}`);}
 if(!shell){
+  run('python3',['deploy/public_policy.py',target,'--transform','--sums',path.join(stage,'dist-SHA256SUMS')]);
   verifyParity(target);
   const previous=path.join(stage,'previous-dist');fs.rmSync(previous,{recursive:true,force:true});
   if(fs.existsSync(path.join(root,'dist')))fs.renameSync(path.join(root,'dist'),previous);
@@ -53,4 +63,5 @@ if(!shell){
 }
 const report = { status: 'passed', mode: shell?'empty_scaffold':'book_migration', books:[...new Set(pages.map(p=>p.metadata.book))],pages:pages.length,seconds: (performance.now()-start)/1000, output: shell?path.relative(root,target):'dist' };
 fs.writeFileSync(path.join(stage, shell?'scaffold-build.json':'build.json'), JSON.stringify(report,null,2)+'\n');
+if(releaseId)run('python3',['deploy/build_astro.py','--package-dist','--release-id',releaseId]);
 console.log(JSON.stringify(report));

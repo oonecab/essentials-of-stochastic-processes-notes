@@ -19,7 +19,7 @@
 
 ## 本项目规则职责
 
-教材陈述、例题、公式和推导由对应正式 HTML 维护；计算实现与数值接口由各书源码/正文及运行说明维护。跨书规则由本目录登记，教材模型保持在对应正文中。
+教材陈述、例题、公式和推导由 src/content/books 中的受控 HTML 维护，原 books 章节路径是同步的检查/阅读镜像，具体流程见 [Astro 内容维护](../astro-authoring.md)；计算实现与数值接口由各书源码/正文及运行说明维护。跨书规则由本目录登记，教材模型保持在对应正文中。
 
 跨书的来源核对、全书规划、伴读方法、题解、代码与阅读验收采用 [RN-001 读书笔记共同标准](../reading-notes-standard.md)（v1，2026-10-14）。[新书接入](../adding-a-book.md)与[模板](../templates/reading-notes/README.md)引用该标准；以下各书文件补充本书模型、范围和具体约定，既有更细要求继续生效。
 
@@ -56,3 +56,5 @@ CS:APP 全书解释复核见 [I018](../../issues/I018-csapp-explanations.md) / [
 视觉群论第 5—8 章规则入口：[置换次序、元素阶与 Cayley 定理](../../books/visual-group-theory/notes/chapter05_five_families.html#s5-4)，[左右陪集与有限群计数](../../books/visual-group-theory/notes/chapter06_subgroups.html#s6-4)，[商的良定义与半直积](../../books/visual-group-theory/notes/chapter07_products_and_quotients.html#s7-3)，[同态、核像、有限阿贝尔群分解](../../books/visual-group-theory/notes/chapter08_homomorphisms.html#s8-2)。原题条件及校注在这些正式页维护；设计与独立回归见 [T024](../../test/T024-visual-group-theory-ch05-08.md)，手读图/矩阵输入为书级 notes/structures_inputs.json。
 
 视觉群论第 9—10 章规则入口：[作用约定、轨道稳定子与 Sylow 定理](../../books/visual-group-theory/notes/chapter09_sylow_theory.html#s9-1)，[最小多项式、分裂域、自同构与反向对应](../../books/visual-group-theory/notes/chapter10_galois_theory.html#s10-5)，[根式可解性及有限域题解](../../books/visual-group-theory/notes/chapter10_galois_theory.html#s10-7)。原题条件和校注以正式页为准；独立源输入 `notes/sylow_galois_inputs.json`，验证设计见 [T025](../../test/T025-visual-group-theory-ch09-10.md)。
+
+2026-10-17 的 [I028](../../issues/I028-static-first-astro.md) 只改变构建及发布路径，教材计算规则、精度、题号和条件保持；逐字重建与 golden-master parity、原独立 Python 回归共同验证此边界。

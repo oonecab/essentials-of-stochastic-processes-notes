@@ -24,12 +24,13 @@ CS:APP 全书笔记已接入统一首页与构建：从首页点击“进入 CS:
 
 ```sh
 python3 tools/project.py doctor
+pnpm install --frozen-lockfile
 python3 tools/project.py serve
 ```
 
-访问 `http://127.0.0.1:8000/`，按 `Ctrl+C` 停止；端口可用 `--port 8080` 指定。已生成版本可使用 `serve --release-id YYYYMMDDTHHMMSS` 预览。原始 HTML 与发布页的样式转换分开维护，预览提供的是正式包中的页面。
+访问 `http://127.0.0.1:8000/`，按 `Ctrl+C` 停止；端口可用 `--port 8080` 指定。已生成版本可使用 `serve --release-id YYYYMMDDTHHMMSS` 预览。受控 HTML 与检查镜像的同步见 [Astro 维护说明](docs/astro-authoring.md)，预览提供正式包中的页面。
 
-Python 需要 3.10 或更高版本，项目脚本使用标准库。完整验证需要 Clang、Make 和 Poppler 的 `pdftotext` / `pdfinfo`；构建还需要 Node.js 检查页面脚本。`doctor` 检查工具是否可用，不会安装软件。网页服务器只提供静态文件。
+Python 需要 3.10 或更高版本，项目脚本使用标准库。完整验证需要 Clang、Make 和 Poppler 的 `pdftotext` / `pdfinfo`；构建使用固定 Node 24.21.0 LTS、pnpm 11.21.0 和 Astro 7.4.0；先运行 `pnpm install --frozen-lockfile`。`doctor` 检查工具是否可用，不会安装软件。网页服务器只提供静态文件。
 
 ```sh
 # 随机过程：编译或运行独立示例
@@ -64,7 +65,7 @@ AGENTS.md、CLAUDE.md、TECH.md     # Agent 入口与技术事实
 
 新增书籍按[接入步骤](docs/adding-a-book.md)，使用[阅读计划、书级约定和逐章审阅模板](docs/templates/reading-notes/README.md)：核实原书与覆盖清单，建立全书地图和序言，完成代表章并实际验收，然后分批写作、接入统一书架。可直接提出：“按项目 RN-001 标准接入这本书，资料在……，本次完成……。”共享 Agent 入口已把该标准列为必读。
 
-修改随机过程程序后执行 `python3 books/stochastic/tools/sync_code.py --write`，再运行检查。Weiss 的教学算法直接编辑正式 HTML，再提取验证；`books/weiss/c/` 保留原图例的 C 转换，两者的职责见子项目说明。VS Code 从本仓库根目录打开，使用 `.vscode/` 中的“调试指定图例”或“调试 TestKit 指定用例”。
+修改随机过程程序后执行 `python3 books/stochastic/tools/sync_code.py --write`，再运行检查。Weiss 的教学算法在受控章节 HTML 内维护，展开检查镜像后提取验证；`books/weiss/c/` 保留原图例的 C 转换，两者的职责见子项目说明。VS Code 从本仓库根目录打开，使用 `.vscode/` 中的“调试指定图例”或“调试 TestKit 指定用例”。
 
 ```sh
 # 快速检查：结构、链接、代码同步、当前审阅绑定
@@ -90,7 +91,7 @@ python3 tools/project.py build
 python3 tools/project.py build --release-id YYYYMMDDTHHMMSS
 ```
 
-统一包位于 `deploy/portal-releases/<release-id>/`，构建从 `books/catalog.json` 登记的五本书取源，不需要外部 Weiss 目录。发布路径分别为 `/stochastic/`、`/weiss/`、`/csapp/`、`/visual-group-theory/` 和 `/measure-probability/`；原有书籍的章节地址保持兼容。
+统一包位于 `deploy/portal-releases/<release-id>/`，Astro 从 `src/content/books/` 构建登记的五本书，原 Python 检查继续读取同步镜像。发布路径分别为 `/stochastic/`、`/weiss/`、`/csapp/`、`/visual-group-theory/` 和 `/measure-probability/`；原有书籍的章节地址保持兼容。
 
 包内包括站点归档、逐文件 SHA-256、版本清单和本版 CSP 对应的 Nginx 配置。服务器采用独立 `releases/<release-id>` 目录与 `current` 原子切换；回滚同时恢复站点链接与该版本的配置。完整步骤、证书维护、验收边界及回滚命令见[部署说明](deploy/README.md)。
 

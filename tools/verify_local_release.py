@@ -41,9 +41,10 @@ def main() -> int:
         reserved.bind(("127.0.0.1", 0))
         port = reserved.getsockname()[1]
     static = (release / "nginx-static.inc").read_text()
-    if static.count("root /var/www/notes.zzzping.top/current;") != 1:
+    root_line = "root /srv/reading-notes/current/site;" if metadata.get("schema_version") == 2 else "root /var/www/notes.zzzping.top/current;"
+    if static.count(root_line) != 1:
         raise ValueError("Unexpected static root; refusing to start the local server")
-    static = static.replace("root /var/www/notes.zzzping.top/current;", f'root "{work / "site"}";')
+    static = static.replace(root_line, f'root "{work / "site"}";')
     (work / "static.inc").write_text(static)
     config = work / "nginx.conf"
     config.write_text(f'''worker_processes 1;

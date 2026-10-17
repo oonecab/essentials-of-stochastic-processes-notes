@@ -1,0 +1,9 @@
+#!/bin/sh
+# Install root-owned mode 0755. Accept no config path or arbitrary command.
+set -eu
+[ "$#" -eq 1 ] || exit 2
+case "$1" in
+  test) exec /usr/sbin/nginx -t ;;
+  reload) exec /usr/bin/systemctl reload nginx ;;
+  *) exit 2 ;;
+esac

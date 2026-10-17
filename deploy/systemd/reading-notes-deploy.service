@@ -1,0 +1,19 @@
+[Unit]
+Description=Publish a checked immutable Reading Notes release
+After=nginx.service
+Requires=nginx.service
+
+[Service]
+Type=oneshot
+User=reading-notes
+Group=reading-notes
+ExecStart=/usr/local/lib/reading-notes/deploy/scripts/deploy-job.py
+UMask=0022
+TimeoutStartSec=15min
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/srv/reading-notes /var/spool/reading-notes /var/log/nginx
+StandardOutput=journal
+StandardError=journal
+# NoNewPrivileges is intentionally omitted: the fixed sudo helper tests/reloads Nginx.

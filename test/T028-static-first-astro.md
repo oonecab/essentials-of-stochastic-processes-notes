@@ -42,3 +42,9 @@ Weiss 原样导入的 SVG 含 8529 处原有行尾空白，`git show --check 1e1
 CS:APP 批次 Go：14 页 / 419 道原书题 + 36 道自测，656 MathML / 50 SVG / 114 陈述。原正文、数学、链接和脚本 parity 差异为 0；每页单独登记新增 deep-link-settle 导航岛，HTML 合计 2812864 字节、JS 88830 字节，最高比例 1.10252。`csapp-build-4`（40.200 秒）、`csapp-parity-final`、`csapp-offline-4`、`csapp-python`、`csapp-node-tests-final` 退出 0；独立报告 `tmp/project-check/20261017T163622-tcal2v6u/report.json`。实际查看全部首屏与各章题解截图；56 个 JS 和 14 个 no-JS 视图通过。
 
 CS:APP 中间失败均留档：继承的页尾深链在 details 展开增加文档高度后，目录可能仍停上一节；增加稳定等待仍能复现，最终新增两帧后重新定位的独立小岛，未改变原脚本。迁移 parity 只分离逐字节核验的新增岛，其他脚本仍严格比较，新增反例测试拒绝缺失、变更或错误书籍的岛。浏览驱动不支持 Browser.getVersion，改采实际 navigator.userAgent；一次 Astro 打包路径解析错误改为构建根路径后通过。原 CS:APP 12.39 的代理浏览器实验边界保持，不由页面迁移验收替代。
+
+发布层首次完整通过：`phase6-build-2` 退出 0，包 `20261017T170533`；303 文件 / 74 HTML，其中 54 正式阅读页，28,771,319 字节。白名单的 37 个历史 JSON URL 输出固定摘要，正文不变；两份授权 PDF 加固定 SHA 校验。`publish-test-3` 退出 0，报告 `tmp/publish-check/20261017T170533-nia0s55d/report.json`，10 类检查包含真实 SHA/rsync/flock、不可覆盖、原子链接、实际 Nginx test/reload、配置失败与重载失败自动恢复。HTTPS 验收 298 个非重定向文件、15 个旧路由、两个 PDF 范围，另验 HTTP 跳转、gzip、ETag 304、HSTS、内部 symlink 拒绝。
+
+最初两次发布演练失败日志 `publish-test.log`、`publish-test-2.log` 保留：macOS 不允许重命名已经只读的候选根目录，改为先改名再冻结权限；测试中的 HTTP 端口变量遮蔽模块名，修正命名。失败候选从未进入 current。归档旧部署说明时相对链接错误由原结构检查检出，调整归档链接后 `governance-quick-2` 退出 0。
+
+新增 `tools/check_astro_records.py` 使用 Python 独立展开受控源、比较冻结 Git 字节、检查所有当前文档和迁移审阅绑定；原 13 个全量命令保持，并追加这一项。完整发布集成测试的 Linux 分支与 systemd 运行需在 Ubuntu 上另验，本机运行平台是 macOS。

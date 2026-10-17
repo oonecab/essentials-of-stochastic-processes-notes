@@ -22,7 +22,7 @@
 ### 框架与核心库
 
 - Python 标准库独立检查
-- Astro 7.4.0 静态构建；受控 HTML 与局部交互（迁移实施中，见 ADR-002）
+- Astro 7.4.0 静态构建；受控 HTML 与局部交互（五书迁移已分批验收，见 ADR-002）
 
 ### 运行时与工具链
 
@@ -49,7 +49,7 @@
 
 ## 架构事实
 
-- books/catalog.json 登记书籍入口、目录和发布前缀；每本书保留一份全书总览及按章维护的独立 HTML。
+- books/catalog.json 登记书籍入口、目录和发布前缀；src/content/books/<book>/ 逐章维护受控 HTML，books/<book>/notes/*.html 保留为独立检查使用的兼容镜像。
 - 随机过程、CS:APP、视觉群论和测度概率以 code/ 下 C/Python 为维护源并同步 HTML；Weiss 教学代码以正式 HTML 为维护源，c/ 为原书图例的独立 C 实现。
 - 根目录工具统一调用各书既有校验器，输出写入被忽略的 tmp/ 或 deploy/portal-releases/。
 - 统一构建保留 /stochastic/、/weiss/、/csapp/ 并接入 /visual-group-theory/、/measure-probability/ URL；部署使用独立版本目录和 current 原子切换，同时维护本版 CSP。
@@ -70,6 +70,8 @@
 <!-- project-governance:managed:end -->
 
 ## 已确认的技术细节
+
+当前维护路径以本文末尾 Astro 状态及 docs/astro-authoring.md 为准。以下 I001–I027 对应历史批次，其中“沿用原工具链”“正式 HTML 维护源”等措辞描述当时实现；其教材范围、模型与程序证据继续有效。
 
 每本书的实际目录和预期范围以 [books/catalog.json](books/catalog.json) 为准。源布局与发布布局分开：`books/<id>/` 保存维护源，归档使用 `<publish_prefix>/` 保持站点地址。共同命令依赖各书原检查器，不重新实现数学校验；压缩包只包含显式清单中的发布文件。各书保留原单书构建器，公共构建复用随机过程的确定性归档函数。
 
@@ -108,7 +110,7 @@ CS:APP 图表与导航复核见 [I019](issues/I019-csapp-visual-navigation.md) /
 | 2026-10-12 | 分散笔记目录和外部 Weiss 构建来源 → 同仓库书籍子项目、统一标准库工具入口 | 一次克隆包含维护与验证所需源，保留原代码维护源 | 发布 URL 保持，原 Weiss 目录及迁移前快照保留；无新前端框架 | [I001](issues/I001-project-merge.md) / [ADR-001](docs/decisions/ADR-001-book-subprojects.md) |
 | 2026-10-13 | 两书登记边界 → 增加 CS:APP 子项目和 /csapp/ 本地构建路由 | 复用静态 HTML、C11、Python 与既有 Poppler；显式区分机器模型和宿主执行 | 原两书 URL 与内容保持；新增目录和路由可独立回退；完整书籍 PDF 仅本地对照 | [I002](issues/I002-csapp-part-one.md) |
 
-| 2026-10-17 | 直接维护单文件 HTML → Astro 7.4.0 静态构建、Node 24.21.0 LTS 与 pnpm 11.21.0 | 共享布局与确定性内联，原数学片段保持；Python 继续独立验证 | 分批门禁实施中；保留旧 HTML、旧构建器与原 URL，生产仅 Nginx | [I028](issues/I028-static-first-astro.md) / [ADR-002](docs/decisions/ADR-002-static-first-astro.md) |
+| 2026-10-17 | 直接维护单文件 HTML → Astro 7.4.0 静态构建、Node 24.21.0 LTS 与 pnpm 11.21.0 | 共享布局与确定性内联，原数学片段保持；Python 继续独立验证 | 五书分批门禁通过；保留旧 HTML、旧构建器与原 URL，生产仅 Nginx | [I028](issues/I028-static-first-astro.md) / [ADR-002](docs/decisions/ADR-002-static-first-astro.md) |
 
 > 详细论证写入问题单或 ADR；本表保存可追踪索引，不得覆盖历史记录。
 
@@ -130,4 +132,6 @@ Carter《Visual Group Theory》在 `books/visual-group-theory/` 维护，全书�
 
 ## Astro 迁移状态
 
-构建架构选择见 [ADR-002](docs/decisions/ADR-002-static-first-astro.md)，当前实施与证据见 [I028](issues/I028-static-first-astro.md) / [T028](test/T028-static-first-astro.md)。固定版本由 package.json、pnpm-lock.yaml 和 .node-version 约束。本阶段先验收空壳，按书登记已迁移范围；既有正式 HTML 及审阅继续可用。
+构建架构选择见 [ADR-002](docs/decisions/ADR-002-static-first-astro.md)，当前实施与证据见 [I028](issues/I028-static-first-astro.md) / [T028](test/T028-static-first-astro.md)。固定版本由 package.json、pnpm-lock.yaml 和 .node-version 约束。五书 54 页及书架已迁移，保留 1434 道原书习题与 36 道自测；原数学与历史审阅保持。根 build 现在调用 deploy/build_astro.py → Node/Astro → Python 发布策略与确定性打包。dist 仅包含 allowlist 中的 303 个公开文件；旧审阅 JSON 的 37 个 URL 输出固定摘要，完整证据留在仓库。新增 CS:APP 定位岛独立登记，其余原脚本保持。
+
+新的 Ubuntu 模板采用 /srv/reading-notes/releases/<id>/site 与 current 原子切换，带 flock、SHA256、rsync、失败恢复、systemd 构建/发布单元和日志轮转。实际生产未部署；root 维护的 Nginx 配置与发布用户权限分离，CSP 更新需管理员审查。详见 deploy/UBUNTU.md。

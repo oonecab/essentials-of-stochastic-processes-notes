@@ -1,0 +1,8 @@
+[Unit]
+Description=Check the Reading Notes publication queue
+[Timer]
+OnBootSec=2min
+OnUnitInactiveSec=5min
+Unit=reading-notes-deploy.service
+[Install]
+WantedBy=timers.target

@@ -21,11 +21,12 @@ from release_support import extract_release
 
 def doctor() -> int:
     required = {"python3": "Python 3.10+", "clang": "C11 / ASan / UBSan", "make": "C 图例构建",
-                "pdftotext": "原书页码核对", "pdfinfo": "原书总页数核对", "node": "发布页内脚本语法检查"}
+                "pdftotext": "原书页码核对", "pdfinfo": "原书总页数核对", "node": "Node 24.21.0 LTS 静态构建", "pnpm": "pnpm 11.21.0 锁定依赖"}
     found = {name: shutil.which(name) is not None for name in required}
     optional = {name: shutil.which(name) is not None for name in ("nginx", "openssl")}
-    version_ok = sys.version_info >= (3, 10)
-    print(json.dumps({"python": sys.version.split()[0], "python_version_ok": version_ok,
+    versions = {n: subprocess.check_output([n, "--version"], text=True).strip() if found[n] else None for n in ("node", "pnpm")}
+    version_ok = sys.version_info >= (3, 10) and versions == {"node": "v24.21.0", "pnpm": "11.21.0"}
+    print(json.dumps({"python": sys.version.split()[0], "pinned_versions_ok": version_ok, "build_versions": versions,
                       "required": {name: {"purpose": required[name], "available": ok} for name, ok in found.items()},
                       "local_https_verification": optional}, ensure_ascii=False, indent=2))
     return 0 if all(found.values()) and version_ok else 1
@@ -74,6 +75,7 @@ def check(book_id: str, quick: bool, benchmarks: bool) -> int:
         if quick:
             command.append("--quick")
         commands.append(command)
+    commands.append([sys.executable, ROOT / "tools/check_astro_records.py"])
     report = {"status": "running", "book": book_id, "quick": quick, "benchmarks": benchmarks,
               "started_at": datetime.now(timezone.utc).isoformat(), "checks": []}
     evidence = run / "report.json"
@@ -110,7 +112,7 @@ def release_directory(release_id: str) -> Path:
 
 
 def build(release_id: str | None) -> Path:
-    command = [sys.executable, str(ROOT / "deploy/build_portal.py")]
+    command = [sys.executable, str(ROOT / "deploy/build_astro.py")]
     if release_id:
         command += ["--release-id", release_id]
     result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)

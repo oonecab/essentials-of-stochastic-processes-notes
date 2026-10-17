@@ -17,7 +17,7 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 from build_portal import Resources, Document, BOOKS, write_archive
-from public_policy import inspect, sums, POLICY
+from public_policy import inspect, sums, POLICY, static_include
 
 
 def package(release_id):
@@ -95,7 +95,7 @@ def package(release_id):
         (stage / 'navigation.json').write_text(json.dumps(navigation, ensure_ascii=False, indent=2)+'\n')
         (stage / 'SHA256SUMS').write_text(sums(rows))
         (stage / 'archive.sha256').write_text(metadata['archive_sha256']+'  site.tar.gz\n')
-        (stage / 'nginx-static.inc').write_text((ROOT/'deploy/nginx/static.inc.template').read_text().replace('@@SCRIPT_SOURCES@@',' '.join(hashes)))
+        (stage / 'nginx-static.inc').write_text(static_include((ROOT/'deploy/nginx/static.inc.template').read_text(), hashes))
         (stage / 'nginx-notes.zzzping.top.conf').write_bytes((ROOT/'deploy/nginx/notes.conf.template').read_bytes())
         stage.rename(out)
     return {'release_id': release_id, 'directory': str(out), 'files': len(rows),

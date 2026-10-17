@@ -52,3 +52,9 @@
 ### P2-4/P2-5 范围与第一批 MathML 文本
 
 六个页面标题、README、书目与地图统一标注“前四章伴读”，原书六章路线保留，第 5/6 章分别 28/27 题明确待续。本轮不扩写这两章。10 个核心公式人工编写 aria-label 和 text/plain annotation；原 presentation MathML 子树的字节哈希保持，检查器同时验证名称、注释与原子树。`pnpm build`/54 页 parity/CSP 和结构检查通过，证据 `build-scope-accessibility.log`、`scope-structure.json`。其余公式留待后续批次，未声称真实屏幕阅读器朗读验收已完成；本批浏览器渲染将在最终阅读检查核对。
+
+### P1-3 完整新书空跑与发布边界补核
+
+`tools/test_new_book_build.py` 在独立 Git 副本新增 dummy 两页，删除兼容 HTML 后完成真实 `pnpm build --release-id ...`。结果为 56 个阅读页、77 个公开 HTML、307 文件、0 DOM 差异；两份镜像自动再生，Python checker、CSP 浏览器和精确发布清单均通过，Nginx 入口自动包含 dummy。报告 `tmp/new-book-build/run-t18sk7nw/report.json`（汇总 `tmp/final-assessment/new-book-build.json`）。这补足了此前只做 entries/mirrors fixture 的证据边界。正式仓库仍为五书 54/74 页。
+
+冻结的 `reader_views.py` 保留，目录适配层承接新增书与测度范围标签。新书和新页可登记各自 Git 原始快照，避免假装它们存在于 I028。发布器在 production 的正常、回滚、恢复和清理路径再次验证整棵已安装 release 的 root 属主和只读权限；本机权限策略测试 6 项通过。生产配置仍由运维应用并实机验收。

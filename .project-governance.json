@@ -55,7 +55,7 @@
     ],
     "test": [
       "python3 tools/project.py check",
-      "node --test scripts/parity.test.mjs",
+      "pnpm test",
       "pnpm check:parity",
       "pnpm check:offline"
     ],

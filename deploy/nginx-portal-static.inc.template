@@ -26,7 +26,7 @@ location ~ (^|/)\. {
     return 404;
 }
 
-location ~ ^/(?<book_entry>stochastic|weiss|csapp|visual-group-theory|measure-probability)(/|/index\.html)?$ {
+location ~ ^/(?<book_entry>@@BOOK_PREFIXES@@)(/|/index\.html)?$ {
     if ($request_method !~ ^(GET|HEAD)$) { return 403; }
     return 301 /$book_entry/notes/book_overview.html$is_args$args;
 }

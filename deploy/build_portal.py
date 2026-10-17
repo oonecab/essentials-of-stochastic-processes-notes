@@ -20,16 +20,17 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
-from catalog import load_books
+from catalog import load_books, local_path
 BOOKS = load_books()
 STOCHASTIC = BOOKS['stochastic']['root']
 sys.path.insert(0, str(STOCHASTIC / 'tools'))
 sys.path.insert(0, str(STOCHASTIC / 'deploy'))
 from html_support import Document, check_resources
 from build_release import INDEX, write_archive
-from reader_views import BOOKS as READER_BOOKS, EXTERNAL_LINKS, build_reader_views, transform_reading_page
-if set(BOOKS) != set(READER_BOOKS) or any(book['publish_prefix'] != key for key, book in BOOKS.items()):
-    raise ValueError('Book registry changed: extend the reader views, routing and release checks before publishing')
+from reader_views import EXTERNAL_LINKS
+from publication import FROZEN_BOOKS, configure, build_reader_views, transform_reading_page, entry_page, add_catalog_links
+from public_policy import load_policy, static_include
+configure(BOOKS)
 
 
 class Resources(HTMLParser):
@@ -113,7 +114,7 @@ def main():
 
     weiss = BOOKS['weiss']['root']
     weiss_pages = sorted((weiss / 'notes').glob('*.html'))
-    if len(weiss_pages) != 13:
+    if len(weiss_pages) != BOOKS['weiss']['expected_pages']:
         raise ValueError('Expected the Weiss overview and twelve chapters')
     checker = import_checker(weiss / 'notes/tools/check_notes.py')
     weiss_validation = checker.check([checker.Page(p) for p in weiss_pages])
@@ -172,6 +173,19 @@ def main():
             measure_paths.extend(measure_book / path for path in program['files'].values())
         for path in measure_paths:
             sources['measure-probability/' + path.relative_to(measure_book).as_posix()] = path
+    for name in BOOKS.keys() - FROZEN_BOOKS:
+        book = BOOKS[name]
+        checked = subprocess.run([sys.executable, local_path(book['root'], book['checker']), '--quick'],
+                                 capture_output=True, text=True, check=True)
+        book_validations[name] = json.loads(checked.stdout)
+        # New books publish only explicitly allowed source files. Generated entry
+        # and document pages are added below; the final exact allowlist catches omissions.
+        prefix = book['publish_prefix'] + '/'
+        for row in load_policy()['files']:
+            if row['path'].startswith(prefix):
+                path = local_path(book['root'], row['path'][len(prefix):])
+                if path.is_file():
+                    sources[row['path']] = path
     for p in sorted((ROOT / 'portal').iterdir()):
         if p.is_file():
             sources[p.name] = p
@@ -185,6 +199,9 @@ def main():
                 blobs[name], name, document_views,
                 csapp_pdf_included='csapp/csapp.pdf' in original)
     blobs.update(documents)
+    blobs['index.html'] = add_catalog_links(blobs['index.html'])
+    for name in BOOKS.keys() - FROZEN_BOOKS:
+        blobs[f'{name}/index.html'] = entry_page(BOOKS[name])
     blobs['stochastic/index.html'] = INDEX
     blobs['weiss/index.html'] = ('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
@@ -262,7 +279,7 @@ def main():
     records = [{'path': name, 'bytes': len(blob), 'sha256': hashlib.sha256(blob).hexdigest(),
                 **({'source_sha256': hashlib.sha256(original[name]).hexdigest()} if name in original else {})}
                for name, blob in sorted(blobs.items())]
-    config = (ROOT / 'deploy/nginx-portal-static.inc.template').read_text().replace('@@SCRIPT_SOURCES@@', ' '.join(hashes))
+    config = static_include((ROOT / 'deploy/nginx-portal-static.inc.template').read_text(), hashes)
     server = (ROOT / 'deploy/nginx-notes.zzzping.top.conf.template').read_text().replace('@@RELEASE_ID@@', args.release_id)
     if args.export_directory:
         destination = args.export_directory.resolve()

@@ -47,7 +47,8 @@ def main():
                 return (ROOT/'src'/match[1]).read_bytes().decode()
             expanded=re.sub(r'<!-- RN:include ((?:styles|scripts)/[a-f0-9]{20}\.(?:css|js)) -->',expand,body).encode()
             assert b'RN:include' not in expanded
-            frozen=subprocess.check_output(['git','show',state['baseline_ref']+':'+legacy],cwd=ROOT)
+            ref=state.get('page_baselines',{}).get(route,state.get('book_baselines',{}).get(name,state['baseline_ref']))
+            frozen=subprocess.check_output(['git','show',ref+':'+legacy],cwd=ROOT)
             assert expanded==(ROOT/legacy).read_bytes(),route
             digest=hashlib.sha256(expanded).hexdigest()
             historical=hashlib.sha256(frozen).hexdigest()

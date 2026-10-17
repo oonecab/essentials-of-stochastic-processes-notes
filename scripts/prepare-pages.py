@@ -6,7 +6,10 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'deploy'))
-from reader_views import transform_reading_page
+sys.path.insert(0,str(ROOT/'tools'))
+from catalog import load_books
+from publication import configure, transform_reading_page
+configure(load_books())
 
 stage=ROOT/'tmp/reading-notes-migration'
 metadata=json.loads((stage/'legacy-files.json').read_text())

@@ -15,3 +15,11 @@ I032 开始，迁移后的明确内容修订在 `src/content-revisions.json` 逐
 构建还启动环回临时 HTTP 服务，以生产 CSP 模板在真实浏览器覆盖每种内联脚本，确认哈希变异被浏览器阻止；打包再校验这些页面和脚本的指纹。所有门禁通过后才替换 `dist/`，保留上一份输出。`node scripts/verify-parity.mjs --book <book>` 比较冻结源和旧发布视图；`node scripts/check-offline.mjs --book <book>` 用 Ego Lite 实际断网打开该书全部公开页面，验证 1800/1440/1024/390 四档、1440/390 两档无 JS、深链、目录和局部横滚；旧入口验证其本地跳转目标。完整命令从仓库根执行，构建与浏览证据写入忽略目录 `tmp/reading-notes-migration/`。
 
 逐书 `review/astro-migration.json`、`content-baseline-astro.json` 和 `release-astro.json` 是新增的迁移证据。旧数学审阅、来源材料、内容完整性基线和程序记录保留原有含义。仅因维护说明改动而更新的当前文档哈希，必须同时保存旧值及原因。
+
+### 新书与新页的构建空跑
+
+新书在 `books/catalog.json` 登记目录、页数、入口和支持 `--quick` 的独立 Python checker，在 `scripts/migration-state.json` 加入 `migrated_books`；公开文件逐个加入 `deploy/publish-allowlist.json`。保留 `notes/book_overview.html` 入口约定。新书的源码先建立经过审阅的 Git 快照，在 `book_baselines` 为该书登记基准 commit；已有书增页使用 `page_baselines` 为新 route 单独登记，原页的历史来源哈希继续保留。原有五书的 I028 Transformer 和 CSS 快照不改变。
+
+构建会从受控 HTML 生成缺失的兼容镜像，新增书的公开文件、静态资料视图和书架入口由目录登记与 allowlist 派生；Nginx 的书籍入口正则从已审核发布清单生成，不再枚举固定五书。`deploy/publication.py` 在冻结的旧 Transformer 外衔接目录扩展，并把测度书的地图导航标成伴读总览。
+
+`python3 tools/test_new_book_build.py` 会在忽略目录复制当前源码到独立 Git 副本，加入两页 dummy 书及其原始快照，删去兼容镜像后运行真正的 `pnpm build --release-id ...`、全部 parity、CSP 浏览器冒烟、Python checker 和发布清单检查。测试只修改隔离副本；报告写入 `tmp/new-book-build/run-*/report.json`。它需要完整构建工具链及已启动的 Ego Lite，不加入每次 quick 检查。

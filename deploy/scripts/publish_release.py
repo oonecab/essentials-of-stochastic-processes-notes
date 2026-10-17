@@ -17,7 +17,7 @@ import uuid
 DEPLOY = Path(__file__).resolve().parents[1]
 ROOT = DEPLOY.parent
 sys.path[:0] = [str(DEPLOY), str(ROOT/'tools')]
-from public_policy import inspect, sums, POLICY
+from public_policy import inspect, sums, POLICY, static_include
 from release_support import extract_release
 from durability import atomic_json, durable_unlink, sync_directory, sync_tree
 from retention import capacity, retention_plan, stale_temporaries, remove_tree
@@ -29,9 +29,18 @@ def identity(value):
     return value
 
 
-def verified(directory):
+def immutable_owner(directory, expected_uid=0):
+    for path in [directory, *directory.rglob('*')]:
+        info = path.lstat()
+        if path.is_symlink() or not (path.is_file() or path.is_dir()) or info.st_uid != expected_uid or info.st_mode & 0o222:
+            raise ValueError('Installed release must be root-owned and read-only: ' + str(path))
+
+
+def verified(directory, require_root=False):
     if directory.is_symlink():
         raise ValueError('Release must be a real directory')
+    if require_root:
+        immutable_owner(directory)
     for name in ['release.json', 'SHA256SUMS']:
         if (directory/name).is_symlink() or not (directory/name).is_file():
             raise ValueError('Non-regular release metadata')
@@ -113,7 +122,7 @@ def main():
         if not re.fullmatch(r'releases/\d{8}T\d{6}', previous) or ((not a.recover and not a.rollback) and not (root/previous).is_dir()):
             raise ValueError('Untrusted or broken current')
         if not any([a.rollback,a.recover,a.status,a.cleanup]):
-            previous_meta = verified(root/previous)
+            previous_meta = verified(root/previous, require_root=not a.dry_run)
     journal = root/'.publish-transaction.json'
 
     def checkpoint(phase):
@@ -135,7 +144,7 @@ def main():
     if a.cleanup:
         if journal.exists():raise ValueError('Recover the pending transaction before cleanup')
         targets=retention_plan(root,a.keep_last_n)
-        for path in targets:verified(path)
+        for path in targets:verified(path, require_root=not a.dry_run)
         if a.apply_cleanup:
             for path in targets:remove_tree(path)
         print(json.dumps({'mode':'applied' if a.apply_cleanup else 'plan','releases':[p.name for p in targets],
@@ -145,7 +154,7 @@ def main():
     if a.recover:
         if not journal.exists():
             if previous:
-                verified(root/previous)
+                verified(root/previous, require_root=not a.dry_run)
             print(json.dumps({'status':'no-pending-transaction','current':previous}))
             return 0
         if journal.is_symlink() or not journal.is_file():
@@ -168,7 +177,7 @@ def main():
         if target:
             if not re.fullmatch(r'releases/\d{8}T\d{6}', target):
                 raise ValueError('Bad recovery target')
-            verified(root/target)
+            verified(root/target, require_root=not a.dry_run)
             atomic_link(root,target)
         else:
             durable_unlink(current)
@@ -186,7 +195,7 @@ def main():
     stale_temporaries(root)
     if a.rollback:
         candidate = releases/a.rollback
-        meta = verified(candidate)
+        meta = verified(candidate, require_root=not a.dry_run)
         if meta['release_id'] != a.rollback:
             raise ValueError('Rollback directory identity differs')
     else:
@@ -212,7 +221,7 @@ def main():
             for value in meta['inline_script_csp_sources']:
                 if not re.fullmatch(r"'sha256-[A-Za-z0-9+/]{43}='", value):
                     raise ValueError('Invalid CSP source')
-            (unpack/'nginx-static.inc').write_text((DEPLOY/'nginx/static.inc.template').read_text().replace('@@SCRIPT_SOURCES@@',' '.join(meta['inline_script_csp_sources'])))
+            (unpack/'nginx-static.inc').write_text(static_include((DEPLOY/'nginx/static.inc.template').read_text(), meta['inline_script_csp_sources']))
             incoming = releases/('.incoming-'+uuid.uuid4().hex)
             incoming.mkdir()
             try:
@@ -231,6 +240,7 @@ def main():
                 # Keep any partially copied candidate out of current; operator may inspect it.
                 raise
     if not a.dry_run:
+        immutable_owner(candidate)
         installed = Path('/etc/nginx/snippets/reading-notes-static.inc').read_text()
         required_sources = set(meta['inline_script_csp_sources']) | set((previous_meta or {}).get('inline_script_csp_sources', []))
         if not all(s in installed for s in required_sources):

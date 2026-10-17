@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path, PurePosixPath
 import zipfile
 
@@ -35,6 +36,16 @@ def summary(name):
         'book': name.split('/')[0], 'record': PurePosixPath(name).stem,
         'scope': '本地址保留资料引用入口。完整审阅、数值夹具与来源核对记录由仓库维护；阅读正文及页码链接见本书笔记。'},
         ensure_ascii=False, indent=2) + '\n').encode()
+
+
+def static_include(template, script_sources):
+    prefixes = sorted({r['path'].split('/')[0] for r in load_policy()['files'] if '/notes/' in r['path']})
+    if not prefixes or any(not re.fullmatch(r'[a-z][a-z0-9-]*', p) for p in prefixes):
+        raise ValueError('Unsafe publication prefix')
+    result = template.replace('@@SCRIPT_SOURCES@@', ' '.join(script_sources)).replace('@@BOOK_PREFIXES@@', '|'.join(map(re.escape, prefixes)))
+    if '@@' in result:
+        raise ValueError('Unresolved Nginx template variable')
+    return result
 
 
 def inspect(site, transform=False):

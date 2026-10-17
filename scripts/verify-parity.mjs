@@ -27,7 +27,7 @@ export function verifyParity(directory=path.join(root,'dist'),book) {
     const originalPart=fingerprint(separateApprovedIsland(actual,metadata.book));
     const additions=islandsFor(metadata.book)?[{name:'deep-link-settle',bytes:Buffer.byteLength(deepLinkSource),sha256:sha(deepLinkSource),reason:'CS:APP 页尾折叠自测展开后重新定位；原脚本逐字保留'}]:[];
     if(after.js_bytes>before.js_bytes*1.5)throw new Error('Inline JS budget exceeded: '+metadata.route);
-    records.push({page:metadata.route,source_sha256:source.source_sha256,original_source_sha256:source.original_sha256,review_revision:source.revision,output_sha256:sha(actual),source_counts:fingerprint(html).counts,
+    records.push({page:metadata.route,source_baseline_ref:source.baseline_ref,source_sha256:source.source_sha256,original_source_sha256:source.original_sha256,review_revision:source.revision,output_sha256:sha(actual),source_counts:fingerprint(html).counts,
       publication_counts:after.counts,differences:differences(before,originalPart),script_additions:additions,source_bytes:Buffer.byteLength(html),output_bytes:Buffer.byteLength(actual),js_bytes:after.js_bytes,
       js_ratio:after.js_bytes/before.js_bytes});
   }

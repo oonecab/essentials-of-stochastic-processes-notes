@@ -24,9 +24,10 @@ export function reviewedIdentity(entry,frozen,registry,review){
 
 export function checkSource(entry){
   const state=JSON.parse(fs.readFileSync('scripts/migration-state.json'));
-  const frozen=execFileSync('git',['show',`${state.baseline_ref}:${entry.metadata.legacy_path}`],{maxBuffer:32*1024*1024});
+  const baseline=state.page_baselines?.[entry.metadata.route]??state.book_baselines?.[entry.metadata.book]??state.baseline_ref;
+  const frozen=execFileSync('git',['show',`${baseline}:${entry.metadata.legacy_path}`],{maxBuffer:32*1024*1024});
   const registry=fs.existsSync('src/content-revisions.json')?JSON.parse(fs.readFileSync('src/content-revisions.json')):{pages:{}};
   const row=registry.pages?.[entry.metadata.route];
   const review=row?JSON.parse(fs.readFileSync(row.review_record)):{};
-  return {...reviewedIdentity(entry,frozen,registry,review),frozen};
+  return {...reviewedIdentity(entry,frozen,registry,review),frozen,baseline_ref:baseline};
 }

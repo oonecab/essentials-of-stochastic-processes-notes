@@ -10,12 +10,12 @@
     "measure-probability/notes/preface.html": "f32cdfb1be1ee3f2146e576bad3ebfecab0d412ba3c0bf059fa6b549cdde41b1"
   },
   "output_sha256": {
-    "measure-probability/notes/chapter01_measurable_spaces.html": "b2c5a2b4253f1be9570908ebbbfd140ce2184fe5209203daeb8a1751f0002724",
-    "measure-probability/notes/chapter02_measure_spaces.html": "585d473c848360760d7d78cf8490e9f2e21f0866a66b4062bb1f06fe6bb49aef",
-    "measure-probability/notes/chapter03_integration.html": "b576456af5ad8e8cff67f84ffa24bd3f033db9186aa1959239c8ddff843d9772",
-    "measure-probability/notes/chapter04_signed_measures.html": "fc1ff5e0e739dc30ff02aae0204bac19b2c337b8c43df997912624a663e19d57",
-    "measure-probability/notes/book_overview.html": "cbd6e715809fcf9264e4256a6d4b028432005fce2a9c089c3708770971eb202a",
-    "measure-probability/notes/preface.html": "f1568e9f69d86f9d24a996fa0cf58a956d65e054664868d651b3024d999e3737"
+    "measure-probability/notes/chapter01_measurable_spaces.html": "20d4d42328cf610a422821a94c16190319e0bff2b5fbdf01f1e5af6875d006bb",
+    "measure-probability/notes/chapter02_measure_spaces.html": "e44b1e70303156486c77e2ddda7790525430e1cfeaaf273cd423d077706ad41e",
+    "measure-probability/notes/chapter03_integration.html": "576a85fdf054d4303c6a02b01b0385a2dc3dd2d146539194d00a2336c637ccab",
+    "measure-probability/notes/chapter04_signed_measures.html": "da3bbdff4d43fdcf95571a27e87441a5a5e2b02e3b2b4787b19ecd51727d9388",
+    "measure-probability/notes/book_overview.html": "9fda1ed03e42813655074971393e237a11e3f163043a69c09d443a1488bf5569",
+    "measure-probability/notes/preface.html": "e2e20926b1fd51c8dfde493324eb4b7eafe0c03a4c442cf5db1f3149aef132ce"
   },
   "reviews": [
     {
@@ -342,5 +342,9 @@
     }
   ],
   "browser_status": "theorem 1.5.5 read at 1800/390; full revised-book acceptance pending",
-  "parity_report": "tmp/reading-notes-migration/parity/all.json"
+  "parity_report": "tmp/reading-notes-migration/parity/all.json",
+  "publication_adapter": {
+    "file": "deploy/publication.py",
+    "change": "Reading Notes 导航和资料视图使用伴读总览标签；冻结的 I028 Transformer 字节仍保留。"
+  }
 }

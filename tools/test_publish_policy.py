@@ -13,9 +13,20 @@ from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'deploy/scripts'))
 from retention import capacity, retention_plan, stale_temporaries
+from publish_release import immutable_owner
 
 
 class PolicyTests(unittest.TestCase):
+    def test_installed_permissions_check_owner_and_write_bits(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path=Path(temp)/'release';path.mkdir();file=path/'data';file.write_text('immutable')
+            try:
+                with self.assertRaises(ValueError):immutable_owner(path,expected_uid=os.getuid())
+                file.chmod(0o444);path.chmod(0o555)
+                immutable_owner(path,expected_uid=os.getuid())
+                with self.assertRaises(ValueError):immutable_owner(path,expected_uid=os.getuid()+1)
+            finally:path.chmod(0o755);file.chmod(0o644)
+
     def test_installer_accepts_no_arbitrary_path_command_or_test_hook(self):
         arguments=runpy.run_path(str(ROOT/'deploy/scripts/reading-notes-publish'))['arguments']
         for args in [['publish','../../tmp/x'],['publish','20990101T000001','--service-hook','/tmp/x'],['recover','--root','/tmp/x'],['sh','-c','id'],[]]:

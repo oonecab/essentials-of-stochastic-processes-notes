@@ -844,7 +844,7 @@
     "tools/check_models.py": "7e2e5c2bffe527c18b27721d0e2e15a1f3f52b8ad4d9d5e59ec242c3c4b5a33a",
     "tools/check_notes.py": "7df942a0454f9d2dc778e44dfdf8beb13cd5dcd59d6388c13aff8969348c3b9d",
     "tools/sync_code.py": "9eceb700c71f70462083b425ee9eed2ce9de905503253b60ce275fa83a1933a2",
-    "review/final-assessment.json": "093bd65dcb13da3d7e0f1975716d79d2a70ad9c6de2fdbb8778f96c24560d243",
+    "review/final-assessment.json": "7c79525135b06af4d314f59043a7d285a5d35f31cb23610425b5abafbf9dbefb",
     "tools/check_excerpts.py": "62466881d33533c8f9d9617afc8f30edd9df5c437c61c922c00101af20c70a50",
     "review/example-index.json": "448e8232e11d0ddcac275a76bd2e6dbf44bf75dc2cd64fcbd49676162e88762e",
     "review/mathml-accessibility.json": "9d2eea5fd4d24c45a04c1c60594a27bfadf94796b7054e33692db268ee827e49"
@@ -1363,11 +1363,22 @@
           "current_sha256": "093bd65dcb13da3d7e0f1975716d79d2a70ad9c6de2fdbb8778f96c24560d243"
         }
       ]
+    },
+    {
+      "issue": "I032",
+      "reason": "目录适配层统一测度书导航范围，重新绑定当前输出",
+      "changes": [
+        {
+          "file": "review/final-assessment.json",
+          "previous_sha256": "093bd65dcb13da3d7e0f1975716d79d2a70ad9c6de2fdbb8778f96c24560d243",
+          "current_sha256": "7c79525135b06af4d314f59043a7d285a5d35f31cb23610425b5abafbf9dbefb"
+        }
+      ]
     }
   ],
   "current_content_review": {
     "record": "review/final-assessment.json",
-    "sha256": "093bd65dcb13da3d7e0f1975716d79d2a70ad9c6de2fdbb8778f96c24560d243",
+    "sha256": "7c79525135b06af4d314f59043a7d285a5d35f31cb23610425b5abafbf9dbefb",
     "status": "source revisions checked; final browser and complete integration pending"
   },
   "example_scope": {

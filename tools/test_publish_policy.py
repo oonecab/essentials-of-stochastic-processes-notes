@@ -17,6 +17,14 @@ from publish_release import immutable_owner
 
 
 class PolicyTests(unittest.TestCase):
+    def test_web_tmpfiles_requires_only_web_host_accounts(self):
+        rows=[line.split() for line in (ROOT/'deploy/systemd/reading-notes.tmpfiles.conf').read_text().splitlines() if line and not line.startswith('#')]
+        self.assertTrue(rows)
+        for row in rows:
+            self.assertIn(row[3],{'root','reading-notes'})
+            self.assertIn(row[4],{'root','reading-notes'})
+            self.assertFalse(row[1].startswith('/var/lock/'))
+
     def test_installed_permissions_check_owner_and_write_bits(self):
         with tempfile.TemporaryDirectory() as temp:
             path=Path(temp)/'release';path.mkdir();file=path/'data';file.write_text('immutable')

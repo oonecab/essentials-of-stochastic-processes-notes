@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { spawnSync } from 'node:child_process';
+import { pathToFileURL } from 'node:url';
+import {selectSpace,acquireSession,createRun,finishRun,failedRun,runDriver} from './browser-runtime.mjs';
 import { entries, root, stage } from '../src/lib/controlled-html.mjs';
 import { offlineDependencies, fingerprint, sha } from './parity-lib.mjs';
 import { htmlFiles } from './inline-assets.mjs';
@@ -19,13 +20,15 @@ const pages=candidates.map(metadata=>{
   return {route:metadata.route,file,sha256:sha(html),counts:fingerprint(fs.readFileSync(target,'utf8')).counts,redirect_file:redirect?target:null};
 });
 const sessionFile=path.join(root,'tmp/final-assessment/browser-session.json');
-const session=fs.existsSync(sessionFile)?JSON.parse(fs.readFileSync(sessionFile)):null;
-const output=path.join(stage,'browser',book??'all');fs.mkdirSync(output,{recursive:true});
-const config={pages,output,root,sessionFile,spaceId:session?.spaceId,page:session?.page??'p1',widths:[1800,1440,1024,390]};
-const script='const config = '+JSON.stringify(config)+';\n'+fs.readFileSync('scripts/browser-acceptance.mjs','utf8');
-const result=spawnSync('ego-browser',['nodejs'],{input:script,encoding:'utf8',maxBuffer:8*1024*1024});
-fs.writeFileSync(path.join(output,'driver.log'),result.stdout+result.stderr);
-if(result.status!==0){console.error((result.stdout+result.stderr).slice(-6000));process.exit(result.status??1);}
-const report=JSON.parse(fs.readFileSync(path.join(output,'report.json')));
-if(report.status!=='passed')throw new Error('Browser acceptance failed; see '+output);
-console.log(JSON.stringify({status:report.status,pages:pages.length,js_views:report.views.length,no_js_views:report.no_js.length,external_requests:report.external_requests,evidence:path.relative(root,output)}));
+const release=acquireSession(sessionFile);
+let run;
+try{
+  run=createRun(path.join(stage,'browser',book??'all'));
+  const session=fs.existsSync(sessionFile)?JSON.parse(fs.readFileSync(sessionFile)):{};
+  const selection=selectSpace(process.env.READING_NOTES_CSP_SPACE,session);
+  const config={pages,output:run.output,root,sessionFile,selection,page:session.page??'p1',widths:[1800,1440,1024,390],runtime:pathToFileURL(path.join(root,'scripts/browser-runtime.mjs')).href};
+  const script='const config = '+JSON.stringify(config)+';\n'+fs.readFileSync(path.join(root,'scripts/browser-acceptance.mjs'),'utf8');
+  const report=finishRun(run,await runDriver(script,run));
+  console.log(JSON.stringify({status:report.status,pages:pages.length,js_views:report.views.length,no_js_views:report.no_js.length,external_requests:report.external_requests,evidence:path.relative(root,run.output)}));
+}catch(error){if(run)failedRun(run,error);throw error;}
+finally{release();}

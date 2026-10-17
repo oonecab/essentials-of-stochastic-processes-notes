@@ -3,11 +3,12 @@ const fs = await import('node:fs/promises');
 const path = await import('node:path');
 const crypto = await import('node:crypto');
 const { pathToFileURL } = await import('node:url');
-const task=await taskSpace(config.spaceId??'Reading Notes 离线验收');
-await fs.writeFile(config.sessionFile,JSON.stringify({spaceId:task.spaceId,page:config.page}));
+const {atomicJson,openSpace,waitDocument,waitTarget,readTarget,exerciseTargets}=await import(config.runtime);
+const task=await openSpace(taskSpace,config.selection);
+atomicJson(config.sessionFile,{spaceId:task.spaceId,page:config.page});
 const page=task.page(config.page);
 const report={status:'running',tool:'ego-browser',space:task.spaceId,pages:config.pages,views:[],no_js:[],external_requests:[],screenshots:[],errors:[]};
-const save=()=>fs.writeFile(path.join(config.output,'report.json'),JSON.stringify(report,null,2)+'\n');
+const save=()=>atomicJson(path.join(config.output,'report.json'),report);
 const requireTrue=(condition,message)=>{if(!condition)throw new Error(message);};
 async function screenshot(name) {
   const filename=path.join(config.output,name+'.png');
@@ -20,6 +21,7 @@ async function navigate(item) {
   await page.goto(url);
   const destination=item.redirect_file?pathToFileURL(item.redirect_file).href:url;
   if(item.redirect_file)await page.waitForURL(destination);
+  await waitDocument(page,destination);
   if(!report.user_agent)report.user_agent=await page.evaluate(()=>navigator.userAgent);
   const events=await page.events();
   const requests=events.filter(e=>e.method==='Network.requestWillBeSent').map(e=>({url:e.params.request.url,type:e.params.type}));
@@ -27,7 +29,7 @@ async function navigate(item) {
   report.external_requests.push(...external.map(r=>({page:item.route,...r})));
   requireTrue(requests.some(r=>r.type==='Document'&&r.url.split('#')[0]===url),'Network observer did not record the document');
   requireTrue(external.length===0,'Subresource request: '+JSON.stringify(external));
-  return requests;
+  return {requests,url:destination};
 }
 try {
   await page.cdp('Network.enable');
@@ -35,7 +37,7 @@ try {
   await page.cdp('Emulation.setScriptExecutionDisabled',{value:false});
   for(const item of config.pages)for(const width of config.widths) {
     await page.cdp('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:false});
-    const requests=await navigate(item);
+    const {requests,url}=await navigate(item);
     const state=await page.evaluate(()=>({title:document.querySelector('h1')?.textContent,
       viewport:innerWidth,document_width:document.documentElement.scrollWidth,main:document.querySelector('main')?.innerText.length,
       maths:[...document.querySelectorAll('math')].filter(n=>!n.closest('#annotation-content')).length,
@@ -50,9 +52,11 @@ try {
     const view={page:item.route,width,state,requests,deep_links:[]};report.views.push(view);
     const stem=item.route.replaceAll('/','_').replace('.html','')+'-'+width;
     await screenshot(stem+'-top');
-    const targets=state.exercises.length?[state.exercises[0],state.exercises.at(-1)]:[state.toc.at(-1)?.slice(1)];
-    for(const id of [...new Set(targets)].filter(Boolean)) {
-      await page.evaluate(id=>{location.hash=id;window.__rnMotion=null;},id);
+    const targets=exerciseTargets(item,state.exercises);
+    view.deep_link_scope=targets.length?'first and last exercises':item.redirect_file?'redirect destination verified; no duplicate exercise deep links':'no exercises';
+    for(const id of targets) {
+      const target={id,url};
+      await readTarget(page,target,e=>{location.hash=e.id;window.__rnMotion=null;return true;});
       await page.waitForFunction(id=>{
         const e=document.getElementById(id);if(!e)return false;
         for(let n=e;n;n=n.parentElement)if(n.tagName==='DETAILS'&&!n.open)return false;
@@ -67,19 +71,19 @@ try {
       },undefined,{timeout:10000});
       await page.waitForFunction(id=>{
         const links=[...document.querySelectorAll('#chapter-toc a[href^="#"]')];
-        let e=document.getElementById(id),expected;
+        let e=document.getElementById(id),expected;if(!e)return false;
         for(;e&&!expected;e=e.parentElement)expected=links.find(a=>a.getAttribute('href')==='#'+e.id);
         return !expected||expected.getAttribute('aria-current')==='location';
       },id,{timeout:10000});
-      view.deep_links.push(await page.evaluate(id=>{const e=document.getElementById(id),r=(e.tagName==='DETAILS'?e.querySelector(':scope > summary'):e).getBoundingClientRect();return {id,hash:location.hash,open:e.open??null,top:r.top,active:document.querySelector('#chapter-toc [aria-current="location"]')?.getAttribute('href'),answer:e.querySelector('.answer')?.textContent.length??null};},id));
+      view.deep_links.push(await readTarget(page,target,e=>{const r=(e.tagName==='DETAILS'?e.querySelector(':scope > summary'):e).getBoundingClientRect();return {id:e.id,hash:location.hash,open:e.open??null,top:r.top,active:document.querySelector('#chapter-toc [aria-current="location"]')?.getAttribute('href'),answer:e.querySelector('.answer')?.textContent.length??null};}));
     }
     if(width===390&&state.exercises.length)await screenshot(stem+'-answer');
     if(width>=1440&&state.annotations){
       const section=await page.evaluate(()=>document.querySelector('details.reading-notes')?.closest('section[id]')?.id);
       if(section){
-        await page.evaluate(id=>{location.hash=id;},section);
+        await readTarget(page,{id:section,url},e=>{location.hash=e.id;return true;});
         await page.waitForFunction(()=>{const r=document.getElementById('annotation-rail');return r&&!r.hidden&&r.getBoundingClientRect().width>0&&document.getElementById('annotation-content')?.textContent.trim().length>0;},undefined,{timeout:10000});
-        view.annotation=await page.evaluate(()=>({visible:!document.getElementById('annotation-rail').hidden,text:document.getElementById('annotation-content').textContent.slice(0,140)}));
+        view.annotation=await readTarget(page,{id:'annotation-rail',url},e=>({visible:!e.hidden,text:document.getElementById('annotation-content')?.textContent.slice(0,140)}));
       }
     }
     if(width===390){
@@ -108,7 +112,7 @@ try {
   await page.cdp('Emulation.setScriptExecutionDisabled',{value:true});
   for(const width of [1440,390])for(const item of config.pages){
     await page.cdp('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:false});
-    const requests=await navigate(item);
+    const {requests,url}=await navigate(item);
     const before=await page.evaluate(()=>{
       const state={heading:document.querySelector('h1')?.textContent,
         maths:document.querySelectorAll('math').length,svgs:document.querySelectorAll('svg').length,merrors:document.querySelectorAll('merror').length,
@@ -123,9 +127,10 @@ try {
     requireTrue(before.maths===item.counts.mathml&&before.svgs===item.counts.svg&&before.merrors===0,'No-JS static math/SVG inventory differs');
     let after=null;
     if(before.id){
+      await waitTarget(page,{id:before.id,url});
       await page.cdp('Input.dispatchMouseEvent',{type:'mousePressed',x:before.x,y:before.y,button:'left',clickCount:1});
       await page.cdp('Input.dispatchMouseEvent',{type:'mouseReleased',x:before.x,y:before.y,button:'left',clickCount:1});
-      after=await page.evaluate(id=>{const e=document.getElementById(id),q=e.querySelector('.exercise-question'),a=e.querySelector('.answer');return {open:e.open,question:q?{length:q.textContent.length,height:q.getBoundingClientRect().height}:null,answer:a?{length:a.textContent.length,height:a.getBoundingClientRect().height}:null,width:document.documentElement.scrollWidth,viewport:innerWidth};},before.id);
+      after=await readTarget(page,{id:before.id,url},e=>{const q=e.querySelector('.exercise-question'),a=e.querySelector('.answer');return {open:e.open,question:q?{length:q.textContent.length,height:q.getBoundingClientRect().height}:null,answer:a?{length:a.textContent.length,height:a.getBoundingClientRect().height}:null,width:document.documentElement.scrollWidth,viewport:innerWidth};});
       requireTrue(after.open!==before.open,'No-JS native details did not toggle');
       if(after.question)requireTrue(after.open&&after.question.length>0&&after.question.height>0&&after.answer.length>0&&after.answer.height>0,'No-JS exercise unreadable');
       requireTrue(after.width<=after.viewport+1,'No-JS page overflow');

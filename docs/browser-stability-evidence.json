@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "issue": "I033",
+  "status": "local-and-production-passed-with-followups",
+  "recorded_at": "2026-10-17T14:27:58.279924+00:00",
+  "baseline_commit": "b772211e5078c2e8e7bd4b7c79c15e6a8ae6ec42",
+  "production": {
+    "status": "passed",
+    "release_id": "20261017T210828",
+    "files": 303,
+    "archive_sha256": "7f6ec99ead09b35f0c2cf205812005b7efeb0e6a202d24c3d53b4c9d59cd2217"
+  },
+  "followups": [
+    "DNS API credentials and automatic renewal setup by user/operator",
+    "Root password rotation by user in a private terminal"
+  ],
+  "code_sha256": {
+    "scripts/browser-runtime.mjs": "e00fc264b20d7aca73e2dffa60f3753d053b832d10c6ddfd7342c9538556e783",
+    "scripts/browser-runtime.test.mjs": "7283e397500d2a497f847c7bce04fcfe5b9c1c8fc907f44e35bdd799abe7e66e",
+    "scripts/browser-acceptance.mjs": "0eaf2e69d6ef6c1d411e0d7a8844faaa7110f14dc49a1c9de2cd60306c92040f",
+    "scripts/check-offline.mjs": "d9cc7aac46a13446cd7e7256ba2ee107ad2c1293af7df9325a00c75dfbcbab24",
+    "scripts/check-csp.mjs": "7b8cee17c3d71e72ebb140043768083632cc540073dc08119bb978c0631d554d",
+    "scripts/csp-browser.mjs": "6700ca8fd693e6fd5a71fa8b866c72feeac4705f57e46854d3cefc1ef1495765",
+    "deploy/systemd/reading-notes.tmpfiles.conf": "742b98a7e192a60e28e77ac042ae1b1524d12a992e247fe65071d312426f65a6",
+    "deploy/systemd/reading-notes-build.tmpfiles.conf": "7951754329df1f831847eaad12ecc9d0320e698ec8e93b648cb6271fd917acad",
+    "tools/test_publish_policy.py": "27e90769d74ac9b25b3e7afa7a44f9dfb2fb3c64bd29e90f0824aab6d2e8e2cc"
+  },
+  "evidence": [
+    {
+      "id": "original-failure",
+      "source": "tmp/browser-stability/before/0-report.json",
+      "snapshot": "tmp/browser-stability/evidence/original-failure.json",
+      "sha256": "37cd188dd67bf223a600437b621812943f8080aed730b63ed0fc82d9a5027ce4",
+      "bytes": 610043
+    },
+    {
+      "id": "original-driver",
+      "source": "tmp/browser-stability/before/1-driver.log",
+      "snapshot": "tmp/browser-stability/evidence/original-driver.log",
+      "sha256": "44dd0a85a8e7af7e1c6e326cd438359c0253f114711071e54e1e2a03d55aa82a",
+      "bytes": 25195
+    },
+    {
+      "id": "historical-I032",
+      "source": "tmp/final-assessment/evidence/browser.json",
+      "snapshot": "tmp/browser-stability/evidence/historical-I032.json",
+      "sha256": "1ec6d5fe6b18738cf15fd73abd9c86cd990d6bd202f5f9c0d5c80ba0f41d9eed",
+      "bytes": 965285
+    },
+    {
+      "id": "regression-before",
+      "source": "tmp/browser-stability/regression-before.log",
+      "snapshot": "tmp/browser-stability/evidence/regression-before.log",
+      "sha256": "083ab207d641c5ae60fed59ca6fc56024e7eed2aaf5396d1624733f9b9b05e4c",
+      "bytes": 1511
+    },
+    {
+      "id": "promotion-before",
+      "source": "tmp/browser-stability/promotion-before.log",
+      "snapshot": "tmp/browser-stability/evidence/promotion-before.log",
+      "sha256": "a3e7dbb726bf6ddb34a1e697f5650197575ae487eb512fe0ee061310b80d35bc",
+      "bytes": 2826
+    },
+    {
+      "id": "tmpfiles-before",
+      "source": "tmp/browser-stability/tmpfiles-before.log",
+      "snapshot": "tmp/browser-stability/evidence/tmpfiles-before.log",
+      "sha256": "f4b70d482089877221a41bd915c1ff744cf95aab2df2eb19d5c6eb682106ade1",
+      "bytes": 775
+    },
+    {
+      "id": "unit",
+      "source": "tmp/browser-stability/unit-final.log",
+      "snapshot": "tmp/browser-stability/evidence/unit.log",
+      "sha256": "09bb61a7be1bc0e5d532eff3ee0f46c4aece891589265efb1e7b64c54cb0a5fd",
+      "bytes": 1904
+    },
+    {
+      "id": "publish-policy",
+      "source": "tmp/browser-stability/publish-policy-final.log",
+      "snapshot": "tmp/browser-stability/evidence/publish-policy.log",
+      "sha256": "0797a603f79e55a5612211749887a547eca16fda33260dc9b3baf57657cc4f17",
+      "bytes": 105
+    },
+    {
+      "id": "durability",
+      "source": "tmp/browser-stability/publish-durability.log",
+      "snapshot": "tmp/browser-stability/evidence/durability.log",
+      "sha256": "f96363f8d8dff4c4abed7197c63606ead0bd955ea4259bdcb5fb6f47dbe53992",
+      "bytes": 103
+    },
+    {
+      "id": "build",
+      "source": "tmp/browser-stability/build-final.log",
+      "snapshot": "tmp/browser-stability/evidence/build.log",
+      "sha256": "2b51aabfb4650cb4708ff9f71b9a46d23daa7b56db5c002003afa44784636ddf",
+      "bytes": 5009
+    },
+    {
+      "id": "parity",
+      "source": "tmp/browser-stability/parity.log",
+      "snapshot": "tmp/browser-stability/evidence/parity.log",
+      "sha256": "f1bb64b6fd942a34429dff8ed53dff0d7cac3bc0a966abd38e7447cbffa51d2b",
+      "bytes": 93
+    },
+    {
+      "id": "full-check",
+      "source": "tmp/project-check/20261017T220647-f7_gzbwy/report.json",
+      "snapshot": "tmp/browser-stability/evidence/full-check.json",
+      "sha256": "07a357077f5030e5b765bf25c8c76b3686491ed76906db16ff173ca39ce7eb19",
+      "bytes": 4507
+    },
+    {
+      "id": "quick-check",
+      "source": "tmp/project-check/20261017T222324-ohbbo6fx/report.json",
+      "snapshot": "tmp/browser-stability/evidence/quick-check.json",
+      "sha256": "188edf05f907df05d349800d4c7fc9daf55a576a80775e22fcf1caf80f590f7c",
+      "bytes": 3715
+    },
+    {
+      "id": "repeated-offline",
+      "source": "tmp/browser-stability/repeated-offline.json",
+      "snapshot": "tmp/browser-stability/evidence/repeated-offline.json",
+      "sha256": "ae6d4964369b31e54cf404749b86ff4a8d28c8df7974c0f63a8a98396151cbae",
+      "bytes": 760
+    },
+    {
+      "id": "failure-preservation",
+      "source": "tmp/browser-stability/failure-preservation.json",
+      "snapshot": "tmp/browser-stability/evidence/failure-preservation.json",
+      "sha256": "9f58761e0942b867f5c60dc6ab2a9aad54df3b277401a4f5dc8fe9b08e207d6b",
+      "bytes": 390
+    },
+    {
+      "id": "concurrent-rejection",
+      "source": "tmp/browser-stability/concurrent-rejection.log",
+      "snapshot": "tmp/browser-stability/evidence/concurrent-rejection.log",
+      "sha256": "89ed459546dfae7f6f83771fd198b290f4ee6174a4dc26c7fb2ff6912695da24",
+      "bytes": 1024
+    },
+    {
+      "id": "payload-match",
+      "source": "tmp/browser-stability/payload-match.json",
+      "snapshot": "tmp/browser-stability/evidence/payload-match.json",
+      "sha256": "5c3fcf16eee0b70c5bae114d67babd8389a7dab2df9ea3b3be1fb59b67e01698",
+      "bytes": 164
+    },
+    {
+      "id": "installed-helpers",
+      "source": "tmp/browser-stability/installed-helpers.json",
+      "snapshot": "tmp/browser-stability/evidence/installed-helpers.json",
+      "sha256": "083530dee02433d98eaed2967c3e87d88d451478453b2a88aca421ff09c92ced",
+      "bytes": 1341
+    },
+    {
+      "id": "server-migration",
+      "source": "tmp/browser-stability/server-migration-resume.log",
+      "snapshot": "tmp/browser-stability/evidence/server-migration.log",
+      "sha256": "1232a99b106ab56ffa1c6fcd34504cf2a346c7bf8ce19343d4092bac9d7240dc",
+      "bytes": 438
+    },
+    {
+      "id": "server-hardening",
+      "source": "tmp/browser-stability/server-hardening-retry.log",
+      "snapshot": "tmp/browser-stability/evidence/server-hardening.log",
+      "sha256": "e13d3a09748db0d914c2f1845ba021c33020baf301b3f90fdf0c90768effa55c",
+      "bytes": 1073
+    },
+    {
+      "id": "ftp-stop",
+      "source": "tmp/browser-stability/ftp-stop.log",
+      "snapshot": "tmp/browser-stability/evidence/ftp-stop.log",
+      "sha256": "dfb6af2dca7a6bbde0689c969fc95499f76aaa4da75d06d97d407fbcdeddb430",
+      "bytes": 78
+    },
+    {
+      "id": "server-publish",
+      "source": "tmp/browser-stability/server-publish.log",
+      "snapshot": "tmp/browser-stability/evidence/server-publish.log",
+      "sha256": "9e9cf4509560c956e1a8b2314c76b66f7f65ea068473eccbba4c4af9a6a55753",
+      "bytes": 1597
+    },
+    {
+      "id": "server-rollback",
+      "source": "tmp/browser-stability/server-rollback.log",
+      "snapshot": "tmp/browser-stability/evidence/server-rollback.log",
+      "sha256": "cea0c4b35f99f7edb4c5b5d2f2e8b067480bab29430f2dffaf69fbaa0485263d",
+      "bytes": 1018
+    },
+    {
+      "id": "server-final",
+      "source": "tmp/browser-stability/server-final.json",
+      "snapshot": "tmp/browser-stability/evidence/server-final.json",
+      "sha256": "8a8ce72d2ca725a89556206f1a96f5fa7602e6c4e2367bbe2bfbc9438afeb2a5",
+      "bytes": 1677
+    },
+    {
+      "id": "public-https",
+      "source": "tmp/browser-stability/production-https.json",
+      "snapshot": "tmp/browser-stability/evidence/public-https.json",
+      "sha256": "a0d7b8a31dfc279a16c144f0fac2ed00ae75fe34d1fd914c4136d4500c773477",
+      "bytes": 70039
+    },
+    {
+      "id": "public-browser",
+      "source": "tmp/browser-stability/production-browser/report.json",
+      "snapshot": "tmp/browser-stability/evidence/public-browser.json",
+      "sha256": "a4fd34a5ac6d8a7cffea2c33ab2dd9ee7d01f21a501c325352a62edb4bbf0b4a",
+      "bytes": 22428
+    },
+    {
+      "id": "certificate-webroot-failure",
+      "source": "tmp/browser-stability/certbot-webroot-dry-run.log",
+      "snapshot": "tmp/browser-stability/evidence/certificate-webroot-failure.log",
+      "sha256": "c848658b631626abdd2e4abcb616786b6b3ec705aea055154b4803a11cc0c2da",
+      "bytes": 903
+    },
+    {
+      "id": "offline-1",
+      "source": "tmp/reading-notes-migration/browser/all/runs/2026-10-17T14-06-51-062Z-e78d8034/report.json",
+      "snapshot": "tmp/browser-stability/evidence/offline-1.json",
+      "sha256": "099fa054971bcb5445db601c4ad82693dcfd9af8d65bb28f13f6e4367b7d4b77",
+      "bytes": 987854
+    },
+    {
+      "id": "offline-2",
+      "source": "tmp/reading-notes-migration/browser/all/runs/2026-10-17T14-14-20-731Z-59dd0586/report.json",
+      "snapshot": "tmp/browser-stability/evidence/offline-2.json",
+      "sha256": "1050466985fea9361a07096d1318274b8d6c144a9388e77692b5ad00e339fb19",
+      "bytes": 987970
+    },
+    {
+      "id": "csp",
+      "source": "tmp/reading-notes-migration/csp/runs/2026-10-17T14-21-46-295Z-8512df9b/report.json",
+      "snapshot": "tmp/browser-stability/evidence/csp.json",
+      "sha256": "9d951458ebbffc2fd7486b765cac757f9d448cab368ca61b41df9d14e4f0d3f7",
+      "bytes": 1479
+    },
+    {
+      "id": "csp-manifest",
+      "source": "tmp/reading-notes-migration/csp/runs/2026-10-17T14-21-46-295Z-8512df9b/manifest.json",
+      "snapshot": "tmp/browser-stability/evidence/csp-manifest.json",
+      "sha256": "db493f68558248ac2665bdd656edb968daa2e14f4d03e096de6db1ac37bdf39a",
+      "bytes": 9480
+    }
+  ],
+  "screenshots": [
+    {
+      "report": "offline-1",
+      "verified_screenshots": 488,
+      "inventory_sha256": "75b3c6bab9b2a7cd2c79bed6745a29fe3d4f560a45c8c2068d9082987057a321"
+    },
+    {
+      "report": "offline-2",
+      "verified_screenshots": 488,
+      "inventory_sha256": "62cfb4c2524f263d051e75d0f9158679fc90c6d3039648e9667a7636f18ef3ce"
+    },
+    {
+      "report": "public-browser",
+      "verified_screenshots": 22,
+      "inventory_sha256": "4a63813afb8082c8ef2259985d8237a5ca732318f8a55237dc3e4f79eef9b176"
+    }
+  ]
+}

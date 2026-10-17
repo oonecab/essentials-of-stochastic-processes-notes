@@ -134,10 +134,14 @@ Carter《Visual Group Theory》在 `books/visual-group-theory/` 维护，全书�
 
 ## Astro 迁移状态
 
-I032 修复后的仓库构建仍是 Node/Astro + Python helpers，全部公开 HTML 内联资源，正式页增加全 DOM/锚点 parity，页数从受控条目派生，兼容镜像由构建生成并暂时保留 Git 快照。Ego Lite/ego-browser 为构建中的真实 CSP 冒烟及完整离线验收依赖。新发布模板由 root 安装器持有版本树，fsync 屏障、原子 journal、损坏日志受控恢复、容量预检与保留策略见 [ADR-005](docs/decisions/ADR-005-root-release-installer.md)。I029–I031 是既有实机事实，新权限/服务器安全应用按 [运维交接](deploy/OPERATIONS-I032.md)待执行。
+I032 修复后的仓库构建仍是 Node/Astro + Python helpers，全部公开 HTML 内联资源，正式页增加全 DOM/锚点 parity，页数从受控条目派生，兼容镜像由构建生成并暂时保留 Git 快照。Ego Lite/ego-browser 为构建中的真实 CSP 冒烟及完整离线验收依赖。新发布模板由 root 安装器持有版本树，fsync 屏障、原子 journal、损坏日志受控恢复、容量预检与保留策略见 [ADR-005](docs/decisions/ADR-005-root-release-installer.md)。I029–I031 保留历史实机记录；I033 已应用 root 安装器和权限/SSH/FTP/UFW/fail2ban 配置，实际结果及证书续期待办见 [I033 报告](docs/browser-stability-report.md)。
+
+I033 加固浏览器驱动：深链读写绑定预期页面并等待节点，CSP/离线使用同一会话锁，失效缓存只在明确 not-found 时重建。`READING_NOTES_CSP_SPACE` 可显式选择现有空间；每次运行独立保存报告、日志、截图，成功入口原子更新，最新尝试另行记录。技术栈及正式内容未改变，恢复方法见 [Astro 编写说明](docs/astro-authoring.md)。
 
 构建架构选择见 [ADR-002](docs/decisions/ADR-002-static-first-astro.md)，当前实施与证据见 [I028](issues/I028-static-first-astro.md) / [T028](test/T028-static-first-astro.md)。固定版本由 package.json、pnpm-lock.yaml 和 .node-version 约束。五书 54 页及书架已迁移，保留 1434 道原书习题与 36 道自测；原数学与历史审阅保持。根 build 现在调用 deploy/build_astro.py → Node/Astro → Python 发布策略与确定性打包。dist 仅包含 allowlist 中的 303 个公开文件；旧审阅 JSON 的 37 个 URL 输出固定摘要，完整证据留在仓库。新增 CS:APP 定位岛独立登记，其余原脚本保持。
 
 新的 Ubuntu 模板采用 /srv/reading-notes/releases/<id>/site 与 current 原子切换，带 flock、SHA256、rsync、失败恢复、systemd 构建/发布单元和日志轮转。2026-10-17 的 I029 已在 Ubuntu 22.04 / Nginx 1.18.0 上部署 release 20261017T174039。root 维护的 Nginx 配置与发布用户权限分离，CSP 更新需管理员审查；reading-notes-deploy.service 为非 root oneshot，timer 保持停用，构建在本地完成。旧布局 release 20261017T151424 与站点配置保留为首次迁移恢复单元。详见 deploy/UBUNTU.md 和 docs/astro-production-report.md。
 
 I032 新书接入验收使用 `tools/test_new_book_build.py` 运行完整隔离构建。发布文件由 allowlist 控制，新增书的入口、资料视图和 Nginx 前缀由目录登记派生；旧五书 Transformer 保留冻结字节，测度书范围标签由独立适配层处理。新增书/页可登记独立 Git 原始快照，后续修订仍走显式审阅链。
+
+I033 于 2026-10-17 实机部署 `20261017T210828`，通过真实 systemd unit、旧版回滚及新版恢复、两版本 HTTPS 响应哈希和 root 只读权限验证。现有证书仍有效，自动续期未完成；Web 主机 tmpfiles 与可选构建主机模板已拆分。当前事实以 [I033 报告](docs/browser-stability-report.md)为准，I029/I032 保留各自验收时的边界。

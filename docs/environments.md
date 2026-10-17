@@ -4,14 +4,15 @@
 ## 环境变量名
 
 - `ASTRO_TELEMETRY_DISABLED`：构建子进程强制为 `1`，禁用 Astro 遥测；`.env.example` 记录安全值。
+- `READING_NOTES_CSP_SPACE`：可选的 Ego 任务空间正整数 ID，CSP 与离线验收共用。显式指定的空间不可用即失败；默认缓存仅在精确 not-found 时重建，恢复与互斥规则见 [Astro 编写说明](astro-authoring.md)。
 - `READING_NOTES_TEST_CRASH`：仅隔离 dry-run 故障测试使用，选择强制终止阶段；生产路径不读取它作为故障开关。
 
 ## 服务
 
 - 本地预览：Python 静态 HTTP 服务，绑定 127.0.0.1
 - 正式阅读站点：notes.zzzping.top，Nginx + TLS；部署步骤见 deploy/README.md
-- Ubuntu reading-notes-deploy.service 已安装并以 reading-notes 用户完成一次性发布；deploy timer 保持 disabled，构建服务模板留给独立构建主机
-- I032 仓库模板：reading-notes 通过固定 root 安装器发布，release 树归 root，移除 unit 的整目录 Nginx 日志写例外；生产应用与实机验收待用户/运维执行，见 deploy/OPERATIONS-I032.md
+- Ubuntu reading-notes-deploy.service 以 reading-notes 调用固定 sudo root 安装器，已发布 20261017T210828；deploy timer 保持 disabled，构建服务及构建 tmpfiles 模板留给独立构建主机
+- I033 已应用 root-owned 只读 release、固定 helper/sudoers，unit 已移除整目录 Nginx 日志写例外；实机证据见 [本轮报告](browser-stability-report.md)
 - 宿主机历史 MySQL 服务及数据已于 2026-10-17 按 I030 卸载；mailutils 依赖的 mysql-common 与 libmysqlclient21 保留为共享客户端组件
 
 ## 端口与端点
@@ -30,4 +31,4 @@
 
 新模板目录为 `/srv/reading-notes`，构建工作目录为 `/opt/reading-notes-builder`；Node/pnpm 只存在于构建主机。Web 主机的 Python/rsync/flock 是一次性发布命令依赖，不是 HTTP 运行服务。现网已在 I029 切换到 /srv/reading-notes/current/site，旧 /var/www/notes.zzzping.top 目录与配置保留为首次迁移恢复点；实际版本见 [生产发布记录](astro-production-report.md)。
 
-I032 的构建 CSP/离线验收需要 Ego Lite 与 ego-browser CLI，在私有任务空间运行；临时 HTTP 服务只绑定回环随机端口，用后关闭。SSH、FTP/UFW、fail2ban 和 Certbot 自动续期均由运维交接执行，不用本地测试结果推断服务器状态。
+I032 的构建 CSP/离线验收需要 Ego Lite 与 ego-browser CLI，在私有任务空间运行；临时 HTTP 服务只绑定回环随机端口，用后关闭。I033 实机已关闭 SSH 密码认证并验证新密钥会话，FTP 已 stop/mask，无 21/3306 监听；UFW 仅保留 22/80/443，fail2ban sshd jail 已运行。root 密码未轮换，现有 Certbot 手工 DNS-01 续期仍需改为自动 DNS；HTTP dry-run 实测 403，后续步骤见 [DNS 续期交接](../deploy/DNS-RENEWAL.md)。

@@ -1,13 +1,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import http from 'node:http';
-import {spawn} from 'node:child_process';
+import {selectSpace,acquireSession,createRun,finishRun,failedRun,runDriver,atomicJson} from './browser-runtime.mjs';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {cspManifest,cspHeader,cspHash,scriptSources,verifyCspManifest} from './csp-lib.mjs';
 
 export async function checkCsp(directory){
   const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-  const output=path.join(root,'tmp/reading-notes-migration/csp');fs.mkdirSync(output,{recursive:true});
+  const output=path.join(root,'tmp/reading-notes-migration/csp');
   const manifest=cspManifest(directory), covered=new Set(), pages=[];
   for(const route of Object.keys(manifest.files)){
     const hashes=scriptSources(fs.readFileSync(path.join(directory,route),'utf8')).map(cspHash);
@@ -23,23 +23,24 @@ export async function checkCsp(directory){
     if(url.searchParams.has('tamper'))html=html.replace(/(<script\b[^>]*>)([\s\S]*?)(<\/script>)/,(_,open,body,close)=>open+body+'\n/* injected hash mismatch */'+close);
     res.writeHead(200,{'Content-Type':'text/html; charset=utf-8','Content-Security-Policy':header,'Cache-Control':'no-store'});res.end(html);
   });
-  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
   const sessionFile=path.join(root,'tmp/final-assessment/browser-session.json');
-  const session=fs.existsSync(sessionFile)?JSON.parse(fs.readFileSync(sessionFile)):{};
-  const config={base:`http://127.0.0.1:${server.address().port}/`,pages,output,sessionFile,...session};
-  const script=`const config=${JSON.stringify(config)};\n`+fs.readFileSync(path.join(root,'scripts/csp-browser.mjs'),'utf8');
+  const release=acquireSession(sessionFile);
+  let run;
   try{
-    await new Promise((resolve,reject)=>{
-      const child=spawn('ego-browser',['nodejs'],{stdio:['pipe','pipe','pipe']});let log='';
-      child.stdout.on('data',data=>log+=data);child.stderr.on('data',data=>log+=data);
-      child.on('error',reject);child.on('close',code=>{fs.writeFileSync(path.join(output,'driver.log'),log);code===0?resolve():reject(new Error('Browser CSP smoke failed: '+log.slice(-2000)));});child.stdin.end(script);
-    });
+    run=createRun(output);
+    const session=fs.existsSync(sessionFile)?JSON.parse(fs.readFileSync(sessionFile)):{};
+    const selection=selectSpace(process.env.READING_NOTES_CSP_SPACE,session);
+    await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(0,'127.0.0.1',resolve);});
+    const config={base:`http://127.0.0.1:${server.address().port}/`,pages,output:run.output,sessionFile,selection,page:session.page??'p1',runtime:pathToFileURL(path.join(root,'scripts/browser-runtime.mjs')).href};
+    const script=`const config=${JSON.stringify(config)};\n`+fs.readFileSync(path.join(root,'scripts/csp-browser.mjs'),'utf8');
+    const report=await runDriver(script,run);
     verifyCspManifest(directory,manifest);
-    const report=JSON.parse(fs.readFileSync(path.join(output,'report.json')));
-    if(report.status!=='passed')throw new Error('CSP browser report failed');
-    fs.writeFileSync(path.join(output,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');
+    atomicJson(path.join(run.output,'manifest.json'),manifest);
+    atomicJson(path.join(output,'manifest.json'),manifest);
+    finishRun(run,report);
     console.log(JSON.stringify({csp:'passed',pages:pages.length,script_hashes:covered.size,tampered_script:'blocked'}));
     return manifest;
-  }finally{server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
+  }catch(error){if(run)failedRun(run,error);throw error;}
+  finally{server.closeAllConnections();await new Promise(resolve=>server.close(resolve));release();}
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href)await checkCsp(path.resolve(process.argv[2]??'dist'));

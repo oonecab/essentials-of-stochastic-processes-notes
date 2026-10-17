@@ -16,6 +16,16 @@ I032 开始，迁移后的明确内容修订在 `src/content-revisions.json` 逐
 
 逐书 `review/astro-migration.json`、`content-baseline-astro.json` 和 `release-astro.json` 是新增的迁移证据。旧数学审阅、来源材料、内容完整性基线和程序记录保留原有含义。仅因维护说明改动而更新的当前文档哈希，必须同时保存旧值及原因。
 
+### 浏览器会话与复跑证据
+
+CSP 和离线验收默认复用 `tmp/final-assessment/browser-session.json` 中的 Ego 空间。缓存空间已被关闭、明确返回 `task space not found: <ID>` 时，自动建立一个名为“Reading Notes 浏览器验收”的空间并原子更新缓存；用户控制、inactive、权限、超时及其他错误均停止并保留原错误。也可执行 `READING_NOTES_CSP_SPACE=<现有空间ID> pnpm build` 或同样设置运行 `pnpm check:offline`；值必须是正整数，显式指定的失效空间不会自动替换。CSP 检查始终是构建门禁。
+
+两个命令共用会话旁的 `.lock`，已有验收运行时直接拒绝第二次启动。正常结束释放锁；命令被外部强制终止后先检查锁中的 PID、对应运行目录的日志及 Ego 当前页，确认驱动已停止，再移除该精确锁文件并重跑。不要对完整矩阵设置 300 秒总超时；它按每个页面/交互限制等待，完整 444 个视图需要数分钟。进程被强制杀死可能留下 `running` 尝试，不能当作通过。
+
+离线证据在 `tmp/reading-notes-migration/browser/<all或书名>/runs/<UTC时间-随机ID>/`，CSP 证据在 `tmp/reading-notes-migration/csp/runs/<ID>/`。每轮独立保存 `report.json`、`driver.log` 和截图，报告使用临时文件、fsync 和原子替换。父目录的 `report.json` 只在完整成功且驱动正常退出后更新，`latest-attempt.json` 标明最近一次尝试及其状态；检查最近结果必须同时查看两者。失败保留其完整目录，不覆盖上一次成功截图。历史旧格式报告仍按原路径保留，I032 已归档证据不回写。
+
+深链在执行与最终读取前等待目标存在，并在单次 DOM 读取中验证 URL、取得节点和读取状态；节点瞬时消失最多尝试三次，缺失或导航至别页明确失败。只有有习题的正式页检查首末习题深链；旧入口核对重定向与内容，辅助页保留渲染、目录和滚动检查。
+
 ### 新书与新页的构建空跑
 
 新书在 `books/catalog.json` 登记目录、页数、入口和支持 `--quick` 的独立 Python checker，在 `scripts/migration-state.json` 加入 `migrated_books`；公开文件逐个加入 `deploy/publish-allowlist.json`。保留 `notes/book_overview.html` 入口约定。新书的源码先建立经过审阅的 Git 快照，在 `book_baselines` 为该书登记基准 commit；已有书增页使用 `page_baselines` 为新 route 单独登记，原页的历史来源哈希继续保留。原有五书的 I028 Transformer 和 CSS 快照不改变。

@@ -1,6 +1,6 @@
 # I032 运维应用与验收
 
-这是交给用户/运维执行的工作单。Codex 未登录修改本轮生产权限、SSH、防火墙、FTP、fail2ban 或证书续期。I029–I031 保留为历史实机事实；新本地测试包和验证记录不能代替下面的服务器验收。全过程在服务器私有目录保存配置与回滚文件，仓库与报告只记录结果及非秘密哈希。
+本文件保留 I032 提交时交给用户/运维执行的操作方案。I033 已按用户后续授权应用发布权限、SSH/FTP/UFW/fail2ban，并部署新版本，结果见 [I033 报告](../docs/browser-stability-report.md)。密码轮换及 DNS 自动续期仍待用户处理。全过程在服务器私有目录保存配置与回滚文件，仓库与报告只记录结果及非秘密哈希。
 
 ## SSH、FTP、防火墙与证书
 
@@ -78,7 +78,7 @@ certbot renew --dry-run
 
 在确认目录树无意外符号链接/挂载、当前及回滚 SHA256SUMS 均通过后，把 `/srv/reading-notes`、`releases` 和版本树递归设为 root:root，顶层及 releases 为 0755，版本目录/文件仍为 0555/0444；`.publish.lock` 与事务记录为 root:root 0600。`current` 仅 chown 链接本身。队列的 reading-notes 权限保持。不要改变证书目录权限。
 
-安装仓库中的 deploy unit 与 tmpfiles 文件，`systemctl daemon-reload`；timer 仍保持停用。新 helper 只接受如下固定命令：
+安装仓库中的 deploy unit 与 Web 主机 `reading-notes.tmpfiles.conf`，`systemctl daemon-reload`；timer 仍保持停用。I033 已将构建锁目录拆入独立的 `reading-notes-build.tmpfiles.conf`，只在创建构建用户的构建主机安装。新 helper 只接受如下固定命令：
 
 ```sh
 sudo -u reading-notes sudo -n /usr/local/sbin/reading-notes-publish status
